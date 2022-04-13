@@ -1,0 +1,586 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Hero Folder\__Standard Values.yml
+ID: "f0405635-3140-4a50-808e-f5b523cca43f"
+Parent: "f463e2de-6f77-4293-88d4-5eaa153038a1"
+Template: "f463e2de-6f77-4293-88d4-5eaa153038a1"
+Path: /sitecore/templates/Feature/BasicContent/Hero Folder/__Standard Values
+Signature: iZtfm1Xqd84JnyEDBpuft7/TuyWRzNcAtTqg0SwQz0k=
+Modified: 637788526057904730
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Rendering Parameters\Content List Rendering Parameters.yml
+ID: "f0105115-d6c7-42b5-8793-d3f6dd215c32"
+Parent: "495c6945-e34c-4d36-84ac-0c3398fee3d7"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/Rendering Parameters/Content List Rendering Parameters
+Signature: +zmNOGqDLLmGwzzjNnv7jyFFxKQJVXtNcl1/53lt/Kk=
+Modified: 637692467279470627
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Video Teaser\Video Teaser.yml
+ID: "c4f3bdc5-4b13-4d9d-92f5-e407a8b21789"
+Parent: "a94acaec-6552-47d1-90b7-f54283868b3f"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/BasicContent/Video Teaser/Video Teaser
+Signature: 9h5HmvRMy52eA4SVzg2onsMNvnNgOasnkZJmwN0Eg+k=
+Modified: 637788526058004737
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Announcement\Announcement\AnnouncementText.yml
+ID: "3192e490-54f8-4acd-902a-50992102646a"
+Parent: "e3524ad3-4d0d-479b-aa11-f41551767b82"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Announcement/Announcement/AnnouncementText
+Signature: USBl/aBPPrSRFdAwqC42BsEVpa0IZyv2E0ZBEAB1wkw=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\CallToActionContent\Content\CtaText.yml
+ID: "c7cc5931-bef0-4afa-babc-c15dbd071efd"
+Parent: "26f965ad-0b12-44f6-aef8-ba637697befd"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/CallToActionContent/Content/CtaText
+Signature: oj7jFTVmeU46QP8KIzkC/2HhzZKYL+pGO9EEKP6hy9Q=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\ContentListItem\Content List Item\ItemText.yml
+ID: "aeb48911-54fc-479c-966d-1808cbba333c"
+Parent: "be7c86ab-bd1d-4b01-b45d-4be465ef8a01"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/ContentListItem/Content List Item/ItemText
+Signature: z29/aBk1rpmGBxHl5coDzC+vdJXr8yNXtBOnaqOfCOk=
+Modified: 637692467279470627
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Image Teaser\Image Teaser\TeaserTitle.yml
+ID: "3e1619ab-4eef-47b1-a801-13440d0098a6"
+Parent: "b9a37908-7633-4ad9-962d-30cd8f2f6754"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Image Teaser/Image Teaser/TeaserTitle
+Signature: NaO4tqjlwn6ar+t6o6tHeuf7oL+1gEIIINtp39TA1K4=
+Modified: 637788526057974741
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Rendering Parameters\Content List Rendering Parameters\Content List Properties.yml
+ID: "c4b9313a-3670-4896-ad8c-de611938a194"
+Parent: "f0105115-d6c7-42b5-8793-d3f6dd215c32"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/BasicContent/Rendering Parameters/Content List Rendering Parameters/Content List Properties
+Signature: LK4FJnowvU9s1MnvIrnSmxN6bN2DVTnMfBQD2YeVv1k=
+Modified: 637692467279470627
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Video Teaser\Video Teaser\TeaserText.yml
+ID: "f4d03e52-cb74-4aba-8969-3c49e2541ac2"
+Parent: "c4f3bdc5-4b13-4d9d-92f5-e407a8b21789"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Video Teaser/Video Teaser/TeaserText
+Signature: xnc/zqCMNaAx1KjobV/PsVdjm7p5LbrKkPK2UXTTuQ8=
+Modified: 637788526058034739
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Video Teaser\Video Teaser\TeaserTitle.yml
+ID: "efc256c0-d388-4966-9340-a4508104de04"
+Parent: "c4f3bdc5-4b13-4d9d-92f5-e407a8b21789"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Video Teaser/Video Teaser/TeaserTitle
+Signature: NaO4tqjlwn6ar+t6o6tHeuf7oL+1gEIIINtp39TA1K4=
+Modified: 637788526058034739
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent.yml
+ID: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Parent: "8f343079-3cc5-4ef7-bc27-32addb46f45e"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Feature/BasicContent
+Signature: xsg3JjcdS/5H9EBMU5l29/LXQ74A1NLpr0BemgbKOxc=
+Modified: 637692467279158052
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\CallToActionContent.yml
+ID: "778f1f91-5252-4036-b186-570e8e5860ea"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/CallToActionContent
+Signature: uMPuzRvVMv5wEs3Xhxm1y1ELMYBqYwwuMFwyGmmw0+k=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\ContentListItem.yml
+ID: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/ContentListItem
+Signature: uUGwT2emGITLPlg0doSlqHMNrnIW6TVywZ7P37B2/Ck=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Hero Folder.yml
+ID: "f463e2de-6f77-4293-88d4-5eaa153038a1"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/Hero Folder
+Signature: TPQGsDBsbaSwxX6nSr1KSEx5yUGERnEjIAPvSxE41YY=
+Modified: 637788526057894742
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Image Teaser.yml
+ID: "bdf1a02f-ce53-4de8-8fe4-e25d6ca65b7c"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/Image Teaser
+Signature: QZL+Sde8caCK8eQXNeiUilnIuEDwLlpeRaSMQM2YmRY=
+Modified: 637788526057924732
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Rich Text Content.yml
+ID: "64ad1284-23fb-4b76-85b3-c6dfb1b322bf"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/Rich Text Content
+Signature: tcCh28WRPuafkegpkBB8jE+XNmy/GOyJJElhtXNB3hk=
+Modified: 637692467279626893
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\_EmbedCode.yml
+ID: "1fbb9310-9fe0-45fd-b9a8-3e8a87ce7cab"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/_EmbedCode
+Signature: xpTyF54BB56ApwzoNVR/TAQ5frwznlV/ssabsg38bII=
+Modified: 637788526058054735
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\_TeaserTexts.yml
+ID: "e187527a-43e7-41b0-8a43-51837814942f"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/_TeaserTexts
+Signature: mUbocwbMPnz1116p0rO1O2PG0g1QKphzb84/33kqcHQ=
+Modified: 637788526058134743
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Announcement\Announcement.yml
+ID: "e3524ad3-4d0d-479b-aa11-f41551767b82"
+Parent: "fd88ad0e-f5a8-4ab2-a02c-164f33d7c307"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/BasicContent/Announcement/Announcement
+Signature: BPf46RqvFASiXdIHYPxHrt+AZK7k7qyzs6DUaavsIMs=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\ContentList\Content List.yml
+ID: "826f5cb6-2237-43ae-b2af-6df0576a4d9d"
+Parent: "6193dcfc-b632-4fa5-9411-f9588470c1c9"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/BasicContent/ContentList/Content List
+Signature: +UUc5JQtfEvP2haP6rwnTFXC2SKN7IkoDQHZHtZ0swM=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\ContentList\__Standard Values.yml
+ID: "52acf2d7-0337-4407-a9e4-d7a818513e55"
+Parent: "6193dcfc-b632-4fa5-9411-f9588470c1c9"
+Template: "6193dcfc-b632-4fa5-9411-f9588470c1c9"
+Path: /sitecore/templates/Feature/BasicContent/ContentList/__Standard Values
+Signature: /MO2PAA95SrjZL76hNh4WYyApobfs3utlW1e8+cbinA=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Embed content\__Standard Values.yml
+ID: "fa31eaa7-f9e4-4cc2-987d-df34c69199a2"
+Parent: "e55a415d-4a75-40d2-8145-6cc79a4ed1e3"
+Template: "e55a415d-4a75-40d2-8145-6cc79a4ed1e3"
+Path: /sitecore/templates/Feature/BasicContent/Embed content/__Standard Values
+Signature: Ek4rSOaeOZ3MWY5Eeevu/btb2qUA9DWdDxcLw8KuKDA=
+Modified: 637788526057894742
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Hero\__Standard Values.yml
+ID: "17664f87-9a0f-4349-bd96-5403318e2f30"
+Parent: "86864760-3b8b-4e79-927e-0addcd14055d"
+Template: "86864760-3b8b-4e79-927e-0addcd14055d"
+Path: /sitecore/templates/Feature/BasicContent/Hero/__Standard Values
+Signature: gnv+8cIIBxXGwO/czoZt8R9rpKjVlNsZrQpYpVZHUGs=
+Modified: 637788526057924732
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Rich Text Content\Content.yml
+ID: "1a250042-4ebe-48c1-afc5-e4354c8761c7"
+Parent: "64ad1284-23fb-4b76-85b3-c6dfb1b322bf"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/BasicContent/Rich Text Content/Content
+Signature: Y6vibRc7GBL6SeQiMBtM0VGzubW+sANUPigqAjjMoRg=
+Modified: 637692467279626893
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Rich Text Content\__Standard Values.yml
+ID: "fc44a449-3a63-4482-8140-ec7bfc007bc4"
+Parent: "64ad1284-23fb-4b76-85b3-c6dfb1b322bf"
+Template: "64ad1284-23fb-4b76-85b3-c6dfb1b322bf"
+Path: /sitecore/templates/Feature/BasicContent/Rich Text Content/__Standard Values
+Signature: QF1i+aZTmlP/W6iy71EG2CyJh1RPJUF6hKHSTuCMhSk=
+Modified: 637692467279626893
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\_HeroBanner\Hero Banner.yml
+ID: "e1b05489-b139-4d62-9eb5-64040fa48f6d"
+Parent: "2ec82cb8-6a77-4a64-bc88-b3cd2c477cd9"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/BasicContent/_HeroBanner/Hero Banner
+Signature: 9QlUCt7cN/9HUdgT8ViMvDyQ7i6x0UywbfDTY7JP+Fc=
+Modified: 637788526058094728
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Announcement\Announcement\AnnouncementLink.yml
+ID: "89288dd4-7723-4262-a906-f67cedca28bb"
+Parent: "e3524ad3-4d0d-479b-aa11-f41551767b82"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Announcement/Announcement/AnnouncementLink
+Signature: hBKsBcE1hCCa0sF2uS+9478zszu3O+EI79rMcFyAz8M=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\CallToActionContent\Content\CtaTitle.yml
+ID: "eb26ca15-e792-4098-9401-0af2fbe9bd31"
+Parent: "26f965ad-0b12-44f6-aef8-ba637697befd"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/CallToActionContent/Content/CtaTitle
+Signature: dhI9g/IZZu8fU5q5TS7ZmdxUafEcV2UL+GfQV8WXWjY=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\ContentList\Content List\ContentListTitle.yml
+ID: "e18a5161-33b5-4652-af07-a19404c2d2ab"
+Parent: "826f5cb6-2237-43ae-b2af-6df0576a4d9d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/ContentList/Content List/ContentListTitle
+Signature: XqOITTi4YoiCulOZ8YXb3e2y/0NKyvxBBsm1/H0Qsec=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\ContentListItem\Content List Item\ItemTitle.yml
+ID: "0953b42d-91ac-4644-9a4e-38fd3fc91eb7"
+Parent: "be7c86ab-bd1d-4b01-b45d-4be465ef8a01"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/ContentListItem/Content List Item/ItemTitle
+Signature: IfaUwnTJwGm1uFJMcD5QGSUqWLcrEynaHITl6T3Uzto=
+Modified: 637692467279470627
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Image Teaser\Image Teaser\TeaserImage.yml
+ID: "9b1f902b-cfcf-4965-b4d0-3880f610272d"
+Parent: "b9a37908-7633-4ad9-962d-30cd8f2f6754"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Image Teaser/Image Teaser/TeaserImage
+Signature: 0K4QEDhxECyzNgNwj2clQIdkBnehqKCvF1J4oxZhseo=
+Modified: 637788526057944731
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Video Teaser\Video Teaser\TeaserEmbed.yml
+ID: "87d60910-c481-42a7-8eb6-68e96b0f7cba"
+Parent: "c4f3bdc5-4b13-4d9d-92f5-e407a8b21789"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Video Teaser/Video Teaser/TeaserEmbed
+Signature: Ix2acyYIE6Iq5Vx2woFLryxOBCirAewzLx9aJNGoRkA=
+Modified: 637788526058014736
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Video Teaser\Video Teaser\TeaserLink.yml
+ID: "2aaa4a8c-e077-45ec-9439-f151435673d7"
+Parent: "c4f3bdc5-4b13-4d9d-92f5-e407a8b21789"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Video Teaser/Video Teaser/TeaserLink
+Signature: a2d4FqG+7Nz7T77XzcUC9iXMiq2Fdlywn5qnt2Pgrn8=
+Modified: 637788526058024737
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\_EmbedCode\Embed\EmbedCode.yml
+ID: "d9218843-78e1-418d-9b0d-7c511ca15f82"
+Parent: "33cecf23-6fdf-4049-9062-6a73673d14bf"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/_EmbedCode/Embed/EmbedCode
+Signature: LhYZTROGZ34iPjqPEAH/E+mRCGSUkjUt9jZsbx0Z7oo=
+Modified: 637788526058074727
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\_HeroBanner\Hero Banner\HeroDescription.yml
+ID: "69db2d7e-db5e-4a02-8580-0bcfb77b5482"
+Parent: "e1b05489-b139-4d62-9eb5-64040fa48f6d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/_HeroBanner/Hero Banner/HeroDescription
+Signature: fF//9ZjPJA4IUrdFQBZayaE/cZyy9Zascxf4UZ3Niqs=
+Modified: 637788526058094728
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\_HeroBanner\Hero Banner\HeroImage.yml
+ID: "3489c7a2-efe1-49e0-a3d7-271183c4f255"
+Parent: "e1b05489-b139-4d62-9eb5-64040fa48f6d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/_HeroBanner/Hero Banner/HeroImage
+Signature: +51hD4PD98ww2eLKeE/0TirwI5Ml9nMa8Kbghb79L0k=
+Modified: 637788526058104726
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\_HeroBanner\Hero Banner\HeroLink.yml
+ID: "066f7e92-30ad-4198-b138-b40ccaec6d20"
+Parent: "e1b05489-b139-4d62-9eb5-64040fa48f6d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/_HeroBanner/Hero Banner/HeroLink
+Signature: 6T1B27lMsWPrC0bnWLY8egYYsKf+VC7NXccqPhQ3G7o=
+Modified: 637788526058114739
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Announcement.yml
+ID: "fd88ad0e-f5a8-4ab2-a02c-164f33d7c307"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/Announcement
+Signature: OOUqVpPWX5Kuo00Z6QiE1hxrLMIGUbcsY4N5GIutsww=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\ContentList.yml
+ID: "6193dcfc-b632-4fa5-9411-f9588470c1c9"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/ContentList
+Signature: X1bilFA0vo3C2u888EmbzQThzR9X6c3E1OvufyGl8TI=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Embed content.yml
+ID: "e55a415d-4a75-40d2-8145-6cc79a4ed1e3"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/Embed content
+Signature: zP/h5D2Dcy19047j0otgPQNiTWoWKHcl7/L2z+WHW2E=
+Modified: 637788526057874728
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Hero.yml
+ID: "86864760-3b8b-4e79-927e-0addcd14055d"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/Hero
+Signature: xw35GTKBU2MJSa7rWU2GAE1jdUa5yiVG/yLpmM3YAMw=
+Modified: 637788526057914728
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Rendering Parameters.yml
+ID: "495c6945-e34c-4d36-84ac-0c3398fee3d7"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Feature/BasicContent/Rendering Parameters
+Signature: 2kJkl39heFfAA6qrL1elKqAHvFv2xBTeT/KtGSjyMs4=
+Modified: 637788526057984738
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Video Teaser.yml
+ID: "a94acaec-6552-47d1-90b7-f54283868b3f"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/Video Teaser
+Signature: Uo/HrWb879h3v7glBy+cb1XztOairbccoyH27pnlNNQ=
+Modified: 637788526057994737
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\_HeroBanner.yml
+ID: "2ec82cb8-6a77-4a64-bc88-b3cd2c477cd9"
+Parent: "2425c9e1-3b22-44b5-9da8-704ff22d388e"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/BasicContent/_HeroBanner
+Signature: 0jHMthh6GdFmjRV/dEkfBX1BU9p83tJllkHivFWuzA8=
+Modified: 637788526058084727
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Announcement\__Standard Values.yml
+ID: "0d6910b0-c119-4f96-9055-bb567ed12bd2"
+Parent: "fd88ad0e-f5a8-4ab2-a02c-164f33d7c307"
+Template: "fd88ad0e-f5a8-4ab2-a02c-164f33d7c307"
+Path: /sitecore/templates/Feature/BasicContent/Announcement/__Standard Values
+Signature: Pr0sI0So41w3Yof1NDkhte9IY0cA3PIFIlPziJhHcpc=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\CallToActionContent\Content.yml
+ID: "26f965ad-0b12-44f6-aef8-ba637697befd"
+Parent: "778f1f91-5252-4036-b186-570e8e5860ea"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/BasicContent/CallToActionContent/Content
+Signature: s9erjTBhJ8bQekXboeOInLy163AgrkDcWOfbBaTn2sQ=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\CallToActionContent\__Standard Values.yml
+ID: "e8f8220e-1c1f-4732-a2af-fea436e325d8"
+Parent: "778f1f91-5252-4036-b186-570e8e5860ea"
+Template: "778f1f91-5252-4036-b186-570e8e5860ea"
+Path: /sitecore/templates/Feature/BasicContent/CallToActionContent/__Standard Values
+Signature: Ru8uULtUQi8kk9mYfvSD8JmYkAslR8v4gXwdez1ElG4=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\ContentListItem\Content List Item.yml
+ID: "be7c86ab-bd1d-4b01-b45d-4be465ef8a01"
+Parent: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/BasicContent/ContentListItem/Content List Item
+Signature: 5rNRbGOZ4e1X/ojzSUbGbhNtr6/m0XvVnV3rJ/LRFFg=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\ContentListItem\__Standard Values.yml
+ID: "0c84265e-0d24-4995-8bc9-44fafbba3c09"
+Parent: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Template: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Path: /sitecore/templates/Feature/BasicContent/ContentListItem/__Standard Values
+Signature: 54dBl0zkdENzVj87cixbUOffCaG8a0DSnLkil21pLrg=
+Modified: 637692467279470627
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Image Teaser\Image Teaser.yml
+ID: "b9a37908-7633-4ad9-962d-30cd8f2f6754"
+Parent: "bdf1a02f-ce53-4de8-8fe4-e25d6ca65b7c"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/BasicContent/Image Teaser/Image Teaser
+Signature: 9h5HmvRMy52eA4SVzg2onsMNvnNgOasnkZJmwN0Eg+k=
+Modified: 637788526057934743
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Image Teaser\__Standard Values.yml
+ID: "f8b5408b-0285-445d-be87-5e7cc665c3ae"
+Parent: "bdf1a02f-ce53-4de8-8fe4-e25d6ca65b7c"
+Template: "bdf1a02f-ce53-4de8-8fe4-e25d6ca65b7c"
+Path: /sitecore/templates/Feature/BasicContent/Image Teaser/__Standard Values
+Signature: YAppW5OjG8eDd2sgSt97t/kJPxSizosHoe5C16XsDBk=
+Modified: 637692467279470627
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Video Teaser\__Standard Values.yml
+ID: "00b41d2f-3611-44f7-abea-e32bb4160a57"
+Parent: "a94acaec-6552-47d1-90b7-f54283868b3f"
+Template: "a94acaec-6552-47d1-90b7-f54283868b3f"
+Path: /sitecore/templates/Feature/BasicContent/Video Teaser/__Standard Values
+Signature: VPG9g4fJupPigCjF0LlSRhJ3rcDGwGf0IrAYsHSLgF8=
+Modified: 637692467279626893
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\_EmbedCode\Embed.yml
+ID: "33cecf23-6fdf-4049-9062-6a73673d14bf"
+Parent: "1fbb9310-9fe0-45fd-b9a8-3e8a87ce7cab"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/BasicContent/_EmbedCode/Embed
+Signature: q1CX9h9YGgkyMaMuDucmDHnoP/8qCiEe8UDqxhjyArI=
+Modified: 637788526058064736
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\CallToActionContent\Content\CtaImage.yml
+ID: "40121670-6b02-4e60-a247-38f810c5364a"
+Parent: "26f965ad-0b12-44f6-aef8-ba637697befd"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/CallToActionContent/Content/CtaImage
+Signature: QgcBffdUKwDUgIK8Nx20Tb8nMZobcIO1qQSmmhdVZkw=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\CallToActionContent\Content\CtaLink.yml
+ID: "3ed40dd5-482c-4ef4-893d-417c5fb3e08b"
+Parent: "26f965ad-0b12-44f6-aef8-ba637697befd"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/CallToActionContent/Content/CtaLink
+Signature: 0RpY9xMo32fphYWAtzo162hqRwg49Yd/ZUDU4+YOwR0=
+Modified: 637692467279314363
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\ContentListItem\Content List Item\ItemLink.yml
+ID: "8948fc61-e65e-4215-8365-ed0951155ec5"
+Parent: "be7c86ab-bd1d-4b01-b45d-4be465ef8a01"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/ContentListItem/Content List Item/ItemLink
+Signature: P1QqlkHIQ0jbrOzeJogfssW4xjssemIGmV1qYpEr/9M=
+Modified: 637692467279470627
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\ContentListItem\Content List Item\ItemSubtitle.yml
+ID: "6e8201ed-44cb-4b9d-a1a0-d1f8d32e2779"
+Parent: "be7c86ab-bd1d-4b01-b45d-4be465ef8a01"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/ContentListItem/Content List Item/ItemSubtitle
+Signature: Jk5ZjHABUEEI5kN0TRk7Yhjcqspq55blqpji3pPO3+0=
+Modified: 637692467279470627
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Image Teaser\Image Teaser\TeaserLink.yml
+ID: "5e0174e0-52ca-4cc1-a6d5-1ae75954b019"
+Parent: "b9a37908-7633-4ad9-962d-30cd8f2f6754"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Image Teaser/Image Teaser/TeaserLink
+Signature: a2d4FqG+7Nz7T77XzcUC9iXMiq2Fdlywn5qnt2Pgrn8=
+Modified: 637788526057954757
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Image Teaser\Image Teaser\TeaserText.yml
+ID: "fa7c2f07-7f57-49f9-9f94-d5e9631d110d"
+Parent: "b9a37908-7633-4ad9-962d-30cd8f2f6754"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Image Teaser/Image Teaser/TeaserText
+Signature: xnc/zqCMNaAx1KjobV/PsVdjm7p5LbrKkPK2UXTTuQ8=
+Modified: 637788526057964740
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Rendering Parameters\Content List Rendering Parameters\__Standard Values.yml
+ID: "2077a3df-63c0-48ec-a050-46cc0298bcaf"
+Parent: "f0105115-d6c7-42b5-8793-d3f6dd215c32"
+Template: "f0105115-d6c7-42b5-8793-d3f6dd215c32"
+Path: /sitecore/templates/Feature/BasicContent/Rendering Parameters/Content List Rendering Parameters/__Standard Values
+Signature: /sJysFGzYToB8P5gBOV7bK05Xn5l7ETbjCjTLDSBB+g=
+Modified: 637692467279626893
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Rich Text Content\Content\Content.yml
+ID: "5098b799-31dd-4c1b-9955-3e8598caa21f"
+Parent: "1a250042-4ebe-48c1-afc5-e4354c8761c7"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Rich Text Content/Content/Content
+Signature: oiBq5oO7T6MfFyewyqogUpbiqD7+fGe7gKvRHbc8UnU=
+Modified: 637692467279626893
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\_HeroBanner\Hero Banner\HeroSubtitle.yml
+ID: "53ee3e16-ba10-4013-959e-9a652a533845"
+Parent: "e1b05489-b139-4d62-9eb5-64040fa48f6d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/_HeroBanner/Hero Banner/HeroSubtitle
+Signature: dOfeL/ErlurWpP0AuhHhz6KgZ/eBxdLR+PXwrcusiFo=
+Modified: 637788526058114739
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\_HeroBanner\Hero Banner\HeroTitle.yml
+ID: "00f0228c-aff3-4ab7-ac98-e4175a53bf32"
+Parent: "e1b05489-b139-4d62-9eb5-64040fa48f6d"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/_HeroBanner/Hero Banner/HeroTitle
+Signature: EGzdM2POOU992gdtE+kh4/rGAifjtDry/+hHQNklQJI=
+Modified: 637788526058124743
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Rendering Parameters\Content List Rendering Parameters\Content List Properties\ContentListLimit.yml
+ID: "e5b87c88-51ef-4395-bab4-d8e5eb2f2ee5"
+Parent: "c4b9313a-3670-4896-ad8c-de611938a194"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Rendering Parameters/Content List Rendering Parameters/Content List Properties/ContentListLimit
+Signature: 68XWJlKvh3yaLc2ACzX36L0Tz0kBDE08POKj/Q0tOZM=
+Modified: 637692467279470627
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\templates\BasicContent\Rendering Parameters\Content List Rendering Parameters\Content List Properties\ContentListType.yml
+ID: "db98c925-2960-4e04-b73c-f68b0769ff58"
+Parent: "c4b9313a-3670-4896-ad8c-de611938a194"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/BasicContent/Rendering Parameters/Content List Rendering Parameters/Content List Properties/ContentListType
+Signature: /SSEocj2VRnHZ6IG16kYVxA8ha9NcckPJbpt1ruPUCg=
+Modified: 637692467279470627

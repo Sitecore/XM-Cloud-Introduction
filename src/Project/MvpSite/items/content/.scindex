@@ -1,0 +1,748 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content.yml
+ID: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Parent: "a43c6692-60f4-4743-a1be-6424de611dfa"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Shared Content
+Signature: qAVyajIF/Oonh1OsbA4DP6O5LWItWhLmdSS8DjL/GB0=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Benefits.yml
+ID: "f96c13c3-e71b-4da2-881f-17f4dcafe56f"
+Parent: "94de9ac3-a9f7-40ab-ae90-acda364b9c40"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/Benefits
+Signature: ZvWT3Si4sSPED5DqDcAIUz+sbjFBunb/qisfWagtC8s=
+Modified: 637692467281134460
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Image Teaser.yml
+ID: "7f31c1bc-fca2-4a8a-840f-e5505ae66aa4"
+Parent: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Shared Content/Image Teaser
+Signature: AgJoiiYj32Ur3E71yJ7gPoMJdWvFRRP6TkJLLP8tU2k=
+Modified: 637692467287075806
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Directory.yml
+ID: "67ba86b6-4adf-422b-bd31-1c17336c5fbf"
+Parent: "94de9ac3-a9f7-40ab-ae90-acda364b9c40"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/Directory
+Signature: 8lGAqdhpJWaHGfkdpOl5liIRzLV6J1OVGhx6+iafWcA=
+Modified: 637795277595262756
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Thank-you.yml
+ID: "728d5b0e-573f-4eb6-8233-9a5dc958507c"
+Parent: "94de9ac3-a9f7-40ab-ae90-acda364b9c40"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: "/sitecore/content/MvpSite/Home/Thank-you"
+Signature: dDzDrK3A40ePIKPJbSGOZCB3jVCFPwlS7SZ/BDAUbbg=
+Modified: 637715677165599675
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Thank-you\Page Components\Thank-you.yml
+ID: "ee7f9b17-b8a9-4dea-bc73-63cbf6cfcbe1"
+Parent: "60b26faf-f6e3-4d92-934b-ca7149d6eab2"
+Template: "86864760-3b8b-4e79-927e-0addcd14055d"
+Path: "/sitecore/content/MvpSite/Home/Thank-you/Page Components/Thank-you"
+Signature: ZiKuV+7yHdTs0VA3xj6geiBDvUjesZtp3sHUXCc2vBc=
+Modified: 637715752366233651
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Hero\Homepage.yml
+ID: "537def5c-b38f-4356-8fcc-24e4838c2319"
+Parent: "ba07af03-314b-49dd-92f7-1ee330bd63e0"
+Template: "86864760-3b8b-4e79-927e-0addcd14055d"
+Path: /sitecore/content/MvpSite/Shared Content/Hero/Homepage
+Signature: g4mm4HfoIYtg6LTn1j/7o8jd7iM7CAwrmoolAE2f5x0=
+Modified: 637692467287075806
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\About\Page Components\MVP Types.yml
+ID: "8fb6ba7c-84d4-44f3-8ff1-d4e6c210418e"
+Parent: "f04a6c79-ad64-46c0-9589-3e714831e94f"
+Template: "64ad1284-23fb-4b76-85b3-c6dfb1b322bf"
+Path: /sitecore/content/MvpSite/Home/About/Page Components/MVP Types
+Signature: SYFp0OUc5GVxVWekeJ7aZtga+UAfB5cQfsTFR5s/KRE=
+Modified: 637692467280977935
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Top Links.yml
+ID: "ea2d31e3-b59a-4142-a066-0ef24c54d098"
+Parent: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Template: "da4e3ec4-5133-42d7-a5a0-36be30dcf187"
+Path: /sitecore/content/MvpSite/Shared Content/Top Links
+Signature: JWK9IH/MC21VoRXRIH6AdkT1RQB3oNZupENygX1yAQo=
+Modified: 637692467287075806
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Benefits\Page Components.yml
+ID: "9dbaf3a9-a176-4d64-ba9f-3f81741f124c"
+Parent: "f96c13c3-e71b-4da2-881f-17f4dcafe56f"
+Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
+Path: /sitecore/content/MvpSite/Home/Benefits/Page Components
+Signature: RB7yIp/+3YP+MnD8gmLxrC5bXKEIgwYilIDWqjtT96E=
+Modified: 637692467281134460
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Announcements.yml
+ID: "d74b40c0-4c5d-48e0-8211-18d061aa30a9"
+Parent: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Shared Content/Announcements
+Signature: GSNKJJzhHD2D21US+uZlVtGbmoImfGFd21oabHouDfI=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists\Past MVP Award Winners\MVP Award 2014.yml
+ID: "aae05885-2203-42d5-99c2-231d5b81d303"
+Parent: "64ae5870-3113-4ad0-9978-f4ac10a874cb"
+Template: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists/Past MVP Award Winners/MVP Award 2014
+Signature: K3WpHh93BxGqxie5sf+ox6L5eYvjFAwSNdnJo69mh3g=
+Modified: 637692467286919454
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Top Links\Default Top Links\Documentation.yml
+ID: "aa5102b8-a7f9-49e0-a27e-7cfd1a7f9e8e"
+Parent: "c4dadd5e-1521-4c6d-afce-39d237751541"
+Template: "e4986869-e4b1-4990-8669-52abf69cd9cf"
+Path: /sitecore/content/MvpSite/Shared Content/Top Links/Default Top Links/Documentation
+Signature: zT1M4Nn1ZZBaRbrBWZHwJ5etSu3dIpoBjWCeiFqPnNw=
+Modified: 637709741509739202
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Become-an-mvp\Page Components.yml
+ID: "1e192541-f2ee-4421-88bd-66c409a84f4e"
+Parent: "fa048086-14bc-4e7d-9987-59f8b4adc286"
+Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
+Path: "/sitecore/content/MvpSite/Home/Become-an-mvp/Page Components"
+Signature: J+UFX7BKgbJXEGh3778xOSQ8xuHwVJHjxhJHd7zaTxs=
+Modified: 637692467281134460
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists\Past MVP Award Winners\MVP Award 2015.yml
+ID: "7572ad33-0020-40b2-9602-97341cfe7cf6"
+Parent: "64ae5870-3113-4ad0-9978-f4ac10a874cb"
+Template: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists/Past MVP Award Winners/MVP Award 2015
+Signature: Ls6yoO/CAgyehYlMcdj/UtxqJWw74CHDOr1GaZgD9zo=
+Modified: 637692467286919454
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Application\Intro\Page Components.yml
+ID: "69abc474-5968-4c16-9c4c-99e9cf4840a5"
+Parent: "c1a3edfd-f35f-482d-b794-b63f2821d8eb"
+Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
+Path: /sitecore/content/MvpSite/Home/Application/Intro/Page Components
+Signature: HhXzhev6HqGoJZQfTXnrr7dRsYn4M69Yn7QvgEnKdF8=
+Modified: 637715752366191540
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Directory\Page Components.yml
+ID: "f6323fdf-e75d-4878-9b8c-72c6a7677cf3"
+Parent: "67ba86b6-4adf-422b-bd31-1c17336c5fbf"
+Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
+Path: /sitecore/content/MvpSite/Home/Directory/Page Components
+Signature: GdNe3+wr3zhKu6d0zYFc5jeEe9hAEcUND/F0tngOjpA=
+Modified: 637795277488488900
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Footer Content.yml
+ID: "a1943e00-819f-41f7-a8c2-86f65e7e8306"
+Parent: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Template: "da6d1712-0553-4d55-a861-8f646003a469"
+Path: /sitecore/content/MvpSite/Shared Content/Footer Content
+Signature: JDgJgDygruEiFfM144dpTlN8nHJ0IhbxQH/eVRN8y64=
+Modified: 637848158476014659
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Top Links\Default Top Links\Discover Sitecore.yml
+ID: "03375f3a-9842-40b8-ab65-69127506bc34"
+Parent: "c4dadd5e-1521-4c6d-afce-39d237751541"
+Template: "e4986869-e4b1-4990-8669-52abf69cd9cf"
+Path: /sitecore/content/MvpSite/Shared Content/Top Links/Default Top Links/Discover Sitecore
+Signature: 9dCV+BRGnv/fqpeqwFtMBJDCe5nYFCADn2ALhqrLbE8=
+Modified: 637709741509729203
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Contact\Page Components.yml
+ID: "fcd16018-da33-4513-b178-790083a35ce6"
+Parent: "c59d92d6-739b-4424-bf07-d3ad7c2b9fc1"
+Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
+Path: /sitecore/content/MvpSite/Home/Contact/Page Components
+Signature: 0CDmXA+vArikv2JRuqN4ZufImsu2p7Djwu3QaZPA6v8=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Top Links\Default Top Links\Sitecore Chat.yml
+ID: "78fc0585-5d42-4c22-944b-b3719bfa81ed"
+Parent: "c4dadd5e-1521-4c6d-afce-39d237751541"
+Template: "e4986869-e4b1-4990-8669-52abf69cd9cf"
+Path: /sitecore/content/MvpSite/Shared Content/Top Links/Default Top Links/Sitecore Chat
+Signature: D8NfWKUtTypGpWm1flTWwNd87lt0U7xIe/q5vwo1czo=
+Modified: 637709741509749205
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Become-an-mvp\Page Components\Becoming.yml
+ID: "75982f95-92ce-4c19-826f-c56a021a4c22"
+Parent: "1e192541-f2ee-4421-88bd-66c409a84f4e"
+Template: "86864760-3b8b-4e79-927e-0addcd14055d"
+Path: "/sitecore/content/MvpSite/Home/Become-an-mvp/Page Components/Becoming"
+Signature: pY4ZjiNRA1rAh8fZDfL0Nm0E4e2mYeuAB9kot/I/SgY=
+Modified: 637692467281134460
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Rss\Podcast.yml
+ID: "113f3ac3-7ba1-4033-9085-4ab861c5640a"
+Parent: "6d4b926c-4de5-46ac-a336-91225072ec40"
+Template: "34e69036-7c28-43cb-afb3-4517ba178c28"
+Path: /sitecore/content/MvpSite/Shared Content/Rss/Podcast
+Signature: FZlQzQiH86EZXSSa/fhIe4xK2B4sHV0B2YT/ZA8F7Fg=
+Modified: 637692467287075806
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Settings\Content List Types\White Blocks.yml
+ID: "e58a021e-74d2-471e-9eba-b09616350605"
+Parent: "b8bb5f61-6b08-4a0e-9b48-0101976e5b9c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Settings/Content List Types/White Blocks
+Signature: nX350iAOsXL/uJj/81dNgKVJr8h7Ic1PB9P30/m4dME=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Become-an-mvp\Page Components\Become MVP part2.yml
+ID: "4df3f6c5-9b3e-4b99-8a45-d146d139f3e3"
+Parent: "1e192541-f2ee-4421-88bd-66c409a84f4e"
+Template: "64ad1284-23fb-4b76-85b3-c6dfb1b322bf"
+Path: "/sitecore/content/MvpSite/Home/Become-an-mvp/Page Components/Become MVP part2"
+Signature: YBXQOsT/qnuaIcMamgp/1yQMYgakaDgicsTabAEAyzY=
+Modified: 637692467281134460
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Contact\Page Components\Contact Information.yml
+ID: "e24a4e73-1e6d-400a-8707-9c554ca8e192"
+Parent: "fcd16018-da33-4513-b178-790083a35ce6"
+Template: "64ad1284-23fb-4b76-85b3-c6dfb1b322bf"
+Path: /sitecore/content/MvpSite/Home/Contact/Page Components/Contact Information
+Signature: ebofQlKVQZgNDfIL5R9QOnjtiWp962tRXejZz4iKl7I=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Video Teaser\How to become a MVP.yml
+ID: "0330cf77-dcdd-45ca-8d47-9370a3902bc1"
+Parent: "102b3423-90ec-461d-bf8e-3a932204aea4"
+Template: "a94acaec-6552-47d1-90b7-f54283868b3f"
+Path: /sitecore/content/MvpSite/Shared Content/Video Teaser/How to become a MVP
+Signature: Refpw4siPLuFBAhkf2wLnfZVvoM1W7fnYb7pqExC0KA=
+Modified: 637692467287075806
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\About\Page Components\About.yml
+ID: "faff75ec-fcce-4ff8-b0cf-7dc54fa40244"
+Parent: "f04a6c79-ad64-46c0-9589-3e714831e94f"
+Template: "86864760-3b8b-4e79-927e-0addcd14055d"
+Path: /sitecore/content/MvpSite/Home/About/Page Components/About
+Signature: 6ZIBoiLYbl3aLxzCrRDBealqNJ9Bd/SyGdbTmdGDWJ4=
+Modified: 637692467280977935
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Benefits\Page Components\Benefits.yml
+ID: "d1807ab8-f8db-4f3d-9fa6-aea9590076b5"
+Parent: "9dbaf3a9-a176-4d64-ba9f-3f81741f124c"
+Template: "86864760-3b8b-4e79-927e-0addcd14055d"
+Path: /sitecore/content/MvpSite/Home/Benefits/Page Components/Benefits
+Signature: bHCrSOIzcNYSFN1PlJnh1QMB2zHRouBIlevCu9RZb0Q=
+Modified: 637692467281134460
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Top Links\Default Top Links\Stack Exchange.yml
+ID: "21de713e-c5ad-42dc-aafb-0a420bede5fd"
+Parent: "c4dadd5e-1521-4c6d-afce-39d237751541"
+Template: "e4986869-e4b1-4990-8669-52abf69cd9cf"
+Path: /sitecore/content/MvpSite/Shared Content/Top Links/Default Top Links/Stack Exchange
+Signature: +0PtRkI+JwUm1I6OCQ5UtfezHUrHOpMteutxwBy5/0g=
+Modified: 637709741509759202
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists\MVP Categories\Ambassador.yml
+ID: "6770cee3-d0a6-4f68-94ec-9c8d0b23f8ad"
+Parent: "5e3a3f5b-cbf7-4d13-8a39-2bc9d5fd3f22"
+Template: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists/MVP Categories/Ambassador
+Signature: Zj9ePW3F+I+Ym1Hbr2gioGtkyzoj9VuIHWPYRq975uM=
+Modified: 637692467286919454
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Contact\Page Components\Contact.yml
+ID: "7e27288d-9261-45d5-9d8b-705116563ac8"
+Parent: "fcd16018-da33-4513-b178-790083a35ce6"
+Template: "86864760-3b8b-4e79-927e-0addcd14055d"
+Path: /sitecore/content/MvpSite/Home/Contact/Page Components/Contact
+Signature: gy9R4uzbKHChQzGr28xq2IaYav8Dx659yBQ2PPgVDNg=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home.yml
+ID: "94de9ac3-a9f7-40ab-ae90-acda364b9c40"
+Parent: "a43c6692-60f4-4743-a1be-6424de611dfa"
+Template: "9c1e30a0-8691-4ad4-bef0-e1f446eef8f3"
+Path: /sitecore/content/MvpSite/Home
+Signature: xBTjI/HDPCi59oAe4RvE3rnt96xOTYREspbFbRFKf5g=
+Modified: 637788526058574761
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Thank-you\Page Components\Content.yml
+ID: "3c50eb5c-db55-4903-9b5b-c1ebb52f916f"
+Parent: "60b26faf-f6e3-4d92-934b-ca7149d6eab2"
+Template: "64ad1284-23fb-4b76-85b3-c6dfb1b322bf"
+Path: "/sitecore/content/MvpSite/Home/Thank-you/Page Components/Content"
+Signature: ebofQlKVQZgNDfIL5R9QOnjtiWp962tRXejZz4iKl7I=
+Modified: 637715677165619693
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\404.yml
+ID: "fe6ec725-4173-44c5-a2bc-8c92cf7e74b5"
+Parent: "94de9ac3-a9f7-40ab-ae90-acda364b9c40"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/404
+Signature: L8x4zVSaBErhMOOwbAoqMe0cq1VSkw/bFRUlOEsslkg=
+Modified: 637786628227335884
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists\MVP Categories\Strategy.yml
+ID: "17302488-06e8-4b59-8165-ffecc726c258"
+Parent: "5e3a3f5b-cbf7-4d13-8a39-2bc9d5fd3f22"
+Template: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists/MVP Categories/Strategy
+Signature: hs4Wzb6jGg4M0SziBE4s5j2UcsbCZQUptxZyuc5m7Iw=
+Modified: 637788526058594758
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Settings\Content List Types.yml
+ID: "b8bb5f61-6b08-4a0e-9b48-0101976e5b9c"
+Parent: "8ea9fd60-cea2-491d-bfd1-923ed92ad2bc"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Settings/Content List Types
+Signature: EHhDguaaYfLTMe7GBF9voMhibTF2eZnYJ0BwZ8cZIB0=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists.yml
+ID: "b36fa333-32ab-4c3f-ab43-16aaccfccf02"
+Parent: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists
+Signature: 6xu48noxwvGDld5Xsnr9v9dlh/kmW92fjzpmMzOgUP4=
+Modified: 637692467286919454
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Thank-you\Page Components.yml
+ID: "60b26faf-f6e3-4d92-934b-ca7149d6eab2"
+Parent: "728d5b0e-573f-4eb6-8233-9a5dc958507c"
+Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
+Path: "/sitecore/content/MvpSite/Home/Thank-you/Page Components"
+Signature: 0CDmXA+vArikv2JRuqN4ZufImsu2p7Djwu3QaZPA6v8=
+Modified: 637715677165599675
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Settings\Content List Types\MVP 4 Column.yml
+ID: "f0027cb2-8725-48ea-b85d-eb83e5216e5a"
+Parent: "b8bb5f61-6b08-4a0e-9b48-0101976e5b9c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Settings/Content List Types/MVP 4 Column
+Signature: nX350iAOsXL/uJj/81dNgKVJr8h7Ic1PB9P30/m4dME=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\404\Page Components\404.yml
+ID: "a601e7cf-fd64-4b15-b51d-0959ab52141c"
+Parent: "054ed910-3a29-4c9f-b61d-447f407cac63"
+Template: "86864760-3b8b-4e79-927e-0addcd14055d"
+Path: /sitecore/content/MvpSite/Home/404/Page Components/404
+Signature: PsEEs2KHF9X2RYETa25U4TrjuQWuU3RLG1/5pYc4Ahw=
+Modified: 637786628227355888
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists\MVP Categories\Commerce.yml
+ID: "201315d2-844b-4004-8100-a7244ee24137"
+Parent: "5e3a3f5b-cbf7-4d13-8a39-2bc9d5fd3f22"
+Template: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists/MVP Categories/Commerce
+Signature: MGRZfTdsmXkZsq+z8Xp+B5d2lwyUKqdT1I7qRQA6qjQ=
+Modified: 637788526058584757
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Announcements\MVP Summit.yml
+ID: "c6614898-2f30-4b46-bf5b-c72cd2cfdd68"
+Parent: "d74b40c0-4c5d-48e0-8211-18d061aa30a9"
+Template: "fd88ad0e-f5a8-4ab2-a02c-164f33d7c307"
+Path: /sitecore/content/MvpSite/Shared Content/Announcements/MVP Summit
+Signature: 4vk7UdRqqH0HDw0CgA7/Bc//kELaCNnJF7AbreBjyc4=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists\Past MVP Award Winners.yml
+ID: "64ae5870-3113-4ad0-9978-f4ac10a874cb"
+Parent: "b36fa333-32ab-4c3f-ab43-16aaccfccf02"
+Template: "6193dcfc-b632-4fa5-9411-f9588470c1c9"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists/Past MVP Award Winners
+Signature: nng7FCk5N3OSAOzUJkEG5hMU692VyOFDT/arWrf3DCs=
+Modified: 637692467286919454
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Become-an-mvp\Page Components\Become MVP part 1.yml
+ID: "5568a458-a32d-47f1-97ba-238f85b25c68"
+Parent: "1e192541-f2ee-4421-88bd-66c409a84f4e"
+Template: "64ad1284-23fb-4b76-85b3-c6dfb1b322bf"
+Path: "/sitecore/content/MvpSite/Home/Become-an-mvp/Page Components/Become MVP part 1"
+Signature: aHYOzsIIBkdPcAQYW7EN8WhkkgJ6rmGkRtu0yCHNwbc=
+Modified: 637692467281134460
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists\Past MVP Award Winners\MVP Award 2016.yml
+ID: "e1548ffe-7f92-4973-8311-9f9d8ffbf8c3"
+Parent: "64ae5870-3113-4ad0-9978-f4ac10a874cb"
+Template: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists/Past MVP Award Winners/MVP Award 2016
+Signature: SVOxZTnQOWiJZiETmtYCjkW6io5hjFmEHbDQNivkP+E=
+Modified: 637692467286919454
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Top Links\Default Top Links\Sitecore Community.yml
+ID: "d81a76d6-e7a3-4640-8aa2-8c9ce46b909f"
+Parent: "c4dadd5e-1521-4c6d-afce-39d237751541"
+Template: "e4986869-e4b1-4990-8669-52abf69cd9cf"
+Path: /sitecore/content/MvpSite/Shared Content/Top Links/Default Top Links/Sitecore Community
+Signature: 5W17Iv+ofXee8V6WDqtC61g3NZnNY6NBxDfDzdoYB2Y=
+Modified: 637692467287075806
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Become-an-mvp.yml
+ID: "fa048086-14bc-4e7d-9987-59f8b4adc286"
+Parent: "94de9ac3-a9f7-40ab-ae90-acda364b9c40"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: "/sitecore/content/MvpSite/Home/Become-an-mvp"
+Signature: C3zLEnKdFpeQAVGiB/Q5WjLLxgjBDiLWcbFqlPzcM6w=
+Modified: 637692467280977935
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Rich Text Content.yml
+ID: "b9a0ea97-db6c-463e-b290-b823a20850f2"
+Parent: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Shared Content/Rich Text Content
+Signature: yOVTLbxwHrDaMjjcZ1f7Fzw8LLK8rBksQedlJlsRtcs=
+Modified: 637692467287075806
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Video Teaser.yml
+ID: "102b3423-90ec-461d-bf8e-3a932204aea4"
+Parent: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Shared Content/Video Teaser
+Signature: Az7tv0NpBd8gS+KFOCmNZ/iuYczjp1F8o4/8GrUlYzk=
+Modified: 637692467287075806
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Footer Content\Facebook.yml
+ID: "89dc529d-e275-4b1f-b510-81962d93a19f"
+Parent: "a1943e00-819f-41f7-a8c2-86f65e7e8306"
+Template: "50c6077c-1c0c-4873-b6af-7b8d164636d4"
+Path: /sitecore/content/MvpSite/Shared Content/Footer Content/Facebook
+Signature: +lDRVR9eoQR23sA7Vo+LKXIT+155irdZyiYZC8a4s18=
+Modified: 637848158476024453
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Footer Content\Youtube.yml
+ID: "aa0550bb-2dcf-4157-aa4b-c79a7c0f8093"
+Parent: "a1943e00-819f-41f7-a8c2-86f65e7e8306"
+Template: "50c6077c-1c0c-4873-b6af-7b8d164636d4"
+Path: /sitecore/content/MvpSite/Shared Content/Footer Content/Youtube
+Signature: kvGZSF1BhRrvhIeznxeyx2AweYfCt9i14rX4SW3tQvc=
+Modified: 637848158476054129
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Top Links\Default Top Links.yml
+ID: "c4dadd5e-1521-4c6d-afce-39d237751541"
+Parent: "ea2d31e3-b59a-4142-a066-0ef24c54d098"
+Template: "e454a4e3-f69a-4d46-8601-eda00669d470"
+Path: /sitecore/content/MvpSite/Shared Content/Top Links/Default Top Links
+Signature: xtqp4OCUvZKSZMg1Ei4k9xoKU1dXP3RzUnV2qBB64YQ=
+Modified: 637692467287075806
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\404\Page Components\Content.yml
+ID: "ee9ad220-151d-457d-9952-aa3edde2c14a"
+Parent: "054ed910-3a29-4c9f-b61d-447f407cac63"
+Template: "64ad1284-23fb-4b76-85b3-c6dfb1b322bf"
+Path: /sitecore/content/MvpSite/Home/404/Page Components/Content
+Signature: ebofQlKVQZgNDfIL5R9QOnjtiWp962tRXejZz4iKl7I=
+Modified: 637786628227365888
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists\MVP Categories\Technology.yml
+ID: "fcd0eb59-694c-46d8-83ed-81c814015eae"
+Parent: "5e3a3f5b-cbf7-4d13-8a39-2bc9d5fd3f22"
+Template: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists/MVP Categories/Technology
+Signature: sMKgf1KQ7zyqQKZYNWi231DrA7pGHppbvT0r7ho+oWM=
+Modified: 637788526058604755
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite.yml
+ID: "a43c6692-60f4-4743-a1be-6424de611dfa"
+Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
+Template: "c39978e9-c0d2-4d72-bf8b-b121e35bde91"
+Path: /sitecore/content/MvpSite
+Signature: otHjTPuB/VH2mModmdSMo8NGJEmjrFTjl6yfDxzjoIQ=
+Modified: 637692467280977935
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Hero.yml
+ID: "ba07af03-314b-49dd-92f7-1ee330bd63e0"
+Parent: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Template: "f463e2de-6f77-4293-88d4-5eaa153038a1"
+Path: /sitecore/content/MvpSite/Shared Content/Hero
+Signature: H0LXSneqR9LpaFIZVNBKMwj2AYZ3QL3Wn7vqqyF1owc=
+Modified: 637692467286919454
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Rss.yml
+ID: "6d4b926c-4de5-46ac-a336-91225072ec40"
+Parent: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Shared Content/Rss
+Signature: zruEXazWPRcnQcjPq6GCp2Ot6YaiE3JfMg9qzIyCku8=
+Modified: 637692467287075806
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\404\Page Components.yml
+ID: "054ed910-3a29-4c9f-b61d-447f407cac63"
+Parent: "fe6ec725-4173-44c5-a2bc-8c92cf7e74b5"
+Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
+Path: /sitecore/content/MvpSite/Home/404/Page Components
+Signature: 0CDmXA+vArikv2JRuqN4ZufImsu2p7Djwu3QaZPA6v8=
+Modified: 637786628227345883
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Application\Intro.yml
+ID: "c1a3edfd-f35f-482d-b794-b63f2821d8eb"
+Parent: "47e6ab4b-97fb-4c14-a3d6-6265f41723db"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/Application/Intro
+Signature: vg57E1OFeKeP2BKVpWFI4KqcPQ0Ofsx18xbdYf3XrFM=
+Modified: 637715752366176020
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Footer Content\Twitter.yml
+ID: "8b0a36d6-11b8-48a0-b2a5-3e6c4196bd32"
+Parent: "a1943e00-819f-41f7-a8c2-86f65e7e8306"
+Template: "50c6077c-1c0c-4873-b6af-7b8d164636d4"
+Path: /sitecore/content/MvpSite/Shared Content/Footer Content/Twitter
+Signature: IKdZJLpjHcEeoqtsHznzdLyWvM21a22sN5KQY9f9DG0=
+Modified: 637848158476044136
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Benefits\Page Components\Benefits list.yml
+ID: "f86e1aa2-b5d9-4557-b060-cd8ef009c754"
+Parent: "9dbaf3a9-a176-4d64-ba9f-3f81741f124c"
+Template: "64ad1284-23fb-4b76-85b3-c6dfb1b322bf"
+Path: /sitecore/content/MvpSite/Home/Benefits/Page Components/Benefits list
+Signature: kO8DNQrZ2TbVunAKu9sQ4k0jnrZTMeyby0A0zR1hW64=
+Modified: 637692467281134460
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists\Past MVP Award Winners\MVP Award 2019.yml
+ID: "75991b54-45bf-4e64-b958-be7337b19d25"
+Parent: "64ae5870-3113-4ad0-9978-f4ac10a874cb"
+Template: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists/Past MVP Award Winners/MVP Award 2019
+Signature: gQRmJVE76Zoh1sotu8t2weEtj6vddFK3Vf9u0QDuXQg=
+Modified: 637692467286919454
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Top Links\Default Top Links\Developers.yml
+ID: "a2bfbc0a-1563-4dc1-9410-651231798af4"
+Parent: "c4dadd5e-1521-4c6d-afce-39d237751541"
+Template: "e4986869-e4b1-4990-8669-52abf69cd9cf"
+Path: /sitecore/content/MvpSite/Shared Content/Top Links/Default Top Links/Developers
+Signature: 5+slN8rjWIOv3WhwR+WYgMMI1zZ/PQLC8ObqLjuJb8E=
+Modified: 637709741509719204
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Application.yml
+ID: "47e6ab4b-97fb-4c14-a3d6-6265f41723db"
+Parent: "94de9ac3-a9f7-40ab-ae90-acda364b9c40"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/Application
+Signature: udcyR30RW5ir7lKXchJLWTgakxz7cMznUeyleej2DCk=
+Modified: 637715752366166019
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Settings.yml
+ID: "8ea9fd60-cea2-491d-bfd1-923ed92ad2bc"
+Parent: "a43c6692-60f4-4743-a1be-6424de611dfa"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Settings
+Signature: kAtg56//PZDobB5odF/8wx4f3qF2minPvJ/4V7WE62Y=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\About.yml
+ID: "0d97b45d-c589-4495-a495-9aaff4fbd2c3"
+Parent: "94de9ac3-a9f7-40ab-ae90-acda364b9c40"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/About
+Signature: zHfiUiVXc5lgwBLLn796HFoq6L/imLyt7Mb+rPxaO58=
+Modified: 637692467280977935
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Contact.yml
+ID: "c59d92d6-739b-4424-bf07-d3ad7c2b9fc1"
+Parent: "94de9ac3-a9f7-40ab-ae90-acda364b9c40"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/Contact
+Signature: 03/O1q3SB82MDkdRlAEYvUqBxahEn3LOIjphCNajq5I=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\About\Page Components.yml
+ID: "f04a6c79-ad64-46c0-9589-3e714831e94f"
+Parent: "0d97b45d-c589-4495-a495-9aaff4fbd2c3"
+Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
+Path: /sitecore/content/MvpSite/Home/About/Page Components
+Signature: hBt9Rkp/e9L+Ti2JDf8vpatnQbiLQpVL88LwsnEZXiE=
+Modified: 637692467280977935
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\CTA Content.yml
+ID: "996d6757-e987-4167-86dc-0660953f36d6"
+Parent: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Shared Content/CTA Content
+Signature: 6irSA4txd1Yex8oF797T2rdY6kpFkcIy5fW+XdlugD0=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Podcast.yml
+ID: "cbf43178-a093-4bae-8ce0-72d3df81d77b"
+Parent: "94de9ac3-a9f7-40ab-ae90-acda364b9c40"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/Podcast
+Signature: ZQQxc+pXTDH02goJBKU9Hp58w4AqVa/gUGErW2c9lTA=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Application\Page Components.yml
+ID: "520a7845-8d30-4ffd-875b-a19ed9220d8d"
+Parent: "47e6ab4b-97fb-4c14-a3d6-6265f41723db"
+Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
+Path: /sitecore/content/MvpSite/Home/Application/Page Components
+Signature: 7XU0S8iiiyGTcuAlVMxsGnaiQ50TFIm77Az/rYwrdO8=
+Modified: 637715677165579705
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Settings\Content List Types\MVP 3 Column.yml
+ID: "92dd658a-76be-437a-86e4-589df627fbcc"
+Parent: "b8bb5f61-6b08-4a0e-9b48-0101976e5b9c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/Settings/Content List Types/MVP 3 Column
+Signature: nX350iAOsXL/uJj/81dNgKVJr8h7Ic1PB9P30/m4dME=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Podcast\Page Components.yml
+ID: "67828cc7-e88a-4336-92c4-5e417789ef92"
+Parent: "cbf43178-a093-4bae-8ce0-72d3df81d77b"
+Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
+Path: /sitecore/content/MvpSite/Home/Podcast/Page Components
+Signature: 6I2DD2PQBSb+Sg3qz7wWS6p+jWmynLFO0gFbq2SW27A=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Footer Content\LinkedIn.yml
+ID: "b7e9c86f-b750-4fc2-aae7-50bd44d0c26d"
+Parent: "a1943e00-819f-41f7-a8c2-86f65e7e8306"
+Template: "50c6077c-1c0c-4873-b6af-7b8d164636d4"
+Path: /sitecore/content/MvpSite/Shared Content/Footer Content/LinkedIn
+Signature: Wr1PD6tXMOBUDPsrkZ1RC1TZuHtFXFU1kX6ByvMS7wU=
+Modified: 637848158476034452
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists\MVP Categories.yml
+ID: "5e3a3f5b-cbf7-4d13-8a39-2bc9d5fd3f22"
+Parent: "b36fa333-32ab-4c3f-ab43-16aaccfccf02"
+Template: "6193dcfc-b632-4fa5-9411-f9588470c1c9"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists/MVP Categories
+Signature: pFapCHAZd24oSYoTwgxlCLKJvr1ofHttuJ5FJX22z1U=
+Modified: 637692467286919454
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Podcast\Page Components\Podcast.yml
+ID: "ec78a6a1-796d-40be-a9af-60d13e92ff45"
+Parent: "67828cc7-e88a-4336-92c4-5e417789ef92"
+Template: "86864760-3b8b-4e79-927e-0addcd14055d"
+Path: /sitecore/content/MvpSite/Home/Podcast/Page Components/Podcast
+Signature: hnnIYtZK5cFlYqb1yuNDeOrxA75czJxTIlPQ+rV9OpU=
+Modified: 637692467286756938
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists\Past MVP Award Winners\MVP Award 2017.yml
+ID: "2aa31505-d333-4a79-82fc-cc6c38c7982d"
+Parent: "64ae5870-3113-4ad0-9978-f4ac10a874cb"
+Template: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists/Past MVP Award Winners/MVP Award 2017
+Signature: IIh5Pya56BCifFvk0QkZTO6b6+HV/2AsWKYAIboD8pU=
+Modified: 637692467286919454
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\CTA Content\Sitecore Most Valuable Professional.yml
+ID: "a7cc481a-b6c8-4604-b19f-50844263ee3e"
+Parent: "996d6757-e987-4167-86dc-0660953f36d6"
+Template: "778f1f91-5252-4036-b186-570e8e5860ea"
+Path: /sitecore/content/MvpSite/Shared Content/CTA Content/Sitecore Most Valuable Professional
+Signature: X3fXYM5isBF91LNvf2I19nKLZpvhVNX2HlwwVDb+cpA=
+Modified: 637692467286919454
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Application\Intro\Page Components\Log In.yml
+ID: "4a99a19c-2299-48c7-a884-fd182172ff9d"
+Parent: "69abc474-5968-4c16-9c4c-99e9cf4840a5"
+Template: "86864760-3b8b-4e79-927e-0addcd14055d"
+Path: /sitecore/content/MvpSite/Home/Application/Intro/Page Components/Log In
+Signature: e2ul445/cbwbufp0UsjKjFiA7HFOAdNSQvlts1rCaos=
+Modified: 637715752366201970
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Footer Content\Instagram.yml
+ID: "85e4402a-8cb4-414f-bdd4-9306809022ef"
+Parent: "a1943e00-819f-41f7-a8c2-86f65e7e8306"
+Template: "50c6077c-1c0c-4873-b6af-7b8d164636d4"
+Path: /sitecore/content/MvpSite/Shared Content/Footer Content/Instagram
+Signature: hpZlR0E5CMhXkKxiTMMsZ/xYvYEqT+QZiA+8yq57CGo=
+Modified: 637848158476024453
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Home\Become-an-mvp\Page Components\Who can apply.yml
+ID: "bb242858-af8d-4de3-8865-b85f240da1af"
+Parent: "1e192541-f2ee-4421-88bd-66c409a84f4e"
+Template: "bdf1a02f-ce53-4de8-8fe4-e25d6ca65b7c"
+Path: "/sitecore/content/MvpSite/Home/Become-an-mvp/Page Components/Who can apply"
+Signature: kphn8klVwDtiseNwBCq5vZnqnrOzLmJoOvf9J9NpElE=
+Modified: 637692467281134460
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\content\MvpSite\Shared Content\Content Lists\Past MVP Award Winners\MVP Award 2018.yml
+ID: "73ce5b47-9367-4218-8356-82ec301bec8b"
+Parent: "64ae5870-3113-4ad0-9978-f4ac10a874cb"
+Template: "ab41e387-f300-470c-88d1-6fcd5e12c5d8"
+Path: /sitecore/content/MvpSite/Shared Content/Content Lists/Past MVP Award Winners/MVP Award 2018
+Signature: N//p5ihZKC+WorefEYua7C3U2PzbnkBEGf0cBalguP4=
+Modified: 637692467286919454

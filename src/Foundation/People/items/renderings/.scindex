@@ -1,0 +1,19 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Foundation\People\items\renderings\People.yml
+ID: "19c42f32-09e0-44d1-bf35-c3812319c462"
+Parent: "180d4942-2b10-4375-bc06-e0d94220a68f"
+Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
+Path: /sitecore/layout/Renderings/Foundation/People
+Signature: gAj9wiXjYGtGTcA+qnUGlJwJBgzcoPUJ5MRYRaPIAjE=
+Modified: 637710721749463810
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Foundation\People\items\renderings\People\MVPSearch.yml
+ID: "1f4ac79e-97e1-4d32-bc0e-2cbe1f3e3f9c"
+Parent: "19c42f32-09e0-44d1-bf35-c3812319c462"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Foundation/People/MVPSearch
+Signature: ipxG61kTXykPaWMGWUxVeoGlJnacb1eRQ7xlRjgSa8w=
+Modified: 637710721749473783

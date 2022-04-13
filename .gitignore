@@ -1,0 +1,6 @@
+# ignore sitecore asset cache & itempackages
+.sitecore/package-cache/
+.sitecore/user.json
+
+# IDE Settings
+.vscode

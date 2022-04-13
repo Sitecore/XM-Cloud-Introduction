@@ -1,0 +1,19 @@
+﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\Content Resolvers\BasicContent.yml
+ID: "22950399-96a0-4eb2-b8f8-4fcbdffaf581"
+Parent: "c626493f-1cc3-4986-a701-f28b83d649f7"
+Template: "1404a77a-d5fd-46b3-aa4c-200f3d519979"
+Path: /sitecore/system/Modules/Layout Service/Rendering Contents Resolvers/BasicContent
+Signature: DpTBNuH/gNYM01QDIxaNZ/jkIHgpiebn/KRcTDxIBG8=
+Modified: 637692467279158052
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\Content Resolvers\BasicContent\ContentList.yml
+ID: "f3f812a1-2f0c-4a36-812a-3a5fbac6a2ed"
+Parent: "22950399-96a0-4eb2-b8f8-4fcbdffaf581"
+Template: "814c1dbb-b118-4511-ba2b-7288ed3d490b"
+Path: /sitecore/system/Modules/Layout Service/Rendering Contents Resolvers/BasicContent/ContentList
+Signature: /86F1vKXh8bAfiH1S9y5RHGrd0aDUgtthCnk800dLco=
+Modified: 637692467279158052
