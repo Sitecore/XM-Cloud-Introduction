@@ -1,0 +1,13 @@
+{
+  "defaultAuthority": "https://auth-staging-1.sitecore-staging.cloud/",
+  "clientId": "RRnzABlSoIWpPPDZCTh5KPekgG0AsjiL",
+  "clientLoginTimeoutInSeconds": "300",
+  "deployOperationTimeout": "1200",
+  "xmCloudDeployApp": "https://deploy-staging.sitecore-staging.cloud/",
+  "xmCloudDeployEndpoint": "https://xmclouddeploy-api-staging.sitecore-staging.cloud/",
+  "xmCloudEndpointName": "XmCloud",
+  "audience": "https://api-staging.sitecore-staging.cloud",
+  "audienceClientCredentials": "https://xmclouddeploy-api-staging.sitecore-staging.cloud",
+  "deployPollingStatusTimeoutInSeconds": "2",
+  "httpAttemptsNumber": "3"
+}
