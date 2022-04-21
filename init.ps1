@@ -129,7 +129,7 @@ if ($InitEnv) {
     Set-EnvFileVariable "SITECORE_ADMIN_PASSWORD" -Value $AdminPassword
     Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientId" -Value $Auth0_ClientId
     Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientSecret" -Value $Auth0_ClientSecret
-    Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl" -Value $CM_Host
+    Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl" -Value "https://$CM_Host/"
 }
 
 Push-Location docker\traefik\certs
