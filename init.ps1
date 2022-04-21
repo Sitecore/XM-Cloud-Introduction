@@ -28,7 +28,7 @@ Param (
 
     [Parameter(HelpMessage = "The hostname used for the local CM instance.",
         ParameterSetName = "env-init")]
-    [string]$CM_Host = "cm.localhost"
+    [string]$CM_Host = "xmcloudcm.localhost"
 )
 
 $ErrorActionPreference = "Stop";
@@ -55,7 +55,6 @@ Copy-Item ".\.env.template" ".\.env" -Force
 ################################################
 # Retrieve and import SitecoreDockerTools module
 ################################################
-
 # Check for Sitecore Gallery
 Import-Module PowerShellGet
 $SitecoreGallery = Get-PSRepository | Where-Object { $_.SourceLocation -eq "https://sitecore.myget.org/F/sc-powershell/api/v2" }
@@ -79,7 +78,6 @@ Write-SitecoreDockerWelcome
 ##################################
 # Configure TLS/HTTPS certificates
 ##################################
-
 Push-Location docker\traefik\certs
 try {
     $mkcert = ".\mkcert.exe"
@@ -96,8 +94,8 @@ try {
     }
     Write-Host "Generating Traefik TLS certificate..." -ForegroundColor Green
     & $mkcert -install
-    & $mkcert "*.xmcloudpreview.localhost"
-    & $mkcert "xmcloudcm.localhost"
+    & $mkcert $CM_Host
+    & $mkcert "*.$CM_Host"
 
     # stash CAROOT path for messaging at the end of the script
     $caRoot = "$(& $mkcert -CAROOT)\rootCA.pem"
@@ -109,11 +107,9 @@ finally {
     Pop-Location
 }
 
-
 ################################
 # Add Windows hosts file entries
 ################################
-
 Write-Host "Adding Windows hosts file entries..." -ForegroundColor Green
 Add-HostsEntry $CM_Host
 
@@ -131,6 +127,9 @@ if ($InitEnv) {
     Set-EnvFileVariable "MEDIA_REQUEST_PROTECTION_SHARED_SECRET" -Value (Get-SitecoreRandomString 64)
     Set-EnvFileVariable "SQL_SA_PASSWORD" -Value (Get-SitecoreRandomString 19 -DisallowSpecial -EnforceComplexity)
     Set-EnvFileVariable "SITECORE_ADMIN_PASSWORD" -Value $AdminPassword
+    Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientId" -Value $Auth0_ClientId
+    Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientSecret" -Value $Auth0_ClientSecret
+    Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl" -Value $CM_Host
 }
 
 Push-Location docker\traefik\certs

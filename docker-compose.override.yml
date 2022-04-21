@@ -4,6 +4,8 @@ services:
   traefik:
     volumes:
       - ./docker/traefik:C:/etc/traefik
+    depends_on:
+      - cm
 
   # Mount our SQL data folder and use our custom image with the Headless Services (JSS)
   # module data added. See Dockerfile for details.
@@ -32,4 +34,3 @@ services:
       SITECORE_LICENSE_LOCATION: c:\license\license.xml
       SITECORE_DEVELOPMENT_PATCHES: DevEnvOn,CustomErrorsOff,DebugOn,DiagnosticsOff,InitMessagesOff
       Sitecore_AppSettings_exmEnabled:define: "no" # remove to turn on EXM
-    entrypoint: powershell -Command "& C:\tools\entrypoints\iis\Development.ps1"
