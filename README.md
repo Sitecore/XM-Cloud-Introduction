@@ -14,15 +14,16 @@ Prerequisites for this repository are...
 ## Intialise the repository
 Run the following PowerShell command from an elevated prompt.
 
-    ```ps1
-    .\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Auth0_ClientId "<<Auth0_Client_Id>>" -Auth0_ClientSecret "<<Auth0_Client_Secret>>"
-    ```
+```ps1
+.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Auth0_ClientId "<<Auth0_Client_Id>>" -Auth0_ClientSecret "<<Auth0_Client_Secret>>"
+```
 
 ## Run the repository
 Run the following PowerShell command to bring up the application locally.
-    ```ps1
-    .\up.ps1
-    ```
+
+```ps1
+.\up.ps1
+```
 
 # Deserialise content into XM Cloud instance
 
