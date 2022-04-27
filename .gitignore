@@ -53,4 +53,6 @@ packages/
 !/docker/data/sql/.gitkeep
 /docker/data/solr/*
 !/docker/data/solr/.gitkeep
+/docker/deploy/platform/*
+!/docker/deploy/platform/.gitkeep
 /docker/traefik/certs/*.pem
