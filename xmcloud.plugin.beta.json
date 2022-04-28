@@ -1,0 +1,13 @@
+{
+  "defaultAuthority": "https://auth-beta.sitecorecloud.io/",
+  "clientId": "cNNGXGoVEiKHZhYUcZP3658HS7QUGor7",
+  "clientLoginTimeoutInSeconds": "300",
+  "deployOperationTimeout": "1200",
+  "xmCloudDeployApp": "https://deploy-beta.sitecorecloud.io/",
+  "xmCloudDeployEndpoint": "https://xmclouddeploy-api-beta.sitecorecloud.io/",
+  "xmCloudEndpointName": "XmCloud",
+  "audience": "https://api-beta.sitecorecloud.io",
+  "audienceClientCredentials": "https://xmclouddeploy-api-beta.sitecorecloud.io",
+  "deployPollingStatusTimeoutInSeconds": "2",
+  "httpAttemptsNumber": "3"
+}

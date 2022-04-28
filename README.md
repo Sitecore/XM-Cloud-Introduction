@@ -25,15 +25,21 @@ Run the following PowerShell command to bring up the application locally.
 .\up.ps1
 ```
 
-# Deserialise content into XM Cloud instance
+# Deploying to XM Cloud
 
-* Connect your local CLI instance using `dotnet sitecore cloud environment connect -id <<ENV_ID>>`
+## Create a new environment and deploy the codebase
+
+Create an environment that you're going to deploy to:
+* `dotnet sitecore cloud environment create --project-id <<YOUR_PROJECT_ID>> -n mvp-site-definition`
+
+Record the returned Environment ID.
+
+Create a deployment and push the local codebase into XM Cloud
+* `dotnet sitecore cloud deployment create -id <<YOUR_ENVIRONMENT_ID>> --upload`
+
+## Deserialise the content items into XM Cloud
+
+The inital deploy performed above will move all of the items into the instance automatically. To perform a further manual sync you can use the following commands:
+
+* Connect your local CLI instance using `dotnet sitecore cloud environment connect -id <<YOUR_ENVIRONMENT_ID>>`
 * Push the content to your XM Cloud instance using `dotnet sitecore ser push`
-
-## Troubleshooting Deserialisation
-
-* Environment Default was not defined. Use the Login command to define it.
-    - You need to edit your `/.sitecore/user.json` file, duplicate the XM Cloud node created after your call the `connect` command, and call the new instance `default`.
-
-* Unexpected HttpResponseMessage with code: RequestEntityTooLarge.
-    - This is probably due to media library items being included in your serialised items and the data size is larger than the NGINX ingress limit.
