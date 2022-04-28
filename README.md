@@ -43,3 +43,37 @@ The inital deploy performed above will move all of the items into the instance a
 
 * Connect your local CLI instance using `dotnet sitecore cloud environment connect -id <<YOUR_ENVIRONMENT_ID>>`
 * Push the content to your XM Cloud instance using `dotnet sitecore ser push`
+
+# Testing Edge GraphQL Endpoint
+
+Ensure you have performed a publish of the content first, or you will have data available in Edge.
+
+## Create an Edge Token
+Running the following script with the environment id from the previous steps will create an Edge access token and launch the GraphQL Playground so that you can query content.
+
+```ps1
+.\New-EdgeToken.ps1 -EnvironmentId {ENVIRONMENT_ID}
+```
+
+Add the following to HTTPHeaders
+
+```
+{ "X-GQL-Token" : "<<TOKEN_RETURNED_BY_EDGE_TOKEN_SCRIPT_ABOVE>>" }
+```
+
+Run the following GraphQL Query to test getting the MVP Site Information, along with the layout data for the MVP Homepage
+
+```
+{
+  site {
+    siteInfo(site:"mvp-site") {
+      name
+    }
+  }, 
+  layout(site:"mvp-site", routePath:"/", language:"en") {
+    item {
+      rendered
+    }
+  }
+}
+```
