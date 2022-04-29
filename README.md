@@ -44,6 +44,19 @@ The inital deploy performed above will move all of the items into the instance a
 * Connect your local CLI instance using `dotnet sitecore cloud environment connect -id <<YOUR_ENVIRONMENT_ID>>`
 * Push the content to your XM Cloud instance using `dotnet sitecore ser push`
 
+## Running the MVP Site Rendering Host
+Currently the MVP Site Rendering Host isn't running inside of a container, work needs to be completed to set this up. 
+
+It will run successfully against the local CM instance, however, none of the features have been migrated yet - so the homepage has no renderings and just a success message, work needs to be completed to migrate the features.
+
+You can run it manually with the following commands:
+
+```ps1
+cd src/project/MvpSite/rendering
+dotnet build
+dotnet watch
+```
+
 # Testing Edge GraphQL Endpoint
 
 Ensure you have performed a publish of the content first, or you will have data available in Edge.
