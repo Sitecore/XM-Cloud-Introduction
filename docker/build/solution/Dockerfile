@@ -3,6 +3,7 @@
 # This Dockerfile will build the Sitecore solution and save the build artifacts for use in
 # other images, such as 'cm' and 'rendering'. It does not produce a runnable image itself.
 
+ARG BASE_IMAGE
 ARG BUILD_IMAGE
 
 # In a separate image (as to not affect layer cache), gather all NuGet-related solution assets, so that
@@ -15,7 +16,7 @@ SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPref
 
 COPY *.sln nuget.config Directory.Build.targets Packages.props /nuget/
 COPY src/ /temp/
-RUN Invoke-Expression 'robocopy C:/temp C:/nuget/src /s /ndl /njh /njs *.csproj *.scproj packages.config'
+RUN Invoke-Expression 'robocopy C:/temp C:/nuget/src /s /ndl /njh /njs *.csproj *.scproj *.sln packages.config'
 
 FROM ${BUILD_IMAGE} AS builder
 ARG BUILD_CONFIGURATION
@@ -31,16 +32,16 @@ WORKDIR /build
 # Copy prepped NuGet artifacts, and restore as distinct layer to take advantage of caching.
 COPY --from=nuget-prep ./nuget ./
 
-# Restore NuGet packages
-RUN nuget restore -Verbosity quiet
+# Restore Platform NuGet packages
+RUN nuget restore ./src/XmCloudIntroduction.sln -Verbosity quiet
 
 # Copy remaining source code
 COPY src/ ./src/
 
 # Build the Sitecore main platform artifacts
-RUN msbuild .\XmCloudIntroduction.sln /p:Configuration=$env:BUILD_CONFIGURATION /m /p:DeployOnBuild=true /p:PublishProfile=Local
+RUN msbuild .\src\XmCloudIntroduction.sln /p:Configuration=$env:BUILD_CONFIGURATION /m /p:DeployOnBuild=true /p:PublishProfile=Local
 
 # Save the artifacts for copying into other images (see 'cm' and 'rendering' Dockerfiles).
-FROM mcr.microsoft.com/windows/nanoserver:1809
+FROM ${BASE_IMAGE}
 WORKDIR /artifacts
-COPY --from=builder /build/docker/deploy/platform  ./sitecore
+COPY --from=builder /build/docker/deploy/  ./
