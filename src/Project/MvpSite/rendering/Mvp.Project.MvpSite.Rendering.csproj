@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
-		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<TargetFramework>netcoreapp6.0</TargetFramework>
 		<UserSecretsId>{BB638E63-026A-4E83-A108-6DACB910C4B0}</UserSecretsId>
 		<SitecoreRoleType>rendering</SitecoreRoleType>
 		<IsDeploymentModule>true</IsDeploymentModule>

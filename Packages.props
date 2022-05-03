@@ -7,7 +7,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PlatformVersion>0.*</PlatformVersion>
-    <SitecoreAspNetVersion>19.0.*</SitecoreAspNetVersion>
+    <SitecoreAspNetVersion>20.0.*</SitecoreAspNetVersion>
   </PropertyGroup>
   <ItemGroup>
     <!-- Platform -->
@@ -19,12 +19,12 @@
     <PackageReference Update="Sitecore.Assemblies.SitecoreHeadlessServicesServer" Version="19.*" />
 
     <!-- Rendering Host -->
-    <PackageReference Update="BuildWebCompiler" Version="1.12.394" />
-    <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" />
+    <PackageReference Update="BuildWebCompiler" Version="1.12.405" />
+    <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0" />
     <PackageReference Update="Microsoft.AspNetCore.Session" Version="2.2.0" />
-    <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.14" />
-    <PackageReference Update="Microsoft.Extensions.Http" Version="3.1.1" />
-    <PackageReference Update="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Update="Microsoft.Extensions.Http" Version="6.0.0"/>
+    <PackageReference Update="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.0" />
     <PackageReference Update="Sitecore.LayoutService.Client" Version="$(SitecoreAspNetVersion)" />
     <PackageReference Update="Sitecore.AspNet.RenderingEngine" Version="$(SitecoreAspNetVersion)" />
     <PackageReference Update="Sitecore.AspNet.ExperienceEditor" Version="$(SitecoreAspNetVersion)" />
