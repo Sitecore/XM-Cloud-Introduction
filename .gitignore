@@ -55,4 +55,6 @@ packages/
 !/docker/data/solr/.gitkeep
 /docker/deploy/platform/*
 !/docker/deploy/platform/.gitkeep
+/docker/deploy/mvp-rendering/*
+!/docker/deploy/mvp-rendering/.gitkeep
 /docker/traefik/certs/*.pem

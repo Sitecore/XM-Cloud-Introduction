@@ -28,7 +28,7 @@ Param (
 
     [Parameter(HelpMessage = "The hostname used for the local CM instance.",
         ParameterSetName = "env-init")]
-    [string]$CM_Host = "xmcloudcm.localhost"
+    [string]$Host_Suffix = "xmcloudcm.localhost"
 )
 
 $ErrorActionPreference = "Stop";
@@ -75,6 +75,12 @@ Write-Host "Importing SitecoreDockerTools..." -ForegroundColor Green
 Import-Module SitecoreDockerTools -RequiredVersion $dockerToolsVersion
 Write-SitecoreDockerWelcome
 
+###########################
+# Setup site host variables
+###########################
+$CM_Host = $Host_Suffix
+$MVP_Host = "mvp.$Host_Suffix"
+
 ##################################
 # Configure TLS/HTTPS certificates
 ##################################
@@ -94,8 +100,8 @@ try {
     }
     Write-Host "Generating Traefik TLS certificate..." -ForegroundColor Green
     & $mkcert -install
-    & $mkcert $CM_Host
-    & $mkcert "*.$CM_Host"
+    & $mkcert "*.$Host_Suffix"
+    & $mkcert $Host_Suffix
 
     # stash CAROOT path for messaging at the end of the script
     $caRoot = "$(& $mkcert -CAROOT)\rootCA.pem"
@@ -112,6 +118,7 @@ finally {
 ################################
 Write-Host "Adding Windows hosts file entries..." -ForegroundColor Green
 Add-HostsEntry $CM_Host
+Add-HostsEntry $MVP_Host
 
 ###############################
 # Populate the environment file
@@ -122,6 +129,7 @@ if ($InitEnv) {
     Write-Host "Populating required .env file values..." -ForegroundColor Green
     Set-EnvFileVariable "HOST_LICENSE_FOLDER" -Value $LicenseXmlPath
     Set-EnvFileVariable "CM_HOST" -Value $CM_Host
+    Set-EnvFileVariable "MVP_RENDERING_HOST" -Value $MVP_Host
     Set-EnvFileVariable "REPORTING_API_KEY" -Value (Get-SitecoreRandomString 128 -DisallowSpecial)
     Set-EnvFileVariable "TELERIK_ENCRYPTION_KEY" -Value (Get-SitecoreRandomString 128)
     Set-EnvFileVariable "MEDIA_REQUEST_PROTECTION_SHARED_SECRET" -Value (Get-SitecoreRandomString 64)

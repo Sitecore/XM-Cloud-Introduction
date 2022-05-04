@@ -15,6 +15,7 @@ namespace Mvp.Project.MvpSite.Configuration
         public string ApiKey { get; set; }
         public Uri RenderingHostUri { get; set; }
         public bool EnableExperienceEditor { get; set; }
+        public string ExperienceEdgeToken { get; set; }
 
         public Uri LayoutServiceUri
         {

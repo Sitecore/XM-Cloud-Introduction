@@ -15,6 +15,42 @@ services:
         BASE_IMAGE: ${SOLUTION_BASE_IMAGE}
     scale: 0
 
+  # Container used to run the MVP Rendering host.
+  mvp-rendering:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-mvp-rendering:${VERSION:-latest}
+    restart: ${DOCKER_RESTART}
+    build:
+      context: ./docker/build/rendering
+      target: ${BUILD_CONFIGURATION}
+      args:
+        DEBUG_BASE_IMAGE: ${NETCORE_BUILD_IMAGE}
+        RELEASE_BASE_IMAGE: ${NETCORE_RELEASE_IMAGE}
+        SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
+        ENTRYPOINT_ASSEMBLY: Mvp.Project.MvpSite.dll
+        ARTIFACTS_FOLDER: /artifacts/mvp-rendering
+    volumes:
+      - ${LOCAL_DEPLOY_PATH}\mvp-rendering:C:\deploy
+    environment:
+      ENTRYPOINT_ASSEMBLY: Mvp.Project.MvpSite.dll
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "http://*:80"
+      Sitecore__InstanceUri: "http://cm"
+      Sitecore__RenderingHostUri: "https://${MVP_RENDERING_HOST}"
+      Sitecore__EnableExperienceEditor: "true" 
+    depends_on:
+      - solution
+      - cm
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mvp-secure.entrypoints=websecure"
+      - "traefik.http.routers.mvp-secure.rule=Host(`${MVP_RENDERING_HOST}`)"
+      - "traefik.http.routers.mvp-secure.tls=true"   
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/healthz"]
+      interval: 60s
+      timeout: 30s
+
+
   # Mount the Traefik configuration and certs.
   traefik:
     volumes:
