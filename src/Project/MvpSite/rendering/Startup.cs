@@ -9,9 +9,9 @@ using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Mvp.Project.MvpSite.Configuration;
 using Sitecore.AspNet.ExperienceEditor;
-using Sitecore.AspNet.RenderingEngine.Configuration;
 using Sitecore.AspNet.RenderingEngine.Extensions;
 using Sitecore.AspNet.RenderingEngine.Localization;
 using Sitecore.LayoutService.Client.Extensions;
@@ -23,20 +23,19 @@ namespace Mvp.Project.MvpSite.Rendering
     public class Startup
     {
         private static readonly string _defaultLanguage = "en";
+        public IConfiguration DotNetConfiguration { get; }
+        public IWebHostEnvironment CurrentEnvironment { get; }
+        private SitecoreOptions Configuration { get; }
 
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             // Example of using ASP.NET Core configuration binding for various Sitecore Rendering Engine settings.
             // Values can originate in appsettings.json, from environment variables, and more.
             // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1
             Configuration = configuration.GetSection(SitecoreOptions.Key).Get<SitecoreOptions>();
-
             DotNetConfiguration = configuration;
+            CurrentEnvironment = env;
         }
-
-        public IConfiguration DotNetConfiguration { get; }
-
-        private SitecoreOptions Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
@@ -50,17 +49,26 @@ namespace Mvp.Project.MvpSite.Rendering
               // At this time the Layout Service Client requires Json.NET due to limitations in System.Text.Json.
               .AddNewtonsoftJson(o => o.SerializerSettings.SetDefaults());
 
-            // Register the Sitecore Layout Service Client, which will be invoked by the Sitecore Rendering Engine.
-            services.AddSitecoreLayoutService()
-              // Set default parameters for the Layout Service Client from our bound configuration object.
-              .WithDefaultRequestOptions(request =>
-              {
-                  request
-                  .SiteName(Configuration.DefaultSiteName)
-                  .ApiKey(Configuration.ApiKey);
-              })
-              .AddHttpHandler("default", Configuration.LayoutServiceUri)
-              .AsDefaultHandler();
+            if (Configuration.HostIsUsingEdge)
+            {
+                // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge
+                services.AddSitecoreLayoutService()
+                  .AddGraphQlHandler("default", Configuration.DefaultSiteName, Configuration.ExperienceEdgeToken, Configuration.LayoutServiceUri)
+                  .AsDefaultHandler();
+            }
+            else
+            {
+                // Register the HTTP Sitecore Layout Service Client, used for local development
+                services.AddSitecoreLayoutService()
+                  .WithDefaultRequestOptions(request =>
+                  {
+                      request
+                      .SiteName(Configuration.DefaultSiteName)
+                      .ApiKey(Configuration.ApiKey);
+                  })
+                  .AddHttpHandler("default", Configuration.LayoutServiceUri)
+                  .AsDefaultHandler();
+            }
 
             // Register the Sitecore Rendering Engine services.
             services.AddSitecoreRenderingEngine(options =>
@@ -108,6 +116,7 @@ namespace Mvp.Project.MvpSite.Rendering
               .AddRedirect("mvps$", "Directory")
               .AddRedirect("Search(.*)", "Directory$1");
             app.UseRewriter(options);
+
             // The Experience Editor endpoint should not be enabled in production DMZ.
             // See the SDK documentation for details.
             if (Configuration.EnableExperienceEditor)
@@ -150,12 +159,12 @@ namespace Mvp.Project.MvpSite.Rendering
                   new { controller = "Application", action = "GetCategories" }
                 );
 
-                // Enables the default Sitecore URL pattern with a language prefix.
-                endpoints.MapSitecoreLocalizedRoute("sitecore", "Index", "Default");
+                    // Enables the default Sitecore URL pattern with a language prefix.
+                    endpoints.MapSitecoreLocalizedRoute("sitecore", "Index", "Default");
 
-                // Fall back to language-less routing as well, and use the default culture (en).
-                endpoints.MapFallbackToController("Index", "Default");
-            });
+                    // Fall back to language-less routing as well, and use the default culture (en).
+                    endpoints.MapFallbackToController("Index", "Default");
+                });
         }
 
         private ForwardedHeadersOptions ConfigureForwarding(IWebHostEnvironment env)

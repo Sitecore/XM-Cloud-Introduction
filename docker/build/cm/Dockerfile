@@ -16,4 +16,4 @@ WORKDIR C:\inetpub\wwwroot
 COPY --from=tools C:\tools C:\tools
 
 # Copy solution website files
-COPY --from=solution /artifacts/sitecore/ ./
+COPY --from=solution /artifacts/platform ./
