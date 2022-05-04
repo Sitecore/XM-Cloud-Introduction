@@ -28,7 +28,15 @@ Param (
 
     [Parameter(HelpMessage = "The hostname used for the local CM instance.",
         ParameterSetName = "env-init")]
-    [string]$Host_Suffix = "xmcloudcm.localhost"
+    [string]$Host_Suffix = "xmcloudcm.localhost",
+
+    [Parameter(HelpMessage = "The hostname used for the local CM instance.",
+        ParameterSetName = "env-init")]
+    [string]$Edge_Url,
+
+    [Parameter(HelpMessage = "The hostname used for the local CM instance.",
+        ParameterSetName = "env-init")]
+    [string]$Edge_Token
 )
 
 $ErrorActionPreference = "Stop";
@@ -138,6 +146,8 @@ if ($InitEnv) {
     Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientId" -Value $Auth0_ClientId
     Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientSecret" -Value $Auth0_ClientSecret
     Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl" -Value "https://$CM_Host/"
+    Set-EnvFileVariable "EXPERIENCE_EDGE_URL" -Value $Edge_Url
+    Set-EnvFileVariable "EXPERIENCE_EDGE_TOKEN" -Value $Edge_Token
 }
 
 Push-Location docker\traefik\certs

@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Mvp.Project.MvpSite.Configuration;
 using Sitecore.AspNet.ExperienceEditor;
 using Sitecore.AspNet.RenderingEngine.Extensions;
@@ -48,7 +49,14 @@ namespace Mvp.Project.MvpSite.Rendering
               // At this time the Layout Service Client requires Json.NET due to limitations in System.Text.Json.
               .AddNewtonsoftJson(o => o.SerializerSettings.SetDefaults());
 
-            if (CurrentEnvironment.IsDevelopment())
+            if (Configuration.HostIsUsingEdge)
+            {
+                // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge
+                services.AddSitecoreLayoutService()
+                  .AddGraphQlHandler("default", Configuration.DefaultSiteName, Configuration.ExperienceEdgeToken, Configuration.LayoutServiceUri)
+                  .AsDefaultHandler();
+            }
+            else
             {
                 // Register the HTTP Sitecore Layout Service Client, used for local development
                 services.AddSitecoreLayoutService()
@@ -59,13 +67,6 @@ namespace Mvp.Project.MvpSite.Rendering
                       .ApiKey(Configuration.ApiKey);
                   })
                   .AddHttpHandler("default", Configuration.LayoutServiceUri)
-                  .AsDefaultHandler();
-            }
-            else
-            {
-                // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge
-                services.AddSitecoreLayoutService()
-                  .AddGraphQlHandler("default", Configuration.DefaultSiteName, Configuration.ExperienceEdgeToken, Configuration.LayoutServiceUri)
                   .AsDefaultHandler();
             }
 
