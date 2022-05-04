@@ -2,11 +2,13 @@ $ErrorActionPreference = "Stop";
 
 $envContent = Get-Content .env -Encoding UTF8
 $xmCloudHost = $envContent | Where-Object { $_ -imatch "^CM_HOST=.+" }
+$mvpHost = $envContent | Where-Object { $_ -imatch "^MVP_RENDERING_HOST=.+" }
 $xmCloudDeployConfig = $envContent | Where-Object { $_ -imatch "^XMCLOUDDEPLOY_CONFIG=.+" }
 $sitecoreDockerRegistry = $envContent | Where-Object { $_ -imatch "^SITECORE_DOCKER_REGISTRY=.+" }
 $sitecoreVersion = $envContent | Where-Object { $_ -imatch "^SITECORE_VERSION=.+" }
 
 $xmCloudHost = $xmCloudHost.Split("=")[1]
+$mvpHost = $mvpHost.Split("=")[1]
 $xmCloudDeployConfig = $xmCloudDeployConfig.Split("=")[1]
 $sitecoreDockerRegistry = $sitecoreDockerRegistry.Split("=")[1]
 $sitecoreVersion = $sitecoreVersion.Split("=")[1]
@@ -93,3 +95,4 @@ if ($LASTEXITCODE -ne 0) {
 
 Write-Host "Opening site..." -ForegroundColor Green
 Start-Process https://$xmCloudHost/sitecore/
+Start-Process https://$mvpHost
