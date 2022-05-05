@@ -49,4 +49,8 @@
 	  <Folder Include="Includes\Scripts\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\Feature\Navigation\rendering\Mvp.Feature.Navigation.Rendering.csproj" />
+	</ItemGroup>
+
 </Project>

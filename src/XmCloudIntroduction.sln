@@ -22,6 +22,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvp.Project.MvpSite.Platfor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Project.MvpSite.Rendering", "Project\MvpSite\rendering\Mvp.Project.MvpSite.Rendering.csproj", "{2C5CF268-B0A9-4578-BB3C-1C93C53798E0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Navigation", "Navigation", "{D284ACCB-FDFD-4A13-B6C9-B2A5B2DD19E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.Navigation.Rendering", "Feature\Navigation\rendering\Mvp.Feature.Navigation.Rendering.csproj", "{565AC1EA-01B0-4A93-8230-17081AE133A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +40,10 @@ Global
 		{2C5CF268-B0A9-4578-BB3C-1C93C53798E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C5CF268-B0A9-4578-BB3C-1C93C53798E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C5CF268-B0A9-4578-BB3C-1C93C53798E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{565AC1EA-01B0-4A93-8230-17081AE133A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{565AC1EA-01B0-4A93-8230-17081AE133A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{565AC1EA-01B0-4A93-8230-17081AE133A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{565AC1EA-01B0-4A93-8230-17081AE133A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +52,8 @@ Global
 		{C998ECA9-1528-444B-A9AB-538E01A45CEC} = {0CA01507-AFE6-401B-AD20-3C3A8F34BF09}
 		{816F099C-E14B-4468-9E34-87F993C6484D} = {C998ECA9-1528-444B-A9AB-538E01A45CEC}
 		{2C5CF268-B0A9-4578-BB3C-1C93C53798E0} = {C998ECA9-1528-444B-A9AB-538E01A45CEC}
+		{D284ACCB-FDFD-4A13-B6C9-B2A5B2DD19E9} = {EE03412B-647E-416F-84A1-427E692BBBDB}
+		{565AC1EA-01B0-4A93-8230-17081AE133A6} = {D284ACCB-FDFD-4A13-B6C9-B2A5B2DD19E9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A7C4987-3A11-41A9-8915-5457EF7B5A6F}

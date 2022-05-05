@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Mvp.Feature.Navigation.Extensions;
 using Mvp.Project.MvpSite.Configuration;
 using Sitecore.AspNet.ExperienceEditor;
 using Sitecore.AspNet.RenderingEngine.Extensions;
@@ -75,6 +76,7 @@ namespace Mvp.Project.MvpSite.Rendering
               {
                   //Register your components here
                   options
+                    .AddFeatureNavigation()
                     .AddDefaultPartialView("_ComponentNotFound");
               })
               // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that

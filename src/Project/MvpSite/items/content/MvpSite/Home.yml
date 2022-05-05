@@ -30,9 +30,17 @@ SharedFields:
           s:md="{9AED7A3B-5823-4566-828E-B6A799DBCA3D}" />
         <p
           uid="{3BDBFD4A-EED5-4A57-8BC5-6EF79ACA1131}"
-          p:after="*[1=2]"
+          p:after="p[@uid='{55237C6B-781F-4335-AFBF-E34D1F23CF34}']"
           s:key="main"
           s:md="{4C14AEC2-35C5-4A40-98D1-7A75A8452521}" />
+        <r
+          uid="{B8A1E4C2-37EF-4DA0-BCE1-FA6DEDB76C3F}"
+          p:after="*[1=2]"
+          s:ds="{C4DADD5E-1521-4C6D-AFCE-39D237751541}"
+          s:id="{A4F28B31-5D18-4158-92AB-F4D2ECA6D2BE}"
+          s:par=""
+          s:ph="header"
+          s:ccb="Clear on publish" />
       </d>
     </r>
 Languages:
@@ -48,14 +56,14 @@ Languages:
       Value: 20200513T045800Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2a7a681e-8cc4-43be-a050-9958ce5ab41c"
+      Value: "b81338c5-224f-416f-85a2-7697baf216b5"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: Menu Title
       Value: Home
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\rob.earlam@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220428T234515Z
+      Value: 20220505T031349Z
