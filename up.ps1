@@ -62,7 +62,6 @@ if ($UseEdge) {
     }
 
     Write-Host "Opening site..." -ForegroundColor Green
-    Start-Process https://$xmCloudHost/sitecore/
     Start-Process https://$mvpHost
 }
 else {
