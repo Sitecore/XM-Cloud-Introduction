@@ -2,7 +2,7 @@
 ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
 Parent: "539fe784-0610-4b3d-bf32-91d5a142da2d"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Navigation/_Navigation/Navigation/Include in Menu
+Path: /sitecore/templates/Feature/Navigation/_Navigation/Navigation/IncludeInMenu
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
