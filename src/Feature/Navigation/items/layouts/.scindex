@@ -19,19 +19,19 @@ Signature: ixhU+jNA9g3pMBEMqW+OtdvSmdEB3QmuCmvVesDGzR0=
 Modified: 637692467280135821
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Navigation\items\layouts\Navigation\Main Nav.yml
-ID: "c9593ff9-14ac-4c8e-b217-d85c05adead7"
-Parent: "c7f7df35-991e-432a-bbdd-0ed848bca04a"
-Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Feature/Navigation/Main Nav
-Signature: UhUXVMh7wEtINJ6MYsgGPmkESfj8EXJYkuxo3KnJ/Sw=
-Modified: 637692467280135821
----
-File: |
   C:\Solutions\XM-Cloud-Introduction\src\Feature\Navigation\items\layouts\Navigation\Top Links.yml
 ID: "a4f28b31-5d18-4158-92ab-f4d2eca6d2be"
 Parent: "c7f7df35-991e-432a-bbdd-0ed848bca04a"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
 Path: /sitecore/layout/Renderings/Feature/Navigation/Top Links
-Signature: PYtyZkv52Ib/K/Q9v64rxLp93EJXF8/BOZyDfjzAcVg=
-Modified: 637788526058234738
+Signature: KefEAPLKS0SJ6eTDJqCOqO1jhTlBBT585842vaKholM=
+Modified: 637873219283838710
+---
+File: |
+  C:\Solutions\XM-Cloud-Introduction\src\Feature\Navigation\items\layouts\Navigation\Main Nav.yml
+ID: "c9593ff9-14ac-4c8e-b217-d85c05adead7"
+Parent: "c7f7df35-991e-432a-bbdd-0ed848bca04a"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/Navigation/Main Nav
+Signature: wOUZjgfA2WB2C7T1vyaZQyPDkufSwzRBXzuZro26K+U=
+Modified: 637874094677985775

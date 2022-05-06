@@ -8,7 +8,8 @@ namespace Mvp.Feature.Navigation.Extensions
     {
         public static RenderingEngineOptions AddFeatureNavigation(this RenderingEngineOptions options)
         {
-            options.AddModelBoundView<TopLinks>("TopLinks");
+            options.AddModelBoundView<TopLinks>("TopLinks")
+                   .AddModelBoundView<MainNav>("MainNav");
             return options;
         }
     }
