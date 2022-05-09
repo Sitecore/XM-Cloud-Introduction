@@ -1,0 +1,9 @@
+{
+  "sitecore": {
+    "instancePath": "..\\..\\docker\\deploy\\platform\\",
+    "apiKey": "B2F8A9B9-7203-4DCF-9314-8B28B043347E",
+    "deploySecret": "10F1C44A496B45478640DD36F80C18C9",
+    "deployUrl": "https://xmcloudcm.localhost/sitecore/api/jss/import",
+    "layoutServiceHost": "https://xmcloudcm.localhost"
+  }
+}

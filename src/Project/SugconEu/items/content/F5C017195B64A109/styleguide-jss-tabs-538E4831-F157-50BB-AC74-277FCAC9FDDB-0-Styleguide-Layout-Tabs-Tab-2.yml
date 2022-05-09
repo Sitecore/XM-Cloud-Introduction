@@ -1,0 +1,33 @@
+﻿---
+ID: "95511b48-0217-58bf-8ce7-33d31475f704"
+Parent: "2f8f8031-a7d3-5529-aa24-439f98211b1a"
+Template: "f375cd3e-040d-5145-a3a5-5e14eb6f0992"
+Path: "/sitecore/content/XmCloudPreview/home/styleguide/Page Components/styleguide-jss-tabs-538E4831-F157-50BB-AC74-277FCAC9FDDB-0-Styleguide-Layout-Tabs-Tab-2"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "Styleguide-Layout-Tabs-Tab-2"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220420T145016Z
+    - ID: "454f2901-1b27-5c32-9ed6-3d71072abdb6"
+      Hint: title
+      Value: Tab 2
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4eb99520-7b97-47b6-89cc-659d358623b0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220420T145016Z
+    - ID: "e05221bd-5752-586e-8359-71d64e0813ae"
+      Hint: content
+      Value: "<p>Tab 2 contents!</p>"

@@ -1,6 +1,38 @@
 services:
 
+  nodejs:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}
+    build:
+      context: ./docker/build/nodejs
+      args:
+        PARENT_IMAGE: ${NODEJS_PARENT_IMAGE}
+        NODEJS_VERSION: ${NODEJS_VERSION}
+    scale: 0
 
+  sugcon-eu:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-sugcon-eu:${VERSION:-latest}
+    build:
+      context: ./docker/build/sugcon-eu
+      target: ${BUILD_CONFIGURATION}
+      args:
+        PARENT_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}
+    volumes:
+      - .\src\Project\SugconEu\rendering:C:\app
+    environment:
+      SITECORE_API_HOST: "http://cm"
+      NEXTJS_DIST_DIR: ".next-container"
+      PUBLIC_URL: "https://${SUGCON_EU_HOST}"
+      JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
+      GRAPH_QL_ENDPOINT: "${GRAPH_QL_ENDPOINT}"
+      SITECORE_API_KEY: "${SITECORE_API_KEY}"
+    depends_on:
+      - cm
+      - nodejs
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.rendering-secure.entrypoints=websecure"
+      - "traefik.http.routers.rendering-secure.rule=Host(`${SUGCON_EU_HOST}`)"
+      - "traefik.http.routers.rendering-secure.tls=true"
   # The solution build image is added here so it can be referenced as a build dependency
   # for the images which use its output. Setting "scale: 0" means docker-compose will not
   # include it in the running environment. See Dockerfile for more details.

@@ -1,0 +1,24 @@
+{
+    "namespace": "XmCloudPreview",
+    "references": [ "InitItems" ],
+    "items": {
+        "includes": [
+            {
+                "name": "layouts",
+                "path": "/sitecore/layout/Layouts/Project/xmcloudpreview"
+            },
+            {
+                "name": "placeholders",
+                "path": "/sitecore/layout/Placeholder Settings/Project/xmcloudpreview"
+            },
+            {
+                "name": "renderings",
+                "path": "/sitecore/layout/Renderings/Project/xmcloudpreview"
+            },
+            {
+                "name": "templates",
+                "path": "/sitecore/templates/Project/xmcloudpreview"
+            }
+        ]
+    }
+}

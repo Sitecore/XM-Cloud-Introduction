@@ -1,19 +1,19 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Social\items\layouts\Social.yml
-ID: "e78b95c3-289c-43c9-980d-25ad78887488"
-Parent: "da61ad50-8fdb-4252-a68f-b4470b1c9fe8"
-Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
-Path: /sitecore/layout/Renderings/Feature/Social
-Signature: d4Fm/4Pp4XnIwdghKWRcH9pxad+TI5rx+aBzVYfqjOI=
-Modified: 637692467280604562
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Social\items\layouts\Social\Rss.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\Social\items\layouts\Social\Rss.yml
 ID: "71ee190c-5286-425c-b7f2-0e14f3829043"
 Parent: "e78b95c3-289c-43c9-980d-25ad78887488"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
 Path: /sitecore/layout/Renderings/Feature/Social/Rss
 Signature: 4JScExtTD99jB8N3sMZhlk26skexFjDCz3bWKNoXu2c=
-Modified: 637788526058454776
+Modified: 637872959194496484
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\Social\items\layouts\Social.yml
+ID: "e78b95c3-289c-43c9-980d-25ad78887488"
+Parent: "da61ad50-8fdb-4252-a68f-b4470b1c9fe8"
+Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
+Path: /sitecore/layout/Renderings/Feature/Social
+Signature: d4Fm/4Pp4XnIwdghKWRcH9pxad+TI5rx+aBzVYfqjOI=
+Modified: 637872959194486847

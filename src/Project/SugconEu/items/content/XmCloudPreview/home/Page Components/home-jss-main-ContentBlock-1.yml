@@ -1,0 +1,68 @@
+﻿---
+ID: "20e0b322-4e44-5dda-a703-3817458cbe18"
+Parent: "7c23951e-f907-5f55-b774-376c985ee1cd"
+Template: "7ac240f6-c7c7-5911-8f4b-b6f6cacba088"
+Path: "/sitecore/content/XmCloudPreview/home/Page Components/home-jss-main-ContentBlock-1"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "ContentBlock-1"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220420T145002Z
+    - ID: "5f5c135b-30a4-51ef-98aa-5d29ed4ffe68"
+      Hint: heading
+      Value: Welcome to Sitecore JSS on XM Cloud
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8dfe9c90-46c9-4203-b579-e9d87bb5f09a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sugcon-eu-admin@sitecore.com
+    - ID: "d0152f40-db44-5ed9-80a3-7f451f8ca22e"
+      Hint: content
+      Value: |
+        <p>Thanks for using JSS!! Here are some resources to get you started:</p>
+        
+        <h3><a href="https://jss.sitecore.com" rel="noopener noreferrer">Documentation</a></h3>
+        <p>The official JSS documentation can help you with any JSS task from getting started to advanced techniques.</p>
+        
+        <h3><a href="/styleguide">Styleguide</a></h3>
+        <p>The JSS styleguide is a living example of how to use JSS, hosted right in this app.
+        It demonstrates most of the common patterns that JSS implementations may need to use,
+        as well as useful architectural patterns.</p>
+        
+        <h3><a href="/graphql">GraphQL</a></h3>
+        <p>JSS features integration with the Sitecore GraphQL API to enable fetching non-route data from Sitecore - or from other internal backends as an API aggregator or proxy.
+        This route is a living example of how to use an integrate with GraphQL data in a JSS app.</p>
+        
+        <div class="alert alert-dark">
+          <h4>This app is a boilerplate</h4>
+          <p>The JSS samples are a boilerplate, not a library. That means that any code in this app is meant for you to own and customize to your own requirements.</p>
+          <p>Want to change the lint settings? Do it. Want to read manifest data from a MongoDB database? Go for it. This app is yours.</p>
+        </div>
+        
+        <div class="alert alert-dark">
+          <h4>How to start with an empty app</h4>
+          <p>To start with a fresh app with no boilerplate, run <code>jss create {name of your app} nextjs --empty</code>. Note, disconnected mode is not supported this way</p>
+          <p>To remove all of the default sample content (the Styleguide and GraphQL routes) and start out with an empty JSS app:</p>
+          <ol>
+            <li>Delete <code>/data/dictionary/*.yml</code></li>
+            <li>Delete <code>/data/routes/styleguide</code> and <code>/data/routes/graphql</code></li>
+            <li>Delete <code>/data/content/Styleguide</code></li>
+            <li>Delete <code>/data/component-content/Styleguide</code></li>
+            <li>Delete <code>/sitecore/definitions/components/Styleguide*</code>, <code>/sitecore/definitions/templates/Styleguide*</code>, and <code>/sitecore/definitions/components/GraphQL*</code></li>
+            <li>Delete <code>graphql-let</code> command from <code>bootstrap</code> npm command in <code>package.json</code> until you create <code>.graphql</code> files</li>
+            <li>Delete <code>/src/components/*</code></li>
+          </ol>
+        </div>
+        
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220420T163441Z

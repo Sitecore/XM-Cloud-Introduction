@@ -1,0 +1,49 @@
+﻿---
+ID: "c4ecf853-d3ea-5d84-a76e-3685cb94f1b6"
+Parent: "2f8f8031-a7d3-5529-aa24-439f98211b1a"
+Template: "587cc00e-60ed-5842-a1cd-d5376aa5cd36"
+Path: "/sitecore/content/XmCloudPreview/home/styleguide/Page Components/styleguide-jss-styleguide-section-B7FCF54E14D2DDEE96747EE3CC441EBE9A4FE9EE7D90F5ABCCDE076F5B72DBDA43"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "Styleguide-FieldUsage-Link-9"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220420T145010Z
+    - ID: "437d8ac1-436c-58c8-aebc-53e0de75fb3a"
+      Hint: paramsLink
+      Value: |
+        <link class="font-weight-bold" target="_blank" title="&lt;a&gt; title attribute" linktype="external" text="Sitecore Dev Site" url="https://dev.sitecore.net" />
+    - ID: "4d082a4f-d2e3-529a-a07a-4b766270077a"
+      Hint: externalLink
+      Value: |
+        <link linktype="external" text="Link to Sitecore" url="https://www.sitecore.com" />
+    - ID: "7518a0e5-ac82-5ebe-90d4-aa6fb61d2490"
+      Hint: emailLink
+      Value: |
+        <link linktype="mailto" text="Send an Email" url="mailto:foo@bar.com" />
+    - ID: "803ad7b6-f226-5997-a7fd-3427e1dc0685"
+      Hint: description
+      Value: <p>A <em>General Link</em> is a field that represents an <code>&lt;a&gt;</code> tag.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "50203593-0a98-4ce0-9242-8e0e11e94aae"
+    - ID: "a0957888-6a6d-5642-8dcc-ff3b21567a63"
+      Hint: internalLink
+      Value: |
+        <link id="{33CBF0FB-F5CE-5C8D-91F6-0B0F07A64B7D}" linktype="internal" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220420T145010Z
+    - ID: "e2a2e9c0-9711-5ba4-acec-47a9850377a1"
+      Hint: heading
+      Value: General Link

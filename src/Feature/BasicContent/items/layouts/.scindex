@@ -1,136 +1,136 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\HeroMediumWithLink.yml
-ID: "21119158-4d96-422d-a542-a2b040f1c0cf"
-Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
-Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Feature/BasicContent/HeroMediumWithLink
-Signature: Spzkhq/Bu2Z4LpstpSN+qlHhVojM/0lxTordqAJ5NNU=
-Modified: 637842846771723075
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\Half-Width Banner.yml
-ID: "db83f81c-40a4-45c1-9d66-91a99368b6c6"
-Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
-Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: "/sitecore/layout/Renderings/Feature/BasicContent/Half-Width Banner"
-Signature: 88wz/mcyLxS2stQlXK9HfhAXLHQBen06B/mYm7YK6A4=
-Modified: 637692467279158052
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent.yml
-ID: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
-Parent: "da61ad50-8fdb-4252-a68f-b4470b1c9fe8"
-Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
-Path: /sitecore/layout/Renderings/Feature/BasicContent
-Signature: DnKPezfBIu1eOPcgcgagJUt7ugcaBfiufeC2TJM7Fkc=
-Modified: 637692467279158052
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\ColumnContainer.yml
-ID: "57805937-d345-4a28-8ddf-c62ee43d8eba"
-Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
-Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Feature/BasicContent/ColumnContainer
-Signature: dFUilj56tq+5ixT72gh3Nbxjtobgn8nVurTSjV8ZY4Q=
-Modified: 637692467279158052
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\Embed Content.yml
-ID: "e275c475-c17d-49aa-bdf7-8af17d8596c3"
-Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
-Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Feature/BasicContent/Embed Content
-Signature: dGLYKa7P5rDOhfqp750hc4++9j7pPD4LoBBIMr9g7E8=
-Modified: 637788526057834740
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\PageOverviewPanel.yml
-ID: "df26ca0d-a60b-4349-8908-e7a62f7e7272"
-Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
-Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Feature/BasicContent/PageOverviewPanel
-Signature: ryzlTAajLHSw1F9SekVgMl72MS42bPldRouaoGf5/T0=
-Modified: 637692467279158052
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\Rich Text Content.yml
-ID: "aa449ea4-0695-4d4c-9cd3-e582738a355e"
-Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
-Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Feature/BasicContent/Rich Text Content
-Signature: mjQyl7p+4yp+a6ao9WXqQP0adsWFm6VG5tFuvxjf2E8=
-Modified: 637788526057854730
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\ImageTeaser.yml
-ID: "2e2630ae-5db0-4fdf-81b6-47dbc3365c36"
-Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
-Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Feature/BasicContent/ImageTeaser
-Signature: stXkyRRZgFEdrcdzut3yHOSOdMkgRevoNDrLfjuhGJk=
-Modified: 637692467279158052
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\Announcement Bar.yml
-ID: "475cba5e-ee80-4275-9758-d280f0781942"
-Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
-Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Feature/BasicContent/Announcement Bar
-Signature: +oqyW/4ld/JZqXbVSfoXndoBqKn9kwxyIuXoES2GF2E=
-Modified: 637692467279158052
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\HeroMedium.yml
-ID: "248bde7d-d010-4d02-95e8-2578a03a2d2d"
-Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
-Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Feature/BasicContent/HeroMedium
-Signature: lunS8be4Rqgr5SHzSaZCslQwYVkrRKZzJ55uFd5YWEU=
-Modified: 637842846771713078
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\Sugcon Rich Text.yml
-ID: "d9671da7-6aba-468b-9aa9-c60bba8bddee"
-Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
-Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Feature/BasicContent/Sugcon Rich Text
-Signature: O2uWSiLhEyK80lSVjJzVZjNDJD71e906tReOsK6fNls=
-Modified: 637788526057854730
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\Content List.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\Content List.yml
 ID: "a921aec7-5df7-4f8e-835a-6a5111cf94cf"
 Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
 Path: /sitecore/layout/Renderings/Feature/BasicContent/Content List
 Signature: bMes2lsjZyicCbGUmpRgeFz3A1z2sWAe2g9eW84J5iI=
-Modified: 637692467279158052
+Modified: 637872959193836845
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\SugconHero.yml
-ID: "a72ee580-d7ea-4425-afde-3f921cd29dfe"
-Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
-Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Feature/BasicContent/SugconHero
-Signature: kWG8Za8KMPl97+C7hQe2ZziPsnVxiIejtwF4vsLkyMM=
-Modified: 637842846771733090
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\HeroBig.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\HeroBig.yml
 ID: "df79486f-2e7b-4ec8-8efc-c9e6dfe813b7"
 Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
 Path: /sitecore/layout/Renderings/Feature/BasicContent/HeroBig
 Signature: dpkRNGVkR95TknagK2WjVfKIZnetJCOCg8jvz/KPfq8=
-Modified: 637842846771703134
+Modified: 637872959193846492
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\VideoTeaser.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\Announcement Bar.yml
+ID: "475cba5e-ee80-4275-9758-d280f0781942"
+Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/BasicContent/Announcement Bar
+Signature: +oqyW/4ld/JZqXbVSfoXndoBqKn9kwxyIuXoES2GF2E=
+Modified: 637872959193826989
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\ImageTeaser.yml
+ID: "2e2630ae-5db0-4fdf-81b6-47dbc3365c36"
+Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/BasicContent/ImageTeaser
+Signature: stXkyRRZgFEdrcdzut3yHOSOdMkgRevoNDrLfjuhGJk=
+Modified: 637872959193856821
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\Half-Width Banner.yml
+ID: "db83f81c-40a4-45c1-9d66-91a99368b6c6"
+Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: "/sitecore/layout/Renderings/Feature/BasicContent/Half-Width Banner"
+Signature: 88wz/mcyLxS2stQlXK9HfhAXLHQBen06B/mYm7YK6A4=
+Modified: 637872959193836845
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\Rich Text Content.yml
+ID: "aa449ea4-0695-4d4c-9cd3-e582738a355e"
+Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/BasicContent/Rich Text Content
+Signature: mjQyl7p+4yp+a6ao9WXqQP0adsWFm6VG5tFuvxjf2E8=
+Modified: 637872959193856821
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\HeroMediumWithLink.yml
+ID: "21119158-4d96-422d-a542-a2b040f1c0cf"
+Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/BasicContent/HeroMediumWithLink
+Signature: Spzkhq/Bu2Z4LpstpSN+qlHhVojM/0lxTordqAJ5NNU=
+Modified: 637872959193856821
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\SugconHero.yml
+ID: "a72ee580-d7ea-4425-afde-3f921cd29dfe"
+Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/BasicContent/SugconHero
+Signature: kWG8Za8KMPl97+C7hQe2ZziPsnVxiIejtwF4vsLkyMM=
+Modified: 637872959193866541
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent.yml
+ID: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
+Parent: "da61ad50-8fdb-4252-a68f-b4470b1c9fe8"
+Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
+Path: /sitecore/layout/Renderings/Feature/BasicContent
+Signature: DnKPezfBIu1eOPcgcgagJUt7ugcaBfiufeC2TJM7Fkc=
+Modified: 637872959193816844
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\ColumnContainer.yml
+ID: "57805937-d345-4a28-8ddf-c62ee43d8eba"
+Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/BasicContent/ColumnContainer
+Signature: dFUilj56tq+5ixT72gh3Nbxjtobgn8nVurTSjV8ZY4Q=
+Modified: 637872959193826989
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\Embed Content.yml
+ID: "e275c475-c17d-49aa-bdf7-8af17d8596c3"
+Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/BasicContent/Embed Content
+Signature: dGLYKa7P5rDOhfqp750hc4++9j7pPD4LoBBIMr9g7E8=
+Modified: 637872959193836845
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\HeroMedium.yml
+ID: "248bde7d-d010-4d02-95e8-2578a03a2d2d"
+Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/BasicContent/HeroMedium
+Signature: lunS8be4Rqgr5SHzSaZCslQwYVkrRKZzJ55uFd5YWEU=
+Modified: 637872959193846492
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\PageOverviewPanel.yml
+ID: "df26ca0d-a60b-4349-8908-e7a62f7e7272"
+Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/BasicContent/PageOverviewPanel
+Signature: ryzlTAajLHSw1F9SekVgMl72MS42bPldRouaoGf5/T0=
+Modified: 637872959193856821
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\Sugcon Rich Text.yml
+ID: "d9671da7-6aba-468b-9aa9-c60bba8bddee"
+Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: /sitecore/layout/Renderings/Feature/BasicContent/Sugcon Rich Text
+Signature: O2uWSiLhEyK80lSVjJzVZjNDJD71e906tReOsK6fNls=
+Modified: 637872959193866541
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\BasicContent\items\layouts\BasicContent\VideoTeaser.yml
 ID: "8ecda376-8717-4626-a30a-83a93ec24cc3"
 Parent: "d377fb5c-efcf-4a89-ac65-77dadf04edd7"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
 Path: /sitecore/layout/Renderings/Feature/BasicContent/VideoTeaser
 Signature: Dk9c06XiTnUwuhEd5T2IWIjliMYjj/VmDkXnUxtcj60=
-Modified: 637692467279158052
+Modified: 637872959193866541

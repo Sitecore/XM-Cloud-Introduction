@@ -88,6 +88,7 @@ Write-SitecoreDockerWelcome
 ###########################
 $CM_Host = $Host_Suffix
 $MVP_Host = "mvp.$Host_Suffix"
+$SUGCON_EU_HOST = "sugconeu.$Host_Suffix"
 
 ##################################
 # Configure TLS/HTTPS certificates
@@ -127,6 +128,7 @@ finally {
 Write-Host "Adding Windows hosts file entries..." -ForegroundColor Green
 Add-HostsEntry $CM_Host
 Add-HostsEntry $MVP_Host
+Add-HostsEntry $SUGCON_EU_HOST
 
 ###############################
 # Populate the environment file
@@ -148,6 +150,8 @@ if ($InitEnv) {
     Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl" -Value "https://$CM_Host/"
     Set-EnvFileVariable "EXPERIENCE_EDGE_URL" -Value $Edge_Url
     Set-EnvFileVariable "EXPERIENCE_EDGE_TOKEN" -Value $Edge_Token
+    Set-EnvFileVariable "JSS_EDITING_SECRET" -Value (Get-SitecoreRandomString 64 -DisallowSpecial)
+
 }
 
 Push-Location docker\traefik\certs

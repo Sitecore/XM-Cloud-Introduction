@@ -1,19 +1,19 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Foundation\User\items\layouts\User.yml
-ID: "ffebe358-62d6-4257-9de5-24b0aa9a6a7a"
-Parent: "180d4942-2b10-4375-bc06-e0d94220a68f"
-Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
-Path: /sitecore/layout/Renderings/Foundation/User
-Signature: V0IEu+3v1y2+kffocxMpaB0llZAhBZbre94oAaETb2c=
-Modified: 637710721750048922
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Foundation\User\items\layouts\User\SignIn.yml
+  C:\source\XM-Cloud-Introduction\src\Foundation\User\items\layouts\User\SignIn.yml
 ID: "00147a0f-476b-4c99-8a10-e6b4fcfcece0"
 Parent: "ffebe358-62d6-4257-9de5-24b0aa9a6a7a"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
 Path: /sitecore/layout/Renderings/Foundation/User/SignIn
 Signature: eBI2YWPAxNzUdNn8dKkZlVqBpO80PssaUDLkFqRDvdY=
-Modified: 637710721750058917
+Modified: 637872959194876823
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Foundation\User\items\layouts\User.yml
+ID: "ffebe358-62d6-4257-9de5-24b0aa9a6a7a"
+Parent: "180d4942-2b10-4375-bc06-e0d94220a68f"
+Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
+Path: /sitecore/layout/Renderings/Foundation/User
+Signature: V0IEu+3v1y2+kffocxMpaB0llZAhBZbre94oAaETb2c=
+Modified: 637872959194866820

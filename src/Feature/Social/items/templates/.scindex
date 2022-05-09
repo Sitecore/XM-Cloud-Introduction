@@ -1,73 +1,73 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\_RssFeed.yml
-ID: "074c7b05-5600-4f3e-ba0c-db359d42abe6"
-Parent: "e99b425b-c17a-47a4-8491-e0e2c1ab57af"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Social/_RssFeed
-Signature: hS2To1t5bFfNOzr7M61GCzWhYfsxSK9hecu4dM0XP7c=
-Modified: 637788526058484754
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\_RssFeed\Rss Feed.yml
-ID: "24c57e24-1d85-4823-bbef-64ec79fbe414"
-Parent: "074c7b05-5600-4f3e-ba0c-db359d42abe6"
-Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Feature/Social/_RssFeed/Rss Feed
-Signature: VYSeKsN8XMpdKtLLXgj6eK8pT/oKDzXmjIS24pcRgSs=
-Modified: 637788526058484754
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\_RssFeed\Rss Feed\RssUrl.yml
-ID: "69913ae6-614c-4cb6-bb3b-353700e53ccf"
-Parent: "24c57e24-1d85-4823-bbef-64ec79fbe414"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Social/_RssFeed/Rss Feed/RssUrl
-Signature: NXcJpjPbM7DQ6Jrr8SMMqkmmFZE0ENjm9d2aOSbM1wk=
-Modified: 637788526058504760
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social.yml
 ID: "e99b425b-c17a-47a4-8491-e0e2c1ab57af"
 Parent: "8f343079-3cc5-4ef7-bc27-32addb46f45e"
 Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
 Path: /sitecore/templates/Feature/Social
 Signature: 3+AGY4TAzaoMZE/RyiF0S0B94d/Uj4yY/cEd9GXPa10=
-Modified: 637692467280604562
+Modified: 637872959194506864
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\Rss Control.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\_RssFeed.yml
+ID: "074c7b05-5600-4f3e-ba0c-db359d42abe6"
+Parent: "e99b425b-c17a-47a4-8491-e0e2c1ab57af"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/Social/_RssFeed
+Signature: hS2To1t5bFfNOzr7M61GCzWhYfsxSK9hecu4dM0XP7c=
+Modified: 637872959194516827
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\_RssFeed\Rss Feed.yml
+ID: "24c57e24-1d85-4823-bbef-64ec79fbe414"
+Parent: "074c7b05-5600-4f3e-ba0c-db359d42abe6"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Social/_RssFeed/Rss Feed
+Signature: VYSeKsN8XMpdKtLLXgj6eK8pT/oKDzXmjIS24pcRgSs=
+Modified: 637872959194516827
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\_RssFeed\Rss Feed\RssUrl.yml
+ID: "69913ae6-614c-4cb6-bb3b-353700e53ccf"
+Parent: "24c57e24-1d85-4823-bbef-64ec79fbe414"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Social/_RssFeed/Rss Feed/RssUrl
+Signature: NXcJpjPbM7DQ6Jrr8SMMqkmmFZE0ENjm9d2aOSbM1wk=
+Modified: 637872959194526831
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\Rss Control.yml
 ID: "34e69036-7c28-43cb-afb3-4517ba178c28"
 Parent: "e99b425b-c17a-47a4-8491-e0e2c1ab57af"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: /sitecore/templates/Feature/Social/Rss Control
 Signature: PfzHaVg1LRBkJARuRaGRonbxHkZjyNI86UreystxtjM=
-Modified: 637788526058464777
+Modified: 637872959194506864
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\Rss Control\__Standard Values.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\Rss Control\__Standard Values.yml
 ID: "e93b7bbd-0b8a-47e1-80c3-6fbaf0efe7a7"
 Parent: "34e69036-7c28-43cb-afb3-4517ba178c28"
 Template: "34e69036-7c28-43cb-afb3-4517ba178c28"
 Path: /sitecore/templates/Feature/Social/Rss Control/__Standard Values
 Signature: tcXyMSQS8dEahOf9IQ/1CDMMiy0FFcrn06+wWU76w+Y=
-Modified: 637788526058474754
+Modified: 637872959194506864
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\_RssFeed\Rss Feed\Description.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\_RssFeed\Rss Feed\Description.yml
 ID: "61ff3997-3033-40eb-bf77-b497d1b9430d"
 Parent: "24c57e24-1d85-4823-bbef-64ec79fbe414"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Feature/Social/_RssFeed/Rss Feed/Description
 Signature: rSMn+q5022upTHuRn34rG6GEiyMVySjapjiraELGyYo=
-Modified: 637788526058494757
+Modified: 637872959194526831
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\_RssFeed\Rss Feed\Title.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\Social\items\templates\Social\_RssFeed\Rss Feed\Title.yml
 ID: "1126ea11-fbcf-460e-98ee-d731f63e9f75"
 Parent: "24c57e24-1d85-4823-bbef-64ec79fbe414"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Feature/Social/_RssFeed/Rss Feed/Title
 Signature: vZwnhy9l4PzUWRUpmxFZKzEGzUzMp/5xKkbub7hapCM=
-Modified: 637788526058514755
+Modified: 637872959194526831

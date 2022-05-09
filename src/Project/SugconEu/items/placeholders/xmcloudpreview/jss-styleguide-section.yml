@@ -1,0 +1,56 @@
+﻿---
+ID: "6c3b046b-bf6c-5796-889c-0ae763f54d49"
+Parent: "7ed89975-85c0-5064-8f33-a9947804ed9e"
+Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
+Path: "/sitecore/layout/Placeholder Settings/Project/xmcloudpreview/jss-styleguide-section"
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "jss-styleguide-section"
+- ID: "e391b526-d0c5-439d-803e-17512eae6222"
+  Hint: Allowed Controls
+  Value: |
+    {26DA4535-D421-51D4-BB64-956D898D4C25}
+    {F841CCBB-7E36-5999-9C0E-5414AFE66D36}
+    {683235B3-5439-51D8-B98D-365BA8CA645C}
+    {EB10BD7B-B049-5C9F-A17C-9D4611B1E55F}
+    {31C6763C-B9DB-5FB5-A24D-B93662EC6D3B}
+    {CC1FC855-8075-547A-8EA5-E46C0FC4A63E}
+    {A9EACAAB-D18C-5E1A-9D30-42AF385457F0}
+    {69EF6AA5-E0B4-538B-9919-B60830EE7396}
+    {AD82A92E-C1DB-52C1-AD09-3602D678FEE7}
+    {24A058AE-856D-5D53-91D9-E46C09674C9A}
+    {7897A262-49E5-5E18-9471-5932955758F6}
+    {7C80CE9E-7F03-5ED1-905C-EF6636664FB4}
+    {A55DA734-9102-58ED-8879-56D06EDF8731}
+    {CDA957CF-FE55-510A-893D-B09A53103D64}
+    {E3AFD3C1-40E2-5114-B613-A12F5F9AA2A4}
+    {4EB4E11D-EE85-5E50-901B-C8ED22CC447E}
+    {95C663A0-E0B8-584D-95BE-0B590D665A46}
+    {0B439D53-EE0B-5A5A-B216-EE7F93866953}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220420T144946Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\JssImport
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JssImport
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "48473686-3aeb-4b6b-b4de-dfb81f8958ce"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220420T144959Z
