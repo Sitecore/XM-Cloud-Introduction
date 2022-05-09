@@ -1,0 +1,30 @@
+﻿---
+ID: "1d46c32e-e1e6-5d6b-8bd0-61cc6d97011f"
+Parent: "8437bd2e-2cc2-5ad7-8e9b-32b111908db1"
+Template: "94cae9b1-0c2f-50b1-bcbe-6bf12d9e8182"
+Path: /sitecore/content/XmCloudPreview/Content/Styleguide/ItemLinkField/Item1
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Styleguide Item Link Item 1 (Shared)
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220420T145002Z
+    - ID: "345be52d-81c0-5e94-8b27-38c2f32c02f3"
+      Hint: textField
+      Value: ItemLink Demo (Shared) Item 1 Text Field
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e89604bb-c332-44cb-840a-7aee27531e20"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220420T145002Z

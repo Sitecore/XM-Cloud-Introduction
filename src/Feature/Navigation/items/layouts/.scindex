@@ -1,37 +1,37 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Navigation\items\layouts\Navigation\Footer.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\Navigation\items\layouts\Navigation\Footer.yml
 ID: "437ccc09-ab5d-47b3-96d7-2b05bdff5324"
 Parent: "c7f7df35-991e-432a-bbdd-0ed848bca04a"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
 Path: /sitecore/layout/Renderings/Feature/Navigation/Footer
 Signature: i/n6icR9t/weeT1Dc0MjvnnWv3Ibn8CJ3PPmIdU7uto=
-Modified: 637848158475724135
+Modified: 637872959194336819
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Navigation\items\layouts\Navigation.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\Navigation\items\layouts\Navigation.yml
 ID: "c7f7df35-991e-432a-bbdd-0ed848bca04a"
 Parent: "da61ad50-8fdb-4252-a68f-b4470b1c9fe8"
 Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
 Path: /sitecore/layout/Renderings/Feature/Navigation
 Signature: ixhU+jNA9g3pMBEMqW+OtdvSmdEB3QmuCmvVesDGzR0=
-Modified: 637692467280135821
+Modified: 637872959194336819
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Navigation\items\layouts\Navigation\Top Links.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\Navigation\items\layouts\Navigation\Top Links.yml
 ID: "a4f28b31-5d18-4158-92ab-f4d2eca6d2be"
 Parent: "c7f7df35-991e-432a-bbdd-0ed848bca04a"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
 Path: /sitecore/layout/Renderings/Feature/Navigation/Top Links
 Signature: KefEAPLKS0SJ6eTDJqCOqO1jhTlBBT585842vaKholM=
-Modified: 637873219283838710
+Modified: 637877252826838529
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Navigation\items\layouts\Navigation\Main Nav.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\Navigation\items\layouts\Navigation\Main Nav.yml
 ID: "c9593ff9-14ac-4c8e-b217-d85c05adead7"
 Parent: "c7f7df35-991e-432a-bbdd-0ed848bca04a"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
 Path: /sitecore/layout/Renderings/Feature/Navigation/Main Nav
 Signature: wOUZjgfA2WB2C7T1vyaZQyPDkufSwzRBXzuZro26K+U=
-Modified: 637874094677985775
+Modified: 637877252826838529

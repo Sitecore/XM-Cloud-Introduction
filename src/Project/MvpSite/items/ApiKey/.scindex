@@ -1,10 +1,10 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\apikey\MvpSite.yml
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\apikey\MvpSite.yml
 ID: "e2f3d43e-b1fd-495e-b4b1-84579892422a"
 Parent: "59b41b5f-e22e-460b-941e-fb64fe8da8fc"
 Template: "a6868d65-d612-401f-a40a-cd5ba0857b81"
 Path: /sitecore/system/Settings/Services/API Keys/MvpSite
 Signature: YZun0rqb+RgzHb9+/+tWylB1a+fRrlxa0qINlMDISAw=
-Modified: 637692467280977935
+Modified: 637872959194886834

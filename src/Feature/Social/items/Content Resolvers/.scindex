@@ -1,19 +1,19 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Social\items\content resolvers\Social.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\Social\items\content resolvers\Social.yml
 ID: "6bd3c246-d4e0-41d3-9cac-d4507f7cb0f6"
 Parent: "c626493f-1cc3-4986-a701-f28b83d649f7"
 Template: "1404a77a-d5fd-46b3-aa4c-200f3d519979"
 Path: /sitecore/system/Modules/Layout Service/Rendering Contents Resolvers/Social
 Signature: EDVlTKVlmh5o8zugYZBItL9pAMAmLrBLWH/re4knF8I=
-Modified: 637692467280604562
+Modified: 637872959194476818
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Feature\Social\items\content resolvers\Social\Rss Resolver.yml
+  C:\source\XM-Cloud-Introduction\src\Feature\Social\items\content resolvers\Social\Rss Resolver.yml
 ID: "36cbbfe6-b2a4-4778-8f29-559a81f978ec"
 Parent: "6bd3c246-d4e0-41d3-9cac-d4507f7cb0f6"
 Template: "814c1dbb-b118-4511-ba2b-7288ed3d490b"
 Path: /sitecore/system/Modules/Layout Service/Rendering Contents Resolvers/Social/Rss Resolver
 Signature: STl3ieTR1MaWHRFzWqljvSTVjQCf9ZD7X2W9LoaPRWc=
-Modified: 637692467280604562
+Modified: 637872959194486847

@@ -1,0 +1,122 @@
+﻿---
+ID: "141ddff2-dea9-5a02-a233-31ffa387ed56"
+Parent: "a0671b7a-2010-5b9e-bd40-905c7503a3e6"
+Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
+Path: "/sitecore/layout/Renderings/Project/xmcloudpreview/GraphQL-IntegratedDemo"
+SharedFields:
+- ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
+  Hint: componentName
+  Value: "GraphQL-IntegratedDemo"
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/16x16/graph_connection_directed.png
+- ID: "17bb046a-a32a-41b3-8315-81217947611b"
+  Hint: ComponentQuery
+  Value: |
+    # This file contains a GraphQL query that will be executed and the result provided to
+    # your JSS component. You can run this query in GraphiQL ($endpoint/ui) for a nice editing experience.
+    
+    # Note that we're executing _two queries_ (datasource and contextItem)
+    # within the context of the IntegratedDemoQuery _operation_. This makes it
+    # very efficient at gathering data from multiple sources.
+    
+    query IntegratedDemoQuery($datasource: String!, $contextItem: String!, $language: String!) {
+      # Datasource query
+      # $datasource will always be set to the ID of the rendering's datasource item
+      # (as long as the GraphQLData helper is used)
+      datasource: item(path: $datasource, language: $language) {
+        id
+        name
+        # Strongly-typed querying on known templates is possible!
+        ...on GraphQLIntegratedDemo {
+          # Single-line text field
+          sample1 {
+            # the 'jsonValue' field is a JSON blob that represents the object that
+            # should be passed to JSS field rendering helpers (i.e. text, image, link)
+            jsonValue
+            value
+          }
+          # General Link field
+          sample2 {
+            jsonValue
+            # Structured querying of the field's values is possible
+            text
+            target
+            url
+            # Access to the template definition is possible
+            definition {
+              type
+              shared
+            }
+          }
+        }
+      }
+    
+      # Context/route item query
+      # $contextItem will always be set to the ID of the current context item (the route item)
+      # (as long as the GraphQLData helper is used)
+      contextItem: item(path: $contextItem, language: $language) {
+        id
+        # Get the page title from the app route template
+        ...on AppRoute {
+          pageTitle {
+            value
+          }
+        }
+    
+        # List the children of the current route
+        children(hasLayout: true) {
+          results {
+            id
+            # typing fragments can be used anywhere!
+            # so in this case, we're grabbing the 'pageTitle'
+            # field on all child route items.
+            ...on AppRoute {
+              pageTitle {
+                jsonValue
+                value
+              }
+            }
+            url{
+              path
+            }
+          }
+        }
+      }
+    }
+    
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: "/sitecore/templates/Project/xmcloudpreview/GraphQL-IntegratedDemo"
+- ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
+  Hint: Parameters Template
+  Value: "{155670F9-3DA7-5EC8-8D53-32E0E33955DE}"
+- ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
+  Hint: Datasource Location
+  Value: "./Page Components|/sitecore/content/XmCloudPreview/Components/GraphQL-IntegratedDemo"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220420T144953Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\JssImport
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JssImport
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "78fafe8f-b938-4c78-8da7-6b0f8cd84b6b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220420T144953Z

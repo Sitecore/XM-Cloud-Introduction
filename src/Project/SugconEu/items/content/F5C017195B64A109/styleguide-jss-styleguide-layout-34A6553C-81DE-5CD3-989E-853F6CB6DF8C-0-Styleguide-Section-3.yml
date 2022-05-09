@@ -1,0 +1,30 @@
+﻿---
+ID: "77650e0e-332b-576f-8372-945742e28aa8"
+Parent: "2f8f8031-a7d3-5529-aa24-439f98211b1a"
+Template: "8d8cfd26-614a-57c3-b0e8-1cdcf6239972"
+Path: "/sitecore/content/XmCloudPreview/home/styleguide/Page Components/styleguide-jss-styleguide-layout-34A6553C-81DE-5CD3-989E-853F6CB6DF8C-0-Styleguide-Section-3"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "Styleguide-Section-3"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220420T145017Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1ae930f5-3bb8-4c7e-b569-628be6cb01f6"
+    - ID: "b8abf6d4-b9dd-5cf8-bf6e-094e0da2d6d4"
+      Hint: heading
+      Value: Sitecore Patterns
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220420T145017Z

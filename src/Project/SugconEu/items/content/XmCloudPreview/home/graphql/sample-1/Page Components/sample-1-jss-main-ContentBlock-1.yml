@@ -1,0 +1,35 @@
+﻿---
+ID: "e4452557-1160-5079-af82-2c7f8acf418b"
+Parent: "f728e0dc-122d-5ba9-899d-e4c814bdadbc"
+Template: "7ac240f6-c7c7-5911-8f4b-b6f6cacba088"
+Path: "/sitecore/content/XmCloudPreview/home/graphql/sample-1/Page Components/sample-1-jss-main-ContentBlock-1"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "ContentBlock-1"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220420T145004Z
+    - ID: "5f5c135b-30a4-51ef-98aa-5d29ed4ffe68"
+      Hint: heading
+      Value: GraphQL Sample 1
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7e27caf0-5cf6-4904-9aa9-d92be8cc3fcc"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d0152f40-db44-5ed9-80a3-7f451f8ca22e"
+      Hint: content
+      Value: |
+        <p>A child route here to illustrate the power of GraphQL queries. <a href="/graphql">Back to GraphQL route</a></p>
+        
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220420T145004Z

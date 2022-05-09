@@ -1,0 +1,16 @@
+{
+    "namespace": "XmCloudPreview-Content",
+    "references": [ "XmCloudPreview" ],
+    "items": {
+        "includes": [
+            {
+                "name": "content",
+                "path": "/sitecore/content/XmCloudPreview"
+            },
+            {
+                "name": "media",
+                "path": "/sitecore/media library/xmcloudpreview"
+            }
+        ]
+    }
+}

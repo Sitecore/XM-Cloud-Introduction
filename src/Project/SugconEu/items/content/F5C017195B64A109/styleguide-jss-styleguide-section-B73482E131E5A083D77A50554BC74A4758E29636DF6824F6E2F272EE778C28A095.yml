@@ -1,0 +1,48 @@
+﻿---
+ID: "f25b956e-8a73-5478-83fc-b73f52e79a3f"
+Parent: "2f8f8031-a7d3-5529-aa24-439f98211b1a"
+Template: "23f93f82-17bf-5eaa-b4d3-b51fbec074e0"
+Path: "/sitecore/content/XmCloudPreview/home/styleguide/Page Components/styleguide-jss-styleguide-section-B73482E131E5A083D77A50554BC74A4758E29636DF6824F6E2F272EE778C28A095"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "Styleguide-FieldUsage-ItemLink-10"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220420T145010Z
+    - ID: "68e9a8f2-31e3-55af-9104-2ae6f7791163"
+      Hint: localItemLink
+      Value: "{CF523723-461A-5201-A151-157C7BCB0143}"
+    - ID: "803ad7b6-f226-5997-a7fd-3427e1dc0685"
+      Hint: description
+      Value: |
+        <p>
+          <small>
+            Item Links are a way to reference another content item to use data from it.
+            Referenced items may be shared.
+            To reference multiple content items, use a <em>Content List</em> field.<br />
+            <strong>Note:</strong> Sitecore does not support inline editing of Item Link fields. The value must be edited in Experience Editor by using the edit rendering fields button (looks like a pencil) with the whole component selected.
+          </small>
+        </p>
+        
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dee5d22f-c43c-4256-aa26-a3663db17b70"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220420T145011Z
+    - ID: "e2a2e9c0-9711-5ba4-acec-47a9850377a1"
+      Hint: heading
+      Value: Item Link
+    - ID: "f0024cc7-ba01-5916-8444-a5d8e78b6da9"
+      Hint: sharedItemLink
+      Value: "{1D46C32E-E1E6-5D6B-8BD0-61CC6D97011F}"

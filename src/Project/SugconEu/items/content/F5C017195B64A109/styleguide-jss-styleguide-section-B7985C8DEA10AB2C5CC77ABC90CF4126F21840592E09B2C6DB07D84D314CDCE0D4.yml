@@ -1,0 +1,52 @@
+﻿---
+ID: "abc2bee5-1da2-5e29-9d98-b5105bbff56d"
+Parent: "2f8f8031-a7d3-5529-aa24-439f98211b1a"
+Template: "44dceb7d-eb21-507d-a03a-3648e111af3f"
+Path: "/sitecore/content/XmCloudPreview/home/styleguide/Page Components/styleguide-jss-styleguide-section-B7985C8DEA10AB2C5CC77ABC90CF4126F21840592E09B2C6DB07D84D314CDCE0D4"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "Styleguide-FieldUsage-ContentList-11"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220420T145011Z
+    - ID: "803ad7b6-f226-5997-a7fd-3427e1dc0685"
+      Hint: description
+      Value: |
+        <p>
+          <small>
+            Content Lists are a way to reference zero or more other content items.
+            Referenced items may be shared.
+            To reference a single content item, use an <em>Item Link</em> field.<br />
+            <strong>Note:</strong> Sitecore does not support inline editing of Content List fields. The value must be edited in Experience Editor by using the edit rendering fields button (looks like a pencil) with the whole component selected.
+          </small>
+        </p>
+        
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2718058e-5923-4600-940c-fcfcd9810e66"
+    - ID: "b1ac8b8a-4546-533f-ac44-0bfee165d506"
+      Hint: sharedContentList
+      Value: |
+        {AAFF7B48-AD02-598A-9E9D-169F2BDB0FAB}
+        {A48FA0FB-85DB-53E7-BEDF-2A1DD729765D}
+    - ID: "b1bb57b7-7ae0-5954-89b5-bb3d104d4776"
+      Hint: localContentList
+      Value: |
+        {BDFB5D57-1226-5935-8CF0-396CAFB8A5DA}
+        {6BB59B60-EE2B-5146-8645-C3BE42D2DA3A}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220420T145012Z
+    - ID: "e2a2e9c0-9711-5ba4-acec-47a9850377a1"
+      Hint: heading
+      Value: Content List

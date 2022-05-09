@@ -1,0 +1,36 @@
+﻿---
+ID: "fc691c32-1859-5af2-b7f7-9a4a2a62e5f3"
+Parent: "2f8f8031-a7d3-5529-aa24-439f98211b1a"
+Template: "7ac240f6-c7c7-5911-8f4b-b6f6cacba088"
+Path: "/sitecore/content/XmCloudPreview/home/styleguide/Page Components/styleguide-jss-main-ContentBlock-1"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: "ContentBlock-1"
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220420T145005Z
+    - ID: "5f5c135b-30a4-51ef-98aa-5d29ed4ffe68"
+      Hint: heading
+      Value: JSS Styleguide
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cb1d1a2b-dcf8-4b11-8d78-9bd6c2349ffc"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d0152f40-db44-5ed9-80a3-7f451f8ca22e"
+      Hint: content
+      Value: |
+        <p>This is a live set of examples of how to use JSS. For more information on using JSS, please see <a href="https://jss.sitecore.com" target="_blank" rel="noopener noreferrer">the documentation</a>.</p>
+        <p>The content and layout of this page is defined in <code>/data/routes/styleguide/en.yml</code></p>
+        
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220420T145006Z

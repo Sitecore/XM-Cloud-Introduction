@@ -1,0 +1,31 @@
+﻿---
+ID: "5a5f2077-08c4-5f5c-a80c-ecaf777ccbc7"
+Parent: "b26bfdcd-981e-5eb1-9b78-31b328eb79a0"
+Template: "b26bfdcd-981e-5eb1-9b78-31b328eb79a0"
+Path: "/sitecore/templates/Project/xmcloudpreview/Styleguide-Layout-Tabs-Tab Rendering Parameters/__Standard Values"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220420T144938Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\JssImport
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JssImport
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c347e7b5-5a6d-4e65-b035-aa56d88e9e86"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\JssImport
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220420T144938Z

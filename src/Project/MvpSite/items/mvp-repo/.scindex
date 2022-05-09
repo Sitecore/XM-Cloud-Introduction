@@ -1,631 +1,631 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Employment Status.yml
-ID: "965852ba-c78d-4a41-8dd8-d8cad7032d4f"
-Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
-Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
-Path: /sitecore/content/MvpSite/MVP Repository/Employment Status
-Signature: 8x7D8mQIUZxEd2GRXSvnNoysjrtX5og+sFUlt7m2PdU=
-Modified: 637715677165679690
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category.yml
-ID: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
-Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
-Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
-Path: /sitecore/content/MvpSite/MVP Repository/MVP Category
-Signature: G4TFimQWtQAgej8i/xTaM6J+CTCDc+eON2N0RF1bHmA=
-Modified: 637710721750338909
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2008.yml
-ID: "5f04bf81-1b60-49f5-9505-302eb2b26a8f"
-Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
-Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2008
-Signature: ZseEcfzfj7X4GF2zZ48N0eXFf7zjPlw/BvIalSyjuaQ=
-Modified: 637715796014260518
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2015.yml
-ID: "d4e5a358-dc50-4e9a-a224-932c4976d67c"
-Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
-Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2015
-Signature: DJFr6GcQfAt1e0gBAs2aA2GaD4n+S1nm3gz9KgbSXCw=
-Modified: 637715796014320515
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Ambassador.yml
-ID: "7768de06-8cae-45cc-b644-15d41bd168d1"
-Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
-Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
-Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Ambassador
-Signature: QzTX47kbzGJ5QBR3D60e5wQ1GRIi4JXVQT+A94sIzJ8=
-Modified: 637716643123241459
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018.yml
-ID: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
-Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
-Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018
-Signature: yJRYWanMd2bgZy9YcLU4uep7XW9BnrrlllfJP/aA4HI=
-Modified: 637715796014490520
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2017\2017 Lifetime MVP.yml
-ID: "cad02fa8-2cc4-4f2f-9aee-c0afacac6e1d"
-Parent: "fbf87303-cff9-46d7-a605-8f2ff2e349d7"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2017/2017 Lifetime MVP
-Signature: cVp81UVrrhO3njlylJKxF8wDHFhAKsmcX/TsDqOvDvc=
-Modified: 637715796014460531
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2021.yml
-ID: "807fcf2b-c8d1-4d80-96eb-101370b06e5c"
-Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
-Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2021
-Signature: 7MMYHhbbmytsuzG2zbRqfjBqzu5F1Lwgb4+dVIbmITQ=
-Modified: 637715796014730548
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018\2018 Commerce MVP.yml
-ID: "a50dd78b-55a7-426d-93f6-68c8040fb317"
-Parent: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018/2018 Commerce MVP
-Signature: /yAEAPwSgSQslwHZJEmc4CBrP14H9ninpDTrBFeLux8=
-Modified: 637715796014520523
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Employment Status\Customer.yml
-ID: "c9743670-c7f0-40a3-9a5c-6f34570fa7d2"
-Parent: "965852ba-c78d-4a41-8dd8-d8cad7032d4f"
-Template: "37421902-c3c5-49e3-bf4a-a7ee73312993"
-Path: /sitecore/content/MvpSite/MVP Repository/Employment Status/Customer
-Signature: wUFa6UAh8dN+kP092+xoIEHgfdeClK2qvOMv4mFaR9g=
-Modified: 637715677165699694
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2019\2019 Commerce MVP.yml
-ID: "bed6b81a-aa06-4cf0-b17e-4a759cd39ab9"
-Parent: "2705c6d8-7df1-431e-a407-4f4bb0e1be36"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2019/2019 Commerce MVP
-Signature: 8LM41Q15RXli6kH3mjKn1fsnlCwilrAToWP0iyuGlHc=
-Modified: 637715796014610531
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018\2018 Strategy MVP.yml
-ID: "5e4176f4-2896-464f-8a2d-b2f2625f4f33"
-Parent: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018/2018 Strategy MVP
-Signature: sZ1JGdqNcFfVyXnZN8tH8lN9nKufXtQ6WToxL0NA+nQ=
-Modified: 637715796014550520
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2020\2020 Strategy MVP.yml
-ID: "c78e52bb-a546-48a0-98e2-6358767a443d"
-Parent: "358e6cb7-c796-47e1-a744-490077bcc134"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2020/2020 Strategy MVP
-Signature: O+P1hYzVfkzg/PY+c0wsvzBCWdIrk5n6jz7xSyvQplo=
-Modified: 637715796014710541
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Confirmation.yml
-ID: "6b57c63e-5b8f-4c9c-9e71-dda4449f8b2d"
-Parent: "8be29760-eaec-49ca-be48-c5c68fd887c5"
-Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
-Path: /sitecore/content/MvpSite/MVP Repository/Application Steps/Confirmation
-Signature: MFmab0gBaqz/nX43oKsu62RWwI3ZsgJNHU5gOrjkZ7s=
-Modified: 637715677165649689
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2017.yml
-ID: "fbf87303-cff9-46d7-a605-8f2ff2e349d7"
-Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
-Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2017
-Signature: sTyl5nVlKJ5cOz52miCmchqmzMTg768aTc7Vd1skm8s=
-Modified: 637715796014420539
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2020.yml
-ID: "358e6cb7-c796-47e1-a744-490077bcc134"
-Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
-Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2020
-Signature: Q4vbMGmU0G87wqmIthbZo0Uf/NUFhKuNniOB9wTWv6M=
-Modified: 637715796014660552
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2015\2015 Strategy MVP.yml
-ID: "23412e85-ab5d-41fc-8779-4511aa1b61a0"
-Parent: "d4e5a358-dc50-4e9a-a224-932c4976d67c"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2015/2015 Strategy MVP
-Signature: YsHtBEBp5mLYBE0SJdtHJBNMGWcTiGQ2HZqiodssenY=
-Modified: 637715796014340524
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2016\2016 Lifetime MVP.yml
-ID: "1e6f4ab8-1cec-485a-8adb-b54510d0242c"
-Parent: "747a0961-1ed2-41bc-a9dd-767c8f27e3d2"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2016/2016 Lifetime MVP
-Signature: iKaTOAtf2bR6C0Ny5uygZJVST7GtPKTcl+n0Xi+hEBw=
-Modified: 637715796014380519
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2019\2019 Strategy MVP.yml
-ID: "e8302991-f1d6-4077-9dd2-0373ebb1e95b"
-Parent: "2705c6d8-7df1-431e-a407-4f4bb0e1be36"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2019/2019 Strategy MVP
-Signature: ZlCubeFAkEAjwOoYhC3fXp/JxctzkhhaZGp76K+W+dg=
-Modified: 637715796014630523
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps.yml
-ID: "8be29760-eaec-49ca-be48-c5c68fd887c5"
-Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
-Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
-Path: /sitecore/content/MvpSite/MVP Repository/Application Steps
-Signature: VMPx1+ywN1/4cCCCIgshTfcayEuyX7x0Sd+gTQVJ+yk=
-Modified: 637715677165629691
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Contributions.yml
-ID: "7097bb71-8e97-401a-bfb3-14d5ffa5df64"
-Parent: "8be29760-eaec-49ca-be48-c5c68fd887c5"
-Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
-Path: /sitecore/content/MvpSite/MVP Repository/Application Steps/Contributions
-Signature: WC4QDk2wg0HnxnB9ISGmM6ZD0kMW/9QqzCuACSDmdJk=
-Modified: 637715677165649689
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2019.yml
-ID: "2705c6d8-7df1-431e-a407-4f4bb0e1be36"
-Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
-Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2019
-Signature: /e76gHBd++RSFcXRyOXgF+ZOOaj3nuqOkQ//MUkwgxw=
-Modified: 637715796014580531
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Employment Status\Company.yml
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Employment Status\Company.yml
 ID: "4cd78dd6-433b-421b-93f2-fb9ab9a09c6f"
 Parent: "965852ba-c78d-4a41-8dd8-d8cad7032d4f"
 Template: "37421902-c3c5-49e3-bf4a-a7ee73312993"
 Path: /sitecore/content/MvpSite/MVP Repository/Employment Status/Company
 Signature: mBxxRZn32Al/TgtaUb2rtXWpmASWsI1cMC9m5sqzg1k=
-Modified: 637715677165699694
+Modified: 637872959195499875
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2015\2015 Technology MVP.yml
-ID: "66f6ee75-2607-44bc-8b8e-f584f04c31c4"
-Parent: "d4e5a358-dc50-4e9a-a224-932c4976d67c"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2015/2015 Technology MVP
-Signature: /R9LVk7397SKqqEuicuG3eFKc5pqGR1pKJtVYdrVk5U=
-Modified: 637715796014350524
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2016\2016 Strategy MVP.yml
-ID: "41115ec2-7599-41bc-9137-93c228b6bc01"
-Parent: "747a0961-1ed2-41bc-a9dd-767c8f27e3d2"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2016/2016 Strategy MVP
-Signature: ThZJX+izd1f8zKnm626dtchRr3Z0UXi2bwB8JX1ZaF8=
-Modified: 637715796014390521
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2019\2019 Lifetime MVP.yml
-ID: "17ce9f9b-90cd-4511-8ee9-1b5b89cd1e43"
-Parent: "2705c6d8-7df1-431e-a407-4f4bb0e1be36"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2019/2019 Lifetime MVP
-Signature: 077umn6+a6w+25L9uXpVwHcwcd6LUqZuHxPDAy8ldlM=
-Modified: 637715796014620542
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years.yml
-ID: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
-Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
-Template: "0dc4f16b-6f23-4a23-b4d2-a350c0b84fd5"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years
-Signature: NXU0lgQ2vsdKDR995Zck83V61VYDfPk4+1JJ0s2pAAU=
-Modified: 637710721750328943
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Objectives.yml
-ID: "dcc9e1c8-2d79-4829-8862-8013d647bf48"
-Parent: "8be29760-eaec-49ca-be48-c5c68fd887c5"
-Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
-Path: /sitecore/content/MvpSite/MVP Repository/Application Steps/Objectives
-Signature: t0DXBQOf6Pw+4KUxGwjRffaH3TXHUfkoda5R8fI3ML8=
-Modified: 637715677165659696
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2014\2014 Technology MVP.yml
-ID: "f49db64b-88cb-424a-bc9d-47e56c3baa56"
-Parent: "f9ee7e52-5a3a-48d5-8a1b-19f9aa76f21a"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2014/2014 Technology MVP
-Signature: vxMk1Tg7kiYUV64uwZ8VXHBiLeYP0qrpdQM/0nSbYEM=
-Modified: 637715796014310520
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018\2018 Technology MVP.yml
-ID: "d1f30097-d9a0-42c3-90eb-fff1ff72f994"
-Parent: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018/2018 Technology MVP
-Signature: +McnQsIrwOAhOoEboiK1mmgBzJ95tCVGTnbBfgqhtN4=
-Modified: 637715796014570517
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2020\2020 Ambassador MVP.yml
-ID: "3ccb4f25-497b-469d-85d1-bf7ab1f12397"
-Parent: "358e6cb7-c796-47e1-a744-490077bcc134"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2020/2020 Ambassador MVP
-Signature: 9UuwAKTsM/SdDg+NTKm9jNrpg0ghi0ODXBCSln+0jck=
-Modified: 637715796014680538
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Lifetime.yml
-ID: "9d391762-ccf9-42a6-ad26-ddf8495daa4d"
-Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
-Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
-Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Lifetime
-Signature: nVlijTACCYJ9gL+Du5mh10LpCDD4a35EshNy7OU7qs8=
-Modified: 637716643123321874
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2017\2017 Strategy MVP.yml
-ID: "c2456100-cc68-45a1-9e2e-e73d461ca92b"
-Parent: "fbf87303-cff9-46d7-a605-8f2ff2e349d7"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2017/2017 Strategy MVP
-Signature: JwckWiHbOvjM4c3vmIQoOhxRn7b24CbLIrf95Gk424Y=
-Modified: 637715796014470525
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018\2018 Honorary MVP.yml
-ID: "81eff39a-55e7-432e-be9c-9c5550906760"
-Parent: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018/2018 Honorary MVP
-Signature: a7jc+rgDTkU5K7QmOHAAfKg9VvVIPjvfQ3bzikK3MF4=
-Modified: 637715796014530518
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2021\2021 Ambassador MVP.yml
-ID: "54618b8c-6929-4776-aad0-8f7a44f7822f"
-Parent: "807fcf2b-c8d1-4d80-96eb-101370b06e5c"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2021/2021 Ambassador MVP
-Signature: IQg0yylZsKnsh3XPjY22+kCHfmt5QV0jQ9DThdxTj9s=
-Modified: 637715796014750531
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2008\2008 Technology MVP.yml
-ID: "71a3e146-5563-4fb1-803d-87521406e5a9"
-Parent: "5f04bf81-1b60-49f5-9505-302eb2b26a8f"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2008/2008 Technology MVP
-Signature: lEUhWk8sBCf28IY9DCY6yddOOWV4h2OUFeuMPbdJxgw=
-Modified: 637715796014270540
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018\2018 Lifetime MVP.yml
-ID: "fb0d7f29-b654-4c0f-8dd2-25cab3c9ff39"
-Parent: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018/2018 Lifetime MVP
-Signature: CIVUS3dfYUWFpe9igRUWJf6h4ftsLkayFynedrkYwFA=
-Modified: 637715796014540533
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2019\2019 Technology MVP.yml
-ID: "89a17c97-a2b3-447b-b3ee-9975bf3cde49"
-Parent: "2705c6d8-7df1-431e-a407-4f4bb0e1be36"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2019/2019 Technology MVP
-Signature: 9WiFe4nbIpioXm6HOottnxBQ5fu9aj6Lp1+ny98+W+g=
-Modified: 637715796014650535
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Personal.yml
-ID: "ed7dec1d-9c2e-4ac1-8aef-709cb0ab3506"
-Parent: "8be29760-eaec-49ca-be48-c5c68fd887c5"
-Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
-Path: /sitecore/content/MvpSite/MVP Repository/Application Steps/Personal
-Signature: nTw35PuSX6NEOd2YlSmW3B+cHGuER0rXj1EUv7iDa3Y=
-Modified: 637715677165659696
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Employment Status\Partner.yml
-ID: "2c881e05-6fee-4a8e-b6b3-43c8f673932e"
-Parent: "965852ba-c78d-4a41-8dd8-d8cad7032d4f"
-Template: "37421902-c3c5-49e3-bf4a-a7ee73312993"
-Path: /sitecore/content/MvpSite/MVP Repository/Employment Status/Partner
-Signature: EVzTCmes6wdU9n1vyth3PbprUb4tsthpVdN7DH9Or6U=
-Modified: 637715677165709690
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Commerce.yml
-ID: "98375df9-aa4f-4ca6-b191-5a32e6f15b55"
-Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
-Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
-Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Commerce
-Signature: kIOX/v6Ibww1C0SbsjcqXTnJYVZnMZUgGSDacUvtEZ8=
-Modified: 637716643123241459
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2016\2016 Technology MVP.yml
-ID: "38c87b0e-c1ae-48f2-aef4-5268d60cadc3"
-Parent: "747a0961-1ed2-41bc-a9dd-767c8f27e3d2"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2016/2016 Technology MVP
-Signature: UAPcwo/04BMRrhhO7Vd/K6dANaNP7429mdDXahyqXkw=
-Modified: 637715796014407028
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2017\2017 Commerce MVP.yml
-ID: "25dabf58-9800-4da0-8528-979dc1c50022"
-Parent: "fbf87303-cff9-46d7-a605-8f2ff2e349d7"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2017/2017 Commerce MVP
-Signature: xuNL3NOg7FMkRGCbrBj9ntA5vSVKdjf1uFb4H2Bagzw=
-Modified: 637715796014440545
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2021\2021 Strategy MVP.yml
-ID: "15d23d83-c9d6-413f-ab27-4759bcd4a9f7"
-Parent: "807fcf2b-c8d1-4d80-96eb-101370b06e5c"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2021/2021 Strategy MVP
-Signature: b3UBEmUr3UviWASCHVULY/5NJCfpucgyNMtdyY8nXWo=
-Modified: 637715796014770525
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository.yml
-ID: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
-Parent: "a43c6692-60f4-4743-a1be-6424de611dfa"
-Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
-Path: /sitecore/content/MvpSite/MVP Repository
-Signature: NWSo8XT/+VsDYJpZEHXBhyBBjx4WLwUDJC7Sdyhu/QQ=
-Modified: 637710721750318941
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\States.yml
-ID: "f15493bc-613d-4496-be84-263fb737dcbc"
-Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
-Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
-Path: /sitecore/content/MvpSite/MVP Repository/States
-Signature: WlQIpWixkOBsh0VJPHFJMGG8hT9YdSgCFKCgyZ+cjRU=
-Modified: 637715677165769687
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Socials.yml
-ID: "49e75b4c-3398-48c8-bff3-5ef91be15025"
-Parent: "8be29760-eaec-49ca-be48-c5c68fd887c5"
-Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
-Path: /sitecore/content/MvpSite/MVP Repository/Application Steps/Socials
-Signature: jvL07pvRnXQkLJTLa0lRGrPgFkQI8gX09YClyg+wYPo=
-Modified: 637715677165669690
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Employment Status\Freelancer.yml
-ID: "2cb87307-33d2-4beb-afd9-542af9151dec"
-Parent: "965852ba-c78d-4a41-8dd8-d8cad7032d4f"
-Template: "37421902-c3c5-49e3-bf4a-a7ee73312993"
-Path: /sitecore/content/MvpSite/MVP Repository/Employment Status/Freelancer
-Signature: m+u7d1/Szdh+vlZ57vMuOYSP1FS+4Ypi3hxqa1uZty0=
-Modified: 637715677165709690
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Honorary.yml
-ID: "118da7a8-198b-4616-8129-6a634e0d701d"
-Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
-Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
-Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Honorary
-Signature: ZMgXr2k0/lyEua92NEO763myWTrBY0tTdud7RIGw0JU=
-Modified: 637716643123321874
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2017\2017 Cloud MVP.yml
-ID: "a26953ee-5586-4081-a306-8a9b02185475"
-Parent: "fbf87303-cff9-46d7-a605-8f2ff2e349d7"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2017/2017 Cloud MVP
-Signature: pptYhEu8xibmbv3jpXVqkklgbmBAXQ3mYYjBEsZbBRg=
-Modified: 637715796014430558
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2020\2020 Lifetime MVP.yml
-ID: "53b2533d-e646-4d35-b7c2-4dcb152e3b4d"
-Parent: "358e6cb7-c796-47e1-a744-490077bcc134"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2020/2020 Lifetime MVP
-Signature: 7XRLmsLHn3lMEf1Mq/MosWfKRhG6DAt5ijkdbGMILUI=
-Modified: 637715796014700521
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Countries.yml
-ID: "d18d6ffe-def4-4d7b-aea0-13f06b9030a3"
-Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
-Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
-Path: /sitecore/content/MvpSite/MVP Repository/Countries
-Signature: uFy0Oh47o8JOEBf/swy/2t1n3Yvki7tCn3DTSU05FIw=
-Modified: 637710721750338909
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\People.yml
-ID: "64f31e3a-2040-4e69-b9a7-6830cbe669d2"
-Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
-Template: "2eba0721-df1e-4d69-a963-2755baa7d726"
-Path: /sitecore/content/MvpSite/MVP Repository/People
-Signature: fBpH2zo831MZayH1YbxLlHNC55az5840A2nRkoznOLs=
-Modified: 637710721750348909
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Category.yml
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Category.yml
 ID: "c55f8deb-1e49-4dd0-9703-adda3cb4b72d"
 Parent: "8be29760-eaec-49ca-be48-c5c68fd887c5"
 Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
 Path: /sitecore/content/MvpSite/MVP Repository/Application Steps/Category
 Signature: om0lUYxeIjZjZ6vJVU5FSmHi6OXn8TSYeAJFYiG0U3c=
-Modified: 637715677165639702
+Modified: 637872959195306836
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Welcome.yml
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\People.yml
+ID: "64f31e3a-2040-4e69-b9a7-6830cbe669d2"
+Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
+Template: "2eba0721-df1e-4d69-a963-2755baa7d726"
+Path: /sitecore/content/MvpSite/MVP Repository/People
+Signature: fBpH2zo831MZayH1YbxLlHNC55az5840A2nRkoznOLs=
+Modified: 637872959195539864
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\States.yml
+ID: "f15493bc-613d-4496-be84-263fb737dcbc"
+Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/MVP Repository/States
+Signature: WlQIpWixkOBsh0VJPHFJMGG8hT9YdSgCFKCgyZ+cjRU=
+Modified: 637872959195539864
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Commerce.yml
+ID: "98375df9-aa4f-4ca6-b191-5a32e6f15b55"
+Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
+Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
+Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Commerce
+Signature: kIOX/v6Ibww1C0SbsjcqXTnJYVZnMZUgGSDacUvtEZ8=
+Modified: 637872959195519855
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository.yml
+ID: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
+Parent: "a43c6692-60f4-4743-a1be-6424de611dfa"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/MVP Repository
+Signature: NWSo8XT/+VsDYJpZEHXBhyBBjx4WLwUDJC7Sdyhu/QQ=
+Modified: 637872959195296814
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Welcome.yml
 ID: "6315dcc7-5f9f-44d8-b874-ac9957b220af"
 Parent: "8be29760-eaec-49ca-be48-c5c68fd887c5"
 Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
 Path: /sitecore/content/MvpSite/MVP Repository/Application Steps/Welcome
 Signature: Ob+Rm4XDspi5aR5sJYUCrCw5+XcqHwRe8nowscPRalk=
-Modified: 637715677165679690
+Modified: 637872959195326477
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2016.yml
-ID: "747a0961-1ed2-41bc-a9dd-767c8f27e3d2"
-Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
-Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2016
-Signature: FcK7doGIHoDbze54Q5Dcw+3VkJ36mJT7VSYQrtuhh/c=
-Modified: 637715796014360516
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Socials.yml
+ID: "49e75b4c-3398-48c8-bff3-5ef91be15025"
+Parent: "8be29760-eaec-49ca-be48-c5c68fd887c5"
+Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
+Path: /sitecore/content/MvpSite/MVP Repository/Application Steps/Socials
+Signature: jvL07pvRnXQkLJTLa0lRGrPgFkQI8gX09YClyg+wYPo=
+Modified: 637872959195316819
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Technology.yml
-ID: "db39fc29-e639-4be5-ae17-14428301cd11"
-Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
-Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
-Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Technology
-Signature: xGAaCv5cneKMLUHbcduGspDo40xAouGM5cZl5dbnfvQ=
-Modified: 637715677165769687
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Contributions.yml
+ID: "7097bb71-8e97-401a-bfb3-14d5ffa5df64"
+Parent: "8be29760-eaec-49ca-be48-c5c68fd887c5"
+Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
+Path: /sitecore/content/MvpSite/MVP Repository/Application Steps/Contributions
+Signature: WC4QDk2wg0HnxnB9ISGmM6ZD0kMW/9QqzCuACSDmdJk=
+Modified: 637872959195306836
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2014.yml
-ID: "f9ee7e52-5a3a-48d5-8a1b-19f9aa76f21a"
-Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
-Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2014
-Signature: 1pDKVLhywq34ac0tGaHZYdngZoZn9rWkE72Vpbkpty0=
-Modified: 637715796014280519
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Strategy.yml
-ID: "7cc9ff3f-072d-4bc9-993a-1046843b6497"
-Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
-Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
-Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Strategy
-Signature: VXUP72zcwaYe5m1Uw+669cSyuNd0zplWwC1ajfqAgt4=
-Modified: 637725278509954315
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2017\2017 Technology MVP.yml
-ID: "52e2ee97-c3b5-46be-84ea-9072a1c7ddc7"
-Parent: "fbf87303-cff9-46d7-a605-8f2ff2e349d7"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2017/2017 Technology MVP
-Signature: aVUc82Gl2Al6WJs5PmbfPY208yrqedeQdvYuT1NYdhE=
-Modified: 637715796014480521
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Cloud.yml
-ID: "1f8c2537-138c-4506-98b2-4e4522fb35f8"
-Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
-Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
-Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Cloud
-Signature: BSFRD5neHCPYhH5wcnfo4yxDqWpoIBSOYrhx95zA8Ec=
-Modified: 637716643123241459
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2014\2014 Strategy MVP.yml
-ID: "b699f9d8-09d4-4b8f-8c7d-47b66fe5eda8"
-Parent: "f9ee7e52-5a3a-48d5-8a1b-19f9aa76f21a"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2014/2014 Strategy MVP
-Signature: koljzc2Up3JoiDdSt0KYDj0LFyLg2GGCGoMqFqkiU90=
-Modified: 637715796014300533
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2019\2019 Ambassador MVP.yml
-ID: "07ad13c1-4fa6-4194-900d-3687c60ef5f9"
-Parent: "2705c6d8-7df1-431e-a407-4f4bb0e1be36"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2019/2019 Ambassador MVP
-Signature: C/wVN8mvl/P4UZ+3lxz73tUqE7tw0jS+fSyfrSt4kc4=
-Modified: 637715796014600524
----
-File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\States\IL.yml
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\States\IL.yml
 ID: "18939773-989b-40ec-a2fb-3861b286a404"
 Parent: "f15493bc-613d-4496-be84-263fb737dcbc"
 Template: "13102d13-a6cb-48f6-a813-d431b917ef8f"
 Path: /sitecore/content/MvpSite/MVP Repository/States/IL
 Signature: 0os54+wD5WSpaGdagSXdTjhed5q4Lzo3FMXQZGVsxII=
-Modified: 637715796014830530
+Modified: 637872959195549525
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2016\2016 Commerce MVP.yml
-ID: "82b7a287-a176-4560-96c7-112aa40375c7"
-Parent: "747a0961-1ed2-41bc-a9dd-767c8f27e3d2"
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Objectives.yml
+ID: "dcc9e1c8-2d79-4829-8862-8013d647bf48"
+Parent: "8be29760-eaec-49ca-be48-c5c68fd887c5"
+Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
+Path: /sitecore/content/MvpSite/MVP Repository/Application Steps/Objectives
+Signature: t0DXBQOf6Pw+4KUxGwjRffaH3TXHUfkoda5R8fI3ML8=
+Modified: 637872959195316819
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2020.yml
+ID: "358e6cb7-c796-47e1-a744-490077bcc134"
+Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
+Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2020
+Signature: Q4vbMGmU0G87wqmIthbZo0Uf/NUFhKuNniOB9wTWv6M=
+Modified: 637872959195446499
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2017.yml
+ID: "fbf87303-cff9-46d7-a605-8f2ff2e349d7"
+Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
+Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2017
+Signature: sTyl5nVlKJ5cOz52miCmchqmzMTg768aTc7Vd1skm8s=
+Modified: 637872959195376843
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2015.yml
+ID: "d4e5a358-dc50-4e9a-a224-932c4976d67c"
+Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
+Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2015
+Signature: DJFr6GcQfAt1e0gBAs2aA2GaD4n+S1nm3gz9KgbSXCw=
+Modified: 637872959195346817
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2017\2017 Cloud MVP.yml
+ID: "a26953ee-5586-4081-a306-8a9b02185475"
+Parent: "fbf87303-cff9-46d7-a605-8f2ff2e349d7"
 Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2016/2016 Commerce MVP
-Signature: t6Yf/r+2L31nDkWuTG/gEAJKXHYSk87K6kKM7ANXJs4=
-Modified: 637715796014370527
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2017/2017 Cloud MVP
+Signature: pptYhEu8xibmbv3jpXVqkklgbmBAXQ3mYYjBEsZbBRg=
+Modified: 637872959195386817
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2021\2021 Technology MVP.yml
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2008.yml
+ID: "5f04bf81-1b60-49f5-9505-302eb2b26a8f"
+Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
+Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2008
+Signature: ZseEcfzfj7X4GF2zZ48N0eXFf7zjPlw/BvIalSyjuaQ=
+Modified: 637872959195336820
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2008\2008 Technology MVP.yml
+ID: "71a3e146-5563-4fb1-803d-87521406e5a9"
+Parent: "5f04bf81-1b60-49f5-9505-302eb2b26a8f"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2008/2008 Technology MVP
+Signature: lEUhWk8sBCf28IY9DCY6yddOOWV4h2OUFeuMPbdJxgw=
+Modified: 637872959195336820
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Employment Status\Freelancer.yml
+ID: "2cb87307-33d2-4beb-afd9-542af9151dec"
+Parent: "965852ba-c78d-4a41-8dd8-d8cad7032d4f"
+Template: "37421902-c3c5-49e3-bf4a-a7ee73312993"
+Path: /sitecore/content/MvpSite/MVP Repository/Employment Status/Freelancer
+Signature: m+u7d1/Szdh+vlZ57vMuOYSP1FS+4Ypi3hxqa1uZty0=
+Modified: 637872959195509841
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2021.yml
+ID: "807fcf2b-c8d1-4d80-96eb-101370b06e5c"
+Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
+Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2021
+Signature: 7MMYHhbbmytsuzG2zbRqfjBqzu5F1Lwgb4+dVIbmITQ=
+Modified: 637872959195473981
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018\2018 Lifetime MVP.yml
+ID: "fb0d7f29-b654-4c0f-8dd2-25cab3c9ff39"
+Parent: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018/2018 Lifetime MVP
+Signature: CIVUS3dfYUWFpe9igRUWJf6h4ftsLkayFynedrkYwFA=
+Modified: 637872959195406484
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2019.yml
+ID: "2705c6d8-7df1-431e-a407-4f4bb0e1be36"
+Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
+Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2019
+Signature: /e76gHBd++RSFcXRyOXgF+ZOOaj3nuqOkQ//MUkwgxw=
+Modified: 637872959195426861
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2017\2017 Technology MVP.yml
+ID: "52e2ee97-c3b5-46be-84ea-9072a1c7ddc7"
+Parent: "fbf87303-cff9-46d7-a605-8f2ff2e349d7"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2017/2017 Technology MVP
+Signature: aVUc82Gl2Al6WJs5PmbfPY208yrqedeQdvYuT1NYdhE=
+Modified: 637872959195396821
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Cloud.yml
+ID: "1f8c2537-138c-4506-98b2-4e4522fb35f8"
+Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
+Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
+Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Cloud
+Signature: BSFRD5neHCPYhH5wcnfo4yxDqWpoIBSOYrhx95zA8Ec=
+Modified: 637872959195519855
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Employment Status\Partner.yml
+ID: "2c881e05-6fee-4a8e-b6b3-43c8f673932e"
+Parent: "965852ba-c78d-4a41-8dd8-d8cad7032d4f"
+Template: "37421902-c3c5-49e3-bf4a-a7ee73312993"
+Path: /sitecore/content/MvpSite/MVP Repository/Employment Status/Partner
+Signature: EVzTCmes6wdU9n1vyth3PbprUb4tsthpVdN7DH9Or6U=
+Modified: 637872959195509841
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2020\2020 Lifetime MVP.yml
+ID: "53b2533d-e646-4d35-b7c2-4dcb152e3b4d"
+Parent: "358e6cb7-c796-47e1-a744-490077bcc134"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2020/2020 Lifetime MVP
+Signature: 7XRLmsLHn3lMEf1Mq/MosWfKRhG6DAt5ijkdbGMILUI=
+Modified: 637872959195456858
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2014\2014 Strategy MVP.yml
+ID: "b699f9d8-09d4-4b8f-8c7d-47b66fe5eda8"
+Parent: "f9ee7e52-5a3a-48d5-8a1b-19f9aa76f21a"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2014/2014 Strategy MVP
+Signature: koljzc2Up3JoiDdSt0KYDj0LFyLg2GGCGoMqFqkiU90=
+Modified: 637872959195346817
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018\2018 Strategy MVP.yml
+ID: "5e4176f4-2896-464f-8a2d-b2f2625f4f33"
+Parent: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018/2018 Strategy MVP
+Signature: sZ1JGdqNcFfVyXnZN8tH8lN9nKufXtQ6WToxL0NA+nQ=
+Modified: 637872959195416972
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Strategy.yml
+ID: "7cc9ff3f-072d-4bc9-993a-1046843b6497"
+Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
+Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
+Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Strategy
+Signature: VXUP72zcwaYe5m1Uw+669cSyuNd0zplWwC1ajfqAgt4=
+Modified: 637872959195529840
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Honorary.yml
+ID: "118da7a8-198b-4616-8129-6a634e0d701d"
+Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
+Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
+Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Honorary
+Signature: ZMgXr2k0/lyEua92NEO763myWTrBY0tTdud7RIGw0JU=
+Modified: 637872959195529840
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2021\2021 Technology MVP.yml
 ID: "98d10bf9-17bc-469a-ab7a-201566e0858d"
 Parent: "807fcf2b-c8d1-4d80-96eb-101370b06e5c"
 Template: "7007db97-c724-464b-a735-b301844f7d82"
 Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2021/2021 Technology MVP
 Signature: 9kX7KRfs6QEJMmrD+i39PcQrPlTT1Tam36Z9Ck6SUAQ=
-Modified: 637715796014780532
+Modified: 637872959195489887
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018\2018 Ambassador MVP.yml
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2016\2016 Lifetime MVP.yml
+ID: "1e6f4ab8-1cec-485a-8adb-b54510d0242c"
+Parent: "747a0961-1ed2-41bc-a9dd-767c8f27e3d2"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2016/2016 Lifetime MVP
+Signature: iKaTOAtf2bR6C0Ny5uygZJVST7GtPKTcl+n0Xi+hEBw=
+Modified: 637872959195366812
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2019\2019 Technology MVP.yml
+ID: "89a17c97-a2b3-447b-b3ee-9975bf3cde49"
+Parent: "2705c6d8-7df1-431e-a407-4f4bb0e1be36"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2019/2019 Technology MVP
+Signature: 9WiFe4nbIpioXm6HOottnxBQ5fu9aj6Lp1+ny98+W+g=
+Modified: 637872959195446499
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2016\2016 Commerce MVP.yml
+ID: "82b7a287-a176-4560-96c7-112aa40375c7"
+Parent: "747a0961-1ed2-41bc-a9dd-767c8f27e3d2"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2016/2016 Commerce MVP
+Signature: t6Yf/r+2L31nDkWuTG/gEAJKXHYSk87K6kKM7ANXJs4=
+Modified: 637872959195366812
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2014\2014 Technology MVP.yml
+ID: "f49db64b-88cb-424a-bc9d-47e56c3baa56"
+Parent: "f9ee7e52-5a3a-48d5-8a1b-19f9aa76f21a"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2014/2014 Technology MVP
+Signature: vxMk1Tg7kiYUV64uwZ8VXHBiLeYP0qrpdQM/0nSbYEM=
+Modified: 637872959195346817
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2019\2019 Strategy MVP.yml
+ID: "e8302991-f1d6-4077-9dd2-0373ebb1e95b"
+Parent: "2705c6d8-7df1-431e-a407-4f4bb0e1be36"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2019/2019 Strategy MVP
+Signature: ZlCubeFAkEAjwOoYhC3fXp/JxctzkhhaZGp76K+W+dg=
+Modified: 637872959195436469
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2021\2021 Ambassador MVP.yml
+ID: "54618b8c-6929-4776-aad0-8f7a44f7822f"
+Parent: "807fcf2b-c8d1-4d80-96eb-101370b06e5c"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2021/2021 Ambassador MVP
+Signature: IQg0yylZsKnsh3XPjY22+kCHfmt5QV0jQ9DThdxTj9s=
+Modified: 637872959195480141
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018\2018 Honorary MVP.yml
+ID: "81eff39a-55e7-432e-be9c-9c5550906760"
+Parent: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018/2018 Honorary MVP
+Signature: a7jc+rgDTkU5K7QmOHAAfKg9VvVIPjvfQ3bzikK3MF4=
+Modified: 637872959195406484
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2016\2016 Strategy MVP.yml
+ID: "41115ec2-7599-41bc-9137-93c228b6bc01"
+Parent: "747a0961-1ed2-41bc-a9dd-767c8f27e3d2"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2016/2016 Strategy MVP
+Signature: ThZJX+izd1f8zKnm626dtchRr3Z0UXi2bwB8JX1ZaF8=
+Modified: 637872959195376843
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2020\2020 Strategy MVP.yml
+ID: "c78e52bb-a546-48a0-98e2-6358767a443d"
+Parent: "358e6cb7-c796-47e1-a744-490077bcc134"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2020/2020 Strategy MVP
+Signature: O+P1hYzVfkzg/PY+c0wsvzBCWdIrk5n6jz7xSyvQplo=
+Modified: 637872959195468333
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2019\2019 Commerce MVP.yml
+ID: "bed6b81a-aa06-4cf0-b17e-4a759cd39ab9"
+Parent: "2705c6d8-7df1-431e-a407-4f4bb0e1be36"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2019/2019 Commerce MVP
+Signature: 8LM41Q15RXli6kH3mjKn1fsnlCwilrAToWP0iyuGlHc=
+Modified: 637872959195426861
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018\2018 Ambassador MVP.yml
 ID: "2b1a93ca-4fa0-4fc1-a80f-33b39028f1ee"
 Parent: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
 Template: "7007db97-c724-464b-a735-b301844f7d82"
 Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018/2018 Ambassador MVP
 Signature: OtRoIt6fp3jzmZwgmJCMa/zCy8/hgVTGsxm+SgQl6uE=
-Modified: 637715796014510529
+Modified: 637872959195396821
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2020\2020 Technology MVP.yml
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2020\2020 Technology MVP.yml
 ID: "40f71464-12f2-4226-963b-36a026592340"
 Parent: "358e6cb7-c796-47e1-a744-490077bcc134"
 Template: "7007db97-c724-464b-a735-b301844f7d82"
 Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2020/2020 Technology MVP
 Signature: QkdSWTgAKRn/cJFINiNpd33RXO0ngpaUz7Pki6xWu+M=
-Modified: 637715796014720547
+Modified: 637872959195468333
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2020\2020 Commerce MVP.yml
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2019\2019 Lifetime MVP.yml
+ID: "17ce9f9b-90cd-4511-8ee9-1b5b89cd1e43"
+Parent: "2705c6d8-7df1-431e-a407-4f4bb0e1be36"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2019/2019 Lifetime MVP
+Signature: 077umn6+a6w+25L9uXpVwHcwcd6LUqZuHxPDAy8ldlM=
+Modified: 637872959195436469
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018\2018 Commerce MVP.yml
+ID: "a50dd78b-55a7-426d-93f6-68c8040fb317"
+Parent: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018/2018 Commerce MVP
+Signature: /yAEAPwSgSQslwHZJEmc4CBrP14H9ninpDTrBFeLux8=
+Modified: 637872959195406484
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2020\2020 Ambassador MVP.yml
+ID: "3ccb4f25-497b-469d-85d1-bf7ab1f12397"
+Parent: "358e6cb7-c796-47e1-a744-490077bcc134"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2020/2020 Ambassador MVP
+Signature: 9UuwAKTsM/SdDg+NTKm9jNrpg0ghi0ODXBCSln+0jck=
+Modified: 637872959195446499
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2020\2020 Commerce MVP.yml
 ID: "a21074b9-5349-4993-92f9-97816e5129d4"
 Parent: "358e6cb7-c796-47e1-a744-490077bcc134"
 Template: "7007db97-c724-464b-a735-b301844f7d82"
 Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2020/2020 Commerce MVP
 Signature: CjpeNBDCENLFW7m1Eg8nKkJ61co73NbYbINtC0z68N8=
-Modified: 637715796014690524
+Modified: 637872959195456858
 ---
 File: |
-  C:\Solutions\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2021\2021 Lifetime MVP.yml
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps.yml
+ID: "8be29760-eaec-49ca-be48-c5c68fd887c5"
+Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/MVP Repository/Application Steps
+Signature: VMPx1+ywN1/4cCCCIgshTfcayEuyX7x0Sd+gTQVJ+yk=
+Modified: 637872959195296814
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Countries.yml
+ID: "d18d6ffe-def4-4d7b-aea0-13f06b9030a3"
+Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/MVP Repository/Countries
+Signature: uFy0Oh47o8JOEBf/swy/2t1n3Yvki7tCn3DTSU05FIw=
+Modified: 637872959195489887
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category.yml
+ID: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
+Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/MVP Repository/MVP Category
+Signature: G4TFimQWtQAgej8i/xTaM6J+CTCDc+eON2N0RF1bHmA=
+Modified: 637872959195509841
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Personal.yml
+ID: "ed7dec1d-9c2e-4ac1-8aef-709cb0ab3506"
+Parent: "8be29760-eaec-49ca-be48-c5c68fd887c5"
+Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
+Path: /sitecore/content/MvpSite/MVP Repository/Application Steps/Personal
+Signature: nTw35PuSX6NEOd2YlSmW3B+cHGuER0rXj1EUv7iDa3Y=
+Modified: 637872959195316819
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2014.yml
+ID: "f9ee7e52-5a3a-48d5-8a1b-19f9aa76f21a"
+Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
+Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2014
+Signature: 1pDKVLhywq34ac0tGaHZYdngZoZn9rWkE72Vpbkpty0=
+Modified: 637872959195336820
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2016.yml
+ID: "747a0961-1ed2-41bc-a9dd-767c8f27e3d2"
+Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
+Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2016
+Signature: FcK7doGIHoDbze54Q5Dcw+3VkJ36mJT7VSYQrtuhh/c=
+Modified: 637872959195356827
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Employment Status\Customer.yml
+ID: "c9743670-c7f0-40a3-9a5c-6f34570fa7d2"
+Parent: "965852ba-c78d-4a41-8dd8-d8cad7032d4f"
+Template: "37421902-c3c5-49e3-bf4a-a7ee73312993"
+Path: /sitecore/content/MvpSite/MVP Repository/Employment Status/Customer
+Signature: wUFa6UAh8dN+kP092+xoIEHgfdeClK2qvOMv4mFaR9g=
+Modified: 637872959195499875
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Lifetime.yml
+ID: "9d391762-ccf9-42a6-ad26-ddf8495daa4d"
+Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
+Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
+Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Lifetime
+Signature: nVlijTACCYJ9gL+Du5mh10LpCDD4a35EshNy7OU7qs8=
+Modified: 637872959195529840
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2015\2015 Strategy MVP.yml
+ID: "23412e85-ab5d-41fc-8779-4511aa1b61a0"
+Parent: "d4e5a358-dc50-4e9a-a224-932c4976d67c"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2015/2015 Strategy MVP
+Signature: YsHtBEBp5mLYBE0SJdtHJBNMGWcTiGQ2HZqiodssenY=
+Modified: 637872959195356827
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2015\2015 Technology MVP.yml
+ID: "66f6ee75-2607-44bc-8b8e-f584f04c31c4"
+Parent: "d4e5a358-dc50-4e9a-a224-932c4976d67c"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2015/2015 Technology MVP
+Signature: /R9LVk7397SKqqEuicuG3eFKc5pqGR1pKJtVYdrVk5U=
+Modified: 637872959195356827
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2017\2017 Lifetime MVP.yml
+ID: "cad02fa8-2cc4-4f2f-9aee-c0afacac6e1d"
+Parent: "fbf87303-cff9-46d7-a605-8f2ff2e349d7"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2017/2017 Lifetime MVP
+Signature: cVp81UVrrhO3njlylJKxF8wDHFhAKsmcX/TsDqOvDvc=
+Modified: 637872959195386817
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2017\2017 Strategy MVP.yml
+ID: "c2456100-cc68-45a1-9e2e-e73d461ca92b"
+Parent: "fbf87303-cff9-46d7-a605-8f2ff2e349d7"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2017/2017 Strategy MVP
+Signature: JwckWiHbOvjM4c3vmIQoOhxRn7b24CbLIrf95Gk424Y=
+Modified: 637872959195386817
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2021\2021 Lifetime MVP.yml
 ID: "3b7c5749-2c62-4268-902f-78d01525513b"
 Parent: "807fcf2b-c8d1-4d80-96eb-101370b06e5c"
 Template: "7007db97-c724-464b-a735-b301844f7d82"
 Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2021/2021 Lifetime MVP
 Signature: A4I7+bRydBZuI6a8bzfm+xyQW3Uxgew843egSmiktBk=
-Modified: 637715796014760519
+Modified: 637872959195480141
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2021\2021 Strategy MVP.yml
+ID: "15d23d83-c9d6-413f-ab27-4759bcd4a9f7"
+Parent: "807fcf2b-c8d1-4d80-96eb-101370b06e5c"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2021/2021 Strategy MVP
+Signature: b3UBEmUr3UviWASCHVULY/5NJCfpucgyNMtdyY8nXWo=
+Modified: 637872959195489887
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years.yml
+ID: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
+Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
+Template: "0dc4f16b-6f23-4a23-b4d2-a350c0b84fd5"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years
+Signature: NXU0lgQ2vsdKDR995Zck83V61VYDfPk4+1JJ0s2pAAU=
+Modified: 637872959195326477
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Employment Status.yml
+ID: "965852ba-c78d-4a41-8dd8-d8cad7032d4f"
+Parent: "d3b2ac74-f73d-450d-a040-b40d53e314ec"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/MvpSite/MVP Repository/Employment Status
+Signature: 8x7D8mQIUZxEd2GRXSvnNoysjrtX5og+sFUlt7m2PdU=
+Modified: 637872959195499875
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Application Steps\Confirmation.yml
+ID: "6b57c63e-5b8f-4c9c-9e71-dda4449f8b2d"
+Parent: "8be29760-eaec-49ca-be48-c5c68fd887c5"
+Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
+Path: /sitecore/content/MvpSite/MVP Repository/Application Steps/Confirmation
+Signature: MFmab0gBaqz/nX43oKsu62RWwI3ZsgJNHU5gOrjkZ7s=
+Modified: 637872959195306836
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018.yml
+ID: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
+Parent: "a2b660e1-9671-41b4-a6ca-4956ff9847b8"
+Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018
+Signature: yJRYWanMd2bgZy9YcLU4uep7XW9BnrrlllfJP/aA4HI=
+Modified: 637872959195396821
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Ambassador.yml
+ID: "7768de06-8cae-45cc-b644-15d41bd168d1"
+Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
+Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
+Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Ambassador
+Signature: QzTX47kbzGJ5QBR3D60e5wQ1GRIi4JXVQT+A94sIzJ8=
+Modified: 637872959195519855
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\MVP Category\Technology.yml
+ID: "db39fc29-e639-4be5-ae17-14428301cd11"
+Parent: "e2f6ea22-562b-4d70-a444-f5bbc81c183e"
+Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
+Path: /sitecore/content/MvpSite/MVP Repository/MVP Category/Technology
+Signature: xGAaCv5cneKMLUHbcduGspDo40xAouGM5cZl5dbnfvQ=
+Modified: 637872959195539864
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2016\2016 Technology MVP.yml
+ID: "38c87b0e-c1ae-48f2-aef4-5268d60cadc3"
+Parent: "747a0961-1ed2-41bc-a9dd-767c8f27e3d2"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2016/2016 Technology MVP
+Signature: UAPcwo/04BMRrhhO7Vd/K6dANaNP7429mdDXahyqXkw=
+Modified: 637872959195376843
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2017\2017 Commerce MVP.yml
+ID: "25dabf58-9800-4da0-8528-979dc1c50022"
+Parent: "fbf87303-cff9-46d7-a605-8f2ff2e349d7"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2017/2017 Commerce MVP
+Signature: xuNL3NOg7FMkRGCbrBj9ntA5vSVKdjf1uFb4H2Bagzw=
+Modified: 637872959195386817
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2018\2018 Technology MVP.yml
+ID: "d1f30097-d9a0-42c3-90eb-fff1ff72f994"
+Parent: "b2441b1d-15c3-49ba-8d84-c3b0029dd646"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2018/2018 Technology MVP
+Signature: +McnQsIrwOAhOoEboiK1mmgBzJ95tCVGTnbBfgqhtN4=
+Modified: 637872959195416972
+---
+File: |
+  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\mvp-repo\MVP Repository\Award Years\2019\2019 Ambassador MVP.yml
+ID: "07ad13c1-4fa6-4194-900d-3687c60ef5f9"
+Parent: "2705c6d8-7df1-431e-a407-4f4bb0e1be36"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2019/2019 Ambassador MVP
+Signature: C/wVN8mvl/P4UZ+3lxz73tUqE7tw0jS+fSyfrSt4kc4=
+Modified: 637872959195426861
