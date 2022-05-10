@@ -8,7 +8,7 @@ on:
 
 jobs:
 
- build-cm:
+  build-cm:
     name: Build the .NET Solution
     runs-on: windows-latest
     steps:
