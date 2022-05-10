@@ -13,15 +13,24 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    
     - name: Setup MSBuild path
       uses: microsoft/setup-msbuild@v1.1
-    
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.6
-    
     - name: Restore NuGet packages
       run: nuget restore src\XmCloudIntroduction.sln
-
     - name: Build
       run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
+
+  build-sugcon-eu:
+    name: Build the SUGCON EU head
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/Project/SugconEu/rendering
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16.5
+    - run: npm build
