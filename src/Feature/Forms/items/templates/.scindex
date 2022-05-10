@@ -1,325 +1,325 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms.yml
 ID: "d60e7372-62e5-411f-a21a-c7d79c36f085"
 Parent: "8f343079-3cc5-4ef7-bc27-32addb46f45e"
 Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
 Path: /sitecore/templates/Feature/Forms
 Signature: qnGT4dflYTMOVQV5v3sA9AjWGBC/cgfBrieASy18kkw=
-Modified: 637872959194156819
+Modified: 637877635732043298
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Progress.yml
-ID: "7c1997d2-7298-4b0a-bd97-9758c8a12529"
-Parent: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
-Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Feature/Forms/Application/Progress
-Signature: V7L8wteaLeDCBpNg6tcYK3unfmLIqMNityseI9UtolQ=
-Modified: 637872959194276868
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\GitHub.yml
-ID: "b862abe5-dae8-487e-bbd3-43d7bfdf1ace"
-Parent: "66532065-7e34-4a68-bcb6-93c81aa8f188"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Community profiles/GitHub
-Signature: HLrQDevfsFeMm30/tqfkLUhlC7LlyieN5Co8q+/xzAQ=
-Modified: 637872959194186488
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application Folder.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application Folder.yml
 ID: "ea0ecc56-3611-4239-b4f7-81c2edc956e6"
 Parent: "d60e7372-62e5-411f-a21a-c7d79c36f085"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: /sitecore/templates/Feature/Forms/Application Folder
 Signature: tbf33++3l23Arm6ujI6RXQuhVJB08acQud+tD+fVMJ4=
-Modified: 637872959194156819
+Modified: 637877635732063297
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application.yml
 ID: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
 Parent: "d60e7372-62e5-411f-a21a-c7d79c36f085"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: /sitecore/templates/Feature/Forms/Application
 Signature: 6aX7PDDwJdMBw+kfDe3XYUD1enCVO3wGAFNLn3Lk8YA=
-Modified: 637872959194166846
+Modified: 637877635732073301
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Category\Category.yml
-ID: "7f8776e9-22d8-4ea8-b2d0-03c1274b37ec"
-Parent: "a6edf5a1-b9d6-412b-b467-7bb92b74d3e7"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Category/Category
-Signature: eROWAZTeiwgyE0XqTDznlTbF2uyXACe5z7K40JzJg70=
-Modified: 637872959194176849
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Notable Current Year Contributions\OfflineActivity.yml
-ID: "aace78cb-997c-49ac-a8c7-854398b9c1f3"
-Parent: "76b5c887-6f34-40fb-a1bf-be86e99f71ee"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Notable Current Year Contributions/OfflineActivity
-Signature: i/Xp4Q9/0EjN2Yze5m9RhqL9tvBwhkjtJf6R5Oaj5pw=
-Modified: 637872959194226500
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Category.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Category.yml
 ID: "a6edf5a1-b9d6-412b-b467-7bb92b74d3e7"
 Parent: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/Forms/Application/Category
 Signature: QhgMoj7BgvEA5CdW+UUTHE7DU4+jKz/YuSgrLs63Khk=
-Modified: 637872959194166846
+Modified: 637877635732093305
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles.yml
 ID: "66532065-7e34-4a68-bcb6-93c81aa8f188"
 Parent: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/Forms/Application/Community profiles
 Signature: DMWVjQpL+YVCvFXqCpRM5n7ISHJnT6zPHQyjqPCoPyY=
-Modified: 637872959194176849
+Modified: 637877635732133286
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\CustomerCoreProfile.yml
-ID: "d6a94f67-7ee9-452e-8e73-54a04d149f4a"
-Parent: "66532065-7e34-4a68-bcb6-93c81aa8f188"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Community profiles/CustomerCoreProfile
-Signature: QxNsK6G7yli9Y5oooyoY5reV7xMW//fl0LrNl/JRf28=
-Modified: 637872959194186488
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\CompanyName.yml
-ID: "eec4f929-7346-429a-84df-d238ca8c6713"
-Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Personal Information/CompanyName
-Signature: cx1CKJr2fAsc08kWsOiXc+70A/xOCUiaObjSg5zUu60=
-Modified: 637872959194246806
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Completion.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Completion.yml
 ID: "556c8c74-0651-41ef-96df-0e7fe4cdf982"
 Parent: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/Forms/Application/Completion
 Signature: MB4NUIieMlsVw+a3hXZvRabDbOZ1Ws4iy7Y9LBMpnvM=
-Modified: 637872959194206827
+Modified: 637877635732273295
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Notable Current Year Contributions.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Notable Current Year Contributions.yml
 ID: "76b5c887-6f34-40fb-a1bf-be86e99f71ee"
 Parent: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/Forms/Application/Notable Current Year Contributions
 Signature: 9eTYH5E2uVdTbhTdPF2YZ6nYX1E/h+XU8a52xeTacOk=
-Modified: 637872959194226500
+Modified: 637877635732313299
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\StackExchange.yml
-ID: "df4b449f-09ea-4771-baba-272416af4e5b"
-Parent: "66532065-7e34-4a68-bcb6-93c81aa8f188"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Community profiles/StackExchange
-Signature: ht3s2XFcLaDw9HsoJz1GeahzhzwepVerzaHx1QOpy2k=
-Modified: 637872959194206827
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\LastName.yml
-ID: "d099ff9f-5ea5-42e8-ae2b-bf3c7deab1db"
-Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Personal Information/LastName
-Signature: 14jWfRXseLA/VJz/39nb0QEHs3yo623KzS559NpW5uM=
-Modified: 637872959194256850
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Objectives and Motivation.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Objectives and Motivation.yml
 ID: "bdd9ee38-fcfb-408c-a577-5fad6eff6f22"
 Parent: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/Forms/Application/Objectives and Motivation
 Signature: Ta2j80tOeJtdIg2hxFVnVEg9tRvvoxcRStpCfW7u7gs=
-Modified: 637872959194236491
+Modified: 637877635732363293
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information.yml
 ID: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
 Parent: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/Forms/Application/Personal Information
 Signature: 24H/aHyZScYmurMmtKN7EoDzZVERR6nejGyYL8IR+ao=
-Modified: 637872959194246806
+Modified: 637877635732413287
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Objectives and Motivation\Objectives.yml
-ID: "f8a9cedd-a4e7-482c-9233-d276706f4391"
-Parent: "bdd9ee38-fcfb-408c-a577-5fad6eff6f22"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Objectives and Motivation/Objectives
-Signature: M4qWFWG/DUdQMArhVfEi+cXd+f2D5HqYOXIjrzf7cnw=
-Modified: 637872959194236491
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\PreferredName.yml
-ID: "47974bbd-4411-4df2-b984-fdccf1a91bd7"
-Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Personal Information/PreferredName
-Signature: RR8VEiOdN2hYqw13KJzguZ1lERib2woMbmw+0FxMgKI=
-Modified: 637872959194266833
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\__Standard Values.yml
-ID: "8169fe1b-7eb8-42cf-aad5-09fe05484f9e"
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Progress.yml
+ID: "7c1997d2-7298-4b0a-bd97-9758c8a12529"
 Parent: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
-Template: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
-Path: /sitecore/templates/Feature/Forms/Application/__Standard Values
-Signature: O41Ryx1RBLxs+4bkNRstyXyUlnpvpTJuwPOv7iXaqKU=
-Modified: 637872959194296954
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Forms/Application/Progress
+Signature: V7L8wteaLeDCBpNg6tcYK3unfmLIqMNityseI9UtolQ=
+Modified: 637877635732563281
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\User Profile.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\User Profile.yml
 ID: "0d56fc21-c66f-4249-9e6b-076de566bbe7"
 Parent: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/Forms/Application/User Profile
 Signature: bpodjvWvk7s4D6XgIH9kazuflrsY84y7PHIAdWOiQ4w=
-Modified: 637872959194287073
+Modified: 637877635732603334
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\Country.yml
-ID: "cb78b986-aff3-4b68-8fa5-3f9343f9cf6f"
-Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\__Standard Values.yml
+ID: "8169fe1b-7eb8-42cf-aad5-09fe05484f9e"
+Parent: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
+Template: "5a6a420c-be7e-4822-a887-33c83f5e9b0c"
+Path: /sitecore/templates/Feature/Forms/Application/__Standard Values
+Signature: O41Ryx1RBLxs+4bkNRstyXyUlnpvpTJuwPOv7iXaqKU=
+Modified: 637877635732633278
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Category\Category.yml
+ID: "7f8776e9-22d8-4ea8-b2d0-03c1274b37ec"
+Parent: "a6edf5a1-b9d6-412b-b467-7bb92b74d3e7"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Personal Information/Country
-Signature: NQ/D9hZ2r8NBDe4Cn7CvH72/djKpbA3+G0OvkryARNk=
-Modified: 637872959194256850
+Path: /sitecore/templates/Feature/Forms/Application/Category/Category
+Signature: eROWAZTeiwgyE0XqTDznlTbF2uyXACe5z7K40JzJg70=
+Modified: 637877635732113289
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\Blog.yml
-ID: "a60e560a-0167-4136-b9f0-1c2e148339a5"
-Parent: "66532065-7e34-4a68-bcb6-93c81aa8f188"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Community profiles/Blog
-Signature: eB6B8EqYDeYc0DTn10j6ofw7/akm6JH55NkvEtSnJN8=
-Modified: 637872959194186488
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\AgreeOnTerms.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\AgreeOnTerms.yml
 ID: "faad57ce-b0ea-4519-a76d-29f8b7c2223c"
 Parent: "66532065-7e34-4a68-bcb6-93c81aa8f188"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Feature/Forms/Application/Community profiles/AgreeOnTerms
 Signature: Jem+oamGNrjl2vfTK/YDHRG6FIMr25cegX8URT3IptQ=
-Modified: 637872959194176849
+Modified: 637877635732143295
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\Mentor.yml
-ID: "1d4e406f-037b-473b-8c48-766edf597dcc"
-Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Personal Information/Mentor
-Signature: r36CHYwezGQRdgjLcFx1A3E8dWOVSrI3Jlb0aVJnA30=
-Modified: 637872959194266833
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\SitecoreCommunity.yml
-ID: "19f0a676-2d32-468e-b424-e5b614a6a016"
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\Blog.yml
+ID: "a60e560a-0167-4136-b9f0-1c2e148339a5"
 Parent: "66532065-7e34-4a68-bcb6-93c81aa8f188"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Community profiles/SitecoreCommunity
-Signature: nKl2Sx8D9kBvndSje6twwJ56T+F9uSiIAx+/phlQrvg=
-Modified: 637872959194196497
+Path: /sitecore/templates/Feature/Forms/Application/Community profiles/Blog
+Signature: eB6B8EqYDeYc0DTn10j6ofw7/akm6JH55NkvEtSnJN8=
+Modified: 637877635732163292
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\Other.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\CustomerCoreProfile.yml
+ID: "d6a94f67-7ee9-452e-8e73-54a04d149f4a"
+Parent: "66532065-7e34-4a68-bcb6-93c81aa8f188"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/Community profiles/CustomerCoreProfile
+Signature: QxNsK6G7yli9Y5oooyoY5reV7xMW//fl0LrNl/JRf28=
+Modified: 637877635732183345
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\GitHub.yml
+ID: "b862abe5-dae8-487e-bbd3-43d7bfdf1ace"
+Parent: "66532065-7e34-4a68-bcb6-93c81aa8f188"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/Community profiles/GitHub
+Signature: HLrQDevfsFeMm30/tqfkLUhlC7LlyieN5Co8q+/xzAQ=
+Modified: 637877635732193316
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\Other.yml
 ID: "c37c7915-aa9a-4deb-a652-648e7e4cc80a"
 Parent: "66532065-7e34-4a68-bcb6-93c81aa8f188"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Feature/Forms/Application/Community profiles/Other
 Signature: 5FDv46HLJUH/JQwcejshh3LHpxgSZksMqJ4g0Gx+LdM=
-Modified: 637872959194196497
+Modified: 637877635732213292
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\User Profile\Person.yml
-ID: "f95a166c-8106-41e3-8acc-d11e3d74b722"
-Parent: "0d56fc21-c66f-4249-9e6b-076de566bbe7"
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\SitecoreCommunity.yml
+ID: "19f0a676-2d32-468e-b424-e5b614a6a016"
+Parent: "66532065-7e34-4a68-bcb6-93c81aa8f188"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/User Profile/Person
-Signature: wdohxr+JUB3krv5YRu8N+R7ii51GjvoPxNtB5Bo/udE=
-Modified: 637872959194296954
+Path: /sitecore/templates/Feature/Forms/Application/Community profiles/SitecoreCommunity
+Signature: nKl2Sx8D9kBvndSje6twwJ56T+F9uSiIAx+/phlQrvg=
+Modified: 637877635732233293
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Notable Current Year Contributions\OnlineAcvitity.yml
-ID: "7659ed58-b9b4-45c7-be57-fb64bc76d5ab"
-Parent: "76b5c887-6f34-40fb-a1bf-be86e99f71ee"
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\StackExchange.yml
+ID: "df4b449f-09ea-4771-baba-272416af4e5b"
+Parent: "66532065-7e34-4a68-bcb6-93c81aa8f188"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Notable Current Year Contributions/OnlineAcvitity
-Signature: 79YMi4tXdZcH54TOK4A35yYt3f5DxZBgL+jSi6Aza6A=
-Modified: 637872959194226500
+Path: /sitecore/templates/Feature/Forms/Application/Community profiles/StackExchange
+Signature: ht3s2XFcLaDw9HsoJz1GeahzhzwepVerzaHx1QOpy2k=
+Modified: 637877635732243286
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\Twitter.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Community profiles\Twitter.yml
 ID: "0708fb37-8a4b-4bc2-a382-b29a68f520d1"
 Parent: "66532065-7e34-4a68-bcb6-93c81aa8f188"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Feature/Forms/Application/Community profiles/Twitter
 Signature: /W7J3e4DY0cZLDeup78c+2ggWPxiVU1UZRSHBdYRCCY=
-Modified: 637872959194206827
+Modified: 637877635732263300
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Objectives and Motivation\Eligibility.yml
-ID: "c47541a8-368b-4b91-ae6e-7bcf726be1e3"
-Parent: "bdd9ee38-fcfb-408c-a577-5fad6eff6f22"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Objectives and Motivation/Eligibility
-Signature: dJZvn/7nbsno9/RP/lL/7UswNsYKPr/ciZ7OpQR90Nk=
-Modified: 637872959194236491
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Completion\Completed.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Completion\Completed.yml
 ID: "c169b762-b673-412c-9f0f-748f505fd7bf"
 Parent: "556c8c74-0651-41ef-96df-0e7fe4cdf982"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Feature/Forms/Application/Completion/Completed
 Signature: C3saP46kkSnB5wlm9EETQHjiIQAibnbb8ck/8I5i6iM=
-Modified: 637872959194216500
+Modified: 637877635732303305
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\State.yml
-ID: "8622795b-3b7e-4fec-a141-63ed4bb31da8"
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Notable Current Year Contributions\OfflineActivity.yml
+ID: "aace78cb-997c-49ac-a8c7-854398b9c1f3"
+Parent: "76b5c887-6f34-40fb-a1bf-be86e99f71ee"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/Notable Current Year Contributions/OfflineActivity
+Signature: i/Xp4Q9/0EjN2Yze5m9RhqL9tvBwhkjtJf6R5Oaj5pw=
+Modified: 637877635732333322
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Notable Current Year Contributions\OnlineAcvitity.yml
+ID: "7659ed58-b9b4-45c7-be57-fb64bc76d5ab"
+Parent: "76b5c887-6f34-40fb-a1bf-be86e99f71ee"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/Notable Current Year Contributions/OnlineAcvitity
+Signature: 79YMi4tXdZcH54TOK4A35yYt3f5DxZBgL+jSi6Aza6A=
+Modified: 637877635732353285
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Objectives and Motivation\Eligibility.yml
+ID: "c47541a8-368b-4b91-ae6e-7bcf726be1e3"
+Parent: "bdd9ee38-fcfb-408c-a577-5fad6eff6f22"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/Objectives and Motivation/Eligibility
+Signature: dJZvn/7nbsno9/RP/lL/7UswNsYKPr/ciZ7OpQR90Nk=
+Modified: 637877635732383277
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Objectives and Motivation\Objectives.yml
+ID: "f8a9cedd-a4e7-482c-9233-d276706f4391"
+Parent: "bdd9ee38-fcfb-408c-a577-5fad6eff6f22"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/Objectives and Motivation/Objectives
+Signature: M4qWFWG/DUdQMArhVfEi+cXd+f2D5HqYOXIjrzf7cnw=
+Modified: 637877635732403276
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\CompanyName.yml
+ID: "eec4f929-7346-429a-84df-d238ca8c6713"
 Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Personal Information/State
-Signature: zmCdp2RdIuRpCELPdwbgn4zQNxMm+VFq+MsFMAPqU68=
-Modified: 637872959194276868
+Path: /sitecore/templates/Feature/Forms/Application/Personal Information/CompanyName
+Signature: cx1CKJr2fAsc08kWsOiXc+70A/xOCUiaObjSg5zUu60=
+Modified: 637877635732433275
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\EmploymentStatus.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\Country.yml
+ID: "cb78b986-aff3-4b68-8fa5-3f9343f9cf6f"
+Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/Personal Information/Country
+Signature: NQ/D9hZ2r8NBDe4Cn7CvH72/djKpbA3+G0OvkryARNk=
+Modified: 637877635732443271
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\EmploymentStatus.yml
 ID: "36836a68-4dd0-4324-8a0f-c4763d97b1df"
 Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Feature/Forms/Application/Personal Information/EmploymentStatus
 Signature: sPAnKLrs8RG+8nlTm6B6O+KZIc1eBEBgQBY9YjaGCwo=
-Modified: 637872959194256850
+Modified: 637877635732463273
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Progress\Step.yml
-ID: "1d69fcb9-fd09-4e25-b25c-c2d846f21206"
-Parent: "7c1997d2-7298-4b0a-bd97-9758c8a12529"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Forms/Application/Progress/Step
-Signature: vOw7veUCHQTEd5WyXKPThOmE5qUmi74BHagXe0rmNZ8=
-Modified: 637872959194287073
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\FirstName.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\FirstName.yml
 ID: "03fff8ed-00e9-44c7-8197-915c65f4e17d"
 Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Feature/Forms/Application/Personal Information/FirstName
 Signature: LGalj8ccHiW4kfqOYkgDsf2pm+CrJHWNATiBAQ/L6qU=
-Modified: 637872959194256850
+Modified: 637877635732473274
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\LastName.yml
+ID: "d099ff9f-5ea5-42e8-ae2b-bf3c7deab1db"
+Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/Personal Information/LastName
+Signature: 14jWfRXseLA/VJz/39nb0QEHs3yo623KzS559NpW5uM=
+Modified: 637877635732493288
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\Mentor.yml
+ID: "1d4e406f-037b-473b-8c48-766edf597dcc"
+Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/Personal Information/Mentor
+Signature: r36CHYwezGQRdgjLcFx1A3E8dWOVSrI3Jlb0aVJnA30=
+Modified: 637877635732513299
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\PreferredName.yml
+ID: "47974bbd-4411-4df2-b984-fdccf1a91bd7"
+Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/Personal Information/PreferredName
+Signature: RR8VEiOdN2hYqw13KJzguZ1lERib2woMbmw+0FxMgKI=
+Modified: 637877635732533309
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Personal Information\State.yml
+ID: "8622795b-3b7e-4fec-a141-63ed4bb31da8"
+Parent: "d02b703f-0ad6-4907-8e85-30b6c2ebc84a"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/Personal Information/State
+Signature: zmCdp2RdIuRpCELPdwbgn4zQNxMm+VFq+MsFMAPqU68=
+Modified: 637877635732553276
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\Progress\Step.yml
+ID: "1d69fcb9-fd09-4e25-b25c-c2d846f21206"
+Parent: "7c1997d2-7298-4b0a-bd97-9758c8a12529"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/Progress/Step
+Signature: vOw7veUCHQTEd5WyXKPThOmE5qUmi74BHagXe0rmNZ8=
+Modified: 637877635732593278
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Feature\Forms\items\templates\Forms\Application\User Profile\Person.yml
+ID: "f95a166c-8106-41e3-8acc-d11e3d74b722"
+Parent: "0d56fc21-c66f-4249-9e6b-076de566bbe7"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Forms/Application/User Profile/Person
+Signature: wdohxr+JUB3krv5YRu8N+R7ii51GjvoPxNtB5Bo/udE=
+Modified: 637877635732623287

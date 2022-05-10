@@ -1,19 +1,19 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\SPE\MVP Scripts\Application Export.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Project\MvpSite\items\SPE\MVP Scripts\Application Export.yml
 ID: "0848152b-4ac2-43fd-bbd1-abac5621e1ee"
 Parent: "e6ccc220-a1aa-4cef-a9fe-c9c3e6442feb"
 Template: "dd22f1b3-bd87-4db2-9e7d-f7a496888d43"
 Path: /sitecore/system/Modules/PowerShell/Script Library/MVP Scripts/Application Export
 Signature: QLvJTkmEEByrd9bcpEc/P2yIfYUPuvt/p9S/e7XIX18=
-Modified: 637872959194906468
+Modified: 637877635735743279
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\SPE\MVP Scripts.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Project\MvpSite\items\SPE\MVP Scripts.yml
 ID: "e6ccc220-a1aa-4cef-a9fe-c9c3e6442feb"
 Parent: "a3572733-5062-43e9-a447-54698bc1c637"
 Template: "b6a55ac6-a602-4c09-ac3a-1d2938621d5b"
 Path: /sitecore/system/Modules/PowerShell/Script Library/MVP Scripts
 Signature: vbWd6/KA0NIOUusOJGJaW3nqcnawDvMH/xPyypJAC50=
-Modified: 637872959194906468
+Modified: 637877635735723298

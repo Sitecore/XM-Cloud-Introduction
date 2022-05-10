@@ -1,37 +1,37 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\branche-templates\MvpSite\Page\_name\Page Components.yml
-ID: "20a55515-d0df-4ac4-960f-6ebc655a7514"
-Parent: "9ac6dda3-8785-4c63-a2ab-457d8cc56d19"
-Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
-Path: /sitecore/templates/Branches/Project/MvpSite/Page/$name/Page Components
-Signature: 2pfOTEaJ8TtZu7OACX43LALVbNl1f5E8ApuQ/7bQwU8=
-Modified: 637872959194926462
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\branche-templates\MvpSite.yml
-ID: "ded0a36b-436c-4ea4-ab3f-5c08de7dfcb5"
-Parent: "a1f6469d-16e1-4a5f-9e49-1aad869a5d11"
-Template: "85adbf5b-e836-4932-a333-fe0f9fa1ed1e"
-Path: /sitecore/templates/Branches/Project/MvpSite
-Signature: qJqhl7qLhDRb2Id8CfKAz3PDpbkdoHQOey4ukR8OAdk=
-Modified: 637872959194916465
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\branche-templates\MvpSite\Page.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Project\MvpSite\items\branche-templates\MvpSite\Page.yml
 ID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
 Parent: "ded0a36b-436c-4ea4-ab3f-5c08de7dfcb5"
 Template: "35e75c72-4985-4e09-88c3-0eac6cd1e64f"
 Path: /sitecore/templates/Branches/Project/MvpSite/Page
 Signature: ZZKM8yeRY8Qvzc8HgHd7DbOq3dBfBBB3KnTqckKEICw=
-Modified: 637872959194916465
+Modified: 637877635735803284
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Project\MvpSite\items\branche-templates\MvpSite\Page\_name.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Project\MvpSite\items\branche-templates\MvpSite\Page\_name\Page Components.yml
+ID: "20a55515-d0df-4ac4-960f-6ebc655a7514"
+Parent: "9ac6dda3-8785-4c63-a2ab-457d8cc56d19"
+Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
+Path: /sitecore/templates/Branches/Project/MvpSite/Page/$name/Page Components
+Signature: 2pfOTEaJ8TtZu7OACX43LALVbNl1f5E8ApuQ/7bQwU8=
+Modified: 637877635735853293
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Project\MvpSite\items\branche-templates\MvpSite.yml
+ID: "ded0a36b-436c-4ea4-ab3f-5c08de7dfcb5"
+Parent: "a1f6469d-16e1-4a5f-9e49-1aad869a5d11"
+Template: "85adbf5b-e836-4932-a333-fe0f9fa1ed1e"
+Path: /sitecore/templates/Branches/Project/MvpSite
+Signature: qJqhl7qLhDRb2Id8CfKAz3PDpbkdoHQOey4ukR8OAdk=
+Modified: 637877635735783294
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Project\MvpSite\items\branche-templates\MvpSite\Page\_name.yml
 ID: "9ac6dda3-8785-4c63-a2ab-457d8cc56d19"
 Parent: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
 Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
 Path: /sitecore/templates/Branches/Project/MvpSite/Page/$name
 Signature: +xzZaSKJ5w8qbGIwTIwbQsXmMKErnGnnqyvdetqo/5s=
-Modified: 637872959194926462
+Modified: 637877635735823311

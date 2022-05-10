@@ -1,460 +1,460 @@
 ﻿# Do not commit this file to source control or modify it. It is safe to delete; it will recreate itself.
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Application Step\Application Step\Step ID.yml
-ID: "b06c3aac-d999-4a81-bbd9-eb53d2b791a1"
-Parent: "0db827b7-c53f-4eb6-86ac-715446deef90"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Application Step/Application Step/Step ID
-Signature: ya6+Oo60pFUznwJOKBv/U8BKCF+vcQs/yn2NXv23gM0=
-Modified: 637872959194676499
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Country.yml
-ID: "1fc8657f-f737-47d6-a52b-67e8bff8a390"
-Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/People/Country
-Signature: kpniSzGd8rUrR2+mAKZ0v3HsD7WsWCMJI+Gmft3xPDw=
-Modified: 637872959194696499
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Application Step\Application Step.yml
-ID: "0db827b7-c53f-4eb6-86ac-715446deef90"
-Parent: "f1c4767e-0344-4619-9d00-62fb519c07b1"
-Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Foundation/People/Application Step/Application Step
-Signature: imCvhw7evmc/0RCkPAYU3D9SekqFps21VVxT1EA1//Y=
-Modified: 637872959194666844
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\State.yml
-ID: "13102d13-a6cb-48f6-a813-d431b917ef8f"
-Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/People/State
-Signature: lL8lNdzfHddAtbSFyyXuQPd5osPLg1W1CIp+qMtNvZQ=
-Modified: 637872959194816893
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\MVP Category\Details.yml
-ID: "67cae6b9-7aec-474b-b1ad-7a59355ac9d6"
-Parent: "cdd8427e-fa86-4549-a647-d665164f2f77"
-Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Foundation/People/MVP Category/Details
-Signature: h61ejbmon6GHl9aJCPRlTsDaB+XqCOKX9kY4fSN8MBI=
-Modified: 637872959194746797
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Award Years Folder\__Standard Values.yml
-ID: "eb4cb41d-372a-4b67-8e63-240b48985f00"
-Parent: "0dc4f16b-6f23-4a23-b4d2-a350c0b84fd5"
-Template: "0dc4f16b-6f23-4a23-b4d2-a350c0b84fd5"
-Path: /sitecore/templates/Foundation/People/Award Years Folder/__Standard Values
-Signature: 2gDhLfafzhz/qu86krBO3YpO9E+gD5zlDB6SN9Apmh0=
-Modified: 637872959194686484
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\MVP Category\__Standard Values.yml
-ID: "ab225756-84d0-423b-8599-84d56f3b8c44"
-Parent: "cdd8427e-fa86-4549-a647-d665164f2f77"
-Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
-Path: /sitecore/templates/Foundation/People/MVP Category/__Standard Values
-Signature: NRgMFSGF1f3GrWYwajvvMX1AvY66O3Ql5VTx/VVIKug=
-Modified: 637872959194756489
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person.yml
 ID: "ad9c7837-8660-4360-ba2b-7addf4163685"
 Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: /sitecore/templates/Foundation/People/Person
 Signature: xQm0SNN31ptgyTXakJ0MrTJlLNX7PlcaJbk7gqK+bvA=
-Modified: 637872959194766483
+Modified: 637877635735033298
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Data.yml
-ID: "f629beeb-a57b-4f69-b7e4-df3fbc2bcf3e"
-Parent: "ad9c7837-8660-4360-ba2b-7addf4163685"
-Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Foundation/People/Person/Data
-Signature: wsQU4wFuWh3XLXrAQn5SikH+bEQRKB/HIaxbvjhvz4s=
-Modified: 637872959194776800
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\State\__Standard Values.yml
-ID: "070edcb7-6d55-4a41-ac2f-0f091202e769"
-Parent: "13102d13-a6cb-48f6-a813-d431b917ef8f"
-Template: "13102d13-a6cb-48f6-a813-d431b917ef8f"
-Path: /sitecore/templates/Foundation/People/State/__Standard Values
-Signature: gUDkBR9TvUQqbeHXan7JzjwY9z4vEPoAoU0mN9GnTm0=
-Modified: 637872959194836823
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Award\__Standard Values.yml
-ID: "a4d8e3e1-4b18-40bc-b887-a388bef56d9b"
-Parent: "d5412132-bbc8-479f-b358-e5167e6fcf1b"
-Template: "d5412132-bbc8-479f-b358-e5167e6fcf1b"
-Path: /sitecore/templates/Foundation/People/Award/__Standard Values
-Signature: 9RPunIc11hrFuptrSkB025YxVIXUyoHBKr/THIR40zw=
-Modified: 637872959194696499
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\State\State.yml
-ID: "ccc16d43-0ce9-4817-b823-43d7854376cc"
-Parent: "13102d13-a6cb-48f6-a813-d431b917ef8f"
-Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Foundation/People/State/State
-Signature: tylUr2dVsabB6WOtkrwL22O1m2iupK2F2GnOFY93ex4=
-Modified: 637872959194826500
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Employment Status\Employment Status\Name.yml
-ID: "7e89334b-65af-46ff-abdd-f15a614aa78b"
-Parent: "14ba36d7-460c-4ec4-8585-7ce76f911a86"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Employment Status/Employment Status/Name
-Signature: sv7Gfzo8kouwwTQA58Uu5AyRAx4F2JXf3pWe0fW3ImU=
-Modified: 637872959194726800
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Application.yml
-ID: "55845c05-4d20-47dd-8b49-3026d393b2d9"
-Parent: "ad9c7837-8660-4360-ba2b-7addf4163685"
-Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Foundation/People/Person/Application
-Signature: 8/xo41purVoovLskMQ6IIgYwjgLp7FYGPpniCc+w0yg=
-Modified: 637872959194766483
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Year Category\Details.yml
-ID: "ab17e240-e1c1-435b-ba90-d2246366f96b"
-Parent: "7007db97-c724-464b-a735-b301844f7d82"
-Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Foundation/People/Year Category/Details
-Signature: ZQi2srAdB+CEcKklTFOxv8IIi/Yb76mzmvrQnG7d0EQ=
-Modified: 637872959194846824
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Application\Application.yml
-ID: "55701d4e-e6fd-4340-83ac-7dc3265da612"
-Parent: "55845c05-4d20-47dd-8b49-3026d393b2d9"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Person/Application/Application
-Signature: ceEkFcl+9obt1aBy8iMRNynM6V4/iVOcUo9ziJU64ZU=
-Modified: 637872959194776800
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile.yml
-ID: "debff3f9-cced-440f-a413-9ab43619938e"
-Parent: "ad9c7837-8660-4360-ba2b-7addf4163685"
-Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Foundation/People/Person/Profile
-Signature: Zpa41zVoGpD2OsfsZR60lX0GGclRnbYm8C0yR5AfNho=
-Modified: 637872959194786534
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\MVP Category\Details\Name.yml
-ID: "6e7574bd-3578-4c7d-a438-fb86d7c1c927"
-Parent: "67cae6b9-7aec-474b-b1ad-7a59355ac9d6"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/MVP Category/Details/Name
-Signature: N2nW1PzjPNNkZRTA+CC81jt+JVk9Em+nri/ybh65pec=
-Modified: 637872959194746797
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Country\Country\Name.yml
-ID: "09821e82-2ad7-49f0-b4cd-e4abf8d90983"
-Parent: "cde86baa-c51d-42f3-bc43-088f0e6a5baa"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Country/Country/Name
-Signature: /O6I2ObGeeyC8Kh/MBS8AJjO8CN8VGd7AdxEvsqmQ9o=
-Modified: 637872959194716502
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile\Last Name.yml
-ID: "c0b5d514-19c3-430e-9a5a-42763211573d"
-Parent: "debff3f9-cced-440f-a413-9ab43619938e"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Person/Profile/Last Name
-Signature: oxPJ5sAkG2k9XfxU22paPB2XEGr15WSQMeF6ioacaJk=
-Modified: 637872959194807002
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Year Category\Details\Type.yml
-ID: "7fadee03-359c-4e85-a762-027f4acf95c8"
-Parent: "ab17e240-e1c1-435b-ba90-d2246366f96b"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Year Category/Details/Type
-Signature: wXzOF0Zo91Am6ynxPmqQ9nXw+cnTuakb1fPye9li2gA=
-Modified: 637872959194846824
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Application Step.yml
-ID: "f1c4767e-0344-4619-9d00-62fb519c07b1"
-Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/People/Application Step
-Signature: AzRS1V95/CNGIp0sQs4ovcz6n+32kDLqhlvU6uvMok0=
-Modified: 637872959194666844
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Award Years Folder.yml
-ID: "0dc4f16b-6f23-4a23-b4d2-a350c0b84fd5"
-Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/People/Award Years Folder
-Signature: udcgMgz8ioecIm2NvtSet1Ipl0q2BIyIdkhlqAkfYL4=
-Modified: 637872959194686484
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People.yml
-ID: "17003d0b-e7ca-4858-89d3-e70962f16b93"
-Parent: "b26bd035-8d0a-4df3-8f67-2de3c7fdd74a"
-Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
-Path: /sitecore/templates/Foundation/People
-Signature: iV8dKPZuClPxsF9k7qN8J3HHMbsblwRyuU9rst5ejEM=
-Modified: 637872959194657067
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Year.yml
-ID: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
-Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/People/Year
-Signature: 2k6VMOvU1t/sVIuMYKdAq4vPIg/2g2vn8vn2D3QrqiM=
-Modified: 637872959194856486
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\MVP Category.yml
-ID: "cdd8427e-fa86-4549-a647-d665164f2f77"
-Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/People/MVP Category
-Signature: pRWlN6udOdJww7TcfFt2hYjRx8d3cyonkc1WY7GYcus=
-Modified: 637872959194736468
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Award.yml
-ID: "d5412132-bbc8-479f-b358-e5167e6fcf1b"
-Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/People/Award
-Signature: 9l5rnevAOr9ltmkRckn8w7tPpFYF989zCObn8I64D6g=
-Modified: 637872959194686484
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Employment Status\Employment Status.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Employment Status\Employment Status.yml
 ID: "14ba36d7-460c-4ec4-8585-7ce76f911a86"
 Parent: "37421902-c3c5-49e3-bf4a-a7ee73312993"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Foundation/People/Employment Status/Employment Status
 Signature: 2ne6QuKhgXWfdqDnYn5S/Za6p2/cQnBSCUmJhotW5lk=
-Modified: 637872959194726800
+Modified: 637877635734823281
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Country\Country.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Application Step\Application Step.yml
+ID: "0db827b7-c53f-4eb6-86ac-715446deef90"
+Parent: "f1c4767e-0344-4619-9d00-62fb519c07b1"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/People/Application Step/Application Step
+Signature: imCvhw7evmc/0RCkPAYU3D9SekqFps21VVxT1EA1//Y=
+Modified: 637877635734493339
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Application Step\Application Step\Step ID.yml
+ID: "b06c3aac-d999-4a81-bbd9-eb53d2b791a1"
+Parent: "0db827b7-c53f-4eb6-86ac-715446deef90"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Application Step/Application Step/Step ID
+Signature: ya6+Oo60pFUznwJOKBv/U8BKCF+vcQs/yn2NXv23gM0=
+Modified: 637877635734553302
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Country\Country.yml
 ID: "cde86baa-c51d-42f3-bc43-088f0e6a5baa"
 Parent: "1fc8657f-f737-47d6-a52b-67e8bff8a390"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Foundation/People/Country/Country
 Signature: tylUr2dVsabB6WOtkrwL22O1m2iupK2F2GnOFY93ex4=
-Modified: 637872959194706796
+Modified: 637877635734723354
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Employment Status.yml
-ID: "37421902-c3c5-49e3-bf4a-a7ee73312993"
-Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/People/Employment Status
-Signature: tyfEh5qQkzVcg4j+qNnWUUn9ju7bJAkpqW9JQORK1bA=
-Modified: 637872959194716502
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\__Standard Values.yml
-ID: "d84ce276-7d7d-4662-ae7f-b0eb563b79aa"
-Parent: "ad9c7837-8660-4360-ba2b-7addf4163685"
-Template: "ad9c7837-8660-4360-ba2b-7addf4163685"
-Path: /sitecore/templates/Foundation/People/Person/__Standard Values
-Signature: Ow5xcvoKMN3bfZ9ev8RP7M2lYKb5CqAFk7gKwmKbIpU=
-Modified: 637872959194816893
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Employment Status\__Standard Values.yml
-ID: "8ddca29f-7b82-4528-9355-eaa62edd910b"
-Parent: "37421902-c3c5-49e3-bf4a-a7ee73312993"
-Template: "37421902-c3c5-49e3-bf4a-a7ee73312993"
-Path: /sitecore/templates/Foundation/People/Employment Status/__Standard Values
-Signature: onNji4Qtgy1TrHZCsPCtBT+84qP1pdwCjFDgR/ENRPQ=
-Modified: 637872959194736468
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\People Folder.yml
-ID: "2eba0721-df1e-4d69-a963-2755baa7d726"
-Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/People/People Folder
-Signature: d7nltJdfrVwLEbFlNhswiClAiZ0ofsefIwCliC7PFKU=
-Modified: 637872959194756489
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Employment Status\Employment Status\Description.yml
-ID: "f82b02b5-9027-4646-8c33-509bc0dcf565"
-Parent: "14ba36d7-460c-4ec4-8585-7ce76f911a86"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Employment Status/Employment Status/Description
-Signature: S2oQ/tdvpp9Yi06XgPGGJCnAZ+MkChDLfsGrEx7p3D0=
-Modified: 637872959194726800
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Data\Okta Id.yml
-ID: "9d7006bb-7bd1-4d17-bf85-c4075918659f"
-Parent: "f629beeb-a57b-4f69-b7e4-df3fbc2bcf3e"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Person/Data/Okta Id
-Signature: J9S+5bR6mbRKeeWsYI2MRU7Lzw5gKifN41Fi4dMDUS4=
-Modified: 637872959194786534
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Year Category.yml
-ID: "7007db97-c724-464b-a735-b301844f7d82"
-Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/People/Year Category
-Signature: LBf1WXwcAOh6CymffHSxzNaRsabxR942AdUQ2u3CmpU=
-Modified: 637872959194836823
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile\Awards.yml
-ID: "c5cb665e-d9d7-4130-8694-8cf34380f2ca"
-Parent: "debff3f9-cced-440f-a413-9ab43619938e"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Person/Profile/Awards
-Signature: +/9jRvlYQzxqLD2F7CSaLvrj1bZws4K/fCqEvV+rw6Y=
-Modified: 637872959194786534
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile\Country.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile\Country.yml
 ID: "046fb914-f54f-4e3a-85e8-8ea5e3b7db7f"
 Parent: "debff3f9-cced-440f-a413-9ab43619938e"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Foundation/People/Person/Profile/Country
 Signature: 7y19n4ROooXxgJHtbx8bZWLZKzVuYyZCSvYt4HsPIFE=
-Modified: 637872959194796885
+Modified: 637877635735183285
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Country\__Standard Values.yml
-ID: "f4f56555-ea98-4919-b5d4-7b4de663c5d8"
-Parent: "1fc8657f-f737-47d6-a52b-67e8bff8a390"
-Template: "1fc8657f-f737-47d6-a52b-67e8bff8a390"
-Path: /sitecore/templates/Foundation/People/Country/__Standard Values
-Signature: drJYYDB1at/aJ7P8Ysi9zYHcF76+7nyKmDlocNIpSLw=
-Modified: 637872959194716502
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Data.yml
+ID: "f629beeb-a57b-4f69-b7e4-df3fbc2bcf3e"
+Parent: "ad9c7837-8660-4360-ba2b-7addf4163685"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/People/Person/Data
+Signature: wsQU4wFuWh3XLXrAQn5SikH+bEQRKB/HIaxbvjhvz4s=
+Modified: 637877635735093289
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile\Email.yml
-ID: "8561a65d-741e-4ead-985e-ea1880e196a9"
-Parent: "debff3f9-cced-440f-a413-9ab43619938e"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Person/Profile/Email
-Signature: j8d1Yw0xZU44vqXCIiR6AGQOFfbpJcE6NMJhw5hQbRo=
-Modified: 637872959194796885
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Award Years Folder.yml
+ID: "0dc4f16b-6f23-4a23-b4d2-a350c0b84fd5"
+Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/People/Award Years Folder
+Signature: udcgMgz8ioecIm2NvtSet1Ipl0q2BIyIdkhlqAkfYL4=
+Modified: 637877635734623290
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile\First Name.yml
-ID: "022de4c6-82cf-437c-9424-2fddf1a94f68"
-Parent: "debff3f9-cced-440f-a413-9ab43619938e"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Person/Profile/First Name
-Signature: g8Owkz25PJPxsfeTyiNY8a0/pD5597rmC07oHFxW2t8=
-Modified: 637872959194807002
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\State\State.yml
+ID: "ccc16d43-0ce9-4817-b823-43d7854376cc"
+Parent: "13102d13-a6cb-48f6-a813-d431b917ef8f"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/People/State/State
+Signature: tylUr2dVsabB6WOtkrwL22O1m2iupK2F2GnOFY93ex4=
+Modified: 637877635735293290
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Year Category\__Standard Values.yml
-ID: "1af6622e-b0e2-4f28-8892-a17366017851"
-Parent: "7007db97-c724-464b-a735-b301844f7d82"
-Template: "7007db97-c724-464b-a735-b301844f7d82"
-Path: /sitecore/templates/Foundation/People/Year Category/__Standard Values
-Signature: 1bErKg2eM2n9M6NwKOTO7/DJVwoC2zr5LR4EThnQZCE=
-Modified: 637872959194856486
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Country.yml
+ID: "1fc8657f-f737-47d6-a52b-67e8bff8a390"
+Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/People/Country
+Signature: kpniSzGd8rUrR2+mAKZ0v3HsD7WsWCMJI+Gmft3xPDw=
+Modified: 637877635734703285
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile\Introduction.yml
-ID: "5abccf54-b9a1-4c33-91a4-473280644299"
-Parent: "debff3f9-cced-440f-a413-9ab43619938e"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Person/Profile/Introduction
-Signature: Mfo5afdG5ueJIr2WPiV3s+w0HHXaQVPQgXDAsOsBhFY=
-Modified: 637872959194807002
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Application Step\Application Step\Title.yml
-ID: "28efa042-b2bc-45a2-bd09-07a79cde8467"
-Parent: "0db827b7-c53f-4eb6-86ac-715446deef90"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Application Step/Application Step/Title
-Signature: 2spnv3i44H1w30bBSvmC26y8LIcZeY4T11MzjlOodRU=
-Modified: 637872959194676499
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Country\Country\Description.yml
-ID: "89d4f494-dcbd-408c-ad2b-2b0372d73ca8"
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Country\Country\Name.yml
+ID: "09821e82-2ad7-49f0-b4cd-e4abf8d90983"
 Parent: "cde86baa-c51d-42f3-bc43-088f0e6a5baa"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/Country/Country/Description
-Signature: /J3oNsMMlEs/ghJySjDSjGwfZAjzQPYtwRlBw0jdQpw=
-Modified: 637872959194706796
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\State\State\Description.yml
-ID: "2c587170-6a58-40f3-994d-9df0c3d01845"
-Parent: "ccc16d43-0ce9-4817-b823-43d7854376cc"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/State/State/Description
-Signature: /J3oNsMMlEs/ghJySjDSjGwfZAjzQPYtwRlBw0jdQpw=
-Modified: 637872959194826500
----
-File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\State\State\Name.yml
-ID: "70588ebe-7611-4f54-9688-5735ff9627de"
-Parent: "ccc16d43-0ce9-4817-b823-43d7854376cc"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/People/State/State/Name
+Path: /sitecore/templates/Foundation/People/Country/Country/Name
 Signature: /O6I2ObGeeyC8Kh/MBS8AJjO8CN8VGd7AdxEvsqmQ9o=
-Modified: 637872959194836823
+Modified: 637877635734773290
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Application Step\__Standard Values.yml
-ID: "d164cb9e-0445-4137-8a9e-cad73081927c"
-Parent: "f1c4767e-0344-4619-9d00-62fb519c07b1"
-Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
-Path: /sitecore/templates/Foundation/People/Application Step/__Standard Values
-Signature: D+wMHqGxwDNayMzgEUGaawcr1QiJLHIM5P6utUi6xBw=
-Modified: 637872959194676499
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Year Category.yml
+ID: "7007db97-c724-464b-a735-b301844f7d82"
+Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/People/Year Category
+Signature: LBf1WXwcAOh6CymffHSxzNaRsabxR942AdUQ2u3CmpU=
+Modified: 637877635735373316
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\People Folder\__Standard Values.yml
-ID: "f22cb97e-9a95-4f54-a027-f929370e36bf"
-Parent: "2eba0721-df1e-4d69-a963-2755baa7d726"
-Template: "2eba0721-df1e-4d69-a963-2755baa7d726"
-Path: /sitecore/templates/Foundation/People/People Folder/__Standard Values
-Signature: 9nLehlR6+dRuubdWB983NI/O8Q+WkA2ZjR8d8Cjfltc=
-Modified: 637872959194756489
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile\Awards.yml
+ID: "c5cb665e-d9d7-4130-8694-8cf34380f2ca"
+Parent: "debff3f9-cced-440f-a413-9ab43619938e"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Person/Profile/Awards
+Signature: +/9jRvlYQzxqLD2F7CSaLvrj1bZws4K/fCqEvV+rw6Y=
+Modified: 637877635735163283
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Year\__Standard Values.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Award Years Folder\__Standard Values.yml
+ID: "eb4cb41d-372a-4b67-8e63-240b48985f00"
+Parent: "0dc4f16b-6f23-4a23-b4d2-a350c0b84fd5"
+Template: "0dc4f16b-6f23-4a23-b4d2-a350c0b84fd5"
+Path: /sitecore/templates/Foundation/People/Award Years Folder/__Standard Values
+Signature: 2gDhLfafzhz/qu86krBO3YpO9E+gD5zlDB6SN9Apmh0=
+Modified: 637877635734653316
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\MVP Category\__Standard Values.yml
+ID: "ab225756-84d0-423b-8599-84d56f3b8c44"
+Parent: "cdd8427e-fa86-4549-a647-d665164f2f77"
+Template: "cdd8427e-fa86-4549-a647-d665164f2f77"
+Path: /sitecore/templates/Foundation/People/MVP Category/__Standard Values
+Signature: NRgMFSGF1f3GrWYwajvvMX1AvY66O3Ql5VTx/VVIKug=
+Modified: 637877635734973298
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Year\__Standard Values.yml
 ID: "d15a2d50-4c9e-46f7-8d46-19daab64e74b"
 Parent: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
 Template: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
 Path: /sitecore/templates/Foundation/People/Year/__Standard Values
 Signature: AuxzqoFz8pUpSF2yUiAsBjga1UCB4/izBA2FgA54U2I=
-Modified: 637872959194856486
+Modified: 637877635735473281
 ---
 File: |
-  C:\source\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\MVP Category\Details\Active.yml
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Employment Status\Employment Status\Name.yml
+ID: "7e89334b-65af-46ff-abdd-f15a614aa78b"
+Parent: "14ba36d7-460c-4ec4-8585-7ce76f911a86"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Employment Status/Employment Status/Name
+Signature: sv7Gfzo8kouwwTQA58Uu5AyRAx4F2JXf3pWe0fW3ImU=
+Modified: 637877635734863296
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Data\Okta Id.yml
+ID: "9d7006bb-7bd1-4d17-bf85-c4075918659f"
+Parent: "f629beeb-a57b-4f69-b7e4-df3fbc2bcf3e"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Person/Data/Okta Id
+Signature: J9S+5bR6mbRKeeWsYI2MRU7Lzw5gKifN41Fi4dMDUS4=
+Modified: 637877635735123290
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Application.yml
+ID: "55845c05-4d20-47dd-8b49-3026d393b2d9"
+Parent: "ad9c7837-8660-4360-ba2b-7addf4163685"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/People/Person/Application
+Signature: 8/xo41purVoovLskMQ6IIgYwjgLp7FYGPpniCc+w0yg=
+Modified: 637877635735053316
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Year Category\__Standard Values.yml
+ID: "1af6622e-b0e2-4f28-8892-a17366017851"
+Parent: "7007db97-c724-464b-a735-b301844f7d82"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/templates/Foundation/People/Year Category/__Standard Values
+Signature: 1bErKg2eM2n9M6NwKOTO7/DJVwoC2zr5LR4EThnQZCE=
+Modified: 637877635735433287
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Employment Status\Employment Status\Description.yml
+ID: "f82b02b5-9027-4646-8c33-509bc0dcf565"
+Parent: "14ba36d7-460c-4ec4-8585-7ce76f911a86"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Employment Status/Employment Status/Description
+Signature: S2oQ/tdvpp9Yi06XgPGGJCnAZ+MkChDLfsGrEx7p3D0=
+Modified: 637877635734853279
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile\Email.yml
+ID: "8561a65d-741e-4ead-985e-ea1880e196a9"
+Parent: "debff3f9-cced-440f-a413-9ab43619938e"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Person/Profile/Email
+Signature: j8d1Yw0xZU44vqXCIiR6AGQOFfbpJcE6NMJhw5hQbRo=
+Modified: 637877635735193279
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\People Folder\__Standard Values.yml
+ID: "f22cb97e-9a95-4f54-a027-f929370e36bf"
+Parent: "2eba0721-df1e-4d69-a963-2755baa7d726"
+Template: "2eba0721-df1e-4d69-a963-2755baa7d726"
+Path: /sitecore/templates/Foundation/People/People Folder/__Standard Values
+Signature: 9nLehlR6+dRuubdWB983NI/O8Q+WkA2ZjR8d8Cjfltc=
+Modified: 637877635735013290
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Year Category\Details.yml
+ID: "ab17e240-e1c1-435b-ba90-d2246366f96b"
+Parent: "7007db97-c724-464b-a735-b301844f7d82"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/People/Year Category/Details
+Signature: ZQi2srAdB+CEcKklTFOxv8IIi/Yb76mzmvrQnG7d0EQ=
+Modified: 637877635735393299
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\MVP Category\Details\Active.yml
 ID: "e20fda97-3f0c-49a0-9257-d55d006a2efe"
 Parent: "67cae6b9-7aec-474b-b1ad-7a59355ac9d6"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Foundation/People/MVP Category/Details/Active
 Signature: bjYPJOhm7FIVH+RONynAXttEesBV1ErFs9homjDdJVY=
-Modified: 637872959194746797
+Modified: 637877635734943316
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\State\State\Description.yml
+ID: "2c587170-6a58-40f3-994d-9df0c3d01845"
+Parent: "ccc16d43-0ce9-4817-b823-43d7854376cc"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/State/State/Description
+Signature: /J3oNsMMlEs/ghJySjDSjGwfZAjzQPYtwRlBw0jdQpw=
+Modified: 637877635735323289
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\MVP Category.yml
+ID: "cdd8427e-fa86-4549-a647-d665164f2f77"
+Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/People/MVP Category
+Signature: pRWlN6udOdJww7TcfFt2hYjRx8d3cyonkc1WY7GYcus=
+Modified: 637877635734893297
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Year.yml
+ID: "f27c2d30-c390-47d2-8dc9-f73fe114fa70"
+Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/People/Year
+Signature: 2k6VMOvU1t/sVIuMYKdAq4vPIg/2g2vn8vn2D3QrqiM=
+Modified: 637877635735453289
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Country\__Standard Values.yml
+ID: "f4f56555-ea98-4919-b5d4-7b4de663c5d8"
+Parent: "1fc8657f-f737-47d6-a52b-67e8bff8a390"
+Template: "1fc8657f-f737-47d6-a52b-67e8bff8a390"
+Path: /sitecore/templates/Foundation/People/Country/__Standard Values
+Signature: drJYYDB1at/aJ7P8Ysi9zYHcF76+7nyKmDlocNIpSLw=
+Modified: 637877635734783288
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile.yml
+ID: "debff3f9-cced-440f-a413-9ab43619938e"
+Parent: "ad9c7837-8660-4360-ba2b-7addf4163685"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/People/Person/Profile
+Signature: Zpa41zVoGpD2OsfsZR60lX0GGclRnbYm8C0yR5AfNho=
+Modified: 637877635735133288
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Application Step\Application Step\Title.yml
+ID: "28efa042-b2bc-45a2-bd09-07a79cde8467"
+Parent: "0db827b7-c53f-4eb6-86ac-715446deef90"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Application Step/Application Step/Title
+Signature: 2spnv3i44H1w30bBSvmC26y8LIcZeY4T11MzjlOodRU=
+Modified: 637877635734563285
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile\First Name.yml
+ID: "022de4c6-82cf-437c-9424-2fddf1a94f68"
+Parent: "debff3f9-cced-440f-a413-9ab43619938e"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Person/Profile/First Name
+Signature: g8Owkz25PJPxsfeTyiNY8a0/pD5597rmC07oHFxW2t8=
+Modified: 637877635735213287
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People.yml
+ID: "17003d0b-e7ca-4858-89d3-e70962f16b93"
+Parent: "b26bd035-8d0a-4df3-8f67-2de3c7fdd74a"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Path: /sitecore/templates/Foundation/People
+Signature: iV8dKPZuClPxsF9k7qN8J3HHMbsblwRyuU9rst5ejEM=
+Modified: 637877635734443302
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\People Folder.yml
+ID: "2eba0721-df1e-4d69-a963-2755baa7d726"
+Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/People/People Folder
+Signature: d7nltJdfrVwLEbFlNhswiClAiZ0ofsefIwCliC7PFKU=
+Modified: 637877635734993293
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Application Step\__Standard Values.yml
+ID: "d164cb9e-0445-4137-8a9e-cad73081927c"
+Parent: "f1c4767e-0344-4619-9d00-62fb519c07b1"
+Template: "f1c4767e-0344-4619-9d00-62fb519c07b1"
+Path: /sitecore/templates/Foundation/People/Application Step/__Standard Values
+Signature: D+wMHqGxwDNayMzgEUGaawcr1QiJLHIM5P6utUi6xBw=
+Modified: 637877635734613280
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Employment Status\__Standard Values.yml
+ID: "8ddca29f-7b82-4528-9355-eaa62edd910b"
+Parent: "37421902-c3c5-49e3-bf4a-a7ee73312993"
+Template: "37421902-c3c5-49e3-bf4a-a7ee73312993"
+Path: /sitecore/templates/Foundation/People/Employment Status/__Standard Values
+Signature: onNji4Qtgy1TrHZCsPCtBT+84qP1pdwCjFDgR/ENRPQ=
+Modified: 637877635734883289
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\__Standard Values.yml
+ID: "d84ce276-7d7d-4662-ae7f-b0eb563b79aa"
+Parent: "ad9c7837-8660-4360-ba2b-7addf4163685"
+Template: "ad9c7837-8660-4360-ba2b-7addf4163685"
+Path: /sitecore/templates/Foundation/People/Person/__Standard Values
+Signature: Ow5xcvoKMN3bfZ9ev8RP7M2lYKb5CqAFk7gKwmKbIpU=
+Modified: 637877635735253285
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Country\Country\Description.yml
+ID: "89d4f494-dcbd-408c-ad2b-2b0372d73ca8"
+Parent: "cde86baa-c51d-42f3-bc43-088f0e6a5baa"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Country/Country/Description
+Signature: /J3oNsMMlEs/ghJySjDSjGwfZAjzQPYtwRlBw0jdQpw=
+Modified: 637877635734753296
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Application\Application.yml
+ID: "55701d4e-e6fd-4340-83ac-7dc3265da612"
+Parent: "55845c05-4d20-47dd-8b49-3026d393b2d9"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Person/Application/Application
+Signature: ceEkFcl+9obt1aBy8iMRNynM6V4/iVOcUo9ziJU64ZU=
+Modified: 637877635735083287
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\State\State\Name.yml
+ID: "70588ebe-7611-4f54-9688-5735ff9627de"
+Parent: "ccc16d43-0ce9-4817-b823-43d7854376cc"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/State/State/Name
+Signature: /O6I2ObGeeyC8Kh/MBS8AJjO8CN8VGd7AdxEvsqmQ9o=
+Modified: 637877635735333293
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Year Category\Details\Type.yml
+ID: "7fadee03-359c-4e85-a762-027f4acf95c8"
+Parent: "ab17e240-e1c1-435b-ba90-d2246366f96b"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Year Category/Details/Type
+Signature: wXzOF0Zo91Am6ynxPmqQ9nXw+cnTuakb1fPye9li2gA=
+Modified: 637877635735423320
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Application Step.yml
+ID: "f1c4767e-0344-4619-9d00-62fb519c07b1"
+Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/People/Application Step
+Signature: AzRS1V95/CNGIp0sQs4ovcz6n+32kDLqhlvU6uvMok0=
+Modified: 637877635734473302
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Award.yml
+ID: "d5412132-bbc8-479f-b358-e5167e6fcf1b"
+Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/People/Award
+Signature: 9l5rnevAOr9ltmkRckn8w7tPpFYF989zCObn8I64D6g=
+Modified: 637877635734663330
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Employment Status.yml
+ID: "37421902-c3c5-49e3-bf4a-a7ee73312993"
+Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/People/Employment Status
+Signature: tyfEh5qQkzVcg4j+qNnWUUn9ju7bJAkpqW9JQORK1bA=
+Modified: 637877635734803284
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\State.yml
+ID: "13102d13-a6cb-48f6-a813-d431b917ef8f"
+Parent: "17003d0b-e7ca-4858-89d3-e70962f16b93"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Foundation/People/State
+Signature: lL8lNdzfHddAtbSFyyXuQPd5osPLg1W1CIp+qMtNvZQ=
+Modified: 637877635735273283
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Award\__Standard Values.yml
+ID: "a4d8e3e1-4b18-40bc-b887-a388bef56d9b"
+Parent: "d5412132-bbc8-479f-b358-e5167e6fcf1b"
+Template: "d5412132-bbc8-479f-b358-e5167e6fcf1b"
+Path: /sitecore/templates/Foundation/People/Award/__Standard Values
+Signature: 9RPunIc11hrFuptrSkB025YxVIXUyoHBKr/THIR40zw=
+Modified: 637877635734693306
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\MVP Category\Details.yml
+ID: "67cae6b9-7aec-474b-b1ad-7a59355ac9d6"
+Parent: "cdd8427e-fa86-4549-a647-d665164f2f77"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/People/MVP Category/Details
+Signature: h61ejbmon6GHl9aJCPRlTsDaB+XqCOKX9kY4fSN8MBI=
+Modified: 637877635734913278
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\State\__Standard Values.yml
+ID: "070edcb7-6d55-4a41-ac2f-0f091202e769"
+Parent: "13102d13-a6cb-48f6-a813-d431b917ef8f"
+Template: "13102d13-a6cb-48f6-a813-d431b917ef8f"
+Path: /sitecore/templates/Foundation/People/State/__Standard Values
+Signature: gUDkBR9TvUQqbeHXan7JzjwY9z4vEPoAoU0mN9GnTm0=
+Modified: 637877635735353284
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\MVP Category\Details\Name.yml
+ID: "6e7574bd-3578-4c7d-a438-fb86d7c1c927"
+Parent: "67cae6b9-7aec-474b-b1ad-7a59355ac9d6"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/MVP Category/Details/Name
+Signature: N2nW1PzjPNNkZRTA+CC81jt+JVk9Em+nri/ybh65pec=
+Modified: 637877635734963280
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile\Introduction.yml
+ID: "5abccf54-b9a1-4c33-91a4-473280644299"
+Parent: "debff3f9-cced-440f-a413-9ab43619938e"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Person/Profile/Introduction
+Signature: Mfo5afdG5ueJIr2WPiV3s+w0HHXaQVPQgXDAsOsBhFY=
+Modified: 637877635735223286
+---
+File: |
+  C:\repos\XMCloud\XMCloudIntroduction\XM-Cloud-Introduction\src\Foundation\People\items\templates\People\Person\Profile\Last Name.yml
+ID: "c0b5d514-19c3-430e-9a5a-42763211573d"
+Parent: "debff3f9-cced-440f-a413-9ab43619938e"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Foundation/People/Person/Profile/Last Name
+Signature: oxPJ5sAkG2k9XfxU22paPB2XEGr15WSQMeF6ioacaJk=
+Modified: 637877635735243330
