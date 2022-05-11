@@ -45,8 +45,12 @@ jobs:
           }
 
     - run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/
-    - run: ls -a
-    #- run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
+    
+    # Temp fix to remove duplicate sln file
+    - name: "TEMP: Delete duplicate sln file as not currently supported"
+      run: rm -f src\XmCloudIntroduction.sln
+
+    - run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
 
   # build-sugcon-eu:
   #   name: Build the SUGCON EU head
