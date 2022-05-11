@@ -12,7 +12,7 @@ jobs:
     name: Build the .NET Solution
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Setup MSBuild path
       uses: microsoft/setup-msbuild@v1.1
     - name: Setup NuGet
@@ -25,13 +25,13 @@ jobs:
   deploy-cm:
     name: Deploy the CM asset to XM Cloud
     needs: build-cm
-    runs-on: windows-latest
+    runs-on: ubnutu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Testing Powershell
-      shell: pwsh
-      run: |
-        Write-Host "Hello World!"
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '6.0.x' 
+    - run: dotnet tool restore
 
   # build-sugcon-eu:
   #   name: Build the SUGCON EU head
