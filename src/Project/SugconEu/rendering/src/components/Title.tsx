@@ -8,9 +8,11 @@ type TitleProps = ComponentProps & {
 };
 
 const Title = (props: TitleProps): JSX.Element => (
-  <div className='row title'>
-    <div className ='col-12'>
-      <h1><Text field={props?.fields?.Title} /></h1>
+  <div className="row title">
+    <div className="col-12">
+      <h1>
+        <Text field={props?.fields?.Title} />
+      </h1>
     </div>
   </div>
 );
