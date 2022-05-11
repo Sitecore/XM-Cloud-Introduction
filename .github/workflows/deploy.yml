@@ -44,6 +44,7 @@ jobs:
               $pluginJsonContent | Set-Content -Path $pluginJsonFile.FullName
           }
 
+    - name: Authenticate CLI with XM Cloud
     - run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/
     
     # Temp fix to remove duplicate sln file
@@ -53,7 +54,7 @@ jobs:
           rm -f XmCloudIntroduction.sln
 
     #- run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
-    - run: dotnet sitecore login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/
+    - run: dotnet sitecore login --ref xmcloud --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/
 # dotnet sitecore
 
   # build-sugcon-eu:
