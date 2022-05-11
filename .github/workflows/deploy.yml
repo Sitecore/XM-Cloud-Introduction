@@ -35,7 +35,7 @@ jobs:
     - run: dotnet sitecore --help
 
     # Temp fix to use Beta instance of XM CLoud
-    - name: Install from PSGallery
+    - name: "TEMP: Update configs to use beta instance of XM CLoud"
       shell: pwsh
       run: |
           $pluginJsonFiles = Get-ChildItem -path ".sitecore\package-cache\nuget\Sitecore.DevEx.Extensibility.XMCloud.*" -filter plugin.json -Recurse
@@ -45,7 +45,7 @@ jobs:
           }
 
     - run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/
-    - run: dir
+    - run: ls -a
     #- run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
 
   # build-sugcon-eu:
