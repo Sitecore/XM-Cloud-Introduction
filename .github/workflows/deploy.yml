@@ -50,7 +50,7 @@ jobs:
     - name: "TEMP: Delete duplicate sln file as not currently supported"
       run: |
           cd src
-          rm -f src\XmCloudIntroduction.sln
+          rm -f XmCloudIntroduction.sln
     - run: |
           cd src
           ls -a
