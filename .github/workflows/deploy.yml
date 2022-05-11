@@ -45,7 +45,7 @@ jobs:
           }
 
     - name: Authenticate CLI with XM Cloud
-    - run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/
+      run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/
     
     # Temp fix to remove duplicate sln file
     - name: "TEMP: Delete duplicate sln file as not currently supported"
