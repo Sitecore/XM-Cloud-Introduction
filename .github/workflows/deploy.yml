@@ -8,19 +8,19 @@ on:
 
 jobs:
 
-  build-cm:
-    name: Build the .NET Solution
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup MSBuild path
-      uses: microsoft/setup-msbuild@v1.1
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.6
-    - name: Restore NuGet packages
-      run: nuget restore src\XmCloudIntroduction.sln
-    - name: Build
-      run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
+  # build-cm:
+  #   name: Build the .NET Solution
+  #   runs-on: windows-latest
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - name: Setup MSBuild path
+  #     uses: microsoft/setup-msbuild@v1.1
+  #   - name: Setup NuGet
+  #     uses: NuGet/setup-nuget@v1.0.6
+  #   - name: Restore NuGet packages
+  #     run: nuget restore src\XmCloudIntroduction.sln
+  #   - name: Build
+  #     run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
 
   deploy-cm:
     name: Deploy the CM asset to XM Cloud
@@ -38,7 +38,7 @@ jobs:
     - name: Install from PSGallery
       shell: pwsh
       run: |
-          $pluginJsonFiles = Get-ChildItem -path "$PSScriptRoot\.sitecore\package-cache\nuget\Sitecore.DevEx.Extensibility.XMCloud.*" -filter plugin.json -Recurse
+          $pluginJsonFiles = Get-ChildItem -path ".sitecore\package-cache\nuget\Sitecore.DevEx.Extensibility.XMCloud.*" -filter plugin.json -Recurse
           $pluginJsonContent = Get-Content xmcloud.plugin.beta.json
           foreach ($pluginJsonFile in $pluginJsonFiles) {
               $pluginJsonContent | Set-Content -Path $pluginJsonFile.FullName
