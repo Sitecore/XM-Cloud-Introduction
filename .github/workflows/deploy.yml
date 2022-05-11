@@ -22,6 +22,17 @@ jobs:
     - name: Build
       run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
 
+  deploy-cm:
+    name: Deploy the CM asset to XM Cloud
+    needs: build-cm
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Testing Powershell
+        shell: pwsh
+        run: |
+          Write-Host "Hello World!"
+
   # build-sugcon-eu:
   #   name: Build the SUGCON EU head
   #   runs-on: ubuntu-latest
