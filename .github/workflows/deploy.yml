@@ -32,6 +32,17 @@ jobs:
       with:
         dotnet-version: '6.0.x' 
     - run: dotnet tool restore
+    - run: dotnet sitecore --help | Out-Null
+
+    # Temp fix to use Beta instance of XM CLoud
+    - name: Install from PSGallery
+      shell: pwsh
+      run: |
+          $pluginJsonFiles = Get-ChildItem -path "$PSScriptRoot\.sitecore\package-cache\nuget\Sitecore.DevEx.Extensibility.XMCloud.*" -filter plugin.json -Recurse
+          $pluginJsonContent = Get-Content xmcloud.plugin.beta.json
+          foreach ($pluginJsonFile in $pluginJsonFiles) {
+              $pluginJsonContent | Set-Content -Path $pluginJsonFile.FullName
+          }
 
   # build-sugcon-eu:
   #   name: Build the SUGCON EU head
