@@ -8,19 +8,32 @@ on:
 
 jobs:
 
-  # build-cm:
-  #   name: Build the .NET Solution
-  #   runs-on: windows-latest
+  build-cm:
+    name: Build the .NET Solution
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup MSBuild path
+      uses: microsoft/setup-msbuild@v1.1
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.6
+    - name: Restore NuGet packages
+      run: nuget restore src\XmCloudIntroduction.sln
+    - name: Build
+      run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
+
+  # build-sugcon-eu:
+  #   name: Build the SUGCON EU head
+  #   runs-on: ubuntu-latest
+  #   defaults:
+  #     run:
+  #       working-directory: ./src/Project/SugconEu/rendering
   #   steps:
   #   - uses: actions/checkout@v3
-  #   - name: Setup MSBuild path
-  #     uses: microsoft/setup-msbuild@v1.1
-  #   - name: Setup NuGet
-  #     uses: NuGet/setup-nuget@v1.0.6
-  #   - name: Restore NuGet packages
-  #     run: nuget restore src\XmCloudIntroduction.sln
-  #   - name: Build
-  #     run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
+  #   - uses: actions/setup-node@v3
+  #     with:
+  #       node-version: 16.5
+  #   - run: npm build
 
   deploy-cm:
     name: Deploy the CM asset to XM Cloud
@@ -53,22 +66,13 @@ jobs:
           cd src
           rm -f XmCloudIntroduction.sln
 
-    #- run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
+    - name: Deploy the CM assets to XM Cloud
+      run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload 
+    
     - name: Authenticate default environment with CLI
       run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/ --cm https://xmc-sitecoredevaa46-xmcloudintr4c99-testdeploy3-b.sitecorecloud.io/ --allow-write true
+    
+    # Publishing via CLI isn't currently supported due to a bug - this will be re-enabled when fixed.   
+    # - name: Publish content changes
+    #   run: dotnet sitecore publish
 
-    - name: Publish content changes
-      run: dotnet sitecore publish
-
-  # build-sugcon-eu:
-  #   name: Build the SUGCON EU head
-  #   runs-on: ubuntu-latest
-  #   defaults:
-  #     run:
-  #       working-directory: ./src/Project/SugconEu/rendering
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - uses: actions/setup-node@v3
-  #     with:
-  #       node-version: 16.5
-  #   - run: npm build
