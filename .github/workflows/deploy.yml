@@ -49,8 +49,10 @@ jobs:
     # Temp fix to remove duplicate sln file
     - name: "TEMP: Delete duplicate sln file as not currently supported"
       run: rm -f src\XmCloudIntroduction.sln
+      run: cd src
+      run: ls -a
 
-    - run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
+    # - run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
 
   # build-sugcon-eu:
   #   name: Build the SUGCON EU head
