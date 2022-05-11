@@ -45,7 +45,8 @@ jobs:
           }
 
     - run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/
-    - run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
+    - run: dir
+    #- run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
 
   # build-sugcon-eu:
   #   name: Build the SUGCON EU head
