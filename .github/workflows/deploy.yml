@@ -24,7 +24,7 @@ jobs:
 
   deploy-cm:
     name: Deploy the CM asset to XM Cloud
-    needs: build-cm
+    # needs: build-cm
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
