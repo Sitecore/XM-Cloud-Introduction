@@ -29,9 +29,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Testing Powershell
-        shell: pwsh
-        run: |
-          Write-Host "Hello World!"
+      shell: pwsh
+      run: |
+        Write-Host "Hello World!"
 
   # build-sugcon-eu:
   #   name: Build the SUGCON EU head
