@@ -52,7 +52,9 @@ jobs:
           cd src
           rm -f XmCloudIntroduction.sln
 
-    - run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
+    #- run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
+    - run: dotnet sitecore login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/
+# dotnet sitecore
 
   # build-sugcon-eu:
   #   name: Build the SUGCON EU head
