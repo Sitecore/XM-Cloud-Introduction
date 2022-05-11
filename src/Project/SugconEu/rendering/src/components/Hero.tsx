@@ -1,4 +1,10 @@
-import { Text, Field,ImageField,Image, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  Text,
+  Field,
+  ImageField,
+  Image,
+  withDatasourceCheck,
+} from '@sitecore-jss/sitecore-jss-nextjs';
 import { RichTextField } from '@sitecore-jss/sitecore-jss-react';
 import { ComponentProps } from 'lib/component-props';
 
@@ -14,9 +20,8 @@ const Hero = (props: HeroProps): JSX.Element => (
   <div>
     <p>Hero Component</p>
     <Text field={props?.fields?.Text} />
-    <Text field={props?.fields?.Label}/>
-    <Image field={props?.fields?.BackgroundImage}/>
-
+    <Text field={props?.fields?.Label} />
+    <Image field={props?.fields?.BackgroundImage} />
   </div>
 );
 

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { useI18n } from 'next-localization';
 import { getPublicUrl } from '@sitecore-jss/sitecore-jss-nextjs';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.

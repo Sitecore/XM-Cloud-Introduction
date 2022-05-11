@@ -1,4 +1,4 @@
-import { Text, Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 type FooterProps = ComponentProps & {
@@ -7,7 +7,7 @@ type FooterProps = ComponentProps & {
   };
 };
 
-const Footer = (props: FooterProps): JSX.Element => (
+const Footer = (): JSX.Element => (
   <footer className="text-center text-lg-start bg-secondary">
     <section className="d-flex justify-content-center justify-content-lg-between p-2 mt-5 border-bottom">
       <div className="me-5 d-none d-lg-block text-muted">
