@@ -55,7 +55,7 @@ jobs:
 
     #- run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
     - name: Authenticate default environment with CLI
-      run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/ --cm https://xmc-sitecoredevaa46-xmcloudintr4c99-testdeploy3-b.sitecorecloud.io/ 
+      run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/ --cm https://xmc-sitecoredevaa46-xmcloudintr4c99-testdeploy3-b.sitecorecloud.io/ --allow-write true
 
     - name: Publish content changes
       run: dotnet sitecore publish
