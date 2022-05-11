@@ -3,7 +3,6 @@
   "modules": [
     "src/*/*/*.module.json",
     "src/*/*/*/*.module.json"
-
   ],
   "plugins": [
     "Sitecore.DevEx.Extensibility.Serialization@5.0.0-r00510",
