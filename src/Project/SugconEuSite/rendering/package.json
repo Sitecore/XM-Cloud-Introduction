@@ -1,10 +1,10 @@
 {
-  "name": "sugcon-eu",
+  "name": "SugconEuSite",
   "description": "Application utilizing Sitecore JavaScript Services and Next.js",
   "version": "20.0.1",
   "private": true,
   "config": {
-    "appName": "sugcon-eu",
+    "appName": "SugconEuSite",
     "rootPlaceholders": [
       "jss-main"
     ],
