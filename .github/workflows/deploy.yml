@@ -51,11 +51,8 @@ jobs:
       run: |
           cd src
           rm -f XmCloudIntroduction.sln
-    - run: |
-          cd src
-          ls -a
 
-    # - run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
+    - run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload
 
   # build-sugcon-eu:
   #   name: Build the SUGCON EU head
