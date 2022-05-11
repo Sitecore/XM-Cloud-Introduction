@@ -9,7 +9,7 @@ type AgendaProps = ComponentProps & {
   };
 };
 
-const Agenda = (props: AgendaProps): JSX.Element => {
+const Agenda = (): JSX.Element => {
   const htmlContent = '';
   const [token, setToken] = useState('');
   useEffect(() => {

@@ -1,4 +1,10 @@
-import { Text, Field,ImageField,Image, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  Text,
+  Field,
+  ImageField,
+  Image,
+  withDatasourceCheck,
+} from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 type SponsorTeaserProps = ComponentProps & {
@@ -7,20 +13,19 @@ type SponsorTeaserProps = ComponentProps & {
     SponsorName: Field<string>;
     SponsorUrl: Field<string>;
     SponsorLogo: ImageField;
-
   };
 };
 
 const SponsorTeaser = (props: SponsorTeaserProps): JSX.Element => (
-  <div className='row'>
+  <div className="row">
     <p>SponsorTeaser Component</p>
-    <div className='col-12 col-md6'>
+    <div className="col-12 col-md6">
       <Text field={props?.fields?.Label} />
       <Text field={props?.fields?.SponsorName} />
       <Text field={props?.fields?.SponsorUrl} />
       <Image field={props?.fields?.SponsorLogo} />
     </div>
-    <div className='col-12 col-md6'>
+    <div className="col-12 col-md6">
       <Image field={props?.fields?.SponsorLogo} />
     </div>
   </div>
