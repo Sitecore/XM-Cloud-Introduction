@@ -3,6 +3,10 @@ ID: "d751a564-f3da-4fbc-8477-b2114fb4631d"
 Parent: "fb5d7cb9-7c40-4554-95c2-784e3e532bb3"
 Template: "0a2847e6-9885-450b-b61e-f9e6528480ef"
 Path: /sitecore/content/SugconEuSite/Dictionary
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/book2.png
 Languages:
 - Language: en
   Versions:
@@ -21,11 +25,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c22b1faf-18c3-42e7-9ef7-4b15c44b2c87"
+      Value: "cc74d37b-7cb4-431d-889e-c1bffec602d1"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220510T140633Z
+      Value: 20220512T133200Z
