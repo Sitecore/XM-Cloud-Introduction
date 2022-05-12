@@ -78,7 +78,7 @@ jobs:
 
   deploy-mvp:
     name: Deploy the MVP rendering host to Azure WebApp
-    needs: deploy-cm
+    #needs: deploy-cm
     runs-on: ubuntu-latest
     steps:
       # Checkout the repo
