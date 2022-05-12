@@ -79,7 +79,7 @@ jobs:
   deploy-mvp:
     name: Deploy the MVP rendering host to Azure WebApp
     #needs: deploy-cm
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       # Checkout the repo
       - uses: actions/checkout@v3
