@@ -96,7 +96,7 @@ jobs:
           cd src/Project/MvpSite/rendering
           dotnet restore
           dotnet build --configuration Release
-          dotnet publish -c Release -o './publish/mvp-staging' 
+          dotnet publish -c Release -o '../../../../publish/mvp-staging' 
           
       # Deploy to Azure Web apps
       - name: 'Run Azure webapp deploy action using publish profile credentials'
