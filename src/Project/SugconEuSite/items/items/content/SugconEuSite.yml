@@ -1,0 +1,31 @@
+﻿---
+ID: "fb5d7cb9-7c40-4554-95c2-784e3e532bb3"
+Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
+Template: "061cba15-5474-4b91-8a06-17903b102b82"
+Path: /sitecore/content/SugconEuSite
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220510T140331Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3eacc2fe-f3a7-4301-81b4-039069290fb2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220510T140331Z
