@@ -16,7 +16,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
   return (
     <>
       <Head>
-        <title>YES - {route?.fields?.pageTitle?.value || 'Page'}</title>
+        <title>{route?.fields?.pageTitle?.value || 'Page'}</title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
       </Head>
 
