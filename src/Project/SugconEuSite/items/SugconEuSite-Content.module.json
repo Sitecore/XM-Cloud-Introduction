@@ -1,0 +1,16 @@
+{
+    "namespace": "SugconEuSite-Content",
+    "references": [ "SugconEuSite" ],
+    "items": {
+        "includes": [
+            {
+                "name": "content",
+                "path": "/sitecore/content/SugconEuSite"
+            },
+            {
+                "name": "media",
+                "path": "/sitecore/media library/Project/SugconEuSite"
+            }
+        ]
+    }
+}

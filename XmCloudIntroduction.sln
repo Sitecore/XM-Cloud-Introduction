@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution 
 		sitecore.json = sitecore.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Sugconeu.Platform", "src\Project\SugconEu\platform\Project.Sugconeu.Platform.csproj", "{5FF0FB81-8059-49E2-AF0A-C5CB8798067A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Sugconeu.Platform", "src\Project\SugconEuSite\platform\Project.Sugconeu.Platform.csproj", "{5FF0FB81-8059-49E2-AF0A-C5CB8798067A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
