@@ -93,16 +93,15 @@ jobs:
       # Run dotnet build and publish
       - name: dotnet build and publish
         run: |
-          ls -a
-          cd src/project/MvpSite/rendering
-      #     dotnet restore
-      #     dotnet build --configuration Release
-      #     dotnet publish -c Release -o './publish/mvp-staging' 
+          cd src/Project/MvpSite/rendering
+          dotnet restore
+          dotnet build --configuration Release
+          dotnet publish -c Release -o './publish/mvp-staging' 
           
-      # # Deploy to Azure Web apps
-      # - name: 'Run Azure webapp deploy action using publish profile credentials'
-      #   uses: azure/webapps-deploy@v2
-      #   with: 
-      #     app-name: Mvp-Staging
-      #     publish-profile: ${{ secrets.STAGING_WEBAPP_PUBLISH_PROFILE }}
-      #     package: './publish/mvp-staging'
+      # Deploy to Azure Web apps
+      - name: 'Run Azure webapp deploy action using publish profile credentials'
+        uses: azure/webapps-deploy@v2
+        with: 
+          app-name: Mvp-Staging
+          publish-profile: ${{ secrets.STAGING_WEBAPP_PUBLISH_PROFILE }}
+          package: './publish/mvp-staging'
