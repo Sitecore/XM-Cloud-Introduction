@@ -6,10 +6,10 @@
   "config": {
     "appName": "sugcon-eu-sxa",
     "rootPlaceholders": [
-      "jss-main", 
+      "jss-main",
       "headless-header",
       "headless-main",
-      "headless-footer"S
+      "headless-footer"
     ],
     "sitecoreConfigPath": "/App_Config/Include/zzz",
     "graphQLEndpointPath": "/sitecore/api/graph/edge",
