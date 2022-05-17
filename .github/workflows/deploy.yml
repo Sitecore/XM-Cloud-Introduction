@@ -58,7 +58,7 @@ jobs:
           }
 
     - name: Authenticate CLI with XM Cloud
-      run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/
+      run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority ${{ secrets.STAGING_AUTHORITY }}
     
     # Temp fix to remove duplicate sln file
     - name: "TEMP: Delete duplicate sln file as not currently supported"
@@ -70,11 +70,11 @@ jobs:
       run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload 
     
     - name: Authenticate default environment with CLI
-      run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority https://auth-beta.sitecorecloud.io/ --cm https://xmc-sitecoredevaa46-xmcloudintr4c99-testdeploy3-b.sitecorecloud.io/ --allow-write true
+      run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority ${{ secrets.STAGING_AUTHORITY }} --cm ${{ secrets.STAGING_CM_URL }} --allow-write true
     
     # Publishing via CLI isn't currently supported due to a bug - this will be re-enabled when fixed.   
-    # - name: Publish content changes
-    #   run: dotnet sitecore publish
+    - name: Publish content changes
+      run: dotnet sitecore publish
 
   deploy-mvp:
     name: Deploy the MVP rendering host to Azure WebApp
