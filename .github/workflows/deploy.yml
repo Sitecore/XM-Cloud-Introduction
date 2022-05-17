@@ -27,8 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FETCH_WITH: GraphQL
-      GRAPH_QL_ENDPOINT: ${{ JS_BUILD_ENDPOINT }}
-      SITECORE_API_KEY: ${{ JS_BUILD_SECRET }}
+      GRAPH_QL_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
+      SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
     defaults:
       run:
         working-directory: ./src/Project/SugconEuSite/rendering
