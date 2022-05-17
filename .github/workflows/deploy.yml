@@ -22,22 +22,26 @@ jobs:
     - name: Build
       run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
 
-  # build-sugcon-eu:
-  #   name: Build the SUGCON EU head
-  #   runs-on: ubuntu-latest
-  #   defaults:
-  #     run:
-  #       working-directory: ./src/Project/SugconEu/rendering
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - uses: actions/setup-node@v3
-  #     with:
-  #       node-version: 16.5
-  #   - run: npm build
+  build-sugcon-eu:
+    name: Build the SUGCON EU head
+    runs-on: ubuntu-latest
+    env:
+      FETCH_WITH: GraphQL
+      GRAPH_QL_ENDPOINT: ${{ JS_BUILD_ENDPOINT }}
+      SITECORE_API_KEY: ${{ JS_BUILD_SECRET }}
+    defaults:
+      run:
+        working-directory: ./src/Project/SugconEuSite/rendering
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16.5
+    - run: npm build
 
   deploy-cm:
     name: Deploy the CM asset to XM Cloud
-    needs: build-dotnet
+    needs: [build-dotnet, build-sugcon-eu]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
