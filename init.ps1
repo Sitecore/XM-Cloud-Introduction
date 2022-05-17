@@ -89,6 +89,7 @@ Write-SitecoreDockerWelcome
 $CM_Host = $Host_Suffix
 $MVP_Host = "mvp.$Host_Suffix"
 $SUGCON_EU_HOST = "sugconeu.$Host_Suffix"
+$SUGCON_EU_SXA_HOST = "sugconeusxa.$Host_Suffix"
 
 ##################################
 # Configure TLS/HTTPS certificates
@@ -129,6 +130,7 @@ Write-Host "Adding Windows hosts file entries..." -ForegroundColor Green
 Add-HostsEntry $CM_Host
 Add-HostsEntry $MVP_Host
 Add-HostsEntry $SUGCON_EU_HOST
+Add-HostsEntry $SUGCON_EU_SXA_HOST
 
 ###############################
 # Populate the environment file

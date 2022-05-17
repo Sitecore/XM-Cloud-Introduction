@@ -11,6 +11,7 @@ $envContent = Get-Content .env -Encoding UTF8
 $xmCloudHost = $envContent | Where-Object { $_ -imatch "^CM_HOST=.+" }
 $mvpHost = $envContent | Where-Object { $_ -imatch "^MVP_RENDERING_HOST=.+" }
 $sugconeuHost = $envContent | Where-Object { $_ -imatch "^SUGCON_EU_HOST=.+" }
+$sugconeuSxaHost = $envContent | Where-Object { $_ -imatch "^SUGCON_EU_SXA_HOST=.+" }
 $xmCloudDeployConfig = $envContent | Where-Object { $_ -imatch "^XMCLOUDDEPLOY_CONFIG=.+" }
 $sitecoreDockerRegistry = $envContent | Where-Object { $_ -imatch "^SITECORE_DOCKER_REGISTRY=.+" }
 $sitecoreVersion = $envContent | Where-Object { $_ -imatch "^SITECORE_VERSION=.+" }
@@ -18,6 +19,7 @@ $sitecoreVersion = $envContent | Where-Object { $_ -imatch "^SITECORE_VERSION=.+
 $xmCloudHost = $xmCloudHost.Split("=")[1]
 $mvpHost = $mvpHost.Split("=")[1]
 $sugconeuHost = $sugconeuHost.Split("=")[1]
+$sugconeuSxaHost = $sugconeuSxaHost.Split("=")[1]
 $xmCloudDeployConfig = $xmCloudDeployConfig.Split("=")[1]
 $sitecoreDockerRegistry = $sitecoreDockerRegistry.Split("=")[1]
 $sitecoreVersion = $sitecoreVersion.Split("=")[1]
@@ -135,6 +137,6 @@ else {
     Write-Host "Opening site..." -ForegroundColor Green
     Start-Process https://$xmCloudHost/sitecore/
     Start-Process https://$mvpHost
-    Start-Process https://$sugconeuHost
+    Start-Process https://$sugconeuSxaHost
 }
 
