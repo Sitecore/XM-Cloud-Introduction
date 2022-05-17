@@ -1,12 +1,8 @@
 ﻿---
-ID: "fb5d7cb9-7c40-4554-95c2-784e3e532bb3"
-Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
-Template: "061cba15-5474-4b91-8a06-17903b102b82"
-Path: /sitecore/content/SugconEuSite
-SharedFields:
-- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
-  Hint: __Icon
-  Value: Flags/32x32/flag_eu.png
+ID: "4f78fccd-6963-458a-9eb4-00ee4ab47c1c"
+Parent: "1dca8c08-5a92-41cb-89f7-e438336fa28e"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/SugconEuSite/Data Sources/ContentBlock/Data
 Languages:
 - Language: en
   Versions:
@@ -14,22 +10,22 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220510T140331Z
+      Value: 20220420T144850Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\JssImport
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\JssImport
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "baa17c32-1807-4185-9f8d-7f474043ef26"
+      Value: "a501f72f-8b99-433f-bae6-5022882de5f9"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\JssImport
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220512T133505Z
+      Value: 20220420T144850Z

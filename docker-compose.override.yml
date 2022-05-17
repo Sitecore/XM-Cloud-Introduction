@@ -125,6 +125,11 @@ services:
       - ${HOST_LICENSE_FOLDER}:c:\license
     environment:
       SITECORE_LICENSE_LOCATION: c:\license\license.xml
+      JSS_EdgeWebsite_DEPLOYMENT_SECRET: ${JSS_EdgeWebsite_DEPLOYMENT_SECRET}
+      SITECORE_JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
+      ## SugconEu Rendering Host
+      SUGCONEU_RENDERING_HOST_ENDPOINT_URI: "${RENDERING_HOST_INTERNAL_URI}/api/editing/render"
+      SUGCONEU_RENDERING_HOST_PUBLIC_URI: "https://${SUGCON_EU_HOST}"
       ## Development Environment Optimizations
       SITECORE_DEVELOPMENT_PATCHES: DevEnvOn,CustomErrorsOff,DebugOn,DiagnosticsOff,InitMessagesOff
       Sitecore_AppSettings_exmEnabled:define: "no" # remove to turn on EXM

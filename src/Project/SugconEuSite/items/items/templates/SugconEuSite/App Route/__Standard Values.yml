@@ -13,35 +13,11 @@ SharedFields:
     <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{37B153E5-BF43-5107-8D25-33490357BA9A}">
+        l="{AA09D219-C19B-4FAF-BF18-EE6544DC5C01}">
         <p
-          uid="{095B7B6D-81AD-5C45-9A9C-CF550DEA1F4A}"
-          key="jss-main"
-          md="{3FBC0D8D-E951-54DB-8A9B-915F8F1A76CF}" />
-        <p
-          uid="{81B79D79-56FD-519B-B3C2-15780887EA11}"
-          key="jss-tabs"
-          md="{BD9BEE6B-0E87-592E-A10C-192F300C833B}" />
-        <p
-          uid="{F06F4239-A2E9-5C4E-9052-33F5E5F4C8D2}"
-          key="jss-graphql-layout"
-          md="{7AF2AFBD-1044-52CE-A328-375088CFDAB1}" />
-        <p
-          uid="{92A7ADC3-7ADF-532F-B6D0-8BB606555D9A}"
-          key="jss-styleguide-layout"
-          md="{03D71DAD-CBC5-54B3-976C-27370A7CEB51}" />
-        <p
-          uid="{2C4B1826-7229-5638-8241-9299AAE53886}"
-          key="jss-styleguide-section"
-          md="{6C3B046B-BF6C-5796-889C-0AE763F54D49}" />
-        <p
-          uid="{A29C48C3-2D1E-5341-860E-E2453AD4B14B}"
-          key="jss-header"
-          md="{2BC59333-9833-5C9A-B7B6-D55976B98593}" />
-        <p
-          uid="{D415ED7D-3C8A-555C-8B54-43B9F76B36DD}"
-          key="jss-reuse-example"
-          md="{85C86769-2F9D-5AA5-BAB9-808341DEEAB5}" />
+          uid="{BBA6CC61-9E8A-4A7F-830F-4E96A3DD87F8}"
+          key="Main"
+          md="{DA8ED4DE-A84C-4243-AE5F-F6F36858F5F7}" />
       </d>
     </r>
 Languages:
@@ -62,11 +38,11 @@ Languages:
         sitecore\JssImport
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0b632a3f-d5b1-44d2-af94-d4db819b8a6b"
+      Value: "bb1a2292-25af-4d69-b76d-e4b388f7bd8d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220510T140516Z
+      Value: 20220512T141144Z
