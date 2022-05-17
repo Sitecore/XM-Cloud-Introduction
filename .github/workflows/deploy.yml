@@ -51,7 +51,6 @@ jobs:
         dotnet-version: '3.1.x' 
     - run: dotnet tool restore
     - run: dotnet sitecore --help
-
     # Temp fix to use Beta instance of XM CLoud
     - name: "TEMP: Update configs to use beta instance of XM CLoud"
       shell: pwsh
@@ -61,23 +60,17 @@ jobs:
           foreach ($pluginJsonFile in $pluginJsonFiles) {
               $pluginJsonContent | Set-Content -Path $pluginJsonFile.FullName
           }
-
     - name: Authenticate CLI with XM Cloud
       run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority ${{ secrets.STAGING_AUTHORITY }}
-    
     # Temp fix to remove duplicate sln file
     - name: "TEMP: Delete duplicate sln file as not currently supported"
       run: |
           cd src
           rm -f XmCloudIntroduction.sln
-
     - name: Deploy the CM assets to XM Cloud
       run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload 
-    
     - name: Authenticate default environment with CLI
       run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority ${{ secrets.STAGING_AUTHORITY }} --cm ${{ secrets.STAGING_CM_URL }} --allow-write true
-    
-    # Publishing via CLI isn't currently supported due to a bug - this will be re-enabled when fixed.   
     - name: Publish content changes
       run: dotnet sitecore publish --pt Edge
 
@@ -86,27 +79,35 @@ jobs:
     needs: deploy-cm
     runs-on: windows-latest
     steps:
-      # Checkout the repo
       - uses: actions/checkout@v3
-      
-      # Setup .NET Core SDK
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 6.0.300
-      
-      # Run dotnet build and publish
       - name: dotnet build and publish
         run: |
           cd src/Project/MvpSite/rendering
           dotnet restore
           dotnet build --configuration Release
           dotnet publish -c Release -o '../../../../publish/mvp-staging' 
-          
-      # Deploy to Azure Web apps
       - name: 'Run Azure webapp deploy action using publish profile credentials'
         uses: azure/webapps-deploy@v2
         with: 
           app-name: Mvp-Staging
           publish-profile: ${{ secrets.STAGING_WEBAPP_PUBLISH_PROFILE }}
           package: './publish/mvp-staging'
+
+  deploy-sugcon-eu:
+    needs: deploy-cm
+    runs-on: ubuntu-latest
+    permissions: 
+      deployments: write
+    steps:
+      - uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-args: ${{ fromJSON('["--prod", ""]')[github.ref != 'refs/heads/main'] }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}} 
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} 
+          scope: ${{ secrets.VERCEL_ORG_ID}}
+          working-directory: ./
