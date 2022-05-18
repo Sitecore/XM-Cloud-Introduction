@@ -102,7 +102,7 @@ jobs:
     # needs: deploy-cm
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - run: |
           cd src/Project/SugconEuSite/rendering
           ls -a
