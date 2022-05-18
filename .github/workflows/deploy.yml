@@ -99,7 +99,7 @@ jobs:
 
   deploy-sugcon-eu:
     name: Deploy the SUGCON EU rendering host to Vercel
-    needs: deploy-cm
+    # needs: deploy-cm
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
