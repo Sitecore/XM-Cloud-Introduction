@@ -12,6 +12,7 @@ class GraphqlSitemapServicePlugin implements SitemapFetcherPlugin {
       endpoint: config.graphQLEndpoint,
       apiKey: config.sitecoreApiKey,
       siteName: config.jssAppName,
+      rootItemId: '881B1232-2FB8-47DE-A7DC-44C22EB17592',
     });
   }
 
