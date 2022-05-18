@@ -7,7 +7,7 @@
   "xmCloudDeployEndpoint": "https://xmclouddeploy-api-beta.sitecorecloud.io/",
   "xmCloudEndpointName": "XmCloud",
   "audience": "https://api-beta.sitecorecloud.io",
-  "audienceClientCredentials": "https://xmclouddeploy-api-beta.sitecorecloud.io",
+  "audienceClientCredentials": "https://api-beta.sitecorecloud.io",
   "deployPollingStatusTimeoutInSeconds": "2",
   "httpAttemptsNumber": "3"
 }

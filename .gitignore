@@ -58,3 +58,5 @@ packages/
 /docker/deploy/mvp-rendering/*
 !/docker/deploy/mvp-rendering/.gitkeep
 /docker/traefik/certs/*.pem
+
+.vercel
