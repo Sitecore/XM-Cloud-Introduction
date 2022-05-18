@@ -8,101 +8,99 @@ on:
 
 jobs:
 
-  build-dotnet:
-    name: Build the .NET Solution
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup MSBuild path
-      uses: microsoft/setup-msbuild@v1.1
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.6
-    - name: Restore NuGet packages
-      run: nuget restore src\XmCloudIntroduction.sln
-    - name: Build
-      run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
+  # build-dotnet:
+  #   name: Build the .NET Solution
+  #   runs-on: windows-latest
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - name: Setup MSBuild path
+  #     uses: microsoft/setup-msbuild@v1.1
+  #   - name: Setup NuGet
+  #     uses: NuGet/setup-nuget@v1.0.6
+  #   - name: Restore NuGet packages
+  #     run: nuget restore src\XmCloudIntroduction.sln
+  #   - name: Build
+  #     run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
 
-  build-sugcon-eu:
-    name: Build the SUGCON EU head
-    runs-on: ubuntu-latest
-    env:
-      FETCH_WITH: GraphQL
-      GRAPH_QL_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
-      SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
-    defaults:
-      run:
-        working-directory: ./src/Project/SugconEuSite/rendering
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 16.5
-    - run: npm install
-    - run: npm run build
+  # build-sugcon-eu:
+  #   name: Build the SUGCON EU head
+  #   runs-on: ubuntu-latest
+  #   env:
+  #     FETCH_WITH: GraphQL
+  #     GRAPH_QL_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
+  #     SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
+  #   defaults:
+  #     run:
+  #       working-directory: ./src/Project/SugconEuSite/rendering
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - uses: actions/setup-node@v3
+  #     with:
+  #       node-version: 16.5
+  #   - run: npm install
+  #   - run: npm run build
 
-  deploy-cm:
-    name: Deploy the CM asset to XM Cloud
-    needs: [build-dotnet, build-sugcon-eu]
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: '3.1.x' 
-    - run: dotnet tool restore
-    - run: dotnet sitecore --help
-    # Temp fix to use Beta instance of XM CLoud
-    - name: "TEMP: Update configs to use beta instance of XM CLoud"
-      shell: pwsh
-      run: |
-          $pluginJsonFiles = Get-ChildItem -path ".sitecore\package-cache\nuget\Sitecore.DevEx.Extensibility.XMCloud.*" -filter plugin.json -Recurse
-          $pluginJsonContent = Get-Content xmcloud.plugin.beta.json
-          foreach ($pluginJsonFile in $pluginJsonFiles) {
-              $pluginJsonContent | Set-Content -Path $pluginJsonFile.FullName
-          }
-    - name: Authenticate CLI with XM Cloud
-      run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority ${{ secrets.STAGING_AUTHORITY }}
-    # Temp fix to remove duplicate sln file
-    - name: "TEMP: Delete duplicate sln file as not currently supported"
-      run: |
-          cd src
-          rm -f XmCloudIntroduction.sln
-    - name: Deploy the CM assets to XM Cloud
-      run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload 
-    - name: Authenticate default environment with CLI
-      run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority ${{ secrets.STAGING_AUTHORITY }} --cm ${{ secrets.STAGING_CM_URL }} --allow-write true
-    - name: Publish content changes
-      run: dotnet sitecore publish --pt Edge
+  # deploy-cm:
+  #   name: Deploy the CM asset to XM Cloud
+  #   needs: [build-dotnet, build-sugcon-eu]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - uses: actions/setup-dotnet@v2
+  #     with:
+  #       dotnet-version: '3.1.x' 
+  #   - run: dotnet tool restore
+  #   - run: dotnet sitecore --help
+  #   # Temp fix to use Beta instance of XM CLoud
+  #   - name: "TEMP: Update configs to use beta instance of XM CLoud"
+  #     shell: pwsh
+  #     run: |
+  #         $pluginJsonFiles = Get-ChildItem -path ".sitecore\package-cache\nuget\Sitecore.DevEx.Extensibility.XMCloud.*" -filter plugin.json -Recurse
+  #         $pluginJsonContent = Get-Content xmcloud.plugin.beta.json
+  #         foreach ($pluginJsonFile in $pluginJsonFiles) {
+  #             $pluginJsonContent | Set-Content -Path $pluginJsonFile.FullName
+  #         }
+  #   - name: Authenticate CLI with XM Cloud
+  #     run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority ${{ secrets.STAGING_AUTHORITY }}
+  #   # Temp fix to remove duplicate sln file
+  #   - name: "TEMP: Delete duplicate sln file as not currently supported"
+  #     run: |
+  #         cd src
+  #         rm -f XmCloudIntroduction.sln
+  #   - name: Deploy the CM assets to XM Cloud
+  #     run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload 
+  #   - name: Authenticate default environment with CLI
+  #     run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority ${{ secrets.STAGING_AUTHORITY }} --cm ${{ secrets.STAGING_CM_URL }} --allow-write true
+  #   - name: Publish content changes
+  #     run: dotnet sitecore publish --pt Edge
 
-  deploy-mvp:
-    name: Deploy the MVP rendering host to Azure WebApp
-    needs: deploy-cm
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 6.0.300
-      - name: dotnet build and publish
-        run: |
-          cd src/Project/MvpSite/rendering
-          dotnet restore
-          dotnet build --configuration Release
-          dotnet publish -c Release -o '../../../../publish/mvp-staging' 
-      - name: 'Run Azure webapp deploy action using publish profile credentials'
-        uses: azure/webapps-deploy@v2
-        with: 
-          app-name: Mvp-Staging
-          publish-profile: ${{ secrets.STAGING_WEBAPP_PUBLISH_PROFILE }}
-          package: './publish/mvp-staging'
+  # deploy-mvp:
+  #   name: Deploy the MVP rendering host to Azure WebApp
+  #   needs: deploy-cm
+  #   runs-on: windows-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Setup .NET Core
+  #       uses: actions/setup-dotnet@v1
+  #       with:
+  #         dotnet-version: 6.0.300
+  #     - name: dotnet build and publish
+  #       run: |
+  #         cd src/Project/MvpSite/rendering
+  #         dotnet restore
+  #         dotnet build --configuration Release
+  #         dotnet publish -c Release -o '../../../../publish/mvp-staging' 
+  #     - name: 'Run Azure webapp deploy action using publish profile credentials'
+  #       uses: azure/webapps-deploy@v2
+  #       with: 
+  #         app-name: Mvp-Staging
+  #         publish-profile: ${{ secrets.STAGING_WEBAPP_PUBLISH_PROFILE }}
+  #         package: './publish/mvp-staging'
 
   deploy-sugcon-eu:
     name: Deploy the SUGCON EU rendering host to Vercel
     needs: deploy-cm
     runs-on: ubuntu-latest
-    permissions: 
-      deployments: write
     steps:
       - uses: actions/checkout@v3
       - uses: amondnet/vercel-action@v20
