@@ -19,7 +19,7 @@ SharedFields:
   Value: Settings Route
 - ID: "30e0a829-637e-478c-a136-66adb568398d"
   Hint: GraphQLEndpoint
-  Value: /api/SugconEuSxa
+  Value: /sitecore/api/graph/edge
 - ID: "32ce6bbe-4217-46e5-9335-42793884cbe3"
   Hint: AppTemplate
   Value: "{AC9DA469-725C-469D-929A-F5075AF7B815}"
@@ -80,11 +80,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "03190c1a-f4fd-4121-82d1-ec4ca8d15618"
+      Value: "3393648c-4d84-4344-a8a0-e1be56c37b4c"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220519T165103Z
+      Value: 20220519T200041Z

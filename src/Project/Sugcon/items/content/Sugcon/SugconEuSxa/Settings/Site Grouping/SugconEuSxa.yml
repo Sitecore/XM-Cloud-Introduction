@@ -13,7 +13,7 @@ SharedFields:
   Value: sugconeu.xmcloudcm.localhost
 - ID: "cb4e9e2e-2b66-43dc-ad3f-9caf363d28d3"
   Hint: SiteName
-  Value: SugconEuSxa
+  Value: "sugcon-eu"
 - ID: "da06d09e-02b6-464a-80fc-9d8d7fc875e3"
   Hint: Environment
   Value: *
@@ -38,11 +38,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "94ace462-7c8f-4d6f-b92a-6c2314615db3"
+      Value: "6312d2dc-9b89-4599-9542-77c6d3828d7f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220519T093119Z
+      Value: 20220519T200046Z
