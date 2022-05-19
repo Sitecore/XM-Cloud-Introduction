@@ -28,17 +28,17 @@ Languages:
         sitecore\Admin
     - ID: "61ff3997-3033-40eb-bf77-b497d1b9430d"
       Hint: Description
-      Value: Listen to our podcasts in which Tamas Varga talks to a selection of our existing MVPs
+      Value: Listen to our podcasts in which Nicole Montero and Tamas Varga talks to a selection of our MVPs.
     - ID: "69913ae6-614c-4cb6-bb3b-353700e53ccf"
       Hint: RssUrl
       Value: "https://coresampler.fm/tags/gettoknowmvp/rss"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "028281f4-d9e0-4f5f-b909-9c8e17fdd2c6"
+      Value: "8ba0a9e7-9a19-4559-a3ff-50af5c31ac1f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\tamas
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200730T125708Z
+      Value: 20220207T083824Z

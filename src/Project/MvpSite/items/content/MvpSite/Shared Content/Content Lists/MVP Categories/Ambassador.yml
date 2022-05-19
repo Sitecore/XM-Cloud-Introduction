@@ -17,10 +17,10 @@ Languages:
     - ID: "8948fc61-e65e-4215-8365-ed0951155ec5"
       Hint: ItemLink
       Value: |
-        <link text="Learn more" linktype="external" url="https://www.sitecore.com" anchor="" target="" />
+        <link text="Learn more" anchor="" linktype="internal" class="" title="About Sitecore MVP" target="" querystring="" id="{0D97B45D-C589-4495-A495-9AAFF4FBD2C3}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "bddf1081-06d6-4d60-8502-8053e4ec2cde"
+      Value: "b7dd580e-c434-45a6-97f2-00f2f94b30d8"
     - ID: "aeb48911-54fc-479c-966d-1808cbba333c"
       Hint: ItemText
       Value: An individual with solid knowledge of the latest Sitecore offering who provide value for Sitecore, by influencing partners, industry, customers and decision makers and who provides product feedback, supplies references and case studies.
@@ -30,4 +30,4 @@ Languages:
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200630T195108Z
+      Value: 20211109T122739Z
