@@ -1,0 +1,40 @@
+{
+    "namespace": "Project.Sugcon",
+    "items": {
+      "includes": [
+        {
+          "name": "layouts",
+          "path": "/sitecore/layout/Layouts/Project/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "components",
+          "path": "/sitecore/layout/Renderings/Project/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "placeholders",
+          "path": "/sitecore/layout/Placeholder Settings/Project/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "templates",
+          "path": "/sitecore/templates/Project/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "content",
+          "path": "/sitecore/content/Sugcon",
+          "allowedPushOperations": "CreateOnly",
+          "rules": [
+            {
+              "path": "/Sugcon Repository",
+              "scope": "ignored"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
+  
