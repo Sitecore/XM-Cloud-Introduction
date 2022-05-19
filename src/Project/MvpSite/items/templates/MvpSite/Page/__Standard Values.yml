@@ -21,19 +21,26 @@ SharedFields:
           id="{A4F28B31-5D18-4158-92AB-F4D2ECA6D2BE}"
           par=""
           ph="header"
-          uid="{19CCAD6A-4C17-48CC-B78A-5CE8415E279F}" />
+          uid="{19CCAD6A-4C17-48CC-B78A-5CE8415E279F}"
+          ccb="Clear on publish" />
         <r
           id="{00147A0F-476B-4C99-8A10-E6B4FCFCECE0}"
           ph="header-signin"
           uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}" />
         <r
+          ds="{94DE9AC3-A9F7-40AB-AE90-ACDA364B9C40}"
           id="{C9593FF9-14AC-4C8E-B217-D85C05ADEAD7}"
+          par=""
           ph="header"
-          uid="{D842E8EB-450E-4348-A54A-E60CF16E9E52}" />
+          uid="{D842E8EB-450E-4348-A54A-E60CF16E9E52}"
+          ccb="Clear on publish" />
         <r
+          ds="{A1943E00-819F-41F7-A8C2-86F65E7E8306}"
           id="{437CCC09-AB5D-47B3-96D7-2B05BDFF5324}"
+          par=""
           ph="footer"
-          uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}" />
+          uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}"
+          ccb="Clear on publish" />
       </d>
     </r>
 Languages:
@@ -54,17 +61,17 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5a0353ad-0848-42a4-95c8-0d5d0246fca1"
+      Value: "a0cf8e06-ae7c-4e87-ab71-bb06f59e1804"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
-      Hint: Menu Title
+      Hint: MenuTitle
       Value: $name
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220303T112827Z
+      Value: 20220519T041344Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
-      Hint: Include in Menu
+      Hint: IncludeInMenu
       Value: 1

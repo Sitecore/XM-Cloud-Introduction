@@ -12,7 +12,7 @@ SharedFields:
   Value: Office/32x32/document_footer.png
 - ID: "b0b15510-b138-470e-8f33-8da2e228aafe"
   Hint: Rendering Contents Resolver
-  Value: "{51104EE3-12B4-45E7-8859-B61E23F5230C}"
+  Value: "{2F5C334E-5615-423C-8281-9FC180191302}"
 Languages:
 - Language: en
   Versions:
@@ -23,11 +23,11 @@ Languages:
       Value: 20200528T045508Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "e2373c52-3009-4c92-a7c0-e0fd4bdef120"
+      Value: "31af6f32-4246-489a-a431-7d085a2c1968"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220302T112520Z
+      Value: 20220519T021442Z

@@ -20,20 +20,23 @@ Languages:
     - ID: "3489c7a2-efe1-49e0-a3d7-271183c4f255"
       Hint: HeroImage
       Value: |
-        <image mediaid="{F26BBBB9-9B2A-4AA7-BA41-1DBB7557DD13}" />
+        <image mediaid="{DC36D475-D9CD-48A5-870D-3003903918A5}" />
     - ID: "53ee3e16-ba10-4013-959e-9a652a533845"
       Hint: HeroSubtitle
-      Value: About the MVP Award
+      Value: About the Sitecore MVP Award
     - ID: "69db2d7e-db5e-4a02-8580-0bcfb77b5482"
       Hint: HeroDescription
-      Value: "A Sitecore MVP is an individual with expertise in Sitecore who actively participate in online and offline communities to share their knowledge and expertise with other Sitecore partners and customers. The increasing amount of individuals that are sharing expertise and knowledge is reflected in the Sitecore community that is growing at a mind-blowing speed."
+      Value: |
+        A Sitecore MVP is an individual with expertise in Sitecore who actively participate in online and offline communities to share their knowledge and expertise with other Sitecore partners and customers. The increasing amount of individuals that are sharing expertise and knowledge is reflected in the Sitecore community that is growing at a mind-blowing speed.
+        
+        Thanks to their contribution Sitecore MVPs receive <a href="/benefits">several benefits</a>.
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0eec01f9-7abb-4ca1-b60c-2d2e63e036e3"
+      Value: "438e6f7f-89d4-4ccb-9901-501b1386b29d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200721T081816Z
+      Value: 20211104T145526Z
