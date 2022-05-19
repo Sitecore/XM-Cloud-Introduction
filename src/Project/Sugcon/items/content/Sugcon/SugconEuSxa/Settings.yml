@@ -11,6 +11,9 @@ SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: "{C2DC4690-AF44-48C7-BB21-90D1AD246732}"
+- ID: "1864e99d-c29a-40bf-96e0-b3e7896a013b"
+  Hint: UseLanguageSpecificLayout
+  Value: 
 - ID: "300fb7a0-b27f-44dd-9af0-b37a19723e0e"
   Hint: RouteTemplateName
   Value: Settings Route
@@ -22,16 +25,25 @@ SharedFields:
   Value: "{AC9DA469-725C-469D-929A-F5075AF7B815}"
 - ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
   Hint: Name
-  Value: SugconEuSxa
+  Value: "sugcon-eu"
 - ID: "5764d2d4-724d-4313-a81b-9246c911faff"
   Hint: AppDatasourcesPath
   Value: "{BB2FB96A-95B5-485D-AD43-E725B0E43909}"
 - ID: "5ca117eb-8782-4a4f-9f2f-30de31fc2e34"
   Hint: PlaceholdersPath
   Value: "{3D8B3D61-22B1-41F2-9A49-739B1DD604C6}"
+- ID: "5e8ed724-126a-4bb7-8106-85c2d1042c9e"
+  Hint: ServerSideRenderingEngineApplicationUrl
+  Value: "https://sugconeu.xmcloudcm.localhost"
 - ID: "72e83c8d-3578-4e50-b4c0-93a78a1729f2"
   Hint: FilesystemPath
   Value: /dist/SugconEuSxa
+- ID: "89849738-34ee-46bc-b525-825f1153189e"
+  Hint: ServerSideRenderingEngineEndpointUrl
+  Value: "http://sugcon-eu:3000/api/editing/render"
+- ID: "9016141c-ff51-40f2-9135-40f5161b9784"
+  Hint: ServerSideRenderingEngine
+  Value: http
 - ID: "a7bbad73-b933-49ff-95c8-1c269cb35e7c"
   Hint: DictionaryPath
   Value: "{F0BE8F2B-1F07-42E2-B74C-D2C0008C1A93}"
@@ -68,11 +80,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "231bb0fb-024d-4ef6-995e-3ef90716c9c1"
+      Value: "03190c1a-f4fd-4121-82d1-ec4ca8d15618"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220519T091041Z
+      Value: 20220519T165103Z
