@@ -17,7 +17,7 @@ services:
       args:
         PARENT_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}
     volumes:
-      - .\src\Project\SugconEuSxa\rendering:C:\app
+      - .\src\Project\Sugcon\SugconEuSxa:C:\app
     environment:
       SITECORE_API_HOST: "http://cm"
       NEXTJS_DIST_DIR: ".next-container"
@@ -156,9 +156,6 @@ services:
       ## SugconEu Rendering Host
       SUGCONEU_RENDERING_HOST_ENDPOINT_URI: "${SUGCON_EU_HOST_INTERNAL_URI}/api/editing/render"
       SUGCONEU_RENDERING_HOST_PUBLIC_URI: "https://${SUGCON_EU_HOST}"
-      ## SugconEuSxa Rendering Host
-      SUGCONEUSXA_RENDERING_HOST_ENDPOINT_URI: "${SUGCON_EU_SXA_HOST_INTERNAL_URI}/api/editing/render"
-      SUGCONEUSXA_RENDERING_HOST_PUBLIC_URI: "https://${SUGCON_EU_SXA_HOST}"
       ## SugconAnzsugcon/ Rendering Host
       SUGCONANZ_RENDERING_HOST_ENDPOINT_URI: "${SUGCON_ANZ_HOST_INTERNAL_URI}/api/editing/render"
       SUGCONANZ_RENDERING_HOST_PUBLIC_URI: "https://${SUGCON_ANZ_HOST}"
