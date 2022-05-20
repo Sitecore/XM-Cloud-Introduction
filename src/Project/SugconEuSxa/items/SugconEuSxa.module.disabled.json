@@ -1,0 +1,23 @@
+{
+    "namespace": "SugconEuSxa",
+    "items": {
+        "includes": [
+            {
+                "name": "layouts",
+                "path": "/sitecore/layout/Layouts/Project/SugconEuSxa"
+            },
+            {
+                "name": "placeholders",
+                "path": "/sitecore/layout/Placeholder Settings/Project/SugconEuSxa"
+            },
+            {
+                "name": "renderings",
+                "path": "/sitecore/layout/Renderings/Project/SugconEuSxa"
+            },
+            {
+                "name": "templates",
+                "path": "/sitecore/templates/Project/SugconEuSxa"
+            }
+        ]
+    }
+}

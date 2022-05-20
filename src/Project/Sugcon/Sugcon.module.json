@@ -1,0 +1,65 @@
+{
+    "namespace": "Project.Sugcon",
+    "items": {
+      "includes": [
+        {
+          "name": "layouts",
+          "path": "/sitecore/layout/Layouts/Project/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "components",
+          "path": "/sitecore/layout/Renderings/Project/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "placeholders",
+          "path": "/sitecore/layout/Placeholder Settings/Project/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "templates",
+          "path": "/sitecore/templates/Project/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "templatesFeature",
+          "path": "/sitecore/templates/Feature/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "media",
+          "path": "/sitecore/Media Library/Project/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "branchesFeature",
+          "path": "/sitecore/templates/Branches/Feature/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "branchesProject",
+          "path": "/sitecore/templates/Branches/Project/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "modules",
+          "path": "/sitecore/system/Settings/Feature/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "content",
+          "path": "/sitecore/content/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete",
+          "rules": [
+            {
+              "path": "/Sugcon Repository",
+              "scope": "ignored"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
+  
