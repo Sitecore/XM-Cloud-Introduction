@@ -9,6 +9,11 @@
         },
         {
           "name": "components",
+          "path": "/sitecore/layout/Renderings/Feature/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "componentsProject",
           "path": "/sitecore/layout/Renderings/Project/Sugcon",
           "allowedPushOperations": "CreateUpdateAndDelete"
         },
