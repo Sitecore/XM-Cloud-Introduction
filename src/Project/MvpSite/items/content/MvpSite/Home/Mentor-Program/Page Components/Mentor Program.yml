@@ -1,0 +1,36 @@
+﻿---
+ID: "9dd13f7b-157e-4108-a56e-5027fdc18f4b"
+Parent: "050efa74-0d6c-424a-812e-c9b3136105b9"
+Template: "86864760-3b8b-4e79-927e-0addcd14055d"
+Path: "/sitecore/content/MvpSite/Home/Mentor-Program/Page Components/Mentor Program"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "00f0228c-aff3-4ab7-ac98-e4175a53bf32"
+      Hint: HeroTitle
+      Value: Mentor Program
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200625T215240Z
+    - ID: "3489c7a2-efe1-49e0-a3d7-271183c4f255"
+      Hint: HeroImage
+      Value: |
+        <image mediaid="{BA133323-C9F2-4936-BE97-C92EBA90E11D}" />
+    - ID: "53ee3e16-ba10-4013-959e-9a652a533845"
+      Hint: HeroSubtitle
+      Value: Learn more about the Sitecore MVP
+    - ID: "69db2d7e-db5e-4a02-8580-0bcfb77b5482"
+      Hint: HeroDescription
+      Value: The MVP mentor program provides guidance to those in the Sitecore Community who want to become an MVP. Join this program and gain new experiences, skills, knowledge, support and more.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ad19f44e-5a92-42a7-a125-4cf8ca8b8305"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\tamas
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220126T131532Z

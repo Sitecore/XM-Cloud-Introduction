@@ -1,0 +1,17 @@
+﻿@model Mvp.Feature.Navigation.Models.Footer
+
+    <footer class="fixed-footer">
+        <div class="container-fluid bg-gray4 py-3">
+            <div class="container">
+                <div class="row">
+                   <div class="footer-copyright col-9">@Html.Raw(Model.CopyrightText.Value)</div>
+                   <div class="footer-social col-3">
+                        @foreach (var socialLink in Model.SocialLinks)
+                        {
+                            <a class="footer-social-link" href="@socialLink.Fields.Link.Value.Href" target="_blank" aria-label="@socialLink.Fields.Link.Value.Title"><i class="fa fa-@socialLink.Fields.Icon.Value" aria-hidden="true"></i></a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>

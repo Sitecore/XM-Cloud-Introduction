@@ -7,30 +7,29 @@ SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
       <d
-        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{1AE49D12-8DA1-4FBD-92FF-887B01C02BB5}">
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          ds="{C4DADD5E-1521-4C6D-AFCE-39D237751541}"
-          id="{A4F28B31-5D18-4158-92AB-F4D2ECA6D2BE}"
-          par=""
-          ph="header"
-          uid="{19CCAD6A-4C17-48CC-B78A-5CE8415E279F}" />
+          uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}">
+          <p:d />
+        </r>
         <r
-          id="{C9593FF9-14AC-4C8E-B217-D85C05ADEAD7}"
-          ph="header"
-          uid="{D842E8EB-450E-4348-A54A-E60CF16E9E52}" />
+          uid="{EA5CEF36-282B-4254-84FB-86CCD721CFA1}"
+          p:after="r[@uid='{D842E8EB-450E-4348-A54A-E60CF16E9E52}']"
+          s:ds="{7E27288D-9261-45D5-9D8B-705116563AC8}"
+          s:id="{248BDE7D-D010-4D02-95E8-2578A03A2D2D}"
+          s:par=""
+          s:ph="main" />
         <r
-          ds="{7E27288D-9261-45D5-9D8B-705116563AC8}"
-          id="{248BDE7D-D010-4D02-95E8-2578A03A2D2D}"
-          par=""
-          ph="main"
-          uid="{EA5CEF36-282B-4254-84FB-86CCD721CFA1}" />
+          uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}"
+          p:after="r[@uid='{EA5CEF36-282B-4254-84FB-86CCD721CFA1}']" />
         <r
-          id="{437CCC09-AB5D-47B3-96D7-2B05BDFF5324}"
-          ph="footer"
-          uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}" />
+          uid="{BC97B8B5-67B1-4CCA-A391-6B5E7ACCBA32}"
+          p:after="*[1=2]"
+          s:id="{00147A0F-476B-4C99-8A10-E6B4FCFCECE0}"
+          s:ph="header-signin" />
       </d>
     </r>
 Languages:
@@ -69,17 +68,17 @@ Languages:
       Value: 20200604T042308Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7537d61f-1b3e-4c67-8a5a-d8bfe3813d5a"
+      Value: "5ddfbfd0-652c-4b84-9df2-23cb79d12507"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
-      Hint: Menu Title
+      Hint: MenuTitle
       Value: Contact
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\admin
+        sitecore\rob
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200721T145522Z
+      Value: 20220406T045741Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
-      Hint: Include in Menu
+      Hint: IncludeInMenu
       Value: 1

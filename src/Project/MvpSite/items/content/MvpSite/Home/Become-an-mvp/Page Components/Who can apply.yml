@@ -20,10 +20,10 @@ Languages:
     - ID: "5e0174e0-52ca-4cc1-a6d5-1ae75954b019"
       Hint: TeaserLink
       Value: |
-        <link text="Link" linktype="external" url="https://www.google.com" anchor="" target="" />
+        <link text="Sitecore MVP Application" anchor="" linktype="internal" class="" title="Sitecore MVP Application" target="" querystring="" id="{9A2113C2-298E-4431-BA8D-2355210FDEEF}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8cead6fa-0bce-4d18-8829-41ff0e0ac3ca"
+      Value: "f2579b82-e26f-4b89-a044-7d3f610d01fa"
     - ID: "9b1f902b-cfcf-4965-b4d0-3880f610272d"
       Hint: TeaserImage
       Value: |
@@ -31,13 +31,13 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\admin
+        sitecore\tamas
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200721T134234Z
+      Value: 20211201T065806Z
     - ID: "fa7c2f07-7f57-49f9-9f94-d5e9631d110d"
       Hint: TeaserText
       Value: |
-        <p>The MVP Program is open for all individuals who work with the Sitecore platform.</p>
+        <p>The Sitecore MVP Program is open for all individuals who work with the Sitecore platform and services.</p>
         <p>The key to be nominated is to share your expertise through online and offline channels.</p>
         
