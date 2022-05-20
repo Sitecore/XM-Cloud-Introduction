@@ -5,8 +5,11 @@ namespace Mvp.Feature.Navigation.Models
 {
     public class Footer
     {
-        [SitecoreComponentField(Name = "items")]
+        [SitecoreComponentField(Name = "Social Media Links")]
         public ChildItems<FooterFields>[] SocialLinks { get; set; }
+
+        [SitecoreComponentField(Name = "Content")]
+        public Sitecore.LayoutService.Client.Response.Model.Fields.RichTextField CopyrightText { get; set; }
     }
 }
 
