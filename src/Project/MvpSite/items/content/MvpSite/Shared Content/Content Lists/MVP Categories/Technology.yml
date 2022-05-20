@@ -17,10 +17,10 @@ Languages:
     - ID: "8948fc61-e65e-4215-8365-ed0951155ec5"
       Hint: ItemLink
       Value: |
-        <link text="Learn more" anchor="" linktype="internal" class="" title="About Sitecore MVP" target="" querystring="" id="{0D97B45D-C589-4495-A495-9AAFF4FBD2C3}" />
+        <link text="Learn more" anchor="" linktype="internal" class="" title=""  querystring="" id="{FA048086-14BC-4E7D-9987-59F8B4ADC286}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "94c1aca3-97e7-4608-9fea-869b2c4f7870"
+      Value: "bbe15375-8823-4d9a-a664-0f9a32655b62"
     - ID: "aeb48911-54fc-479c-966d-1808cbba333c"
       Hint: ItemText
       Value: An individual with seasoned technical experience who actively participates in online and offline communities to share their knowledge and expertise with developers, marketers, strategists, Sitecore partners and customers.
@@ -30,4 +30,4 @@ Languages:
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20211109T122702Z
+      Value: 20200629T111623Z

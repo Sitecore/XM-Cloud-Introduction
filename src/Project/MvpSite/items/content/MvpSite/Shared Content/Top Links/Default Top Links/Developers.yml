@@ -13,15 +13,15 @@ Languages:
       Value: 20200528T230523Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "cda8d228-2f96-47ca-8e7b-507f1b3fbf40"
+      Value: "cd0199d9-4171-4485-ac74-4a57fd12b0cc"
     - ID: "aff6fd57-80bd-4b53-adb9-164b922d5763"
       Hint: Link
       Value: |
-        <link text="For Developers" linktype="external" url="https://developers.sitecore.com/" anchor="" title="For Developers" target="" />
+        <link text="For Downloads" linktype="external" url="https://developers.sitecore.com/" anchor="" title="For Developers" target="" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220520T003648Z
+      Value: 20211020T051417Z

@@ -17,10 +17,10 @@ Languages:
     - ID: "8948fc61-e65e-4215-8365-ed0951155ec5"
       Hint: ItemLink
       Value: |
-        <link text="Learn more" anchor="" linktype="internal" class="" title="About Sitecore MVP" target="" querystring="" id="{0D97B45D-C589-4495-A495-9AAFF4FBD2C3}" />
+        <link text="Learn more" anchor="" linktype="internal" class="" title=""  querystring="" id="{FA048086-14BC-4E7D-9987-59F8B4ADC286}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7b3bceb5-710c-41d2-9554-af8f9f874945"
+      Value: "2f2319c1-acec-4a50-b9b6-22a083d146ab"
     - ID: "aeb48911-54fc-479c-966d-1808cbba333c"
       Hint: ItemText
       Value: An individual with strong understanding with data driven context marketing and use of the Sitecore Experience Cloud to drive business results and who love to share his/her knowledge and experience with customers, users and implementation teams.
@@ -30,4 +30,4 @@ Languages:
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20211109T122721Z
+      Value: 20200629T111706Z
