@@ -1,0 +1,26 @@
+﻿---
+ID: "b5fb3ec5-be5a-4b93-b384-0cc403303444"
+Parent: "8e09461d-9ac4-408f-8bd7-8416bfcd0cf4"
+Template: "64acede4-1711-4df4-ab7c-efb822a8fe7c"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Data/Videos/Sitecore and SaaS
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220520T145212Z
+    - ID: "56a17772-058b-47d3-8e73-8bbdd0ab24ba"
+      Hint: Title
+      Value: Sitecore & SaaS, our shared journey | Pieter Brinkman & Rob Earlam
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "903df76c-8efa-4bd3-8b0c-add6f520ab04"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220520T145226Z
