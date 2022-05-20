@@ -11,11 +11,6 @@
         "name": "layouts",
         "path": "/sitecore/layout/Renderings/Feature/Navigation",
         "allowedPushOperations": "CreateUpdateAndDelete"
-      },
-      {
-        "name": "Content Resolvers",
-        "path": "/sitecore/system/Modules/Layout Service/Rendering Contents Resolvers/Navigation",
-        "allowedPushOperations": "CreateUpdateAndDelete"
       }
     ]
   }

@@ -13,6 +13,9 @@ SharedFields:
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
   Value: /sitecore/templates/Feature/BasicContent/CallToActionContent
+- ID: "b0b15510-b138-470e-8f33-8da2e228aafe"
+  Hint: Rendering Contents Resolver
+  Value: "{3DF775BF-3F56-446F-9D81-43DE64DA4DDA}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: "query:./ancestor-or-self::*[@@templatename='Site']/Shared Content/CTA Content"
@@ -26,11 +29,11 @@ Languages:
       Value: 20200629T080451Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "71750bbb-8148-4319-818f-99417dd9ee52"
+      Value: "03cd40ff-9760-424b-b1fc-0b01d9fc0233"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200629T083515Z
+      Value: 20220519T020936Z

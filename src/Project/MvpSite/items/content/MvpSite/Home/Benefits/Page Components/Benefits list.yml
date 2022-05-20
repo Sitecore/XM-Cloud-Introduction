@@ -18,21 +18,22 @@ Languages:
       Hint: Content
       Value: |
         <p>Becoming an Sitecore MVP has a lot of benefits for you. Here are some highlights:</p>
-                                        <ul>
-                                            <li>Recognition as a global Sitecore expert and community leader</li>
-                                            <li>Access to early product releases and privileged resources, including direct access to product teams and kick-off webinars</li>
-                                            <li>Exclusive invitations to MVP discussion forums.</li>
-                                            <li>Meet your regional Sitecore team and peers during regional MVP meetings</li>
-                                            <li>Exclusive Invitation to the MVP Summit. The Summit is executive insight to product and company strategy with lots of networking and fun activities.</li>
-                                            <li>Discount at Sitecore events SUGCON, Symposium</li>
-                                        </ul>
+        <ul>
+            <li>Recognition as a global Sitecore expert and community leader</li>
+            <li>Access to early product releases and privileged resources, including direct access to product teams and kick-off webinars</li>
+            <li>Exclusive invitations to MVP discussion forums.</li>
+            <li>Meet your regional Sitecore team and peers during regional MVP meetings</li>
+            <li>Exclusive Invitation to the MVP Summit. The Summit is executive insight to product and company strategy with lots of networking and fun activities.</li>
+            <li>Licenses to access Sitecore Software, including Sitecore Platform: XP and XC, Developer Collection: TDS and Razl, Feydra: Front-End Development Tool, Avtor: Content Control Tool</li>
+            <li>Discount at Sitecore events SUGCON, Symposium</li>
+        </ul>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "678b9373-7a58-46ae-a78f-a20e8bc664d2"
+      Value: "e9ba3ff1-811d-441b-854f-583908cb1ec9"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200728T081122Z
+      Value: 20211104T130221Z

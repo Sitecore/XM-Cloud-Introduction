@@ -23,9 +23,34 @@
           "allowedPushOperations": "CreateUpdateAndDelete"
         },
         {
+          "name": "templatesFeature",
+          "path": "/sitecore/templates/Feature/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "media",
+          "path": "/sitecore/Media Library/Project/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "branchesFeature",
+          "path": "/sitecore/templates/Branches/Feature/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "branchesProject",
+          "path": "/sitecore/templates/Branches/Project/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "modules",
+          "path": "/sitecore/system/Settings/Feature/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
           "name": "content",
           "path": "/sitecore/content/Sugcon",
-          "allowedPushOperations": "CreateOnly",
+          "allowedPushOperations": "CreateUpdateAndDelete",
           "rules": [
             {
               "path": "/Sugcon Repository",

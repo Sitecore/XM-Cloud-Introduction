@@ -153,6 +153,7 @@ services:
       SITECORE_LICENSE_LOCATION: c:\license\license.xml
       JSS_EdgeWebsite_DEPLOYMENT_SECRET: ${JSS_EdgeWebsite_DEPLOYMENT_SECRET}
       SITECORE_JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
+      Sitecore__ExternalCdUrl: "${CM_HOST}"
       ## SugconEu Rendering Host
       SUGCONEU_RENDERING_HOST_ENDPOINT_URI: "${SUGCON_EU_HOST_INTERNAL_URI}/api/editing/render"
       SUGCONEU_RENDERING_HOST_PUBLIC_URI: "https://${SUGCON_EU_HOST}"

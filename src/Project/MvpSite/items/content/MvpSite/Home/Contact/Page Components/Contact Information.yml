@@ -17,19 +17,19 @@ Languages:
     - ID: "5098b799-31dd-4c1b-9955-3e8598caa21f"
       Hint: Content
       Value: |
-        <p>Feel free to reach out using any of the channels below:</p>
+        <p>Feel free to reach out using any of the channels below:&nbsp;</p>
         <ul>
-            <li>You can find out more following us on Twitter: <a href="https://www.twitter.com/Sitecore">@Sitecore</a> or <a href="https://www.twitter.com/SitecoreMVP">@SitecoreMVP</a></li>
-            <li>There are also many great topics on the <a href="https://community.sitecore.net">Sitecore Community forum</a> where you can ask questions</li>
-            <li>If you have any other request, please email us: <a href="mailto:mvp-program@sitecore.net">mvp-program@sitecore.net</a></li>
+            <li>&nbsp;You can find out more following us on Twitter: <a href="https://www.twitter.com/Sitecore">@Sitecore</a> or <a rel="noopener noreferrer" href="https://www.twitter.com/SitecoreMVP" target="_blank" title="SitecoreMVP on Twitter">@SitecoreMVP</a></li>
+            <li>There are also many great topics on the <a rel="noopener noreferrer" href="https://community.sitecore.com" target="_blank" title="Sitecore Community Portal">Sitecore Community Portal</a> where you can ask questions</li>
+            <li>If you have any other request, please email us: <a href="mailto:MVP-Program@Sitecore.com" title="Email the Sitecore MVP Progam">MVP-Program@Sitecore.com</a></li>
         </ul>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "315cfc2b-1a78-4c8e-8cd6-4ce96c594b83"
+      Value: "b1fcf0b6-0090-4081-95e8-2bc0427f9c09"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\admin
+        sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200721T145522Z
+      Value: 20211104T143031Z

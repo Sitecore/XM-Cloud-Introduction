@@ -14,7 +14,7 @@ Languages:
     - ID: "066f7e92-30ad-4198-b138-b40ccaec6d20"
       Hint: HeroLink
       Value: |
-        <link text="Sitecore MVPs 2020 Announced" linktype="external" url="http://www.sitecore.com" anchor="" target="_blank" />
+        <link text="Check out the 2022 Sitecore MVPs" linktype="external" url="https://mvp.sitecore.com/mvps/2022" anchor="" title="Check out the 2022 Sitecore MVPs" target="" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20200624T085353Z
@@ -30,11 +30,11 @@ Languages:
       Value: Celebrate the most active Sitecore Community members from around the world who provide valuable expertise to the Sitecore ecosystem.
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b6db6ade-6a25-4fab-8268-fafd7b47603b"
+      Value: "4c2ec5e7-4704-4d20-8890-c9b6ce790e8b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\tamas
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200624T103602Z
+      Value: 20220131T140726Z

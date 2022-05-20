@@ -13,12 +13,6 @@
         "path": "/sitecore/layout/Renderings/Feature/BasicContent",
         "allowedPushOperations": "createUpdateAndDelete",
         "scope": "itemAndDescendants"
-      },
-      {
-        "name": "Content Resolvers",
-        "path": "/sitecore/system/Modules/Layout Service/Rendering Contents Resolvers/BasicContent",
-        "allowedPushOperations": "createUpdateAndDelete",
-        "scope": "itemAndDescendants"
       }
     ]
   }
