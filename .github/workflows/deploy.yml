@@ -1,10 +1,10 @@
 name: Build and Release
 on: 
-  push:
-  pull_request:
-    branches: [ main ]
-    paths-ignore:
-    - 'README.md'
+  # push:
+  # pull_request:
+  #   branches: [ main ]
+  #   paths-ignore:
+  #   - 'README.md'
 
 jobs:
 
