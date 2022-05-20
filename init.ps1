@@ -130,7 +130,7 @@ Write-Host "Adding Windows hosts file entries..." -ForegroundColor Green
 Add-HostsEntry $CM_Host
 Add-HostsEntry $MVP_Host
 Add-HostsEntry $SUGCON_EU_HOST
-Add-HostsEntry $SUGCON_EU_SXA_HOST
+Add-HostsEntry $SUGCON_ANZ_HOST
 
 ###############################
 # Populate the environment file
