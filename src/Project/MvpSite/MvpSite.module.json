@@ -96,8 +96,12 @@
         "name": "apikey",
         "path": "/sitecore/system/Settings/Services/API Keys/MvpSite",
         "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "media",
+        "path": "/sitecore/media library/Project/MvpSite",
+        "allowedPushOperations": "CreateOnly"
       }
     ]
   }
 }
-
