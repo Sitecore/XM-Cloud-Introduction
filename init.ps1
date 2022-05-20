@@ -89,7 +89,7 @@ Write-SitecoreDockerWelcome
 $CM_Host = $Host_Suffix
 $MVP_Host = "mvp.$Host_Suffix"
 $SUGCON_EU_HOST = "sugconeu.$Host_Suffix"
-$SUGCON_EU_SXA_HOST = "sugconeusxa.$Host_Suffix"
+$SUGCON_ANZ_HOST = "sugconanz.$Host_Suffix"
 
 ##################################
 # Configure TLS/HTTPS certificates
