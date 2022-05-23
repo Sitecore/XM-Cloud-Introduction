@@ -5,6 +5,9 @@ Template: "54863d88-2275-4a58-9df0-1255538d3cac"
 Path: /sitecore/content/Sugcon/SugconAnzSxa/Presentation/Page Designs
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7b36CAD6CF-D418-43CA-BC57-656E44069116%7d%3d%257B2D3B8540-99C6-48B8-8F20-5BE72BDCBC6B%257D"
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"
@@ -26,11 +29,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f37d2c62-02d2-4684-90d7-887f64e5039a"
+      Value: "b78f529e-0636-4abf-a4e6-ee40aa7a2896"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220519T144650Z
+      Value: 20220523T080524Z

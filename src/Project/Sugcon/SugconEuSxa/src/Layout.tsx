@@ -29,7 +29,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
       </Head>
 
-      <Navigation />
+      {/*Navigation*/}
       {/* root placeholder for the app, which we add components to using route data */}
       <header>
         <div id="header" className="container">
