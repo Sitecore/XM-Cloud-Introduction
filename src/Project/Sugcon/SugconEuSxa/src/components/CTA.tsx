@@ -1,16 +1,19 @@
-import { Text, Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field,ImageField, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 type CTAProps = ComponentProps & {
   fields: {
-    heading: Field<string>;
+    Heading: Field<string>;
+    Text: Field<string>;
+    Link: Field<string>;
+    Image: ImageField;
   };
 };
 
 const CTA = (props: CTAProps): JSX.Element => (
   <div>
     <p>CTA Component</p>
-    <Text field={props.fields.heading} />
+    <Text field={props.fields.Heading} />
   </div>
 );
 

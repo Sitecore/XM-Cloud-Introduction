@@ -6,7 +6,7 @@ Path: /sitecore/layout/Renderings/Feature/Sugcon/Sugcon Base Components/SponsorL
 SharedFields:
 - ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
   Hint: componentName
-  Value: Promo
+  Value: SponsorList
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: office/32x32/moneybag_coins.png
@@ -30,7 +30,7 @@ SharedFields:
   Value: "query:$site/*[@@name='Data']/*[@@templatename='SponsorList Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='SponsorList Folder']"
 - ID: "c39a90ce-0035-41bb-90f6-3c8a6ea87797"
   Hint: AddFieldEditorButton
-  Value: 0
+  Value: 
 - ID: "e829c217-5e94-4306-9c48-2634b094fdc2"
   Hint: OtherProperties
   Value: IsRenderingsWithDynamicPlaceholders=true
@@ -48,11 +48,11 @@ Languages:
         sitecore\JssImport
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "9ba7e152-be6d-4fc8-bc3d-1f509c6bd3c4"
+      Value: "cb2d464a-7ed6-4b4c-ac9b-83817affa8f4"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220520T143125Z
+      Value: 20220523T092355Z

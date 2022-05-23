@@ -6,7 +6,7 @@ Path: /sitecore/layout/Renderings/Feature/Sugcon/Sugcon Base Components/Organise
 SharedFields:
 - ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
   Hint: componentName
-  Value: Promo
+  Value: OrganiserList
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: office/32x32/users_meeting.png
@@ -48,11 +48,11 @@ Languages:
         sitecore\JssImport
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5daadf6a-d1bb-417c-9c9c-7e172bb1b030"
+      Value: "e68a876a-a4ef-4e66-94d4-92c12009e4a4"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220520T152158Z
+      Value: 20220523T092341Z
