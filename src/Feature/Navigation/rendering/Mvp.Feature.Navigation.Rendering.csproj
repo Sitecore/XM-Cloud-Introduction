@@ -7,14 +7,6 @@
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="Views\_ViewImports.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\_ViewImports.cshtml" />
-  </ItemGroup>
-
 
   <ItemGroup>
 	  <PackageReference Include="Sitecore.LayoutService.Client" />
