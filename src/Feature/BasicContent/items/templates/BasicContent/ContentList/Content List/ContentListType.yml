@@ -1,8 +1,8 @@
 ﻿---
-ID: "db98c925-2960-4e04-b73c-f68b0769ff58"
-Parent: "c4b9313a-3670-4896-ad8c-de611938a194"
+ID: "d40ebb0f-36ff-4035-85f0-412555f4e599"
+Parent: "826f5cb6-2237-43ae-b2af-6df0576a4d9d"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/BasicContent/Rendering Parameters/Content List Rendering Parameters/Content List Properties/ContentListType
+Path: /sitecore/templates/Feature/BasicContent/ContentList/Content List/ContentListType
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
@@ -23,11 +23,11 @@ Languages:
       Value: 20200630T200120Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "25289b27-f93e-4fdf-9779-677da0d7f99a"
+      Value: "39584e08-2d0a-454d-92ae-510f1537fcbb"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200630T200237Z
+      Value: 20220524T010213Z

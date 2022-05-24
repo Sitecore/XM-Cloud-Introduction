@@ -5,7 +5,7 @@
         <div class="nav navbar-nav">
             @foreach (var topLink in Model.Items)
             {
-                <a class="nav-item nav-link" target="_blank" href="@topLink.Url">@topLink.Fields.Link.Value.Text</a>
+                <a class="nav-item nav-link" target="_blank" href="@topLink.Fields.Link.Value.Href">@topLink.Fields.Link.Value.Text</a>
             }
         </div>
         <sc-placeholder name="header-signin"></sc-placeholder>
