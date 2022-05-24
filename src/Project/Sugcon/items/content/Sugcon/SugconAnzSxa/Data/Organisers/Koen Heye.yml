@@ -1,0 +1,38 @@
+﻿---
+ID: "04d84718-6fb6-4534-b935-2a326adef712"
+Parent: "241c22a4-7fc7-4b3f-a086-23c6581e3778"
+Template: "040dffbf-bdb3-4424-a867-49e927d9c3e5"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Data/Organisers/Koen Heye
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0a82b3e3-f9ac-42e6-a7ac-4ffd422a0b4d"
+      Hint: LinkedInLink
+      Value: |
+        <link text="LinkedIn" linktype="external" url="https://www.linkedin.com/in/koenheye/" anchor="" target="" />
+    - ID: "1d574813-214f-4fc2-98ff-8ffd36a5aed1"
+      Hint: TwitterLink
+      Value: |
+        <link text="Twitter" linktype="external" url="https://twitter.com/koenheye" anchor="" target="" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220523T073959Z
+    - ID: "3d3d3ea8-0bc8-499d-8ae2-289d4dad9ce7"
+      Hint: Image
+      Value: |
+        <image mediaid="{FF6012ED-B5CF-4B04-A0C1-78821F77D053}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "912589f9-3d57-40fb-9165-f689e6f07b3f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220523T074756Z
+    - ID: "ed25e568-5800-4b53-b376-b2e58c217665"
+      Hint: Name
+      Value: Koen Heye
