@@ -10,6 +10,7 @@
 		<DockerfileContext>..\..\..\..\..</DockerfileContext>
 		<AssemblyName>Mvp.Project.MvpSite</AssemblyName>
 		<RootNamespace>Mvp.Project.MvpSite</RootNamespace>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
 	</PropertyGroup>
 
 	<Target Name="FixDotnetWatch" AfterTargets="_CoreCollectWatchItems">

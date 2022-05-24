@@ -5,9 +5,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
-                <p class="top" asp-for="HeroSubtitle">@Model.HeroSubtitle.Value</p>
-                <h1 class="static" asp-for="HeroTitle">@Model.HeroTitle.Value</h1>
-                <p asp-for="HeroDescription">@Model.HeroDescription.Value</p>
+                <p class="top" asp-for="HeroSubtitle"></p>
+                <h1 class="static" asp-for="HeroTitle"></h1>
+                <p asp-for="HeroDescription"></p>
                 @if (!string.IsNullOrWhiteSpace(Model.HeroLink.Value.Href))
                 {
                     <a asp-for="HeroLink" href="@Model.HeroLink.Value.Href" data-module="cta-button" data-goals="" class="cta primary" aria-label="@Model.HeroLink.Value.Title">

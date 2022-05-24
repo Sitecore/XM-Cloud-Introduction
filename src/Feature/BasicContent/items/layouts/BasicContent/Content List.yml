@@ -15,10 +15,10 @@ SharedFields:
   Value: /sitecore/templates/Feature/BasicContent/ContentList
 - ID: "a77e8568-1ab3-44f1-a664-b7c37ec7810d"
   Hint: Parameters Template
-  Value: "{F0105115-D6C7-42B5-8793-D3F6DD215C32}"
+  Value: 
 - ID: "b0b15510-b138-470e-8f33-8da2e228aafe"
   Hint: Rendering Contents Resolver
-  Value: 
+  Value: "{3DF775BF-3F56-446F-9D81-43DE64DA4DDA}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: /sitecore/content/MvpSite/Shared Content/Content Lists
@@ -32,11 +32,11 @@ Languages:
       Value: 20200629T121616Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4404d1f1-ac33-4e1b-a694-7625e960c54f"
+      Value: "58038f63-afb1-46db-a85b-53ee171723f6"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220519T012430Z
+      Value: 20220524T010425Z
