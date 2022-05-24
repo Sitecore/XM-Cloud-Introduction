@@ -18,8 +18,12 @@ export const Default = (props: RichTextProps): JSX.Element => {
   );
 
   return (
-    <div className={`component rich-text ${props.params.styles.trimEnd()}`}>
-      <div className="component-content">{text}</div>
+    <div className="container component">
+      <div className='row richtext'>
+        <div className ='col-12'>
+          <JssRichText field={props.fields.Text} />
+        </div>
+      </div>
     </div>
   );
 };

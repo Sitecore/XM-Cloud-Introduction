@@ -1,8 +1,12 @@
 ﻿---
-ID: "ec05a4e4-a93c-40eb-a798-ec1c8efe9bba"
+ID: "3f7b74a0-412c-46e7-b4af-f453126d6b6f"
 Parent: "14a6d4f1-e4bc-4c96-84c2-da9d9687d42d"
-Template: "e1a3b30c-77bc-4f6c-a008-d01b3371235d"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
 Path: /sitecore/templates/Branches/Feature/Sugcon/Sugcon Base Components/Default Hero Variant/$name
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/star.png
 Languages:
 - Language: en
   Versions:
@@ -10,14 +14,14 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20160818T065035Z
+      Value: 20211020T135004Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "25cc8a05-a6f8-4412-979c-1cf509879831"
+      Value: "1859d0a9-8ac2-407e-afe7-fd61b3162d45"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220520T142642Z
+      Value: 20220524T091514Z

@@ -1,0 +1,44 @@
+﻿---
+ID: "815ef1ea-bed6-494a-bd62-1a8c443d349d"
+Parent: "fe5032db-dd81-4c2b-b83e-52db9a19f4da"
+Template: "2a05bfc6-1eea-4013-9daf-9d079e3fd255"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Data/CTAs/CTA 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0168f4ed-ee6c-4962-9153-94f1fb972c55"
+      Hint: Image
+      Value: |
+        <image mediaid="{225E1ACF-57A3-4F0D-8789-C899C6C145F7}" ></image>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220524T092213Z
+    - ID: "2bd32ceb-9f35-41d4-a255-81dbf1f80e6b"
+      Hint: Headline
+      Value: Contact Organizers
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7ba4501e-52d4-48d1-9655-8c09d936e509"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d4c32718-a2cb-48c5-9769-14d20450d6f7"
+      Hint: Link
+      Value: |
+        <link linktype="external" text="SUGCON Sitecore slack channel" url="https://sitecorechat.slack.com/archives/C0C973QJ0" anchor="" target="" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220524T113621Z
+    - ID: "fdc6957b-c9fa-46ad-b03c-254c12c4c47a"
+      Hint: Text
+      Value: |
+        Email:&nbsp; <a href="mailto:enquiries@sugcon.events">enquiries@sugcon.events</a>
+        <div id="gtx-trans" style="position: absolute; left: 34px; top: 22px;">
+        <div class="gtx-trans-icon">&nbsp;</div>
+        </div>

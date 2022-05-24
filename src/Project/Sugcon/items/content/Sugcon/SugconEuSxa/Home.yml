@@ -30,13 +30,6 @@ Languages:
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B3932A1EC-A7A5-4117-B845-4EEA4F2B6D87%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=1"
               s:ph="headless-main" />
             <r
-              uid="{FEB13340-6AED-4756-A666-43B9F09B6432}"
-              p:after="r[@uid='{03226EF8-6300-40BA-9683-8ACB387D1A09}']"
-              s:ds="{CB081C2B-C280-43B8-ADD7-2281817B925B}"
-              s:id="{96127B34-218D-4D4E-9203-65B7E24A42E6}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D%7C%7BC3767F66-03BE-4587-B22C-C0D28B45C319%7D%7C%7B436C37A1-CC36-4176-97C0-F1C48104E601%7D&amp;FieldNames=%7BFEDA0026-E7BB-4969-9712-3E4629CB3EFE%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=3"
-              s:ph="headless-main" />
-            <r
               uid="{B9C423B2-A0F6-4DA5-AE66-1879072CEE06}"
               p:after="*[1=2]"
               s:ds="{BDC58CB4-74BD-4E18-97D3-85DCF76CFD4D}"
@@ -61,7 +54,7 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "420373f5-a321-4e0a-a9b1-d5d34e870932"
+      Value: "77c092d3-c943-4645-a716-e057d4185500"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
       Value: SugconEuSxa
@@ -71,4 +64,4 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220523T205222Z
+      Value: 20220523T093205Z
