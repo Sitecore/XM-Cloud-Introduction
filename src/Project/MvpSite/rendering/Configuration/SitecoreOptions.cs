@@ -12,12 +12,9 @@ namespace Mvp.Project.MvpSite.Configuration
         public Uri InstanceUri { get; set; }
         public string LayoutServicePath { get; set; } = "/sitecore/api/layout/render/jss";
         public string DefaultSiteName { get; set; }
-        public string ApiKey { get; set; }
         public Uri RenderingHostUri { get; set; }
         public bool EnableExperienceEditor { get; set; }
         public string ExperienceEdgeToken { get; set; }
-        public bool HostIsUsingEdge { get; set; }
-
         public Uri LayoutServiceUri
         {
             get
