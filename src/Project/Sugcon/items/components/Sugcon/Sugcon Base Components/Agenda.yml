@@ -6,7 +6,7 @@ Path: /sitecore/layout/Renderings/Feature/Sugcon/Sugcon Base Components/Agenda
 SharedFields:
 - ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
   Hint: componentName
-  Value: Promo
+  Value: Agenda
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: office/32x32/calendar_clock.png
@@ -48,11 +48,11 @@ Languages:
         sitecore\JssImport
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a1e8de36-bd42-407f-9969-66ca622c7fd1"
+      Value: "b7fa0fe9-4c85-42dc-834f-9fa49cedb81f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220520T152303Z
+      Value: 20220524T205600Z
