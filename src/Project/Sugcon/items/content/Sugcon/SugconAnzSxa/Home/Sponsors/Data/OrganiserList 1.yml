@@ -1,0 +1,32 @@
+﻿---
+ID: "cad8c4e3-59da-48d8-9163-45cc0c2355a7"
+Parent: "d79a4516-e1c9-4d42-bcdd-b3e66ee4d2e5"
+Template: "072de54c-c0fb-4aed-b7b5-7526825f844b"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Home/Sponsors/Data/OrganiserList 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220524T134052Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8d563cb3-abaa-41fe-be51-b5b45c9bb70f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "c6568cdd-6038-4af8-a7cf-adadf85f747d"
+      Hint: Organisers
+      Value: |
+        {EA7DC736-C759-49BB-9880-F4FA1F155B42}
+        {3FBC3976-F636-4225-9DD5-E9E32832B569}
+        {1FC2BB25-8E3F-4B58-B188-EAB958F6E592}
+        {B1334A75-E249-46FD-BA0A-A9544483D2BA}
+        {D3444C83-BE0E-4909-A3BE-15B7DFCACAC6}
+        {D9C4CEEB-E10F-4D61-B895-E92C44A58CBF}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220524T134705Z

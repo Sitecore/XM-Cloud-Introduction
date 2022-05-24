@@ -24,9 +24,17 @@ Languages:
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
               uid="{D86D1EA7-D780-4FE1-9D24-02297207C998}"
+              p:before="*"
               s:ds="local:/Data/Text 1"
               s:id="{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}"
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BFD8B3469-2664-47F3-82EA-1C411D660059%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+            <r
+              uid="{E232B4CD-5032-44E8-9D53-FCF9C5E24E1D}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/OrganiserList 1"
+              s:id="{CE4B14F7-2845-4CA4-AB42-0F0ACC60499B}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B83FB783D-0801-4A1F-82F2-2999B29B9954%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=2"
               s:ph="headless-main" />
           </d>
         </r>
@@ -38,7 +46,7 @@ Languages:
       Value: Sponsors
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fd9b67f5-6bce-45e2-a583-55188f08efdb"
+      Value: "a8374a32-0af5-4776-8856-895aa14ae55d"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
       Value: Sponsors
@@ -48,4 +56,4 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220524T113826Z
+      Value: 20220524T134103Z
