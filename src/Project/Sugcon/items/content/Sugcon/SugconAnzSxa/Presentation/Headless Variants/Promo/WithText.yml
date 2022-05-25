@@ -1,12 +1,8 @@
 ﻿---
-ID: "a4a74d91-c837-4727-ac34-32a11f73245b"
-Parent: "b05b99d3-1e22-4a9b-9dd8-87180ccf00b5"
-Template: "49c111d0-6867-4798-a724-1f103166e6e9"
-Path: /sitecore/content/Sugcon/SugconAnzSxa/Presentation/Headless Variants/SponorList
-SharedFields:
-- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
-  Hint: __Icon
-  Value: office/32x32/moneybag_coins.png
+ID: "39e38e73-9e86-4ea2-acd6-f24ab416b103"
+Parent: "1d5df40c-826e-4645-b5f5-4c3121ddffa7"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Presentation/Headless Variants/Promo/WithText
 Languages:
 - Language: en
   Versions:
@@ -14,7 +10,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220524T091146Z
+      Value: 20220525T201919Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -25,11 +21,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2b9c68ef-6b99-4d09-b4c9-e7cee6da0abc"
+      Value: "63b535e8-f8ec-4d40-b288-57e3fea67b40"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220524T091445Z
+      Value: 20220525T201919Z

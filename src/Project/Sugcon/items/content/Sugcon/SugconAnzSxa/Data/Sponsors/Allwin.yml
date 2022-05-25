@@ -8,16 +8,19 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220523T075224Z
     - ID: "7de86eb1-7ccc-4068-9870-b3a46a150aa1"
       Hint: SponsorLogo
       Value: |
-        <image mediaid="{52EBB770-29C3-4D0D-B85B-1B6B19AC66BB}" />
+        <image mediaid="{52EBB770-29C3-4D0D-B85B-1B6B19AC66BB}" ></image>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "65989316-44d2-446c-9e8e-9e7488420b53"
+      Value: "c1cbebf6-3894-4f0a-b3a1-9ca8aa96ea1f"
     - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
       Hint: SponsorUrl
       Value: "https://www.allwin.hu/en"
@@ -30,4 +33,4 @@ Languages:
       Value: Allwin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220523T075240Z
+      Value: 20220525T210830Z

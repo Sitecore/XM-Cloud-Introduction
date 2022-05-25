@@ -8,16 +8,19 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220523T075518Z
     - ID: "7de86eb1-7ccc-4068-9870-b3a46a150aa1"
       Hint: SponsorLogo
       Value: |
-        <image mediaid="{8AFBB0B9-900E-4FB4-A940-99235DF643D1}" />
+        <image mediaid="{8AFBB0B9-900E-4FB4-A940-99235DF643D1}" ></image>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "70170406-ac53-4bde-9eb8-fcce9df41316"
+      Value: "5a31e7d4-f8e3-4c4d-bc87-65c011e32b40"
     - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
       Hint: SponsorUrl
       Value: "https://www.linkedin.com/in/jasonmwilkerson"
@@ -30,4 +33,4 @@ Languages:
       Value: Jason Wilkerson
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220523T075533Z
+      Value: 20220525T210830Z

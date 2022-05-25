@@ -8,16 +8,19 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220523T075200Z
     - ID: "7de86eb1-7ccc-4068-9870-b3a46a150aa1"
       Hint: SponsorLogo
       Value: |
-        <image mediaid="{4F7B2822-178C-4EDC-81B3-9B90C73E47C1}" />
+        <image mediaid="{4F7B2822-178C-4EDC-81B3-9B90C73E47C1}" ></image>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d760b65b-8381-4f64-b518-12a9ad812f6a"
+      Value: "7b01758d-0a08-4efa-a586-43e39ec97064"
     - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
       Hint: SponsorUrl
       Value: "https://www.blastic.com/"
@@ -30,4 +33,4 @@ Languages:
       Value: Blastic
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220523T075215Z
+      Value: 20220525T210830Z

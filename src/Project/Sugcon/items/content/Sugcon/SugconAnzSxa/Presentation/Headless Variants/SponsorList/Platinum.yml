@@ -1,8 +1,8 @@
 ﻿---
-ID: "3aef132b-8c48-41c9-85c7-55b3de49695a"
-Parent: "fd109357-e3e5-4e43-b852-e2b97a13fe04"
-Template: "0cd15675-15af-4386-ab5e-7fe68bb9e7d9"
-Path: /sitecore/content/Sugcon/SugconAnzSxa/Data/OrganiserLists
+ID: "9350595b-464f-4f82-9077-e3e42a15b623"
+Parent: "a4a74d91-c837-4727-ac34-32a11f73245b"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Presentation/Headless Variants/SponsorList/Platinum
 Languages:
 - Language: en
   Versions:
@@ -10,7 +10,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220523T095417Z
+      Value: 20220525T201748Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -21,11 +21,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7fccfec3-4bee-4bac-9d2e-ef11339e2733"
+      Value: "fb653625-f1ac-4af9-b072-a71a81b97917"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220523T095417Z
+      Value: 20220525T201748Z
