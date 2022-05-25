@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Files", ".Solution Files", "{196B5D43-B228-4632-9BC3-EAAF79B4EDA5}"
 	ProjectSection(SolutionItems) = preProject
 		nuget.config = nuget.config
+		..\Packages.props = ..\Packages.props
 		README.md = README.md
 		sitecore.json = sitecore.json
 	EndProjectSection
@@ -33,9 +34,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SugconEuSxa", "SugconEuSxa", "{5435BFD2-1E20-4885-B2A7-A718C6F46791}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.SugconEuSxa.Platform", "Project\SugconEuSxa\platform\Project.SugconEuSxa.Platform.csproj", "{36C0B7DB-F73E-4E34-A70D-C57BCFDA1A25}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicContent", "BasicContent", "{9024797F-EC79-4019-9076-C157020CF7D5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVP.Feature.BasicContent.Rendering", "Feature\BasicContent\rendering\MVP.Feature.BasicContent.Rendering.csproj", "{18086145-57F9-46EB-9213-6764DA298779}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Social", "Social", "{06A25A5C-4B35-4091-81D6-5DE97C6E1744}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.Social.Rendering", "Feature\Social\rendering\Mvp.Feature.Social.Rendering.csproj", "{79D774C4-1B40-48E3-8F84-880A02A63E7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +73,10 @@ Global
 		{18086145-57F9-46EB-9213-6764DA298779}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18086145-57F9-46EB-9213-6764DA298779}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18086145-57F9-46EB-9213-6764DA298779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D774C4-1B40-48E3-8F84-880A02A63E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D774C4-1B40-48E3-8F84-880A02A63E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D774C4-1B40-48E3-8F84-880A02A63E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D774C4-1B40-48E3-8F84-880A02A63E7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +93,8 @@ Global
 		{36C0B7DB-F73E-4E34-A70D-C57BCFDA1A25} = {5435BFD2-1E20-4885-B2A7-A718C6F46791}
 		{9024797F-EC79-4019-9076-C157020CF7D5} = {EE03412B-647E-416F-84A1-427E692BBBDB}
 		{18086145-57F9-46EB-9213-6764DA298779} = {9024797F-EC79-4019-9076-C157020CF7D5}
+		{06A25A5C-4B35-4091-81D6-5DE97C6E1744} = {EE03412B-647E-416F-84A1-427E692BBBDB}
+		{79D774C4-1B40-48E3-8F84-880A02A63E7D} = {06A25A5C-4B35-4091-81D6-5DE97C6E1744}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A7C4987-3A11-41A9-8915-5457EF7B5A6F}
