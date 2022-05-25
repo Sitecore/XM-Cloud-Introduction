@@ -10,13 +10,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Mvp.Feature.BasicContent.Extensions;
 using Mvp.Feature.Navigation.Extensions;
+using Mvp.Feature.Social.Extensions;
 using Mvp.Project.MvpSite.Configuration;
 using Sitecore.AspNet.ExperienceEditor;
 using Sitecore.AspNet.RenderingEngine.Extensions;
 using Sitecore.AspNet.RenderingEngine.Localization;
 using Sitecore.LayoutService.Client.Extensions;
 using Sitecore.LayoutService.Client.Newtonsoft.Extensions;
-using Sitecore.LayoutService.Client.Request;
 
 namespace Mvp.Project.MvpSite.Rendering
 {
@@ -61,6 +61,7 @@ namespace Mvp.Project.MvpSite.Rendering
                   options
                     .AddFeatureNavigation()
                     .AddFeatureBasicContent()
+                    .AddFeatureSocial()
                     .AddDefaultPartialView("_ComponentNotFound");
               })
               // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
@@ -70,6 +71,9 @@ namespace Mvp.Project.MvpSite.Rendering
               // Enable support for the Experience Editor.
               .WithExperienceEditor();
 
+            // Register MVP Functionality specific services
+            services.AddFeatureSocialServices();
+            
             services.AddSession();
         }
 
