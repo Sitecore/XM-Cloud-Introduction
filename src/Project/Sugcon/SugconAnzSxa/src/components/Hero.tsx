@@ -1,15 +1,11 @@
 import React from 'react';
-import { Text, 
-         Field, 
-         ImageField,
-         Image,
-         withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, ImageField, Image } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 interface Fields {
   Text: Field<string>;
   Label: Field<string>;
-  BackgroundImage:ImageField;
+  BackgroundImage: ImageField;
 }
 
 type HeroProps = ComponentProps & {
@@ -33,7 +29,9 @@ export const Default = (props: HeroProps): JSX.Element => {
           <div className="thumbnail">
             <Image media={props.fields.BackgroundImage} className="img-fluid heroimage"></Image>
             <div className="caption d-none d-md-block">
-              <p className="hero-label"><Text  field={props.fields.Label}/></p>
+              <p className="hero-label">
+                <Text field={props.fields.Label} />
+              </p>
               <p className="h1 py-4">
                 <Text className="contentTitle" field={props.fields.Text} />
               </p>
@@ -41,7 +39,7 @@ export const Default = (props: HeroProps): JSX.Element => {
           </div>
         </div>
       </div>
-  );
-}
-  return <Hero {...props}/>;
+    );
+  }
+  return <Hero {...props} />;
 };

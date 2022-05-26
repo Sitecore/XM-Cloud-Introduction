@@ -11,16 +11,10 @@ export type RichTextProps = {
 };
 
 export const Default = (props: RichTextProps): JSX.Element => {
-  const text = props.fields ? (
-    <JssRichText field={props.fields.Text} />
-  ) : (
-    <span className="is-empty-hint">Rich text</span>
-  );
-
   return (
     <div className="container component">
-      <div className='row richtext'>
-        <div className ='col-12'>
+      <div className="row richtext">
+        <div className="col-12">
           <JssRichText field={props.fields.Text} />
         </div>
       </div>

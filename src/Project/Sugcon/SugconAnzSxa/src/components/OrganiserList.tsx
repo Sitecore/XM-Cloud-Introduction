@@ -1,9 +1,5 @@
 import React from 'react';
-import { Text, 
-         Field, 
-         ImageField,
-         LinkField,
-         withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, ImageField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 interface Fields {
@@ -24,7 +20,7 @@ export type OrganizerProps = {
     Twitter: Field<string>;
     LinkedInLink: LinkField;
     TwitterLink: LinkField;
-  }
+  };
 };
 
 const OrganiserList = (props: OrganiserListProps): JSX.Element => (
@@ -34,34 +30,28 @@ const OrganiserList = (props: OrganiserListProps): JSX.Element => (
   </div>
 );
 
-export const Default = (props: OrganiserListProps ): JSX.Element => {
+export const Default = (props: OrganiserListProps): JSX.Element => {
   if (props.fields) {
     return (
-      
-      <div className="container component"> 
-      Organiser List: {props.fields?.Organizers?.length}
-        {props.fields?.Organizers?.length == 0 ? ( 
+      <div className="container component">
+        Organiser List: {props.fields?.Organizers?.length}
+        {props.fields?.Organizers?.length == 0 ? (
           <div>No Organisers</div>
-          ) : ( 
-            props.fields?.Organizers?.map((Organizer) => { 
-              return (
-                <div className="row">
-                  Next
-                  <div className="col-12">
-                    Hello You: <Text field= {Organizer.fields.Name}/>
-                  </div>
+        ) : (
+          props.fields?.Organizers?.map((Organizer) => {
+            return (
+              <div key={Organizer.fields.Name.value} className="row">
+                Next
+                <div className="col-12">
+                  Hello You: <Text field={Organizer.fields.Name} />
                 </div>
-              )
-                
-            }
-            ) 
-          )
-        }
+              </div>
+            );
+          })
+        )}
       </div>
-      
     );
   }
 
   return <OrganiserList {...props} />;
 };
-

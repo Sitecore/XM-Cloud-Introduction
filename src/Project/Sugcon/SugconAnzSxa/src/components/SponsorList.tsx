@@ -1,17 +1,8 @@
 import React from 'react';
-import {
-  Image as JssImage,
-  Link as JssLink,
-  ImageField,
-  Field,
-  LinkField,
-  Text,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, Text } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
-  
   Category: Field<string>;
-  
 }
 
 type PromoProps = {
@@ -32,18 +23,14 @@ export const Default = (props: PromoProps): JSX.Element => {
     return (
       <div className={`component promo ${props.params.styles}`}>
         <div className="component-content">
-          <div className="field-promoicon">
-            Image
-          </div>
+          <div className="field-promoicon">Image</div>
           <div className="promo-text">
             <div>
               <div className="field-promotext">
                 <Text className="image-caption" field={props.fields.Category} />
               </div>
             </div>
-            <div className="field-promolink">
-              Link
-            </div>
+            <div className="field-promolink">Link</div>
           </div>
         </div>
       </div>

@@ -1,9 +1,4 @@
-import { Text, 
-         Field,
-         ImageField,
-         Image,
-         Link as JssLink, 
-         withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, ImageField, Image } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 type SponsorListProps = ComponentProps & {
@@ -17,7 +12,7 @@ export type SponsorProps = ComponentProps & {
     SponsorName: Field<string>;
     SponsorUrl: Field<string>;
     SponsorLogo: ImageField;
-  }
+  };
 };
 const SponsorListDefaultComponent = (props: SponsorListProps): JSX.Element => (
   <div className={`component promo ${props.params.styles}`}>
@@ -32,30 +27,31 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
     return (
       <div className="container-fluid container-md mx-auto w-md-100">
         {props.fields?.Sponsors?.length == 0 ? (
-            <div>No Organizers</div>
-          ) : (
-            props.fields?.Sponsors?.map((Sponsor) => {
-                return (
-                  <div className='row sponsorTeaser'>
-          
-                  <div className='col-12 col-md-6'>
-                    <p className='sponsorLabel'><Text field={props?.fields?.Category} /></p>
-                    <h2 className="sponsorName"><Text field={Sponsor?.fields?.SponsorName} /></h2><br/>
-                    <Text field={Sponsor?.fields?.SponsorUrl} /><br/>
-                    
-                  </div>
-                  <div className='col-12 col-md-6 sponsorTeaserImg '>
-                    <div className="sponsorTeaserImg">
-                      <Image field={Sponsor?.fields?.SponsorLogo} />
-                    </div>
+          <div>No Organizers</div>
+        ) : (
+          props.fields?.Sponsors?.map((Sponsor) => {
+            return (
+              <div key={Sponsor.fields.SponsorName.value} className="row sponsorTeaser">
+                <div className="col-12 col-md-6">
+                  <p className="sponsorLabel">
+                    <Text field={props?.fields?.Category} />
+                  </p>
+                  <h2 className="sponsorName">
+                    <Text field={Sponsor?.fields?.SponsorName} />
+                  </h2>
+                  <br />
+                  <Text field={Sponsor?.fields?.SponsorUrl} />
+                  <br />
+                </div>
+                <div className="col-12 col-md-6 sponsorTeaserImg ">
+                  <div className="sponsorTeaserImg">
+                    <Image field={Sponsor?.fields?.SponsorLogo} />
                   </div>
                 </div>
-                )
-            })
-          )
-        }
-        
-        
+              </div>
+            );
+          })
+        )}
       </div>
     );
   }
@@ -67,23 +63,22 @@ export const Default = (props: SponsorListProps): JSX.Element => {
   if (props.fields) {
     return (
       <div className="container-fluid container-md mx-auto w-md-100">
-        <div className='row'>
-          <div className='col-12 className="SponsorImage2"' >
-          
-            <h3><Text field={props.fields?.Category} /></h3>
+        <div className="row">
+          <div className='col-12 className="SponsorImage2"'>
+            <h3>
+              <Text field={props.fields?.Category} />
+            </h3>
             {props.fields?.Sponsors?.length == 0 ? (
-                <div>No Organizers</div>
-              ) : (
-                props.fields?.Sponsors?.map((Sponsor) => {
-                    return (
-                      <div className="SponsorImage2">
-                        <Image field={Sponsor?.fields?.SponsorLogo}/>
-
-                      </div>
-                    )
-                })
-              )
-            }
+              <div>No Organizers</div>
+            ) : (
+              props.fields?.Sponsors?.map((Sponsor) => {
+                return (
+                  <div key={Sponsor.fields.SponsorName.value} className="SponsorImage2">
+                    <Image field={Sponsor?.fields?.SponsorLogo} />
+                  </div>
+                );
+              })
+            )}
           </div>
         </div>
       </div>
@@ -92,4 +87,3 @@ export const Default = (props: SponsorListProps): JSX.Element => {
 
   return <SponsorListDefaultComponent {...props} />;
 };
-
