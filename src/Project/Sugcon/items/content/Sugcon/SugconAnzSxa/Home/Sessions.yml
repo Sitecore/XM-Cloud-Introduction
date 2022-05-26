@@ -23,7 +23,7 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{BE4B5BD6-67DF-4911-9916-095626DA0409}"
+              uid="{83AE2A59-E21B-4BBC-A263-80B4C381C92B}"
               s:id="{1E6E40D5-9217-4DEF-AC1E-B59DED2F1B99}"
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B7801FD42-A279-4711-810A-470C2C4A0274%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=1"
               s:ph="headless-main" />
@@ -37,7 +37,7 @@ Languages:
       Value: Sessions
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3499d159-8206-4214-ab64-2599bb172624"
+      Value: "a367c9e7-4f32-438d-a9b6-687bd595db7a"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
       Value: Sessions
@@ -47,4 +47,4 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220524T204933Z
+      Value: 20220525T142126Z

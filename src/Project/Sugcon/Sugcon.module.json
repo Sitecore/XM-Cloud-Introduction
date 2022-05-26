@@ -53,6 +53,16 @@
           "allowedPushOperations": "CreateUpdateAndDelete"
         },
         {
+          "name": "apikeySugconEu",
+          "path": "/sitecore/system/Settings/Services/API Keys/SugconEuSxa",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "apikeySugconAnz",
+          "path": "/sitecore/system/Settings/Services/API Keys/SugconAnzSxa",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
           "name": "content",
           "path": "/sitecore/content/Sugcon",
           "allowedPushOperations": "CreateUpdateAndDelete",

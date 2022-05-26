@@ -35,6 +35,17 @@ h1{
     font-size: 48px;
     line-height: 50px;
 }
+
+h2 {
+
+}
+
+h3 {
+  color: #232323;
+  font-weight: 900;
+  font-family: 'AvenirNextW05-Bold',Arial, Helvetica, sans-serif;;
+  font-size: 24px;
+}
 .contentTitle {
     font-size: 3.5rem;
     font-weight: 300;
@@ -109,6 +120,13 @@ footer .component {
   height: 100%;
 }
 
+.cardBody {
+  padding: 16px;
+}
+
+.cardBody h3{
+  font-size: 1.2em;
+}
 /*Sponsor*/
 .sponsorTeaser{
   margin-top: 12px;
@@ -150,8 +168,35 @@ footer .component {
   height: 100%;
 }
 
-.SponsorImage2{
+.SponsorImage{
+  width: 218px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
   
+  
+  
+}
+
+.SponsorImage img {
+  width: 100%;
+  height: auto;   
+  max-height: 113px; 
+    
+}
+
+.SponsorBlock{
+  padding: 16px;
+    background-color: white;
+    width: 250px;
+    margin-top: 30px;
+    height: 145px;
+    position: relative;
+    float: left;
+    margin-right: 16px;
+    
+
 }
 /*CTA*/
 .cta{

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, Field, ImageField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, ImageField, LinkField, Link, Image } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 interface Fields {
   heading: Field<string>;
-  Organizers: OrganizerProps[];
+  Organisers: OrganizerProps[];
 }
 
 type OrganiserListProps = ComponentProps & {
@@ -12,7 +12,7 @@ type OrganiserListProps = ComponentProps & {
   fields: Fields;
 };
 
-export type OrganizerProps = {
+interface OrganizerProps {
   fields: {
     Image: ImageField;
     Name: Field<string>;
@@ -21,7 +21,7 @@ export type OrganizerProps = {
     LinkedInLink: LinkField;
     TwitterLink: LinkField;
   };
-};
+}
 
 const OrganiserList = (props: OrganiserListProps): JSX.Element => (
   <div>
@@ -31,24 +31,36 @@ const OrganiserList = (props: OrganiserListProps): JSX.Element => (
 );
 
 export const Default = (props: OrganiserListProps): JSX.Element => {
+  console.log(props);
   if (props.fields) {
     return (
       <div className="container component">
-        Organiser List: {props.fields?.Organizers?.length}
-        {props.fields?.Organizers?.length == 0 ? (
-          <div>No Organisers</div>
-        ) : (
-          props.fields?.Organizers?.map((Organizer) => {
-            return (
-              <div key={Organizer.fields.Name.value} className="row">
-                Next
-                <div className="col-12">
-                  Hello You: <Text field={Organizer.fields.Name} />
+        <div className="row">
+          {props.fields?.Organisers?.length == 0 ? (
+            <div>No Organisers</div>
+          ) : (
+            props.fields?.Organisers?.map((Organizer) => {
+              return (
+                <div key={Organizer.fields.Name.value} className="col-12 col-md-3 organizer">
+                  <div className="card">
+                    <p>
+                      <Image field={Organizer?.fields?.Image} />
+                    </p>
+                    <div className="cardBody">
+                      <h3>
+                        <Text field={Organizer?.fields?.Name} />
+                      </h3>
+                      <p>
+                        <Link field={Organizer?.fields?.LinkedInLink}></Link> /
+                        <Link field={Organizer?.fields?.TwitterLink}></Link>
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            );
-          })
-        )}
+              );
+            })
+          )}
+        </div>
       </div>
     );
   }
