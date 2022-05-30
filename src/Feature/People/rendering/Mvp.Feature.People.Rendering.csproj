@@ -20,4 +20,9 @@
     <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Configuration\rendering\Mvp.Foundation.Configuration.Rendering.csproj" />
+  </ItemGroup>
+
 </Project>

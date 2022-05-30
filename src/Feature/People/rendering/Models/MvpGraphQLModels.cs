@@ -111,7 +111,25 @@ namespace Mvp.Feature.People.Models
         public ValueItem LastName { get; set; }
         public ValueItem Email { get; set; }
         public TargetItem Country { get; set; }
-        public TargetItem[] Awards { get; set; }
+        public AwardData Awards { get; set; }
+    }
+
+    public class AwardData
+    {
+        public Awards[] TargetItems { get; set; }
+    }
+
+    public class Awards
+    {
+        public NameItem Parent { get; set; }
+
+        public TargetItemFieldValueItem Field { get; set; }
+
+    }
+
+    public class NameItem
+    {
+        public string Name { get; set; }
     }
 
     public class MvpSearchResponse
@@ -145,6 +163,16 @@ namespace Mvp.Feature.People.Models
     //	{
     //		public string value { get; set; }
     //	}
+
+    public class TargetItemFieldValueItem
+    {
+        public FieldValueItem TargetItem { get; set; }
+    }
+
+    public class FieldValueItem
+    {
+        public ValueItem Field { get; set; }
+    }
 
     public class TargetItem
     {

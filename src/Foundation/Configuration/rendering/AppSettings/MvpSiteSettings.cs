@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Mvp.Project.MvpSite.Configuration
+﻿namespace Mvp.Foundation.Configuration.Rendering.AppSettings
 {
-    public class SitecoreOptions
+    public class MvpSiteSettings
     {
         public static readonly string Key = "Sitecore";
 
@@ -15,6 +10,7 @@ namespace Mvp.Project.MvpSite.Configuration
         public Uri RenderingHostUri { get; set; }
         public bool EnableExperienceEditor { get; set; }
         public string ExperienceEdgeToken { get; set; }
+        public int MvpDirectoryGraphQLQueryPageSize { get; set; }
         public Uri LayoutServiceUri
         {
             get
