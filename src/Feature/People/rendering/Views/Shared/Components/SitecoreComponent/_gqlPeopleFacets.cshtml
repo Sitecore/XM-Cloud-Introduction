@@ -1,0 +1,30 @@
+﻿
+<!--Sidebar filtering-->
+<div class="col-md-3 col-xs-12 mvp-filter">
+    <p>Facets in here!</p>
+    @*@foreach (var facet in Model.Facets)
+	{
+        <article class="panel">
+            <p class="panel-heading">
+                @facet.DisplayName
+            </p>
+
+            @foreach (var facetValue in facet.values)
+            {
+                string checkedValue = facetValue.isChecked ? "checked" : "";
+
+
+                <div class="panel-block">
+                    <p class="control has-icons-left">
+                        <label class="checkbox">
+                            <input type="checkbox"
+                                onclick="window.location.assign(decodeURIComponent('@this.Context.Request.UpdateFacetsInUrl($"fc_{facet.name}", facetValue.value, !facetValue.isChecked)'))"
+                                @checkedValue>
+                            @facetValue.value.ToUpper() (@facetValue.count)
+                        </label>
+                    </p>
+                </div>
+            }
+        </article>
+	}*@
+</div>

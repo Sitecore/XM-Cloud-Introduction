@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Mvp.Feature.BasicContent.Extensions;
 using Mvp.Feature.Navigation.Extensions;
+using Mvp.Feature.People.Exntesions;
 using Mvp.Feature.Social.Extensions;
 using Mvp.Project.MvpSite.Configuration;
 using Sitecore.AspNet.ExperienceEditor;
@@ -62,6 +63,7 @@ namespace Mvp.Project.MvpSite.Rendering
                     .AddFeatureNavigation()
                     .AddFeatureBasicContent()
                     .AddFeatureSocial()
+                    .AddFeaturePeople()
                     .AddDefaultPartialView("_ComponentNotFound");
               })
               // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
@@ -72,7 +74,8 @@ namespace Mvp.Project.MvpSite.Rendering
               .WithExperienceEditor();
 
             // Register MVP Functionality specific services
-            services.AddFeatureSocialServices();
+            services.AddFeatureSocialServices()
+                    .AddFeaturePeopleServices();
             
             services.AddSession();
         }

@@ -21,6 +21,8 @@
 
     <!-- Rendering Host -->
     <PackageReference Update="BuildWebCompiler" Version="1.12.405" />
+    <PackageReference Update="GraphQL.Client" Version="4.0.2" />
+    <PackageReference Update="GraphQL.Client.Serializer.Newtonsoft" Version="4.0.2" />
     <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="$(DotNetVersion)" />
     <PackageReference Update="Microsoft.AspNetCore.Session" Version="2.2.0" />
     <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(DotNetVersion)" />
