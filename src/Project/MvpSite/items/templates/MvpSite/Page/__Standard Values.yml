@@ -24,9 +24,12 @@ SharedFields:
           uid="{19CCAD6A-4C17-48CC-B78A-5CE8415E279F}"
           ccb="Clear on publish" />
         <r
+          ds=""
           id="{00147A0F-476B-4C99-8A10-E6B4FCFCECE0}"
-          ph="header-signin"
-          uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}" />
+          par=""
+          ph="header-signin-disabled"
+          uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}"
+          ccb="Clear on publish" />
         <r
           ds="{94DE9AC3-A9F7-40AB-AE90-ACDA364B9C40}"
           id="{C9593FF9-14AC-4C8E-B217-D85C05ADEAD7}"
@@ -61,7 +64,7 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a0cf8e06-ae7c-4e87-ab71-bb06f59e1804"
+      Value: "53889486-3781-48fc-881e-cf578abff8cc"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: $name
@@ -71,7 +74,7 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220519T041344Z
+      Value: 20220524T013810Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
       Hint: IncludeInMenu
       Value: 1

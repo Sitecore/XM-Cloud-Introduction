@@ -10,13 +10,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Mvp.Feature.BasicContent.Extensions;
 using Mvp.Feature.Navigation.Extensions;
+using Mvp.Feature.Social.Extensions;
 using Mvp.Project.MvpSite.Configuration;
 using Sitecore.AspNet.ExperienceEditor;
 using Sitecore.AspNet.RenderingEngine.Extensions;
 using Sitecore.AspNet.RenderingEngine.Localization;
 using Sitecore.LayoutService.Client.Extensions;
 using Sitecore.LayoutService.Client.Newtonsoft.Extensions;
-using Sitecore.LayoutService.Client.Request;
 
 namespace Mvp.Project.MvpSite.Rendering
 {
@@ -49,26 +49,10 @@ namespace Mvp.Project.MvpSite.Rendering
               // At this time the Layout Service Client requires Json.NET due to limitations in System.Text.Json.
               .AddNewtonsoftJson(o => o.SerializerSettings.SetDefaults());
 
-            if (Configuration.HostIsUsingEdge)
-            {
-                // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge
-                services.AddSitecoreLayoutService()
-                  .AddGraphQlHandler("default", Configuration.DefaultSiteName, Configuration.ExperienceEdgeToken, Configuration.LayoutServiceUri)
-                  .AsDefaultHandler();
-            }
-            else
-            {
-                // Register the HTTP Sitecore Layout Service Client, used for local development
-                services.AddSitecoreLayoutService()
-                  .WithDefaultRequestOptions(request =>
-                  {
-                      request
-                      .SiteName(Configuration.DefaultSiteName)
-                      .ApiKey(Configuration.ApiKey);
-                  })
-                  .AddHttpHandler("default", Configuration.LayoutServiceUri)
-                  .AsDefaultHandler();
-            }
+            // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge & local edge endpoint
+            services.AddSitecoreLayoutService()
+              .AddGraphQlHandler("default", Configuration.DefaultSiteName, Configuration.ExperienceEdgeToken, Configuration.LayoutServiceUri)
+              .AsDefaultHandler();
 
             // Register the Sitecore Rendering Engine services.
             services.AddSitecoreRenderingEngine(options =>
@@ -77,6 +61,7 @@ namespace Mvp.Project.MvpSite.Rendering
                   options
                     .AddFeatureNavigation()
                     .AddFeatureBasicContent()
+                    .AddFeatureSocial()
                     .AddDefaultPartialView("_ComponentNotFound");
               })
               // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
@@ -86,6 +71,9 @@ namespace Mvp.Project.MvpSite.Rendering
               // Enable support for the Experience Editor.
               .WithExperienceEditor();
 
+            // Register MVP Functionality specific services
+            services.AddFeatureSocialServices();
+            
             services.AddSession();
         }
 

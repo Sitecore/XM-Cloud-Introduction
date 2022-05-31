@@ -2,11 +2,10 @@
 
 <div class="col-12 col-lg-4">
 	<div class="feature-panel-text">
-		<h3 class="counter number">@Model.ItemTitle</h3>
-		<h4>@Model.ItemSubtitle</h4>
-		<p>@Model.ItemText</p>
+		<h3 class="counter number" asp-for="@Model.Fields.ItemTitle"></h3>
+		<h4 asp-for="@Model.Fields.ItemSubtitle"></h4>
+		<p asp-for="@Model.Fields.ItemText"></p>
 
-        <!-- UPDATE THIS MODEL! -->
-@*		<a href="@Model.ItemLinkUrl" data-module="cta-button" data-goals="" class="cta primary" aria-label="@Model.ItemLinkDescription" target="">@Model.ItemLinkDescription</a>
-*@	</div>
+		<a asp-for="@Model.Fields.ItemLink" data-module="cta-button" data-goals="" class="cta primary"></a>
+	</div>
 </div>

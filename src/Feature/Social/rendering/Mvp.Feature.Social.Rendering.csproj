@@ -2,14 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp6.0</TargetFramework>
-    <AssemblyName>Mvp.Feature.BasicContent</AssemblyName>
-    <RootNamespace>Mvp.Feature.BasicContent</RootNamespace>
+    <AssemblyName>Mvp.Feature.Social</AssemblyName>
+    <RootNamespace>Mvp.Feature.Social</RootNamespace>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Sitecore.LayoutService.Client" />
     <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
+    <PackageReference Include="System.ServiceModel.Syndication" />
   </ItemGroup>
 
 </Project>

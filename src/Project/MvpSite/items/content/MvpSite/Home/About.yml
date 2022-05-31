@@ -68,6 +68,12 @@ Languages:
               s:id="{DF26CA0D-A60B-4349-8908-E7A62F7E7272}"
               s:ph="main" />
             <r
+              uid="{F3F56666-78E2-4E28-8800-D7D0C52E2163}"
+              s:ccb="Clear on publish"
+              s:ds=""
+              s:par=""
+              s:ph="header-signin-disabled" />
+            <r
               uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}"
               p:after="*[1=2]" />
           </d>
@@ -77,7 +83,7 @@ Languages:
       Value: 20200604T042230Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "28fa5381-1011-4682-bf3f-e6eedb96e5e4"
+      Value: "19234b71-7611-4d8f-b56d-0ba1e0f71931"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: About
@@ -88,3 +94,7 @@ Languages:
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20200721T121301Z
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220524T013936Z
