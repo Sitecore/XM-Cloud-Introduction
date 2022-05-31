@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Mvp.Feature.People.Facets;
 using Mvp.Feature.People.GraphQL;
 using Mvp.Feature.People.Models;
 using Mvp.Feature.People.PeopleFinder;
@@ -14,6 +15,7 @@ namespace Mvp.Feature.People.Exntesions
             services.AddTransient<IPeopleFinder, MvpFinder>();
             services.AddTransient<IGraphQLRequestBuilder, GraphQLRequestBuilder>();
             services.AddTransient<IGraphQLClientFactory, GraphQLClientFactory>();
+            services.AddTransient<IFacetBuilder, FacetBuilder>();
             services.AddHttpClient<GraphQLClientFactory>();
             return services;
         }

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Mvp.Feature.People.Facets;
 using Mvp.Feature.People.GraphQL;
 using Mvp.Feature.People.Models;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
@@ -17,14 +18,16 @@ namespace Mvp.Feature.People.PeopleFinder
         private readonly IGraphQLRequestBuilder graphQLRequestBuilder;
         private readonly IGraphQLClientFactory graphQLClientFactory;
         private readonly IMemoryCache memoryCache;
+        private readonly IFacetBuilder facetBuilder;
         private readonly ILogger<MvpFinder> logger;
         private MvpSiteSettings Configuration { get; }
 
-        public MvpFinder(IGraphQLRequestBuilder graphQLRequestBuilder, IGraphQLClientFactory graphQLClientFactory, IMemoryCache memoryCache, IConfiguration configuration, ILogger<MvpFinder> logger)
+        public MvpFinder(IGraphQLRequestBuilder graphQLRequestBuilder, IGraphQLClientFactory graphQLClientFactory, IMemoryCache memoryCache, IConfiguration configuration, IFacetBuilder facetBuilder, ILogger<MvpFinder> logger)
         {
             this.graphQLRequestBuilder = graphQLRequestBuilder;
             this.graphQLClientFactory = graphQLClientFactory;
             this.memoryCache = memoryCache;
+            this.facetBuilder = facetBuilder;
             this.logger = logger;
             Configuration = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
         }
@@ -35,6 +38,7 @@ namespace Mvp.Feature.People.PeopleFinder
             var currentPage = searchParams.CurrentPage > 1 ? searchParams.CurrentPage : 1;
             var mvps = await GetAllMvps();
             var filteredMvps = ApplyFiltering(mvps, searchParams);
+            var facets = facetBuilder.CalculateFacets(filteredMvps, searchParams);          
             var resultPage = ApplyPaging(filteredMvps, currentPage, pageSize);
 
             var people = new List<Person>();
@@ -48,7 +52,8 @@ namespace Mvp.Feature.People.PeopleFinder
                 CurrentPage = currentPage,
                 PageSize = filteredMvps.Count < pageSize ? filteredMvps.Count : pageSize,
                 TotalCount = filteredMvps.Count,
-                People = people
+                People = people,
+                Facets = facets
             };
         }
 
@@ -60,12 +65,12 @@ namespace Mvp.Feature.People.PeopleFinder
 
         private static Person GeneratePersonRecord(MvpSearchResult mvpSearchResult)
         {
-            var latestAward = mvpSearchResult.Awards.TargetItems.OrderBy(x => x.Parent.Name).First();
+            var latestAward = mvpSearchResult.Awards.TargetItems.OrderByDescending(x => x.Parent.Name).First();
             return new Person
             {
                 FirstName = mvpSearchResult.FirstName.Value,
                 LastName = mvpSearchResult.LastName.Value,
-                Country = mvpSearchResult.Country.Name,
+                Country = mvpSearchResult.Country?.TargetItem?.Name,
                 Email = mvpSearchResult.Email.Value,
                 MvpCategory = latestAward.Field.TargetItem.Field.Value,
                 MvpYear = latestAward.Parent.Name,

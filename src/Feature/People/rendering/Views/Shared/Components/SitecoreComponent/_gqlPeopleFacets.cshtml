@@ -1,30 +1,30 @@
-﻿
+﻿@using Mvp.Feature.People.Extensions
+@model Mvp.Feature.People.Models.PeopleSearchResults
+
 <!--Sidebar filtering-->
 <div class="col-md-3 col-xs-12 mvp-filter">
-    <p>Facets in here!</p>
-    @*@foreach (var facet in Model.Facets)
+    @foreach (var facet in Model.Facets)
 	{
         <article class="panel">
             <p class="panel-heading">
-                @facet.DisplayName
+                @facet.Key
             </p>
 
-            @foreach (var facetValue in facet.values)
+            @foreach (var facetValue in facet.Value)
             {
-                string checkedValue = facetValue.isChecked ? "checked" : "";
-
+                string checkedValue = facetValue.Selected ? "checked" : "";
 
                 <div class="panel-block">
                     <p class="control has-icons-left">
                         <label class="checkbox">
                             <input type="checkbox"
-                                onclick="window.location.assign(decodeURIComponent('@this.Context.Request.UpdateFacetsInUrl($"fc_{facet.name}", facetValue.value, !facetValue.isChecked)'))"
+                                onclick="window.location.assign(decodeURIComponent('@this.Context.Request.UpdateFacetsInUrl($"fc_{facet.Key}", facetValue.Name, !facetValue.Selected)'))"
                                 @checkedValue>
-                            @facetValue.value.ToUpper() (@facetValue.count)
+                            @facetValue.Name.ToUpper() (@facetValue.Count)
                         </label>
                     </p>
                 </div>
             }
         </article>
-	}*@
+	}
 </div>

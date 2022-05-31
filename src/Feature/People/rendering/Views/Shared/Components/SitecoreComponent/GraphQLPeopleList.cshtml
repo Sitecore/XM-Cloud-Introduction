@@ -35,7 +35,7 @@
     <div class="container">
         <div class="row">
 
-            @await Html.PartialAsync("_gqlPeopleFacets.cshtml")
+            @await Html.PartialAsync("_gqlPeopleFacets.cshtml", searchResults)
             
             @await Html.PartialAsync("_gqlPeopleResults.cshtml", searchResults)
 

@@ -14,6 +14,9 @@ namespace Mvp.Feature.People
         public static class QueryParameters
         {
             public const string FacetPrefix = "fc_";
+            public const string FacetAward = "fc_Type";
+            public const string FacetYear = "fc_Year"; 
+            public const string FacetCountry = "fc_Country";
             public const string Page = "pg";
             public const string Query = "q";
         }
