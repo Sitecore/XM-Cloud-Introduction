@@ -13,7 +13,8 @@ namespace Mvp.Feature.People.Exntesions
         {
             services.AddTransient<IPeopleFinder, MvpFinder>();
             services.AddTransient<IGraphQLRequestBuilder, GraphQLRequestBuilder>();
-            services.AddHttpClient<MvpFinder>();
+            services.AddTransient<IGraphQLClientFactory, GraphQLClientFactory>();
+            services.AddHttpClient<GraphQLClientFactory>();
             return services;
         }
 

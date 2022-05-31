@@ -30,8 +30,10 @@ namespace Mvp.Feature.People.Models
         public IEnumerable<Person> People { get; set; }
         //public List<Facet> Facets { get; set; }
         public int TotalCount { get; set; }
-        public int StartCursor { get; set; }
-        public int EndCursor { get; set; }
+        public int CurrentPage { get; set; }
+        public int PageSize { get; set; }
+        
+        
         //public bool HasNextPage { get; set; }
         //public bool HasPreviousPage { get; set; }
         //public int? PageSize { get; set; }

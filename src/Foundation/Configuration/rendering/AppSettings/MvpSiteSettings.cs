@@ -11,6 +11,7 @@
         public bool EnableExperienceEditor { get; set; }
         public string ExperienceEdgeToken { get; set; }
         public int MvpDirectoryGraphQLQueryPageSize { get; set; }
+        public int MvpDirectoryGraphQLQueryCacheTimeout { get; set; }
         public Uri LayoutServiceUri
         {
             get

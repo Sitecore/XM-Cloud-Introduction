@@ -1,11 +1,13 @@
-﻿using GraphQL.Client.Http;
-using GraphQL.Client.Serializer.Newtonsoft;
+﻿using GraphQL.Client.Abstractions;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Mvp.Feature.People.GraphQL;
 using Mvp.Feature.People.Models;
+using Mvp.Foundation.Configuration.Rendering.AppSettings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Mvp.Feature.People.PeopleFinder
@@ -13,31 +15,30 @@ namespace Mvp.Feature.People.PeopleFinder
     public class MvpFinder : IPeopleFinder
     {
         private readonly IGraphQLRequestBuilder graphQLRequestBuilder;
-        private readonly HttpClient httpClient;
+        private readonly IGraphQLClientFactory graphQLClientFactory;
+        private readonly IMemoryCache memoryCache;
+        private readonly ILogger<MvpFinder> logger;
+        private MvpSiteSettings Configuration { get; }
 
-        public MvpFinder(IGraphQLRequestBuilder graphQLRequestBuilder, HttpClient httpClient)
+        public MvpFinder(IGraphQLRequestBuilder graphQLRequestBuilder, IGraphQLClientFactory graphQLClientFactory, IMemoryCache memoryCache, IConfiguration configuration, ILogger<MvpFinder> logger)
         {
             this.graphQLRequestBuilder = graphQLRequestBuilder;
-            this.httpClient = httpClient;
+            this.graphQLClientFactory = graphQLClientFactory;
+            this.memoryCache = memoryCache;
+            this.logger = logger;
+            Configuration = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>(); 
         }
 
         public async Task<PeopleSearchResults> FindPeople(SearchParams searchParams)
         {
-            var request = graphQLRequestBuilder.BuildRequest(string.Empty);
+            var pageSize = 21;
+            var mvps = await GetAllMvps();
+            var currentPage = mvps.Take(pageSize);
 
-            var graphQLHttpClientOptions = new GraphQLHttpClientOptions
+            var people = new List<Person>();
+            foreach(var mvpSearchResult in currentPage)
             {
-                EndPoint = new Uri("http://cm/sitecore/api/graph/edge"),
-            };
-
-            var client = new GraphQLHttpClient(graphQLHttpClientOptions, new NewtonsoftJsonSerializer(), httpClient);
-
-            var response = await client.SendQueryAsync<MvpSearchResponse>(request);
-
-            var mvps = new List<Person>();
-            foreach(var mvpSearchResult in response.Data.Search.Results.Where(x => x.Awards != null & x.Awards.TargetItems.Any()))
-            {
-                mvps.Add(new Person
+                people.Add(new Person
                 {
                     FirstName = mvpSearchResult.FirstName.Value,
                     LastName = mvpSearchResult.LastName.Value,
@@ -51,11 +52,47 @@ namespace Mvp.Feature.People.PeopleFinder
 
             return new PeopleSearchResults
             {
-                StartCursor = 1,
-                EndCursor = 2,
-                TotalCount = response.Data.Search.Total,
-                People = mvps
+                CurrentPage = 1,
+                PageSize = pageSize,
+                TotalCount = mvps.Count(),
+                People = people
             };
+        }
+
+        private async Task<IList<MvpSearchResult>> GetAllMvps()
+        {
+            string key = $"All_MVP_DATA_{Configuration.MvpDirectoryGraphQLQueryCacheTimeout}";
+
+            if (!memoryCache.TryGetValue(key, out IList<MvpSearchResult> mvps))
+            {
+                var client = graphQLClientFactory.CreateGraphQlClient();
+                var allPeople = await GetAllPeople(client, string.Empty);
+                mvps = allPeople.Where(x => x.Awards != null & x.Awards.TargetItems.Any())
+                                .OrderBy(x => x.FirstName.Value + x.LastName.Value)
+                                .ToList();
+
+                memoryCache.Set(key, mvps, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(Configuration.MvpDirectoryGraphQLQueryCacheTimeout)));
+            }
+
+            return mvps;
+        }
+
+        private async Task<IList<MvpSearchResult>> GetAllPeople(IGraphQLClient client, string endCursor)
+        {
+            var mvps = new List<MvpSearchResult>();
+            var request = graphQLRequestBuilder.BuildRequest(endCursor);
+
+            logger.LogInformation($"Making GraphQL Request for MVPs, endCursor: '{endCursor}'");
+            var response = await client.SendQueryAsync<MvpSearchResponse>(request);
+            
+            mvps.AddRange(response.Data.Search.Results);
+
+            if(response.Data.Search.PageInfo.hasNextPage)
+            {
+                mvps.AddRange(await GetAllPeople(client, response.Data.Search.PageInfo.endCursor));
+            }
+
+            return mvps;
         }
     }
 }
