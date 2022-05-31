@@ -20,7 +20,7 @@ namespace Mvp.Feature.People.Exntesions
 
         public static RenderingEngineOptions AddFeaturePeople(this RenderingEngineOptions options)
         {
-            options.AddModelBoundView<PeopleSearchResults>("GraphQLPeopleList");
+            options.AddModelBoundView<SearchParams>("GraphQLPeopleList");
             return options;
         }
     }

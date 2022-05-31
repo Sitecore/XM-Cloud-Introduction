@@ -32,11 +32,12 @@ namespace Mvp.Feature.People.PeopleFinder
         public async Task<PeopleSearchResults> FindPeople(SearchParams searchParams)
         {
             var pageSize = 21;
+            var currentPage = searchParams.CurrentPage > 1 ? searchParams.CurrentPage : 1;
             var mvps = await GetAllMvps();
-            var currentPage = mvps.Take(pageSize);
+            var resultPage = ApplyPaging(mvps, currentPage, pageSize);
 
             var people = new List<Person>();
-            foreach(var mvpSearchResult in currentPage)
+            foreach(var mvpSearchResult in resultPage)
             {
                 people.Add(new Person
                 {
@@ -52,11 +53,24 @@ namespace Mvp.Feature.People.PeopleFinder
 
             return new PeopleSearchResults
             {
-                CurrentPage = 1,
+                CurrentPage = currentPage,
                 PageSize = pageSize,
                 TotalCount = mvps.Count(),
                 People = people
             };
+        }
+
+        public IList<MvpSearchResult> ApplyPaging(IList<MvpSearchResult> mvps, int currentPage, int pageSize)
+        {
+            if(currentPage > 1)
+            {
+                var startIndex = (currentPage - 1) * pageSize;
+                return mvps.Skip(startIndex).Take(pageSize).ToList();
+            }
+            else
+            {
+                return mvps.Take(pageSize).ToList();
+            }
         }
 
         private async Task<IList<MvpSearchResult>> GetAllMvps()
@@ -84,7 +98,6 @@ namespace Mvp.Feature.People.PeopleFinder
 
             logger.LogInformation($"Making GraphQL Request for MVPs, endCursor: '{endCursor}'");
             var response = await client.SendQueryAsync<MvpSearchResponse>(request);
-            
             mvps.AddRange(response.Data.Search.Results);
 
             if(response.Data.Search.PageInfo.hasNextPage)

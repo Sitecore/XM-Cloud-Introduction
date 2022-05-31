@@ -1,11 +1,11 @@
 @*@using Mvp.Feature.People.Extensions;
 @using Mvp.Feature.People.Models;*@
-@*@model Mvp.Feature.People.Models.PeopleSearchResults*@
+@model Mvp.Feature.People.Models.SearchParams
 @inject Mvp.Feature.People.PeopleFinder.IPeopleFinder PeopleFinder
 
 
 @{
-    var searchResults = await PeopleFinder.FindPeople(new Mvp.Feature.People.Models.SearchParams());
+    var searchResults = await PeopleFinder.FindPeople(Model);
 }
 
 @*@{

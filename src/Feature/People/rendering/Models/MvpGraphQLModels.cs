@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,6 +9,9 @@ namespace Mvp.Feature.People.Models
 
     public class SearchParams
     {
+        [FromQuery(Name="pg")]
+        public int CurrentPage { get; set; }
+
         //public string Language { get; set; }
         //public string RootItemId { get; set; }
         //public int? PageSize { get; set; }
@@ -31,68 +35,82 @@ namespace Mvp.Feature.People.Models
         //public List<Facet> Facets { get; set; }
         public int TotalCount { get; set; }
         public int CurrentPage { get; set; }
-        public int PageSize { get; set; }
-        
-        
-        //public bool HasNextPage { get; set; }
-        //public bool HasPreviousPage { get; set; }
-        //public int? PageSize { get; set; }
-        //public IList<(KeyValuePair<string, string>, IDictionary<string, string>)>? FilterFacets { get; set; }
-        //public int CurrentPage { get; set; }
-        //public string keyword { get; set; }
-        //public int LastPage
-        //{
-        //    get
-        //    {
-        //        if (TotalCount == 0 || !PageSize.HasValue || PageSize.Value == 0)
-        //        {
-        //            return 1;
-        //        }
-        //        return (int)Math.Ceiling(((decimal)TotalCount) / ((decimal)PageSize.Value));
-        //    }
-        //}
-        //public int PagerStart
-        //{
-        //    get
-        //    {
-        //        if (CurrentPage > 3)
-        //        {
-        //            return CurrentPage - 2;
-        //        }
-        //        else
-        //        {
-        //            return 1;
-        //        }
-        //    }
-        //}
-        //public int PagerEnd
-        //{
-        //    get
-        //    {
-        //        if (!HasNextPage)
-        //        {
-        //            return CurrentPage;
-        //        }
+        public int PageSize { get; set; }       
+        public bool HasNextPage
+        {
+            get
+            {
+                return CurrentPage < LastPage;
+            }
+        }
 
-        //        if (CurrentPage + 2 >= LastPage)
-        //        {
-        //            return LastPage;
-        //        }
-        //        if (CurrentPage < 2 && LastPage > 5)
-        //        {
-        //            return CurrentPage + 4;
-        //        }
-        //        if (CurrentPage < 3 && LastPage > 5)
-        //        {
-        //            return CurrentPage + 3;
-        //        }
-        //        if (CurrentPage < 3 && LastPage <= 5)
-        //        {
-        //            return LastPage;
-        //        }
-        //        return CurrentPage + 2;
-        //    }
-        //}
+        public bool HasPreviousPage
+        {
+            get
+            {
+                return CurrentPage > 1;
+            }
+        }
+
+        //public IList<(KeyValuePair<string, string>, IDictionary<string, string>)>? FilterFacets { get; set; }
+
+        //public string keyword { get; set; }
+
+        public int LastPage
+        {
+            get
+            {
+                if (TotalCount == 0 || PageSize == 0)
+                {
+                    return 1;
+                }
+                return (int)Math.Ceiling(((decimal)TotalCount) / ((decimal)PageSize));
+            }
+        }
+
+        public int PagerStart
+        {
+            get
+            {
+                if (CurrentPage > 3)
+                {
+                    return CurrentPage - 2;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+        }
+
+        public int PagerEnd
+        {
+            get
+            {
+                if (!HasNextPage)
+                {
+                    return CurrentPage;
+                }
+
+                if (CurrentPage + 2 >= LastPage)
+                {
+                    return LastPage;
+                }
+                if (CurrentPage < 2 && LastPage > 5)
+                {
+                    return CurrentPage + 4;
+                }
+                if (CurrentPage < 3 && LastPage > 5)
+                {
+                    return CurrentPage + 3;
+                }
+                if (CurrentPage < 3 && LastPage <= 5)
+                {
+                    return LastPage;
+                }
+                return CurrentPage + 2;
+            }
+        }
     }
 
     public class PeopleSearch
