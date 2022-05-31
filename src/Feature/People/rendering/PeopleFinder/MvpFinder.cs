@@ -39,16 +39,7 @@ namespace Mvp.Feature.People.PeopleFinder
             var people = new List<Person>();
             foreach(var mvpSearchResult in resultPage)
             {
-                people.Add(new Person
-                {
-                    FirstName = mvpSearchResult.FirstName.Value,
-                    LastName = mvpSearchResult.LastName.Value,
-                    Country = mvpSearchResult.Country.Name,
-                    Email = mvpSearchResult.Email.Value,
-                    MvpCategory = mvpSearchResult.Awards.TargetItems.FirstOrDefault().Field.TargetItem.Field.Value,
-                    MvpYear = mvpSearchResult.Awards.TargetItems.FirstOrDefault().Parent.Name,
-                    Url = mvpSearchResult.Path
-                });
+                people.Add(GeneratePersonRecord(mvpSearchResult));
             }
 
             return new PeopleSearchResults
@@ -57,6 +48,21 @@ namespace Mvp.Feature.People.PeopleFinder
                 PageSize = pageSize,
                 TotalCount = mvps.Count(),
                 People = people
+            };
+        }
+
+        private static Person GeneratePersonRecord(MvpSearchResult mvpSearchResult)
+        {
+            var latestAward = mvpSearchResult.Awards.TargetItems.OrderBy(x => x.Parent.Name).First();
+            return new Person
+            {
+                FirstName = mvpSearchResult.FirstName.Value,
+                LastName = mvpSearchResult.LastName.Value,
+                Country = mvpSearchResult.Country.Name,
+                Email = mvpSearchResult.Email.Value,
+                MvpCategory = latestAward.Field.TargetItem.Field.Value,
+                MvpYear = latestAward.Parent.Name,
+                Url = mvpSearchResult.Path
             };
         }
 
