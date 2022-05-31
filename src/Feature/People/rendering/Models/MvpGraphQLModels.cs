@@ -9,8 +9,11 @@ namespace Mvp.Feature.People.Models
 
     public class SearchParams
     {
-        [FromQuery(Name="pg")]
+        [FromQuery(Name = Constants.QueryParameters.Page)]
         public int CurrentPage { get; set; }
+
+        [FromQuery(Name = Constants.QueryParameters.Query)]
+        public string Keyword { get; set; }
 
         //public string Language { get; set; }
         //public string RootItemId { get; set; }

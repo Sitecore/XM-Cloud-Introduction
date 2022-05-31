@@ -26,7 +26,7 @@ namespace Mvp.Feature.People.PeopleFinder
             this.graphQLClientFactory = graphQLClientFactory;
             this.memoryCache = memoryCache;
             this.logger = logger;
-            Configuration = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>(); 
+            Configuration = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
         }
 
         public async Task<PeopleSearchResults> FindPeople(SearchParams searchParams)
@@ -34,10 +34,11 @@ namespace Mvp.Feature.People.PeopleFinder
             var pageSize = 21;
             var currentPage = searchParams.CurrentPage > 1 ? searchParams.CurrentPage : 1;
             var mvps = await GetAllMvps();
-            var resultPage = ApplyPaging(mvps, currentPage, pageSize);
+            var filteredMvps = ApplyFiltering(mvps, searchParams);
+            var resultPage = ApplyPaging(filteredMvps, currentPage, pageSize);
 
             var people = new List<Person>();
-            foreach(var mvpSearchResult in resultPage)
+            foreach (var mvpSearchResult in resultPage)
             {
                 people.Add(GeneratePersonRecord(mvpSearchResult));
             }
@@ -45,10 +46,16 @@ namespace Mvp.Feature.People.PeopleFinder
             return new PeopleSearchResults
             {
                 CurrentPage = currentPage,
-                PageSize = pageSize,
-                TotalCount = mvps.Count(),
+                PageSize = filteredMvps.Count < pageSize ? filteredMvps.Count : pageSize,
+                TotalCount = filteredMvps.Count,
                 People = people
             };
+        }
+
+        private IList<MvpSearchResult> ApplyFiltering(IList<MvpSearchResult> mvps, SearchParams searchParams)
+        {
+            var keyword = string.IsNullOrWhiteSpace(searchParams.Keyword) ? searchParams.Keyword : searchParams.Keyword.ToLowerInvariant();
+            return mvps.Where(x => string.IsNullOrWhiteSpace(searchParams.Keyword) || x.FirstName.Value.ToLowerInvariant().Contains(keyword) || x.LastName.Value.ToLowerInvariant().Contains(keyword)).ToList();
         }
 
         private static Person GeneratePersonRecord(MvpSearchResult mvpSearchResult)
