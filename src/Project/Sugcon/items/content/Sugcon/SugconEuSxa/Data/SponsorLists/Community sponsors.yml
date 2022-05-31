@@ -1,0 +1,36 @@
+﻿---
+ID: "7b236724-e2e0-4c3c-aa9f-10e38bf0bc94"
+Parent: "cb1c3978-c44b-4117-a5f5-8793c7440438"
+Template: "50fcc4a2-bea5-40a8-abf3-552d533994ec"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Data/SponsorLists/Community sponsors
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220523T075825Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "67df81d9-f337-488f-ba09-22758a17b362"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "c47a29aa-bc65-4ef2-9376-a463edd5a998"
+      Hint: Sponsors
+      Value: |
+        {4B7DD93F-DF90-429E-B298-E44992305EC9}
+        {321D5D4B-EA7F-4F40-925B-B7941E349A9B}
+        {239812FB-56D0-4F67-832D-C7FB3262916F}
+        {A62FFD35-AE4C-4B1D-95BC-A3F751AE22EC}
+        {E458FFCB-B38D-4B36-93A5-CAEF9409CCEC}
+        {71FB7F43-CCAA-4AF4-AB09-6D0E5CCB9D0A}
+        {BA07414C-0BFE-4200-ADAF-47BB8066347F}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220523T075843Z
+    - ID: "ee414f1c-1598-4d93-af66-61ce0ac6705a"
+      Hint: Category
+      Value: Community sponsors

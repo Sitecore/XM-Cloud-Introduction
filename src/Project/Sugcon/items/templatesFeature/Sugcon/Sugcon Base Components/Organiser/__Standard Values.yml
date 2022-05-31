@@ -1,0 +1,34 @@
+﻿---
+ID: "3034d5de-593a-416c-a051-206ce18b9cdd"
+Parent: "040dffbf-bdb3-4424-a867-49e927d9c3e5"
+Template: "040dffbf-bdb3-4424-a867-49e927d9c3e5"
+Path: /sitecore/templates/Feature/Sugcon/Sugcon Base Components/Organiser/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220520T143845Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e4ae1a4b-cfad-4543-90c1-9e9a203ae149"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220520T143848Z
+    - ID: "ed25e568-5800-4b53-b376-b2e58c217665"
+      Hint: Name
+      Value: $name

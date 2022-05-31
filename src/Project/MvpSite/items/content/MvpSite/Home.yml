@@ -34,67 +34,21 @@ SharedFields:
           s:key="main"
           s:md="{4C14AEC2-35C5-4A40-98D1-7A75A8452521}" />
         <r
-          uid="{7A160402-8C9A-4882-95C5-2596B9DCD261}"
+          uid="{B8A1E4C2-37EF-4DA0-BCE1-FA6DEDB76C3F}"
           p:after="p[@uid='{3BDBFD4A-EED5-4A57-8BC5-6EF79ACA1131}']"
           s:ds="{C4DADD5E-1521-4C6D-AFCE-39D237751541}"
           s:id="{A4F28B31-5D18-4158-92AB-F4D2ECA6D2BE}"
           s:par=""
-          s:ph="header" />
+          s:ph="header"
+          s:ccb="Clear on publish" />
         <r
-          uid="{5B5FFD19-552C-4A6D-BB5F-0D2A24DD1839}"
-          p:after="r[@uid='{7A160402-8C9A-4882-95C5-2596B9DCD261}']"
+          uid="{CA8F95CD-A51A-45EF-9119-DC08517DFC19}"
+          p:after="*[1=2]"
           s:ds="{94DE9AC3-A9F7-40AB-AE90-ACDA364B9C40}"
           s:id="{C9593FF9-14AC-4C8E-B217-D85C05ADEAD7}"
           s:par=""
           s:ph="header"
           s:ccb="Clear on publish" />
-        <r
-          uid="{614EB698-E1DF-4C30-A1DC-10CCF907F36F}"
-          p:after="r[@uid='{5B5FFD19-552C-4A6D-BB5F-0D2A24DD1839}']"
-          s:ds="{537DEF5C-B38F-4356-8FCC-24E4838C2319}"
-          s:id="{DF79486F-2E7B-4EC8-8EFC-C9E6DFE813B7}"
-          s:par=""
-          s:ph="main" />
-        <r
-          uid="{AD5E24E0-631B-423E-A835-B62F51AF661B}"
-          p:after="r[@uid='{614EB698-E1DF-4C30-A1DC-10CCF907F36F}']"
-          s:ds="{C6614898-2F30-4B46-BF5B-C72CD2CFDD68}"
-          s:id="{475CBA5E-EE80-4275-9758-D280F0781942}"
-          s:par=""
-          s:ph="main" />
-        <r
-          uid="{CF3B6A26-0B5D-4679-9FCA-40547BEBB126}"
-          p:after="r[@uid='{AD5E24E0-631B-423E-A835-B62F51AF661B}']"
-          s:ds="{A7CC481A-B6C8-4604-B19F-50844263EE3E}"
-          s:id="{DB83F81C-40A4-45C1-9D66-91A99368B6C6}"
-          s:par=""
-          s:ph="main" />
-        <r
-          uid="{D2DE8BE0-C911-46EB-9A32-DB8B4863AB2B}"
-          p:after="r[@uid='{CF3B6A26-0B5D-4679-9FCA-40547BEBB126}']"
-          s:id="{57805937-D345-4A28-8DDF-C62EE43D8EBA}"
-          s:ph="main" />
-        <r
-          uid="{CAB9C343-0F22-4C4A-B9FD-983D952391C3}"
-          p:after="r[@uid='{D2DE8BE0-C911-46EB-9A32-DB8B4863AB2B}']"
-          s:ds="{5E3A3F5B-CBF7-4D13-8A39-2BC9D5FD3F22}"
-          s:id="{A921AEC7-5DF7-4F8E-835A-6A5111CF94CF}"
-          s:par="ContentListType=%7B92DD658A-76BE-437A-86E4-589DF627FBCC%7D&amp;ContentListLimit"
-          s:ph="column-container"
-          s:ccb="Clear on publish" />
-        <r
-          uid="{79F96B2D-698D-4B48-AC4C-1F1B71157C5F}"
-          p:after="r[@uid='{CAB9C343-0F22-4C4A-B9FD-983D952391C3}']"
-          s:ds="{A1943E00-819F-41F7-A8C2-86F65E7E8306}"
-          s:id="{437CCC09-AB5D-47B3-96D7-2B05BDFF5324}"
-          s:par=""
-          s:ph="footer"
-          s:ccb="Clear on publish" />
-        <r
-          uid="{7A931726-B26B-44A0-BCE2-7A1023245601}"
-          p:after="*[1=2]"
-          s:id="{00147A0F-476B-4C99-8A10-E6B4FCFCECE0}"
-          s:ph="header-signin" />
       </d>
     </r>
 Languages:
@@ -148,7 +102,7 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\rob.earlam@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
       Value: 20220524T002053Z

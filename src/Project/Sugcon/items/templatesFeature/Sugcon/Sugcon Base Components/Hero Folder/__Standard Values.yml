@@ -1,0 +1,33 @@
+﻿---
+ID: "c5734117-5e27-4668-b8d6-65c488d741ad"
+Parent: "13733fe4-8ad5-46ef-9997-0337b4463c14"
+Template: "13733fe4-8ad5-46ef-9997-0337b4463c14"
+Path: /sitecore/templates/Feature/Sugcon/Sugcon Base Components/Hero Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {A9668AAD-7E76-49A5-978A-BFF6BF8A8A6F}
+    {13733FE4-8AD5-46EF-9997-0337B4463C14}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bd611e51-8c97-422c-8a1b-2f05e7a1abdb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220520T142641Z

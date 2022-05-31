@@ -1,0 +1,38 @@
+﻿---
+ID: "f148dae8-02a1-4842-ab57-41a50d465b88"
+Parent: "724d326d-c5d1-4b14-b56b-599c4d4b7e09"
+Template: "040dffbf-bdb3-4424-a867-49e927d9c3e5"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Data/Organisers/Anna Brundel
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0a82b3e3-f9ac-42e6-a7ac-4ffd422a0b4d"
+      Hint: LinkedInLink
+      Value: |
+        <link text="LinkedIn" linktype="external" url="https://www.linkedin.com/in/anna-br%C3%BCndel-a05455196/" anchor="" target="" />
+    - ID: "1d574813-214f-4fc2-98ff-8ffd36a5aed1"
+      Hint: TwitterLink
+      Value: |
+        <link text="Twitter" linktype="external" url="https://twitter.com/_anbrue" anchor="" target="" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220523T073940Z
+    - ID: "3d3d3ea8-0bc8-499d-8ae2-289d4dad9ce7"
+      Hint: Image
+      Value: |
+        <image mediaid="{23B4D6A4-ADA7-4C5C-A347-0B566ED25CB3}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f013c1ab-9be5-4ab6-a507-10b6c9a1eb03"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220523T074732Z
+    - ID: "ed25e568-5800-4b53-b376-b2e58c217665"
+      Hint: Name
+      Value: Anna Bründel

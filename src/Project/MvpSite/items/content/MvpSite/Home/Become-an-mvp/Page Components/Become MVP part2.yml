@@ -18,21 +18,20 @@ Languages:
       Hint: Content
       Value: |
         <h3>How do I invite or recommend someone?</h3>
-        <p>Previously we operated an invitation and recommendation system. Currently we run the MVP applications without the need for invitation and recommendation in the name of inclusivity.</p>
-        <p>Everything you need to apply is previous contribution to the community and a Sitecore ID. If you do not have a Sitecore ID you can <a href="https://www.sitecore.com/account/signup" title="Sitecore ID sign up" target="_blank">sign up on our website</a>. If you forgot your Sitecore ID password you can <a href="https://okta.sitecore.com/signin/forgot-password" title="Sitecore ID forgot password" target="_blank">reset it here</a>.</p>
+        <p>If you are a current Sitecore MVP you have been invited to create an account on our site. Please log in and fill in the details about the person you want to nominate and write your recommendation. If the person is already invited we will save your recommendation. If you invite someone new we will send an invitation email describing the process.</p>
         <p>&nbsp;</p>
         <h3>What is the timeline of the selection process?</h3>
-        <p>The nomination is open during November, for the exact dates please follow <a rel="noopener noreferrer" href="https://twitter.com/SitecoreMVP" title="@SitecoreMVP" target="_blank">https://twitter.com/SitecoreMVP</a>. We will review all the nominations and recommendations during December and we will finalize the award winners early January. The announcement of the Sitecore MVP Awards will be by the end of January.</p>
+        <p>The nomination is open during November, for the exact dates please follow <a rel="noopener noreferrer" href="https://twitter.com/SitecoreMVP" target="_blank">https://twitter.com/SitecoreMVP</a>. We will review all the nominations and recommendations during December and we will finalize the award winners early January. The announcement of the Sitecore MVP Awards will be by the end of January.</p>
         <p>&nbsp;</p>
         <h3>What if I have additional questions?</h3>
-        <p>If you have any additional questions about the Sitecore MVP Program or nominations please create a topic on the <a href="https://community.sitecore.com/community?id=community_forum&sys_id=671511531b357810486a4083b24bcb62" title="Sitecore Community Forum" target="_blank">General Discussion forums</a> or ask a question on <a href="https://sitecore.stackexchange.com/questions/tagged/mvp" title="Sitecore StackExchange" target="_blank">Sitecore StackExchange</a>.</p>
+        <p>If you have any additional questions about the MVP Program or nominations please create a topic on the&nbsp;<a rel="noopener noreferrer" href="https://community.sitecore.net/general/f/11" target="_blank">General Discussion forums</a>&nbsp;or ask a question on <a rel="noopener noreferrer" href="https://sitecore.stackexchange.com/questions/tagged/mvp" target="_blank">Sitecore StackExchange</a>.</p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7281ab0b-d75f-4938-81bf-757303c64012"
+      Value: "f1f5677b-df62-4df2-8a31-1e91870eac73"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20211112T103650Z
+      Value: 20200721T123233Z

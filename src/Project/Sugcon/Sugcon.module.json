@@ -9,6 +9,11 @@
         },
         {
           "name": "components",
+          "path": "/sitecore/layout/Renderings/Feature/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "componentsProject",
           "path": "/sitecore/layout/Renderings/Project/Sugcon",
           "allowedPushOperations": "CreateUpdateAndDelete"
         },
@@ -45,6 +50,16 @@
         {
           "name": "modules",
           "path": "/sitecore/system/Settings/Feature/Sugcon",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "apikeySugconEu",
+          "path": "/sitecore/system/Settings/Services/API Keys/SugconEuSxa",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "apikeySugconAnz",
+          "path": "/sitecore/system/Settings/Services/API Keys/SugconAnzSxa",
           "allowedPushOperations": "CreateUpdateAndDelete"
         },
         {

@@ -1,0 +1,45 @@
+﻿---
+ID: "e30ae977-01dd-467c-b068-505b244832ad"
+Parent: "1ccb3dec-4bae-4377-9b7d-e382dd75b7ea"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Home/Test/Data/Text 3
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220524T095852Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Organizing Committee and Sitecore would like to thank all SUGCON Europe 2022 attendees!</h2>
+        <p> </p>
+        <p>&nbsp;</p>
+        <p>We hope that you found the conference to be informative, helpful, inspirational, and fun.</p>
+        <p>We would like to thank all speakers for your valuable insights, tips and tricks, know-how, and overall outstanding content! We extremely appreciate уour efforts in sharing your experience with the community.</p>
+        <p>We want to express our gratitude to all sponsors. Your support made SUGCON Europe 2022 a success!</p>
+        <p>In order to make next year&rsquo;s conference even more successful, we request that you fill out the post-event survey. We thank you in advance for your comments and suggestions and we will do our best to make SUGCON Europe 2023 even better.</p>
+        <p><strong>Sitecore Community is truly the best in the world! See you next year!</strong></p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f25f8388-7a05-44f4-9ef6-2c4fd300e6d1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220524T095942Z

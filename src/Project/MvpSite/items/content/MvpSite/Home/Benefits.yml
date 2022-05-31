@@ -7,29 +7,30 @@ SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s"
-      p:p="1">
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
-        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{1AE49D12-8DA1-4FBD-92FF-887B01C02BB5}">
         <r
-          uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}">
-          <p:d />
-        </r>
+          ds="{C4DADD5E-1521-4C6D-AFCE-39D237751541}"
+          id="{A4F28B31-5D18-4158-92AB-F4D2ECA6D2BE}"
+          par=""
+          ph="header"
+          uid="{19CCAD6A-4C17-48CC-B78A-5CE8415E279F}" />
         <r
-          uid="{C5AB5BBD-0B5E-4B13-81CC-B85F6793A806}"
-          p:after="r[@uid='{D842E8EB-450E-4348-A54A-E60CF16E9E52}']"
-          s:ds="{D1807AB8-F8DB-4F3D-9FA6-AEA9590076B5}"
-          s:id="{248BDE7D-D010-4D02-95E8-2578A03A2D2D}"
-          s:par=""
-          s:ph="main" />
+          id="{C9593FF9-14AC-4C8E-B217-D85C05ADEAD7}"
+          ph="header"
+          uid="{D842E8EB-450E-4348-A54A-E60CF16E9E52}" />
         <r
-          uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}"
-          p:after="r[@uid='{C5AB5BBD-0B5E-4B13-81CC-B85F6793A806}']" />
+          ds="{D1807AB8-F8DB-4F3D-9FA6-AEA9590076B5}"
+          id="{248BDE7D-D010-4D02-95E8-2578A03A2D2D}"
+          par=""
+          ph="main"
+          uid="{C5AB5BBD-0B5E-4B13-81CC-B85F6793A806}" />
         <r
-          uid="{AB1D257E-1F4B-41CA-88C1-381A4C2411F0}"
-          p:after="*[1=2]"
-          s:id="{00147A0F-476B-4C99-8A10-E6B4FCFCECE0}"
-          s:ph="header-signin" />
+          id="{437CCC09-AB5D-47B3-96D7-2B05BDFF5324}"
+          ph="footer"
+          uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}" />
       </d>
     </r>
 Languages:
@@ -74,17 +75,14 @@ Languages:
       Value: 20200604T042302Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fe63ebbd-714a-43d2-b6a4-d1d6ab8b6321"
+      Value: "47370227-8504-47d3-bd67-f08c3b6c2201"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Benefits
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rob
+        sitecore\admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220406T045727Z
-    - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
-      Hint: IncludeInMenu
-      Value: 
+      Value: 20200721T141811Z

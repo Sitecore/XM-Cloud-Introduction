@@ -7,29 +7,30 @@ SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:p="p" xmlns:s="s"
-      p:p="1">
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
-        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{1AE49D12-8DA1-4FBD-92FF-887B01C02BB5}">
         <r
-          uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}">
-          <p:d />
-        </r>
+          ds="{C4DADD5E-1521-4C6D-AFCE-39D237751541}"
+          id="{A4F28B31-5D18-4158-92AB-F4D2ECA6D2BE}"
+          par=""
+          ph="header"
+          uid="{19CCAD6A-4C17-48CC-B78A-5CE8415E279F}" />
         <r
-          uid="{EA5CEF36-282B-4254-84FB-86CCD721CFA1}"
-          p:after="r[@uid='{D842E8EB-450E-4348-A54A-E60CF16E9E52}']"
-          s:ds="{7E27288D-9261-45D5-9D8B-705116563AC8}"
-          s:id="{248BDE7D-D010-4D02-95E8-2578A03A2D2D}"
-          s:par=""
-          s:ph="main" />
+          id="{C9593FF9-14AC-4C8E-B217-D85C05ADEAD7}"
+          ph="header"
+          uid="{D842E8EB-450E-4348-A54A-E60CF16E9E52}" />
         <r
-          uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}"
-          p:after="r[@uid='{EA5CEF36-282B-4254-84FB-86CCD721CFA1}']" />
+          ds="{7E27288D-9261-45D5-9D8B-705116563AC8}"
+          id="{248BDE7D-D010-4D02-95E8-2578A03A2D2D}"
+          par=""
+          ph="main"
+          uid="{EA5CEF36-282B-4254-84FB-86CCD721CFA1}" />
         <r
-          uid="{BC97B8B5-67B1-4CCA-A391-6B5E7ACCBA32}"
-          p:after="*[1=2]"
-          s:id="{00147A0F-476B-4C99-8A10-E6B4FCFCECE0}"
-          s:ph="header-signin" />
+          id="{437CCC09-AB5D-47B3-96D7-2B05BDFF5324}"
+          ph="footer"
+          uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}" />
       </d>
     </r>
 Languages:

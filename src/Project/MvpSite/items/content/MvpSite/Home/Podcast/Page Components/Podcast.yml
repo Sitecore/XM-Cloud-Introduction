@@ -23,17 +23,17 @@ Languages:
         <image mediaid="{6EAF7720-C188-412D-94A7-AE393B3E0BCF}" alt="Listen to the podcast" height="333" width="500" hspace="" vspace="" />
     - ID: "53ee3e16-ba10-4013-959e-9a652a533845"
       Hint: HeroSubtitle
-      Value: LISTEN TO OUR MVPs
+      Value: LISTEN TO OUR MVPS
     - ID: "69db2d7e-db5e-4a02-8580-0bcfb77b5482"
       Hint: HeroDescription
       Value: "Would you like to learn more about our MVPs? Listen our Podcast where we introduce the MVPs"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "e2f48f86-c5fe-464b-ad39-df35c1b48210"
+      Value: "fb906b45-ad42-4ae7-ad0e-307462eee2fe"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20211104T132038Z
+      Value: 20200728T081056Z

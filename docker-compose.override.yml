@@ -49,7 +49,7 @@ services:
       PUBLIC_URL: "https://${SUGCON_ANZ_HOST}"
       JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
       GRAPH_QL_ENDPOINT: "${GRAPH_QL_ENDPOINT}"
-      SITECORE_API_KEY: "${SITECORE_API_KEY}"
+      SITECORE_API_KEY: "${SUGCONANZ_API_KEY}"
     depends_on:
       - cm
       - nodejs
