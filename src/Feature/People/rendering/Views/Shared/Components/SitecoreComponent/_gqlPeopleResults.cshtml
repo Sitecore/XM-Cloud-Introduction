@@ -1,0 +1,36 @@
+﻿@using Mvp.Feature.People.Extensions
+@model Mvp.Feature.People.Models.PeopleSearchResults
+
+<div class="col-md-9 col-xs-12">
+                
+    <!--MVP Results Count-->
+    <div class="mvp-results-toolbar row">
+		<div class="mvp-results-summary">
+			Results: @Model.CurrentPage - @Model.PageSize of @Model.TotalCount
+		</div>
+    </div>
+
+    <!--MVP Results Cards-->
+    <div class="mvp-results-entries row">
+        @foreach (var person in Model.People)
+		{
+            <div class="col-lg-4 col-sm-6 col-xs-12 card--wrapper">
+                <div class="card rounded-0">
+                    <a class="content">
+                        <!--Get users latest MVP year-->
+                        <div class="mvp-year">@person.MvpYear</div>
+                        <img class="card-img-top" src="@person.Email.ToGravatar("253", "https://mvp.sitecore.net/images/mvp-base-user-grey.png")" alt="@person.FirstName @person.LastName Sitecore MVP" />
+                        <div class="card-body">
+                            <div class="mvp-category">@person.MvpCategory</div>
+                            <h5 class="card-title">@person.FirstName @person.LastName </h5>
+                            <p class="card-text">@person.Country</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+
+    @await Html.PartialAsync("_gqlPeopleResultsPagination.cshtml", Model)
+
+</div>

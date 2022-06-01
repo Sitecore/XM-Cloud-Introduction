@@ -1,0 +1,37 @@
+﻿---
+ID: "98238fb9-cb58-43d1-bd90-664a1df0f85c"
+Parent: "d18d6ffe-def4-4d7b-aea0-13f06b9030a3"
+Template: "1fc8657f-f737-47d6-a52b-67e8bff8a390"
+Path: /sitecore/content/MvpSite/MVP Repository/Countries/Mauritius
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "09821e82-2ad7-49f0-b4cd-e4abf8d90983"
+      Hint: Name
+      Value: Mauritius
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211117T192336Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\tamas
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\tamas
+    - ID: "89d4f494-dcbd-408c-ad2b-2b0372d73ca8"
+      Hint: Description
+      Value: Mauritius
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6bc5bcc5-e5f3-4b9e-8853-a856291f2099"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\tamas
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20211117T192336Z
