@@ -1,14 +1,7 @@
-import { Text, Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
-import { ComponentProps } from 'lib/component-props';
+import { withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { useEffect, useState } from 'react';
 
-type AgendaProps = ComponentProps & {
-  fields: {
-    
-  };
-};
-
-const Agenda = (props: AgendaProps): JSX.Element => {
+const Agenda = (): JSX.Element => {
   const htmlContent = '';
   const [token, setToken] = useState('');
   useEffect(() => {
@@ -28,7 +21,6 @@ const Agenda = (props: AgendaProps): JSX.Element => {
       </div>
     </>
   );
-
 };
 
-export default withDatasourceCheck()<AgendaProps>(Agenda);
+export default withDatasourceCheck()(Agenda);
