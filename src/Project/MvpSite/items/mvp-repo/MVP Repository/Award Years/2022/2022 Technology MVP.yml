@@ -1,0 +1,26 @@
+﻿---
+ID: "8c85ceac-1bae-49d1-9aa1-5c6ccd4b7318"
+Parent: "1e1fe6b8-eb5c-476c-baae-37ac293524a1"
+Template: "7007db97-c724-464b-a735-b301844f7d82"
+Path: /sitecore/content/MvpSite/MVP Repository/Award Years/2022/2022 Technology MVP
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211013T080637Z
+    - ID: "7fadee03-359c-4e85-a762-027f4acf95c8"
+      Hint: Type
+      Value: "{DB39FC29-E639-4BE5-AE17-14428301CD11}"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5f25f964-7721-430d-9bbe-a9872d3a2ec6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20211104T210733Z

@@ -1,0 +1,29 @@
+﻿---
+ID: "ad3bf5cf-5f7f-47ca-9853-c1a823bbf979"
+Parent: "d18d6ffe-def4-4d7b-aea0-13f06b9030a3"
+Template: "1fc8657f-f737-47d6-a52b-67e8bff8a390"
+Path: /sitecore/content/MvpSite/MVP Repository/Countries/Pakistan
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "09821e82-2ad7-49f0-b4cd-e4abf8d90983"
+      Hint: Name
+      Value: Pakistan
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211104T194551Z
+    - ID: "89d4f494-dcbd-408c-ad2b-2b0372d73ca8"
+      Hint: Description
+      Value: PK
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "3f7b7200-27e9-4506-af6c-476919fc69d2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20211104T194551Z
