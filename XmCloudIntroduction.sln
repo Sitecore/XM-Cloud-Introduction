@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Sugconeu.Platform",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.SugconEuSxa.Platform", "src\Project\SugconEuSxa\platform\Project.SugconEuSxa.Platform.csproj", "{36C0B7DB-F73E-4E34-A70D-C57BCFDA1A25}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Environment.Platform", "src\Environment\platform\Mvp.Environment.Platform.csproj", "{A80EEDEA-3A96-4A2D-ACC3-76E53560E9CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{36C0B7DB-F73E-4E34-A70D-C57BCFDA1A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36C0B7DB-F73E-4E34-A70D-C57BCFDA1A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36C0B7DB-F73E-4E34-A70D-C57BCFDA1A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A80EEDEA-3A96-4A2D-ACC3-76E53560E9CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A80EEDEA-3A96-4A2D-ACC3-76E53560E9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A80EEDEA-3A96-4A2D-ACC3-76E53560E9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A80EEDEA-3A96-4A2D-ACC3-76E53560E9CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

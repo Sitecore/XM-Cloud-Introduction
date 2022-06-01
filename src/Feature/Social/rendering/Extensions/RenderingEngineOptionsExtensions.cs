@@ -8,9 +8,10 @@ namespace Mvp.Feature.Social.Extensions
 {
     public static class RenderingEngineOptionsExtensions
     {
-        public static void AddFeatureSocialServices(this IServiceCollection services)
+        public static IServiceCollection AddFeatureSocialServices(this IServiceCollection services)
         {
             services.AddTransient<IFeedReader, RssFeedReader>();
+            return services;
         }
 
         public static RenderingEngineOptions AddFeatureSocial(this RenderingEngineOptions options)

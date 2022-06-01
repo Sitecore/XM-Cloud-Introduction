@@ -10,8 +10,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Mvp.Feature.BasicContent.Extensions;
 using Mvp.Feature.Navigation.Extensions;
+using Mvp.Feature.People.Exntesions;
 using Mvp.Feature.Social.Extensions;
-using Mvp.Project.MvpSite.Configuration;
+using Mvp.Foundation.Configuration.Rendering.AppSettings;
 using Sitecore.AspNet.ExperienceEditor;
 using Sitecore.AspNet.RenderingEngine.Extensions;
 using Sitecore.AspNet.RenderingEngine.Localization;
@@ -25,14 +26,14 @@ namespace Mvp.Project.MvpSite.Rendering
         private static readonly string _defaultLanguage = "en";
         public IConfiguration DotNetConfiguration { get; }
         public IWebHostEnvironment CurrentEnvironment { get; }
-        private SitecoreOptions Configuration { get; }
+        private MvpSiteSettings Configuration { get; }
 
         public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             // Example of using ASP.NET Core configuration binding for various Sitecore Rendering Engine settings.
             // Values can originate in appsettings.json, from environment variables, and more.
             // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1
-            Configuration = configuration.GetSection(SitecoreOptions.Key).Get<SitecoreOptions>();
+            Configuration = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
             DotNetConfiguration = configuration;
             CurrentEnvironment = env;
         }
@@ -62,6 +63,7 @@ namespace Mvp.Project.MvpSite.Rendering
                     .AddFeatureNavigation()
                     .AddFeatureBasicContent()
                     .AddFeatureSocial()
+                    .AddFeaturePeople()
                     .AddDefaultPartialView("_ComponentNotFound");
               })
               // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
@@ -72,7 +74,8 @@ namespace Mvp.Project.MvpSite.Rendering
               .WithExperienceEditor();
 
             // Register MVP Functionality specific services
-            services.AddFeatureSocialServices();
+            services.AddFeatureSocialServices()
+                    .AddFeaturePeopleServices();
             
             services.AddSession();
         }

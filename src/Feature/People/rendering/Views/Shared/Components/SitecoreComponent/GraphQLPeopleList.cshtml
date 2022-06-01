@@ -1,0 +1,51 @@
+@using Mvp.Feature.People.Extensions
+@model Mvp.Feature.People.Models.SearchParams
+@inject Mvp.Feature.People.PeopleFinder.IPeopleFinder PeopleFinder
+
+@{
+    var searchResults = await PeopleFinder.FindPeople(Model);
+}
+
+<!--Banner Section-->
+<section class="component hero bg-white small no-overhang" data-component-name="Hero Banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 side-content">
+                <p class="top">Directory of</p>
+                <h1 class="static">Sitecore MVPs</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--MVP Search-->
+<section id="mvp-search" class="bg-white" data-component-name="MVP Search">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 side-content">
+                <input type="text" id="search" class="form-control mb-0" placeholder="Search..." value="@Model.Keyword">
+                <a href="#!"id="gosearch" class="btn btn-flat" onclick="UpdateUrlWithQuery()"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Search Results -->
+<section class="bg-white" data-component-name="MVP Results">
+    <div class="container">
+        <div class="row">
+
+            @await Html.PartialAsync("_gqlPeopleFacets.cshtml", searchResults)
+            
+            @await Html.PartialAsync("_gqlPeopleResults.cshtml", searchResults)
+
+         </div>
+     </div>
+</section>
+
+<script>
+	function UpdateUrlWithQuery() {
+		var urlformat = decodeURIComponent('@this.Context.Request.UpdateKeywordInUrl($"q", "KEYYWORD")');
+		window.location.assign(urlformat.replace("KEYYWORD", document.getElementById("search").value));
+	}
+</script>
