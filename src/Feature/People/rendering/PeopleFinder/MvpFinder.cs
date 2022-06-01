@@ -37,9 +37,10 @@ namespace Mvp.Feature.People.PeopleFinder
             var pageSize = 21;
             var currentPage = searchParams.CurrentPage > 1 ? searchParams.CurrentPage : 1;
             var mvps = await GetAllMvps();
-            var filteredMvps = ApplyFiltering(mvps, searchParams);
-            var facets = facetBuilder.CalculateFacets(filteredMvps, searchParams);          
-            var resultPage = ApplyPaging(filteredMvps, currentPage, pageSize);
+            var filteredMvps = ApplyFilteringToMvpListing(mvps, searchParams);
+            var facets = facetBuilder.CalculateFacets(filteredMvps, searchParams);
+            var filteredAndFacetedMvps = ApplyFacetingToMvpListing(filteredMvps, searchParams);
+            var resultPage = ApplyPaging(filteredAndFacetedMvps, currentPage, pageSize);
 
             var people = new List<Person>();
             foreach (var mvpSearchResult in resultPage)
@@ -50,14 +51,57 @@ namespace Mvp.Feature.People.PeopleFinder
             return new PeopleSearchResults
             {
                 CurrentPage = currentPage,
-                PageSize = filteredMvps.Count < pageSize ? filteredMvps.Count : pageSize,
-                TotalCount = filteredMvps.Count,
+                PageSize = filteredAndFacetedMvps.Count < pageSize ? filteredAndFacetedMvps.Count : pageSize,
+                TotalCount = filteredAndFacetedMvps.Count,
                 People = people,
                 Facets = facets
             };
         }
 
-        private IList<MvpSearchResult> ApplyFiltering(IList<MvpSearchResult> mvps, SearchParams searchParams)
+        private IList<MvpSearchResult> ApplyFacetingToMvpListing(IList<MvpSearchResult> mvps, SearchParams searchParams)
+        {
+            if (string.IsNullOrWhiteSpace(searchParams.Award) && string.IsNullOrWhiteSpace(searchParams.Year) && string.IsNullOrWhiteSpace(searchParams.Country))
+                return mvps;
+
+            var selectedAwards = string.IsNullOrWhiteSpace(searchParams.Award) ? Array.Empty<string>() : searchParams.Award.Split('|');
+            var selectedYears = string.IsNullOrWhiteSpace(searchParams.Year) ? Array.Empty<string>() : searchParams.Year.Split('|');
+            var selectedCountries = string.IsNullOrWhiteSpace(searchParams.Country) ? Array.Empty<string>() : searchParams.Country.Split('|');
+
+            var facetedMvps = new List<MvpSearchResult>();
+            foreach (var mvp in mvps)
+            {
+                if (DoesMvpMatchSelectedFacets(selectedAwards, selectedYears, selectedCountries, mvp))
+                    facetedMvps.Add(mvp);
+            }
+            return facetedMvps;           
+        }
+
+        private static bool DoesMvpMatchSelectedFacets(string[] selectedAwards, string[] selectedYears, string[] selectedCountries, MvpSearchResult mvp)
+        {
+            return MvpMatchesAwardTypeFacet(selectedAwards, mvp) 
+                && MvpMatchesYearFacet(selectedYears, mvp) 
+                && MvpMatchesCountryFacet(selectedCountries, mvp);
+        }
+
+        private static bool MvpMatchesCountryFacet(string[] selectedCountries, MvpSearchResult mvp)
+        {
+            return selectedCountries.Length == 0 
+                || selectedCountries.Any(x => x.ToLowerInvariant() == mvp.Country.TargetItem?.Name.ToLowerInvariant());
+        }
+
+        private static bool MvpMatchesYearFacet(string[] selectedYears, MvpSearchResult mvp)
+        {
+            return selectedYears.Length == 0 
+                || mvp.Awards.TargetItems.Any(x => selectedYears.Any(y => y.ToLowerInvariant() == x.Parent.Name.ToLowerInvariant()));
+        }
+
+        private static bool MvpMatchesAwardTypeFacet(string[] selectedAwards, MvpSearchResult mvp)
+        {
+            return selectedAwards.Length == 0 
+                || mvp.Awards.TargetItems.Any(x => selectedAwards.Any(y => y.ToLowerInvariant() == x.Field.TargetItem.Field.Value.ToLowerInvariant()));
+        }
+
+        private IList<MvpSearchResult> ApplyFilteringToMvpListing(IList<MvpSearchResult> mvps, SearchParams searchParams)
         {
             var keyword = string.IsNullOrWhiteSpace(searchParams.Keyword) ? searchParams.Keyword : searchParams.Keyword.ToLowerInvariant();
             return mvps.Where(x => string.IsNullOrWhiteSpace(searchParams.Keyword) || x.FirstName.Value.ToLowerInvariant().Contains(keyword) || x.LastName.Value.ToLowerInvariant().Contains(keyword)).ToList();
