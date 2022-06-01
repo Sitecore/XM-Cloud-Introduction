@@ -1,4 +1,4 @@
-import { Text, Field, LinkField, Link, Image, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, RichText, Field, LinkField, Link, Image, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
   Headline: Field<string>;
@@ -31,7 +31,7 @@ export const Default = (props: CTAProps): JSX.Element => {
                 <Text field={props.fields.Headline} />
               </h3>
               <p>
-                <Text field={props.fields.Text} />
+                <RichText field={props.fields.Text} />
               </p>
               <Link field={props.fields.Link}></Link>
             </div>
