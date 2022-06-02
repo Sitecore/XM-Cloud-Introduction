@@ -12,7 +12,7 @@ services:
   sugcon-eu:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-sugcon-eu:${VERSION:-latest}
     build:
-      context: ./docker/build/sugcon-eu
+      context: ./docker/build/sugcon/sugcon-eu
       target: ${BUILD_CONFIGURATION}
       args:
         PARENT_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}

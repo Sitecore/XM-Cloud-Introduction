@@ -31,7 +31,7 @@ jobs:
       SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
     defaults:
       run:
-        working-directory: ./src/Project/SugconEuSite/rendering
+        working-directory: ./src/Project/Sugcon/SugconEuSxa
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
