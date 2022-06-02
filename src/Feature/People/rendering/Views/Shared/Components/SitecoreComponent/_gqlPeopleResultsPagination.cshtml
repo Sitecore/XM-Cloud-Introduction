@@ -1,0 +1,42 @@
+﻿@using Mvp.Feature.People.Extensions
+@model Mvp.Feature.People.Models.PeopleSearchResults
+
+
+<!--MVP Pagination-->
+<div class="mvp-pagination row">
+    <nav class="mx-auto" aria-label="MVP Pagination">
+		<ul class="pagination">
+			@if(Model.HasPreviousPage)
+            {
+				<li class="page-item page-previous">
+					<a class="page-link" href="@System.Net.WebUtility.UrlDecode(this.Context.Request.UpdatePagerInUrl("pg", (Model.CurrentPage-1).ToString()))" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+						<span class="sr-only">Previous</span>
+					</a>
+				</li>
+            }
+
+			@for (int i = Model.PagerStart; i <=Model.PagerEnd ;i++)
+            {
+				@if(i == Model.CurrentPage)
+				{
+					<li class="page-item active"><a class="page-link"  href="@System.Net.WebUtility.UrlDecode(this.Context.Request.UpdatePagerInUrl("pg", (i).ToString()))">@i</a></li>
+				}
+				else
+				{
+					<li class="page-item"><a class="page-link" href="@System.Net.WebUtility.UrlDecode(this.Context.Request.UpdatePagerInUrl("pg", (i).ToString()))">@i</a></li>
+				}
+            }
+
+			@if(Model.HasNextPage)
+            {
+				<li class="page-item page-next">
+					<a class="page-link" href="@System.Net.WebUtility.UrlDecode(this.Context.Request.UpdatePagerInUrl("pg", (Model.CurrentPage + 1).ToString()))" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+						<span class="sr-only">Next</span>
+					</a>
+				</li>
+            }
+		</ul>
+    </nav>
+</div>

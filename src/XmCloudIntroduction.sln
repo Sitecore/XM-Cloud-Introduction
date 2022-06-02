@@ -35,6 +35,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Social", "Social", "{06A25A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.Social.Rendering", "Feature\Social\rendering\Mvp.Feature.Social.Rendering.csproj", "{79D774C4-1B40-48E3-8F84-880A02A63E7D}"
 EndProject
+
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sugcon", "Sugcon", "{7B86B212-94E4-4175-B459-3D0A75A7244D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Sugcon.Platform", "Project\Sugcon\platform\Project.Sugcon.Platform.csproj", "{5FF0FB81-8059-49E2-AF0A-C5CB8798067A}"

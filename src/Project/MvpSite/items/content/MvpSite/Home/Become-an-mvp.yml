@@ -7,30 +7,38 @@ SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
-    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
       <d
-        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{1AE49D12-8DA1-4FBD-92FF-887B01C02BB5}">
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          ds="{C4DADD5E-1521-4C6D-AFCE-39D237751541}"
-          id="{A4F28B31-5D18-4158-92AB-F4D2ECA6D2BE}"
-          par=""
-          ph="header"
-          uid="{19CCAD6A-4C17-48CC-B78A-5CE8415E279F}" />
+          uid="{19CCAD6A-4C17-48CC-B78A-5CE8415E279F}">
+          <p:da
+            name="ccb" />
+        </r>
         <r
-          id="{C9593FF9-14AC-4C8E-B217-D85C05ADEAD7}"
-          ph="header"
-          uid="{D842E8EB-450E-4348-A54A-E60CF16E9E52}" />
+          uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}">
+          <p:d />
+        </r>
         <r
-          ds="{75982F95-92CE-4C19-826F-C56A021A4C22}"
-          id="{248BDE7D-D010-4D02-95E8-2578A03A2D2D}"
-          par=""
-          ph="main"
-          uid="{45EC9237-4FFB-4F7B-A137-AFFA1DCEE899}" />
+          uid="{D842E8EB-450E-4348-A54A-E60CF16E9E52}">
+          <p:da
+            name="ccb" />
+          <p:da
+            name="ds" />
+          <p:da
+            name="par" />
+        </r>
         <r
-          id="{437CCC09-AB5D-47B3-96D7-2B05BDFF5324}"
-          ph="footer"
-          uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}" />
+          uid="{45EC9237-4FFB-4F7B-A137-AFFA1DCEE899}"
+          p:after="r[@uid='{D842E8EB-450E-4348-A54A-E60CF16E9E52}']"
+          s:ds="{75982F95-92CE-4C19-826F-C56A021A4C22}"
+          s:id="{248BDE7D-D010-4D02-95E8-2578A03A2D2D}"
+          s:par=""
+          s:ph="main" />
+        <r
+          uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}"
+          p:after="*[1=2]" />
       </d>
     </r>
 Languages:
@@ -67,6 +75,11 @@ Languages:
               s:id="{AA449EA4-0695-4D4C-9CD3-E582738A355E}"
               s:ph="/main/page-overview-panel-{F4576948-2161-4055-A5FA-B0F73973029E}-0" />
             <r
+              uid="{D842E8EB-450E-4348-A54A-E60CF16E9E52}"
+              s:ccb="Clear on publish"
+              s:ds="{94DE9AC3-A9F7-40AB-AE90-ACDA364B9C40}"
+              s:par="" />
+            <r
               uid="{C33E92D7-36FB-4367-A6F2-7F0851314E99}"
               p:after="r[@uid='{45EC9237-4FFB-4F7B-A137-AFFA1DCEE899}']"
               s:id="{DF26CA0D-A60B-4349-8908-E7A62F7E7272}"
@@ -83,12 +96,6 @@ Languages:
               s:id="{DF26CA0D-A60B-4349-8908-E7A62F7E7272}"
               s:ph="main" />
             <r
-              uid="{C18705AF-C212-4F6E-98CA-448A064FC730}"
-              s:ccb="Clear on publish"
-              s:ds=""
-              s:par=""
-              s:ph="header-signin-disabled" />
-            <r
               uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}"
               p:after="*[1=2]" />
           </d>
@@ -98,14 +105,14 @@ Languages:
       Value: 20200604T042242Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2a685a69-ad58-457f-b6e0-2b4c67fb2d80"
+      Value: "2536ee8e-9867-4af1-b932-ea6aaa3cd8ab"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Become an MVP
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\admin
+        sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220524T013957Z
+      Value: 20220601T053223Z

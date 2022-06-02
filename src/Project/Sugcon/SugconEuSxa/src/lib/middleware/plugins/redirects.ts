@@ -12,6 +12,9 @@ class RedirectsPlugin implements MiddlewarePlugin {
       endpoint: config.graphQLEndpoint,
       apiKey: config.sitecoreApiKey,
       siteName: config.jssAppName,
+      // These are all the locales you support in your application.
+      // These should match those in your next.config.js (i18n.locales).
+      locales: ['en'],
     });
   }
 
