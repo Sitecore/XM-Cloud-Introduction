@@ -31,7 +31,7 @@ const CTA = (props: CTAProps): JSX.Element => (
 export const Default = (props: CTAProps): JSX.Element => {
   if (props.fields) {
     return (
-      <div className="container component">
+      <div className="container component mt-5">
         <div className="d-flex flex-row">
           <div className="col-12 col-md-5 p-5 align-self-stretch bg-light">
             <h3>

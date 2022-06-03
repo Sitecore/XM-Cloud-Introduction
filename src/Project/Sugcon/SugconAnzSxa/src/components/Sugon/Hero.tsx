@@ -25,7 +25,7 @@ const Hero = (props: HeroProps): JSX.Element => (
 export const Default = (props: HeroProps): JSX.Element => {
   if (props.fields) {
     return (
-      <div className="mb-3 d-flex justify-content-center">
+      <div className="mb-5 d-flex justify-content-center">
         <Image
           src="https://mvp-cd.sitecore.com/-/media/Sugcon/EU/budapest-view.jpg?h=900&iar=0&w=1600&hash=743F1E41D91667BF68372E39A71AEBB3"
           width="1600"
