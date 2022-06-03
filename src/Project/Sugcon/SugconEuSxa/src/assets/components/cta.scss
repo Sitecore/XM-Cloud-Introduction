@@ -1,0 +1,24 @@
+.cta {
+    position: relative;
+
+    .col-lg-7 {
+        padding-top: 140px;
+        z-index: 5;
+    }
+}
+.ctaText {
+    background-color: greenyellow;
+    padding: 50px 50px 66px;
+
+    &::after {
+        display: block;
+        content: " ";
+        width: 175px;
+        height: 175px;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        border-top: 15px solid #fe2911;
+        border-left: 15px solid #fe2911;
+    }
+}
