@@ -23,7 +23,7 @@ export const Default = (): JSX.Element => {
 
   return (
     <div className="container component">
-      <h1>2022 Sessions</h1>
+      <h1 className="p-3">SUGCON ANZ 2022 Sessions</h1>
       <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
     </div>
   );
