@@ -25,6 +25,9 @@ const nextConfig = {
     // prefixed path e.g. `/styleguide`.
     defaultLocale: packageConfig.language,
   },
+  images: {
+    domains: ['mvp-cd.sitecore.com'],
+  },
   
   // Enable React Strict Mode
   reactStrictMode: true,
