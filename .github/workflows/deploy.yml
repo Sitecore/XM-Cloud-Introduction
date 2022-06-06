@@ -39,10 +39,28 @@ jobs:
         node-version: 16.5
     - run: npm install
     - run: npm run build
+  
+  build-sugcon-anz:
+    name: Build the SUGCON EU head
+    runs-on: ubuntu-latest
+    env:
+      FETCH_WITH: GraphQL
+      GRAPH_QL_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
+      SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
+    defaults:
+      run:
+        working-directory: ./src/Project/Sugcon/SugconAnzSxa
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16.5
+    - run: npm install
+    - run: npm run build
 
   deploy-cm:
     name: Deploy the CM asset to XM Cloud
-    needs: [build-dotnet, build-sugcon-eu]
+    needs: [build-dotnet, build-sugcon-eu, build-sugcon-anz]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
