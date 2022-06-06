@@ -1,3 +1,10 @@
+#  ⚠️ Pre-release software ⚠️
+This project is being built against a pre-release version of XM Cloud. There will most likely be breaking changes introduced that will require (possibly extensive) refactoring of the code seen here. 
+
+During this time it is not possible for people external to Sitecore's Technical Marketing team to run this project locally. We will also not be accepting community contributions during this time.
+
+You can `watch` this repository to follow along with our development progress as we prepare for the full public release of XM Cloud. Once we reach that point, we will then define a process for community contributions.
+
 # Introduction
 
 This repository contains the codebase for a series of sites managed by the Technical Marketing Team at Sitecore. You will find the following sites in this repository:
