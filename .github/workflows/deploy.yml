@@ -41,7 +41,7 @@ jobs:
     - run: npm run build
   
   build-sugcon-anz:
-    name: Build the SUGCON EU head
+    name: Build the SUGCON ANZ head
     runs-on: ubuntu-latest
     env:
       FETCH_WITH: GraphQL
