@@ -1,9 +1,6 @@
+#Requires -RunAsAdministrator
 [CmdletBinding(DefaultParameterSetName = "no-arguments")]
 Param (
-    [Parameter(HelpMessage = "Enables initialization of values in the .env file, which may be placed in source control.",
-        ParameterSetName = "env-init")]
-    [switch]$InitEnv,
-
     [Parameter(Mandatory = $true,
         HelpMessage = "The path to a valid Sitecore license.xml file.",
         ParameterSetName = "env-init")]
@@ -14,7 +11,7 @@ Param (
     [Parameter(Mandatory = $true,
         HelpMessage = "Sets the sitecore\\admin password for this environment via environment variable.",
         ParameterSetName = "env-init")]
-    [string]$AdminPassword,
+    [String]$AdminPassword,
 
     [Parameter(Mandatory = $true,
     HelpMessage = "The Client ID used to authenticate with Auth0.",
@@ -26,33 +23,72 @@ Param (
         ParameterSetName = "env-init")]
     [string]$Auth0_ClientSecret,
 
+    [Parameter(Mandatory = $true,
+    HelpMessage = "The Domain used to authenticate with Auth0.",
+        ParameterSetName = "env-init")]
+    [string]$Auth0_Domain,
+
+    [Parameter(Mandatory = $true,
+    HelpMessage = "The Audience used to authenticate with Auth0.",
+        ParameterSetName = "env-init")]
+    [string]$Auth0_Audience,
+
+    [Parameter(Mandatory = $true,
+    HelpMessage = "The Default Authority used to connect to XM Cloud.",
+        ParameterSetName = "env-init")]
+    [string]$XMCloud_Default_Authority,
+
+    [Parameter(Mandatory = $true,
+    HelpMessage = "The ClientId used to connect to XM Cloud.",
+        ParameterSetName = "env-init")]
+    [string]$XMCloud_ClientId,
+
+    [Parameter(Mandatory = $true,
+    HelpMessage = "The Deploy Application used to connect to XM Cloud.",
+        ParameterSetName = "env-init")]
+    [string]$XMCloud_Deploy_App,
+
+    [Parameter(Mandatory = $true,
+    HelpMessage = "The Deploy EndPoint used to connect to XM Cloud.",
+        ParameterSetName = "env-init")]
+    [string]$XMCloud_Deploy_EndPoint,
+
+    [Parameter(Mandatory = $true,
+    HelpMessage = "The Audience used to connect to XM Cloud.",
+        ParameterSetName = "env-init")]
+    [string]$XMCloud_Audience,
+
+    [Parameter(Mandatory = $true,
+    HelpMessage = "The Audience Client Credentials used to connect to XM Cloud.",
+        ParameterSetName = "env-init")]
+    [String]$XMCloud_Audience_Client_Credentials,
+
     [Parameter(HelpMessage = "The hostname used for the local CM instance.",
         ParameterSetName = "env-init")]
     [string]$Host_Suffix = "xmcloudcm.localhost",
 
-    [Parameter(HelpMessage = "The hostname used for the local CM instance.",
+    [Parameter(HelpMessage = "The Edge url used when running in Edge Mode.",
         ParameterSetName = "env-init")]
     [string]$Edge_Url,
 
-    [Parameter(HelpMessage = "The hostname used for the local CM instance.",
+    [Parameter(HelpMessage = "The Edge token used when running in Edge Mode.",
         ParameterSetName = "env-init")]
     [string]$Edge_Token
 )
 
 $ErrorActionPreference = "Stop";
-
-if ($InitEnv) {
-    if (-not $LicenseXmlPath.EndsWith("license.xml")) {
-        Write-Error "Sitecore license file must be named 'license.xml'."
-    }
-    if (-not (Test-Path $LicenseXmlPath)) {
-        Write-Error "Could not find Sitecore license file at path '$LicenseXmlPath'."
-    }
-    # We actually want the folder that it's in for mounting
-    $LicenseXmlPath = (Get-Item $LicenseXmlPath).Directory.FullName
+###############
+# License Check
+###############
+Write-Host "Checking for existence of License." -ForegroundColor Green
+if (-not $LicenseXmlPath.EndsWith("license.xml")) {
+    Write-Error "Sitecore license file must be named 'license.xml'."
 }
-
-Write-Host "Preparing your Sitecore Containers environment!" -ForegroundColor Green
+if (-not (Test-Path $LicenseXmlPath)) {
+    Write-Error "Could not find Sitecore license file at path '$LicenseXmlPath'."
+}
+# We actually want the folder that it's in for mounting
+$LicenseXmlPath = (Get-Item $LicenseXmlPath).Directory.FullName
 
 ##################
 # Create .env file
@@ -86,6 +122,7 @@ Write-SitecoreDockerWelcome
 ###########################
 # Setup site host variables
 ###########################
+Write-Host "Setting Hosts Values..." -ForegroundColor Green
 $CM_Host = $Host_Suffix
 $MVP_Host = "mvp.$Host_Suffix"
 $SUGCON_EU_HOST = "sugconeu.$Host_Suffix"
@@ -136,26 +173,47 @@ Add-HostsEntry $SUGCON_ANZ_HOST
 # Populate the environment file
 ###############################
 Write-Host "Populating Environment File..." -ForegroundColor Green
-if ($InitEnv) {
+Set-EnvFileVariable "HOST_LICENSE_FOLDER" -Value $LicenseXmlPath
+Set-EnvFileVariable "CM_HOST" -Value $CM_Host
+Set-EnvFileVariable "MVP_RENDERING_HOST" -Value $MVP_Host
+Set-EnvFileVariable "REPORTING_API_KEY" -Value (Get-SitecoreRandomString 128 -DisallowSpecial)
+Set-EnvFileVariable "TELERIK_ENCRYPTION_KEY" -Value (Get-SitecoreRandomString 128)
+Set-EnvFileVariable "MEDIA_REQUEST_PROTECTION_SHARED_SECRET" -Value (Get-SitecoreRandomString 64)
+Set-EnvFileVariable "SQL_SA_PASSWORD" -Value (Get-SitecoreRandomString 19 -DisallowSpecial -EnforceComplexity)
+Set-EnvFileVariable "SITECORE_ADMIN_PASSWORD" -Value $AdminPassword
+Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientId" -Value $Auth0_ClientId
+Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientSecret" -Value $Auth0_ClientSecret
+Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl" -Value "https://$CM_Host/"
+Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_Domain" -Value $Auth0_Domain
+Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_Audience" -Value $Auth0_Audience
+Set-EnvFileVariable "EXPERIENCE_EDGE_URL" -Value $Edge_Url
+Set-EnvFileVariable "EXPERIENCE_EDGE_TOKEN" -Value $Edge_Token
+Set-EnvFileVariable "JSS_EDITING_SECRET" -Value (Get-SitecoreRandomString 64 -DisallowSpecial)
 
-    Write-Host "Populating required .env file values..." -ForegroundColor Green
-    Set-EnvFileVariable "HOST_LICENSE_FOLDER" -Value $LicenseXmlPath
-    Set-EnvFileVariable "CM_HOST" -Value $CM_Host
-    Set-EnvFileVariable "MVP_RENDERING_HOST" -Value $MVP_Host
-    Set-EnvFileVariable "REPORTING_API_KEY" -Value (Get-SitecoreRandomString 128 -DisallowSpecial)
-    Set-EnvFileVariable "TELERIK_ENCRYPTION_KEY" -Value (Get-SitecoreRandomString 128)
-    Set-EnvFileVariable "MEDIA_REQUEST_PROTECTION_SHARED_SECRET" -Value (Get-SitecoreRandomString 64)
-    Set-EnvFileVariable "SQL_SA_PASSWORD" -Value (Get-SitecoreRandomString 19 -DisallowSpecial -EnforceComplexity)
-    Set-EnvFileVariable "SITECORE_ADMIN_PASSWORD" -Value $AdminPassword
-    Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientId" -Value $Auth0_ClientId
-    Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientSecret" -Value $Auth0_ClientSecret
-    Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl" -Value "https://$CM_Host/"
-    Set-EnvFileVariable "EXPERIENCE_EDGE_URL" -Value $Edge_Url
-    Set-EnvFileVariable "EXPERIENCE_EDGE_TOKEN" -Value $Edge_Token
-    Set-EnvFileVariable "JSS_EDITING_SECRET" -Value (Get-SitecoreRandomString 64 -DisallowSpecial)
+#####################################################
+# TEMP Step: Populate xmcloud.plugin.pre-release.json
+#####################################################
+Write-Host "Populating xmcloud.plugin.pre-release.json..." -ForegroundColor Green
+# $envContent = Get-Content .env -Encoding UTF8
+# $xmCloudDeployConfig = $envContent | Where-Object { $_ -imatch "^XMCLOUD_DEPLOY_CONFIG=.+" }
+# $xmCloudDeployConfig = $xmCloudDeployConfig.Split("=")[1]
 
-}
+$envFile = Join-Path $PWD '.env'
+$xmCloudDeployConfig = Get-EnvFileVariable -Path $envFile -Variable 'XMCLOUD_DEPLOY_CONFIG'
 
+
+$json = Get-Content $xmCloudDeployConfig | ConvertFrom-Json 
+$json.defaultAuthority = $XMCloud_Default_Authority
+$json.clientId = $XMCloud_ClientId
+$json.xmCloudDeployApp = $XMCloud_Deploy_App
+$json.xmCloudDeployEndpoint = $XMCloud_Deploy_EndPoint
+$json.audience = $XMCloud_Audience
+$json.audienceClientCredentials = $XMCloud_Audience_Client_Credentials
+$json | ConvertTo-Json | Out-File $xmCloudDeployConfig
+
+##########################
+# Show Certificate Details
+##########################
 Push-Location docker\traefik\certs
 try
 {

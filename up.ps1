@@ -12,7 +12,7 @@ $xmCloudHost = $envContent | Where-Object { $_ -imatch "^CM_HOST=.+" }
 $mvpHost = $envContent | Where-Object { $_ -imatch "^MVP_RENDERING_HOST=.+" }
 $sugconeuHost = $envContent | Where-Object { $_ -imatch "^SUGCON_EU_HOST=.+" }
 $sugconanzHost = $envContent | Where-Object { $_ -imatch "^SUGCON_ANZ_HOST=.+" }
-$xmCloudDeployConfig = $envContent | Where-Object { $_ -imatch "^XMCLOUDDEPLOY_CONFIG=.+" }
+$xmCloudDeployConfig = $envContent | Where-Object { $_ -imatch "^XMCLOUD_DEPLOY_CONFIG=.+" }
 $sitecoreDockerRegistry = $envContent | Where-Object { $_ -imatch "^SITECORE_DOCKER_REGISTRY=.+" }
 $sitecoreVersion = $envContent | Where-Object { $_ -imatch "^SITECORE_VERSION=.+" }
 
