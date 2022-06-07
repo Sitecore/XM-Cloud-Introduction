@@ -67,5 +67,37 @@ Styles for default JSS error components
     background-color: lightyellow;
 }
 
+body{
+    background-color: #f6f6f6;
+}
+header{
+    background-color: white;
+}
+footer{
+    background-color: #707070;
+    color: white;
+    .component{
+        padding: 20px;
+        margin-top: 0px;
+    }
+}
+
+h1{
+    line-height: 1.2;
+    margin-top: 0;
+    color: #232323;
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.component{
+    margin-top: 50px;
+  }
+ .centered-block {
+     max-width: 1200px;
+     margin: auto;
+ } 
 // Finally add custom components
 @import "components/hero";
+@import "components/organiserList";
+@import "components/sponsorList";
