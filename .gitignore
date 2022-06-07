@@ -60,3 +60,4 @@ packages/
 /docker/traefik/certs/*.pem
 
 .vercel
+xmcloud.plugin.pre-release.json
