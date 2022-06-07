@@ -60,6 +60,7 @@ jobs:
 
   deploy-cm:
     name: Deploy the CM asset to XM Cloud
+    if: github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push'))
     needs: [build-dotnet]
     runs-on: ubuntu-latest
     steps:
@@ -104,7 +105,8 @@ jobs:
 
   deploy-mvp:
     name: Deploy the MVP rendering host to Azure WebApp
-    needs: deploy-cm
+    if: github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push'))
+    needs: deploy-cm  
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
@@ -127,6 +129,7 @@ jobs:
 
   # deploy-sugcon-eu:
   #   name: Deploy the SUGCON EU rendering host to Vercel
+  #   if: github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push'))
   #   needs: deploy-cm
   #   runs-on: ubuntu-latest
   #   steps:
