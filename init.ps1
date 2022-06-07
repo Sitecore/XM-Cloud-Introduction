@@ -194,14 +194,9 @@ Set-EnvFileVariable "JSS_EDITING_SECRET" -Value (Get-SitecoreRandomString 64 -Di
 # TEMP Step: Populate xmcloud.plugin.pre-release.json
 #####################################################
 Write-Host "Populating xmcloud.plugin.pre-release.json..." -ForegroundColor Green
-# $envContent = Get-Content .env -Encoding UTF8
-# $xmCloudDeployConfig = $envContent | Where-Object { $_ -imatch "^XMCLOUD_DEPLOY_CONFIG=.+" }
-# $xmCloudDeployConfig = $xmCloudDeployConfig.Split("=")[1]
-
+Copy-Item ".\xmcloud.plugin.pre-release.json.template" ".\xmcloud.plugin.pre-release.json" -Force
 $envFile = Join-Path $PWD '.env'
 $xmCloudDeployConfig = Get-EnvFileVariable -Path $envFile -Variable 'XMCLOUD_DEPLOY_CONFIG'
-
-
 $json = Get-Content $xmCloudDeployConfig | ConvertFrom-Json 
 $json.defaultAuthority = $XMCloud_Default_Authority
 $json.clientId = $XMCloud_ClientId
