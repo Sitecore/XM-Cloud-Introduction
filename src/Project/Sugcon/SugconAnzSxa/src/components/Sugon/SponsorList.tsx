@@ -72,9 +72,7 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
     return (
       <div className={`component sponsor-list platinum ${props.params.styles}`}>
         <div className="component-content container">
-          <h3>
-            <Text field={props.fields?.Category} />
-          </h3>
+          
           {props.fields?.Sponsors?.length == 0 ? (
             <div>No Organizers</div>
           ) : (
