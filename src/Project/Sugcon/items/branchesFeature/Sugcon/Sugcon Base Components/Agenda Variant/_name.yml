@@ -1,0 +1,27 @@
+﻿---
+ID: "05ccd5ce-43cc-4869-82ad-a0665c1eaf33"
+Parent: "0eacd954-d28e-4512-a423-022e66a7594e"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/templates/Branches/Feature/Sugcon/Sugcon Base Components/Agenda Variant/$name
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/calendar_clock.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211020T135004Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "03d82bad-0ef0-478c-9959-5e5d2bc7d5c2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220524T091628Z

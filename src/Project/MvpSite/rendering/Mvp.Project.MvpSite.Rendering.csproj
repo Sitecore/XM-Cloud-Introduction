@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp6.0</TargetFramework>
+		<UserSecretsId>{BB638E63-026A-4E83-A108-6DACB910C4B0}</UserSecretsId>
+		<SitecoreRoleType>rendering</SitecoreRoleType>
+		<IsDeploymentModule>true</IsDeploymentModule>
+		<OutputFolderName>mvp-rendering</OutputFolderName>
+		<DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\..\..\..</DockerfileContext>
+		<AssemblyName>Mvp.Project.MvpSite</AssemblyName>
+		<RootNamespace>Mvp.Project.MvpSite</RootNamespace>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+	</PropertyGroup>
+
+	<Target Name="FixDotnetWatch" AfterTargets="_CoreCollectWatchItems">
+		<ItemGroup>
+			<_WatchRelativePath Include="@(Watch)" Condition="'%(Identity)' != '%(Watch.FullPath)'" />
+			<Watch Remove="@(_WatchRelativePath)" />
+			<Watch Include="%(_WatchRelativePath.FullPath)" />
+		</ItemGroup>
+	</Target>
+
+	<ItemGroup>
+	  <Content Remove="compilerconfig.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <_WebToolingArtifacts Remove="Properties\PublishProfiles\Local.pubxml" />
+	</ItemGroup> 
+
+	<ItemGroup>
+	  <None Include="compilerconfig.json" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="BuildWebCompiler" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+		<PackageReference Include="Microsoft.AspNetCore.Session" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+		<PackageReference Include="Microsoft.Extensions.Http" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+		<PackageReference Include="Sitecore.LayoutService.Client" />
+		<PackageReference Include="Sitecore.AspNet.RenderingEngine" />
+		<PackageReference Include="Sitecore.AspNet.ExperienceEditor" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Includes\Styles\" />
+	  <Folder Include="Includes\Scripts\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\Feature\BasicContent\rendering\MVP.Feature.BasicContent.Rendering.csproj" />
+	  <ProjectReference Include="..\..\..\Feature\Navigation\rendering\Mvp.Feature.Navigation.Rendering.csproj" />
+	  <ProjectReference Include="..\..\..\Feature\People\rendering\Mvp.Feature.People.Rendering.csproj" />
+	  <ProjectReference Include="..\..\..\Feature\Social\rendering\Mvp.Feature.Social.Rendering.csproj" />
+	  <ProjectReference Include="..\..\..\Foundation\Configuration\rendering\Mvp.Foundation.Configuration.Rendering.csproj" />
+	</ItemGroup>
+
+</Project>

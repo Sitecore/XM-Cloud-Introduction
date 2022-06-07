@@ -1,0 +1,31 @@
+﻿---
+ID: "8cebbaec-ba16-46bb-8d54-3629304611cb"
+Parent: "fd109357-e3e5-4e43-b852-e2b97a13fe04"
+Template: "fb414664-6b1b-4121-8e57-57eccabe7136"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Data/Video Teasers
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220523T095418Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4a8e574e-c690-4039-afe4-dbc7e833e58d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220523T095418Z

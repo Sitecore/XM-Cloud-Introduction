@@ -1,0 +1,27 @@
+﻿---
+ID: "cb4a01d7-8fa3-42d0-ac43-91942164340f"
+Parent: "e7ac9517-6874-4477-92fb-758de952b751"
+Template: "49c111d0-6867-4798-a724-1f103166e6e9"
+Path: /sitecore/templates/Branches/Feature/Sugcon/Sugcon Base Components/CTA Variant/$name
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/megaphone.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211020T135004Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "31f39240-039a-46ce-b61f-f04d797ed79d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220524T091510Z

@@ -1,0 +1,21 @@
+services:
+
+  # Container used to run the MVP Rendering host.
+  mvp-rendering:
+    environment:
+      Sitecore__InstanceUri: ${EXPERIENCE_EDGE_URL}
+      Sitecore__LayoutServicePath: "/api/graphql/v1"
+      Sitecore__ExperienceEdgeToken: ${EXPERIENCE_EDGE_TOKEN}
+      Sitecore__HostIsUsingEdge: "true"
+
+  # Scale all containers down 0 to just run hosts & treafik
+  mssql:
+    scale: 0
+  solr:
+    scale: 0
+  cm:
+    scale: 0
+  mssql-init:
+    scale: 0
+  solr-init:
+    scale: 0

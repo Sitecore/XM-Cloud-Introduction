@@ -1,0 +1,31 @@
+﻿---
+ID: "0eb7c703-8f83-4a30-aa4d-ddcaa4d35e2f"
+Parent: "cb1c3978-c44b-4117-a5f5-8793c7440438"
+Template: "50fcc4a2-bea5-40a8-abf3-552d533994ec"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Data/SponsorLists/Platinum Sponsor
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220520T145319Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "774c2d62-fd3f-42fa-b921-302d52290b5d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "c47a29aa-bc65-4ef2-9376-a463edd5a998"
+      Hint: Sponsors
+      Value: |
+        {6EE08D9E-2B9D-4185-98FC-7BDE5F5DBCE0}
+        {1071C90C-818C-46AF-87D9-09854EA28153}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220523T075646Z
+    - ID: "ee414f1c-1598-4d93-af66-61ce0ac6705a"
+      Hint: Category
+      Value: Platinum Sponsor

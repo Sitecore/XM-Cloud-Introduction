@@ -1,0 +1,33 @@
+﻿---
+ID: "d6a0236e-4d78-47c6-844d-2b9839fb2312"
+Parent: "2bff4c4e-0e21-4ab4-a697-1a65358da9d0"
+Template: "2bff4c4e-0e21-4ab4-a697-1a65358da9d0"
+Path: /sitecore/templates/Feature/Sugcon/Sugcon Base Components/Speaker Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {80B483EA-47B0-4562-837D-159FAE7C890C}
+    {2BFF4C4E-0E21-4AB4-A697-1A65358DA9D0}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "980b8adb-2fae-48d1-8ab8-f6c8c2d0f59a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220520T142935Z

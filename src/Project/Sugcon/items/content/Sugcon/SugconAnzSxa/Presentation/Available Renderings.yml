@@ -1,0 +1,38 @@
+﻿---
+ID: "970acf16-05f6-4b1b-b00d-b9dd32e9a94c"
+Parent: "b4a95c83-68aa-49d9-8ba5-dc4a69041d41"
+Template: "26ec1d18-11b2-4dd9-8326-f6115f4fd7eb"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Presentation/Available Renderings
+SharedFields:
+- ID: "7147ca94-cd06-4aba-8af3-e179a24f4de5"
+  Hint: IsShared
+  Value: 
+- ID: "878c9a33-e760-4cb8-aad3-b2309383bf10"
+  Hint: Group renderings in sections
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220519T144652Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5fff7438-a7e9-4852-bc70-9d5721116e38"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220523T080555Z

@@ -1,0 +1,33 @@
+﻿---
+ID: "c29171d8-72d1-453a-8d9f-70c3a756f9c3"
+Parent: "32a2995f-269b-4ada-95ba-ce7925bfb15c"
+Template: "32a2995f-269b-4ada-95ba-ce7925bfb15c"
+Path: /sitecore/templates/Feature/Sugcon/Sugcon Base Components/SponsorList Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {50FCC4A2-BEA5-40A8-ABF3-552D533994EC}
+    {32A2995F-269B-4ADA-95BA-CE7925BFB15C}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6fb30d56-a96c-4f3b-ad4b-74f1e27919da"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220520T142845Z

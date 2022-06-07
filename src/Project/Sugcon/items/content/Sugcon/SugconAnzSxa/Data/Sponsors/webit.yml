@@ -1,0 +1,36 @@
+﻿---
+ID: "20bde3c7-2dc7-4579-a794-7f53a3285647"
+Parent: "6b8979eb-e013-4dd5-a30d-c5246e47ed56"
+Template: "dbf996a5-21c9-49d6-bbb4-dce6d4700576"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Data/Sponsors/webit
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220523T075450Z
+    - ID: "7de86eb1-7ccc-4068-9870-b3a46a150aa1"
+      Hint: SponsorLogo
+      Value: |
+        <image mediaid="{67BC28EC-C919-40C3-AC7A-5F2395FA8180}" ></image>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a74d8c49-dbb5-4533-b243-d92da6100320"
+    - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
+      Hint: SponsorUrl
+      Value: "https://www.webit.de/"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "c796441d-0c1f-4435-9cf7-9d123ff6b937"
+      Hint: SponosorName
+      Value: Sponsor
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220525T210830Z

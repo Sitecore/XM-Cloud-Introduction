@@ -1,0 +1,39 @@
+﻿---
+ID: "cb141bb6-fa91-4002-83b7-716280b452b0"
+Parent: "7f8afb0f-974b-4190-aaa9-e6a9b173a501"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: /sitecore/templates/Branches/Feature/Sugcon/Sugcon Base Components/Available Hero Renderings/$name
+SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Value: |
+    {1980CE42-9455-48E5-B4D0-DDB59C9B28D4}
+    {CE4B14F7-2845-4CA4-AB42-0F0ACC60499B}
+    {46D04A87-A7D0-4033-8BB9-4596465EE251}
+    {1E6E40D5-9217-4DEF-AC1E-B59DED2F1B99}
+    {71100E1F-3D11-48AB-8C2F-E56FBFA66476}
+    {9796870A-1BC3-4D1F-99CD-ECD6DA7240F0}
+    {96127B34-218D-4D4E-9203-65B7E24A42E6}
+    {571484C3-4498-4884-9F53-8B0CFA3E032F}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171113T104335Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cfaf2569-700b-4a06-aab9-502fb3df4dc5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220520T143048Z

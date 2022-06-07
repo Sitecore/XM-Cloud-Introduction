@@ -1,0 +1,107 @@
+{
+  "namespace": "Project.MvpSite",
+  "items": {
+    "includes": [
+      {
+        "name": "layouts",
+        "path": "/sitecore/layout/Layouts/Project/MvpSite",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "placeholders",
+        "path": "/sitecore/layout/Placeholder Settings/Project/MvpSite",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "dictionary",
+        "path": "/sitecore/system/Dictionary/MvpSite",
+        "allowedPushOperations": "CreateOnly"
+      },
+      {
+        "name": "templates",
+        "path": "/sitecore/templates/Project/MvpSite",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "branche-templates",
+        "path": "/sitecore/templates/Branches/Project/MvpSite",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "content",
+        "path": "/sitecore/content/MvpSite",
+        "allowedPushOperations": "CreateOnly",
+        "rules": [
+          {
+            "path": "/MVP Repository",
+            "scope": "ignored"
+          }
+        ]
+      },
+      {
+        "name": "SPE",
+        "path": "/sitecore/system/Modules/PowerShell/Script Library/MVP Scripts",
+        "allowedPushOperations": "CreateOnly"
+      },
+      {
+        "name": "mvp-repo",
+        "path": "/sitecore/content/MvpSite/MVP Repository",
+        "allowedPushOperations": "CreateOnly",
+        "rules": [
+          {
+            "path": "/People",
+            "scope": "SingleItem"
+          },
+          {
+            "path": "/Countries",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "CreateOnly"
+          },
+          {
+            "path": "/States",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "CreateOnly"
+          },
+
+          {
+            "path": "/Application Steps",
+            "scope": "itemAndDescendants"
+          },
+          {
+            "path": "/Employment Status",
+            "scope": "itemAndDescendants"
+          },
+          {
+            "path": "/Award Years",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "CreateOnly"
+          },
+          {
+            "path": "/MVP Category",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "CreateOnly"
+          },
+          {
+            "path": "*",
+            "scope": "ignored"
+          }
+        ]
+      },
+      {
+        "name": "ItemBucketsOverride",
+        "path": "/sitecore/system/Settings/Buckets/Item Buckets Settings",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "apikey",
+        "path": "/sitecore/system/Settings/Services/API Keys/MvpSite",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "media",
+        "path": "/sitecore/media library/Project/MvpSite",
+        "allowedPushOperations": "CreateOnly"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+﻿---
+ID: "1bdc5ad2-11f8-4a54-a1c0-2c6e716f0e3d"
+Parent: "c7c26656-1c65-45ff-a15f-f58212faf1bb"
+Template: "c7c26656-1c65-45ff-a15f-f58212faf1bb"
+Path: /sitecore/templates/Feature/Sugcon/Sugcon Base Components/Session Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {27AD4BEE-7462-49F0-9D33-82BA20C37E8D}
+    {C7C26656-1C65-45FF-A15F-F58212FAF1BB}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "31e73d75-1139-46c4-96af-b2d0a59ff59e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220520T142909Z

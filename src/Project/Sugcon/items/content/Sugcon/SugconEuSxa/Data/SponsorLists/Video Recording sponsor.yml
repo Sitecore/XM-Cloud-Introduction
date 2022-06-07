@@ -1,0 +1,29 @@
+﻿---
+ID: "20673f7a-ebe6-4d5f-93c0-753d53dde996"
+Parent: "cb1c3978-c44b-4117-a5f5-8793c7440438"
+Template: "50fcc4a2-bea5-40a8-abf3-552d533994ec"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Data/SponsorLists/Video Recording sponsor
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220523T075749Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "50ad132e-3f7d-4765-9a23-aad9de0ff7cd"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "c47a29aa-bc65-4ef2-9376-a463edd5a998"
+      Hint: Sponsors
+      Value: "{8D42F45B-4AD8-4259-B559-2544B29B260A}"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220523T075756Z
+    - ID: "ee414f1c-1598-4d93-af66-61ce0ac6705a"
+      Hint: Category
+      Value: Video Recording sponsor

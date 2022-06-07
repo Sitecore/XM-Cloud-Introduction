@@ -1,0 +1,166 @@
+services:
+
+  nodejs:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}
+    build:
+      context: ./docker/build/nodejs
+      args:
+        PARENT_IMAGE: ${NODEJS_PARENT_IMAGE}
+        NODEJS_VERSION: ${NODEJS_VERSION}
+    scale: 0
+
+  sugcon-eu:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-sugcon-eu:${VERSION:-latest}
+    build:
+      context: ./docker/build/sugcon/sugcon-eu
+      target: ${BUILD_CONFIGURATION}
+      args:
+        PARENT_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}
+    volumes:
+      - .\src\Project\Sugcon\SugconEuSxa:C:\app
+    environment:
+      SITECORE_API_HOST: "http://cm"
+      NEXTJS_DIST_DIR: ".next-container"
+      PUBLIC_URL: "https://${SUGCON_EU_HOST}"
+      JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
+      GRAPH_QL_ENDPOINT: "${GRAPH_QL_ENDPOINT}"
+      SITECORE_API_KEY: "${SITECORE_API_KEY}"
+    depends_on:
+      - cm
+      - nodejs
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.rendering-secure.entrypoints=websecure"
+      - "traefik.http.routers.rendering-secure.rule=Host(`${SUGCON_EU_HOST}`)"
+      - "traefik.http.routers.rendering-secure.tls=true"
+  
+  sugcon-anz:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-sugcon-anz:${VERSION:-latest}
+    build:
+      context: ./docker/build/sugcon/sugcon-anz
+      target: ${BUILD_CONFIGURATION}
+      args:
+        PARENT_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}
+    volumes:
+      - .\src\Project\Sugcon\SugconAnzSxa:C:\app
+    environment:
+      SITECORE_API_HOST: "http://cm"
+      NEXTJS_DIST_DIR: ".next-container"
+      PUBLIC_URL: "https://${SUGCON_ANZ_HOST}"
+      JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
+      GRAPH_QL_ENDPOINT: "${GRAPH_QL_ENDPOINT}"
+      SITECORE_API_KEY: "${SUGCONANZ_API_KEY}"
+    depends_on:
+      - cm
+      - nodejs
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sugconanz-secure.entrypoints=websecure"
+      - "traefik.http.routers.sugconanz-secure.rule=Host(`${SUGCON_ANZ_HOST}`)"
+      - "traefik.http.routers.sugconanz-secure.tls=true"
+
+  # The solution build image is added here so it can be referenced as a build dependency
+  # for the images which use its output. Setting "scale: 0" means docker-compose will not
+  # include it in the running environment. See Dockerfile for more details.
+  solution:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
+    build:
+      context: .
+      dockerfile: ./docker/build/solution/Dockerfile
+      args:
+        BUILD_CONFIGURATION: ${BUILD_CONFIGURATION}
+        BUILD_IMAGE: ${SOLUTION_BUILD_IMAGE}
+        BASE_IMAGE: ${SOLUTION_BASE_IMAGE}
+    scale: 0
+
+  # Container used to run the MVP Rendering host.
+  mvp-rendering:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-mvp-rendering:${VERSION:-latest}
+    restart: ${DOCKER_RESTART}
+    build:
+      context: ./docker/build/rendering
+      target: ${BUILD_CONFIGURATION}
+      args:
+        DEBUG_BASE_IMAGE: ${NETCORE_BUILD_IMAGE}
+        RELEASE_BASE_IMAGE: ${NETCORE_RELEASE_IMAGE}
+        SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
+        ENTRYPOINT_ASSEMBLY: Mvp.Project.MvpSite.dll
+        ARTIFACTS_FOLDER: /artifacts/mvp-rendering
+    volumes:
+      - ${LOCAL_DEPLOY_PATH}\mvp-rendering:C:\deploy
+    environment:
+      ENTRYPOINT_ASSEMBLY: Mvp.Project.MvpSite.dll
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "http://*:80"
+      Sitecore__InstanceUri: "http://cm"
+      Sitecore__RenderingHostUri: "https://${MVP_RENDERING_HOST}"
+      Sitecore__EnableExperienceEditor: "true" 
+    depends_on:
+      - solution
+      - cm
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mvp-secure.entrypoints=websecure"
+      - "traefik.http.routers.mvp-secure.rule=Host(`${MVP_RENDERING_HOST}`)"
+      - "traefik.http.routers.mvp-secure.tls=true"   
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/healthz"]
+      interval: 60s
+      timeout: 30s
+
+
+  # Mount the Traefik configuration and certs.
+  traefik:
+    volumes:
+      - ./docker/traefik:C:/etc/traefik
+    depends_on:
+      - cm
+
+  # Mount our SQL data folder and use our custom image with the Headless Services (JSS)
+  # module data added. See Dockerfile for details.
+  mssql:
+    volumes:
+      - type: bind
+        source: .\docker\data\sql
+        target: c:\data
+
+  # Mount our Solr data folder and use our retagged Solr image.
+  # Some modules (like SXA) also require additions to the Solr image.
+  solr:
+    volumes:
+      - type: bind
+        source: .\docker\data\solr
+        target: c:\data
+
+  # Use our custom CM image with added modules and solution code.
+  # Folders are mounted below for code deployment and log output. See Dockerfile for details.
+  # Configure for a mounted license file instead of using SITECORE_LICENSE.
+  cm:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xmcloud-cm:${VERSION:-latest}
+    build:
+      context: ./docker/build/cm
+      args:
+        PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xmcloud-cm:${SITECORE_VERSION}
+        SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
+        TOOLS_IMAGE: ${TOOLS_IMAGE}
+    depends_on:
+      - solution
+    volumes:
+      - ${LOCAL_DEPLOY_PATH}\platform:C:\deploy
+      - ${LOCAL_DATA_PATH}\cm:C:\inetpub\wwwroot\App_Data\logs
+      - ${HOST_LICENSE_FOLDER}:c:\license
+    environment:
+      SITECORE_LICENSE_LOCATION: c:\license\license.xml
+      JSS_EdgeWebsite_DEPLOYMENT_SECRET: ${JSS_EdgeWebsite_DEPLOYMENT_SECRET}
+      SITECORE_JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
+      Sitecore__ExternalCdUrl: "${CM_HOST}"
+      ## SugconEu Rendering Host
+      SUGCONEU_RENDERING_HOST_ENDPOINT_URI: "${SUGCON_EU_HOST_INTERNAL_URI}/api/editing/render"
+      SUGCONEU_RENDERING_HOST_PUBLIC_URI: "https://${SUGCON_EU_HOST}"
+      ## SugconAnzsugcon/ Rendering Host
+      SUGCONANZ_RENDERING_HOST_ENDPOINT_URI: "${SUGCON_ANZ_HOST_INTERNAL_URI}/api/editing/render"
+      SUGCONANZ_RENDERING_HOST_PUBLIC_URI: "https://${SUGCON_ANZ_HOST}"
+      ## Development Environment Optimizations
+      SITECORE_DEVELOPMENT_PATCHES: DevEnvOn,CustomErrorsOff,DebugOn,DiagnosticsOff,InitMessagesOff
+      Sitecore_AppSettings_exmEnabled:define: "no" # remove to turn on EXM
+    entrypoint: powershell -Command "& C:\tools\entrypoints\iis\Development.ps1"

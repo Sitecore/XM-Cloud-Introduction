@@ -1,0 +1,12 @@
+{
+    "namespace": "Foundation.Multisite",
+    "items": {
+        "includes": [
+            {
+                "name": "templates",
+                "path": "/sitecore/templates/Foundation/Multisite",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            }
+        ]
+    }
+}

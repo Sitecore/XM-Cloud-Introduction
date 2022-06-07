@@ -1,0 +1,13 @@
+{
+  "defaultAuthority": "{{DEFAULT_AUTHORITY}}",
+  "clientId": "{{CLIENT_ID}}",
+  "clientLoginTimeoutInSeconds": "300",
+  "deployOperationTimeout": "1200",
+  "xmCloudDeployApp": "{{XM_CLOUD_DEPLOY_APP}}",
+  "xmCloudDeployEndpoint": "{{XM_CLOUD_DEPLOY_ENDPOINT}}",
+  "xmCloudEndpointName": "XmCloud",
+  "audience": "{{AUUDIENCE}}",
+  "audienceClientCredentials": "{{AUDIENCE_CLIENT_CREDENTIALS}}",
+  "deployPollingStatusTimeoutInSeconds": "2",
+  "httpAttemptsNumber": "3"
+}

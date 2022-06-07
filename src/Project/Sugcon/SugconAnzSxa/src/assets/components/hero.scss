@@ -1,0 +1,52 @@
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 30%;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 40px;
+    background-color: white;
+    opacity: 80%;
+
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+@media (min-width: 1824px) {
+    .caption {
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        width: 20%;
+        color: black;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 40px;
+        background-color: white;
+        opacity: 80%;
+    
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.85);
+    }
+  }
+
+.heroimage {
+    width: 3000px;
+    height: 650px;
+    object-fit: cover;
+}
+
+.hero-label {
+    font-weight: 900;
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    font-family: "AvenirNextW05-Regular", "Arial";
+}

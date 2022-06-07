@@ -1,0 +1,17 @@
+{
+   "namespace": "Feature.People",
+   "items": {
+      "includes": [
+        {
+          "name": "templates",
+          "path": "/sitecore/templates/Feature/People",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "renderings",
+          "path": "/sitecore/layout/Renderings/Feature/People",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        }
+      ]
+    }
+}

@@ -1,0 +1,63 @@
+# Sitecore assets
+.sitecore/package-cache/
+.sitecore/user.json
+.scindex
+*.itempackage
+*.sicpackage
+
+# IDE Settings
+.vscode
+
+# Environment files
+.env
+
+# Windows thumbnails
+Thumbs.db
+
+# VS Assets
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+*.lib
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+.vs/
+.vscode/
+
+# Nuget packages folder
+packages/
+
+# Docker folders
+/docker/data/cm/*
+!/docker/data/cm/.gitkeep
+/docker/data/sql/*
+!/docker/data/sql/.gitkeep
+/docker/data/solr/*
+!/docker/data/solr/.gitkeep
+/docker/deploy/platform/*
+!/docker/deploy/platform/.gitkeep
+/docker/deploy/mvp-rendering/*
+!/docker/deploy/mvp-rendering/.gitkeep
+/docker/traefik/certs/*.pem
+
+.vercel
+xmcloud.plugin.pre-release.json

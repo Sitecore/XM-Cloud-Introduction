@@ -1,0 +1,13 @@
+﻿@model Mvp.Feature.BasicContent.Models.ContentListItem
+
+<div class="col-12 col-lg-6">
+    <div class="feature-panel-text with-background no-number">
+        <h2 asp-for="@Model.Fields.ItemTitle"></h2>
+        <p asp-for="@Model.Fields.ItemText"></p>
+
+        <a asp-for="@Model.Fields.ItemLink" data-module="cta-button" data-goals="" class="link-arrow" aria-label="Learn more">
+            @Model.Fields.ItemLink.Value.Text
+            <img alt="Learn more" src="images/icon-arrow.png">
+        </a>
+    </div>
+</div>

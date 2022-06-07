@@ -1,0 +1,44 @@
+﻿---
+ID: "974649fe-65ac-419b-986a-8832b1406a78"
+Parent: "f85d6dc6-5fb6-49c7-8e63-f5c4a0c3ce46"
+Template: "ac9da469-725c-469d-929a-f5075af7b815"
+Path: /sitecore/content/Sugcon/SuconShared
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "2b2fe9fd-78a6-40eb-b9f9-28409d8d3700"
+  Hint: SitemapMediaItems
+  Value: |
+    {6614D1A1-BDB5-4948-8DEA-C4A4D0F1885E}
+    {D9D7DCF2-0C98-4C7D-A4FC-8534C6BC3886}
+- ID: "33d9005e-1f71-415f-b107-53b965c3b037"
+  Hint: SiteMediaLibrary
+  Value: "{6614D1A1-BDB5-4948-8DEA-C4A4D0F1885E}"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{A0EECF65-09AD-4A10-AE46-7DF70106CFE6}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220523T080140Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d48f5b7f-4310-4770-b1c8-9d9fff7d795f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220601T095812Z

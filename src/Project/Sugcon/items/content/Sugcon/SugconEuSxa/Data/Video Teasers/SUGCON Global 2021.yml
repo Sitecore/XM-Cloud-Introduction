@@ -1,0 +1,26 @@
+﻿---
+ID: "b340ebab-39fb-4066-877b-697a932c2fa0"
+Parent: "b824ac83-bb86-4c77-88a8-5fb39f1cdf59"
+Template: "84383b2b-fe12-4299-ad64-25289da95fdc"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Data/Video Teasers/SUGCON Global 2021
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220520T145141Z
+    - ID: "4959559d-4d0a-401d-9341-187b7f541d71"
+      Hint: Headline
+      Value: SUGCON Global 2021
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a0184859-0a31-4fa4-a00d-c0a5b14ab9be"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220520T145158Z

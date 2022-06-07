@@ -1,0 +1,13 @@
+﻿@model Mvp.Feature.Navigation.Models.TopLinks
+
+<nav class="navbar navbar-expand p-0 d-none d-md-block" id="topbar">
+    <div class="container">
+        <div class="nav navbar-nav">
+            @foreach (var topLink in Model.Items)
+            {
+                <a class="nav-item nav-link" target="_blank" href="@topLink.Fields.Link.Value.Href">@topLink.Fields.Link.Value.Text</a>
+            }
+        </div>
+        <sc-placeholder name="header-signin"></sc-placeholder>
+    </div>
+</nav>

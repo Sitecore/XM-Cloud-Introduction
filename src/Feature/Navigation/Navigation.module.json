@@ -1,0 +1,17 @@
+{
+  "namespace": "Feature.Navigation",
+  "items": {
+    "includes": [
+      {
+        "name": "templates",
+        "path": "/sitecore/templates/Feature/Navigation",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "layouts",
+        "path": "/sitecore/layout/Renderings/Feature/Navigation",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      }
+    ]
+  }
+}

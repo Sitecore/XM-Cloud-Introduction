@@ -1,0 +1,11 @@
+﻿@model Mvp.Feature.BasicContent.Models.ContentListItem
+
+<div class="col-12 col-lg-4">
+	<div class="feature-panel-text">
+		<h3 class="counter number" asp-for="@Model.Fields.ItemTitle"></h3>
+		<h4 asp-for="@Model.Fields.ItemSubtitle"></h4>
+		<p asp-for="@Model.Fields.ItemText"></p>
+
+		<a asp-for="@Model.Fields.ItemLink" data-module="cta-button" data-goals="" class="cta primary"></a>
+	</div>
+</div>

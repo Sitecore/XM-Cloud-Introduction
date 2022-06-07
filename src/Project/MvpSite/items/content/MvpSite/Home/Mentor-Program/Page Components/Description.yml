@@ -1,0 +1,50 @@
+﻿---
+ID: "b98f8915-fd1a-407c-a032-a0aa2d149fef"
+Parent: "050efa74-0d6c-424a-812e-c9b3136105b9"
+Template: "64ad1284-23fb-4b76-85b3-c6dfb1b322bf"
+Path: "/sitecore/content/MvpSite/Home/Mentor-Program/Page Components/Description"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200721T120848Z
+    - ID: "5098b799-31dd-4c1b-9955-3e8598caa21f"
+      Hint: Content
+      Value: |
+        <h2>Benefits of being a mentor&nbsp;</h2>
+        <ul>
+            <li>Gain new leadership and communication skills</li>
+            <li>Receive support from the Sitecore team and other mentors</li>
+            <li>Contribution will be counted towards the MVP application</li>
+            <li>Networking opportunities</li>
+        </ul>
+        <h2>Benefits of being a mentee</h2>
+        <ul>
+            <li>Learn from an experienced Sitecore MVP</li>
+            <li>Increase your chances of becoming a Sitecore MVP</li>
+            <li>Receive support and guidance from your mentor throughout the year</li>
+            <li>Networking opportunities</li>
+        </ul>
+        <h2>Mentor&rsquo;s responsibilities</h2>
+        <ul>
+            <li>Mentors need to be willing to mentor 1 or 2 mentees</li>
+            <li>Commitment to spending a couple hours a month mentoring</li>
+            <li>Willingness to participate in the Mentor Network which includes monthly calls</li>
+            <li>Eagerness to share their success stories with the whole community</li>
+        </ul>
+        <h2>How to apply</h2>
+        <p>To apply to the Sitecore MVP mentorship program as a mentor or mentee please send the Sitecore team an email at <a href="mailto:mvp-program@sitecore.com?subject=Mentor%20Program">mvp-program@sitecore.com</a></p>
+        <p><em>Please note that if you are applying as a mentor you must be a Sitecore 2022 MVP.</em></p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "67224aff-0fdf-4cb7-8e3e-293c92611639"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\tamas
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220203T090508Z

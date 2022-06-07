@@ -1,0 +1,31 @@
+﻿---
+ID: "017fb824-e160-42e6-ad5e-5e93fbfa8ea3"
+Parent: "af32ed50-b8df-49d5-b29e-22849caa9b56"
+Template: "50fcc4a2-bea5-40a8-abf3-552d533994ec"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Data/SponsorLists/Silver and Bronze sponsors
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220523T075703Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "adbc6666-b348-4b56-b76b-60b65dd71673"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "c47a29aa-bc65-4ef2-9376-a463edd5a998"
+      Hint: Sponsors
+      Value: |
+        {2A3BBD9C-A2CB-4BE6-846C-1B0A8F94B58C}
+        {D7D3EE08-4E30-435B-A730-F708627F069A}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220524T121627Z
+    - ID: "ee414f1c-1598-4d93-af66-61ce0ac6705a"
+      Hint: Category
+      Value: Silver & Bronze sponsors
