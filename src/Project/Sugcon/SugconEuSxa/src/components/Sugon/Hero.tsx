@@ -24,8 +24,8 @@ const Hero = (props: HeroProps): JSX.Element => (
 export const Default = (props: HeroProps): JSX.Element => {
   if (props.fields) {
     return (
-      <div className="container-fluid">
-        <div className="row" id="box-search">
+      <div className={`component hero ${props.params.styles}`}>
+        <div className="component-content" id="box-search">
           <div className="thumbnail">
             <Image media={props.fields.BackgroundImage} className="img-fluid heroimage"></Image>
             <div className="caption d-none d-md-block">
