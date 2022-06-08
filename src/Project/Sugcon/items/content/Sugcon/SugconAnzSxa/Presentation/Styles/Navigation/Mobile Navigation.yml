@@ -1,15 +1,15 @@
 ﻿---
-ID: "c796441d-0c1f-4435-9cf7-9d123ff6b937"
-Parent: "3fc6302a-d846-4d8e-b995-516f9114aac1"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Sugcon/Sugcon Base Components/Sponsor/Data/SponosorName
+ID: "ced19ff6-d007-4a96-aab7-3a59472722a9"
+Parent: "2959cb53-ff1f-4ce3-96c3-475d7eba3d3e"
+Template: "6b8aabef-d650-46e0-97d0-c0b04f7f016b"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Presentation/Styles/Navigation/Mobile Navigation
 SharedFields:
-- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
-  Hint: Type
-  Value: "Single-Line Text"
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 100
+- ID: "09147fb2-ebfb-4949-8c8e-26a424409d5e"
+  Hint: Value
+  Value: "mobile-nav"
+- ID: "69bb49f3-da64-4b0e-abd6-184b832ff6ab"
+  Hint: Allowed Renderings
+  Value: "{1DEB067F-0BB1-405E-94F5-2ABB537A6160}"
 Languages:
 - Language: en
   Versions:
@@ -17,7 +17,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220520T144306Z
+      Value: 20220608T085148Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -28,11 +28,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d99035d9-0636-4aed-9ee1-e9806d63c82e"
+      Value: "c59162d3-cbd9-48dc-b3bc-8132a8662612"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220520T144306Z
+      Value: 20220608T085342Z

@@ -72,6 +72,30 @@ body{
 }
 header{
     background-color: white;
+    .component{
+        margin-top: 5px;
+    }
+    .navigation{
+        margin-top: 50px;
+      
+    }
+    .richtext{
+        background-color: #707070;
+        font-size: 0.8em;
+        a {
+            text-decoration: none;
+            color: white;
+            :after{
+                content: none;
+            }
+        }
+        p {
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
 }
 footer{
     background-color: #707070;
@@ -101,3 +125,5 @@ h1{
 @import "components/hero";
 @import "components/organiserList";
 @import "components/sponsorList";
+@import "components/title";
+@import "components/navigation";
