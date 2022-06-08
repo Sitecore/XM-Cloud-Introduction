@@ -49,7 +49,7 @@ type ComponentContentProps = {
 const ComponentContent = (props: ComponentContentProps) => {
   return (
     <div className={`component title ${props.styles}`}>
-      <div className="component-content">
+      <div className="component-content container">
         <div className="field-title">{props.children}</div>
       </div>
     </div>
@@ -83,10 +83,10 @@ export const Default = (props: TitleProps): JSX.Element => {
     <ComponentContent styles={props.params.styles}>
       <>
         {sitecoreContext.pageState === 'edit' ? (
-          <Text field={text} />
+          <h1><Text field={text} /></h1>
         ) : (
           <Link field={link}>
-            <Text field={text} />
+           <h1> <Text field={text} /></h1>
           </Link>
         )}
       </>
