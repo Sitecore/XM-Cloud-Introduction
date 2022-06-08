@@ -19,7 +19,7 @@ This repository contains the codebase for a series of sites managed by the Techn
 Prerequisites for this repository are...
 
 # Intialising the repository
-You first need to initialise your .env file which will configure how the different application elements will run. There are a series of parameters you can pass in to override the default behaviour of the application, you can find the full list of parameters with their purpose here.c
+You first need to initialise your .env file which will configure how the different application elements will run. There are a series of parameters you can pass in to override the default behaviour of the application, you can find the full list of parameters with their purpose here.
 
 Examples of how to use them can be seen in the different setup guides for both Local Mode and Edge Mode below.
 
