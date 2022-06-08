@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, LinkField, Text, TextField } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
@@ -40,6 +40,9 @@ const getLinkField = (props: NavigationProps): LinkField => ({
 });
 
 const Navigation = (props: NavigationProps): JSX.Element => {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
   if (!Object.values(props.fields).length) {
     return (
       <div className={`component navigation`}>
@@ -59,9 +62,33 @@ const Navigation = (props: NavigationProps): JSX.Element => {
 
   return (
     <div className={`component navigation ${styles}`}>
-      <div className="component-content">
-        <nav>
-          <ul className="clearfix">{list}</ul>
+      <div className="component-content d-flex justify-content-end">
+        <nav className="navbar navbar-expand-lg navbar-light">
+          <button
+            className="navbar-toggler ms-auto mb-3"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-controls="navbar"
+            aria-expanded={!isNavCollapsed ? true : false}
+            aria-label="Toggle navigation"
+            onClick={handleNavCollapse}
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className={`${isNavCollapsed ? 'collapse ' : ''} navbar-collapse`} id="navbar">
+            <div className="navbar-nav d-flex flex-row me-auto justify-content-end">
+              <ul
+                className={`${
+                  isNavCollapsed
+                    ? 'd-flex flex-row me-auto justify-content-end'
+                    : 'd-flex flex-column'
+                } nav-item`}
+              >
+                {list}
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>
     </div>
@@ -88,7 +115,7 @@ const NavigationList = (props: NavigationProps) => {
   return (
     <li className={props.fields.Styles.join(' ')} key={props.fields.Id}>
       <div className="navigation-title">
-        <Link field={getLinkField(props)} title={title}>
+        <Link className="nav-link nav-item" field={getLinkField(props)} title={title}>
           {getNavigationText(props)}
         </Link>
       </div>
