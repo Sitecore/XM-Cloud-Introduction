@@ -1,0 +1,28 @@
+.main-nav{
+    ul {
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        box-sizing: border-box;
+        float: right;
+    }
+    li {
+        margin-right: 0.5rem!important;
+        margin-left: 0.5rem!important;
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+
+    a{
+        font-size: 1.0em;
+        font-weight: 600;
+        color: #000000;
+        text-decoration: none;
+    }
+}
+
+.mobile-nav{
+
+}

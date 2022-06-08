@@ -4,6 +4,9 @@ Parent: "6f42eb7e-7dda-4ccd-b116-a136d10b0e3d"
 Template: "36cad6cf-d418-43ca-bc57-656e44069116"
 Path: /sitecore/content/Sugcon/SugconAnzSxa/Home/Test
 SharedFields:
+- ID: "1fbc6a49-6281-48ee-87e9-a3970b145adb"
+  Hint: NavigationFilter
+  Value: "{D063E9D1-C7B5-4B1E-B31E-69886C9C59F5}"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 700
@@ -53,7 +56,7 @@ Languages:
       Value: Test
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0dc79c76-b517-48f9-99b8-cf0e08a6a8b9"
+      Value: "6dc7e997-70d4-4bc3-93ee-fb650b80d97c"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
       Value: Test
@@ -63,4 +66,4 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220524T095942Z
+      Value: 20220608T085639Z
