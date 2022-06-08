@@ -7,6 +7,8 @@ You can `watch` this repository to follow along with our development progress as
 
 # Introduction
 
+[![Current CI/CD Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/deploy.yml)
+
 This repository contains the codebase for a series of sites managed by the Technical Marketing Team at Sitecore. You will find the following sites in this repository:
 - [Sitecore MVP Site](https://mvp.sitecore.com)
 - [SUGCON EU Site](https://europe.sugcon.events)
@@ -17,7 +19,7 @@ This repository contains the codebase for a series of sites managed by the Techn
 Prerequisites for this repository are...
 
 # Intialising the repository
-You first need to initialise your .env file which will configure how the different application elements will run. There are a series of parameters you can pass in to override the default behaviour of the application, you can find the full list of parameters with their purpose here.
+You first need to initialise your .env file which will configure how the different application elements will run. There are a series of parameters you can pass in to override the default behaviour of the application, you can find the full list of parameters with their purpose here.c
 
 Examples of how to use them can be seen in the different setup guides for both Local Mode and Edge Mode below.
 
