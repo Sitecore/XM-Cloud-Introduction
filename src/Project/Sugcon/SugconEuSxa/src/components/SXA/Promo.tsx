@@ -32,18 +32,16 @@ export const Default = (props: PromoProps): JSX.Element => {
   if (props.fields) {
     return (
       <div className={`component promo ${props.params.styles}`}>
-        <div className="component-content">
-          <div className="field-promoicon">
+        <div className="component-content card">
+          <div className="card-img-top">
             <JssImage field={props.fields.PromoIcon} />
           </div>
-          <div className="promo-text">
-            <div>
-              <div className="field-promotext">
-                <Text className="image-caption" field={props.fields.PromoText} />
-              </div>
+          <div className="card-body">
+            <div className="card-text">
+              <Text className="image-caption" field={props.fields.PromoText} />
             </div>
-            <div className="field-promolink">
-              <JssLink field={props.fields.PromoLink} />
+            <div className="card-text">
+              <JssLink field={props.fields.PromoLink} className="btn btn-light" />
             </div>
           </div>
         </div>

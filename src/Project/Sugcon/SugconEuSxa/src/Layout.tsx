@@ -23,24 +23,23 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
       </Head>
 
-      {/*Navigation*/}
       {/* root placeholder for the app, which we add components to using route data */}
       <header>
-        <div id="header" className="container">
+        <div id="header" className="container-fluid">
           <div className="row">
             {route && <Placeholder name="headless-header" rendering={route} />}
           </div>
         </div>
       </header>
       <main>
-        <div id="content" className="container">
+        <div id="content" className="container-fluid">
           <div className="row">
             {route && <Placeholder name="headless-main" rendering={route} />}
           </div>
         </div>
       </main>
       <footer>
-        <div id="footer" className="container">
+        <div id="footer" className="container-fluid">
           <div className="row">
             {route && <Placeholder name="headless-footer" rendering={route} />}
           </div>
