@@ -16,7 +16,7 @@ Languages:
       Value: 20220607T175752Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5563ae64-e220-47b0-8363-34ebbb9ecdc5"
+      Value: "b0ed3b3a-2acb-4eee-bb7e-0e372f7efe44"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -24,7 +24,13 @@ Languages:
     - ID: "c1413fde-0dd2-4fc9-842d-5ccc7c753564"
       Hint: BackgroundImage
       Value: |
-        <image mediaid="{225E1ACF-57A3-4F0D-8789-C899C6C145F7}" />
+        <image mediaid="{0734E2DB-D921-4E39-B26A-317B50136024}" />
+    - ID: "d08fa491-162f-44ad-85c0-af9269b9195c"
+      Hint: Text
+      Value: "Thank you!"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220607T175833Z
+      Value: 20220613T185021Z
+    - ID: "db8d95de-6511-487f-acc0-31f25fa76e52"
+      Hint: Label
+      Value: SUGCON EUROPE
