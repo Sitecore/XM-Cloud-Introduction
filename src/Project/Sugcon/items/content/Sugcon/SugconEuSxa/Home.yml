@@ -36,29 +36,24 @@ Languages:
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B7A30FADD-53BB-4779-B80D-5AD7F01457DB%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=7"
               s:ph="/headless-main/container-3" />
             <r
-              uid="{1CA790DC-0D14-4E5D-BB4F-FBDB024933C5}"
+              uid="{E6340255-8A5C-498C-828A-41BE2303D3A0}"
               p:after="r[@uid='{66EA51BA-B82E-4C4C-817F-B51F8DA06442}']"
+              s:ds="local:/Data/CTA"
+              s:id="{96127B34-218D-4D4E-9203-65B7E24A42E6}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BFEDA0026-E7BB-4969-9712-3E4629CB3EFE%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=8"
+              s:ph="/headless-main/container-3" />
+            <r
+              uid="{1CA790DC-0D14-4E5D-BB4F-FBDB024933C5}"
+              p:after="r[@uid='{E6340255-8A5C-498C-828A-41BE2303D3A0}']"
               s:ds="local:/Data/Hero 1"
               s:id="{1980CE42-9455-48E5-B4D0-DDB59C9B28D4}"
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BAC36768D-1DCE-40EF-BB0F-E6C10EC14522%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=5"
               s:ph="headless-main" />
             <r
-              uid="{03226EF8-6300-40BA-9683-8ACB387D1A09}"
-              p:after="r[@uid='{1CA790DC-0D14-4E5D-BB4F-FBDB024933C5}']"
-              s:id="{3836D951-BB14-43AC-9231-649B7F245DC5}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B3932A1EC-A7A5-4117-B845-4EEA4F2B6D87%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=1"
-              s:ph="/headless-main/container-4" />
-            <r
               uid="{F23FB863-3828-4D7E-929F-E2C827A07021}"
-              p:after="r[@uid='{03226EF8-6300-40BA-9683-8ACB387D1A09}']"
-              s:id="{01BB6244-4E0F-4A9B-9352-1F2C64982655}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles=%7B51488297-F4D0-40ED-9D8B-9689BD64D9B2%7D&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=3"
-              s:ph="headless-main" />
-            <r
-              uid="{3158DB7C-BCA6-4A6F-B65E-ABF281D5511C}"
               p:after="*[1=2]"
               s:id="{01BB6244-4E0F-4A9B-9352-1F2C64982655}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles=%7B88DBD899-6D0C-4D81-B018-D420C341CB04%7D%7C%7BCFB4D296-D5FD-4490-8878-3337546D76EF%7D&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=4"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles=%7B51488297-F4D0-40ED-9D8B-9689BD64D9B2%7D&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=3"
               s:ph="headless-main" />
           </d>
         </r>
@@ -86,7 +81,7 @@ Languages:
         <p><strong>Sitecore Community is truly the best in the world! See you next year!</strong></p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fc3c6b6e-d2c8-4fd9-b8bf-b8f45c6f6320"
+      Value: "30d76130-481e-4e3a-9879-a0b57a6909c3"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
       Value: "Organizing Committee and Sitecore would like to thank all SUGCON Europe 2022 attendees!"
@@ -96,4 +91,4 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220613T185227Z
+      Value: 20220613T185509Z
