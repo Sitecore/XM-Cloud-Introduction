@@ -24,8 +24,15 @@ Languages:
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
               uid="{884EC8F2-10A6-49DE-A37A-2594F1C376C3}"
+              p:before="*"
               s:id="{71100E1F-3D11-48AB-8C2F-E56FBFA66476}"
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BAA655070-67F4-4B0C-B88B-7BF18F4ACE45%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=1"
+              s:ph="/headless-main/container-2" />
+            <r
+              uid="{9E18B912-106B-466F-BF23-BFD959A5205B}"
+              p:after="*[1=2]"
+              s:id="{01BB6244-4E0F-4A9B-9352-1F2C64982655}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=2"
               s:ph="headless-main" />
           </d>
         </r>
@@ -37,14 +44,14 @@ Languages:
       Value: Speakers
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7d51f074-c25a-4fde-8f10-5a4385d21131"
+      Value: "a908fb9a-0f12-48f6-b858-81595782f70f"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
       Value: Speakers
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220525T142057Z
+      Value: 20220615T172402Z
