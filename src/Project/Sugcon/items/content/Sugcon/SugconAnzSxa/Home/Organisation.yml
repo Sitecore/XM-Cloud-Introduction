@@ -23,17 +23,29 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{008191CB-0870-4102-B381-CFEFFDA8A829}"
-              p:before="*"
-              s:id="{3836D951-BB14-43AC-9231-649B7F245DC5}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B9B6FD326-0B7B-440F-A448-7081FC41C6B7%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=2"
-              s:ph="headless-main" />
-            <r
               uid="{8CA2A614-FDCB-4343-80B9-C90A01BE1C37}"
-              p:after="*[1=2]"
+              p:before="*"
               s:ds="local:/Data/OrganiserList 1"
               s:id="{CE4B14F7-2845-4CA4-AB42-0F0ACC60499B}"
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B83FB783D-0801-4A1F-82F2-2999B29B9954%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=1"
+              s:ph="/headless-main/container-4" />
+            <r
+              uid="{008191CB-0870-4102-B381-CFEFFDA8A829}"
+              p:after="r[@uid='{8CA2A614-FDCB-4343-80B9-C90A01BE1C37}']"
+              s:id="{3836D951-BB14-43AC-9231-649B7F245DC5}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B9B6FD326-0B7B-440F-A448-7081FC41C6B7%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=2"
+              s:ph="/headless-main/container-3" />
+            <r
+              uid="{1B81C7C7-550A-43EA-AD4B-B7398A211D29}"
+              p:after="r[@uid='{008191CB-0870-4102-B381-CFEFFDA8A829}']"
+              s:id="{01BB6244-4E0F-4A9B-9352-1F2C64982655}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=3"
+              s:ph="headless-main" />
+            <r
+              uid="{3CD6B346-C2D2-4AF5-8694-995555C96615}"
+              p:after="*[1=2]"
+              s:id="{01BB6244-4E0F-4A9B-9352-1F2C64982655}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=4"
               s:ph="headless-main" />
           </d>
         </r>
@@ -45,14 +57,14 @@ Languages:
       Value: Organisation
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0dfaae68-eb04-4170-a140-21c67eca2c89"
+      Value: "d65b6f9c-01b2-4763-ad39-5fc0a00a321a"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
       Value: Meet the great people that are responsible for organizing SUGCON Europe 2022
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220608T083749Z
+      Value: 20220615T172813Z

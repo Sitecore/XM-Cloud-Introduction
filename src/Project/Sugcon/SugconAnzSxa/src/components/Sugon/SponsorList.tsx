@@ -46,7 +46,6 @@ export const Default = (props: SponsorListProps): JSX.Element => {
                     
                       <div className="col-6 col-md-4 col-lg-3 SponsorBlock">
                         
-                          <Text field={Sponsor.fields.SponsorName} />
                           <div className="SponsorImage">
                             <Image field={Sponsor?.fields.SponsorLogo} />
                           </div>
