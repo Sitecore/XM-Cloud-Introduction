@@ -121,6 +121,10 @@ h1{
      max-width: 1200px;
      margin: auto;
  } 
+
+ .background-dark-grey{
+    background-color: #707070;
+ }
 // Finally add custom components
 @import "components/hero";
 @import "components/organiserList";
