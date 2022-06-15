@@ -24,15 +24,19 @@ const Hero = (props: HeroProps): JSX.Element => (
 export const Default = (props: HeroProps): JSX.Element => {
   if (props.fields) {
     return (
-      <div className="mb-5 d-flex justify-content-center">
-        <Image field={props.fields.BackgroundImage} />
-        <div className="caption d-none d-lg-block">
-          <p className="hero-label">
-            <Text field={props.fields.Label} />
-          </p>
-          <p className="h1 py-4">
-            <Text className="contentTitle" field={props.fields.Text} />
-          </p>
+      <div className={`component hero ${props.params.styles}`}>
+        <div className="component-content" id="box-search">
+          <div className="thumbnail">
+            <Image media={props.fields.BackgroundImage} className="img-fluid heroimage"></Image>
+            <div className="caption d-none d-md-block">
+              <p className="hero-label">
+                <Text field={props.fields.Label} />
+              </p>
+              <p className="h1 py-4">
+                <Text className="contentTitle" field={props.fields.Text} />
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     );
