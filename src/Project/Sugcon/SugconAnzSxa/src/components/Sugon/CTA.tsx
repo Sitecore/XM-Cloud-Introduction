@@ -5,8 +5,8 @@ import {
   LinkField,
   Link,
   ImageField,
+  Image,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import Image from 'next/image';
 
 interface Fields {
   Headline: Field<string>;
@@ -43,12 +43,7 @@ export const Default = (props: CTAProps): JSX.Element => {
             <Link field={props.fields.Link}></Link>
           </div>
           <div className="align-self-stretch">
-            {/* <Image field={props.fields.Image} /> */}
-            <Image
-              src="https://mvp-cd.sitecore.com/-/jssmedia/Sugcon/EU/man-with-phone-and-umbrella.jpg?h=392&iar=0&w=707&hash=3A6D3F751B1C35BC34BD7038F0364C9C"
-              width="707"
-              height="392"
-            />
+            <Image field={props.fields.Image} />
           </div>
         </div>
       </div>
