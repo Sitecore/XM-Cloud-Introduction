@@ -17,8 +17,8 @@ services:
     healthcheck:
       test: ["CMD", "traefik", "healthcheck", "--ping"]
     volumes:
-      - source: \\.\pipe\docker_engine
-        target: \\.\pipe\docker_engine
+      - source: \\.\pipe\docker_engine\
+        target: \\.\pipe\docker_engine\
         type: npipe
       - ./traefik:C:/etc/traefik
     depends_on:
@@ -85,6 +85,8 @@ services:
       solr-init:
         condition: service_started
     environment:
+      host: ${CM_HOST}
+      RENDERING_HOST_INTERNAL_URI: ${RENDERING_HOST_INTERNAL_URI}
       Sitecore_AppSettings_instanceNameMode:define: default
       Sitecore_ConnectionStrings_Core: Data Source=${SQL_SERVER};Initial Catalog=${SQL_DATABASE_PREFIX}.Core;User ID=${SQL_SA_LOGIN};Password=${SQL_SA_PASSWORD}
       Sitecore_ConnectionStrings_Security: Data Source=${SQL_SERVER};Initial Catalog=${SQL_DATABASE_PREFIX}.Core;User ID=${SQL_SA_LOGIN};Password=${SQL_SA_PASSWORD}
