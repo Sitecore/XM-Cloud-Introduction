@@ -80,14 +80,14 @@ else {
     do {
         Start-Sleep -Milliseconds 100
         try {
-            $status = Invoke-RestMethod "http://localhost:8079/api/http/routers/cm-secure@docker"
+            $status = Invoke-RestMethod "http://localhost:8079/api/http/routers/cm-secure@docker" -TimeoutSec 600
         }
         catch {
             if ($_.Exception.Response.StatusCode.value__ -ne "404") {
                 throw
             }
         }
-    } while ($status.status -ne "enabled" -and $startTime.AddSeconds(60) -gt (Get-Date))
+    } while ($status.status -ne "enabled" -and $startTime.AddSeconds(600) -gt (Get-Date))
     if (-not $status.status -eq "enabled") {
         $status
         Write-Error "Timeout waiting for Sitecore CM to become available via Traefik proxy. Check CM container logs."
@@ -110,7 +110,8 @@ else {
 
     Write-Host "Logging into Sitecore..." -ForegroundColor Green
     dotnet sitecore cloud login
-    dotnet sitecore login --ref xmcloud --cm https://$xmCloudHost --allow-write true
+    # dotnet sitecore login --ref xmcloud --cm https://$xmCloudHost --allow-write true
+    dotnet sitecore connect -r xmcloud --cm https://$xmCloudHost --allow-write true --environment-name default
 
     if ($LASTEXITCODE -ne 0) {
         Write-Error "Unable to log into Sitecore, did the Sitecore environment start correctly? See logs above."
