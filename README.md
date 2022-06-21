@@ -18,8 +18,8 @@ This repository contains the codebase for a series of sites managed by the Techn
 
 Prerequisites for this repository are...
 
-# Intialising the repository
-You first need to initialise your .env file which will configure how the different application elements will run. There are a series of parameters you can pass in to override the default behaviour of the application, you can find the full list of parameters with their purpose here.
+# Initializing the repository
+You first need to initialize your .env file which will configure how the different application elements will run. There are a series of parameters you can pass in to override the default behaviour of the application, you can find the full list of parameters with their purpose here.
 
 Examples of how to use them can be seen in the different setup guides for both Local Mode and Edge Mode below.
 
@@ -38,9 +38,9 @@ Examples of how to use them can be seen in the different setup guides for both L
 
 Running in Local Mode will run all of the application elemenets required on your local machine using Docker
 
-## Initialise your repository for Local Mode
+## Initialize your repository for Local Mode
 
-First initialise your repo using the `.init/ps1` script, you can see an example of how to init for 'Local Mode' below
+First initialize your repo using the `.init/ps1` script, you can see an example of how to init for 'Local Mode' below
 
 ```ps1
 .\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Auth0_ClientId "<<Auth0_Client_Id>>" -Auth0_ClientSecret "<<Auth0_Client_Secret>>"
@@ -70,9 +70,9 @@ Running in Edge Mode will run only run the Host applications and Traefik used to
   - `.\New-EdgeToken.ps1 -EnvironmentId <<YOUR_ENVIRONMENT_ID>>`
   - _Record the returned Edge Token, and Edge URL._
 
-## Initialise your repository for Edge Mode
+## Initialize your repository for Edge Mode
 
-Next initialise your repo using the `.init/ps1` script, you can see an example of how to init for 'Edge Mode' below
+Next initialize your repo using the `.init/ps1` script, you can see an example of how to init for 'Edge Mode' below
 
 ```ps1
 .\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Auth0_ClientId "<<Auth0_Client_Id>>" -Auth0_ClientSecret "<<Auth0_Client_Secret>>" -Edge_Url "<<Edge_Url>>" -Edge_Token "<<Edge_Token>>"
