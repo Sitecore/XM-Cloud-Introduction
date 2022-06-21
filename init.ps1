@@ -1,6 +1,9 @@
 #Requires -RunAsAdministrator
 [CmdletBinding(DefaultParameterSetName = "no-arguments")]
 Param (
+	[Parameter(HelpMessage = "Enables initialization of values in the .env file, which may be placed in source control.",
+        ParameterSetName = "env-init")]
+    [switch]$InitEnv,
     [Parameter(Mandatory = $true,
         HelpMessage = "The path to a valid Sitecore license.xml file.",
         ParameterSetName = "env-init")]
@@ -104,6 +107,7 @@ Import-Module PowerShellGet
 $SitecoreGallery = Get-PSRepository | Where-Object { $_.SourceLocation -eq "https://sitecore.myget.org/F/sc-powershell/api/v2" }
 if (-not $SitecoreGallery) {
     Write-Host "Adding Sitecore PowerShell Gallery..." -ForegroundColor Green
+	Unregister-PSRepository -Name SitecoreGallery -ErrorAction SilentlyContinue
     Register-PSRepository -Name SitecoreGallery -SourceLocation https://sitecore.myget.org/F/sc-powershell/api/v2 -InstallationPolicy Trusted
     $SitecoreGallery = Get-PSRepository -Name SitecoreGallery
 }
@@ -170,25 +174,98 @@ Add-HostsEntry $SUGCON_EU_HOST
 Add-HostsEntry $SUGCON_ANZ_HOST
 
 ###############################
+# Generate scjssconfig
+###############################
+
+$xmCloudBuild = Get-Content "xmcloud.build.json" | ConvertFrom-Json
+$scjssconfig = @{
+    sitecore= @{
+        deploySecret = $xmCloudBuild.renderingHosts.xmcloudpreview.jssDeploymentSecret
+        deployUrl = "https://xmcloudcm.localhost/sitecore/api/jss/im.port"
+      }
+    }
+
+# ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\rendering\scjssconfig.json"
+
+# Set-EnvFileVariable "JSS_DEPLOYMENT_SECRET_xmcloudpreview" -Value $xmCloudBuild.renderingHosts.xmcloudpreview.jssDeploymentSecret
+
+################################
+# Generate Sitecore Api Key
+################################
+
+$sitecoreApiKey = (New-Guid).Guid
+Set-EnvFileVariable "SITECORE_API_KEY_xmcloudpreview" -Value $sitecoreApiKey
+
+################################
+# Generate JSS_EDITING_SECRET
+################################
+$jssEditingSecret = Get-SitecoreRandomString 64 -DisallowSpecial
+Set-EnvFileVariable "JSS_EDITING_SECRET" -Value $jssEditingSecret
+
+###############################
 # Populate the environment file
 ###############################
-Write-Host "Populating Environment File..." -ForegroundColor Green
-Set-EnvFileVariable "HOST_LICENSE_FOLDER" -Value $LicenseXmlPath
-Set-EnvFileVariable "CM_HOST" -Value $CM_Host
-Set-EnvFileVariable "MVP_RENDERING_HOST" -Value $MVP_Host
-Set-EnvFileVariable "REPORTING_API_KEY" -Value (Get-SitecoreRandomString 128 -DisallowSpecial)
-Set-EnvFileVariable "TELERIK_ENCRYPTION_KEY" -Value (Get-SitecoreRandomString 128)
-Set-EnvFileVariable "MEDIA_REQUEST_PROTECTION_SHARED_SECRET" -Value (Get-SitecoreRandomString 64)
-Set-EnvFileVariable "SQL_SA_PASSWORD" -Value (Get-SitecoreRandomString 19 -DisallowSpecial -EnforceComplexity)
-Set-EnvFileVariable "SITECORE_ADMIN_PASSWORD" -Value $AdminPassword
-Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientId" -Value $Auth0_ClientId
-Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientSecret" -Value $Auth0_ClientSecret
-Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl" -Value "https://$CM_Host/"
-Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_Domain" -Value $Auth0_Domain
-Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_Audience" -Value $Auth0_Audience
-Set-EnvFileVariable "EXPERIENCE_EDGE_URL" -Value $Edge_Url
-Set-EnvFileVariable "EXPERIENCE_EDGE_TOKEN" -Value $Edge_Token
-Set-EnvFileVariable "JSS_EDITING_SECRET" -Value (Get-SitecoreRandomString 64 -DisallowSpecial)
+if ($InitEnv) {
+	Write-Host "Populating Environment File..." -ForegroundColor Green
+	
+	# HOST_LICENSE_FOLDER
+	Set-EnvFileVariable "HOST_LICENSE_FOLDER" -Value $LicenseXmlPath
+	
+	# CM_HOST
+	Set-EnvFileVariable "CM_HOST" -Value $CM_Host
+	
+	# MVP_RENDERING_HOST
+	Set-EnvFileVariable "MVP_RENDERING_HOST" -Value $MVP_Host
+	
+	# REPORTING_API_KEY
+	Set-EnvFileVariable "REPORTING_API_KEY" -Value (Get-SitecoreRandomString 128 -DisallowSpecial)
+	
+	# TELERIK_ENCRYPTION_KEY
+	Set-EnvFileVariable "TELERIK_ENCRYPTION_KEY" -Value (Get-SitecoreRandomString 128)
+	
+	# MEDIA_REQUEST_PROTECTION_SHARED_SECRET
+	Set-EnvFileVariable "MEDIA_REQUEST_PROTECTION_SHARED_SECRET" -Value (Get-SitecoreRandomString 64)
+	
+	# SQL_SA_PASSWORD
+	# Need to ensure it meets SQL complexity requirements
+	Set-EnvFileVariable "SQL_SA_PASSWORD" -Value (Get-SitecoreRandomString 19 -DisallowSpecial -EnforceComplexity)
+	
+	# SQL_SERVER
+    Set-EnvFileVariable "SQL_SERVER" -Value "mssql"
+
+    # SQL_SA_LOGIN
+    Set-EnvFileVariable "SQL_SA_LOGIN" -Value "sa"
+	
+	# SITECORE_ADMIN_PASSWORD
+	Set-EnvFileVariable "SITECORE_ADMIN_PASSWORD" -Value $AdminPassword
+	
+	# SITECORE_FedAuth_dot_Auth0_dot_ClientId
+	Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientId" -Value $Auth0_ClientId
+	
+	# SITECORE_FedAuth_dot_Auth0_dot_ClientSecret
+	Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientSecret" -Value $Auth0_ClientSecret
+	
+	# SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl
+	Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl" -Value "https://$CM_Host/"
+	
+	# SITECORE_FedAuth_dot_Auth0_dot_Domain
+	Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_Domain" -Value $Auth0_Domain
+	
+	# SITECORE_FedAuth_dot_Auth0_dot_Audience
+	Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_Audience" -Value $Auth0_Audience
+	
+	# EXPERIENCE_EDGE_URL
+	Set-EnvFileVariable "EXPERIENCE_EDGE_URL" -Value $Edge_Url
+	
+	# EXPERIENCE_EDGE_TOKEN
+	Set-EnvFileVariable "EXPERIENCE_EDGE_TOKEN" -Value $Edge_Token
+	
+	# JSS_EDITING_SECRET
+	Set-EnvFileVariable "JSS_EDITING_SECRET" -Value (Get-SitecoreRandomString 64 -DisallowSpecial)
+
+}
+
+Write-Host "Done!" -ForegroundColor Green
 
 #####################################################
 # TEMP Step: Populate xmcloud.plugin.pre-release.json

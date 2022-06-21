@@ -1,0 +1,11 @@
+{
+    "namespace": "ApiKey",
+    "items" : {
+        "includes": [
+            {
+                "name": "api-key",
+                "path": "/sitecore/system/Settings/Services/API Keys/<SITENAME>"
+            }
+        ]
+    }
+}

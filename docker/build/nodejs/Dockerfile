@@ -16,5 +16,6 @@ RUN tar.exe -xf node.zip -C C:\
 RUN move C:\node-v%NODEJS_VERSION%-win-x64 c:\node
 RUN del node.zip
 
-RUN SETX /M PATH "%PATH%;C:\node"
+RUN SETX /M PATH "%PATH%;C:\node\"
+RUN icacls.exe C:\node\ /grant "Authenticated Users":(F) /t
 USER ContainerUser
