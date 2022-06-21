@@ -16,7 +16,8 @@ This repository contains the codebase for a series of sites managed by the Techn
 
 # Prerequisites
 
-Prerequisites for this repository are...
+Prerequisites for this repository are:
+- [DotNet 6.0](https://dotnet.microsoft.com/en-us/download)
 
 # Initializing the repository
 You first need to initialize your .env file which will configure how the different application elements will run. There are a series of parameters you can pass in to override the default behaviour of the application, you can find the full list of parameters with their purpose here.
