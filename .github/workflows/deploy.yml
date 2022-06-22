@@ -73,36 +73,17 @@ jobs:
         dotnet-version: '6.0.x' 
     - run: dotnet tool restore
     - run: dotnet sitecore --help
-    # Temp fix to use Beta instance of XM CLoud
-    - name: "TEMP: Update configs to use beta instance of XM CLoud"
-      shell: pwsh
-      run: |
-          Copy-Item ".\xmcloud.plugin.pre-release.json.template" ".\xmcloud.plugin.pre-release.json" -Force
-          $json = Get-Content .\xmcloud.plugin.pre-release.json | ConvertFrom-Json 
-          $json.defaultAuthority = "${{ secrets.BETA_CLI_CLIENT_DEFAULT_AUTHORITY }}"
-          $json.clientId = "${{ secrets.BETA_CLI_CLIENT_ID }}"
-          $json.xmCloudDeployApp = "${{ secrets.BETA_CLI_XM_CLOUD_DEPLOY_APP }}"
-          $json.xmCloudDeployEndpoint = "${{ secrets.BETA_CLI_XM_CLOUD_DEPLOY_ENDPOINT }}"
-          $json.audience = "${{ secrets.BETA_CLI_AUDIENCE }}"
-          $json.audienceClientCredentials = "${{ secrets.BETA_CLI_AUDIENCE_CLIENT_CREDENTIALS }}"
-          $json | ConvertTo-Json | Out-File .\xmcloud.plugin.pre-release.json
-
-          $pluginJsonFiles = Get-ChildItem -path ".sitecore\package-cache\nuget\Sitecore.DevEx.Extensibility.XMCloud.*" -filter plugin.json -Recurse
-          $pluginJsonContent = Get-Content .\xmcloud.plugin.pre-release.json
-          foreach ($pluginJsonFile in $pluginJsonFiles) {
-              $pluginJsonContent | Set-Content -Path $pluginJsonFile.FullName
-          }
     - name: Authenticate CLI with XM Cloud
-      run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority ${{ secrets.STAGING_AUTHORITY }}
+      run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.PROD_CLIENT_ID }} --client-secret ${{ secrets.PROD_CLIENT_SECRET }}
     # Temp fix to remove duplicate sln file
     - name: "TEMP: Delete duplicate sln file as not currently supported"
       run: |
           cd src
           rm -f XmCloudIntroduction.sln
     - name: Deploy the CM assets to XM Cloud
-      run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_ENVIRONMENT_ID }} --upload 
+      run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.PROD_ENVIRONMENT_ID }} --upload 
     - name: Authenticate default environment with CLI
-      run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.BETA_CLIENT_ID }} --client-secret ${{ secrets.BETA_CLIENT_SECRET }} --authority ${{ secrets.STAGING_AUTHORITY }} --cm ${{ secrets.STAGING_CM_URL }} --allow-write true
+      run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.PROD_CLIENT_ID }} --client-secret ${{ secrets.PROD_CLIENT_SECRET }} --cm ${{ secrets.PROD_CM_URL }} --allow-write true
     - name: Publish content changes
       run: dotnet sitecore publish --pt Edge
 
