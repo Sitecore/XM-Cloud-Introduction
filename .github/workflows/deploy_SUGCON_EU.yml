@@ -1,18 +1,18 @@
-name: Build and Release SUGCON ANZ
+name: Build and Release SUGCON EU
 on: 
   push:
     branches: [ main ]
     paths:
-      - 'src/Project/Sugcon/SugconAnzSxa/**'
+      - 'src/Project/Sugcon/SugconEuSxa/**'
   pull_request:
     branches: [ main ]
     paths:
-      - 'src/Project/Sugcon/SugconAnzSxa/**'
+      - 'src/Project/Sugcon/SugconEuSxa/**'
 
 jobs:
 
   build-sugcon-anz:
-    name: Build the SUGCON ANZ head
+    name: Build the SUGCON EU head
     runs-on: ubuntu-latest
     env:
       FETCH_WITH: GraphQL
@@ -20,7 +20,7 @@ jobs:
       SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
     defaults:
       run:
-        working-directory: ./src/Project/Sugcon/SugconAnzSxa
+        working-directory: ./src/Project/Sugcon/SugconEuSxa
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
