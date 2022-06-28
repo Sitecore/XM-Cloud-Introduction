@@ -4,16 +4,10 @@ on:
     branches: [ main ]
     paths:
       - 'src/Project/Sugcon/SugconAnzSxa/**'
-    paths-ignore:
-    - 'README.md'
-    - 'deploy**.yml' #IGNORE CHANGES TO GITHUB ACTIONS
   pull_request:
     branches: [ main ]
     paths:
       - 'src/Project/Sugcon/SugconAnzSxa/**'
-    paths-ignore:
-    - 'README.md'
-    - 'deploy**.yml' #IGNORE CHANGES TO GITHUB ACTIONS
 
 jobs:
 
