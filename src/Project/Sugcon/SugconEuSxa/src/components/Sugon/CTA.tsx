@@ -1,4 +1,12 @@
-import { Text, RichText, Field, LinkField, Link, Image, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  Text,
+  RichText,
+  Field,
+  LinkField,
+  Link,
+  ImageField,
+  Image,
+} from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
   Headline: Field<string>;
