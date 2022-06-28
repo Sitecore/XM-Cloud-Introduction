@@ -4,10 +4,12 @@ on:
     branches: [ main ]
     paths-ignore:
     - 'README.md'
+    - 'src/Project/Sugcon/SugconAnzSxa' #IGNORE CHANGES TO Next.js head
   pull_request:
     branches: [ main ]
     paths-ignore:
     - 'README.md'
+    - 'src/Project/Sugcon/SugconAnzSxa' #IGNORE CHANGES TO Next.js head
 
 jobs:
 
