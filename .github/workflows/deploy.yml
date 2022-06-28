@@ -1,4 +1,4 @@
-name: Build and Release
+name: Build and Release CM + MVP Site
 on: 
   push:
     branches: [ main ]
@@ -31,42 +31,7 @@ jobs:
     - name: Build
       run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
 
-  # build-sugcon-eu:
-  #   name: Build the SUGCON EU head
-  #   runs-on: ubuntu-latest
-  #   env:
-  #     FETCH_WITH: GraphQL
-  #     GRAPH_QL_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
-  #     SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
-  #   defaults:
-  #     run:
-  #       working-directory: ./src/Project/Sugcon/SugconEuSxa
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - uses: actions/setup-node@v3
-  #     with:
-  #       node-version: 16.5
-  #   - run: npm install
-  #   - run: npm run build
   
-  # build-sugcon-anz:
-  #   name: Build the SUGCON ANZ head
-  #   runs-on: ubuntu-latest
-  #   env:
-  #     FETCH_WITH: GraphQL
-  #     GRAPH_QL_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
-  #     SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
-  #   defaults:
-  #     run:
-  #       working-directory: ./src/Project/Sugcon/SugconAnzSxa
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - uses: actions/setup-node@v3
-  #     with:
-  #       node-version: 16.5
-  #   - run: npm install
-  #   - run: npm run build
-
   deploy-cm:
     name: Deploy the CM asset to XM Cloud
     if: github.ref == 'refs/heads/main'
