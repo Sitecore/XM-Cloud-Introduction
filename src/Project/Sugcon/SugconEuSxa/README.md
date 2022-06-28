@@ -1,6 +1,10 @@
-# Sitecore JSS Next.js Sample Application
+# SUGCON EU Site
+This is a headless Next.js site that uses the following technologies:
+- Sitecore XM Cloud (Content Management)
+- Sitecore JSS and Headless SXA (headless SDK)
+- Next.js (rendering host)
+- Vercel (hosting)
 
-<!---
-@TODO: Update to version 20.0.0 docs before release
--->
-[Documentation](https://doc.sitecore.com/xp/en/developers/hd/190/sitecore-headless-development/sitecore-javascript-rendering-sdk--jss--for-next-js.html).
+## Sitecore JSS Next.js Sample
+
+* [Documentation](https://doc.sitecore.com/xp/en/developers/hd/latest/sitecore-headless-development/sitecore-javascript-rendering-sdk--jss--for-next-js.html)
