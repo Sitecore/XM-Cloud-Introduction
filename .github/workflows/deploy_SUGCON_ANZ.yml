@@ -3,11 +3,17 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'src/Project/Sugcon/SugconAnzSxa'
+      - 'src/Project/Sugcon/SugconAnzSxa/**'
+    paths-ignore:
+    - 'README.md'
+    - 'deploy**.yml' #IGNORE CHANGES TO GITHUB ACTIONS
   pull_request:
     branches: [ main ]
     paths:
-      - 'src/Project/Sugcon/SugconAnzSxa'
+      - 'src/Project/Sugcon/SugconAnzSxa/**'
+    paths-ignore:
+    - 'README.md'
+    - 'deploy**.yml' #IGNORE CHANGES TO GITHUB ACTIONS
 
 jobs:
 
@@ -29,6 +35,8 @@ jobs:
     - run: npm install
     - run: npm run build
 
+
+##BELOW ARE REFERENCE EXAMPLES TO COMPARE AGAINST. TO BE DELETED ONCE WORKING!
  # build-sugcon-anz:
   #   name: Build the SUGCON ANZ head
   #   runs-on: ubuntu-latest
@@ -47,7 +55,7 @@ jobs:
   #   - run: npm install
   #   - run: npm run build     
   
-  # deploy-sugcon-eu:
+  # deploy-sugcon-anz:
   #   name: Deploy the SUGCON EU rendering host to Vercel
   #   if: github.ref == 'refs/heads/main'
   #   needs: deploy-cm
