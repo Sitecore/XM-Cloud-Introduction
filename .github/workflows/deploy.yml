@@ -6,12 +6,14 @@ on:
     - 'README.md'
     - '.github/workflows/**' #IGNORE CHANGES TO GITHUB ACTIONS
     - 'src/Project/Sugcon/SugconAnzSxa/**' #IGNORE CHANGES TO Next.js head
+    - 'src/Project/Sugcon/SugconEuSxa/**' #IGNORE CHANGES TO Next.js head
   pull_request:
     branches: [ main ]
     paths-ignore:
     - 'README.md'
     - '.github/workflows/**' #IGNORE CHANGES TO GITHUB ACTIONS
     - 'src/Project/Sugcon/SugconAnzSxa/**' #IGNORE CHANGES TO Next.js head
+    - 'src/Project/Sugcon/SugconEuSxa/**' #IGNORE CHANGES TO Next.js head
 
 jobs:
 
