@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Link,
-  Text,
-  useSitecoreContext,
-  LinkField,
-  TextField,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, useSitecoreContext, LinkField, TextField } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
   data: {
@@ -83,11 +77,14 @@ export const Default = (props: TitleProps): JSX.Element => {
     <ComponentContent styles={props.params.styles}>
       <>
         {sitecoreContext.pageState === 'edit' ? (
-          <h1><Text field={text} /></h1>
+          <h1>
+            <Text field={text} />
+          </h1>
         ) : (
-          
-           <h1> <Text field={text} /></h1>
-          
+          <h1>
+            {' '}
+            <Text field={text} />
+          </h1>
         )}
       </>
     </ComponentContent>

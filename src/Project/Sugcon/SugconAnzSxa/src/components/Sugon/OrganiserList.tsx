@@ -42,7 +42,10 @@ export const Default = (props: OrganiserListProps): JSX.Element => {
             ) : (
               props.fields?.Organisers?.map((Organizer) => {
                 return (
-                  <div key={Organizer.fields.Name.value} className="col-6 col-md-6 col-lg-3 organizer">
+                  <div
+                    key={Organizer.fields.Name.value}
+                    className="col-6 col-md-6 col-lg-3 organizer"
+                  >
                     <div className="card">
                       <p>
                         <Image field={Organizer?.fields?.Image} />

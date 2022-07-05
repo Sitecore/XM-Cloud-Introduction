@@ -37,9 +37,7 @@ export const Default = (props: CTAProps): JSX.Element => {
             <h3>
               <Text field={props.fields.Headline} />
             </h3>
-            <p>
-              <RichText field={props.fields.Text} />
-            </p>
+            <RichText field={props.fields.Text} />
             <Link field={props.fields.Link}></Link>
           </div>
           <div className="align-self-stretch">

@@ -38,23 +38,22 @@ export const Default = (props: SponsorListProps): JSX.Element => {
                 <Text field={props.fields?.Category} />
               </h3>
               <div className="row">
-              {props.fields?.Sponsors?.length == 0 ? (
-                <div>No Organizers</div>
-              ) : (
-                props.fields?.Sponsors?.map((Sponsor) => {
-                  return (
-                    
-                      <div className="col-6 col-md-4 col-lg-3 SponsorBlock">
-                        
-                          <div className="SponsorImage">
-                            <Image field={Sponsor?.fields.SponsorLogo} />
-                          </div>
-                        
+                {props.fields?.Sponsors?.length == 0 ? (
+                  <div>No Organizers</div>
+                ) : (
+                  props.fields?.Sponsors?.map((Sponsor) => {
+                    return (
+                      <div
+                        key={Sponsor.fields.SponsorName.value}
+                        className="col-6 col-md-4 col-lg-3 SponsorBlock"
+                      >
+                        <div className="SponsorImage">
+                          <Image field={Sponsor?.fields.SponsorLogo} />
+                        </div>
                       </div>
-                    
-                  );
-                })
-              )}
+                    );
+                  })
+                )}
               </div>
             </div>
           </div>
@@ -71,13 +70,12 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
     return (
       <div className={`component sponsor-list platinum ${props.params.styles}`}>
         <div className="component-content container">
-          
           {props.fields?.Sponsors?.length == 0 ? (
             <div>No Organizers</div>
           ) : (
             props.fields?.Sponsors?.map((Sponsor) => {
               return (
-                <div className="row">
+                <div key={Sponsor.fields.SponsorName.value} className="row">
                   <div className="col-12 col-md-6">
                     <p className="sponsorLabel">
                       <Text field={props?.fields?.Category} />
@@ -93,7 +91,7 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
                     <div className="sponsorImgPlatinumOuter">
                       <div className="sponsorImgPlatinum">
                         <picture>
-                        <Image field={Sponsor?.fields?.SponsorLogo} />
+                          <Image field={Sponsor?.fields?.SponsorLogo} />
                         </picture>
                       </div>
                     </div>
