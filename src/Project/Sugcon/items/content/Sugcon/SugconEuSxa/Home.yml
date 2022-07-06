@@ -69,7 +69,7 @@ Languages:
       Value: 20220519T091039Z
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
-      Value: SugconEuSxa
+      Value: Home
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -88,14 +88,14 @@ Languages:
         <p><strong>Sitecore Community is truly the best in the world! See you next year!</strong></p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "893bc054-a052-4b7d-ae6e-2cd76959bfe2"
+      Value: "91442ded-fd95-4bf8-85d6-35119efd8de7"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
       Value: "Organizing Committee and Sitecore would like to thank all SUGCON Europe 2022 attendees!"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\rics@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220613T204039Z
+      Value: 20220706T145309Z
