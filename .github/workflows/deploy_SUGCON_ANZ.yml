@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FETCH_WITH: GraphQL
-      GRAPH_QL_ENDPOINT: ${{ secrets.FULL_GRAPH_QL_ENDPOINT }}
+      GRAPH_QL_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
       SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
     defaults:
       run:
