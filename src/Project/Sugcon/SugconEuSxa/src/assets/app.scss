@@ -75,9 +75,6 @@ body {
 }
 header {
     background-color: white;
-    .component {
-        margin-top: 5px;
-    }
     .navigation {
         margin-top: 50px;
     }
@@ -115,10 +112,6 @@ h1 {
     font-size: 36px;
 }
 
-.component {
-    margin-top: 50px;
-}
-
 .centered-block {
     max-width: 1200px;
     margin: auto;
@@ -126,6 +119,10 @@ h1 {
 
 .background-dark-grey {
     background-color: #707070;
+}
+
+.background-light-grey {
+    background-color: #f6f6f6;
 }
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
