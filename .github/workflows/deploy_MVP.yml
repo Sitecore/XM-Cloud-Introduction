@@ -28,7 +28,7 @@ jobs:
   deploy-mvp:
     name: Deploy the MVP rendering host to Azure WebApp
     if: github.ref == 'refs/heads/main'
-    needs: deploy-cm  
+    needs: build-dotnet  
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
