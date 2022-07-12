@@ -26,7 +26,7 @@ jobs:
       run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
 
   deploy-mvp-staging:
-    name: Deploy the MVP rendering host to Azure WebApp
+    name: Deploy the MVP rendering host to Staging Azure WebApp
     #if: github.ref == 'refs/heads/main'
     needs: build-dotnet  
     runs-on: windows-latest
@@ -50,7 +50,7 @@ jobs:
           package: './publish/mvp-staging'
 
   deploy-mvp-prod:
-    name: Deploy the MVP rendering host to Azure WebApp
+    name: Deploy the MVP rendering host to Production Azure WebApp
     #if: github.ref == 'refs/heads/main'
     needs: deploy-mvp-staging 
     runs-on: windows-latest
