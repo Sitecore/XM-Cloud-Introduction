@@ -69,6 +69,6 @@ jobs:
       - name: 'Run Azure webapp deploy action using publish profile credentials'
         uses: azure/webapps-deploy@v2
         with: 
-          app-name: Mvp-Staging
+          app-name: Mvp-Production
           publish-profile: ${{ secrets.PROD_MVP_WEBAPP_PUBLISHING_PROFILE }}
           package: './publish/mvp-prod'
