@@ -1,10 +1,10 @@
 name: Build and Release CM + MVP Site
 on: 
   push:
-    branches: [ main ]
+    #branches: [ main ]
     paths-ignore:
     - 'README.md'
-    - '.github/workflows/**' #IGNORE CHANGES TO GITHUB ACTIONS
+    #- '.github/workflows/**' #IGNORE CHANGES TO GITHUB ACTIONS
     - 'src/Project/Sugcon/SugconAnzSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/Project/Sugcon/SugconEuSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/**/rendering/**' #IGNORE CHANGE TO MVP HEAD AND RELATED PROJECTS
@@ -33,10 +33,35 @@ jobs:
     - name: Build
       run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
 
+  deploy-staging:
+    name: Deploy the XM Cloud Staging Site
+    #if: github.ref == 'refs/heads/main'
+    needs: [build-dotnet]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '6.0.x' 
+    - run: dotnet tool restore
+    - run: dotnet sitecore --help
+    - name: Authenticate CLI with XM Cloud
+      run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.PROD_CLIENT_ID }} --client-secret ${{ secrets.PROD_CLIENT_SECRET }}
+    # Temp fix to remove duplicate sln file
+    - name: "TEMP: Delete duplicate sln file as not currently supported"
+      run: |
+          cd src
+          rm -f XmCloudIntroduction.sln
+    - name: Deploy the CM assets to XM Cloud
+      run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_XM_CLOUD_ENVIRONMENT_ID }} --upload 
+    - name: Authenticate default environment with CLI
+      run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.PROD_CLIENT_ID }} --client-secret ${{ secrets.PROD_CLIENT_SECRET }} --cm ${{ secrets.STAGING_XM_CLOUD_CM_URL }} --allow-write true
+    - name: Publish content changes
+      run: dotnet sitecore publish --pt Edge
   
-  deploy-cm:
-    name: Deploy the CM asset to XM Cloud
-    if: github.ref == 'refs/heads/main'
+  deploy-production:
+    name: Deploy the XM Cloud Production Site
+    #if: github.ref == 'refs/heads/main'
     needs: [build-dotnet]
     runs-on: ubuntu-latest
     steps:
