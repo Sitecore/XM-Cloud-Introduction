@@ -1,7 +1,7 @@
 name: Build and Release MVP Site
 on: 
   push:
-    #branches: [ main ]
+    branches: [ main ]
     paths:
       - 'src/**/rendering/**'
   pull_request:
@@ -27,7 +27,7 @@ jobs:
 
   deploy-mvp-staging:
     name: Deploy the MVP rendering host to Staging Azure WebApp
-    #if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs: build-dotnet  
     runs-on: windows-latest
     steps:
@@ -51,7 +51,7 @@ jobs:
 
   deploy-mvp-prod:
     name: Deploy the MVP rendering host to Production Azure WebApp
-    #if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs: deploy-mvp-staging 
     runs-on: windows-latest
     steps:
