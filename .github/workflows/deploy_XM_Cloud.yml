@@ -7,6 +7,7 @@ on:
     - '.github/workflows/**' #IGNORE CHANGES TO GITHUB ACTIONS
     - 'src/Project/Sugcon/SugconAnzSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/Project/Sugcon/SugconEuSxa/**' #IGNORE CHANGES TO Next.js head
+    - 'src/**/rendering/**' #IGNORE CHANGE TO MVP HEAD AND RELATED PROJECTS
   pull_request:
     branches: [ main ]
     paths-ignore:
@@ -14,6 +15,7 @@ on:
     - '.github/workflows/**' #IGNORE CHANGES TO GITHUB ACTIONS
     - 'src/Project/Sugcon/SugconAnzSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/Project/Sugcon/SugconEuSxa/**' #IGNORE CHANGES TO Next.js head
+    - 'src/**/rendering/**' #IGNORE CHANGE TO MVP HEAD AND RELATED PROJECTS
 
 jobs:
 
@@ -57,43 +59,3 @@ jobs:
       run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.PROD_CLIENT_ID }} --client-secret ${{ secrets.PROD_CLIENT_SECRET }} --cm ${{ secrets.PROD_CM_URL }} --allow-write true
     - name: Publish content changes
       run: dotnet sitecore publish --pt Edge
-
-  deploy-mvp:
-    name: Deploy the MVP rendering host to Azure WebApp
-    if: github.ref == 'refs/heads/main'
-    needs: deploy-cm  
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 6.0.300
-      - name: dotnet build and publish
-        run: |
-          cd src/Project/MvpSite/rendering
-          dotnet restore
-          dotnet build --configuration Release
-          dotnet publish -c Release -o '../../../../publish/mvp-staging' 
-      - name: 'Run Azure webapp deploy action using publish profile credentials'
-        uses: azure/webapps-deploy@v2
-        with: 
-          app-name: Mvp-Staging
-          publish-profile: ${{ secrets.STAGING_WEBAPP_PUBLISH_PROFILE }}
-          package: './publish/mvp-staging'
-
-  # deploy-sugcon-eu:
-  #   name: Deploy the SUGCON EU rendering host to Vercel
-  #   if: github.ref == 'refs/heads/main'
-  #   needs: deploy-cm
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: amondnet/vercel-action@v20
-  #       with:
-  #         vercel-token: ${{ secrets.VERCEL_TOKEN }}
-  #         vercel-args: ${{ fromJSON('["--prod", ""]')[github.ref != 'refs/heads/main'] }}
-  #         vercel-org-id: ${{ secrets.VERCEL_ORG_ID}} 
-  #         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} 
-  #         scope: ${{ secrets.VERCEL_ORG_ID}}
-  #         working-directory: ./
