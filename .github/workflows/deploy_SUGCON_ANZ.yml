@@ -1,12 +1,14 @@
 name: Build and Release SUGCON ANZ
 on: 
   push:
-    branches: [ main ]
+    #branches: [ main ]
     paths:
+      - .github/workflows/deploy_SUGCON_ANZ.yml
       - 'src/Project/Sugcon/SugconAnzSxa/**'
   pull_request:
     branches: [ main ]
     paths:
+      - .github/workflows/deploy_SUGCON_ANZ.yml
       - 'src/Project/Sugcon/SugconAnzSxa/**'
 
 jobs:
@@ -29,20 +31,18 @@ jobs:
     - run: npm install
     - run: npm run build
 
-
-##BELOW ARE REFERENCE EXAMPLES TO COMPARE AGAINST. TO BE DELETED ONCE WORKING!
-  # deploy-sugcon-anz:
-  #   name: Deploy the SUGCON EU rendering host to Vercel
-  #   if: github.ref == 'refs/heads/main'
-  #   needs: deploy-cm
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: amondnet/vercel-action@v20
-  #       with:
-  #         vercel-token: ${{ secrets.VERCEL_TOKEN }}
-  #         vercel-args: ${{ fromJSON('["--prod", ""]')[github.ref != 'refs/heads/main'] }}
-  #         vercel-org-id: ${{ secrets.VERCEL_ORG_ID}} 
-  #         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} 
-  #         scope: ${{ secrets.VERCEL_ORG_ID}}
-  #         working-directory: ./
+  deploy-sugcon-anz:
+    name: Deploy the SUGCON ANZ rendering host to Vercel
+    if: github.ref == 'refs/heads/main'
+    needs: deploy-cm
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-args: ${{ fromJSON('["--prod", ""]')[github.ref != 'refs/heads/main'] }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}} 
+          vercel-project-id: ${{ secrets.VERCEL_SUGCON_ANZ_PROJECT_ID}} 
+          scope: ${{ secrets.VERCEL_ORG_ID}}
+          working-directory: ./
