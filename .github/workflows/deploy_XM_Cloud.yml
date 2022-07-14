@@ -58,7 +58,7 @@ jobs:
       run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.PROD_CLIENT_ID }} --client-secret ${{ secrets.PROD_CLIENT_SECRET }} --cm ${{ secrets.STAGING_XM_CLOUD_CM_URL }} --allow-write true
     - name: Publish content changes
       run: dotnet sitecore publish --pt Edge
-  
+   
   # deploy-production:
   #   name: Deploy the XM Cloud Production Site
   #   #if: github.ref == 'refs/heads/main'
