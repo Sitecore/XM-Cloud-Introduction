@@ -1,10 +1,10 @@
-name: Build and Release CM + MVP Site
+name: Build and Release XM Cloud
 on: 
   push:
-    #branches: [ main ]
+    branches: [ main ]
     paths-ignore:
     - 'README.md'
-    #- '.github/workflows/**' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/**' #IGNORE CHANGES TO GITHUB ACTIONS
     - 'src/Project/Sugcon/SugconAnzSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/Project/Sugcon/SugconEuSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/**/rendering/**' #IGNORE CHANGE TO MVP HEAD AND RELATED PROJECTS
@@ -35,7 +35,6 @@ jobs:
 
   deploy-staging:
     name: Deploy the XM Cloud Staging Site
-    #if: github.ref == 'refs/heads/main'
     needs: [build-dotnet]
     runs-on: ubuntu-latest
     steps:
@@ -56,7 +55,7 @@ jobs:
    
   deploy-production:
     name: Deploy the XM Cloud Production Site
-    #if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs: [deploy-staging]
     runs-on: ubuntu-latest
     steps:
