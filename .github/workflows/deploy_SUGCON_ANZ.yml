@@ -13,7 +13,7 @@ on:
 
 jobs:
 
-  build-sugcon-anz:
+  build:
     name: Build the SUGCON ANZ head
     runs-on: ubuntu-latest
     env:
@@ -31,10 +31,10 @@ jobs:
     - run: npm install
     - run: npm run build
 
-  deploy-sugcon-anz:
+  deploy:
     name: Deploy the SUGCON ANZ rendering host to Vercel
     if: github.ref == 'refs/heads/main'
-    needs: deploy-cm
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
