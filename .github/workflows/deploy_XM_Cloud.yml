@@ -73,4 +73,4 @@ jobs:
     - name: Authenticate default environment with CLI
       run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.PROD_CLIENT_ID }} --client-secret ${{ secrets.PROD_CLIENT_SECRET }} --cm ${{ secrets.PROD_CM_URL }} --allow-write true
     - name: Publish content changes
-      run: dotnet sitecore publish --pt Edge
+      run: dotnet sitecore publish --pt Edge 
