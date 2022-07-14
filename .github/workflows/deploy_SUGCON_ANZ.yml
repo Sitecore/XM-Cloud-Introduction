@@ -1,7 +1,7 @@
 name: Build and Release SUGCON ANZ
 on: 
   push:
-    #branches: [ main ]
+    branches: [ main ]
     paths:
       - .github/workflows/deploy_SUGCON_ANZ.yml
       - 'src/Project/Sugcon/SugconAnzSxa/**'
