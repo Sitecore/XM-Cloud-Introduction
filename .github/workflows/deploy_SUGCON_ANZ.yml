@@ -33,7 +33,6 @@ jobs:
 
   deploy:
     name: Deploy the SUGCON ANZ rendering host to Vercel
-    if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     steps:
