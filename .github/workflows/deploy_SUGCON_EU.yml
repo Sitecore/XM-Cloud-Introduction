@@ -1,7 +1,7 @@
 name: Build and Release SUGCON EU
 on: 
   push:
-    #branches: [ main ]
+    branches: [ main ]
     paths:
       - .github/workflows/deploy_SUGCON_EU.yml
       - 'src/Project/Sugcon/SugconEuSxa/**'
