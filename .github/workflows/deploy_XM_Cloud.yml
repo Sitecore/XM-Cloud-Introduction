@@ -47,11 +47,6 @@ jobs:
     - run: dotnet sitecore --help
     - name: Authenticate CLI with XM Cloud
       run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.PROD_CLIENT_ID }} --client-secret ${{ secrets.PROD_CLIENT_SECRET }}
-    # Temp fix to remove duplicate sln file
-    - name: "TEMP: Delete duplicate sln file as not currently supported"
-      run: |
-          cd src
-          rm -f XmCloudIntroduction.sln
     - name: Deploy the CM assets to XM Cloud
       run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_XM_CLOUD_ENVIRONMENT_ID }} --upload 
     - name: Authenticate default environment with CLI
@@ -59,28 +54,23 @@ jobs:
     - name: Publish content changes
       run: dotnet sitecore publish --pt Edge
    
-  # deploy-production:
-  #   name: Deploy the XM Cloud Production Site
-  #   #if: github.ref == 'refs/heads/main'
-  #   needs: [deploy-staging]
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - uses: actions/setup-dotnet@v2
-  #     with:
-  #       dotnet-version: '6.0.x' 
-  #   - run: dotnet tool restore
-  #   - run: dotnet sitecore --help
-  #   - name: Authenticate CLI with XM Cloud
-  #     run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.PROD_CLIENT_ID }} --client-secret ${{ secrets.PROD_CLIENT_SECRET }}
-  #   # Temp fix to remove duplicate sln file
-  #   - name: "TEMP: Delete duplicate sln file as not currently supported"
-  #     run: |
-  #         cd src
-  #         rm -f XmCloudIntroduction.sln
-  #   - name: Deploy the CM assets to XM Cloud
-  #     run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.PROD_ENVIRONMENT_ID }} --upload 
-  #   - name: Authenticate default environment with CLI
-  #     run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.PROD_CLIENT_ID }} --client-secret ${{ secrets.PROD_CLIENT_SECRET }} --cm ${{ secrets.PROD_CM_URL }} --allow-write true
-  #   - name: Publish content changes
-  #     run: dotnet sitecore publish --pt Edge
+  deploy-production:
+    name: Deploy the XM Cloud Production Site
+    #if: github.ref == 'refs/heads/main'
+    needs: [deploy-staging]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '6.0.x' 
+    - run: dotnet tool restore
+    - run: dotnet sitecore --help
+    - name: Authenticate CLI with XM Cloud
+      run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.PROD_CLIENT_ID }} --client-secret ${{ secrets.PROD_CLIENT_SECRET }}
+    - name: Deploy the CM assets to XM Cloud
+      run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.PROD_ENVIRONMENT_ID }} --upload 
+    - name: Authenticate default environment with CLI
+      run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.PROD_CLIENT_ID }} --client-secret ${{ secrets.PROD_CLIENT_SECRET }} --cm ${{ secrets.PROD_CM_URL }} --allow-write true
+    - name: Publish content changes
+      run: dotnet sitecore publish --pt Edge
