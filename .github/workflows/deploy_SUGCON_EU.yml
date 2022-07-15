@@ -1,4 +1,4 @@
-name: Build and Release SUGCON EU
+name: SUGCON EU
 on: 
   push:
     branches: [ main ]

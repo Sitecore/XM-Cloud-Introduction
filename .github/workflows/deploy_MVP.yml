@@ -1,4 +1,4 @@
-name: Build and Release MVP Site
+name: MVP Site
 on: 
   push:
     branches: [ main ]

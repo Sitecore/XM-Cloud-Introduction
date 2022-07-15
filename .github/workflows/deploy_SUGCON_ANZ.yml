@@ -1,4 +1,4 @@
-name: Build and Release SUGCON ANZ
+name: SUGCON ANZ
 on: 
   push:
     branches: [ main ]
