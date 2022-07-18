@@ -4,10 +4,12 @@ on:
     #branches: [ main ]
     paths:
       - 'src/**/rendering/**'
+      - .github/workflows/deploy_SUGCON_MVP.yml
   pull_request:
     branches: [ main ]
     paths:
       - 'src/**/rendering/**'
+      - .github/workflows/deploy_SUGCON_MVP.yml
 
 jobs:
 
