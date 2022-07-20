@@ -54,7 +54,7 @@ jobs:
   deploy-mvp-prod:
     name: Deploy the MVP rendering host to Production Azure WebApp
     #if: github.ref == 'refs/heads/main'
-    needs: deploy-mvp-staging 
+    needs: build-dotnet #deploy-mvp-staging 
     runs-on: ubuntu-latest
     steps:
       - uses: trstringer/manual-approval@v1
