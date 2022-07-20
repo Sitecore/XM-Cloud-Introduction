@@ -1,10 +1,12 @@
 name: XM Cloud
 on: 
   push:
-    branches: [ main ]
+    #branches: [ main ]
     paths-ignore:
     - 'README.md'
-    - '.github/workflows/**' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/deploy_MVP.yml' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/deploy_SUGCON_ANZ.yml' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/deploy_SUGCON_EU.yml' #IGNORE CHANGES TO GITHUB ACTIONS
     - 'src/Project/Sugcon/SugconAnzSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/Project/Sugcon/SugconEuSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/**/rendering/**' #IGNORE CHANGE TO MVP HEAD AND RELATED PROJECTS
@@ -12,7 +14,9 @@ on:
     branches: [ main ]
     paths-ignore:
     - 'README.md'
-    - '.github/workflows/**' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/deploy_MVP.yml' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/deploy_SUGCON_ANZ.yml' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/deploy_SUGCON_EU.yml' #IGNORE CHANGES TO GITHUB ACTIONS
     - 'src/Project/Sugcon/SugconAnzSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/Project/Sugcon/SugconEuSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/**/rendering/**' #IGNORE CHANGE TO MVP HEAD AND RELATED PROJECTS
@@ -35,7 +39,7 @@ jobs:
 
   deploy-staging:
     name: Deploy the XM Cloud Staging Site
-    needs: [build-dotnet]
+    needs: build-dotnet
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -52,11 +56,24 @@ jobs:
       run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.XM_CLOUD_CLIENT_ID }} --client-secret ${{ secrets.XM_CLOUD_CLIENT_SECRET }} --cm ${{ secrets.STAGING_XM_CLOUD_CM_URL }} --allow-write true
     - name: Publish content changes
       run: dotnet sitecore publish --pt Edge
-   
+
+  prod-approval-gate:
+    name: Await approval for production deployment
+    #if: github.ref == 'refs/heads/main'
+    needs: deploy-staging 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: ${{ secrets.PROD_APPROVERS_LIST }}
+          minimum-approvals: 1
+          issue-title: "Deploying XM-Cloud to prod from staging"
+
   deploy-production:
     name: Deploy the XM Cloud Production Site
-    if: github.ref == 'refs/heads/main'
-    needs: [deploy-staging]
+    #if: github.ref == 'refs/heads/main'
+    needs: prod-approval-gate
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
