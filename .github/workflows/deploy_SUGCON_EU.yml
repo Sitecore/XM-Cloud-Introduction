@@ -30,7 +30,7 @@ jobs:
         node-version: 16.5
     - run: npm install
     - run: npm run build
-
+    - run: npm run lint
 
   deploy:
     name: Deploy the SUGCON EU rendering host to Vercel
