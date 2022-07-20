@@ -15,7 +15,7 @@ jobs:
 
   build-dotnet:
     name: Build the .NET Solution
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Setup MSBuild path
@@ -27,35 +27,35 @@ jobs:
     - name: Build
       run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
 
-  deploy-mvp-staging:
-    name: Deploy the MVP rendering host to Staging Azure WebApp
-    #if: github.ref == 'refs/heads/main'
-    needs: build-dotnet  
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 6.0.300
-      - name: dotnet build and publish
-        run: |
-          cd src/Project/MvpSite/rendering
-          dotnet restore
-          dotnet build --configuration Debug
-          dotnet publish -c Release -o '../../../../publish/mvp-staging' 
-      - name: 'Run Azure webapp deploy action using publish profile credentials'
-        uses: azure/webapps-deploy@v2
-        with: 
-          app-name: Mvp-Staging
-          publish-profile: ${{ secrets.STAGING_MVP_WEBAPP_PUBLISHING_PROFILE }}
-          package: './publish/mvp-staging'
+  # deploy-mvp-staging:
+  #   name: Deploy the MVP rendering host to Staging Azure WebApp
+  #   #if: github.ref == 'refs/heads/main'
+  #   needs: build-dotnet  
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Setup .NET Core
+  #       uses: actions/setup-dotnet@v1
+  #       with:
+  #         dotnet-version: 6.0.300
+  #     - name: dotnet build and publish
+  #       run: |
+  #         cd src/Project/MvpSite/rendering
+  #         dotnet restore
+  #         dotnet build --configuration Debug
+  #         dotnet publish -c Release -o '../../../../publish/mvp-staging' 
+  #     - name: 'Run Azure webapp deploy action using publish profile credentials'
+  #       uses: azure/webapps-deploy@v2
+  #       with: 
+  #         app-name: Mvp-Staging
+  #         publish-profile: ${{ secrets.STAGING_MVP_WEBAPP_PUBLISHING_PROFILE }}
+  #         package: './publish/mvp-staging'
 
   deploy-mvp-prod:
     name: Deploy the MVP rendering host to Production Azure WebApp
     #if: github.ref == 'refs/heads/main'
     needs: deploy-mvp-staging 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: trstringer/manual-approval@v1
         with:
