@@ -1,7 +1,7 @@
 name: MVP Site
 on: 
   push:
-    #branches: [ main ]
+    branches: [ main ]
     paths:
       - 'src/**/rendering/**'
       - .github/workflows/deploy_MVP.yml
@@ -29,7 +29,6 @@ jobs:
 
   deploy-mvp-staging:
     name: Deploy the MVP rendering host to Staging Azure WebApp
-    #if: github.ref == 'refs/heads/main'
     needs: build-dotnet  
     runs-on: windows-latest
     steps:
@@ -53,7 +52,7 @@ jobs:
 
   prod-approval-gate:
     name: Await approval for production deployment
-    #if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs: deploy-mvp-staging 
     runs-on: ubuntu-latest
     steps:
@@ -66,7 +65,7 @@ jobs:
 
   deploy-mvp-prod:
     name: Deploy the MVP rendering host to Production Azure WebApp
-    #if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs: prod-approval-gate 
     runs-on: windows-latest
     steps:
