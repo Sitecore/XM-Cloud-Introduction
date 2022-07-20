@@ -1,7 +1,7 @@
 name: XM Cloud
 on: 
   push:
-    #branches: [ main ]
+    branches: [ main ]
     paths-ignore:
     - 'README.md'
     - '.github/workflows/deploy_MVP.yml' #IGNORE CHANGES TO GITHUB ACTIONS
@@ -59,7 +59,7 @@ jobs:
 
   prod-approval-gate:
     name: Await approval for production deployment
-    #if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs: deploy-staging 
     runs-on: ubuntu-latest
     steps:
@@ -72,7 +72,7 @@ jobs:
 
   deploy-production:
     name: Deploy the XM Cloud Production Site
-    #if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs: prod-approval-gate
     runs-on: ubuntu-latest
     steps:
