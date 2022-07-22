@@ -34,11 +34,7 @@ Examples of how to use them can be seen in the different setup guides for both L
 |--------------------|-----------|--------------------------------------------------------------------------------------------------------------|
 | LicenseXmlPath     | Yes       | Used to specify the path to the license file                                                                 |
 | AdminPassword      | Yes       | Used to specify the password for the Sitecore admin user                                                     |
-| Auth0_ClientId     | Yes       | Used to specify the Client Id used to authenticated with Auth0                                               |
-| Auth0_ClientSecret | Yes       | Used to specify the Client Secret used to authenticated with Auth0                                           |
 | InitEnv            | No        | Used to force a full initialisation of the repository                                                        |
-| Host_Suffix        | No        | Used to customise the suffix for the locally running sites - Note customising this currently isn't supported |
-| Edge_Url           | No        | Used to customise the URL used to connect to XM Cloud, when running in 'Edge Mode'                           |
 | Edge_Token         | No        | Used to authenticate with XM Cloud, when running in 'Edge Mode'                                              |
 
 # Running in Local Mode
@@ -50,7 +46,7 @@ Running in Local Mode will run all of the application elemenets required on your
 First initialize your repo using the `.init/ps1` script, you can see an example of how to init for 'Local Mode' below
 
 ```ps1
-.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Auth0_ClientId "<<Auth0_Client_Id>>" -Auth0_ClientSecret "<<Auth0_Client_Secret>>"
+.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword"
 ```
 
 ## Bring up all the application elememnts for Local Mode
@@ -82,7 +78,7 @@ Running in Edge Mode will run only run the Host applications and Traefik used to
 Next initialize your repo using the `.init/ps1` script, you can see an example of how to init for 'Edge Mode' below
 
 ```ps1
-.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Auth0_ClientId "<<Auth0_Client_Id>>" -Auth0_ClientSecret "<<Auth0_Client_Secret>>" -Edge_Url "<<Edge_Url>>" -Edge_Token "<<Edge_Token>>"
+.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Edge_Token "<<Edge_Token>>"
 ```
 
 ## Bring up all the application elememnts for Edge Mode
