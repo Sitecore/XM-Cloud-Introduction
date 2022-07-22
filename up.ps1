@@ -12,7 +12,6 @@ $xmCloudHost = $envContent | Where-Object { $_ -imatch "^CM_HOST=.+" }
 $mvpHost = $envContent | Where-Object { $_ -imatch "^MVP_RENDERING_HOST=.+" }
 $sugconeuHost = $envContent | Where-Object { $_ -imatch "^SUGCON_EU_HOST=.+" }
 $sugconanzHost = $envContent | Where-Object { $_ -imatch "^SUGCON_ANZ_HOST=.+" }
-$xmCloudDeployConfig = $envContent | Where-Object { $_ -imatch "^XMCLOUD_DEPLOY_CONFIG=.+" }
 $sitecoreDockerRegistry = $envContent | Where-Object { $_ -imatch "^SITECORE_DOCKER_REGISTRY=.+" }
 $sitecoreVersion = $envContent | Where-Object { $_ -imatch "^SITECORE_VERSION=.+" }
 
@@ -20,7 +19,6 @@ $xmCloudHost = $xmCloudHost.Split("=")[1]
 $mvpHost = $mvpHost.Split("=")[1]
 $sugconeuHost = $sugconeuHost.Split("=")[1]
 $sugconanzHost = $sugconanzHost.Split("=")[1]
-$xmCloudDeployConfig = $xmCloudDeployConfig.Split("=")[1]
 $sitecoreDockerRegistry = $sitecoreDockerRegistry.Split("=")[1]
 $sitecoreVersion = $sitecoreVersion.Split("=")[1]
 
@@ -69,7 +67,6 @@ if ($UseEdge) {
     Start-Process https://$mvpHost
 }
 else {
-
     # Start the Sitecore instance
     Write-Host "Starting Sitecore environment, all roles running locally..." -ForegroundColor Green
     docker-compose up -d
@@ -101,16 +98,8 @@ else {
         Write-Error "Unexpected error installing Sitecore CLI Plugins"
     }
 
-    # update XM Cloud Deploy plugin
-    $pluginJsonFiles = Get-ChildItem -path "$PSScriptRoot\.sitecore\package-cache\nuget\Sitecore.DevEx.Extensibility.XMCloud.*" -filter plugin.json -Recurse
-    $pluginJsonContent = Get-Content $xmCloudDeployConfig
-    foreach ($pluginJsonFile in $pluginJsonFiles) {
-        $pluginJsonContent | Set-Content -Path $pluginJsonFile.FullName
-    }
-
     Write-Host "Logging into Sitecore..." -ForegroundColor Green
     dotnet sitecore cloud login
-    # dotnet sitecore login --ref xmcloud --cm https://$xmCloudHost --allow-write true
     dotnet sitecore connect -r xmcloud --cm https://$xmCloudHost --allow-write true --environment-name default
 
     if ($LASTEXITCODE -ne 0) {
@@ -141,4 +130,3 @@ else {
     Start-Process https://$sugconeuHost
     Start-Process https://$sugconanzHost
 }
-
