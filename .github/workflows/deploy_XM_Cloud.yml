@@ -55,20 +55,7 @@ jobs:
     - name: Authenticate default environment with CLI
       run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.XM_CLOUD_CLIENT_ID }} --client-secret ${{ secrets.XM_CLOUD_CLIENT_SECRET }} --cm ${{ secrets.STAGING_XM_CLOUD_CM_URL }} --allow-write true
     - name: Publish content changes
-      run: dotnet sitecore publish --pt Edge --trace
-
-  prod-approval-gate:
-    name: Await approval for production deployment
-    if: github.ref == 'refs/heads/main'
-    needs: deploy-staging 
-    runs-on: ubuntu-latest
-    steps:
-      - uses: trstringer/manual-approval@v1
-        with:
-          secret: ${{ github.TOKEN }}
-          approvers: ${{ secrets.PROD_APPROVERS_LIST }}
-          minimum-approvals: 1
-          issue-title: "Deploying XM-Cloud to prod from staging"
+      run: dotnet sitecore publish --pt Edge
 
   deploy-production:
     name: Deploy the XM Cloud Production Site

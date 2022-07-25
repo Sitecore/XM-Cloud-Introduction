@@ -50,19 +50,6 @@ jobs:
           publish-profile: ${{ secrets.STAGING_MVP_WEBAPP_PUBLISHING_PROFILE }}
           package: './publish/mvp-staging'
 
-  prod-approval-gate:
-    name: Await approval for production deployment
-    if: github.ref == 'refs/heads/main'
-    needs: deploy-mvp-staging 
-    runs-on: ubuntu-latest
-    steps:
-      - uses: trstringer/manual-approval@v1
-        with:
-          secret: ${{ github.TOKEN }}
-          approvers: ${{ secrets.PROD_APPROVERS_LIST }}
-          minimum-approvals: 1
-          issue-title: "Deploying XM-Cloud to prod from staging"
-
   deploy-mvp-prod:
     name: Deploy the MVP rendering host to Production Azure WebApp
     if: github.ref == 'refs/heads/main'
