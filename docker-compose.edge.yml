@@ -6,7 +6,16 @@ services:
       Sitecore__InstanceUri: ${EXPERIENCE_EDGE_URL}
       Sitecore__LayoutServicePath: "/api/graphql/v1"
       Sitecore__ExperienceEdgeToken: ${EXPERIENCE_EDGE_TOKEN}
-      Sitecore__HostIsUsingEdge: "true"
+
+  sugcon-eu:
+    environment:
+      SITECORE_API_HOST: ${EXPERIENCE_EDGE_URL}
+      SITECORE_API_KEY: ${EXPERIENCE_EDGE_TOKEN}
+  
+  sugcon-anz:
+    environment:
+      SITECORE_API_HOST: ${EXPERIENCE_EDGE_URL}
+      SITECORE_API_KEY: ${EXPERIENCE_EDGE_TOKEN}
 
   # Scale all containers down 0 to just run hosts & treafik
   mssql:

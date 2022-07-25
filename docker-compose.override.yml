@@ -25,6 +25,7 @@ services:
       JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
       GRAPH_QL_ENDPOINT: "${GRAPH_QL_ENDPOINT}"
       SITECORE_API_KEY: "${SITECORE_API_KEY}"
+      FETCH_WITH: "GraphQL"
     depends_on:
       - cm
       - nodejs
@@ -50,6 +51,7 @@ services:
       JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
       GRAPH_QL_ENDPOINT: "${GRAPH_QL_ENDPOINT}"
       SITECORE_API_KEY: "${SUGCONANZ_API_KEY}"
+      FETCH_WITH: "GraphQL"
     depends_on:
       - cm
       - nodejs
@@ -150,6 +152,7 @@ services:
       - ${LOCAL_DATA_PATH}\cm:C:\inetpub\wwwroot\App_Data\logs
       - ${HOST_LICENSE_FOLDER}:c:\license
     environment:
+      Sitecore__ExternalCdUrl: "${CM_HOST}"
       SITECORE_LICENSE_LOCATION: c:\license\license.xml
       JSS_EdgeWebsite_DEPLOYMENT_SECRET: ${JSS_EdgeWebsite_DEPLOYMENT_SECRET}
       SITECORE_JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
