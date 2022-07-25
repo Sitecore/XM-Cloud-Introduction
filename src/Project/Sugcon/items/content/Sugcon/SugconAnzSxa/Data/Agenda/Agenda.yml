@@ -1,0 +1,29 @@
+﻿---
+ID: "d4725d7f-f728-4d81-8ce2-645cfc2a4af1"
+Parent: "b5e9557b-de2d-490d-b4bc-e250a0e076df"
+Template: "384e1c30-e63a-4060-828e-7dc2b0139dac"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Data/Agenda/Agenda
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220725T163215Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ed498bf8-fa65-4f20-912f-15542f1980f2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "bd677d16-2cc9-4211-a8b7-7569e4683169"
+      Hint: SessionizeURL
+      Value: "https://sessionize.com/api/v2/0b2ge63q/view/GridSmart"
+    - ID: "c96d0edb-dba3-4436-855f-9914049bf9a1"
+      Hint: Title
+      Value: SUGCON ANZ 2022 Agenda
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220725T163247Z
