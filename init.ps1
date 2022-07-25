@@ -16,70 +16,13 @@ Param (
         ParameterSetName = "env-init")]
     [String]$AdminPassword,
 
-    [Parameter(Mandatory = $true,
-    HelpMessage = "The Client ID used to authenticate with Auth0.",
-        ParameterSetName = "env-init")]
-    [string]$Auth0_ClientId,
-
-    [Parameter(Mandatory = $true,
-    HelpMessage = "The Client Secret used to authenticate with Auth0.",
-        ParameterSetName = "env-init")]
-    [string]$Auth0_ClientSecret,
-
-    [Parameter(Mandatory = $true,
-    HelpMessage = "The Domain used to authenticate with Auth0.",
-        ParameterSetName = "env-init")]
-    [string]$Auth0_Domain,
-
-    [Parameter(Mandatory = $true,
-    HelpMessage = "The Audience used to authenticate with Auth0.",
-        ParameterSetName = "env-init")]
-    [string]$Auth0_Audience,
-
-    [Parameter(Mandatory = $true,
-    HelpMessage = "The Default Authority used to connect to XM Cloud.",
-        ParameterSetName = "env-init")]
-    [string]$XMCloud_Default_Authority,
-
-    [Parameter(Mandatory = $true,
-    HelpMessage = "The ClientId used to connect to XM Cloud.",
-        ParameterSetName = "env-init")]
-    [string]$XMCloud_ClientId,
-
-    [Parameter(Mandatory = $true,
-    HelpMessage = "The Deploy Application used to connect to XM Cloud.",
-        ParameterSetName = "env-init")]
-    [string]$XMCloud_Deploy_App,
-
-    [Parameter(Mandatory = $true,
-    HelpMessage = "The Deploy EndPoint used to connect to XM Cloud.",
-        ParameterSetName = "env-init")]
-    [string]$XMCloud_Deploy_EndPoint,
-
-    [Parameter(Mandatory = $true,
-    HelpMessage = "The Audience used to connect to XM Cloud.",
-        ParameterSetName = "env-init")]
-    [string]$XMCloud_Audience,
-
-    [Parameter(Mandatory = $true,
-    HelpMessage = "The Audience Client Credentials used to connect to XM Cloud.",
-        ParameterSetName = "env-init")]
-    [String]$XMCloud_Audience_Client_Credentials,
-
-    [Parameter(HelpMessage = "The hostname used for the local CM instance.",
-        ParameterSetName = "env-init")]
-    [string]$Host_Suffix = "xmcloudcm.localhost",
-
-    [Parameter(HelpMessage = "The Edge url used when running in Edge Mode.",
-        ParameterSetName = "env-init")]
-    [string]$Edge_Url,
-
     [Parameter(HelpMessage = "The Edge token used when running in Edge Mode.",
         ParameterSetName = "env-init")]
     [string]$Edge_Token
 )
 
 $ErrorActionPreference = "Stop";
+
 ###############
 # License Check
 ###############
@@ -127,6 +70,7 @@ Write-SitecoreDockerWelcome
 # Setup site host variables
 ###########################
 Write-Host "Setting Hosts Values..." -ForegroundColor Green
+$Host_Suffix = "xmcloudcm.localhost"
 $CM_Host = $Host_Suffix
 $MVP_Host = "mvp.$Host_Suffix"
 $SUGCON_EU_HOST = "sugconeu.$Host_Suffix"
@@ -176,23 +120,21 @@ Add-HostsEntry $SUGCON_ANZ_HOST
 ###############################
 # Generate scjssconfig
 ###############################
-
 $xmCloudBuild = Get-Content "xmcloud.build.json" | ConvertFrom-Json
 $scjssconfig = @{
     sitecore= @{
-        deploySecret = $xmCloudBuild.renderingHosts.xmcloudpreview.jssDeploymentSecret
-        deployUrl = "https://xmcloudcm.localhost/sitecore/api/jss/im.port"
+        deploySecret = $xmCloudBuild.renderingHosts.'sugcon-anz'.jssDeploymentSecret
+        deployUrl = "https://xmcloudcm.localhost/sitecore/api/jss/import"
       }
     }
 
-# ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\rendering\scjssconfig.json"
-
-# Set-EnvFileVariable "JSS_DEPLOYMENT_SECRET_xmcloudpreview" -Value $xmCloudBuild.renderingHosts.xmcloudpreview.jssDeploymentSecret
+ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconAnzSxa\scjssconfig.json"
+ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconEuSxa\scjssconfig.json"
+Set-EnvFileVariable "JSS_DEPLOYMENT_SECRET_xmcloudpreview" -Value $xmCloudBuild.renderingHosts.sugconanz.jssDeploymentSecret
 
 ################################
 # Generate Sitecore Api Key
 ################################
-
 $sitecoreApiKey = (New-Guid).Guid
 Set-EnvFileVariable "SITECORE_API_KEY_xmcloudpreview" -Value $sitecoreApiKey
 
@@ -239,24 +181,6 @@ if ($InitEnv) {
 	# SITECORE_ADMIN_PASSWORD
 	Set-EnvFileVariable "SITECORE_ADMIN_PASSWORD" -Value $AdminPassword
 	
-	# SITECORE_FedAuth_dot_Auth0_dot_ClientId
-	Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientId" -Value $Auth0_ClientId
-	
-	# SITECORE_FedAuth_dot_Auth0_dot_ClientSecret
-	Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_ClientSecret" -Value $Auth0_ClientSecret
-	
-	# SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl
-	Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl" -Value "https://$CM_Host/"
-	
-	# SITECORE_FedAuth_dot_Auth0_dot_Domain
-	Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_Domain" -Value $Auth0_Domain
-	
-	# SITECORE_FedAuth_dot_Auth0_dot_Audience
-	Set-EnvFileVariable "SITECORE_FedAuth_dot_Auth0_dot_Audience" -Value $Auth0_Audience
-	
-	# EXPERIENCE_EDGE_URL
-	Set-EnvFileVariable "EXPERIENCE_EDGE_URL" -Value $Edge_Url
-	
 	# EXPERIENCE_EDGE_TOKEN
 	Set-EnvFileVariable "EXPERIENCE_EDGE_TOKEN" -Value $Edge_Token
 	
@@ -266,22 +190,6 @@ if ($InitEnv) {
 }
 
 Write-Host "Done!" -ForegroundColor Green
-
-#####################################################
-# TEMP Step: Populate xmcloud.plugin.pre-release.json
-#####################################################
-Write-Host "Populating xmcloud.plugin.pre-release.json..." -ForegroundColor Green
-Copy-Item ".\xmcloud.plugin.pre-release.json.template" ".\xmcloud.plugin.pre-release.json" -Force
-$envFile = Join-Path $PWD '.env'
-$xmCloudDeployConfig = Get-EnvFileVariable -Path $envFile -Variable 'XMCLOUD_DEPLOY_CONFIG'
-$json = Get-Content $xmCloudDeployConfig | ConvertFrom-Json 
-$json.defaultAuthority = $XMCloud_Default_Authority
-$json.clientId = $XMCloud_ClientId
-$json.xmCloudDeployApp = $XMCloud_Deploy_App
-$json.xmCloudDeployEndpoint = $XMCloud_Deploy_EndPoint
-$json.audience = $XMCloud_Audience
-$json.audienceClientCredentials = $XMCloud_Audience_Client_Credentials
-$json | ConvertTo-Json | Out-File $xmCloudDeployConfig
 
 ##########################
 # Show Certificate Details
