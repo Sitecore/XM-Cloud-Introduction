@@ -1,7 +1,13 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
-
-import { withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  withDatasourceCheck,
+  GetStaticComponentProps,
+  useComponentProps,
+  Text,
+  ComponentRendering,
+} from '@sitecore-jss/sitecore-jss-nextjs';
+import { fetchSessionizeData } from 'lib/sessionize/fetch-sessonize-data';
+import { ComponentData } from 'lib/sessionize/sessionizeData';
 
 const Agenda = (): JSX.Element => (
   <div>
@@ -9,22 +15,20 @@ const Agenda = (): JSX.Element => (
   </div>
 );
 
-export const Default = (): JSX.Element => {
-  const [htmlContent, setHtmlContent] = useState('');
-  useEffect(() => {
-    async function getHtmlFromSessionize() {
-      const html = await (
-        await fetch('https://sessionize.com/api/v2/1wt79jwg/view/GridSmart')
-      ).text();
-      setHtmlContent(html);
-    }
-    getHtmlFromSessionize();
-  }, []);
+export const getStaticProps: GetStaticComponentProps = async (rendering: ComponentRendering) => {
+  const sessionizeAgendaUrl = rendering?.fields?.SessionizeURL.value;
+  return await fetchSessionizeData(sessionizeAgendaUrl);
+};
+
+export const Default = (props: ComponentData): JSX.Element => {
+  const externalData = useComponentProps<string>(props.rendering.uid);
 
   return (
     <div className="container component">
-      <h1 className="p-3">SUGCON ANZ 2022 Agenda</h1>
-      <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
+      <h1 className="p-3">
+        <Text field={props?.fields?.Title} />
+      </h1>
+      <div dangerouslySetInnerHTML={{ __html: externalData as string }} />
     </div>
   );
 };
