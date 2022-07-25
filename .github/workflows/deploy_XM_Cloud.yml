@@ -60,7 +60,7 @@ jobs:
   deploy-production:
     name: Deploy the XM Cloud Production Site
     if: github.ref == 'refs/heads/main'
-    needs: prod-approval-gate
+    needs: deploy-staging
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3

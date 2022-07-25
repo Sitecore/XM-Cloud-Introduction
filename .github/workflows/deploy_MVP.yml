@@ -53,7 +53,7 @@ jobs:
   deploy-mvp-prod:
     name: Deploy the MVP rendering host to Production Azure WebApp
     if: github.ref == 'refs/heads/main'
-    needs: prod-approval-gate 
+    needs: deploy-mvp-staging 
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
