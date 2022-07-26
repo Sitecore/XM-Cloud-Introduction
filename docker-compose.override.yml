@@ -23,7 +23,6 @@ services:
       NEXTJS_DIST_DIR: ".next-container"
       PUBLIC_URL: "https://${SUGCON_EU_HOST}"
       JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
-      GRAPH_QL_ENDPOINT: "${GRAPH_QL_ENDPOINT}"
       SITECORE_API_KEY: "${SITECORE_API_KEY}"
       FETCH_WITH: "GraphQL"
     depends_on:
@@ -49,7 +48,6 @@ services:
       NEXTJS_DIST_DIR: ".next-container"
       PUBLIC_URL: "https://${SUGCON_ANZ_HOST}"
       JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
-      GRAPH_QL_ENDPOINT: "${GRAPH_QL_ENDPOINT}"
       SITECORE_API_KEY: "${SUGCONANZ_API_KEY}"
       FETCH_WITH: "GraphQL"
     depends_on:
