@@ -27,6 +27,8 @@ const FixedWidthContainer = (props: ComponentProps): JSX.Element => {
     backgroundStyle = {
       backgroundImage: `url('${prefix}${backgroundImage?.match(BACKGROUND_REG_EXP)?.pop()}')`,
     };
+  } else {
+    backgroundStyle = {};
   }
 
   return (
