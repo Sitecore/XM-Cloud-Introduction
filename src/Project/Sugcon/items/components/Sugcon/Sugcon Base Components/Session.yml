@@ -12,7 +12,7 @@ SharedFields:
   Value: office/32x32/brain.png
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
-  Value: 
+  Value: /sitecore/templates/Feature/Sugcon/Sugcon Base Components/Session
 - ID: "34e81e40-1d4d-45b0-bcf1-a0ffe5521685"
   Hint: RenderingCssClass
   Value: session
@@ -27,7 +27,7 @@ SharedFields:
   Value: "{3394108E-3CB1-4006-A888-26B9160F806B}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: 
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='Session Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Session Folder']"
 - ID: "c39a90ce-0035-41bb-90f6-3c8a6ea87797"
   Hint: AddFieldEditorButton
   Value: 
@@ -48,11 +48,11 @@ Languages:
         sitecore\JssImport
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d251455a-a287-40ba-9913-760f57e3f2d3"
+      Value: "031e75ee-ed71-458b-98dc-45bfe84f588a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220523T092345Z
+      Value: 20220725T163431Z

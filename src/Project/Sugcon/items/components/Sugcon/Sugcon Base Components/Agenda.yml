@@ -12,7 +12,7 @@ SharedFields:
   Value: office/32x32/calendar_clock.png
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
-  Value: 
+  Value: /sitecore/templates/Feature/Sugcon/Sugcon Base Components/Agenda
 - ID: "34e81e40-1d4d-45b0-bcf1-a0ffe5521685"
   Hint: RenderingCssClass
   Value: agenda
@@ -27,7 +27,7 @@ SharedFields:
   Value: "{F2466A38-6ABB-4E5D-B898-A8E8E1ECAFA6}"
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: 
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='Agenda Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Agenda Folder']"
 - ID: "c39a90ce-0035-41bb-90f6-3c8a6ea87797"
   Hint: AddFieldEditorButton
   Value: 
@@ -48,11 +48,11 @@ Languages:
         sitecore\JssImport
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "674a4f68-3a7a-446a-903e-7861606a13ac"
+      Value: "bf4de982-e8df-47fe-8d6f-7310a8435ecf"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220525T142255Z
+      Value: 20220725T155242Z

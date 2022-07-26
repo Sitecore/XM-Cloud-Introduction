@@ -1,0 +1,29 @@
+﻿---
+ID: "a08444a1-5412-4ee9-b1e1-4b25cb95b39c"
+Parent: "e0e97775-c7b6-4a8d-930d-8583eb9aa90d"
+Template: "27ad4bee-7462-49f0-9d33-82ba20c37e8d"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Data/Session/Session
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1db3d688-e3de-4c92-9aec-60baba5002bc"
+      Hint: SessionizeURL
+      Value: "https://sessionize.com/api/v2/0b2ge63q/view/Sessions"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220725T163521Z
+    - ID: "4426dd82-5e90-4ac2-af3d-902aa39d5e89"
+      Hint: Title
+      Value: SUGCON ANZ 2022 Sessions
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fdb1f49f-dc49-4ca4-9e72-8038ae64a12f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220725T163920Z

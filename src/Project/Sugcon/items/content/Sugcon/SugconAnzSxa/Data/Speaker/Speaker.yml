@@ -1,0 +1,29 @@
+﻿---
+ID: "9a6e682c-d02e-4567-9162-b67b273341cc"
+Parent: "f7cfb4a9-029e-4059-bb97-9bc560bd1a5f"
+Template: "80b483ea-47b0-4562-837d-159fae7c890c"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Data/Speaker/Speaker
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "14e2a083-9ff9-4ca7-b4c3-010634a881fa"
+      Hint: Title
+      Value: SUGCON ANZ 2022 Speakers
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220725T163010Z
+    - ID: "67b8ddc1-3b91-4b87-bc6c-4d0d8f30e79d"
+      Hint: SessionizeURL
+      Value: "https://sessionize.com/api/v2/0b2ge63q/view/Speakers"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "93524be8-2c21-4492-b2c6-a7a865892dac"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220725T163047Z
