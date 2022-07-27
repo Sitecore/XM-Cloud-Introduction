@@ -10,7 +10,7 @@ SharedFields:
   Value: "{6F42EB7E-7DDA-4CCD-B116-A136D10B0E3D}"
 - ID: "8e0dd914-9afb-4d45-bf8b-7ff5d6e5337e"
   Hint: HostName
-  Value: sugconanz.xmcloudcm.localhost
+  Value: xmcloudcm.localhost
 - ID: "cb4e9e2e-2b66-43dc-ad3f-9caf363d28d3"
   Hint: SiteName
   Value: "sugcon-anz"
@@ -38,11 +38,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d0e2b65d-a6f9-47b8-95ee-f209638767b4"
+      Value: "7abddf83-7369-4200-b389-b61f09576839"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\rea@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220519T195606Z
+      Value: 20220727T012854Z
