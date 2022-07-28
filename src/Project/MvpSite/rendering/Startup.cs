@@ -25,17 +25,15 @@ namespace Mvp.Project.MvpSite.Rendering
     {
         private static readonly string _defaultLanguage = "en";
         public IConfiguration DotNetConfiguration { get; }
-        public IWebHostEnvironment CurrentEnvironment { get; }
         private MvpSiteSettings Configuration { get; }
 
-        public Startup(IConfiguration configuration, IWebHostEnvironment env)
+        public Startup(IConfiguration configuration)
         {
             // Example of using ASP.NET Core configuration binding for various Sitecore Rendering Engine settings.
             // Values can originate in appsettings.json, from environment variables, and more.
             // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1
             Configuration = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
             DotNetConfiguration = configuration;
-            CurrentEnvironment = env;
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -88,19 +86,11 @@ namespace Mvp.Project.MvpSite.Rendering
             app.UseForwardedHeaders(ConfigureForwarding(env));
             app.UseSession();
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
+            if (!env.IsDevelopment())
             {
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
-
-                //Add HTTPS redirection, but ignore for healthz path to allow for liveness probes over http
-                app.UseWhen(context => !context.Request.Path.StartsWithSegments("/healthz"),
-                  builder => builder.UseHttpsRedirection());
             }
 
             //Add recirects for old mvp pages
@@ -152,12 +142,12 @@ namespace Mvp.Project.MvpSite.Rendering
                   new { controller = "Application", action = "GetCategories" }
                 );
 
-                    // Enables the default Sitecore URL pattern with a language prefix.
-                    endpoints.MapSitecoreLocalizedRoute("sitecore", "Index", "Default");
+                // Enables the default Sitecore URL pattern with a language prefix.
+                endpoints.MapSitecoreLocalizedRoute("sitecore", "Index", "Default");
 
-                    // Fall back to language-less routing as well, and use the default culture (en).
-                    endpoints.MapFallbackToController("Index", "Default");
-                });
+                // Fall back to language-less routing as well, and use the default culture (en).
+                endpoints.MapFallbackToController("Index", "Default");
+            });
         }
 
         private ForwardedHeadersOptions ConfigureForwarding(IWebHostEnvironment env)
