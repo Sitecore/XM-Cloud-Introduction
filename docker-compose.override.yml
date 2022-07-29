@@ -95,6 +95,7 @@ services:
       Sitecore__InstanceUri: "http://cm"
       Sitecore__RenderingHostUri: "https://${MVP_RENDERING_HOST}"
       Sitecore__EnableExperienceEditor: "true" 
+      JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
     depends_on:
       - solution
       - cm
@@ -165,4 +166,5 @@ services:
       ## Development Environment Optimizations
       SITECORE_DEVELOPMENT_PATCHES: DevEnvOn,CustomErrorsOff,DebugOn,DiagnosticsOff,InitMessagesOff
       Sitecore_AppSettings_exmEnabled:define: "no" # remove to turn on EXM
+      MVP_RENDERING_HOST_PUBLIC_URI: https://${MVP_RENDERING_HOST} 
     entrypoint: powershell -Command "& C:\tools\entrypoints\iis\Development.ps1"
