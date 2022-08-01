@@ -12,6 +12,7 @@ using Mvp.Feature.BasicContent.Extensions;
 using Mvp.Feature.Navigation.Extensions;
 using Mvp.Feature.People.Exntesions;
 using Mvp.Feature.Social.Extensions;
+using Mvp.Feature.User.Extensions;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
 using Sitecore.AspNet.ExperienceEditor;
 using Sitecore.AspNet.RenderingEngine.Extensions;
@@ -53,11 +54,14 @@ namespace Mvp.Project.MvpSite.Rendering
               .AddGraphQlHandler("default", Configuration.DefaultSiteName, Configuration.ExperienceEdgeToken, Configuration.LayoutServiceUri)
               .AsDefaultHandler();
 
+            services.AddFeatureUser(DotNetConfiguration);
+
             // Register the Sitecore Rendering Engine services.
             services.AddSitecoreRenderingEngine(options =>
               {
                   //Register your components here
                   options
+                    .AddFoundationUser()
                     .AddFeatureNavigation()
                     .AddFeatureBasicContent()
                     .AddFeatureSocial()
@@ -122,6 +126,9 @@ namespace Mvp.Project.MvpSite.Rendering
                 // Allow culture to be resolved via standard Sitecore URL prefix and query string (sc_lang).
                 options.UseSitecoreRequestLocalization();
             });
+
+            // Configure Okta Integration
+            app.UseFeatureUser();
 
             app.UseEndpoints(endpoints =>
                 {

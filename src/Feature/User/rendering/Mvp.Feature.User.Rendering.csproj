@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp6.0</TargetFramework>
+    <AssemblyName>Mvp.Feature.User</AssemblyName>
+    <RootNamespace>Mvp.Feature.User</RootNamespace>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Okta.AspNetCore" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+    <PackageReference Include="Sitecore.LayoutService.Client" />
+    <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
+  </ItemGroup>
+
+</Project>

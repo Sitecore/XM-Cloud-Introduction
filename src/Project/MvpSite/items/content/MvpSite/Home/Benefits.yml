@@ -66,7 +66,12 @@ Languages:
               s:ph="main" />
             <r
               uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}"
-              p:after="*[1=2]" />
+              p:after="r[@uid='{081985E9-8A16-4F43-A4EA-6C10FC6E41D9}']" />
+            <r
+              uid="{D758A43B-18A4-43B0-9A09-C23E9273387B}"
+              p:after="*[1=2]"
+              s:id="{00147A0F-476B-4C99-8A10-E6B4FCFCECE0}"
+              s:ph="header-signin" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -74,14 +79,14 @@ Languages:
       Value: 20200604T042302Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "03b12a27-c1fe-4edf-80a1-7e41897968f7"
+      Value: "b45e1cda-a6a1-4f60-bd9c-858be1a5eac0"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Benefits
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\rea@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220601T053301Z
+      Value: 20220801T015511Z

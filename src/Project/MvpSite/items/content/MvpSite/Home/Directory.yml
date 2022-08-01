@@ -21,6 +21,9 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
+              uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}"
+              s:ph="header-signin" />
+            <r
               uid="{9F5CB79F-C78A-466B-8602-917654EA0C30}"
               p:after="*[1=2]"
               s:id="{1F4AC79E-97E1-4D32-BC0E-2CBE1F3E3F9C}"
@@ -32,14 +35,14 @@ Languages:
       Value: 20211103T205042Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3fd07bf5-2c76-4ccb-9950-be4a2346d12e"
+      Value: "323093f5-8ae2-4371-9744-dcc6717166b3"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
-      Hint: Menu Title
+      Hint: MenuTitle
       Value: Directory
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\rea@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220203T232916Z
+      Value: 20220801T015359Z

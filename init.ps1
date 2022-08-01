@@ -18,7 +18,19 @@ Param (
 
     [Parameter(HelpMessage = "The Edge token used when running in Edge Mode.",
         ParameterSetName = "env-init")]
-    [string]$Edge_Token
+    [string]$Edge_Token,
+
+    [Parameter(HelpMessage = "The Okta domain used by the MVP Rendering Host.",
+        ParameterSetName = "env-init")]
+    [string]$OKTA_Domain,
+
+    [Parameter(HelpMessage = "The Okta Client Id used by the MVP Rendering Host.",
+        ParameterSetName = "env-init")]
+    [string]$OKTA_Client_Id,
+
+    [Parameter(HelpMessage = "The Okta Client Secret used by the MVP Rendering Host.",
+        ParameterSetName = "env-init")]
+    [string]$OKTA_Client_Secret
 )
 
 $ErrorActionPreference = "Stop";
@@ -187,6 +199,14 @@ if ($InitEnv) {
 	# JSS_EDITING_SECRET
 	Set-EnvFileVariable "JSS_EDITING_SECRET" -Value (Get-SitecoreRandomString 64 -DisallowSpecial)
 
+    # OKTA_DOMAIN
+	Set-EnvFileVariable "OKTA_DOMAIN" -Value $OKTA_Domain
+
+    # OKTA_CLIENT_ID
+	Set-EnvFileVariable "OKTA_CLIENT_ID" -Value $OKTA_Client_Id
+
+    # OKTA_CLIENT_SECRET
+	Set-EnvFileVariable "OKTA_CLIENT_SECRET" -Value $OKTA_Client_Secret
 }
 
 Write-Host "Done!" -ForegroundColor Green

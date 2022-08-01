@@ -2,7 +2,7 @@
 ID: "00147a0f-476b-4c99-8a10-e6b4fcfcece0"
 Parent: "ffebe358-62d6-4257-9de5-24b0aa9a6a7a"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Foundation/User/SignIn
+Path: /sitecore/layout/Renderings/Feature/User/SignIn
 SharedFields:
 - ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
   Hint: componentName

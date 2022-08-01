@@ -1,8 +1,8 @@
 ﻿---
 ID: "ffebe358-62d6-4257-9de5-24b0aa9a6a7a"
-Parent: "180d4942-2b10-4375-bc06-e0d94220a68f"
+Parent: "DA61AD50-8FDB-4252-A68F-B4470B1C9FE8"
 Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
-Path: /sitecore/layout/Renderings/Foundation/User
+Path: /sitecore/layout/Renderings/Feature/User
 Languages:
 - Language: en
   Versions:
