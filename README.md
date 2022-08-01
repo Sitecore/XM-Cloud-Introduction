@@ -36,6 +36,9 @@ Examples of how to use them can be seen in the different setup guides for both L
 | AdminPassword      | Yes       | Used to specify the password for the Sitecore admin user                                                     |
 | InitEnv            | No        | Used to force a full initialisation of the repository                                                        |
 | Edge_Token         | No        | Used to authenticate with XM Cloud, when running in 'Edge Mode'                                              |
+| OKTA_Domain        | No        | Okta domain used by the MVP Rendering host                                                                   |
+| OKTA_Client_Id     | No        | Okta Client Id used by the MVP Rendering host                                                                |
+| OKTA_Client_Secret | No        | Okta Client Secret used by the MVP Rendering host                                                            |
 
 # Running in Local Mode
 

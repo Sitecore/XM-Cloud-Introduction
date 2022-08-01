@@ -97,7 +97,12 @@ Languages:
               s:ph="main" />
             <r
               uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}"
-              p:after="*[1=2]" />
+              p:after="r[@uid='{3C955D49-4E8D-4FE6-BF56-E690EC4308A3}']" />
+            <r
+              uid="{651EA79B-A270-4B07-87E4-4C5163F21388}"
+              p:after="*[1=2]"
+              s:id="{00147A0F-476B-4C99-8A10-E6B4FCFCECE0}"
+              s:ph="header-signin" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -105,14 +110,14 @@ Languages:
       Value: 20200604T042242Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2536ee8e-9867-4af1-b932-ea6aaa3cd8ab"
+      Value: "e0a50ab8-a9a2-4608-aca7-54b81c91b818"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Become an MVP
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\rea@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220601T053223Z
+      Value: 20220801T015503Z

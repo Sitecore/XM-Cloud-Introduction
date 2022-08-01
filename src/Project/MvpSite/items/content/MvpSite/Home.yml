@@ -132,8 +132,7 @@ Languages:
               uid="{7A931726-B26B-44A0-BCE2-7A1023245601}"
               s:ccb="Clear on publish"
               s:ds=""
-              s:par=""
-              s:ph="header-signin-disabled" />
+              s:par="" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -141,14 +140,14 @@ Languages:
       Value: 20200513T045800Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0bb19005-4bd0-4466-9c9e-9f19485c2a60"
+      Value: "75c57170-231a-4cf2-bb02-7377e6c93e8f"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Home
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\rea@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220601T053838Z
+      Value: 20220801T014448Z

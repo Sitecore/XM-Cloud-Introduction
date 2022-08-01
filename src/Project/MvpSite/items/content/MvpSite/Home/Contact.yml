@@ -60,7 +60,12 @@ Languages:
               s:ph="main" />
             <r
               uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}"
-              p:after="*[1=2]" />
+              p:after="r[@uid='{DE900095-7395-499F-8983-1206A703FE96}']" />
+            <r
+              uid="{ACCB8137-D3A0-406B-A6AA-3CA0F83D47DE}"
+              p:after="*[1=2]"
+              s:id="{00147A0F-476B-4C99-8A10-E6B4FCFCECE0}"
+              s:ph="header-signin" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -68,17 +73,17 @@ Languages:
       Value: 20200604T042308Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5da1b4fd-8252-4132-8e34-a5eb76840220"
+      Value: "03ec1898-d64e-4456-bc5a-873d185e4339"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Contact
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\rea@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220601T053325Z
+      Value: 20220801T015522Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
       Hint: IncludeInMenu
       Value: 1
