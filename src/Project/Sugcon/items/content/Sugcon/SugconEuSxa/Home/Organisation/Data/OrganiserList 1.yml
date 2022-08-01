@@ -1,0 +1,48 @@
+﻿---
+ID: "c43cef1f-268a-4eed-807a-85071979bce9"
+Parent: "92fa3002-89f5-4a25-ab8b-e4824ecf51c3"
+Template: "072de54c-c0fb-4aed-b7b5-7526825f844b"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Home/Organisation/Data/OrganiserList 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220708T154525Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\rics@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\rics@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7fb3f5a3-06ea-4561-9b45-67d520b0137c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\rics@sitecore.net
+    - ID: "c6568cdd-6038-4af8-a7cf-adadf85f747d"
+      Hint: Organisers
+      Value: |
+        {B5EE5A10-268D-4E4B-808D-CF10E2295B16}
+        {696993B1-2D95-4C7C-BFC3-D8FEBA4935F6}
+        {A2AA3A02-4C63-4958-A1C3-79E2E6B92D69}
+        {F148DAE8-02A1-4842-AB57-41A50D465B88}
+        {D959FB14-8A00-454D-BC37-707B7C2BD574}
+        {67D0A035-95A9-4B36-8A8F-6C612B53FBCC}
+        {2027E7BF-0D95-4254-8344-3EB5D2BB9AE9}
+        {08DDC7EB-286D-4BA5-9F8C-04E87321D548}
+        {2AD86989-BEC5-43E1-B35F-E9FAE2F74205}
+        {63AD326A-594B-4497-BB42-ACAEA234060F}
+        {37D1D00F-C6FE-4347-AB2D-25D025818581}
+        {0DFCA95C-F6A6-4311-A1EA-2CD98E6946DD}
+        {B9F579DF-A631-4526-AE9B-B64FF3AC8A04}
+        {9A6D1EA4-7237-4221-B87C-5D6FC3430948}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220708T154606Z

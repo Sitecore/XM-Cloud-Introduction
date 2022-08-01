@@ -8,26 +8,29 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220523T075313Z
     - ID: "7de86eb1-7ccc-4068-9870-b3a46a150aa1"
       Hint: SponsorLogo
       Value: |
-        <image mediaid="{28CF4A0F-D8A8-45AD-9E37-4DEB5D6AD65E}" />
+        <image mediaid="{28CF4A0F-D8A8-45AD-9E37-4DEB5D6AD65E}" ></image>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "73b1625f-425b-4fbc-8fa3-100d741bf358"
+      Value: "8ce13e51-13a8-42c6-b018-7a5e74527213"
     - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
       Hint: SponsorUrl
       Value: "https://www.applez.tech/"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\rics@sitecore.net
     - ID: "c796441d-0c1f-4435-9cf7-9d123ff6b937"
-      Hint: SponosorName
+      Hint: SponsorName
       Value: Apple Tech
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220523T075320Z
+      Value: 20220706T183621Z

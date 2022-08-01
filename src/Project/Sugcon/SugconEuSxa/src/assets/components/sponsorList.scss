@@ -1,0 +1,86 @@
+/*Sponsor*/
+.platinum {
+    background-color: white;
+    padding-top: 25px;
+}
+.sponsorTeaser{
+    margin-top: 12px;
+  
+}
+  
+.sponsorLabel{
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 10px;
+    color: #666;
+    width: 90%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 39px;
+
+}
+.sponsorName{
+    font-size: 48px;
+    line-height: 55px;
+    width: 100%;
+    color: #232323;
+    font-weight: 900;
+    font-family: 'AvenirNextW05-Bold',Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    word-break: break-word;
+}
+.sponsorImgPlatinumOuter {
+    position: relative;
+    width: 100%;
+}
+.sponsorImgPlatinum {
+
+
+    :after{
+
+        display: block;
+        content: " ";
+        position: absolute;
+        width: 87px;
+        height: 87px;
+        top: -10px;
+        right: -10px;
+        border-top: 15px solid #fe2911;
+        border-right: 15px solid #fe2911;
+        
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.SponsorImage{
+width: 218px;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+margin: 0;
+
+
+
+}
+
+.SponsorImage img {
+width: 100%;
+height: auto;   
+max-height: 113px; 
+    
+}
+
+.SponsorBlock{
+padding: 16px;
+    background-color: white;
+    width: 250px;
+    margin-top: 30px;
+    height: 145px;
+    position: relative;
+    float: left;
+    margin-right: 16px;
+    
+
+}
