@@ -4,15 +4,15 @@
     {
         public static readonly string Key = "Sitecore";
 
-        public Uri InstanceUri { get; set; }
+        public Uri? InstanceUri { get; set; }
         public string LayoutServicePath { get; set; } = "/sitecore/api/layout/render/jss";
-        public string DefaultSiteName { get; set; }
-        public Uri RenderingHostUri { get; set; }
+        public string? DefaultSiteName { get; set; }
+        public Uri? RenderingHostUri { get; set; }
         public bool EnableExperienceEditor { get; set; }
-        public string ExperienceEdgeToken { get; set; }
+        public string? ExperienceEdgeToken { get; set; }
         public int MvpDirectoryGraphQLQueryPageSize { get; set; }
         public int MvpDirectoryGraphQLQueryCacheTimeout { get; set; }
-        public Uri LayoutServiceUri
+        public Uri? LayoutServiceUri
         {
             get
             {
