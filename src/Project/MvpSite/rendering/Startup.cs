@@ -56,7 +56,7 @@ namespace Mvp.Project.MvpSite.Rendering
               .AddGraphQlHandler("default", Configuration.DefaultSiteName, Configuration.ExperienceEdgeToken, Configuration.LayoutServiceUri)
               .AsDefaultHandler();
 
-            services.AddFoundationUser(DotNetConfiguration);
+            services.AddFeatureUser(DotNetConfiguration);
 
             // Register the Sitecore Rendering Engine services.
             services.AddSitecoreRenderingEngine(options =>
@@ -138,7 +138,7 @@ namespace Mvp.Project.MvpSite.Rendering
             });
 
             // Configure Okta Integration
-            app.UseFoundationUser();
+            app.UseFeatureUser();
 
             app.UseEndpoints(endpoints =>
                 {

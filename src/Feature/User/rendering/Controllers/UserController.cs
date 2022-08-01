@@ -27,8 +27,7 @@ namespace Mvp.Feature.Users.Rendering.Controllers
             return View();
         }
 
-        [HttpGet]
-        public new static IActionResult SignOut()
+        public IActionResult SignOut()
         {
             return new SignOutResult(
                 new[]

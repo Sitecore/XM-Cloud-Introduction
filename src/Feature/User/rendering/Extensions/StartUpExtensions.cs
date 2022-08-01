@@ -10,7 +10,7 @@ namespace Mvp.Feature.User.Extensions
 {
     public static class StartUpExtensions
     {
-        public static void AddFoundationUser(this IServiceCollection services, IConfiguration configuration)
+        public static void AddFeatureUser(this IServiceCollection services, IConfiguration configuration)
         {
             var okta = configuration.GetSection("Okta").Get<OktaMvcOptions>();
                 okta.Scope = new List<string> { "openid", "profile", "email" };
@@ -29,7 +29,7 @@ namespace Mvp.Feature.User.Extensions
         }
 
 
-        public static void UseFoundationUser(this IApplicationBuilder app)
+        public static void UseFeatureUser(this IApplicationBuilder app)
         {
             app.UseAuthentication();
 
