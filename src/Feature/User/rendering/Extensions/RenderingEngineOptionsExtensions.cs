@@ -1,7 +1,7 @@
 ﻿using Sitecore.AspNet.RenderingEngine.Configuration;
 using Sitecore.AspNet.RenderingEngine.Extensions;
 
-namespace Mvp.Foundation.User.Extensions
+namespace Mvp.Feature.User.Extensions
 {
     public static class RenderingEngineOptionsExtensions
     {

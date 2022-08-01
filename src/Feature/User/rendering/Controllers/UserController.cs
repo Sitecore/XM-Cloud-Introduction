@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Okta.AspNetCore;
 
-namespace Mvp.Foundation.Users.Rendering.Controllers
+namespace Mvp.Feature.Users.Rendering.Controllers
 {
     public class UserController : Controller
     {
@@ -28,7 +28,7 @@ namespace Mvp.Foundation.Users.Rendering.Controllers
         }
 
         [HttpGet]
-        public IActionResult SignOut()
+        public new static IActionResult SignOut()
         {
             return new SignOutResult(
                 new[]

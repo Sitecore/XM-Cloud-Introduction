@@ -55,8 +55,8 @@
 	  <ProjectReference Include="..\..\..\Feature\Navigation\rendering\Mvp.Feature.Navigation.Rendering.csproj" />
 	  <ProjectReference Include="..\..\..\Feature\People\rendering\Mvp.Feature.People.Rendering.csproj" />
 	  <ProjectReference Include="..\..\..\Feature\Social\rendering\Mvp.Feature.Social.Rendering.csproj" />
+	  <ProjectReference Include="..\..\..\Feature\User\rendering\Mvp.Feature.User.Rendering.csproj" />
 	  <ProjectReference Include="..\..\..\Foundation\Configuration\rendering\Mvp.Foundation.Configuration.Rendering.csproj" />
-	  <ProjectReference Include="..\..\..\Foundation\User\rendering\Mvp.Foundation.User.Rendering.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp6.0</TargetFramework>
-    <AssemblyName>Mvp.Foundation.User</AssemblyName>
-    <RootNamespace>Mvp.Foundation.User</RootNamespace>
+    <AssemblyName>Mvp.Feature.User</AssemblyName>
+    <RootNamespace>Mvp.Feature.User</RootNamespace>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
   </PropertyGroup>
 
