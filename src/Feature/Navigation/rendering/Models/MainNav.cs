@@ -1,6 +1,5 @@
 ﻿using Sitecore.AspNet.RenderingEngine.Binding.Attributes;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
-using System.Text.Json.Serialization;
 
 namespace Mvp.Feature.Navigation.Models
 {
@@ -18,7 +17,6 @@ namespace Mvp.Feature.Navigation.Models
         public string DisplayName { get; set; }
 
         [SitecoreComponentField]
-
         public MainNavItemFields Fields { get; set; }
     }
 
@@ -26,7 +24,10 @@ namespace Mvp.Feature.Navigation.Models
     {
         [SitecoreComponentField]
         public CheckboxField IncludeInMenu { get; set; }
+
+        [SitecoreComponentField]
+        public CheckboxField RequiresAuthentication { get; set; }
+
         public TextField MenuTitle { get; set; }
     }
-
 }

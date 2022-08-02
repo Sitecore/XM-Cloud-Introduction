@@ -37,7 +37,7 @@ Languages:
       Value: 20210930T195020Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "04a77553-9f68-477d-b0fa-e30441612741"
+      Value: "c7ddbd1b-4dc9-44c9-9937-bfc13da399d8"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Application
@@ -45,9 +45,12 @@ Languages:
       Hint: __Updated by
       Value: |
         sitecore\rea@sitecore.net
+    - ID: "c58ed264-1f55-4aa3-a30e-da12ce43cb38"
+      Hint: RequiresAuthentication
+      Value: 1
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220801T015315Z
+      Value: 20220802T231204Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
       Hint: IncludeInMenu
-      Value: 
+      Value: 1
