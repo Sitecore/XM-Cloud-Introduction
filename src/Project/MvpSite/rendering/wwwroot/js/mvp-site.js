@@ -58,6 +58,7 @@ function getApplicationInfo() {
 
             if (!data.userIsAuthenticated) {
 				window.location = '/Application/Intro';
+                return;
             }
 				
             setStep('#step_welcome');
