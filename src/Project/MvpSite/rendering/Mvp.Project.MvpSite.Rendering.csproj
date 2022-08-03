@@ -46,12 +46,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Includes\Styles\" />
-	  <Folder Include="Includes\Scripts\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <ProjectReference Include="..\..\..\Feature\BasicContent\rendering\MVP.Feature.BasicContent.Rendering.csproj" />
+	  <ProjectReference Include="..\..\..\Feature\Forms\rendering\Mvp.Feature.Forms.Rendering.csproj" />
 	  <ProjectReference Include="..\..\..\Feature\Navigation\rendering\Mvp.Feature.Navigation.Rendering.csproj" />
 	  <ProjectReference Include="..\..\..\Feature\People\rendering\Mvp.Feature.People.Rendering.csproj" />
 	  <ProjectReference Include="..\..\..\Feature\Social\rendering\Mvp.Feature.Social.Rendering.csproj" />
