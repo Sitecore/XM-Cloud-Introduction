@@ -14,7 +14,7 @@ Languages:
     - ID: "066f7e92-30ad-4198-b138-b40ccaec6d20"
       Hint: HeroLink
       Value: |
-        <link text="Log In" linktype="external" url="https://mvp.sc.localhost/user" anchor="" target="" />
+        <link text="Login" linktype="external" url="/user/signin" anchor="" title="Login" target="" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20211102T223652Z
@@ -24,17 +24,17 @@ Languages:
         <image mediaid="{75E92DFC-F50D-40C7-824F-EEEB8D58B5D6}" />
     - ID: "53ee3e16-ba10-4013-959e-9a652a533845"
       Hint: HeroSubtitle
-      Value: 2022 Sitecore MVP Application
+      Value: 2023 Sitecore MVP Application
     - ID: "69db2d7e-db5e-4a02-8580-0bcfb77b5482"
       Hint: HeroDescription
-      Value: Thank you for your interest in applying for Sitecore's 2022 MVP Award.  Please use the link below to login in order to continue with your application.
+      Value: Thank you for your interest in applying for Sitecore's 2023 MVP Award.  Please use the link below to login and complete your application.
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "060a44a3-be84-46fa-88b3-f3ca6cb027be"
+      Value: "968a0b3e-4888-470d-b147-75fffc21457a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\rea@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20211103T171437Z
+      Value: 20220803T001754Z

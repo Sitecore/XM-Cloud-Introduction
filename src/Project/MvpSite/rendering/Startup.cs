@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Mvp.Feature.BasicContent.Extensions;
+using Mvp.Feature.Forms.Extensions;
 using Mvp.Feature.Navigation.Extensions;
 using Mvp.Feature.People.Exntesions;
 using Mvp.Feature.Social.Extensions;
@@ -66,6 +67,7 @@ namespace Mvp.Project.MvpSite.Rendering
                     .AddFeatureBasicContent()
                     .AddFeatureSocial()
                     .AddFeaturePeople()
+                    .AddFeatureForms()
                     .AddDefaultPartialView("_ComponentNotFound");
               })
               // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
@@ -78,6 +80,7 @@ namespace Mvp.Project.MvpSite.Rendering
             // Register MVP Functionality specific services
             services.AddFeatureSocialServices()
                     .AddFeaturePeopleServices();
+                    
             
             services.AddSession();
         }
@@ -129,6 +132,7 @@ namespace Mvp.Project.MvpSite.Rendering
 
             // Configure Okta Integration
             app.UseFeatureUser();
+            app.UseFeatureForms();
 
             app.UseEndpoints(endpoints =>
                 {

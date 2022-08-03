@@ -55,6 +55,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{444A6903-4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.User.Rendering", "Feature\User\rendering\Mvp.Feature.User.Rendering.csproj", "{44C9267F-344E-4AE3-BF21-90874835B7E2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{86BC4421-B47F-446E-A606-B41D5F7A25C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.Forms.Rendering", "Feature\Forms\rendering\Mvp.Feature.Forms.Rendering.csproj", "{BADEDFA0-AA01-4004-A69D-794F9EF7747C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +105,10 @@ Global
 		{44C9267F-344E-4AE3-BF21-90874835B7E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44C9267F-344E-4AE3-BF21-90874835B7E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44C9267F-344E-4AE3-BF21-90874835B7E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BADEDFA0-AA01-4004-A69D-794F9EF7747C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BADEDFA0-AA01-4004-A69D-794F9EF7747C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BADEDFA0-AA01-4004-A69D-794F9EF7747C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BADEDFA0-AA01-4004-A69D-794F9EF7747C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -124,6 +132,8 @@ Global
 		{89A72153-4995-4607-98B1-B8C75679926E} = {34CC9337-BC03-4C14-A57A-FD29DEE5A9B8}
 		{444A6903-4CE0-4864-9349-BDE5A1EAED9C} = {EE03412B-647E-416F-84A1-427E692BBBDB}
 		{44C9267F-344E-4AE3-BF21-90874835B7E2} = {444A6903-4CE0-4864-9349-BDE5A1EAED9C}
+		{86BC4421-B47F-446E-A606-B41D5F7A25C0} = {EE03412B-647E-416F-84A1-427E692BBBDB}
+		{BADEDFA0-AA01-4004-A69D-794F9EF7747C} = {86BC4421-B47F-446E-A606-B41D5F7A25C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A7C4987-3A11-41A9-8915-5457EF7B5A6F}
