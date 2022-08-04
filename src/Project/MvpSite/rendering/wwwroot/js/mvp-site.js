@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     $("#search").keyup(function (event) {
         if (event.which === 13) {
             event.preventDefault();
@@ -17,7 +16,56 @@
 
     fillApplicationList();
     getApplicationInfo();
+
+    $("#btnStep1").click(function (event) {
+        switchFormTab(event, "#btnStep1", '#form_step1', () => setStep('#step_category'));
+    });
+
+    $("#btnStep2").click(function (event) {
+        switchFormTab(event, "#btnStep2", '#categoryForm', () => setStep('#step_personal'));
+    });
+
+    $("#btnStep3").click(function (event) {
+        switchFormTab(event, "#btnStep3", '#personalForm', () => setStep('#step_objectives'));
+    });
+
+    $("#btnStep4").click(function (event) {
+        switchFormTab(event, "#btnStep4", '#objectivesForm', () => setStep('#step_socials'));
+    });
+
+    $("#btnStep5").click(function (event) {
+        switchFormTab(event, "#btnStep5", '#socialForm', () => setStep('#step_contributions'));
+    });
+
+    $("#btnStep6").click(function (event) {
+        switchFormTab(event, "#btnStep6", '#contributionForm', () => setStep('#step_confirmation'));
+    });
+
+    $("#btnStep7").click(function (event) {
+        switchFormTab(event, "#btnStep7", '#confirmationForm', () => window.location.href = "/thank-you");
+    });
 });
+
+function switchFormTab(event, buttonSelector, formSelector, successAction) {
+    $(buttonSelector).attr("disabled", true);
+    event.preventDefault();
+
+    var form = document.querySelectorAll(formSelector)[0];
+    if (!form.checkValidity()) {
+        event.stopPropagation()
+    }
+    else {
+        successAction();
+
+        setTimeout(function () {
+            $("#overlay").fadeOut(300);
+        }, 500);
+    }
+
+    form.classList.add('was-validated');
+
+    $(buttonSelector).attr("disabled", false);
+}
 
 function fillApplicationList() {
     $.ajax({
@@ -28,9 +76,9 @@ function fillApplicationList() {
 
         },
         success: function (data) {
-            fillDropLists(data.Country, 'Country', 'Name');
-            fillDropLists(data.EmploymentStatus, 'EmploymentStatus', 'Name');
-            fillDropLists(data.MvpCategory, 'mvpcategory', 'Name');
+            fillDropLists(data.country, 'Country', 'name');
+            fillDropLists(data.employmentStatus, 'EmploymentStatus', 'name');
+            fillDropLists(data.mvpCategory, 'mvpcategory', 'name');
         },
         error: function (result) {
             console.error(result);
@@ -75,7 +123,6 @@ function getApplicationInfo() {
 }
 
 function setStep(stepId) {
-
     $('.appStep').attr("hidden", true);
     $(stepId).attr("hidden", false);
 
@@ -92,6 +139,15 @@ function setProgressBar(curStep) {
     var steps = $(".fieldSet").length;
     var percent = parseFloat(100 / steps) * curStep;
     percent = percent.toFixed();
-    $(".progress-bar")
-        .css("width", percent + "%")
+    $(".progress-bar").css("width", percent + "%")
+}
+
+function getPrevStep() {
+    if (currentStepId > 2) {
+        $("#progressbar").find('[data-step="' + currentStepId + '"]').removeClass('active');
+
+        currentStepId--;
+        var stepIdid = $("div[data-step='" + currentStepId + "']").attr('id');
+        setStep('#' + stepIdid);
+    }
 }
