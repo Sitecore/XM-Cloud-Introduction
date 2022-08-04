@@ -17,7 +17,56 @@
 
     fillApplicationList();
     getApplicationInfo();
+
+    $("#btnStep1").click(function (event) {
+        switchFormTab("#btnStep1", '#form_step1', () => setStep('#step_category'));
+    });
+
+    $("#btnStep2").click(function (event) {
+        switchFormTab("#btnStep2", '#categoryForm', () => setStep('#step_personal'));
+    });
+
+    $("#btnStep3").click(function (event) {
+        switchFormTab("#btnStep3", '#personalForm', () => setStep('#step_objectives'));
+    });
+
+    $("#btnStep4").click(function (event) {
+        switchFormTab("#btnStep4", '#objectivesForm', () => setStep('#step_socials'));
+    });
+
+    $("#btnStep5").click(function (event) {
+        switchFormTab("#btnStep5", '#socialForm', () => setStep('#step_contributions'));
+    });
+
+    $("#btnStep6").click(function (event) {
+        switchFormTab("#btnStep6", '#contributionForm', () => setStep('#step_confirmation'));
+    });
+
+    $("#btnStep7").click(function (event) {
+        switchFormTab("#btnStep7", '#confirmationForm', () => window.location.href = "/thank-you");
+    });
 });
+
+function switchFormTab(buttonSelector, formSelector, successAction) {
+    $(buttonSelector).attr("disabled", true);
+    event.preventDefault();
+
+    var form = document.querySelectorAll(formSelector)[0];
+    if (!form.checkValidity()) {
+        event.stopPropagation()
+    }
+    else {
+        successAction();
+
+        setTimeout(function () {
+            $("#overlay").fadeOut(300);
+        }, 500);
+    }
+
+    form.classList.add('was-validated');
+
+    $(buttonSelector).attr("disabled", false);
+}
 
 function fillApplicationList() {
     $.ajax({
@@ -28,9 +77,9 @@ function fillApplicationList() {
 
         },
         success: function (data) {
-            fillDropLists(data.Country, 'Country', 'Name');
-            fillDropLists(data.EmploymentStatus, 'EmploymentStatus', 'Name');
-            fillDropLists(data.MvpCategory, 'mvpcategory', 'Name');
+            fillDropLists(data.country, 'Country', 'name');
+            fillDropLists(data.employmentStatus, 'EmploymentStatus', 'name');
+            fillDropLists(data.mvpCategory, 'mvpcategory', 'name');
         },
         error: function (result) {
             console.error(result);
