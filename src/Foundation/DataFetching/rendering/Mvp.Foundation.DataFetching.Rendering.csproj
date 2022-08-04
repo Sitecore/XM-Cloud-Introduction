@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp6.0</TargetFramework>
-    <AssemblyName>Mvp.Feature.People</AssemblyName>
-    <RootNamespace>Mvp.Feature.People</RootNamespace>
+    <AssemblyName>Mvp.Foundation.DataFetching</AssemblyName>
+    <RootNamespace>Mvp.Foundation.DataFetching</RootNamespace>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
   </PropertyGroup>
 
@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Configuration\rendering\Mvp.Foundation.Configuration.Rendering.csproj" />
-    <ProjectReference Include="..\..\..\Foundation\DataFetching\rendering\Mvp.Foundation.DataFetching.Rendering.csproj" />
   </ItemGroup>
 
 </Project>

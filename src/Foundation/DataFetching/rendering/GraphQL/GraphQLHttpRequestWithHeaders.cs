@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 
-namespace Mvp.Feature.People.GraphQL
+namespace Mvp.Foundation.DataFetching.GraphQL
 {
 	public class GraphQLHttpRequestWithHeaders : GraphQLHttpRequest
 	{

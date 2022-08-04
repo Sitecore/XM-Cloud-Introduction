@@ -3,9 +3,9 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Mvp.Feature.People.Facets;
-using Mvp.Feature.People.GraphQL;
 using Mvp.Feature.People.Models;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
+using Mvp.Foundation.DataFetching.GraphQL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -156,9 +156,17 @@ namespace Mvp.Feature.People.PeopleFinder
         private async Task<IList<MvpSearchResult>> GetAllPeople(IGraphQLClient client, string endCursor)
         {
             var mvps = new List<MvpSearchResult>();
-            var request = graphQLRequestBuilder.BuildRequest(endCursor);
+            var variables = new
+            {
+                pageSize = Configuration.MvpDirectoryGraphQLQueryPageSize,
+                endCursor = endCursor,
+                mvpPeopleRoot = Constants.MVP_PEOPLE_ROOT_ITEM_SHORT_ID,
+                mvpPersonTemplate = Constants.MVP_PERSON_TEMPLATE_SHORT_ID
+            };
 
+            var request = graphQLRequestBuilder.BuildRequest(Constants.GraphQlQueries.GetMvps, variables);
             logger.LogInformation($"Making GraphQL Request for MVPs, endCursor: '{endCursor}'");
+
             var response = await client.SendQueryAsync<MvpSearchResponse>(request);
             mvps.AddRange(response.Data.Search.Results);
 

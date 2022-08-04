@@ -1,6 +1,6 @@
 ﻿using GraphQL.Client.Abstractions;
 
-namespace Mvp.Feature.People.GraphQL
+namespace Mvp.Foundation.DataFetching.GraphQL
 {
     public interface IGraphQLClientFactory
     {
