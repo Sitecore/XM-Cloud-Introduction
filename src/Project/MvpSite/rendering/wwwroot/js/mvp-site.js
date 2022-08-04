@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     $("#search").keyup(function (event) {
         if (event.which === 13) {
             event.preventDefault();
@@ -19,35 +18,35 @@
     getApplicationInfo();
 
     $("#btnStep1").click(function (event) {
-        switchFormTab("#btnStep1", '#form_step1', () => setStep('#step_category'));
+        switchFormTab(event, "#btnStep1", '#form_step1', () => setStep('#step_category'));
     });
 
     $("#btnStep2").click(function (event) {
-        switchFormTab("#btnStep2", '#categoryForm', () => setStep('#step_personal'));
+        switchFormTab(event, "#btnStep2", '#categoryForm', () => setStep('#step_personal'));
     });
 
     $("#btnStep3").click(function (event) {
-        switchFormTab("#btnStep3", '#personalForm', () => setStep('#step_objectives'));
+        switchFormTab(event, "#btnStep3", '#personalForm', () => setStep('#step_objectives'));
     });
 
     $("#btnStep4").click(function (event) {
-        switchFormTab("#btnStep4", '#objectivesForm', () => setStep('#step_socials'));
+        switchFormTab(event, "#btnStep4", '#objectivesForm', () => setStep('#step_socials'));
     });
 
     $("#btnStep5").click(function (event) {
-        switchFormTab("#btnStep5", '#socialForm', () => setStep('#step_contributions'));
+        switchFormTab(event, "#btnStep5", '#socialForm', () => setStep('#step_contributions'));
     });
 
     $("#btnStep6").click(function (event) {
-        switchFormTab("#btnStep6", '#contributionForm', () => setStep('#step_confirmation'));
+        switchFormTab(event, "#btnStep6", '#contributionForm', () => setStep('#step_confirmation'));
     });
 
     $("#btnStep7").click(function (event) {
-        switchFormTab("#btnStep7", '#confirmationForm', () => window.location.href = "/thank-you");
+        switchFormTab(event, "#btnStep7", '#confirmationForm', () => window.location.href = "/thank-you");
     });
 });
 
-function switchFormTab(buttonSelector, formSelector, successAction) {
+function switchFormTab(event, buttonSelector, formSelector, successAction) {
     $(buttonSelector).attr("disabled", true);
     event.preventDefault();
 
@@ -124,7 +123,6 @@ function getApplicationInfo() {
 }
 
 function setStep(stepId) {
-
     $('.appStep').attr("hidden", true);
     $(stepId).attr("hidden", false);
 
@@ -141,6 +139,15 @@ function setProgressBar(curStep) {
     var steps = $(".fieldSet").length;
     var percent = parseFloat(100 / steps) * curStep;
     percent = percent.toFixed();
-    $(".progress-bar")
-        .css("width", percent + "%")
+    $(".progress-bar").css("width", percent + "%")
+}
+
+function getPrevStep() {
+    if (currentStepId > 2) {
+        $("#progressbar").find('[data-step="' + currentStepId + '"]').removeClass('active');
+
+        currentStepId--;
+        var stepIdid = $("div[data-step='" + currentStepId + "']").attr('id');
+        setStep('#' + stepIdid);
+    }
 }
