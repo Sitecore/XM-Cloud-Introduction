@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Mvp.Foundation.DataFetching.GraphQL.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Mvp.Feature.People.Models
 {
-
-
-    public class SearchParams
+     public class SearchParams
     {
         [FromQuery(Name = Constants.QueryParameters.Page)]
         public int CurrentPage { get; set; }
@@ -139,12 +138,6 @@ namespace Mvp.Feature.People.Models
         public NameItem Parent { get; set; }
 
         public TargetItemFieldValueItem Field { get; set; }
-
-    }
-
-    public class NameItem
-    {
-        public string Name { get; set; }
     }
 
     public class MvpSearchResponse
@@ -157,26 +150,6 @@ namespace Mvp.Feature.People.Models
         public string Name { get; set; }
         public int Count { get; set; }
         public bool Selected { get; set; }
-    }
-
-    public class ValueItem
-    {
-        public string Value { get; set; }
-    }
-
-    public class TargetItemFieldValueItem
-    {
-        public FieldValueItem TargetItem { get; set; }
-    }
-
-    public class FieldValueItem
-    {
-        public ValueItem Field { get; set; }
-    }
-
-    public class TargetItem
-    {
-        public string Name { get; set; }
     }
 
     public class Country
@@ -193,12 +166,5 @@ namespace Mvp.Feature.People.Models
         public string Country { get; set; }
         public string MvpYear { get; set; }
         public string MvpCategory { get; set; }
-    }
-
-
-    public class PageInfo
-    {
-        public string endCursor { get; set; }
-        public bool hasNextPage { get; set; }
     }
 }

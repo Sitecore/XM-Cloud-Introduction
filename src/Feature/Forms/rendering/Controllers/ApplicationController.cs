@@ -1,33 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-using Mvp.Feature.Forms.Models;
-using System.Collections.Generic;
+using Mvp.Feature.Forms.ApplicationData;
+using System.Threading.Tasks;
 
 namespace Mvp.Feature.Forms.Controllers
 {
     public class ApplicationController : Controller
     {
-        private readonly IConfiguration _configuration;
-        private readonly ILogger<ApplicationController> _logger;
+        private readonly IApplicationDataService applicationDataService;
 
-        public ApplicationController(IConfiguration configuration, ILogger<ApplicationController> logger)
+        public ApplicationController(IApplicationDataService applicationDataService)
         {
-            _configuration = configuration;
-            _logger = logger;
+            this.applicationDataService = applicationDataService;
         }
 
-        public IActionResult GetApplicationLists()
+        public async Task<IActionResult> GetApplicationLists()
         {
             if (!User.Identity.IsAuthenticated)
                 return null;
 
-            return Json(new ApplicationLists
-            {
-                Country = new List<Country>() { new Country { Name = "Australia", Description = "Australia", ID = System.Guid.Empty } },
-                EmploymentStatus = new List<EmploymentStatus>() { new EmploymentStatus { Name = "Employed", Description = "Employed", ID = System.Guid.Empty } },
-                MvpCategory = new List<MvpCategory>() { new MvpCategory { Name = "Technology", Active = true } }
-            });
+            return Json(await applicationDataService.GetApplicationListDataAsync());
         }
 
         public IActionResult GetApplicationInfo()
