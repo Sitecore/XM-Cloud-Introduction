@@ -12,4 +12,8 @@
     <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\DataFetching\rendering\Mvp.Foundation.DataFetching.Rendering.csproj" />
+  </ItemGroup>
+
 </Project>

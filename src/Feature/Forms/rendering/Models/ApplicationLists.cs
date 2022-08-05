@@ -8,8 +8,8 @@ namespace Mvp.Feature.Forms.Models
 {
     public class ApplicationLists
     {
-        public IEnumerable<Country> Country { get; set; }
-        public IEnumerable<EmploymentStatus> EmploymentStatus { get; set; }
-        public IEnumerable<MvpCategory> MvpCategory { get; set; }
+        public IEnumerable<ApplicationListData> Country { get; set; }
+        public IEnumerable<ApplicationListData> EmploymentStatus { get; set; }
+        public IEnumerable<ApplicationListData> MvpCategory { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
 using System.Net.Http;
 
-namespace Mvp.Feature.People.GraphQL
+namespace Mvp.Foundation.DataFetching.GraphQL
 {
     public class GraphQLClientFactory : IGraphQLClientFactory
     {

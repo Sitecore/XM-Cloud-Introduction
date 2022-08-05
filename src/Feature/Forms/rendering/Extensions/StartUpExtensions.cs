@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Mvp.Feature.Forms.ApplicationData;
 
 namespace Mvp.Feature.Forms.Extensions
 {
@@ -21,6 +23,12 @@ namespace Mvp.Feature.Forms.Extensions
                       new { controller = "Application", action = "GetApplicationInfo" }
                  );
             });
+        }
+
+        public static IServiceCollection AddFeatureFormsServices(this IServiceCollection services)
+        {
+            services.AddTransient<IApplicationDataService, ApplicationDataService>();
+            return services;
         }
     }
 }
