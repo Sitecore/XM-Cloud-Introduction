@@ -2,22 +2,24 @@
 
 namespace Mvp.Feature.Forms.Models
 {
-    public class Country
+    public class ApplicationListData
     {
         public string Id { get; set; }
         public string Name { get; set; }
         public string DisplayName { get; set; }
         public ValueItem Description { get; set; }
+        public Template Template { get; set; }
+        public BoolField Active { get; set; }
     }
 
-    public class CountrySearchResponse
+    public class ApplicationListDataSearchResponse
     {
-        public CountrySearch Search { get; set; }
+        public ApplicationListDataSearch Search { get; set; }
     }
 
-    public class CountrySearch
+    public class ApplicationListDataSearch
     {
-        public Country[] Results { get; set; }
+        public ApplicationListData[] Results { get; set; }
         public int Total { get; set; }
         public PageInfo PageInfo { get; set; }
     }

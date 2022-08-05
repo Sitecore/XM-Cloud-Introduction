@@ -30,4 +30,15 @@
         public string endCursor { get; set; }
         public bool hasNextPage { get; set; }
     }
+
+    public class Template
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+    }
+
+    public class BoolField
+    {
+        public bool BoolValue { get; set; }
+    }
 }
