@@ -54,7 +54,7 @@ namespace Mvp.Feature.People
                           field(name:""type"") {
                             ... on LookupField{
                               targetItem {
-                                field(name: ""Name"") {
+                                field(name: ""DisplayName"") {
                                   value
                                 }
                               }
