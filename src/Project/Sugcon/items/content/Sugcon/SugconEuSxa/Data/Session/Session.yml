@@ -1,0 +1,40 @@
+﻿---
+ID: "cf2d00d0-bb83-465f-add6-8f9147eca7f6"
+Parent: "7c4ccb66-c613-4a36-9f5d-2857f7dd8570"
+Template: "27ad4bee-7462-49f0-9d33-82ba20c37e8d"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Data/Session/Session
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "1db3d688-e3de-4c92-9aec-60baba5002bc"
+      Hint: SessionizeURL
+      Value: "https://sessionize.com/api/v2/1wt79jwg/view/Sessions"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220810T161620Z
+    - ID: "4426dd82-5e90-4ac2-af3d-902aa39d5e89"
+      Hint: Title
+      Value: SUGCON EU 2022 Sessions
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "76be9331-6c30-4cc4-9dc3-995fefdf870c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220810T161743Z

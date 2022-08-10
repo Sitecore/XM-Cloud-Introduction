@@ -1,0 +1,31 @@
+﻿---
+ID: "2485a51c-dc54-42ac-85e3-2a48e7521caf"
+Parent: "bb2fb96a-95b5-485d-ad43-e725b0e43909"
+Template: "0e752460-018a-4e62-b6c0-cde913c12e13"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Data/Agenda
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220810T160857Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "53160901-af63-4bed-a4c0-a31c2c58b67f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220810T160857Z
