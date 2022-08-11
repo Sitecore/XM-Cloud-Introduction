@@ -2,7 +2,11 @@
 Param (
     [Parameter(HelpMessage = "Switch to enable running against edge, this will only run Traefik and the host containers.",
         ParameterSetName = "env-init")]
-    [switch]$UseEdge
+    [switch]$UseEdge,
+
+    [Parameter(HelpMessage = "Switch to disable rebuilding the containers and just bring them up.",
+        ParameterSetName = "env-init")]
+    [switch]$SkipBuild
 )
 
 $ErrorActionPreference = "Stop";
@@ -29,14 +33,16 @@ if (-not $envCheck) {
     throw "$envCheckVariable does not have a value. Did you run 'init.ps1 -InitEnv'?"
 }
 
-Write-Host "Keeping XM Cloud base image up to date" -ForegroundColor Green
-docker pull "$($sitecoreDockerRegistry)sitecore-xmcloud-cm:$($sitecoreVersion)"
+if (-Not $SkipBuild) {
+    Write-Host "Keeping XM Cloud base image up to date" -ForegroundColor Green
+    docker pull "$($sitecoreDockerRegistry)sitecore-xmcloud-cm:$($sitecoreVersion)"
 
-# Build all containers in the Sitecore instance, forcing a pull of latest base containers
-Write-Host "Building containers..." -ForegroundColor Green
-docker-compose build
-if ($LASTEXITCODE -ne 0) {
-    Write-Error "Container build failed, see errors above."
+    # Build all containers in the Sitecore instance, forcing a pull of latest base containers
+    Write-Host "Building containers..." -ForegroundColor Green
+    docker-compose build
+    if ($LASTEXITCODE -ne 0) {
+        Write-Error "Container build failed, see errors above."
+    }
 }
 
 if ($UseEdge) {
