@@ -5,10 +5,10 @@ VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Files", ".Solution Files", "{196B5D43-B228-4632-9BC3-EAAF79B4EDA5}"
 	ProjectSection(SolutionItems) = preProject
-		nuget.config = nuget.config
+		..\nuget.config = ..\nuget.config
 		..\Packages.props = ..\Packages.props
-		README.md = README.md
-		sitecore.json = sitecore.json
+		..\README.md = ..\README.md
+		..\sitecore.json = ..\sitecore.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{4736C040-62A2-4E10-A376-0FD4B8B72E8D}"
