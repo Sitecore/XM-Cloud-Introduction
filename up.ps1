@@ -1,12 +1,19 @@
 [CmdletBinding(DefaultParameterSetName = "no-arguments")]
 Param (
-    [Parameter(HelpMessage = "Switch to enable running against edge, this will only run Traefik and the host containers.",
-        ParameterSetName = "env-init")]
+    [Parameter(HelpMessage = "Toggles running against edge. This will only run Traefik and the host containers.")]
     [switch]$UseEdge,
 
-    [Parameter(HelpMessage = "Switch to disable rebuilding the containers and just bring them up.",
-        ParameterSetName = "env-init")]
-    [switch]$SkipBuild
+    [Parameter(HelpMessage = "Toggles whether to skip building the images.")]
+    [switch]$SkipBuild,
+
+    [Parameter(HelpMessage = "Toggles whether to skip schemas and rebuild of the indexes.")]
+    [switch]$SkipIndexing,
+
+    [Parameter(HelpMessage = "Toggles whether to skip pushing items and JSS configuration.")]
+    [switch]$SkipPush,
+
+    [Parameter(HelpMessage = "Toggles whether to skip opening the site and CM in a browser.")]
+    [switch]$SkipOpen
 )
 
 $ErrorActionPreference = "Stop";
@@ -114,27 +121,33 @@ else {
         Write-Error "Unable to log into Sitecore, did the Sitecore environment start correctly? See logs above."
     }
 
-    # Populate Solr managed schemas to avoid errors during item deploy
-    Write-Host "Populating Solr managed schema..." -ForegroundColor Green
-    dotnet sitecore index schema-populate
-    if ($LASTEXITCODE -ne 0) {
-        Write-Error "Populating Solr managed schema failed, see errors above."
+    if (-not $SkipIndexing) {
+        # Populate Solr managed schemas to avoid errors during item deploy
+        Write-Host "Populating Solr managed schema..." -ForegroundColor Green
+        dotnet sitecore index schema-populate
+        if ($LASTEXITCODE -ne 0) {
+            Write-Error "Populating Solr managed schema failed, see errors above."
+        }
+
+        # Rebuild indexes
+        Write-Host "Rebuilding indexes ..." -ForegroundColor Green
+        dotnet sitecore index rebuild
+    }
+    
+    if (-not $SkipPush) {
+        # Deploy the serialised content items
+        Write-Host "Pushing items to Sitecore..." -ForegroundColor Green
+        dotnet sitecore ser push
+        if ($LASTEXITCODE -ne 0) {
+            Write-Error "Serialization push failed, see errors above."
+        }
     }
 
-    # Rebuild indexes
-    Write-Host "Rebuilding indexes ..." -ForegroundColor Green
-    dotnet sitecore index rebuild
-
-    # Deploy the serialised content items
-    Write-Host "Pushing items to Sitecore..." -ForegroundColor Green
-    dotnet sitecore ser push
-    if ($LASTEXITCODE -ne 0) {
-        Write-Error "Serialization push failed, see errors above."
+    if (-not $SkipOpen) {
+        Write-Host "Opening site..." -ForegroundColor Green
+        Start-Process https://$xmCloudHost/sitecore/
+        Start-Process https://$mvpHost
+        Start-Process https://$sugconeuHost
+        Start-Process https://$sugconanzHost
     }
-
-    Write-Host "Opening site..." -ForegroundColor Green
-    Start-Process https://$xmCloudHost/sitecore/
-    Start-Process https://$mvpHost
-    Start-Process https://$sugconeuHost
-    Start-Process https://$sugconanzHost
 }
