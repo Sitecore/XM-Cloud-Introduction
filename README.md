@@ -42,7 +42,7 @@ Examples of how to use them can be seen in the different setup guides for both L
 
 # Running in Local Mode
 
-Running in Local Mode will run all of the application elemenets required on your local machine using Docker
+Running in Local Mode will run all of the application elements required on your local machine using Docker
 
 ## Initialize your repository for Local Mode
 
