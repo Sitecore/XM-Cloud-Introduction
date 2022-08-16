@@ -32,9 +32,9 @@ export const Default = (props: CTAProps): JSX.Element => {
   if (props.fields) {
     return (
       <div className={`component cta ${props.params.styles}`}>
-        <div className="row justify-content-end">
-          <div className="col-12 col-lg-7">
-            <div className="bg-white text-dark">
+        <div className="row justify-content-start">
+          <div className="col-12 col-lg-5">
+            <div className="bg-white text-dark p-2">
               <h3 className="pb-4">
                 <Text field={props.fields.Headline} />
               </h3>
@@ -47,8 +47,8 @@ export const Default = (props: CTAProps): JSX.Element => {
               </div>
             </div>
           </div>
-          <div className="align-self-stretch">
-            <Image field={props.fields.Image} />
+          <div className="ctaImage col-lg-7">
+            <Image media={props.fields.Image} className="img-fluid"></Image>
           </div>
         </div>
       </div>
