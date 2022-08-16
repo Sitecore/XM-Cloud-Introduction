@@ -31,17 +31,24 @@ const CTA = (props: CTAProps): JSX.Element => (
 export const Default = (props: CTAProps): JSX.Element => {
   if (props.fields) {
     return (
-      <div className="container component mt-5">
-        <div className="d-flex flex-row">
-          <div className="col-12 col-md-5 p-5 align-self-stretch bg-light">
-            <h3>
-              <Text field={props.fields.Headline} />
-            </h3>
-            <RichText field={props.fields.Text} />
-            <Link field={props.fields.Link}></Link>
+      <div className={`component cta mb-3 ${props.params.styles}`}>
+        <div className="row justify-content-start">
+          <div className="col-12 col-lg-5">
+            <div className="bg-white text-dark p-2">
+              <h3 className="pb-4">
+                <Text field={props.fields.Headline} />
+              </h3>
+              <div className="pb-3 fs-5">
+                <RichText field={props.fields.Text} />
+              </div>
+              <div className="text-dark fs-5 fw-bold">
+                <Link field={props.fields.Link}></Link>
+                <i className="bi bi-arrow-right"></i>
+              </div>
+            </div>
           </div>
-          <div className="align-self-stretch">
-            <Image field={props.fields.Image} />
+          <div className="ctaImage col-lg-7">
+            <Image media={props.fields.Image} className="img-fluid"></Image>
           </div>
         </div>
       </div>

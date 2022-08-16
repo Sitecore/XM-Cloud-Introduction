@@ -100,7 +100,9 @@ header{
 footer{
     background-color: #707070;
     color: white;
-    .component{
+    display: grid;
+    width: 100%;
+    .component {
         padding: 20px;
         margin-top: 0px;
     }
@@ -115,7 +117,7 @@ h1{
 }
 
 .component{
-    margin-top: 50px;
+    margin-top: 15px;
   }
  .centered-block {
      max-width: 1200px;
