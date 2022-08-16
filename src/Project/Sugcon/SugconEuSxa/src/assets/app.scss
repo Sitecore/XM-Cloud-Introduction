@@ -72,9 +72,13 @@ Styles for default JSS error components
 
 body {
     background-color: #f6f6f6;
+    width: 100%;
+    display: grid;
 }
 header {
     background-color: white;
+    display: grid;
+    width: 100%;
     .navigation {
         margin-top: 50px;
     }
@@ -98,6 +102,8 @@ header {
 footer {
     background-color: #707070;
     color: white;
+    display: grid;
+    width: 100%;
     .component {
         padding: 20px;
         margin-top: 0px;
@@ -115,6 +121,7 @@ h1 {
 .centered-block {
     max-width: 1200px;
     margin: auto;
+    display: grid;
 }
 
 .background-dark-grey {
