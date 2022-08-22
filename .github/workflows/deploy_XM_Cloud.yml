@@ -51,7 +51,18 @@ jobs:
     - name: Authenticate CLI with XM Cloud
       run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.XM_CLOUD_CLIENT_ID }} --client-secret ${{ secrets.XM_CLOUD_CLIENT_SECRET }}
     - name: Deploy the CM assets to XM Cloud
-      run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_XM_CLOUD_ENVIRONMENT_ID }} --upload 
+      run: |
+        $result = dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_XM_CLOUD_ENVIRONMENT_ID }} --upload --json | ConvertFrom-Json
+        Write-Host $result
+        if($result.IsTimedOut) {
+            Write-Error -Message "Operation Timed Out." -ErrorAction Stop
+            exit -1
+        }
+        if(-not $result.IsCompleted) {
+            Write-Error -Message "Operation Failed." -ErrorAction Stop
+            exit -1
+        }
+        Write-Host "Deployment  Completed"
     - name: Authenticate default environment with CLI
       run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.XM_CLOUD_CLIENT_ID }} --client-secret ${{ secrets.XM_CLOUD_CLIENT_SECRET }} --cm ${{ secrets.STAGING_XM_CLOUD_CM_URL }} --allow-write true
     - name: Publish content changes
@@ -72,7 +83,18 @@ jobs:
     - name: Authenticate CLI with XM Cloud
       run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.XM_CLOUD_CLIENT_ID }} --client-secret ${{ secrets.XM_CLOUD_CLIENT_SECRET }}
     - name: Deploy the CM assets to XM Cloud
-      run: dotnet sitecore cloud deployment create --environment-id ${{ secrets.PROD_ENVIRONMENT_ID }} --upload 
+      run:  |
+        $result = dotnet sitecore cloud deployment create --environment-id ${{ secrets.PROD_ENVIRONMENT_ID }} --upload --json | ConvertFrom-Json
+        Write-Host $result
+        if($result.IsTimedOut) {
+            Write-Error -Message "Operation Timed Out." -ErrorAction Stop
+            exit -1
+        }
+        if(-not $result.IsCompleted) {
+            Write-Error -Message "Operation Failed." -ErrorAction Stop
+            exit -1
+        }
+        Write-Host "Deployment  Completed"
     - name: Authenticate default environment with CLI
       run: dotnet sitecore login --ref xmcloud --client-credentials true --client-id ${{ secrets.XM_CLOUD_CLIENT_ID }} --client-secret ${{ secrets.XM_CLOUD_CLIENT_SECRET }} --cm ${{ secrets.PROD_XM_CLOUD_CM_URL }} --allow-write true
     - name: Publish content changes
