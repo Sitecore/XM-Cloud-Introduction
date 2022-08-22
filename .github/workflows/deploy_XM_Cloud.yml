@@ -56,12 +56,12 @@ jobs:
         echo $result
         if $result | jq '.IsTimedOut'
         then
-            echo -Message "Operation Timed Out." -ErrorAction Stop
+            echo -Message "Operation Timed Out."
             exit -1
         fi  
         if ! $result | jq '.IsCompleted'
         then
-            echo -Message "Operation Failed." -ErrorAction Stop
+            echo -Message "Operation Failed."
             exit -1
         fi
         echo "Deployment  Completed"
@@ -90,12 +90,12 @@ jobs:
         echo $result
         if $result | jq '.IsTimedOut'
         then
-            echo -Message "Operation Timed Out." -ErrorAction Stop
+            echo -Message "Operation Timed Out."
             exit -1
         fi  
         if ! $result | jq '.IsCompleted'
         then
-            echo -Message "Operation Failed." -ErrorAction Stop
+            echo -Message "Operation Failed."
             exit -1
         fi
         echo "Deployment  Completed"
