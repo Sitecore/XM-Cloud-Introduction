@@ -54,12 +54,14 @@ jobs:
       run: |
         result=$(dotnet sitecore cloud deployment create --environment-id ${{ secrets.STAGING_XM_CLOUD_ENVIRONMENT_ID }} --upload --json)
         echo $result
-        if $result | jq '.IsTimedOut'
+        isTimedOut=$(echo $result | jq ' .IsTimedOut')
+        isCompleted=$(echo $result | jq ' .IsCompleted')
+        if [ $isTimedOut = true ]
         then
             echo "Operation Timed Out."
             exit -1
         fi  
-        if ! $result | jq '.IsCompleted'
+        if ! [ $isCompleted = true ]
         then
             echo "Operation Failed."
             exit -1
@@ -88,12 +90,14 @@ jobs:
       run:  |
         result=$(dotnet sitecore cloud deployment create --environment-id ${{ secrets.PROD_ENVIRONMENT_ID }} --upload --json)
         echo $result
-        if $result | jq '.IsTimedOut'
+        isTimedOut=$(echo $result | jq ' .IsTimedOut')
+        isCompleted=$(echo $result | jq ' .IsCompleted')
+        if [ $isTimedOut = true ]
         then
             echo "Operation Timed Out."
             exit -1
         fi  
-        if ! $result | jq '.IsCompleted'
+        if ! [ $isCompleted = true ]
         then
             echo "Operation Failed."
             exit -1
