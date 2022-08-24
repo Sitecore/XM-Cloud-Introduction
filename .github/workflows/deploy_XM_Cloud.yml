@@ -67,10 +67,12 @@ jobs:
             exit -1
         fi
         echo "Deployment  Completed"
-    # - name: Authenticate default environment with CLI
-    #   run: dotnet sitecore cloud environment connect -id ${{ secrets.STAGING_XM_CLOUD_ENVIRONMENT_ID }} --allow-write
-    # - name: Publish content changes
-    #   run: dotnet sitecore publish --pt Edge -n Staging
+    - name: Authenticate CLI with XM Cloud Again
+      run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.XM_CLOUD_CLIENT_ID }} --client-secret ${{ secrets.XM_CLOUD_CLIENT_SECRET }} --allow-write
+    - name: Authenticate default environment with CLI
+      run: dotnet sitecore cloud environment connect -id ${{ secrets.STAGING_XM_CLOUD_ENVIRONMENT_ID }} --allow-write
+    - name: Publish content changes
+      run: dotnet sitecore publish --pt Edge -n Staging
 
   deploy-production:
     name: Deploy the XM Cloud Production Site
