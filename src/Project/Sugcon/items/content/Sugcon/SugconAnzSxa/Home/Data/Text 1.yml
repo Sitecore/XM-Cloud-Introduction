@@ -25,21 +25,20 @@ Languages:
     - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
       Hint: Text
       Value: |
-        <h2>Organizing Committee and Sitecore would like to thank all SUGCON Europe 2022 attendees!</h2>
+        <h2>Organizing Committee and Sitecore would like to thank all SUGCON ANZ 2022 attendees!</h2>
         <p> </p>
         <p>&nbsp;</p>
-        <p>We hope that you found the conference to be informative, helpful, inspirational, and fun.</p>
-        <p>We would like to thank all speakers for your valuable insights, tips and tricks, know-how, and overall outstanding content! We extremely appreciate уour efforts in sharing your experience with the community.</p>
-        <p>We want to express our gratitude to all sponsors. Your support made SUGCON Europe 2022 a success!</p>
-        <p>In order to make next year’s conference even more successful, we request that you fill out the post-event survey. We thank you in advance for your comments and suggestions and we will do our best to make SUGCON Europe 2023 even better.</p>
+        <p>With over 150 attendees worldwide, we are happy to announce that SUGCON ANZ '22 was a huge success! The Sitecore User Group Conference was held at the Intercontinental, a luxury hotel in the heart of Melbourne, Australia. </p>
+        <p>We kicked off SUGCON with keynote speaker Greg Baxter from Aceik, who was full of insights and jokes! SUGCON attendees were busy networking, exchanging ideas, sharing Sitecore knowledge, and having lots of fun! We had an incredible lineup of speakers covering various topics and some live demos. After two years, these speakers eagerly shared their Sitecore expertise with the community again! We closed SUGCON with a panel discussion featuring some of our MVPs and Zoe Freeman, who shared tips and answered questions on becoming a Sitecore MVP.</p>
+        <div>Please search #SUGCON and #SUGCONANZ on Twitter, LinkedIn, and Instagram to see the Sitecore community in action!</div>
         <p><strong>Sitecore Community is truly the best in the world! See you next year!</strong></p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8f02025e-7f0a-489d-8c91-aef2eb99c295"
+      Value: "b19b6214-f91a-48fb-aca3-75cd8c397bbc"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\thd@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220615T172250Z
+      Value: 20220824T190606Z

@@ -1,0 +1,42 @@
+﻿---
+ID: "fbc6fb5a-ebf3-4509-8b50-11faef07ff30"
+Parent: "241c22a4-7fc7-4b3f-a086-23c6581e3778"
+Template: "040dffbf-bdb3-4424-a867-49e927d9c3e5"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Data/Organisers/Jason Horne
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0a82b3e3-f9ac-42e6-a7ac-4ffd422a0b4d"
+      Hint: LinkedInLink
+      Value: |
+        <link linktype="external" url="https://www.linkedin.com/in/jasonhorne/?originalSubdomain=au" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220824T191138Z
+    - ID: "3d3d3ea8-0bc8-499d-8ae2-289d4dad9ce7"
+      Hint: Image
+      Value: |
+        <image mediaid="{96C40A2E-82BB-4D79-910F-173869F74529}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a126129b-ad57-4626-9ecf-5ba3099604d2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220824T191354Z
+    - ID: "ed25e568-5800-4b53-b376-b2e58c217665"
+      Hint: Name
+      Value: Jason Horne
