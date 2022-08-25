@@ -17,7 +17,7 @@ jobs:
     name: Build the .NET Solution
     runs-on: windows-latest
     steps:
-    - uses: ./.github/workflows/_buildDotNet
+    - uses: ./.github/workflows/_buildDotNet.yml
       with:
         buildConfiguration: Release
 
