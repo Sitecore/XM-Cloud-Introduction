@@ -15,12 +15,9 @@ jobs:
 
   build-dotnet:
     name: Build the .NET Solution
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: ./.github/actions/build_DotNet.yml
-      with:
-        buildConfiguration: Release
+    uses: ./.github/workflows/build_DotNet.yml
+    with:
+      buildConfiguration: Release
 
   deploy-mvp-staging:
     name: Deploy the MVP rendering host to Staging Azure WebApp
