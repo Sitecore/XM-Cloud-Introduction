@@ -18,8 +18,8 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: ./.github/workflows/_buildDotNet
-        with:
-          buildConfiguration: Release
+      with:
+        buildConfiguration: Release
 
   deploy-mvp-staging:
     name: Deploy the MVP rendering host to Staging Azure WebApp
