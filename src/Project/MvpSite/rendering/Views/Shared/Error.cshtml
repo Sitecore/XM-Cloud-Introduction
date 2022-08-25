@@ -1,16 +1,10 @@
 ﻿@model ErrorViewModel
 @{
     ViewData["Title"] = "Error";
+    Layout = "~/Views/Shared/_ErrorLayout.cshtml";
 }
 
-<div class="column error-page">
-    <h1 class="text-danger">Ka-Boom!</h1>
-    <h2 class="text-danger">An error occurred while processing your request.</h2>
-
-    @if (Model.IsInvalidRequest)
-    {
-        <div style="font-size: larger">
-            <strong>HINT:</strong> You probably need to publish your API key
-        </div>
-    }
+<h2>An error has occurred.</h2>
+<div class="col-12 panel">
+    <p class="content">Unfortunately, we cannot process that request please try again later.</p>
 </div>
