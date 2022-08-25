@@ -39,7 +39,7 @@ jobs:
 
   deploy-staging:
     name: Deploy the XM Cloud Staging Site
-    needs: build-dotnet
+    #needs: build-dotnet
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
