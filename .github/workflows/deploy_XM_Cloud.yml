@@ -1,7 +1,7 @@
 name: XM Cloud
 on: 
   push:
-    branches: [ main ]
+    #branches: [ main ]
     paths-ignore:
     - 'README.md'
     - '.github/workflows/deploy_MVP.yml' #IGNORE CHANGES TO GITHUB ACTIONS
@@ -24,18 +24,9 @@ on:
 jobs:
 
   build-dotnet:
-    name: Build the .NET Solution
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup MSBuild path
-      uses: microsoft/setup-msbuild@v1.1
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.6
-    - name: Restore NuGet packages
-      run: nuget restore src\XmCloudIntroduction.sln
-    - name: Build
-      run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
+    uses: ./.github/workflows/build_DotNet.yml
+    with:
+      buildConfiguration: Release
 
   deploy-staging:
     name: Deploy the XM Cloud Staging Site

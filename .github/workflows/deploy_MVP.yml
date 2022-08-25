@@ -14,7 +14,6 @@ on:
 jobs:
 
   build-dotnet:
-    name: Build the .NET Solution
     uses: ./.github/workflows/build_DotNet.yml
     with:
       buildConfiguration: Release
