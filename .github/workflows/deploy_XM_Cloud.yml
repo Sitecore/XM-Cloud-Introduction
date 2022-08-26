@@ -1,7 +1,7 @@
 name: XM Cloud
 on: 
   push:
-    #branches: [ main ]
+    branches: [ main ]
     paths-ignore:
     - 'README.md'
     - '.github/workflows/deploy_MVP.yml' #IGNORE CHANGES TO GITHUB ACTIONS
@@ -23,23 +23,23 @@ on:
 
 jobs:
 
-  # build-dotnet:
-  #   name: Build the .NET Solution
-  #   runs-on: windows-latest
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - name: Setup MSBuild path
-  #     uses: microsoft/setup-msbuild@v1.1
-  #   - name: Setup NuGet
-  #     uses: NuGet/setup-nuget@v1.0.6
-  #   - name: Restore NuGet packages
-  #     run: nuget restore src\XmCloudIntroduction.sln
-  #   - name: Build
-  #     run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
+  build-dotnet:
+    name: Build the .NET Solution
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup MSBuild path
+      uses: microsoft/setup-msbuild@v1.1
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.6
+    - name: Restore NuGet packages
+      run: nuget restore src\XmCloudIntroduction.sln
+    - name: Build
+      run: msbuild src\XmCloudIntroduction.sln /p:Configuration=Release
 
   deploy-staging:
     name: Deploy the XM Cloud Staging Site
-    #needs: build-dotnet
+    needs: build-dotnet
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -67,7 +67,7 @@ jobs:
             exit -1
         fi
         echo "Deployment  Completed"
-    - name: Authenticate default environment with CLI
+    - name: Connect the CLI to the Environment
       run: dotnet sitecore cloud environment connect -id ${{ secrets.STAGING_XM_CLOUD_ENVIRONMENT_ID }} --allow-write
     - name: Publish content changes
       run: dotnet sitecore publish --pt Edge -n Staging
@@ -103,10 +103,7 @@ jobs:
             exit -1
         fi
         echo "Deployment  Completed"
-    - name: Authenticate default environment with CLI
+    - name: Connect the CLI to the Environment
       run: dotnet sitecore cloud environment connect -id ${{ secrets.PROD_ENVIRONMENT_ID }} --allow-write
     - name: Publish content changes
       run: dotnet sitecore publish --pt Edge -n Production
-
-
-
