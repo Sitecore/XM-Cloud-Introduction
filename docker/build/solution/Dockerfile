@@ -14,6 +14,7 @@ ARG BUILD_IMAGE
 FROM ${BUILD_IMAGE} AS nuget-prep
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
+COPY ["*.nupkg", "/Code/Local NuGet/"]
 COPY *.sln nuget.config Directory.Build.targets Packages.props /nuget/
 COPY src/ /temp/
 RUN Invoke-Expression 'robocopy C:/temp C:/nuget/src /s /ndl /njh /njs *.csproj *.scproj *.sln packages.config'
@@ -31,6 +32,7 @@ WORKDIR /build
 
 # Copy prepped NuGet artifacts, and restore as distinct layer to take advantage of caching.
 COPY --from=nuget-prep ./nuget ./
+COPY ["*.nupkg", "/Code/Local NuGet/"]
 
 # Restore Platform NuGet packages
 RUN nuget restore ./src/XmCloudIntroduction.sln -Verbosity quiet

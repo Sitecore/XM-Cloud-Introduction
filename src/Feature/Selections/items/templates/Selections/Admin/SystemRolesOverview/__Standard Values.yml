@@ -1,0 +1,43 @@
+﻿---
+ID: "6687857b-4616-4b68-ae9e-1793e2ff88b9"
+Parent: "a9bfdcff-1c31-415f-a3fd-1583ddc06621"
+Template: "a9bfdcff-1c31-415f-a3fd-1583ddc06621"
+Path: /sitecore/templates/Feature/Selections/Admin/SystemRolesOverview/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220826T140620Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "68bedcfd-1d2a-4887-9ec0-3c7c14ac98f3"
+      Hint: TitleLabel
+      Value: System Roles
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d5a13206-d548-4221-8d51-fd8d768501e2"
+    - ID: "9433d2c9-e193-4e7a-9b12-4376f619c8a9"
+      Hint: NameTableHeader
+      Value: Name
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "cafeeba2-df24-4e4d-ba47-5b300623706e"
+      Hint: OperationsTableHeader
+      Value: Operations
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220826T141145Z
+    - ID: "dcda52f0-c7d6-4620-a54a-e15f86c980fd"
+      Hint: RightsTableHeader
+      Value: Rights

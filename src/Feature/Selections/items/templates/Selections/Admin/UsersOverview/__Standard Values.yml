@@ -1,0 +1,40 @@
+﻿---
+ID: "f46d63ec-44f8-492c-b604-cd39da6d1b81"
+Parent: "60f7e06e-e23a-42e0-816d-ef0fa2866a33"
+Template: "60f7e06e-e23a-42e0-816d-ef0fa2866a33"
+Path: /sitecore/templates/Feature/Selections/Admin/UsersOverview/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220825T151943Z
+    - ID: "4a34fb25-6a05-41dc-bc59-5b92a548000b"
+      Hint: IdentifierTableHeader
+      Value: Identifier
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "67bac94d-f413-4abb-b153-335cbfe7cb19"
+    - ID: "978bb6fd-e2bf-4903-aff5-2cfcfce00886"
+      Hint: OperationsTableHeader
+      Value: Operations
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220826T140458Z
+    - ID: "ebc928c4-c7d1-4d46-8333-61c074805c49"
+      Hint: TitleLabel
+      Value: Users

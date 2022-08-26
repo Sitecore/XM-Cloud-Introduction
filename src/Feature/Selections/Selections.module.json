@@ -1,0 +1,17 @@
+{
+   "namespace": "Feature.Selections",
+   "items": {
+      "includes": [
+        {
+          "name": "templates",
+          "path": "/sitecore/templates/Feature/Selections",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+          "name": "renderings",
+          "path": "/sitecore/layout/Renderings/Feature/Selections",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        }
+      ]
+    }
+}

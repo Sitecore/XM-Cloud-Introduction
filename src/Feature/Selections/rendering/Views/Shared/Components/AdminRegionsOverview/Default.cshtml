@@ -1,0 +1,25 @@
+﻿@using Mvp.Selections.Domain
+@model Mvp.Feature.Selections.Models.Admin.RegionsOverviewModel
+
+<div class="mvp-s-admin-allsystemroles">
+	<h2 asp-for="TitleLabel"></h2>
+	<table>
+		<thead>
+		<tr>
+			<th asp-for="NameTableHeader"></th>
+			<th asp-for="CountryCountTableHeader"></th>
+			<th asp-for="OperationsTableHeader"></th>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach (Region region in Model.Regions)
+		{
+			<tr>
+				<td>@region.Name</td>
+				<td>@region.Countries.Count</td>
+				<td>TODO</td>
+			</tr>
+		}
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,23 @@
+﻿@using Mvp.Selections.Domain
+@model Mvp.Feature.Selections.Models.Admin.UsersOverviewModel
+
+<div class="mvp-s-admin-allusers">
+	<h2 asp-for="TitleLabel"></h2>
+	<table>
+		<thead>
+		<tr>
+			<th asp-for="IdentifierTableHeader"></th>
+			<th asp-for="OperationsTableHeader"></th>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach (User user in Model.Users)
+		{
+			<tr>
+				<td>@user.Identifier</td>
+				<td>TODO</td>
+			</tr>
+		}
+		</tbody>
+	</table>
+</div>

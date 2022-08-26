@@ -1,0 +1,39 @@
+﻿---
+ID: "779c734c-79cb-44b6-8b80-752cb4c900ad"
+Parent: "508db6be-52a6-4d1c-8bf5-e55b69f06bc7"
+Template: "508db6be-52a6-4d1c-8bf5-e55b69f06bc7"
+Path: /sitecore/templates/Feature/Selections/SelectionsFolder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {BDB05878-8135-4E8D-A094-EB2DB3E4526B}
+    {B0B35AC8-181E-441B-AFFF-D06F6D4F21DF}
+    {A9BFDCFF-1C31-415F-A3FD-1583DDC06621}
+    {60F7E06E-E23A-42E0-816D-EF0FA2866A33}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220826T193021Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "91dc8c75-30f5-4028-8abc-4f2ce52c0936"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220826T193212Z

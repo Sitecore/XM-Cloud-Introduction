@@ -1,0 +1,25 @@
+﻿@using Mvp.Selections.Domain
+@model Mvp.Feature.Selections.Models.Admin.SystemRolesOverviewModel
+
+<div class="mvp-s-admin-allsystemroles">
+	<h2 asp-for="TitleLabel"></h2>
+	<table>
+		<thead>
+		<tr>
+			<th asp-for="NameTableHeader"></th>
+			<th asp-for="RightsTableHeader"></th>
+			<th asp-for="OperationsTableHeader"></th>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach (SystemRole role in Model.Roles)
+		{
+			<tr>
+				<td>@role.Name</td>
+				<td>@role.Rights</td>
+				<td>TODO</td>
+			</tr>
+		}
+		</tbody>
+	</table>
+</div>
