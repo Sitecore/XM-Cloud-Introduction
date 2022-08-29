@@ -1,0 +1,47 @@
+name: Deploy the solution and items to an XM Cloud instance
+
+on:
+  workflow_call:
+    secrets:
+      XM_CLOUD_CLIENT_ID:
+        required: true
+      XM_CLOUD_CLIENT_SECRET:
+        required: true
+      XM_CLOUD_ENVIRONMENT_ID:
+        required: true  
+    
+jobs:
+
+  deploy-staging:
+    name: Deploy the XM Cloud Staging Site
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '6.0.x' 
+    - run: dotnet tool restore
+    - run: dotnet sitecore --help
+    - name: Authenticate CLI with XM Cloud
+      run: dotnet sitecore cloud login --client-credentials --client-id ${{ secrets.XM_CLOUD_CLIENT_ID }} --client-secret ${{ secrets.XM_CLOUD_CLIENT_SECRET }} --allow-write
+    - name: Deploy the CM assets to XM Cloud
+      run: |
+        result=$(dotnet sitecore cloud deployment create --environment-id ${{ secrets.XM_CLOUD_ENVIRONMENT_ID }} --upload --json)
+        echo $result
+        isTimedOut=$(echo $result | jq ' .IsTimedOut')
+        isCompleted=$(echo $result | jq ' .IsCompleted')
+        if [ $isTimedOut = true ]
+        then
+            echo "Operation Timed Out."
+            exit -1
+        fi  
+        if ! [ $isCompleted = true ]
+        then
+            echo "Operation Failed."
+            exit -1
+        fi
+        echo "Deployment Completed"
+    - name: Connect the CLI to the Environment
+      run: dotnet sitecore cloud environment connect -id ${{ secrets.XM_CLOUD_ENVIRONMENT_ID }} --allow-write
+    - name: Publish content changes
+      run: dotnet sitecore publish --pt Edge -n Staging
