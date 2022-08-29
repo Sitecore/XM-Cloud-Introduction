@@ -12,6 +12,7 @@ on:
       assetName:
         required: true
         type: string
+    secrets:
       publishingProfile:
         required: true
         type: string
@@ -37,5 +38,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with: 
           app-name: Mvp-Staging
-          publish-profile: ${{ inputs.publishingProfile }}
+          publish-profile: ${{ secrets.publishingProfile }}
           package: './publish/${{ inputs.assetName }}'
