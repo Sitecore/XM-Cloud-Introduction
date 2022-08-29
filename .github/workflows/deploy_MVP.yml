@@ -25,6 +25,7 @@ jobs:
       buildConfiguration: Debug
       projectLocation: src/Project/MvpSite/rendering
       assetName: Mvp-Staging
+    secrets:
       publishingProfile: ${{ secrets.STAGING_MVP_WEBAPP_PUBLISHING_PROFILE }}
       
   deploy-mvp-prod:
@@ -35,6 +36,7 @@ jobs:
       buildConfiguration: Release
       projectLocation: src/Project/MvpSite/rendering
       assetName: Mvp-prod
+    secrets:
       publishingProfile: ${{ secrets.PROD_MVP_WEBAPP_PUBLISHING_PROFILE }}
 
   # deploy-mvp-staging:
