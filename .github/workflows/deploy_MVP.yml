@@ -27,7 +27,7 @@ jobs:
       assetName: Mvp-Staging
       publishingProfile: ${{ secrets.STAGING_MVP_WEBAPP_PUBLISHING_PROFILE }}
       
-  deploy-mvp-staging:
+  deploy-mvp-prod:
     if: github.ref == 'refs/heads/main'
     needs: deploy-mvp-staging 
     uses: ./.github/workflows/azure_deployWebapp.yml
