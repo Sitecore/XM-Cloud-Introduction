@@ -5,11 +5,15 @@ on:
     paths:
       - 'src/**/rendering/**'
       - .github/workflows/deploy_MVP.yml
+      - .github/workflows/build_DotNet.yml
+      - .github/workflows/azure_deployWebapp.yml
   pull_request:
     branches: [ main ]
     paths:
       - 'src/**/rendering/**'
       - .github/workflows/deploy_MVP.yml
+      - .github/workflows/build_DotNet.yml
+      - .github/workflows/azure_deployWebapp.yml
 
 jobs:
 
