@@ -15,7 +15,6 @@ on:
     secrets:
       publishingProfile:
         required: true
-        type: string
     
 jobs:
   deploy-rendering-host:
