@@ -19,7 +19,6 @@ on:
 jobs:
   deploy-rendering-host:
     name: Deploy the rendering host to an Azure WebApp
-    needs: build-dotnet  
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
