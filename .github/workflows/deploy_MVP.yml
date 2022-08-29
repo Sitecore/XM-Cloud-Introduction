@@ -19,48 +19,65 @@ jobs:
       buildConfiguration: Release
 
   deploy-mvp-staging:
-    name: Deploy the MVP rendering host to Staging Azure WebApp
-    needs: build-dotnet  
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 6.0.300
-      - name: dotnet build and publish
-        run: |
-          cd src/Project/MvpSite/rendering
-          dotnet restore
-          dotnet build --configuration Debug
-          dotnet publish -c Release -o '../../../../publish/mvp-staging' 
-      - name: 'Run Azure webapp deploy action using publish profile credentials'
-        uses: azure/webapps-deploy@v2
-        with: 
-          app-name: Mvp-Staging
-          publish-profile: ${{ secrets.STAGING_MVP_WEBAPP_PUBLISHING_PROFILE }}
-          package: './publish/mvp-staging'
-
-  deploy-mvp-prod:
-    name: Deploy the MVP rendering host to Production Azure WebApp
+    uses: ./.github/workflows/azure_deployWebapp.yml
+    with:
+      buildConfiguration: Debug
+      projectLocation: src/Project/MvpSite/rendering
+      assetName: Mvp-Staging
+      publishingProfile: ${{ secrets.STAGING_MVP_WEBAPP_PUBLISHING_PROFILE }}
+      
+  deploy-mvp-staging:
     if: github.ref == 'refs/heads/main'
-    needs: deploy-mvp-staging 
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 6.0.300
-      - name: dotnet build and publish
-        run: |
-          cd src/Project/MvpSite/rendering
-          dotnet restore
-          dotnet build --configuration Release
-          dotnet publish -c Release -o '../../../../publish/mvp-prod' 
-      - name: 'Run Azure webapp deploy action using publish profile credentials'
-        uses: azure/webapps-deploy@v2
-        with: 
-          app-name: Mvp-Production
-          publish-profile: ${{ secrets.PROD_MVP_WEBAPP_PUBLISHING_PROFILE }}
-          package: './publish/mvp-prod'
+    uses: ./.github/workflows/azure_deployWebapp.yml
+    with:
+      buildConfiguration: Release
+      projectLocation: src/Project/MvpSite/rendering
+      assetName: Mvp-prod
+      publishingProfile: ${{ secrets.PROD_MVP_WEBAPP_PUBLISHING_PROFILE }}
+
+  # deploy-mvp-staging:
+  #   name: Deploy the MVP rendering host to Staging Azure WebApp
+  #   needs: build-dotnet  
+  #   runs-on: windows-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Setup .NET Core
+  #       uses: actions/setup-dotnet@v1
+  #       with:
+  #         dotnet-version: 6.0.300
+  #     - name: dotnet build and publish
+  #       run: |
+  #         cd src/Project/MvpSite/rendering
+  #         dotnet restore
+  #         dotnet build --configuration Debug
+  #         dotnet publish -c Release -o '../../../../publish/mvp-staging' 
+  #     - name: 'Run Azure webapp deploy action using publish profile credentials'
+  #       uses: azure/webapps-deploy@v2
+  #       with: 
+  #         app-name: Mvp-Staging
+  #         publish-profile: ${{ secrets.STAGING_MVP_WEBAPP_PUBLISHING_PROFILE }}
+  #         package: './publish/mvp-staging'
+
+  # deploy-mvp-prod:
+  #   name: Deploy the MVP rendering host to Production Azure WebApp
+  #   if: github.ref == 'refs/heads/main'
+  #   needs: deploy-mvp-staging 
+  #   runs-on: windows-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Setup .NET Core
+  #       uses: actions/setup-dotnet@v1
+  #       with:
+  #         dotnet-version: 6.0.300
+  #     - name: dotnet build and publish
+  #       run: |
+  #         cd src/Project/MvpSite/rendering
+  #         dotnet restore
+  #         dotnet build --configuration Release
+  #         dotnet publish -c Release -o '../../../../publish/mvp-prod' 
+  #     - name: 'Run Azure webapp deploy action using publish profile credentials'
+  #       uses: azure/webapps-deploy@v2
+  #       with: 
+  #         app-name: Mvp-Production
+  #         publish-profile: ${{ secrets.PROD_MVP_WEBAPP_PUBLISHING_PROFILE }}
+  #         package: './publish/mvp-prod'
