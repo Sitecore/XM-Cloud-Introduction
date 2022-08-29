@@ -13,28 +13,36 @@ on:
 
 jobs:
 
-  build:
-    name: Build the SUGCON EU head
-    runs-on: ubuntu-latest
-    env:
-      FETCH_WITH: GraphQL
-      GRAPH_QL_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
-      SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
-    defaults:
-      run:
-        working-directory: ./src/Project/Sugcon/SugconEuSxa
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 16.5
-    - run: npm install
-    - run: npm run build
-    - run: npm run lint
+  build-eu-site:
+    uses: ./.github/workflows/build_NextJs.yml
+    with:
+      workingDirectory: ./src/Project/Sugcon/SugconEuSxa
+    secrets:
+      JS_BUILD_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
+      JS_BUILD_SECRET: ${{ secrets.JS_BUILD_SECRET }}
+
+  # build:
+  #   name: Build the SUGCON EU head
+  #   runs-on: ubuntu-latest
+  #   env:
+  #     FETCH_WITH: GraphQL
+  #     GRAPH_QL_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
+  #     SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
+  #   defaults:
+  #     run:
+  #       working-directory: ./src/Project/Sugcon/SugconEuSxa
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - uses: actions/setup-node@v3
+  #     with:
+  #       node-version: 16.5
+  #   - run: npm install
+  #   - run: npm run build
+  #   - run: npm run lint
 
   deploy:
     name: Deploy the SUGCON EU rendering host to Vercel
-    needs: build
+    needs: build-eu-site
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
