@@ -20,6 +20,7 @@ jobs:
 
   deploy-mvp-staging:
     uses: ./.github/workflows/azure_deployWebapp.yml
+    needs: build-dotnet 
     with:
       buildConfiguration: Debug
       projectLocation: src/Project/MvpSite/rendering
@@ -28,6 +29,7 @@ jobs:
       
   deploy-mvp-staging:
     if: github.ref == 'refs/heads/main'
+    needs: deploy-mvp-staging 
     uses: ./.github/workflows/azure_deployWebapp.yml
     with:
       buildConfiguration: Release
