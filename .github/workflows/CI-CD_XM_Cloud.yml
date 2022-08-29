@@ -1,13 +1,13 @@
 name: XM Cloud
 on: 
   push:
-    #branches: [ main ]
+    branches: [ main ]
     paths-ignore:
     - 'README.md'
-    - '.github/workflows/deploy_MVP.yml' #IGNORE CHANGES TO GITHUB ACTIONS
-    - '.github/workflows/deploy_SUGCON_ANZ.yml' #IGNORE CHANGES TO GITHUB ACTIONS
-    - '.github/workflows/deploy_SUGCON_EU.yml' #IGNORE CHANGES TO GITHUB ACTIONS
-    - '.github/workflows/azure_deployWebapp.yml' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/CI-CD_MVP.yml' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/CI-CD_SUGCON_ANZ.yml' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/CI-CD_SUGCON_EU.yml' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/deploy_azureWebapp.yml' #IGNORE CHANGES TO GITHUB ACTIONS
     - 'src/Project/Sugcon/SugconAnzSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/Project/Sugcon/SugconEuSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/**/rendering/**' #IGNORE CHANGE TO MVP HEAD AND RELATED PROJECTS
@@ -15,10 +15,10 @@ on:
     branches: [ main ]
     paths-ignore:
     - 'README.md'
-    - '.github/workflows/deploy_MVP.yml' #IGNORE CHANGES TO GITHUB ACTIONS
-    - '.github/workflows/deploy_SUGCON_ANZ.yml' #IGNORE CHANGES TO GITHUB ACTIONS
-    - '.github/workflows/deploy_SUGCON_EU.yml' #IGNORE CHANGES TO GITHUB ACTIONS
-    - '.github/workflows/azure_deployWebapp.yml' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/CI-CD_MVP.yml' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/CI-CD_SUGCON_ANZ.yml' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/CI-CD_SUGCON_EU.yml' #IGNORE CHANGES TO GITHUB ACTIONS
+    - '.github/workflows/deploy_azureWebapp.yml' #IGNORE CHANGES TO GITHUB ACTIONS
     - 'src/Project/Sugcon/SugconAnzSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/Project/Sugcon/SugconEuSxa/**' #IGNORE CHANGES TO Next.js head
     - 'src/**/rendering/**' #IGNORE CHANGE TO MVP HEAD AND RELATED PROJECTS

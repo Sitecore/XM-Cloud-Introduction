@@ -4,16 +4,16 @@ on:
     branches: [ main ]
     paths:
       - 'src/**/rendering/**'
-      - .github/workflows/deploy_MVP.yml
+      - .github/workflows/CI-CD_MVP.yml
       - .github/workflows/build_DotNet.yml
-      - .github/workflows/azure_deployWebapp.yml
+      - .github/workflows/deploy_azureWebapp.yml
   pull_request:
     branches: [ main ]
     paths:
       - 'src/**/rendering/**'
-      - .github/workflows/deploy_MVP.yml
+      - .github/workflows/CI-CD_MVP.yml
       - .github/workflows/build_DotNet.yml
-      - .github/workflows/azure_deployWebapp.yml
+      - .github/workflows/deploy_azureWebapp.yml
 
 jobs:
 
@@ -23,7 +23,7 @@ jobs:
       buildConfiguration: Release
 
   deploy-mvp-staging:
-    uses: ./.github/workflows/azure_deployWebapp.yml
+    uses: ./.github/workflows/deploy_azureWebapp.yml
     needs: build-dotnet 
     with:
       buildConfiguration: Debug
@@ -35,7 +35,7 @@ jobs:
   deploy-mvp-prod:
     if: github.ref == 'refs/heads/main'
     needs: deploy-mvp-staging 
-    uses: ./.github/workflows/azure_deployWebapp.yml
+    uses: ./.github/workflows/deploy_azureWebapp.yml
     with:
       buildConfiguration: Release
       projectLocation: src/Project/MvpSite/rendering
