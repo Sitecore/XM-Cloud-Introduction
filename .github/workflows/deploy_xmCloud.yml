@@ -40,7 +40,7 @@ jobs:
             echo "Operation Failed."
             exit -1
         fi
-        echo "Deployment  Completed"
+        echo "Deployment Completed"
     - name: Connect the CLI to the Environment
       run: dotnet sitecore cloud environment connect -id ${{ secrets.XM_CLOUD_ENVIRONMENT_ID }} --allow-write
     - name: Publish content changes
