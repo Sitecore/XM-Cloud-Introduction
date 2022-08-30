@@ -15,7 +15,7 @@ interface ComponentProps {
   params: ComponentParams;
 }
 
-const FixedWidthContainer = (props: ComponentProps): JSX.Element => {
+export const Default = (props: ComponentProps): JSX.Element => {
   const { sitecoreContext } = useSitecoreContext();
   const styles = `${props.params.GridParameters} ${props.params.Styles}`.trimEnd();
   const phKey = `container-${props.params.DynamicPlaceholderId}`;
@@ -39,5 +39,3 @@ const FixedWidthContainer = (props: ComponentProps): JSX.Element => {
     </div>
   );
 };
-
-export default FixedWidthContainer;

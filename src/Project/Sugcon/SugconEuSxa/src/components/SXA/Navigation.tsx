@@ -39,7 +39,7 @@ const getLinkField = (props: NavigationProps): LinkField => ({
   },
 });
 
-const Navigation = (props: NavigationProps): JSX.Element => {
+export const Default = (props: NavigationProps): JSX.Element => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
@@ -123,5 +123,3 @@ const NavigationList = (props: NavigationProps) => {
     </li>
   );
 };
-
-export default Navigation;
