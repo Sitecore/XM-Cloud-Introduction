@@ -116,14 +116,14 @@ Languages:
       Value: Sponsors
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "60d77885-ea38-4f89-85b5-458398595be4"
+      Value: "d0ca905e-a831-4379-9d4e-47ee8d73c230"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
       Value: Sponsors
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\thd@sitecore.net
+        sitecore\jcy@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220825T140539Z
+      Value: 20220830T171629Z
