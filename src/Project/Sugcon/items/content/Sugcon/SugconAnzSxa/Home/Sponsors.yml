@@ -23,8 +23,16 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{8EF02604-D9C3-4F7A-BF17-047CDCC529F2}"
+              uid="{782AAA63-8A6A-46F4-B0AF-45C431A4B8E9}"
               p:before="*"
+              s:ds="{FA1D1364-BD02-454E-BD27-CCEABE72823B}"
+              s:id="{46D04A87-A7D0-4033-8BB9-4596465EE251}"
+              s:par="GridParameters&amp;FieldNames=%7B9350595B-464F-4F82-9077-E3E42A15B623%7D&amp;Styles&amp;DynamicPlaceholderId=12"
+              s:ph="/headless-main/container-11"
+              s:ccb="Clear on publish" />
+            <r
+              uid="{8EF02604-D9C3-4F7A-BF17-047CDCC529F2}"
+              p:after="r[@uid='{782AAA63-8A6A-46F4-B0AF-45C431A4B8E9}']"
               s:ds="{9ED925EF-6503-45B8-A3E4-0764A5763D00}"
               s:id="{46D04A87-A7D0-4033-8BB9-4596465EE251}"
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B9350595B-464F-4F82-9077-E3E42A15B623%7D&amp;Styles&amp;DynamicPlaceholderId=3"
@@ -108,14 +116,14 @@ Languages:
       Value: Sponsors
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c213f584-d577-4cb5-afca-02931cc13c80"
+      Value: "d0ca905e-a831-4379-9d4e-47ee8d73c230"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
       Value: Sponsors
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\jcy@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220615T172640Z
+      Value: 20220830T171629Z
