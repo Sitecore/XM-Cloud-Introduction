@@ -35,6 +35,8 @@ jobs:
   deploy-staging:
     uses: ./.github/workflows/deploy_xmCloud.yml
     needs: build-dotnet 
+    with:
+      environmentName: Staging
     secrets:
       XM_CLOUD_CLIENT_ID: ${{ secrets.XM_CLOUD_CLIENT_ID }}
       XM_CLOUD_CLIENT_SECRET: ${{ secrets.XM_CLOUD_CLIENT_SECRET }}
@@ -44,6 +46,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs: deploy-staging 
     uses: ./.github/workflows/deploy_xmCloud.yml
+    with:
+      environmentName: Production
     secrets:
       XM_CLOUD_CLIENT_ID: ${{ secrets.XM_CLOUD_CLIENT_ID }}
       XM_CLOUD_CLIENT_SECRET: ${{ secrets.XM_CLOUD_CLIENT_SECRET }}

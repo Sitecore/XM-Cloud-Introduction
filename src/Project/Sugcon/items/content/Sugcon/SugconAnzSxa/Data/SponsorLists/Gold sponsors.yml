@@ -13,17 +13,19 @@ Languages:
       Value: 20220523T075633Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "27a19012-819a-45db-a9c6-58c2de4dce37"
+      Value: "8cddd2c6-d74e-4754-9ca1-04ee5d7378b3"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\jcy@sitecore.net
     - ID: "c47a29aa-bc65-4ef2-9376-a463edd5a998"
       Hint: Sponsors
-      Value: "{F68A1B2A-C6D2-45C3-80C1-20193C4E5565}"
+      Value: |
+        {ACC1507A-936B-4FE1-8553-A327992CF6E6}
+        {086EB93E-800B-45CA-8D11-832D5A43D606}
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220524T121559Z
+      Value: 20220830T175754Z
     - ID: "ee414f1c-1598-4d93-af66-61ce0ac6705a"
       Hint: Category
       Value: Gold sponsors

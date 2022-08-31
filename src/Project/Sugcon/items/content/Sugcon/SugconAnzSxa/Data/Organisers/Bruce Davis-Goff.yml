@@ -1,0 +1,46 @@
+﻿---
+ID: "5e4a3fc8-6d46-4039-adfa-c3a69ec0ae56"
+Parent: "241c22a4-7fc7-4b3f-a086-23c6581e3778"
+Template: "040dffbf-bdb3-4424-a867-49e927d9c3e5"
+Path: "/sitecore/content/Sugcon/SugconAnzSxa/Data/Organisers/Bruce Davis-Goff"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0a82b3e3-f9ac-42e6-a7ac-4ffd422a0b4d"
+      Hint: LinkedInLink
+      Value: |
+        <link linktype="external" url="https://www.linkedin.com/in/brucedavisgoff/" />
+    - ID: "1d574813-214f-4fc2-98ff-8ffd36a5aed1"
+      Hint: TwitterLink
+      Value: |
+        <link linktype="external" url="https://twitter.com/NZsitecore" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220824T190956Z
+    - ID: "3d3d3ea8-0bc8-499d-8ae2-289d4dad9ce7"
+      Hint: Image
+      Value: |
+        <image mediaid="{D2C9C76F-308C-4662-AEB8-E1CC5C662022}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f56c2676-f145-491c-97a3-2aba89a99e76"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220824T191041Z
+    - ID: "ed25e568-5800-4b53-b376-b2e58c217665"
+      Hint: Name
+      Value: "Bruce Davis-Goff"

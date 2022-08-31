@@ -12,6 +12,9 @@ on:
       assetName:
         required: true
         type: string
+      webAppName:
+        required: true
+        type: string
     secrets:
       publishingProfile:
         required: true
@@ -35,6 +38,6 @@ jobs:
       - name: 'Run Azure webapp deploy action using publish profile credentials'
         uses: azure/webapps-deploy@v2
         with: 
-          app-name: Mvp-Staging
+          app-name: ${{ inputs.webAppName }}
           publish-profile: ${{ secrets.publishingProfile }}
           package: './publish/${{ inputs.assetName }}'
