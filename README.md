@@ -1,46 +1,48 @@
 #  ⚠️ Pre-release software ⚠️
-This project is being built against a pre-release version of XM Cloud. There will most likely be breaking changes introduced that will require (possibly extensive) refactoring of the code seen here. 
+This project is being built against a pre-release version of XM Cloud. There will most likely be breaking changes introduced that will require (possibly extensive) refactoring of the code seen here. You can clone this reponsitory and run Full Local Development Mode, however to test Edge Development Mode you will need to have your own XM Cloud tenant.  
 
-During this time it is not possible for people external to Sitecore's Technical Marketing team to run this project locally. We will also not be accepting community contributions during this time.
+We will not be accepting community contributions during this initial pre-release build phase. Once we pass this point, we will then define a process for community contributions.
 
-You can `watch` this repository to follow along with our development progress as we prepare for the full public release of XM Cloud. Once we reach that point, we will then define a process for community contributions.
-
-# Build Status
-
-[![XM Cloud Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_XM_Cloud.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_XM_Cloud.yml)
-[![MVP Site Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_MVP.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_MVP.yml)
-[![SUGCON ANZ Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_ANZ.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_ANZ.yml)
-[![SUGCON EU Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_EU.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_EU.yml)
-
-# Introduction
+# 📝 Introduction
 
 This repository contains the codebase for a series of sites managed by the Technical Marketing Team at Sitecore. You will find the following sites in this repository:
 - [Sitecore MVP Site](https://mvp.sitecore.com)
 - [SUGCON EU Site](https://europe.sugcon.events)
 - [SUGCON ANZ Site](https://anz.sugcon.events)
 
-# Prerequisites
+# ✅ Build Status
+
+[![XM Cloud Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_XM_Cloud.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_XM_Cloud.yml)
+[![MVP Site Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_MVP.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_MVP.yml)
+[![SUGCON ANZ Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_ANZ.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_ANZ.yml)
+[![SUGCON EU Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_EU.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_EU.yml)
+
+# ✋ Prerequisites
 
 Prerequisites for this repository are:
 - [DotNet 6.0](https://dotnet.microsoft.com/en-us/download)
 - [NodeJS 16 LTS](https://nodejs.org/en/download/) (or greater)
+- [Docker](https://www.docker.com/)
 
-# Initializing the repository
+# ▶️ Initializing the repository
 You first need to initialize your .env file which will configure how the different application elements will run. There are a series of parameters you can pass in to override the default behaviour of the application, you can find the full list of parameters with their purpose here.
 
 Examples of how to use them can be seen in the different setup guides for both Local Mode and Edge Mode below.
 
-| Parameter          | Required? | Purpose                                                                                                      |
-|--------------------|-----------|--------------------------------------------------------------------------------------------------------------|
-| LicenseXmlPath     | Yes       | Used to specify the path to the license file                                                                 |
-| AdminPassword      | Yes       | Used to specify the password for the Sitecore admin user                                                     |
-| InitEnv            | No        | Used to force a full initialisation of the repository                                                        |
-| Edge_Token         | No        | Used to authenticate with XM Cloud, when running in 'Edge Mode'                                              |
-| OKTA_Domain        | No        | Okta domain used by the MVP Rendering host                                                                   |
-| OKTA_Client_Id     | No        | Okta Client Id used by the MVP Rendering host                                                                |
-| OKTA_Client_Secret | No        | Okta Client Secret used by the MVP Rendering host                                                            |
+| Parameter          | Required for MVP Site | Required for SUGCON Sites | Purpose                                                         |
+|--------------------|-----------------------|---------------------------|-----------------------------------------------------------------|
+| LicenseXmlPath     | **Yes**               | **Yes**                   | Used to specify the path to the license file                    |
+| AdminPassword      | **Yes**               | **Yes**                   | Used to specify the password for the Sitecore admin user        |
+| InitEnv            | No                    | No                        | Used to force a full initialisation of the repository           |
+| Edge_Token         | No                    | No                        | Used to authenticate with XM Cloud, when running in 'Edge Mode' |
+| OKTA_Domain        | **Yes**               | No                        | Okta domain used by the MVP Rendering host                      |
+| OKTA_Client_Id     | **Yes**               | No                        | Okta Client Id used by the MVP Rendering host                   |
+| OKTA_Client_Secret | **Yes**               | No                        | Okta Client Secret used by the MVP Rendering host               |
 
-# Running in Local Mode
+## Okta Configuration
+If you wish to run the MVP Site you will need to provide Okta configuration details. You can generate these values for yourself by [Signing up for an Okta Developer Account](https://developer.okta.com/signup/)
+
+# 💻 Running in Full Local Development Mode
 
 Running in Local Mode will run all of the application elemenets required on your local machine using Docker
 
@@ -60,7 +62,7 @@ Next, use the `up.ps1` script to bring up all of the containers required for Loc
 .\up.ps1
 ```
 
-# Running in Edge Mode
+# 🌏 Running in Edge Development Mode
 
 Running in Edge Mode will run only run the Host applications and Traefik used to access them. The hosts will pull their data directly from XM Cloud
 
