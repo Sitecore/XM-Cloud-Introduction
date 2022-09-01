@@ -2,7 +2,7 @@
 ID: "9b0e6af1-b383-4305-b11f-a9b5f13564ba"
 Parent: "84e5a6d9-ad08-4f62-89ee-cb537fa125a1"
 Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
-Path: /sitecore/content/Sugcon/SuconShared/Presentation/Partial Designs/Footer
+Path: /sitecore/content/Sugcon/SugconShared/Presentation/Partial Designs/Footer
 SharedFields:
 - ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
   Hint: Signature
