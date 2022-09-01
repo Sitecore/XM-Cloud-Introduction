@@ -25,7 +25,13 @@ Languages:
         <image mediaid="{23D89398-B505-458A-A8E8-BA48E2B17BBD}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c1718095-5588-4dac-a6d8-0c96fd1f7eaa"
+      Value: "b47923fb-cf62-4e37-afa6-024f60254310"
+    - ID: "a1f84fce-5b88-48a1-803b-1ca7f6a47563"
+      Hint: SponsorDescription
+      Value: |
+        <span style="color: #222222; background-color: #ffffff;">Espire Infolabs is a Digital Transformation and Total Experience (TX) Solutions provider with a Cross-Enterprise approach to deliver future-ready services that are resilient to market disruptions.</span><br style="color: #222222; background-color: #ffffff;" />
+        <br style="color: #222222; background-color: #ffffff;" />
+        <span style="color: #222222; background-color: #ffffff;">With focus on TX, we are paving way for enterprises to deploy &amp; deliver the best Customer Experience (CX), Employee Experience (EX), and Business Experience (BX) &ndash; with overarching service offerings around Multi-Experience (MX), and User Experience (UX).</span>
     - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
       Hint: SponsorUrl
       Value: "http://www.espire.com/"
@@ -38,4 +44,4 @@ Languages:
       Value: Espire Infolabs
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220830T175730Z
+      Value: 20220831T190202Z

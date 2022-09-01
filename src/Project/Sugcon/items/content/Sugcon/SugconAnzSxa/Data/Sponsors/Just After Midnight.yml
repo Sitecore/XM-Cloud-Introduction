@@ -25,7 +25,11 @@ Languages:
         <image mediaid="{1A63EB39-4BF1-47D9-9846-C99BE255C0F8}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "249a9278-7419-49d8-84ff-043fcfbc192e"
+      Value: "963b1b29-a48b-4a5e-8dab-26e283af1434"
+    - ID: "a1f84fce-5b88-48a1-803b-1ca7f6a47563"
+      Hint: SponsorDescription
+      Value: |
+        <span style="color: #222222; background-color: #ffffff;">Just After Midnight are the go-to hosting &amp; support partner for clients and agencies using Sitecore. Just After Midnight assure your Sitecore platform stack is designed and operating at peak performance and supported around the clock. From solution design, to migration and optimisation, to operational support, we integrate with your team, giving you time to focus on what&rsquo;s next.</span>
     - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
       Hint: SponsorUrl
       Value: "https://www.justaftermidnight247.com/"
@@ -38,4 +42,4 @@ Languages:
       Value: Just After Midnight
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220830T180147Z
+      Value: 20220831T190227Z
