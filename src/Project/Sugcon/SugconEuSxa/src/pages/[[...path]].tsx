@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import NotFound from 'src/NotFound';
+import NotFound from './404';
 import Layout from 'src/Layout';
 import {
   SitecoreContext,
@@ -20,7 +20,7 @@ const SitecorePage = ({ notFound, componentProps, layoutData }: SitecorePageProp
 
   if (notFound || !layoutData.sitecore.route) {
     // Shouldn't hit this (as long as 'notFound' is being returned below), but just to be safe
-    return <NotFound />;
+    return <NotFound locale={''} dictionary={{}} componentProps={{}} notFound={true} layoutData={layoutData} />;
   }
 
   return (
