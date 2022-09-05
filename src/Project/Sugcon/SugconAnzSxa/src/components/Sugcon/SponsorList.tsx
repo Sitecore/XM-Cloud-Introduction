@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, Text, ImageField, Image } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, Text, ImageField, Image, RichTextField } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
   Category: Field<string>;
@@ -16,6 +16,7 @@ interface SponsorProps {
     SponsorName: Field<string>;
     SponsorUrl: Field<string>;
     SponsorLogo: ImageField;
+    SponsorDescription: RichTextField;
   };
 }
 
@@ -50,6 +51,10 @@ export const Default = (props: SponsorListProps): JSX.Element => {
                         <div className="SponsorImage">
                           <Image field={Sponsor?.fields.SponsorLogo} />
                         </div>
+                        <br />
+                        <Text field={Sponsor?.fields?.SponsorDescription} />
+                        <br />
+                        <Text field={Sponsor?.fields?.SponsorUrl} />
                       </div>
                     );
                   })
@@ -84,8 +89,9 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
                       <Text field={Sponsor?.fields?.SponsorName} />
                     </h2>
                     <br />
-                    <Text field={Sponsor?.fields?.SponsorUrl} />
+                    <Text field={Sponsor?.fields?.SponsorDescription} />
                     <br />
+                    <Text field={Sponsor?.fields?.SponsorUrl} />
                   </div>
                   <div className="col-12 col-md-6">
                     <div className="sponsorImgPlatinumOuter">
