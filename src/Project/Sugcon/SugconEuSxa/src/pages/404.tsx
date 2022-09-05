@@ -8,7 +8,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   let props = { notFound: false };
   props = await sitecorePagePropsFactory.create({
     ...context,
-    params: { ...context.params, path: '/404' },
+    params: { ...context.params, path: '/NotFound' },
   });
 
   return {

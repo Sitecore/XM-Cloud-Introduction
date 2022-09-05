@@ -1,8 +1,8 @@
 ﻿---
-ID: "d69a3d43-a4d7-472f-a7e1-a68d533ae0f8"
-Parent: "6f42eb7e-7dda-4ccd-b116-a136d10b0e3d"
+ID: "638f214b-4464-4fac-9891-271a54566301"
+Parent: "a42272aa-3cd4-4943-aac8-0142db3abffa"
 Template: "36cad6cf-d418-43ca-bc57-656e44069116"
-Path: /sitecore/content/Sugcon/SugconAnzSxa/Home/404
+Path: /sitecore/content/Sugcon/SugconEuSxa/Home/NotFound
 SharedFields:
 - ID: "1fbc6a49-6281-48ee-87e9-a3970b145adb"
   Hint: NavigationFilter
