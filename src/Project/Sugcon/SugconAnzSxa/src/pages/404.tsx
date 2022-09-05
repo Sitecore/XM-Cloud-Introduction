@@ -13,19 +13,17 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props,
-    revalidate: 5,
-    notFound: props.notFound, // Returns custom 404 page with a status code of 404 when true
+    revalidate: 5
   };
 };
 
 export default function Custom404Page({
-  notFound,
   layoutData,
   componentProps,
 }: SitecorePageProps): JSX.Element {
   return (
     <SitecorePage
-      notFound={notFound}
+      notFound={true}
       layoutData={layoutData}
       componentProps={componentProps}
       dictionary={{}}
