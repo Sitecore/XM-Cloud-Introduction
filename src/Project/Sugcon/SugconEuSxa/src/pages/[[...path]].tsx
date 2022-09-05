@@ -20,7 +20,15 @@ const SitecorePage = ({ notFound, componentProps, layoutData }: SitecorePageProp
 
   if (notFound || !layoutData.sitecore.route) {
     // Shouldn't hit this (as long as 'notFound' is being returned below), but just to be safe
-    return <NotFound locale={''} dictionary={{}} componentProps={{}} notFound={true} layoutData={layoutData} />;
+    return (
+      <NotFound
+        locale={''}
+        componentProps={{}}
+        notFound={true}
+        layoutData={layoutData}
+        dictionary={{}}
+      />
+    );
   }
 
   return (
