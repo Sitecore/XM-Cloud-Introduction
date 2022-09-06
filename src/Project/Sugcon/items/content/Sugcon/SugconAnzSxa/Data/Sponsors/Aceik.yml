@@ -25,13 +25,13 @@ Languages:
         <image mediaid="{AF52CADA-DD45-4AEC-8AB6-AD1F5D9B0BB7}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "65de5996-6209-4c8a-8f20-1b654eec56ad"
+      Value: "e49e2e28-5cb9-472b-8b01-f891039c53df"
     - ID: "a1f84fce-5b88-48a1-803b-1ca7f6a47563"
       Hint: SponsorDescription
       Value: |
-        <p style="color: #222222; background-color: #ffffff; margin: 5px 0px; padding: 10px 20px; border: 0px;">Aceik is a full service, experience-led Sitecore agency. We apply Strategic, Creative and Technical expertise to help our clients achieve great outcomes that add business value.</p>
-        <p style="color: #222222; background-color: #ffffff; margin: 5px 0px; padding: 10px 20px; border: 0px;">An executive team with 16 years&rsquo; Sitecore Technology and Strategy MVP recognition lead a company with a 100% track record of successful delivery.</p>
-        <p style="color: #222222; background-color: #ffffff; margin: 5px 0px; padding: 10px 20px; border: 0px;">Our clients include RAA, RACQ, Toyota,Unisuper, Ausgrid, QIC, CPA Australia, Village Themeparks, Fitness Lifestyle Group, ANZIIF, Choice Magazine, Dairy Australia, The College of Law and Sitecore.</p>
+        <p>Aceik is a full service, experience-led Sitecore agency. We apply Strategic, Creative and Technical expertise to help our clients achieve great outcomes that add business value.</p>
+        <p>An executive team with 16 years&rsquo; Sitecore Technology and Strategy MVP recognition lead a company with a 100% track record of successful delivery.</p>
+        <p>Our clients include RAA, RACQ, Toyota,Unisuper, Ausgrid, QIC, CPA Australia, Village Themeparks, Fitness Lifestyle Group, ANZIIF, Choice Magazine, Dairy Australia, The College of Law and Sitecore.</p>
     - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
       Hint: SponsorUrl
       Value: "https://www.aceik.com.au/"
@@ -44,4 +44,4 @@ Languages:
       Value: Aceik
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220831T190055Z
+      Value: 20220906T135119Z
