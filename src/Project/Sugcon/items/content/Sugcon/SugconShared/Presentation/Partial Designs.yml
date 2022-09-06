@@ -1,13 +1,13 @@
 ﻿---
-ID: "ea8aaf00-6b42-48e8-bdb9-684d50be8b7d"
-Parent: "f8b32515-4128-445c-a160-eaf5b311a822"
-Template: "8357f958-9aaa-46db-8898-36448a96356f"
-Path: /sitecore/content/Sugcon/SuconShared/Settings/Site Grouping
+ID: "84e5a6d9-ad08-4f62-89ee-cb537fa125a1"
+Parent: "a3c3e2b1-5e48-4e7c-8ca1-afa461d46947"
+Template: "1402427d-3654-4811-9742-47d2a6387b4c"
+Path: /sitecore/content/Sugcon/SugconShared/Presentation/Partial Designs
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
-  Value: "{DA3025E0-D396-4709-A975-92DB1A722710}"
+  Value: "{703ABB6D-BE33-4F9D-97FF-EE1571A14C81}"
 Languages:
 - Language: en
   Versions:
@@ -26,7 +26,7 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "41065eb5-75ea-413e-bdb4-d2fe98fcc31b"
+      Value: "903c0afb-6b65-49e2-94f2-eb76ff2acc45"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |

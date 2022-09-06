@@ -2,7 +2,7 @@
 ID: "974649fe-65ac-419b-986a-8832b1406a78"
 Parent: "f85d6dc6-5fb6-49c7-8e63-f5c4a0c3ce46"
 Template: "ac9da469-725c-469d-929a-f5075af7b815"
-Path: /sitecore/content/Sugcon/SuconShared
+Path: /sitecore/content/Sugcon/SugconShared
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "2b2fe9fd-78a6-40eb-b9f9-28409d8d3700"
