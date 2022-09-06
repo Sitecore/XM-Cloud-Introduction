@@ -25,12 +25,12 @@ Languages:
         <image mediaid="{D49D401D-EBA0-47E4-8C24-AE31CCD246B0}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3c40aff3-f303-476d-86a1-dc233965a7dd"
+      Value: "38c39ccc-9a78-4acd-8c5e-64b909b523c5"
     - ID: "a1f84fce-5b88-48a1-803b-1ca7f6a47563"
       Hint: SponsorDescription
       Value: |
-        <p style="color: #222222; background-color: #ffffff; margin: 5px 0px; padding: 10px 20px; border: 0px;">Deloitte Digital combines the world's largest consulting firm, with the world&rsquo;s best creatives and latest tech to solve problems with new ideas that inspire and unlock sustainable new growth.</p>
-        <p style="color: #222222; background-color: #ffffff; margin: 5px 0px; padding: 10px 20px; border: 0px;">Deloitte Digital is a Sitecore Platinum Implementation Partner with one of the largest, most certified and awarded Sitecore teams in the world. We specialise in delivering enterprise grade complex multi-site Sitecore solutions for some of Deloitte&rsquo;s largest and more complex clients.</p>
+        <p>Deloitte Digital combines the world's largest consulting firm, with the world&rsquo;s best creatives and latest tech to solve problems with new ideas that inspire and unlock sustainable new growth.</p>
+        <p>Deloitte Digital is a Sitecore Platinum Implementation Partner with one of the largest, most certified and awarded Sitecore teams in the world. We specialise in delivering enterprise grade complex multi-site Sitecore solutions for some of Deloitte&rsquo;s largest and more complex clients.</p>
     - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
       Hint: SponsorUrl
       Value: "https://www.deloittedigital.com.au/"
@@ -43,4 +43,4 @@ Languages:
       Value: Deloitte Digital
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220831T190124Z
+      Value: 20220906T135254Z

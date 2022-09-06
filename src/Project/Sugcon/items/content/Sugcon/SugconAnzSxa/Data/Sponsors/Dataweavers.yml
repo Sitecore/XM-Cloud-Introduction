@@ -25,18 +25,18 @@ Languages:
         <image mediaid="{27C8DC61-0B28-4264-BA96-668B537630E5}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "e0b81e58-b579-4b1b-ad3f-e50074b7a40f"
+      Value: "678ed9c7-d7f7-4e54-8c7c-7421c15f6020"
     - ID: "a1f84fce-5b88-48a1-803b-1ca7f6a47563"
       Hint: SponsorDescription
       Value: |
-        <p style="color: #222222; background-color: #ffffff; margin: 5px 0px; padding: 10px 20px; border: 0px;">From monolithic to composable in an instant: 5 pathways to your composable future</p>
-        <p style="color: #222222; background-color: #ffffff; margin: 5px 0px; padding: 10px 20px; border: 0px;">DXP leaders need to consider their transition to composability in a new light to ensure future state architecture flexibility. Teams currently spend time managing overhead of infrastructure, security, compliance &amp; DevOps &amp; growing cost. This left little time to deliver the digital experiences that create business value.</p>
-        <p style="color: #222222; background-color: #ffffff; margin: 5px 0px; padding: 10px 20px; border: 0px;">DXP leaders need to consider their transition to composability in a new light to ensure future state architecture flexibility. Teams currently spend time managing overhead of infrastructure, security, compliance &amp; DevOps &amp; growing cost. This left little time to deliver the digital experiences that create business value.</p>
-        <p style="color: #222222; background-color: #ffffff; margin: 5px 0px; padding: 10px 20px; border: 0px;">While considering your pathway to composability, with Dataweavers, you can:</p>
-        <ul style="color: #747474; background-color: #ffffff; margin: 0px 0px 0px 10px; padding: 5px 0px; border: 0px; list-style-type: none; list-style-image: initial;">
-            <li style="color: #222222; margin: 0px 0px 0px 15px; padding: 0px; border: 0px; list-style-type: disc; list-style-image: initial;"><span style="margin: 0px; padding: 0px; border: 0px;">Choose your own timing</span></li>
-            <li style="color: #222222; margin: 0px 0px 0px 15px; padding: 0px; border: 0px; list-style-type: disc; list-style-image: initial;"><span style="margin: 0px; padding: 0px; border: 0px;">Pick your own transition path</span></li>
-            <li style="color: #222222; margin: 0px 0px 0px 15px; padding: 0px; border: 0px; list-style-type: disc; list-style-image: initial;"><span style="margin: 0px; padding: 0px; border: 0px;">Co-exist your legacy &amp; modern platforms</span></li>
+        <p>From monolithic to composable in an instant: 5 pathways to your composable future</p>
+        <p>DXP leaders need to consider their transition to composability in a new light to ensure future state architecture flexibility. Teams currently spend time managing overhead of infrastructure, security, compliance &amp; DevOps &amp; growing cost. This left little time to deliver the digital experiences that create business value.</p>
+        <p>DXP leaders need to consider their transition to composability in a new light to ensure future state architecture flexibility. Teams currently spend time managing overhead of infrastructure, security, compliance &amp; DevOps &amp; growing cost. This left little time to deliver the digital experiences that create business value.</p>
+        <p>While considering your pathway to composability, with Dataweavers, you can:</p>
+        <ul>
+            <li><span>Choose your own timing</span></li>
+            <li><span>Pick your own transition path</span></li>
+            <li><span>Co-exist your legacy &amp; modern platforms</span></li>
         </ul>
     - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
       Hint: SponsorUrl
@@ -50,4 +50,4 @@ Languages:
       Value: Dataweavers
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220831T190133Z
+      Value: 20220906T135236Z
