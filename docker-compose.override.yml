@@ -95,10 +95,11 @@ services:
       Sitecore__InstanceUri: "http://cm"
       Sitecore__RenderingHostUri: "https://${MVP_RENDERING_HOST}"
       Sitecore__EnableExperienceEditor: "true" 
+      Sitecore__JssEditingSecret: ${JSS_EDITING_SECRET}
       Okta__OktaDomain: ${OKTA_DOMAIN}
       Okta__ClientId: ${OKTA_CLIENT_ID}
       Okta__ClientSecret: ${OKTA_CLIENT_SECRET}
-      Okta__AuthorizationServerId: ${OKTA_AUTH_SERVER_ID}
+      Okta__AuthorizationServerId: ${OKTA_AUTH_SERVER_ID}     
     depends_on:
       - solution
       - cm

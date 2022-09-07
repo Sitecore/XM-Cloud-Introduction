@@ -13,6 +13,7 @@
         public int MvpDirectoryGraphQLQueryPageSize { get; set; }
         public int MvpDirectoryGraphQLQueryCacheTimeout { get; set; }
         public int MvpApplicationListsDataGraphQLQueryCacheTimeout { get; set; }
+        public string? JssEditingSecret { get; set; }
         public Uri? LayoutServiceUri
         {
             get

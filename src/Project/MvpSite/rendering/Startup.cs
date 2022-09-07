@@ -75,7 +75,10 @@ namespace Mvp.Project.MvpSite.Rendering
               .ForwardHeaders()
 
               // Enable support for the Experience Editor.
-              .WithExperienceEditor();
+              .WithExperienceEditor(options =>
+              {
+                  options.JssEditingSecret = Configuration.JssEditingSecret;
+              });
 
             // Register MVP Functionality specific services
             services.AddFeatureSocialServices()
