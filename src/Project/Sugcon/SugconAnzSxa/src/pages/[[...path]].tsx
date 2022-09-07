@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import NotFound from 'src/NotFound';
 import Layout from 'src/Layout';
 import {
   SitecoreContext,
@@ -12,16 +11,11 @@ import { sitecorePagePropsFactory } from 'lib/page-props-factory';
 import { componentFactory } from 'temp/componentFactory';
 import { sitemapFetcher } from 'lib/sitemap-fetcher';
 
-const SitecorePage = ({ notFound, componentProps, layoutData }: SitecorePageProps): JSX.Element => {
+const SitecorePage = ({ componentProps, layoutData }: SitecorePageProps): JSX.Element => {
   useEffect(() => {
     // Since Sitecore editors do not support Fast Refresh, need to refresh EE chromes after Fast Refresh finished
     handleEditorFastRefresh();
   }, []);
-
-  if (notFound || !layoutData.sitecore.route) {
-    // Shouldn't hit this (as long as 'notFound' is being returned below), but just to be safe
-    return <NotFound />;
-  }
 
   return (
     <ComponentPropsContext value={componentProps}>
