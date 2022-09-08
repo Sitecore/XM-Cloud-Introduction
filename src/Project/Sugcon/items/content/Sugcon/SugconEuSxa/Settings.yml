@@ -25,7 +25,7 @@ SharedFields:
   Value: "{AC9DA469-725C-469D-929A-F5075AF7B815}"
 - ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
   Hint: Name
-  Value: "sugcon-eu"
+  Value: "sugconeu"
 - ID: "5764d2d4-724d-4313-a81b-9246c911faff"
   Hint: AppDatasourcesPath
   Value: "{BB2FB96A-95B5-485D-AD43-E725B0E43909}"
@@ -40,7 +40,7 @@ SharedFields:
   Value: /dist/SugconEuSxa
 - ID: "89849738-34ee-46bc-b525-825f1153189e"
   Hint: ServerSideRenderingEngineEndpointUrl
-  Value: "http://sugcon-eu:3000/api/editing/render"
+  Value: "http://sugconeu:3000/api/editing/render"
 - ID: "9016141c-ff51-40f2-9135-40f5161b9784"
   Hint: ServerSideRenderingEngine
   Value: http
