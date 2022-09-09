@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Mvp.Selections.Domain
+@using Sitecore.AspNet.RenderingEngine.TagHelpers.Fields
+@model Mvp.Feature.Selections.Models.Admin.UserEditModel
+
+<div class="mvp-fs-adminuseredit">
+    <form>
+        <input asp-for="Id" type="hidden"/>
+        <input asp-for="IsEdit" type="hidden" value="true"/>
+        <div class="form-group">
+            <label asp-for="NameLabel"></label>
+            <input asp-for="Name" class="form-control" required/>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmailLabel"></label>
+            <input asp-for="Email" class="form-control" required/>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CountryLabel"></label>
+            <select asp-for="CountryId" class="form-control">
+                @foreach (Country country in Model.Countries)
+                {
+                    <option value="@country.Id">@country.Name</option>
+                }
+            </select>
+            <span asp-validation-for="CountryId" class="text-danger"></span>
+        </div>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <button asp-for="SubmitLabel" type="submit" class="btn btn-primary"></button>
+    </form>
+</div>

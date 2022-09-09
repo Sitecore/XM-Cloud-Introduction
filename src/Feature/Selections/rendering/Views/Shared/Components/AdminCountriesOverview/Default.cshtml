@@ -1,23 +1,26 @@
 ﻿@using Mvp.Selections.Domain
 @model Mvp.Feature.Selections.Models.Admin.CountriesOverviewModel
 
-<div class="mvp-s-admin-allsystemroles">
+<div class="mvp-fs-admincountriesoverview">
 	<h2 asp-for="TitleLabel"></h2>
-	<table>
+	<table class="table">
 		<thead>
 		<tr>
 			<th asp-for="NameTableHeader"></th>
-			<th asp-for="OperationsTableHeader"></th>
+			<th></th>
 		</tr>
 		</thead>
 		<tbody>
-		@foreach (Country country in Model.Countries)
+		@foreach (Country country in Model.List)
 		{
 			<tr>
 				<td>@country.Name</td>
-				<td>TODO</td>
+				<td>
+					<a class="btn btn-secondary" href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
+				</td>
 			</tr>
 		}
 		</tbody>
 	</table>
+	<partial name="_Paging" />
 </div>

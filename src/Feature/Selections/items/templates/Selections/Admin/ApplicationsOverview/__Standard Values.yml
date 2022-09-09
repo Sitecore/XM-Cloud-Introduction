@@ -1,0 +1,49 @@
+﻿---
+ID: "b0d3b284-953a-412f-9b27-943e0ee90b82"
+Parent: "2f1ea555-8e46-42b5-825d-b6ad690e281a"
+Template: "2f1ea555-8e46-42b5-825d-b6ad690e281a"
+Path: /sitecore/templates/Feature/Selections/Admin/ApplicationsOverview/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "17f16c9b-fdd3-4ecd-a53a-b318195514fc"
+      Hint: StatusTableHeader
+      Value: Status
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220905T084753Z
+    - ID: "473ef662-2865-4e3b-9fb8-113354549ee7"
+      Hint: LastModifiedTableHeader
+      Value: Last Modified
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "7526f76d-067b-4338-b8f3-c5881afad4dc"
+      Hint: TitleLabel
+      Value: Applications
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "554fcd5c-bc5e-4590-a9b2-a3e24dfca8ad"
+    - ID: "98b5f2f3-83ce-44bd-b2ea-d8b4d8a67ebd"
+      Hint: ApplicantTableHeader
+      Value: Applicant
+    - ID: "a8e81d10-91db-4d09-a5cc-160d049c0c2e"
+      Hint: CountryTableHeader
+      Value: Country
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "bcc09f16-2955-4160-8c8b-763f81d1f90d"
+      Hint: SelectionTableHeader
+      Value: Selection
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220905T133023Z

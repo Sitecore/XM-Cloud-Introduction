@@ -29,10 +29,10 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                Response<IList<Country>> regionsResponse = await Client.GetCountriesAsync(await GetCurrentTokenAsync(), model.Page, model.PageSize);
+                Response<IList<Country>> regionsResponse = await Client.GetCountriesAsync(model.Page, model.PageSize);
                 if (regionsResponse.StatusCode == HttpStatusCode.OK && regionsResponse.Result != null)
                 {
-                    model.Countries.AddRange(regionsResponse.Result);
+                    model.List.AddRange(regionsResponse.Result);
                 }
             }
 
@@ -41,11 +41,11 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         private void GenerateFakeDataForEdit(CountriesOverviewModel model)
         {
-            model.Countries.Add(new Country(1) { Name = "Lorem" });
-            model.Countries.Add(new Country(2) { Name = "Ipsum" });
-            model.Countries.Add(new Country(3) { Name = "Dolor" });
-            model.Countries.Add(new Country(4) { Name = "Sid" });
-            model.Countries.Add(new Country(5) { Name = "Amet" });
+            model.List.Add(new Country(1) { Name = "Lorem" });
+            model.List.Add(new Country(2) { Name = "Ipsum" });
+            model.List.Add(new Country(3) { Name = "Dolor" });
+            model.List.Add(new Country(4) { Name = "Sid" });
+            model.List.Add(new Country(5) { Name = "Amet" });
         }
     }
 }

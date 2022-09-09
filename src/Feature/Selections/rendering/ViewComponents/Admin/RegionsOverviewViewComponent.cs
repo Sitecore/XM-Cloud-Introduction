@@ -29,10 +29,10 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                Response<IList<Region>> regionsResponse = await Client.GetRegionsAsync(await GetCurrentTokenAsync(), model.Page, model.PageSize);
+                Response<IList<Region>> regionsResponse = await Client.GetRegionsAsync(model.Page, model.PageSize);
                 if (regionsResponse.StatusCode == HttpStatusCode.OK && regionsResponse.Result != null)
                 {
-                    model.Regions.AddRange(regionsResponse.Result);
+                    model.List.AddRange(regionsResponse.Result);
                 }
             }
 
@@ -46,7 +46,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 Name = "Lorem"
             };
             region.Countries.Add(new Country(1) { Name = "ACountry" });
-            model.Regions.Add(region);
+            model.List.Add(region);
 
             region = new Region(2)
             {
@@ -54,7 +54,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             };
             region.Countries.Add(new Country(2) { Name = "BCountry" });
             region.Countries.Add(new Country(3) { Name = "CCountry" });
-            model.Regions.Add(region);
+            model.List.Add(region);
 
             region = new Region(3)
             {
@@ -62,7 +62,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             };
             region.Countries.Add(new Country(4) { Name = "DCountry" });
             region.Countries.Add(new Country(5) { Name = "ECountry" });
-            model.Regions.Add(region);
+            model.List.Add(region);
         }
     }
 }

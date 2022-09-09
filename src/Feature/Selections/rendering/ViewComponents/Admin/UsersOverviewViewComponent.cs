@@ -30,10 +30,10 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                Response<IList<User>> usersResponse = await Client.GetUsersAsync(await GetCurrentTokenAsync(), model.Page, model.PageSize);
+                Response<IList<User>> usersResponse = await Client.GetUsersAsync(model.Page, model.PageSize);
                 if (usersResponse.StatusCode == HttpStatusCode.OK && usersResponse.Result != null)
                 {
-                    model.Users.AddRange(usersResponse.Result);
+                    model.List.AddRange(usersResponse.Result);
                 }
             }
 
@@ -42,15 +42,15 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         private static void GenerateFakeDataForEdit(UsersOverviewModel model)
         {
-            model.Users.Add(new User(Guid.NewGuid())
+            model.List.Add(new User(Guid.NewGuid())
             {
                 Identifier = "LoremIpsum"
             });
-            model.Users.Add(new User(Guid.NewGuid())
+            model.List.Add(new User(Guid.NewGuid())
             {
                 Identifier = "DolorSid"
             });
-            model.Users.Add(new User(Guid.NewGuid())
+            model.List.Add(new User(Guid.NewGuid())
             {
                 Identifier = "AmetErgo"
             });

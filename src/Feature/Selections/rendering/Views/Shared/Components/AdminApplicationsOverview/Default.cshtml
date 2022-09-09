@@ -1,0 +1,35 @@
+﻿@using Mvp.Selections.Domain
+@model Mvp.Feature.Selections.Models.Admin.ApplicationsOverviewModel
+
+<div class="mvp-fs-adminapplicationsoverview">
+	<h2 asp-for="TitleLabel"></h2>
+	<table class="table">
+		<thead>
+		<tr>
+			<th asp-for="SelectionTableHeader"></th>
+			<th asp-for="CountryTableHeader"></th>
+			<th asp-for="ApplicantTableHeader"></th>
+			<th asp-for="StatusTableHeader"></th>
+			<th asp-for="LastModifiedTableHeader"></th>
+			<th><a class="btn btn-primary" href=""><i class="fa fa-plus" aria-hidden="true"></i></a></th>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach (Application application in Model.List)
+		{
+			<tr>
+				<td>@application.Selection.Year</td>
+				<td>@application.Country.Name</td>
+				<td>@application.Applicant.Name</td>
+				<td>@application.Status</td>
+				<td>@(application.ModifiedOn != null ? application.ModifiedOn.Value.ToString("u") : null)</td>
+				<td>
+					<a class="btn btn-secondary" href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
+					<a class="btn btn-danger" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
+				</td>
+			</tr>
+		}
+		</tbody>
+	</table>
+	<partial name="_Paging" />
+</div>

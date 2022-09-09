@@ -36,3 +36,9 @@ $sc-font-color: #212529;
 @import 'components/search-results.scss';
 @import 'components/login.scss';
 
+//Selections Feature Components
+@import 'components/selections/admin/applications.scss';
+@import 'components/selections/admin/countries.scss';
+@import 'components/selections/admin/regions.scss';
+@import 'components/selections/admin/systemroles.scss';
+@import 'components/selections/admin/users.scss';

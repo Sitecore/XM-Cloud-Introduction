@@ -30,10 +30,10 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                Response<IList<SystemRole>> rolesResponse = await Client.GetSystemRolesAsync(await GetCurrentTokenAsync(), model.Page, model.PageSize);
+                Response<IList<SystemRole>> rolesResponse = await Client.GetSystemRolesAsync(model.Page, model.PageSize);
                 if (rolesResponse.StatusCode == HttpStatusCode.OK && rolesResponse.Result != null)
                 {
-                    model.Roles.AddRange(rolesResponse.Result);
+                    model.List.AddRange(rolesResponse.Result);
                 }
             }
 
@@ -42,22 +42,22 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         private static void GenerateFakeDataForEdit(SystemRolesOverviewModel model)
         {
-            model.Roles.Add(new SystemRole(Guid.NewGuid())
+            model.List.Add(new SystemRole(Guid.NewGuid())
             {
                 Name = "Lorem",
                 Rights = Right.Admin
             });
-            model.Roles.Add(new SystemRole(Guid.NewGuid())
+            model.List.Add(new SystemRole(Guid.NewGuid())
             {
                 Name = "Dolor",
                 Rights = Right.Apply
             });
-            model.Roles.Add(new SystemRole(Guid.NewGuid())
+            model.List.Add(new SystemRole(Guid.NewGuid())
             {
                 Name = "Sid",
                 Rights = Right.Review
             });
-            model.Roles.Add(new SystemRole(Guid.NewGuid())
+            model.List.Add(new SystemRole(Guid.NewGuid())
             {
                 Name = "Amet",
                 Rights = Right.Admin | Right.Apply | Right.Review
