@@ -1,0 +1,23 @@
+﻿---
+ID: "2547a789-f9a5-4779-ab3f-d0c4a6336166"
+Parent: "c34e4ad8-acd9-4a7f-904e-c52533153603"
+Template: "bdb05878-8135-4e8d-a094-eb2db3e4526b"
+Path: /sitecore/content/MvpSite/Shared Content/Selections/Admin/Countries Overview
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220826T193302Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a47a3152-3713-4cc8-92dd-e3a9183762cf"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220910T171901Z
