@@ -7,13 +7,13 @@ services:
       Sitecore__LayoutServicePath: "/api/graphql/v1"
       Sitecore__ExperienceEdgeToken: ${EXPERIENCE_EDGE_TOKEN}
 
-  sugcon-eu:
+  sugconeu:
     environment:
       SITECORE_API_HOST: ${EXPERIENCE_EDGE_URL}
       SITECORE_API_KEY: ${EXPERIENCE_EDGE_TOKEN}
       GRAPH_QL_ENDPOINT: ${GRAPH_QL_ENDPOINT}
 
-  sugcon-anz:
+  sugconanz:
     environment:
       SITECORE_API_HOST: ${EXPERIENCE_EDGE_URL}
       SITECORE_API_KEY: ${EXPERIENCE_EDGE_TOKEN}

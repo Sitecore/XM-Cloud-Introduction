@@ -9,7 +9,7 @@ services:
         NODEJS_VERSION: ${NODEJS_VERSION}
     scale: 0
 
-  sugcon-eu:
+  sugconeu:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-sugcon-eu:${VERSION:-latest}
     build:
       context: ./docker/build/sugcon/sugcon-eu
@@ -34,7 +34,7 @@ services:
       - "traefik.http.routers.rendering-secure.rule=Host(`${SUGCON_EU_HOST}`)"
       - "traefik.http.routers.rendering-secure.tls=true"
   
-  sugcon-anz:
+  sugconanz:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-sugcon-anz:${VERSION:-latest}
     build:
       context: ./docker/build/sugcon/sugcon-anz

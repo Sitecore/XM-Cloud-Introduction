@@ -135,7 +135,7 @@ Add-HostsEntry $SUGCON_ANZ_HOST
 $xmCloudBuild = Get-Content "xmcloud.build.json" | ConvertFrom-Json
 $scjssconfig = @{
     sitecore= @{
-        deploySecret = $xmCloudBuild.renderingHosts.'sugcon-anz'.jssDeploymentSecret
+        deploySecret = $xmCloudBuild.renderingHosts.'sugconanz'.jssDeploymentSecret
         deployUrl = "https://xmcloudcm.localhost/sitecore/api/jss/import"
       }
     }
