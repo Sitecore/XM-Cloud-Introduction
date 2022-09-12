@@ -39,7 +39,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             return View(model);
         }
 
-        private void GenerateFakeDataForEdit(RegionsOverviewModel model)
+        private static void GenerateFakeDataForEdit(RegionsOverviewModel model)
         {
             Region region = new (1)
             {

@@ -26,6 +26,7 @@ namespace Mvp.Feature.Selections.Extensions
             options.AddViewComponent(RegionsOverviewViewComponent.ViewComponentName);
             options.AddViewComponent(CountriesOverviewViewComponent.ViewComponentName);
             options.AddViewComponent(ApplicationOverviewViewComponent.ViewComponentName);
+            options.AddViewComponent(MvpTypesOverviewViewComponent.ViewComponentName);
             options.AddViewComponent(DashboardViewComponent.ViewComponentName);
             return options;
         }

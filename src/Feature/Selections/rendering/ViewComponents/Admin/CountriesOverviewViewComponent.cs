@@ -39,7 +39,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             return View(model);
         }
 
-        private void GenerateFakeDataForEdit(CountriesOverviewModel model)
+        private static void GenerateFakeDataForEdit(CountriesOverviewModel model)
         {
             model.List.Add(new Country(1) { Name = "Lorem" });
             model.List.Add(new Country(2) { Name = "Ipsum" });

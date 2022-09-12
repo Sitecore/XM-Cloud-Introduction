@@ -1,0 +1,37 @@
+﻿---
+ID: "403040fb-9c0f-406d-b003-912bde99bf41"
+Parent: "e72ba435-5189-40c0-ae88-843715745f46"
+Template: "e72ba435-5189-40c0-ae88-843715745f46"
+Path: /sitecore/templates/Feature/Selections/Admin/MvpTypesOverview/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0b7906b6-f974-4627-8f84-46d66819c2ce"
+      Hint: TitleLabel
+      Value: MVP Types
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220912T093946Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4c2fd727-fe3b-4b94-9040-e61aadc64d0c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220912T094035Z
+    - ID: "f9642c6d-87dd-4c94-a9ae-4eb044a5a6d7"
+      Hint: NameTableHeader
+      Value: Name

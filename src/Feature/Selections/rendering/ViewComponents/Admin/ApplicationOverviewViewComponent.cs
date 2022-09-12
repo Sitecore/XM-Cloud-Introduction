@@ -40,7 +40,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             return View(model);
         }
 
-        private void GenerateFakeDataForEdit(ApplicationsOverviewModel model)
+        private static void GenerateFakeDataForEdit(ApplicationsOverviewModel model)
         {
             model.List.Add(new Application(Guid.NewGuid())
             {

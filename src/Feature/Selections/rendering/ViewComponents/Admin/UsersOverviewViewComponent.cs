@@ -44,15 +44,33 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
         {
             model.List.Add(new User(Guid.NewGuid())
             {
-                Identifier = "LoremIpsum"
+                Identifier = "LoremIpsum",
+                Name = "Lorem Ipsum",
+                Email = "lorem@ipsum.com",
+                Country = new Country(1)
+                {
+                    Name = "Country A"
+                }
             });
             model.List.Add(new User(Guid.NewGuid())
             {
-                Identifier = "DolorSid"
+                Identifier = "DolorSid",
+                Name = "Dolor Sid",
+                Email = "dolor@sid.com",
+                Country = new Country(1)
+                {
+                    Name = "Country B"
+                }
             });
             model.List.Add(new User(Guid.NewGuid())
             {
-                Identifier = "AmetErgo"
+                Identifier = "AmetErgo",
+                Name = "Amet Ergo",
+                Email = "amet@ergo.com",
+                Country = new Country(1)
+                {
+                    Name = "Country A"
+                }
             });
         }
     }
