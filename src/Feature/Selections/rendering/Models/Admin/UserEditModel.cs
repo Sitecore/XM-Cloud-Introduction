@@ -34,6 +34,8 @@ namespace Mvp.Feature.Selections.Models.Admin
 
         public bool IsEdit { get; set; } = false;
 
+        public TextField SuccessLabel { get; set; }
+
         public HyperLinkField OverviewLink { get; set; }
     }
 }

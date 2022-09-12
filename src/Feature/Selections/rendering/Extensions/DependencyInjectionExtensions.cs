@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Mvp.Feature.Selections.Providers;
+using Mvp.Feature.Selections.ViewComponents;
 using Mvp.Feature.Selections.ViewComponents.Admin;
 using Mvp.Selections.Client.Extensions;
 using Mvp.Selections.Client.Interfaces;
@@ -25,6 +26,7 @@ namespace Mvp.Feature.Selections.Extensions
             options.AddViewComponent(RegionsOverviewViewComponent.ViewComponentName);
             options.AddViewComponent(CountriesOverviewViewComponent.ViewComponentName);
             options.AddViewComponent(ApplicationOverviewViewComponent.ViewComponentName);
+            options.AddViewComponent(DashboardViewComponent.ViewComponentName);
             return options;
         }
     }

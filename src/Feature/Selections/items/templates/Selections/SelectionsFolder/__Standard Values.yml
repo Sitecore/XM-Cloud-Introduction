@@ -7,11 +7,14 @@ SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: |
+    {508DB6BE-52A6-4D1C-8BF5-E55B69F06BC7}
+    {D785F8D6-328C-4692-884A-31EF7580975D}
     {2F1EA555-8E46-42B5-825D-B6AD690E281A}
     {BDB05878-8135-4E8D-A094-EB2DB3E4526B}
     {B0B35AC8-181E-441B-AFFF-D06F6D4F21DF}
     {A9BFDCFF-1C31-415F-A3FD-1583DDC06621}
     {60F7E06E-E23A-42E0-816D-EF0FA2866A33}
+    {54A4A815-5D37-488B-8E9F-287E21BBCDD4}
 Languages:
 - Language: en
   Versions:
@@ -30,11 +33,11 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "674b2de2-c47c-40c1-ab24-56b7ca405a72"
+      Value: "54fada39-4726-4c54-bace-78eea5727c18"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220905T133118Z
+      Value: 20220910T171845Z
