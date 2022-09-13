@@ -2,6 +2,7 @@
 using Mvp.Feature.Selections.Providers;
 using Mvp.Feature.Selections.ViewComponents;
 using Mvp.Feature.Selections.ViewComponents.Admin;
+using Mvp.Feature.Selections.ViewComponents.Apply;
 using Mvp.Selections.Client.Extensions;
 using Mvp.Selections.Client.Interfaces;
 using Sitecore.AspNet.RenderingEngine.Configuration;
@@ -28,6 +29,7 @@ namespace Mvp.Feature.Selections.Extensions
             options.AddViewComponent(ApplicationOverviewViewComponent.ViewComponentName);
             options.AddViewComponent(MvpTypesOverviewViewComponent.ViewComponentName);
             options.AddViewComponent(DashboardViewComponent.ViewComponentName);
+            options.AddViewComponent(ApplicationFormViewComponent.ViewComponentName);
             return options;
         }
     }

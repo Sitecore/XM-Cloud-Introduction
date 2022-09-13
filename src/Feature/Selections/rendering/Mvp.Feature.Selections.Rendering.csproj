@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewComponents\Apply\" />
     <Folder Include="ViewComponents\Review\" />
     <Folder Include="Views\Shared\Components\AdminSystemRolesOverview\" />
   </ItemGroup>

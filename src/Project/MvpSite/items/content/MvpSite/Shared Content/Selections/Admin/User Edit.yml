@@ -8,12 +8,15 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "0f55576a-62b0-4e00-aaa4-db30d9d38bbe"
+      Hint: SuccessLabel
+      Value: "User edited successfully!"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220907T151819Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "dfa64c96-cb87-40ee-b075-e0b8e34c992e"
+      Value: "dbaecdfe-ab5e-48a7-8561-15e2437520b7"
     - ID: "b8cfdd18-c2c8-4e5e-93d2-14b988f05f39"
       Hint: OverviewLink
       Value: |
@@ -24,4 +27,4 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220910T171912Z
+      Value: 20220913T070815Z

@@ -1,0 +1,15 @@
+﻿@model Mvp.Feature.Selections.Models.Apply.ApplicationFormModel
+
+<div class="mvp-fs-applyapplicationform">
+    <h2 asp-for="ConsentTitleLabel"></h2>
+    <div asp-for="ConsentInformation"></div>
+    <form>
+        <input asp-for="CurrentStep" type="hidden" />
+        <div class="form-check">
+            @Html.EditorFor(m => m.IsConsentGiven, new { @class = "form-check-input" })
+            <label asp-for="ConsentLabel" class="form-check-label"></label>
+        </div>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <button asp-for="StartLabel" type="submit" class="btn btn-primary"></button>
+    </form>
+</div>

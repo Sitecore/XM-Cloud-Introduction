@@ -29,7 +29,7 @@ Languages:
         <link text="Manage Applications" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{D296373D-623E-461B-8D7A-C274E23CBEDB}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3c54ebb7-5d5f-4fb2-b91c-e0441da83935"
+      Value: "ccd9e2cc-a37f-43b9-a917-ef62ec0a4c44"
     - ID: "936da302-d3cd-4d65-88f9-b19ad9347885"
       Hint: AdminUsersOverviewLink
       Value: |
@@ -38,6 +38,10 @@ Languages:
       Hint: __Updated by
       Value: |
         sitecore\iva@sitecore.net
+    - ID: "c5e13ef1-9849-4441-adbb-8e3f7f49fcc4"
+      Hint: AdminMvpTypesOverviewLink
+      Value: |
+        <link text="Manage MVP Types" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{19CFDCCE-D229-4A51-A9A6-2D594EB3DE5A}" />
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220910T172121Z
+      Value: 20220913T101751Z

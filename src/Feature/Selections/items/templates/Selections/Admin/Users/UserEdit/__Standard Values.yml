@@ -14,6 +14,9 @@ Languages:
     - ID: "09d778dc-06ae-4266-b44b-af0b6727ac2e"
       Hint: CountryLabel
       Value: Country
+    - ID: "0f55576a-62b0-4e00-aaa4-db30d9d38bbe"
+      Hint: SuccessLabel
+      Value: User edited successfully
     - ID: "1e4f80aa-1217-44a6-b754-4892c8656009"
       Hint: NameLabel
       Value: Name
@@ -30,7 +33,10 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6d7c69d1-d00b-4c15-8dd4-7c34b5997045"
+      Value: "9543e2ab-0aa7-4e6e-b736-eda92695af06"
+    - ID: "a823c664-740f-4c3c-a6ba-e5215c521ad6"
+      Hint: IdentifierLabel
+      Value: Okta Id
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -40,4 +46,4 @@ Languages:
       Value: Email
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220907T151556Z
+      Value: 20220913T071234Z

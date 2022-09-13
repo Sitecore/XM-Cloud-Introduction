@@ -32,6 +32,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 {
                     User updatedUser = new (model.Id)
                     {
+                        Identifier = model.Identifier,
                         Name = model.Name,
                         Email = model.Email,
                         Country = new Country(model.CountryId)
@@ -47,6 +48,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 if (userResponse is { StatusCode: HttpStatusCode.OK, Result: { } })
                 {
                     User user = userResponse.Result;
+                    model.Identifier = user.Identifier;
                     model.Name = user.Name;
                     model.Email = user.Email;
                     model.CountryId = user.Country.Id;

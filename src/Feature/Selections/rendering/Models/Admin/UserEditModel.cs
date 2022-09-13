@@ -12,6 +12,11 @@ namespace Mvp.Feature.Selections.Models.Admin
         [FromQuery(Name = "id")]
         public Guid Id { get; set; } = Guid.Empty;
 
+        public TextField IdentifierLabel { get; set; }
+
+        [Required]
+        public string Identifier { get; set; }
+
         public TextField NameLabel { get; set; }
 
         [Required]
