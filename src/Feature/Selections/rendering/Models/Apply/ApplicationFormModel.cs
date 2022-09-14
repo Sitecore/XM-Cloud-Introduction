@@ -5,15 +5,19 @@ using Sitecore.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Feature.Selections.Models.Apply
 {
-    public class ApplicationFormModel
+    public class ApplicationFormModel : BaseModel
     {
         public Application CurrentApplication { get; set; }
 
         public Selection CurrentSelection { get; set; }
 
+        public User CurrentUser { get; set; }
+
         public ApplicationStep CurrentStep { get; set; } = ApplicationStep.Consent;
 
         public ApplicationStep NextStep { get; set; } = ApplicationStep.Consent;
+
+        public bool IsBack { get; set; } = false;
 
         public TextField ConsentStepLabel { get; set; }
 
@@ -30,6 +34,10 @@ namespace Mvp.Feature.Selections.Models.Apply
         public TextField NextLabel { get; set; }
 
         public TextField PreviousLabel { get; set; }
+
+        public TextField InactiveMessageLabel { get; set; }
+
+        public TextField ErrorMessageLabel { get; set; }
 
         public TextField ConsentTitleLabel { get; set; }
 
@@ -59,9 +67,15 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public TextField EligibilityLabel { get; set; }
 
+        public string Eligibility { get; set; }
+
         public TextField ObjectivesLabel { get; set; }
 
+        public string Objectives { get; set; }
+
         public TextField MentorsLabel { get; set; }
+
+        public string Mentors { get; set; }
 
         public TextField ContributionsTitleLabel { get; set; }
 

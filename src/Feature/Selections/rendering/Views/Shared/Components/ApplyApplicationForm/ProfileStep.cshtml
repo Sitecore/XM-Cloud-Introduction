@@ -1,5 +1,35 @@
-﻿@model Mvp.Feature.Selections.Models.Apply.ApplicationFormModel
+﻿@using Mvp.Selections.Domain
+@model Mvp.Feature.Selections.Models.Apply.ApplicationFormModel
 
-<div class="mvp-fs-applyapplicationform">
+<div class="mvp-fs-applyapplicationform col-12">
     <h2 asp-for="ProfileTitleLabel"></h2>
+    <ul>
+        <li>@Model.CurrentUser.Name</li>
+        <li>@Model.CurrentUser.Email</li>
+        <li>@Model.CurrentUser.Country.Name</li>
+        <li>
+            <a asp-for="OktaLink"></a>
+        </li>
+    </ul>
+    <ul>
+        @foreach (ProfileLink link in Model.CurrentUser.Links)
+        {
+            <li>
+                @link.Type: <a href="@link.Uri">@link.Name</a>
+            </li>
+        }
+        <li>
+            <a asp-for="MyUserLink"></a>
+        </li>
+    </ul>
+    <form>
+        <input asp-for="CurrentStep" type="hidden" value="Profile" />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <button asp-for="NextLabel" type="submit" class="btn btn-primary"></button>
+    </form>
+    <form>
+        <input asp-for="IsBack" type="hidden" value="true" />
+        <input asp-for="CurrentStep" type="hidden" value="MvpType"/>
+        <button asp-for="PreviousLabel" type="submit" class="btn btn-secondary"></button>
+    </form>
 </div>

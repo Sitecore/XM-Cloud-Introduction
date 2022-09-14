@@ -2,12 +2,13 @@
 {
     public enum ApplicationStep
     {
+        Error,
+        Inactive,
         Consent,
         MvpType,
         Profile,
         Objectives,
         Contributions,
-        Confirmation,
-        Inactive
+        Confirmation
     }
 }
