@@ -17,7 +17,7 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public ApplicationStep NextStep { get; set; } = ApplicationStep.Consent;
 
-        public bool IsBack { get; set; } = false;
+        public bool? IsNavigation { get; set; } = null;
 
         public TextField ConsentStepLabel { get; set; }
 
@@ -103,7 +103,7 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public List<int> ContributionProductIds { get; set; }
 
-        public List<Product> Products { get; set; }
+        public List<Product> Products { get; } = new ();
 
         public TextField AddLabel { get; set; }
 
@@ -120,5 +120,7 @@ namespace Mvp.Feature.Selections.Models.Apply
         public TextField CompleteLabel { get; set; }
 
         public bool IsComplete { get; set; } = false;
+
+        public TextField SubmitLabel { get; set; }
     }
 }

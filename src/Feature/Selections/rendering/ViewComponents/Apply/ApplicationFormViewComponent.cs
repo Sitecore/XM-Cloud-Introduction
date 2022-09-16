@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Mvp.Feature.Selections.Models.Apply;
 using Mvp.Selections.Client;
@@ -44,15 +45,14 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     case ApplicationStep.MvpType:
                         await ExecuteMvpTypeStep(model);
                         break;
-                    case ApplicationStep.Profile:
-                        model.NextStep = model.IsBack ? ApplicationStep.Profile : ApplicationStep.Objectives;
-                        break;
                     case ApplicationStep.Objectives:
                         await ExecuteObjectivesStep(model);
                         break;
                     case ApplicationStep.Contributions:
+                        await ExecuteContributionsStep(model);
                         break;
                     case ApplicationStep.Confirmation:
+                        await ExecuteConfirmationStep(model);
                         break;
                 }
 
@@ -100,10 +100,51 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     {
                         Type = ProfileLinkType.Blog,
                         Name = "My Blog",
-                        Uri = new Uri("https://www.myblog.com")
+                        Uri = new Uri("https://www.google.com")
                     }
                 }
             };
+
+            Product product1 = new (1)
+            {
+                Name = "Lorem Product"
+            };
+            Product product2 = new (2)
+            {
+                Name = "Ipsum Product"
+            };
+
+            model.CurrentApplication = new Application(Guid.NewGuid())
+            {
+                Links = new List<ApplicationLink>
+                {
+                    new (Guid.NewGuid())
+                    {
+                        Date = DateTime.UtcNow,
+                        Name = "Lorem Link",
+                        Description = "This would be a description of the link submitted as a contribution.",
+                        Uri = new Uri("https://www.google.com"),
+                        Type = ApplicationLinkType.Other,
+                        RelatedProducts = new List<Product>
+                        {
+                            product1,
+                            product2
+                        }
+                    }
+                }
+            };
+
+            model.MvpTypes.Add(new MvpType(1)
+            {
+                Name = "Lorem MVP"
+            });
+            model.MvpTypes.Add(new MvpType(2)
+            {
+                Name = "Ipsum MVP"
+            });
+
+            model.Products.Add(product1);
+            model.Products.Add(product2);
         }
 
         private async Task EstablishSelection(ApplicationFormModel model)
@@ -133,6 +174,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             }
             else
             {
+                model.CurrentStep = ApplicationStep.Error;
                 model.NextStep = ApplicationStep.Error;
             }
         }
@@ -150,9 +192,12 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     if (model.CurrentApplication != null)
                     {
                         model.MvpTypeId = model.CurrentApplication.MvpType.Id;
-                        model.Eligibility = model.CurrentApplication.Eligibility;
-                        model.Objectives = model.CurrentApplication.Objectives;
-                        model.Mentors = model.CurrentApplication.Mentor;
+                        if (string.IsNullOrWhiteSpace(model.Eligibility))
+                        {
+                            model.Eligibility = model.CurrentApplication.Eligibility;
+                            model.Objectives = model.CurrentApplication.Objectives;
+                            model.Mentors = model.CurrentApplication.Mentor;
+                        }
                     }
                 }
             }
@@ -160,36 +205,56 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
 
         private async Task ExecuteConsentStep(ApplicationFormModel model)
         {
-            if (!model.IsBack && model.IsConsentGiven)
+            if (model.IsNavigation.HasValue && !model.IsNavigation.Value && !model.IsConsentGiven)
             {
-                if (model.CurrentUser != null && model.CurrentUser.Consents.All(c => c.Type != ConsentType.PersonalInformation))
+                ModelState.AddModelError(string.Empty, "Consent is required.");
+                model.NextStep = ApplicationStep.Consent;
+            }
+            else if (model.IsNavigation.HasValue && !model.IsNavigation.Value && model.IsConsentGiven)
+            {
+                Response<IList<Consent>> consentsResponse = await Client.GetConsentsAsync();
+                if (consentsResponse.StatusCode == HttpStatusCode.OK &&
+                    (consentsResponse.Result?.All(c => c.Type != ConsentType.PersonalInformation) ?? false))
                 {
                     Consent consent = new (Guid.Empty)
                     {
-                        User = new User(model.CurrentUser.Id),
                         Type = ConsentType.PersonalInformation
                     };
-
-                    // TODO [ILs] Add consent
+                    Response<Consent> consentResponse = await Client.GiveConsentAsync(consent);
+                    if (consentResponse.StatusCode == HttpStatusCode.OK && consentResponse.Result != null)
+                    {
+                        await LoadMvpTypes(model);
+                        model.NextStep = ApplicationStep.MvpType;
+                    }
+                    else
+                    {
+                        model.NextStep = ApplicationStep.Error;
+                    }
                 }
-
-                await LoadMvpTypes(model);
-                model.NextStep = ApplicationStep.MvpType;
+                else if (consentsResponse.StatusCode == HttpStatusCode.OK &&
+                         (consentsResponse.Result?.Any(c => c.Type == ConsentType.PersonalInformation) ?? false))
+                {
+                    await LoadMvpTypes(model);
+                    model.NextStep = ApplicationStep.MvpType;
+                }
+                else
+                {
+                    model.NextStep = ApplicationStep.Error;
+                }
             }
-            else if (model.IsBack)
+            else if ((model.IsNavigation.HasValue && model.IsNavigation.Value) || !model.IsNavigation.HasValue)
             {
                 model.NextStep = ApplicationStep.Consent;
             }
             else
             {
-                ModelState.AddModelError(string.Empty, "Consent is required.");
-                model.NextStep = ApplicationStep.Consent;
+                model.NextStep = ApplicationStep.Error;
             }
         }
 
         private async Task ExecuteMvpTypeStep(ApplicationFormModel model)
         {
-            if (!model.IsBack && model.MvpTypeId > 0)
+            if (model.IsNavigation.HasValue && !model.IsNavigation.Value && model.MvpTypeId > 0)
             {
                 if (model.CurrentApplication != null)
                 {
@@ -202,6 +267,12 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     if (applicationResponse.StatusCode == HttpStatusCode.OK && applicationResponse.Result != null)
                     {
                         model.CurrentApplication = applicationResponse.Result;
+                        model.NextStep = ApplicationStep.Profile;
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "An error occurred while saving your application. Please try again later or contact the MVP Program if the problem persists.");
+                        model.NextStep = ApplicationStep.MvpType;
                     }
                 }
                 else
@@ -219,17 +290,21 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     if (applicationResponse.StatusCode == HttpStatusCode.OK && applicationResponse.Result != null)
                     {
                         model.CurrentApplication = applicationResponse.Result;
+                        model.NextStep = ApplicationStep.Profile;
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "An error occurred while saving your application. Please try again later or contact the MVP Program if the problem persists.");
+                        model.NextStep = ApplicationStep.MvpType;
                     }
                 }
-
-                model.NextStep = ApplicationStep.Profile;
             }
-            else if (model.IsBack)
+            else if ((model.IsNavigation.HasValue && model.IsNavigation.Value) || !model.IsNavigation.HasValue)
             {
                 await LoadMvpTypes(model);
                 model.NextStep = ApplicationStep.MvpType;
             }
-            else
+            else if (model.IsNavigation.HasValue && !model.IsNavigation.Value)
             {
                 await LoadMvpTypes(model);
                 ModelState.AddModelError(string.Empty, "MVP Category must be selected.");
@@ -239,7 +314,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
 
         private async Task ExecuteObjectivesStep(ApplicationFormModel model)
         {
-            if (!model.IsBack && !string.IsNullOrWhiteSpace(model.Eligibility) && !string.IsNullOrWhiteSpace(model.Objectives))
+            if (model.IsNavigation.HasValue && !model.IsNavigation.Value && !string.IsNullOrWhiteSpace(model.Eligibility) && !string.IsNullOrWhiteSpace(model.Objectives))
             {
                 Application updateApplication = new (model.CurrentApplication.Id)
                 {
@@ -252,16 +327,84 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 if (applicationResponse.StatusCode == HttpStatusCode.OK && applicationResponse.Result != null)
                 {
                     model.CurrentApplication = applicationResponse.Result;
+                    await LoadProducts(model);
+                    model.NextStep = ApplicationStep.Contributions;
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "An error occurred while saving your application. Please try again later or contact the MVP Program if the problem persists.");
+                    model.NextStep = ApplicationStep.Objectives;
                 }
             }
-            else if (model.IsBack)
+            else if ((model.IsNavigation.HasValue && model.IsNavigation.Value) || !model.IsNavigation.HasValue)
             {
                 model.NextStep = ApplicationStep.Objectives;
             }
-            else
+            else if (model.IsNavigation.HasValue && !model.IsNavigation.Value)
             {
                 ModelState.AddModelError(string.Empty, "You must fill out the required fields.");
+                model.NextStep = ApplicationStep.Objectives;
+            }
+        }
+
+        private async Task ExecuteContributionsStep(ApplicationFormModel model)
+        {
+            if ((model.IsNavigation.HasValue && model.IsNavigation.Value) || !model.IsNavigation.HasValue)
+            {
+                await LoadProducts(model);
                 model.NextStep = ApplicationStep.Contributions;
+            }
+            else if (
+                model.IsNavigation.HasValue &&
+                !model.IsNavigation.Value &&
+                model.ContributionDate.HasValue &&
+                !string.IsNullOrWhiteSpace(model.ContributionName) &&
+                Uri.IsWellFormedUriString(model.ContributionLink.OriginalString, UriKind.Absolute))
+            {
+                ApplicationLink link = new (Guid.Empty)
+                {
+                    Date = model.ContributionDate.Value,
+                    Name = model.ContributionName,
+                    Description = model.ContributionDescription,
+                    Uri = model.ContributionLink,
+                    Type = model.ContributionType
+                };
+                foreach (int productId in model.ContributionProductIds)
+                {
+                    link.RelatedProducts.Add(new Product(productId));
+                }
+
+                Application patchApplication = new (model.CurrentApplication.Id);
+                patchApplication.Links.Add(link);
+
+                Response<Application> applicationResponse = await Client.UpdateApplicationAsync(patchApplication);
+                if (applicationResponse.StatusCode == HttpStatusCode.OK && applicationResponse.Result != null)
+                {
+                    model.CurrentApplication = applicationResponse.Result;
+                }
+
+                model.ContributionDate = null;
+                model.ContributionName = null;
+                model.ContributionDescription = null;
+                model.ContributionLink = null;
+                model.ContributionType = ApplicationLinkType.Other;
+                model.ContributionProductIds = new List<int>();
+                await LoadProducts(model);
+                model.NextStep = ApplicationStep.Contributions;
+            }
+            else if (model.IsNavigation.HasValue && !model.IsNavigation.Value)
+            {
+                await LoadProducts(model);
+                ModelState.AddModelError(string.Empty, "Your contribution is missing mandatory fields or has an invalid link.");
+                model.NextStep = ApplicationStep.Contributions;
+            }
+        }
+
+        private async Task ExecuteConfirmationStep(ApplicationFormModel model)
+        {
+            if (model.IsNavigation.HasValue && model.IsNavigation.Value)
+            {
+                model.NextStep = ApplicationStep.Confirmation;
             }
         }
 
@@ -271,6 +414,15 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             if (mvpTypesResponse.StatusCode == HttpStatusCode.OK && mvpTypesResponse.Result != null)
             {
                 model.MvpTypes.AddRange(mvpTypesResponse.Result);
+            }
+        }
+
+        private async Task LoadProducts(ApplicationFormModel model)
+        {
+            Response<IList<Product>> productsResponse = await Client.GetProductsAsync(1, short.MaxValue);
+            if (productsResponse.StatusCode == HttpStatusCode.OK && productsResponse.Result != null)
+            {
+                model.Products.AddRange(productsResponse.Result);
             }
         }
     }

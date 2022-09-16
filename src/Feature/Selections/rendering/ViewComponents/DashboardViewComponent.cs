@@ -2,6 +2,7 @@
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewComponents;
 using Mvp.Feature.Selections.Models;
 using Mvp.Selections.Client;
 using Mvp.Selections.Client.Models;
@@ -22,6 +23,7 @@ namespace Mvp.Feature.Selections.ViewComponents
 
         public override async Task<IViewComponentResult> InvokeAsync()
         {
+            IViewComponentResult result = new ContentViewComponentResult(string.Empty);
             DashboardModel model = await ModelBinder.Bind<DashboardModel>(ViewContext);
             if (model.IsEditing)
             {
@@ -40,9 +42,14 @@ namespace Mvp.Feature.Selections.ViewComponents
                 {
                     model.CurrentSelection = selectionResponse.Result;
                 }
+
+                if (model.CurrentUser != null && model.CurrentSelection != null)
+                {
+                    result = View(model);
+                }
             }
 
-            return View(model);
+            return result;
         }
 
         private void GenerateFakeDataForEdit(DashboardModel model)

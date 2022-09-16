@@ -23,12 +23,13 @@
         </li>
     </ul>
     <form>
-        <input asp-for="CurrentStep" type="hidden" value="Profile" />
+        <input asp-for="IsNavigation" type="hidden" value="true" />
+        <input asp-for="CurrentStep" type="hidden" value="Objectives"/>
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <button asp-for="NextLabel" type="submit" class="btn btn-primary"></button>
     </form>
     <form>
-        <input asp-for="IsBack" type="hidden" value="true" />
+        <input asp-for="IsNavigation" type="hidden" value="true" />
         <input asp-for="CurrentStep" type="hidden" value="MvpType"/>
         <button asp-for="PreviousLabel" type="submit" class="btn btn-secondary"></button>
     </form>

@@ -11,9 +11,12 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220825T152630Z
+    - ID: "4a34fb25-6a05-41dc-bc59-5b92a548000b"
+      Hint: IdentifierTableHeader
+      Value: Okta Id
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6bc75e8e-4335-4d7c-bfaf-0fc1adf4d915"
+      Value: "cc0faa91-d703-4907-9a53-1131516aa7c0"
     - ID: "a6922459-3cc1-4af8-b3d9-5da63935d067"
       Hint: EditLink
       Value: |
@@ -24,4 +27,4 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220910T171916Z
+      Value: 20220916T092839Z

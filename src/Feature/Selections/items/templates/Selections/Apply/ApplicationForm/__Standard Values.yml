@@ -14,6 +14,9 @@ Languages:
     - ID: "1844ce6f-397d-4ede-a1c0-7b7e8178c452"
       Hint: ConfirmationTitleLabel
       Value: Confirmation and Submission
+    - ID: "1ebe61d8-cdf1-4781-81fc-c3a9d3c6a993"
+      Hint: ErrorMessageLabel
+      Value: There is a problem with your User or Application. Please contact the MVP Program to proceed.
     - ID: "1fff467c-3622-41f7-a553-d1b03f1e7b8f"
       Hint: MvpTypeLabel
       Value: Select a category
@@ -64,6 +67,9 @@ Languages:
     - ID: "63fbcb71-0aef-47c0-8d21-b36f3207b372"
       Hint: CompleteLabel
       Value: I confirm that my application is ready to be reviewed and processed.
+    - ID: "65aa51bd-274a-4f05-baa0-637789870690"
+      Hint: InactiveMessageLabel
+      Value: There currently is no active selection ongoing to submit an application against.
     - ID: "6f39bd88-b29c-43d5-9009-300f505c534c"
       Hint: ContributionsStepLabel
       Value: Contributions
@@ -72,7 +78,7 @@ Languages:
       Value: "What are your objectives for the next year?"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "59d5d3a8-d4c1-4892-9125-e0bfe3392913"
+      Value: "32c05f8c-4231-4ef9-b1ed-61c7ae4f17b9"
     - ID: "9c31ec21-8cc9-452c-aecd-63feaa35ec6f"
       Hint: StartLabel
       Value: Begin Application
@@ -100,13 +106,16 @@ Languages:
       Value: MVP Category
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220913T115712Z
+      Value: 20220915T132118Z
     - ID: "e9631ea3-2df0-4c18-8e6d-9a84e06717c8"
       Hint: NextLabel
       Value: Next
     - ID: "e9a35591-dcb1-40fe-9459-9062baac1419"
       Hint: MentorsLabel
       Value: "Did you have any mentors this year?"
+    - ID: "f2df5575-f32b-4c02-aec8-881352827655"
+      Hint: SubmitLabel
+      Value: Submit
     - ID: "f44ad411-6ad7-4996-9e50-938bdae3216d"
       Hint: PreviousLabel
       Value: Previous

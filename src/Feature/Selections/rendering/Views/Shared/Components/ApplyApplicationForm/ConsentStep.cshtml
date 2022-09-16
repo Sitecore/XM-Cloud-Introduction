@@ -4,10 +4,13 @@
     <h2 asp-for="ConsentTitleLabel"></h2>
     <div asp-for="ConsentInformation"></div>
     <form>
-        <input asp-for="CurrentStep" type="hidden" value="Consent" />
+        <input asp-for="IsNavigation" type="hidden" value="false" />
+        <input asp-for="CurrentStep" type="hidden" value="Consent"/>
         <div class="form-check">
             @Html.EditorFor(m => m.IsConsentGiven, new { @class = "form-check-input" })
-            <label asp-for="ConsentLabel" class="form-check-label"></label>
+            <label asp-for="IsConsentGiven" class="form-check-label">
+                @(Model.IsEditing ? Html.Raw(Model.ConsentLabel.EditableMarkup) : Model.ConsentLabel.Value)
+            </label>
         </div>
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <button asp-for="StartLabel" type="submit" class="btn btn-primary"></button>
