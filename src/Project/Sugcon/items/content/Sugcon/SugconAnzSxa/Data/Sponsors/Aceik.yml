@@ -1,0 +1,47 @@
+﻿---
+ID: "acc1507a-936b-4fe1-8553-a327992cf6e6"
+Parent: "6b8979eb-e013-4dd5-a30d-c5246e47ed56"
+Template: "dbf996a5-21c9-49d6-bbb4-dce6d4700576"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Data/Sponsors/Aceik
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220830T174755Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\jcy@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jcy@sitecore.net
+    - ID: "7de86eb1-7ccc-4068-9870-b3a46a150aa1"
+      Hint: SponsorLogo
+      Value: |
+        <image mediaid="{AF52CADA-DD45-4AEC-8AB6-AD1F5D9B0BB7}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e49e2e28-5cb9-472b-8b01-f891039c53df"
+    - ID: "a1f84fce-5b88-48a1-803b-1ca7f6a47563"
+      Hint: SponsorDescription
+      Value: |
+        <p>Aceik is a full service, experience-led Sitecore agency. We apply Strategic, Creative and Technical expertise to help our clients achieve great outcomes that add business value.</p>
+        <p>An executive team with 16 years&rsquo; Sitecore Technology and Strategy MVP recognition lead a company with a 100% track record of successful delivery.</p>
+        <p>Our clients include RAA, RACQ, Toyota,Unisuper, Ausgrid, QIC, CPA Australia, Village Themeparks, Fitness Lifestyle Group, ANZIIF, Choice Magazine, Dairy Australia, The College of Law and Sitecore.</p>
+    - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
+      Hint: SponsorUrl
+      Value: "https://www.aceik.com.au/"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\jcy@sitecore.net
+    - ID: "c796441d-0c1f-4435-9cf7-9d123ff6b937"
+      Hint: SponsorName
+      Value: Aceik
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220906T135119Z

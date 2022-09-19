@@ -1,0 +1,34 @@
+name: Build the DotNet Solution
+
+on:
+  workflow_call:
+    inputs:
+      workingDirectory:
+        required: true
+        type: string
+    secrets:
+      JS_BUILD_ENDPOINT:
+        required: true
+      JS_BUILD_SECRET:
+        required: true
+    
+jobs:
+
+  build:
+    name: Build the NextJs Application
+    runs-on: ubuntu-latest
+    env:
+      FETCH_WITH: GraphQL
+      GRAPH_QL_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
+      SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
+    defaults:
+      run:
+        working-directory: ${{ inputs.workingDirectory }}
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16.5
+    - run: npm install
+    - run: npm run build
+    - run: npm run lint

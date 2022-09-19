@@ -1,0 +1,37 @@
+﻿---
+ID: "7cb32aef-12d3-431a-aa59-439c0406201f"
+Parent: "d920447b-0550-4982-b23c-78943717c9a3"
+Template: "80b483ea-47b0-4562-837d-159fae7c890c"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Data/Speaker/Speaker
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "14e2a083-9ff9-4ca7-b4c3-010634a881fa"
+      Hint: Title
+      Value: SUGCON EU 2022 Speakers
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220810T155655Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "67b8ddc1-3b91-4b87-bc6c-4d0d8f30e79d"
+      Hint: SessionizeURL
+      Value: "https://sessionize.com/api/v2/1wt79jwg/view/Speakers"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f7d92877-4a71-49fb-bdbb-eaf7539ff6f7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220810T155815Z

@@ -1,0 +1,37 @@
+﻿---
+ID: "fa1d1364-bd02-454e-bd27-cceabe72823b"
+Parent: "af32ed50-b8df-49d5-b29e-22849caa9b56"
+Template: "50fcc4a2-bea5-40a8-abf3-552d533994ec"
+Path: /sitecore/content/Sugcon/SugconAnzSxa/Data/SponsorLists/Diamond sponsors
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220825T140431Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "592584c7-b0e0-4fc1-bb26-793ed34e0068"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "c47a29aa-bc65-4ef2-9376-a463edd5a998"
+      Hint: Sponsors
+      Value: "{F7D14746-69DA-4544-ACCF-7C8322ED1A6A}"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220825T140602Z
+    - ID: "ee414f1c-1598-4d93-af66-61ce0ac6705a"
+      Hint: Category
+      Value: Diamond sponsors

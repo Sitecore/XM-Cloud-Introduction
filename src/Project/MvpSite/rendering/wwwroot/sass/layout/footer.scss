@@ -17,8 +17,7 @@ $sc-font-color: #212529;
 
 
 .fixed-footer {
-    position: absolute;
-    //bottom: 0;
+    flex-shrink: 0;
     width: 100%;
     height: 56px; /* Set the fixed height of the footer here */
     .footer-copyright {

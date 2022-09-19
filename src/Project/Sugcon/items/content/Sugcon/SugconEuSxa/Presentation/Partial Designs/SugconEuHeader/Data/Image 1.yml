@@ -26,13 +26,17 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "75fbf1b1-e7c5-494b-9633-693909f79425"
+      Hint: TargetUrl
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{A42272AA-3CD4-4943-AAC8-0142DB3ABFFA}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4e59a8dd-8f59-440d-bacd-beac635281ce"
+      Value: "9a8460db-dc44-4403-baf5-f4b180b49dcc"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\thd@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220613T193157Z
+      Value: 20220815T153258Z
