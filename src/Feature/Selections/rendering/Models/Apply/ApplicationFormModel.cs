@@ -122,5 +122,7 @@ namespace Mvp.Feature.Selections.Models.Apply
         public bool IsComplete { get; set; } = false;
 
         public TextField SubmitLabel { get; set; }
+
+        public TextField SubmittedMessageLabelFormat { get; set; }
     }
 }

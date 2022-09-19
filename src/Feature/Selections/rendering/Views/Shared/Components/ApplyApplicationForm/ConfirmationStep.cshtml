@@ -1,6 +1,7 @@
 ﻿@model Mvp.Feature.Selections.Models.Apply.ApplicationFormModel
 
 <div class="mvp-fs-applyapplicationform col-12">
+    <partial name="~/Views/Shared/Components/ApplyApplicationForm/_Progress.cshtml" />
     <h2 asp-for="ConfirmationTitleLabel"></h2>
     <form>
         <input asp-for="IsNavigation" type="hidden" value="false" />

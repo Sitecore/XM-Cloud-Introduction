@@ -9,6 +9,7 @@
         Profile,
         Objectives,
         Contributions,
-        Confirmation
+        Confirmation,
+        Submitted
     }
 }

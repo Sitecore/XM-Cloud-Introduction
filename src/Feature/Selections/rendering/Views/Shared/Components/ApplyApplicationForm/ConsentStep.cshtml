@@ -1,10 +1,11 @@
 ﻿@model Mvp.Feature.Selections.Models.Apply.ApplicationFormModel
 
 <div class="mvp-fs-applyapplicationform col-12">
+    <partial name="~/Views/Shared/Components/ApplyApplicationForm/_Progress.cshtml" />
     <h2 asp-for="ConsentTitleLabel"></h2>
     <div asp-for="ConsentInformation"></div>
     <form>
-        <input asp-for="IsNavigation" type="hidden" value="false" />
+        <input asp-for="IsNavigation" type="hidden" value="false"/>
         <input asp-for="CurrentStep" type="hidden" value="Consent"/>
         <div class="form-check">
             @Html.EditorFor(m => m.IsConsentGiven, new { @class = "form-check-input" })

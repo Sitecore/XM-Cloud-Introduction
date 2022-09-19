@@ -1,0 +1,23 @@
+﻿@using Mvp.Feature.Selections.Models.Apply
+@model Mvp.Feature.Selections.Models.Apply.ApplicationFormModel
+
+<div class="progress">
+    <div class="progress-bar @(Model.NextStep > ApplicationStep.Consent ? "bg-success" : "bg-primary")" style="width: 16%;">
+        @(Model.IsEditing ? Html.Raw(Model.ConsentStepLabel.EditableMarkup) : Model.ConsentStepLabel.Value)
+    </div>
+    <div class="progress-bar @(Model.NextStep < ApplicationStep.MvpType ? "bg-secondary" : Model.NextStep == ApplicationStep.MvpType ? "bg-primary" : "bg-success")" style="width: 17%;">
+        @(Model.IsEditing ? Html.Raw(Model.MypTypeStepLabel.EditableMarkup) : Model.MypTypeStepLabel.Value)
+    </div>
+    <div class="progress-bar @(Model.NextStep < ApplicationStep.Profile ? "bg-secondary" : Model.NextStep == ApplicationStep.Profile ? "bg-primary" : "bg-success")" style="width: 17%;">
+        @(Model.IsEditing ? Html.Raw(Model.ProfileStepLabel.EditableMarkup) : Model.ProfileStepLabel.Value)
+    </div>
+    <div class="progress-bar @(Model.NextStep < ApplicationStep.Objectives ? "bg-secondary" : Model.NextStep == ApplicationStep.Objectives ? "bg-primary" : "bg-success")" style="width: 17%;">
+        @(Model.IsEditing ? Html.Raw(Model.ObjectivesStepLabel.EditableMarkup) : Model.ObjectivesStepLabel.Value)
+    </div>
+    <div class="progress-bar @(Model.NextStep < ApplicationStep.Contributions ? "bg-secondary" : Model.NextStep == ApplicationStep.Contributions ? "bg-primary" : "bg-success")" style="width: 17%;">
+        @(Model.IsEditing ? Html.Raw(Model.ContributionsStepLabel.EditableMarkup) : Model.ContributionsStepLabel.Value)
+    </div>
+    <div class="progress-bar @(Model.NextStep < ApplicationStep.Confirmation ? "bg-secondary" : Model.NextStep == ApplicationStep.Confirmation ? "bg-primary" : "bg-success")" style="width: 16%;">
+        @(Model.IsEditing ? Html.Raw(Model.ConfirmationStepLabel.EditableMarkup) : Model.ConfirmationStepLabel.Value)
+    </div>
+</div>

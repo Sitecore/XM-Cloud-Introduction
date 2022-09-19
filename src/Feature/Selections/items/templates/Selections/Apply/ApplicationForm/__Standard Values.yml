@@ -41,6 +41,9 @@ Languages:
     - ID: "32909ab5-1add-46cf-a66b-92d169a4b234"
       Hint: ConsentStepLabel
       Value: Welcome
+    - ID: "3e5a8229-86ef-4b49-8632-afdaa6267a91"
+      Hint: SubmittedMessageLabelFormat
+      Value: "You successfully submitted your application for the selection of {0} on {1}. Thank you!"
     - ID: "41136776-745b-4ac0-a5ac-0b9c860d84f2"
       Hint: ProgramAgreementWarningLabel
       Value: I understand that, if selected, I will be required to review and agree to the Sitecore MVP Program Agreement.
@@ -78,7 +81,7 @@ Languages:
       Value: "What are your objectives for the next year?"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "32c05f8c-4231-4ef9-b1ed-61c7ae4f17b9"
+      Value: "d220b371-be40-4f5d-a203-a8c689b3f255"
     - ID: "9c31ec21-8cc9-452c-aecd-63feaa35ec6f"
       Hint: StartLabel
       Value: Begin Application
@@ -106,7 +109,7 @@ Languages:
       Value: MVP Category
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220915T132118Z
+      Value: 20220919T115458Z
     - ID: "e9631ea3-2df0-4c18-8e6d-9a84e06717c8"
       Hint: NextLabel
       Value: Next

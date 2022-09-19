@@ -45,6 +45,9 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     case ApplicationStep.MvpType:
                         await ExecuteMvpTypeStep(model);
                         break;
+                    case ApplicationStep.Profile:
+                        ExecuteProfileStep(model);
+                        break;
                     case ApplicationStep.Objectives:
                         await ExecuteObjectivesStep(model);
                         break;
@@ -64,6 +67,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     ApplicationStep.Objectives => View("ObjectivesStep", model),
                     ApplicationStep.Contributions => View("ContributionsStep", model),
                     ApplicationStep.Confirmation => View("ConfirmationStep", model),
+                    ApplicationStep.Submitted => View("Submitted", model),
                     ApplicationStep.Inactive => View("Inactive", model),
                     _ => View(model)
                 };
@@ -147,6 +151,14 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             model.Products.Add(product2);
         }
 
+        private static void ExecuteProfileStep(ApplicationFormModel model)
+        {
+            if (model.IsNavigation.HasValue && model.IsNavigation.Value)
+            {
+                model.NextStep = ApplicationStep.Profile;
+            }
+        }
+
         private async Task EstablishSelection(ApplicationFormModel model)
         {
             Response<Selection> selectionResponse = await Client.GetCurrentSelectionAsync();
@@ -183,21 +195,36 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
         {
             if (model.CurrentSelection != null && model.CurrentUser != null)
             {
-                Response<IList<Application>> applicationsResponse =
-                    await Client.GetApplicationsAsync(model.CurrentUser.Id, ApplicationStatus.Open);
-                if (applicationsResponse.StatusCode == HttpStatusCode.OK && applicationsResponse.Result != null)
+                await LoadOpenCurrentApplication(model);
+                if (model.CurrentApplication != null)
                 {
-                    model.CurrentApplication =
-                        applicationsResponse.Result.FirstOrDefault(a => a.Selection.Id == model.CurrentSelection.Id);
+                    model.MvpTypeId = model.CurrentApplication.MvpType.Id;
+                    if (string.IsNullOrWhiteSpace(model.Eligibility))
+                    {
+                        model.Eligibility = model.CurrentApplication.Eligibility;
+                        model.Objectives = model.CurrentApplication.Objectives;
+                        model.Mentors = model.CurrentApplication.Mentor;
+
+                        if (!model.IsNavigation.HasValue)
+                        {
+                            model.CurrentStep = ApplicationStep.Objectives;
+                            model.NextStep = ApplicationStep.Objectives;
+                        }
+                    }
+
+                    if (model.CurrentApplication.Links.Count > 0 && !model.IsNavigation.HasValue)
+                    {
+                        model.CurrentStep = ApplicationStep.Contributions;
+                        model.NextStep = ApplicationStep.Contributions;
+                    }
+                }
+                else
+                {
+                    await LoadSubmittedCurrentApplication(model);
                     if (model.CurrentApplication != null)
                     {
-                        model.MvpTypeId = model.CurrentApplication.MvpType.Id;
-                        if (string.IsNullOrWhiteSpace(model.Eligibility))
-                        {
-                            model.Eligibility = model.CurrentApplication.Eligibility;
-                            model.Objectives = model.CurrentApplication.Objectives;
-                            model.Mentors = model.CurrentApplication.Mentor;
-                        }
+                        model.CurrentStep = ApplicationStep.Submitted;
+                        model.NextStep = ApplicationStep.Submitted;
                     }
                 }
             }
@@ -406,6 +433,28 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             {
                 model.NextStep = ApplicationStep.Confirmation;
             }
+            else if (model.IsNavigation.HasValue && !model.IsNavigation.Value && model.UnderstandsReviewConsent && model.UnderstandsProgramAgreement && model.IsComplete)
+            {
+                Application updateApplication = new (model.CurrentApplication.Id)
+                {
+                    Status = ApplicationStatus.Submitted
+                };
+                Response<Application> applicationResponse = await Client.UpdateApplicationAsync(updateApplication);
+                if (applicationResponse.StatusCode == HttpStatusCode.OK && applicationResponse.Result != null)
+                {
+                    model.CurrentApplication = applicationResponse.Result;
+                    model.NextStep = ApplicationStep.Submitted;
+                }
+                else
+                {
+                    model.NextStep = ApplicationStep.Error;
+                }
+            }
+            else if (model.IsNavigation.HasValue && !model.IsNavigation.Value && (!model.UnderstandsReviewConsent || !model.UnderstandsProgramAgreement || !model.IsComplete))
+            {
+                ModelState.AddModelError(string.Empty, "You must agree to all of the above to complete and submit your application.");
+                model.NextStep = ApplicationStep.Confirmation;
+            }
         }
 
         private async Task LoadMvpTypes(ApplicationFormModel model)
@@ -423,6 +472,28 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             if (productsResponse.StatusCode == HttpStatusCode.OK && productsResponse.Result != null)
             {
                 model.Products.AddRange(productsResponse.Result);
+            }
+        }
+
+        private async Task LoadOpenCurrentApplication(ApplicationFormModel model)
+        {
+            Response<IList<Application>> applicationsResponse =
+                await Client.GetApplicationsAsync(model.CurrentUser.Id, ApplicationStatus.Open);
+            if (applicationsResponse.StatusCode == HttpStatusCode.OK && applicationsResponse.Result != null)
+            {
+                model.CurrentApplication =
+                    applicationsResponse.Result.FirstOrDefault(a => a.Selection.Id == model.CurrentSelection.Id);
+            }
+        }
+
+        private async Task LoadSubmittedCurrentApplication(ApplicationFormModel model)
+        {
+            Response<IList<Application>> applicationsResponse =
+                await Client.GetApplicationsAsync(model.CurrentUser.Id, ApplicationStatus.Submitted);
+            if (applicationsResponse.StatusCode == HttpStatusCode.OK && applicationsResponse.Result != null)
+            {
+                model.CurrentApplication =
+                    applicationsResponse.Result.FirstOrDefault(a => a.Selection.Id == model.CurrentSelection.Id);
             }
         }
     }
