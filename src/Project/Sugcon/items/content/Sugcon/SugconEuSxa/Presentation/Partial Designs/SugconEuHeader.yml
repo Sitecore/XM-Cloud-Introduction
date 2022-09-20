@@ -33,7 +33,7 @@ Languages:
               uid="{55F5E7D3-0857-4A47-AF74-6AE1FEB54879}"
               p:after="r[@uid='{1C353A02-0790-4340-8D4F-D81902F9CB1F}']"
               s:id="{01BB6244-4E0F-4A9B-9352-1F2C64982655}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles=%7BA096F101-5820-4FE1-8630-F6B6D8C30461%7D&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=3"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles=%7B42598B6F-0F74-4787-B57C-818B198F948D%7D&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=3&amp;RenderingIdentifier"
               s:ph="headless-header" />
             <r
               uid="{4EB73542-8DF2-4AE0-A86C-98F78AA2522D}"
@@ -46,7 +46,7 @@ Languages:
               uid="{4A66BE4C-8281-43DF-AB16-39D8100412D3}"
               p:after="r[@uid='{4EB73542-8DF2-4AE0-A86C-98F78AA2522D}']"
               s:id="{1DEB067F-0BB1-405E-94F5-2ABB537A6160}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D%7C%7BF9251754-9679-4EE9-B883-64304F5AEAF9%7D&amp;FieldNames&amp;Styles=%7B3D10626F-C0BB-4B52-9A9F-A39058B2F078%7D&amp;NavigationRoot=%7BA42272AA-3CD4-4943-AAC8-0142DB3ABFFA%7D&amp;LevelFrom=%7B1BB88840-5FB3-4353-AD8D-81136F6FF75A%7D&amp;LevelTo=%7BA59325BB-5A27-46F9-8110-9D499715F3BE%7D&amp;Filter&amp;Flattened=1&amp;AddRoot&amp;CacheClearingBehavior=Clear%20on%20publish"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D%7C%7BF9251754-9679-4EE9-B883-64304F5AEAF9%7D&amp;FieldNames&amp;Styles=%7B3D10626F-C0BB-4B52-9A9F-A39058B2F078%7D&amp;NavigationRoot=%7BA42272AA-3CD4-4943-AAC8-0142DB3ABFFA%7D&amp;LevelFrom=%7B1BB88840-5FB3-4353-AD8D-81136F6FF75A%7D&amp;LevelTo=%7BA59325BB-5A27-46F9-8110-9D499715F3BE%7D&amp;Filter=%7BD063E9D1-C7B5-4B1E-B31E-69886C9C59F5%7D&amp;Flattened=1&amp;AddRoot&amp;CacheClearingBehavior=Clear%20on%20publish&amp;RenderingIdentifier"
               s:ph="/headless-header/container-1" />
             <r
               uid="{1BA32F6A-766A-480D-8738-FA40BF991540}"
@@ -65,11 +65,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4296e80a-78bb-4344-9ba3-d2d823fe358f"
+      Value: "57c2fa5d-916e-40c7-9935-dc6ffa0817de"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rics@sitecore.net
+        sitecore\sebw@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220706T174117Z
+      Value: 20220920T121216Z

@@ -28,13 +28,15 @@ export const Default = (props: HeroProps): JSX.Element => {
         <div className="component-content" id="box-search">
           <div className="thumbnail">
             <Image media={props.fields.BackgroundImage} className="img-fluid heroimage"></Image>
-            <div className="caption d-none d-md-block">
-              <p className="hero-label">
-                <Text field={props.fields.Label} />
-              </p>
-              <p className="h1 py-4">
-                <Text className="contentTitle" field={props.fields.Text} />
-              </p>
+            <div className="col-12">
+              <div className="caption d-none d-md-block hero-backdrop">
+                <p className="hero-label">
+                  <Text field={props.fields.Label} />
+                </p>
+                <p className="h1 py-4">
+                  <Text className="contentTitle" field={props.fields.Text} />
+                </p>
+              </div>
             </div>
           </div>
         </div>
