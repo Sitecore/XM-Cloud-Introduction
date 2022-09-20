@@ -92,6 +92,7 @@ services:
       ENTRYPOINT_ASSEMBLY: Mvp.Project.MvpSite.dll
       ASPNETCORE_ENVIRONMENT: "Development"
       ASPNETCORE_URLS: "http://*:80"
+      MVP_RENDERING_EDITING_HOST_URI: "http://mvp-rendering"
       Sitecore__InstanceUri: "http://cm"
       Sitecore__RenderingHostUri: "https://${MVP_RENDERING_HOST}"
       Sitecore__EnableExperienceEditor: "true" 
