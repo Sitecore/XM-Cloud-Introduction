@@ -4,7 +4,7 @@
     <partial name="~/Views/Shared/Components/ApplyApplicationForm/_Progress.cshtml" />
     <h2 asp-for="ConsentTitleLabel"></h2>
     <div asp-for="ConsentInformation"></div>
-    <form>
+    <form method="post">
         <input asp-for="IsNavigation" type="hidden" value="false"/>
         <input asp-for="CurrentStep" type="hidden" value="Consent"/>
         <div class="form-check">

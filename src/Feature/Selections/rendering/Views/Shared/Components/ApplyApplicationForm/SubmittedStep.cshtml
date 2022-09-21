@@ -1,0 +1,30 @@
+﻿@model Mvp.Feature.Selections.Models.Apply.ApplicationFormModel
+
+<div class="mvp-fs-applyapplicationform col-12">
+    <partial name="~/Views/Shared/Components/ApplyApplicationForm/_Progress.cshtml" />
+    <div class="alert alert-success" role="alert">
+        @if (Model.IsEditing)
+        {
+            @Html.Raw(Model.SubmittedMessageLabelFormat.EditableMarkup)
+        }
+        else
+        {
+            @(string.Format(Model.SubmittedMessageLabelFormat.Value, Model.CurrentSelection.Year, Model.CurrentApplication.ModifiedOn.Value.ToString("d")))
+        }
+    </div>
+    <div>
+        <h2 asp-for="MvpTypeTitleLabel"></h2>
+        <div>@Model.CurrentApplication.MvpType.Name</div>
+
+        <h2 asp-for="ObjectivesTitleLabel"></h2>
+        <h3 asp-for="EligibilityLabel"></h3>
+        <div>@Model.CurrentApplication.Eligibility</div>
+        <h3 asp-for="ObjectivesLabel"></h3>
+        <div>@Model.CurrentApplication.Objectives</div>
+        <h3 asp-for="MentorsLabel"></h3>
+        <div>@Model.CurrentApplication.Mentor</div>
+
+        <h2 asp-for="ContributionsTitleLabel"></h2>
+        <partial name="~/Views/Shared/Components/ApplyApplicationForm/_ContributionsTable.cshtml"/>
+    </div>
+</div>

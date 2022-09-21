@@ -3,7 +3,7 @@
 <div class="mvp-fs-applyapplicationform col-12">
     <partial name="~/Views/Shared/Components/ApplyApplicationForm/_Progress.cshtml" />
     <h2 asp-for="ObjectivesTitleLabel"></h2>
-    <form>
+    <form method="post">
         <input asp-for="IsNavigation" type="hidden" value="false" />
         <input asp-for="CurrentStep" type="hidden" value="Objectives"/>
         <div class="form-group">
@@ -27,7 +27,7 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <button asp-for="NextLabel" type="submit" class="btn btn-primary"></button>
     </form>
-    <form>
+    <form method="post">
         <input asp-for="IsNavigation" type="hidden" value="true"/>
         <input asp-for="CurrentStep" type="hidden" value="Profile"/>
         <button asp-for="PreviousLabel" type="submit" class="btn btn-secondary"></button>

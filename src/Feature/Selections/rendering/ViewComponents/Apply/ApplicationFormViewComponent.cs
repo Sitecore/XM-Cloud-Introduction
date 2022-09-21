@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Mvp.Feature.Selections.Models.Apply;
 using Mvp.Selections.Client;
@@ -67,7 +66,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     ApplicationStep.Objectives => View("ObjectivesStep", model),
                     ApplicationStep.Contributions => View("ContributionsStep", model),
                     ApplicationStep.Confirmation => View("ConfirmationStep", model),
-                    ApplicationStep.Submitted => View("Submitted", model),
+                    ApplicationStep.Submitted => View("SubmittedStep", model),
                     ApplicationStep.Inactive => View("Inactive", model),
                     _ => View(model)
                 };
@@ -118,9 +117,14 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 Name = "Ipsum Product"
             };
 
+            MvpType mvpType1 = new (1)
+            {
+                Name = "Lorem MVP"
+            };
+
             model.CurrentApplication = new Application(Guid.NewGuid())
             {
-                Links = new List<ApplicationLink>
+                Contributions = new List<Contribution>
                 {
                     new (Guid.NewGuid())
                     {
@@ -128,20 +132,19 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                         Name = "Lorem Link",
                         Description = "This would be a description of the link submitted as a contribution.",
                         Uri = new Uri("https://www.google.com"),
-                        Type = ApplicationLinkType.Other,
+                        Type = ContributionType.Other,
                         RelatedProducts = new List<Product>
                         {
                             product1,
                             product2
                         }
                     }
-                }
+                },
+                ModifiedOn = DateTime.UtcNow,
+                MvpType = mvpType1
             };
 
-            model.MvpTypes.Add(new MvpType(1)
-            {
-                Name = "Lorem MVP"
-            });
+            model.MvpTypes.Add(mvpType1);
             model.MvpTypes.Add(new MvpType(2)
             {
                 Name = "Ipsum MVP"
@@ -149,6 +152,11 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
 
             model.Products.Add(product1);
             model.Products.Add(product2);
+
+            model.CurrentSelection = new Selection(Guid.NewGuid())
+            {
+                Year = (short)DateTime.UtcNow.Year
+            };
         }
 
         private static void ExecuteProfileStep(ApplicationFormModel model)
@@ -212,7 +220,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                         }
                     }
 
-                    if (model.CurrentApplication.Links.Count > 0 && !model.IsNavigation.HasValue)
+                    if (model.CurrentApplication.Contributions.Count > 0 && !model.IsNavigation.HasValue)
                     {
                         model.CurrentStep = ApplicationStep.Contributions;
                         model.NextStep = ApplicationStep.Contributions;
@@ -386,9 +394,9 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 !model.IsNavigation.Value &&
                 model.ContributionDate.HasValue &&
                 !string.IsNullOrWhiteSpace(model.ContributionName) &&
-                Uri.IsWellFormedUriString(model.ContributionLink.OriginalString, UriKind.Absolute))
+                (string.IsNullOrWhiteSpace(model.ContributionLink.OriginalString) || Uri.IsWellFormedUriString(model.ContributionLink.OriginalString, UriKind.Absolute)))
             {
-                ApplicationLink link = new (Guid.Empty)
+                Contribution contribution = new (Guid.Empty)
                 {
                     Date = model.ContributionDate.Value,
                     Name = model.ContributionName,
@@ -396,28 +404,43 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     Uri = model.ContributionLink,
                     Type = model.ContributionType
                 };
-                foreach (int productId in model.ContributionProductIds)
+                foreach (int productId in model.ContributionProductIds ?? new List<int>())
                 {
-                    link.RelatedProducts.Add(new Product(productId));
+                    contribution.RelatedProducts.Add(new Product(productId));
                 }
 
-                Application patchApplication = new (model.CurrentApplication.Id);
-                patchApplication.Links.Add(link);
-
-                Response<Application> applicationResponse = await Client.UpdateApplicationAsync(patchApplication);
-                if (applicationResponse.StatusCode == HttpStatusCode.OK && applicationResponse.Result != null)
+                Response<Contribution> contributionResponse = await Client.AddContributionAsync(model.CurrentApplication.Id, contribution);
+                if (contributionResponse.StatusCode == HttpStatusCode.OK && contributionResponse.Result != null)
                 {
-                    model.CurrentApplication = applicationResponse.Result;
+                    model.CurrentApplication.Contributions.Add(contributionResponse.Result);
                 }
 
                 model.ContributionDate = null;
                 model.ContributionName = null;
                 model.ContributionDescription = null;
                 model.ContributionLink = null;
-                model.ContributionType = ApplicationLinkType.Other;
+                model.ContributionType = ContributionType.Other;
                 model.ContributionProductIds = new List<int>();
                 await LoadProducts(model);
                 model.NextStep = ApplicationStep.Contributions;
+            }
+            else if (
+                model.IsNavigation.HasValue &&
+                !model.IsNavigation.Value &&
+                model.DeleteContributionId != null)
+            {
+                Response<bool> deleteResponse = await Client.RemoveContributionAsync(model.CurrentApplication.Id, model.DeleteContributionId.Value);
+                if (deleteResponse.StatusCode == HttpStatusCode.NoContent)
+                {
+                    Contribution contribution = model.CurrentApplication.Contributions.Single(c => c.Id == model.DeleteContributionId);
+                    model.CurrentApplication.Contributions.Remove(contribution);
+                    await LoadProducts(model);
+                    model.NextStep = ApplicationStep.Contributions;
+                }
+                else
+                {
+                    model.NextStep = ApplicationStep.Error;
+                }
             }
             else if (model.IsNavigation.HasValue && !model.IsNavigation.Value)
             {

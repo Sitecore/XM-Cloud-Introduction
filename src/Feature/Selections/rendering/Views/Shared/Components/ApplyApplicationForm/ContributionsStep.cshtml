@@ -4,7 +4,8 @@
 <div class="mvp-fs-applyapplicationform col-12">
     <partial name="~/Views/Shared/Components/ApplyApplicationForm/_Progress.cshtml" />
     <h2 asp-for="ContributionsTitleLabel"></h2>
-    <form>
+    <div asp-for="ContributionsDescriptionLabel"></div>
+    <form method="post">
         <input asp-for="IsNavigation" type="hidden" value="false" />
         <input asp-for="CurrentStep" type="hidden" value="Contributions"/>
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -31,16 +32,16 @@
                 <label asp-for="ContributionLink">
                     @(Model.IsEditing ? Html.Raw(Model.ContributionLinkLabel.EditableMarkup) : Model.ContributionLinkLabel.Value)
                 </label>
-                <input asp-for="ContributionLink" class="form-control" required/>
+                <input asp-for="ContributionLink" class="form-control"/>
             </div>
             <div class="form-group col-1">
                 <label asp-for="ContributionType">
                     @(Model.IsEditing ? Html.Raw(Model.ContributionTypeLabel.EditableMarkup) : Model.ContributionTypeLabel.Value)
                 </label>
                 <select asp-for="ContributionType" class="form-control" required>
-                    @foreach (ApplicationLinkType linkType in Enum.GetValues<ApplicationLinkType>())
+                    @foreach (ContributionType contributionType in Enum.GetValues<ContributionType>())
                     {
-                        <option value="@linkType">@linkType</option>
+                        <option value="@contributionType">@contributionType</option>
                     }
                 </select>
             </div>
@@ -59,46 +60,14 @@
                 <button asp-for="AddLabel" type="submit" class="btn btn-primary"></button>
             </div>
         </div>
-        @if (Model.CurrentApplication.Links.Any())
-        {
-            <table class="table">
-                <thead>
-                <tr>
-                    <th asp-for="ContributionDateLabel"></th>
-                    <th asp-for="ContributionNameLabel"></th>
-                    <th asp-for="ContributionDescriptionLabel"></th>
-                    <th asp-for="ContributionLinkLabel"></th>
-                    <th asp-for="ContributionTypeLabel"></th>
-                    <th asp-for="ContributionProductsLabel"></th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach (ApplicationLink link in Model.CurrentApplication.Links)
-                {
-                    <tr>
-                        <td>@link.Date.ToString("d")</td>
-                        <td>@link.Name</td>
-                        <td>@link.Description</td>
-                        <td><a href="@link.Uri" target="_blank">@link.Uri</a></td>
-                        <td>@link.Type</td>
-                        <td>
-                            @foreach (Product product in link.RelatedProducts)
-                            {
-                                <span class="badge badge-secondary">@product.Name</span>
-                            }
-                        </td>
-                    </tr>
-                }
-                </tbody>
-            </table>
-        }
     </form>
-    <form>
+    <partial name="~/Views/Shared/Components/ApplyApplicationForm/_ContributionsTable.cshtml" />
+    <form method="post">
         <input asp-for="IsNavigation" type="hidden" value="true" />
         <input asp-for="CurrentStep" type="hidden" value="Confirmation"/>
         <button asp-for="NextLabel" type="submit" class="btn btn-primary"></button>
     </form>
-    <form>
+    <form method="post">
         <input asp-for="IsNavigation" type="hidden" value="true" />
         <input asp-for="CurrentStep" type="hidden" value="Objectives" />
         <button asp-for="PreviousLabel" type="submit" class="btn btn-secondary"></button>

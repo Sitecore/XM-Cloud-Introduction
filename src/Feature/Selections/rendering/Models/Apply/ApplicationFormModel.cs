@@ -79,6 +79,8 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public TextField ContributionsTitleLabel { get; set; }
 
+        public TextField ContributionsDescriptionLabel { get; set; }
+
         public TextField ContributionNameLabel { get; set; }
 
         public string ContributionName { get; set; }
@@ -97,7 +99,7 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public TextField ContributionTypeLabel { get; set; }
 
-        public ApplicationLinkType ContributionType { get; set; }
+        public ContributionType ContributionType { get; set; }
 
         public TextField ContributionProductsLabel { get; set; }
 
@@ -106,6 +108,8 @@ namespace Mvp.Feature.Selections.Models.Apply
         public List<Product> Products { get; } = new ();
 
         public TextField AddLabel { get; set; }
+
+        public Guid? DeleteContributionId { get; set; }
 
         public TextField ConfirmationTitleLabel { get; set; }
 
