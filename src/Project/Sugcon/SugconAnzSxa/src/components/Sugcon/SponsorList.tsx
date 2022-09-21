@@ -65,7 +65,6 @@ export const Default = (props: SponsorListProps): JSX.Element => {
                         <RichText field={Sponsor?.fields?.SponsorDescription} />
                         <br />
                         <Link field={Sponsor?.fields?.SponsorUrlLink}></Link>
-                        
                       </div>
                     );
                   })
