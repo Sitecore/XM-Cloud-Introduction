@@ -24,14 +24,20 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
       Hint: Text
-      Value: <p>This is some text</p>
+      Value: |
+        <h1>Organizing Committee and Sitecore would like to thank all SUGCON Europe 2022 attendees!</h1>
+        <p>We hope that you found the conference to be informative, helpful, inspirational, and fun.</p>
+        <p>We would like to thank all speakers for your valuable insights, tips and tricks, know-how, and overall outstanding content! We extremely appreciate уour efforts in sharing your experience with the community.</p>
+        <p>We want to express our gratitude to all sponsors. Your support made SUGCON Europe 2022 a success!</p>
+        <p>In order to make next year&rsquo;s conference even more successful, we request that you fill out the post-event survey. We thank you in advance for your comments and suggestions and we will do our best to make SUGCON Europe 2023 even better.</p>
+        <p><strong>Sitecore Community is truly the best in the world! See you next year!</strong></p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2643f473-498b-4d0b-ba83-29a27a94a88a"
+      Value: "c21b6144-6238-4dbf-ba5d-77ec108be96b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\rea@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220613T204039Z
+      Value: 20220921T014012Z

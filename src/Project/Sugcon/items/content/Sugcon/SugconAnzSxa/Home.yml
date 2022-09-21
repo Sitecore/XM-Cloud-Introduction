@@ -79,14 +79,14 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3fa5c281-94ac-493b-b295-8713cefc1e71"
+      Value: "372eed5a-e356-4377-ba15-195c8cdea0d3"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
-      Value: SUGCON ANZ
+      Value: Home
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\jcy@sitecore.net
+        sitecore\rea@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220830T161403Z
+      Value: 20220921T013457Z
