@@ -33,7 +33,7 @@ export const Default = (props: SponsorListProps): JSX.Element => {
       <div className={`component sponsor-list default ${props.params.styles}`}>
         <div className="component-content container">
           <div className="row">
-            <div className='col-12 defaultSponsor'>
+            <div className="col-12 defaultSponsor">
               <h2>
                 <Text field={props.fields?.Category} />
               </h2>
