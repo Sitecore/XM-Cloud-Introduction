@@ -22,10 +22,10 @@ Languages:
     - ID: "7de86eb1-7ccc-4068-9870-b3a46a150aa1"
       Hint: SponsorLogo
       Value: |
-        <image mediaid="{27C8DC61-0B28-4264-BA96-668B537630E5}" />
+        <image mediaid="{679283BC-74BD-48AD-9FB8-32441C867C3A}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "678ed9c7-d7f7-4e54-8c7c-7421c15f6020"
+      Value: "09677e7c-0213-45de-9cba-b176755ddf5a"
     - ID: "a1f84fce-5b88-48a1-803b-1ca7f6a47563"
       Hint: SponsorDescription
       Value: |
@@ -44,10 +44,14 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\jcy@sitecore.net
+        sitecore\sebw@sitecore.net
     - ID: "c796441d-0c1f-4435-9cf7-9d123ff6b937"
       Hint: SponsorName
       Value: Dataweavers
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220906T135236Z
+      Value: 20220921T124033Z
+    - ID: "e879e1b0-4cf7-471c-9a90-3f1cff185c9a"
+      Hint: SponsorUrlLink
+      Value: |
+        <link linktype="external" url="https://www.dataweavers.com/" anchor="" target="" />

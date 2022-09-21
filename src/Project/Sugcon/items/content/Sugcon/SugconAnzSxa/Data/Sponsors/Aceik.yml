@@ -25,7 +25,7 @@ Languages:
         <image mediaid="{AF52CADA-DD45-4AEC-8AB6-AD1F5D9B0BB7}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "e49e2e28-5cb9-472b-8b01-f891039c53df"
+      Value: "57d6d85e-4544-4c6c-b5c4-d333cf33b7f1"
     - ID: "a1f84fce-5b88-48a1-803b-1ca7f6a47563"
       Hint: SponsorDescription
       Value: |
@@ -38,10 +38,14 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\jcy@sitecore.net
+        sitecore\sebw@sitecore.net
     - ID: "c796441d-0c1f-4435-9cf7-9d123ff6b937"
       Hint: SponsorName
       Value: Aceik
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220906T135119Z
+      Value: 20220921T121543Z
+    - ID: "e879e1b0-4cf7-471c-9a90-3f1cff185c9a"
+      Hint: SponsorUrlLink
+      Value: |
+        <link linktype="external" url="https://www.aceik.com.au/" anchor="" target="" />
