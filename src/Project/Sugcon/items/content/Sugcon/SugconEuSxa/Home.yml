@@ -24,24 +24,13 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{E81B72DC-B02E-404F-8FEE-3F2677567084}"
-              p:before="*"
-              s:id="{3836D951-BB14-43AC-9231-649B7F245DC5}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B3932A1EC-A7A5-4117-B845-4EEA4F2B6D87%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=6"
-              s:ph="/headless-main/container-3" />
-            <r
-              uid="{66EA51BA-B82E-4C4C-817F-B51F8DA06442}"
-              p:after="r[@uid='{E81B72DC-B02E-404F-8FEE-3F2677567084}']"
-              s:id="{C5F905F8-FD1F-444E-A9E5-AC6B774FF0DE}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D%7C%7BC3767F66-03BE-4587-B22C-C0D28B45C319%7D&amp;FieldNames=%7B7A30FADD-53BB-4779-B80D-5AD7F01457DB%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=7"
-              s:ph="/headless-main/container-3" />
-            <r
               uid="{DD864E2B-7270-492A-B4BE-C102E7A7C867}"
-              p:after="r[@uid='{66EA51BA-B82E-4C4C-817F-B51F8DA06442}']"
+              p:before="*"
               s:ds="local:/Data/Text 1"
               s:id="{9C6D53E3-FE57-4638-AF7B-6D68304C7A94}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D%7C%7BC3767F66-03BE-4587-B22C-C0D28B45C319%7D&amp;FieldNames=%7BE3174201-325E-4362-AF41-A70A6A95716C%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=9"
-              s:ph="/headless-main/container-3" />
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D%7C%7BC3767F66-03BE-4587-B22C-C0D28B45C319%7D&amp;FieldNames=%7BE3174201-325E-4362-AF41-A70A6A95716C%7D&amp;Styles&amp;RenderingIdentifier&amp;DynamicPlaceholderId=9"
+              s:ph="/headless-main/container-3"
+              s:ccb="Clear on publish" />
             <r
               uid="{E6340255-8A5C-498C-828A-41BE2303D3A0}"
               p:after="r[@uid='{DD864E2B-7270-492A-B4BE-C102E7A7C867}']"
@@ -80,22 +69,17 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "60985bff-7e5d-40a5-8209-de015a43e6e4"
       Hint: Content
-      Value: |
-        <p>We hope that you found the conference to be informative, helpful, inspirational, and fun.</p>
-        <p>We would like to thank all speakers for your valuable insights, tips and tricks, know-how, and overall outstanding content! We extremely appreciate уour efforts in sharing your experience with the community.</p>
-        <p>We want to express our gratitude to all sponsors. Your support made SUGCON Europe 2022 a success!</p>
-        <p>In order to make next year’s conference even more successful, we request that you fill out the post-event survey. We thank you in advance for your comments and suggestions and we will do our best to make SUGCON Europe 2023 even better.</p>
-        <p><strong>Sitecore Community is truly the best in the world! See you next year!</strong></p>
+      Value: 
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "91442ded-fd95-4bf8-85d6-35119efd8de7"
+      Value: "140572d9-2ccc-4eb3-ac55-befa8957be24"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
-      Value: "Organizing Committee and Sitecore would like to thank all SUGCON Europe 2022 attendees!"
+      Value: Home
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rics@sitecore.net
+        sitecore\rea@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220706T145309Z
+      Value: 20220921T013941Z
