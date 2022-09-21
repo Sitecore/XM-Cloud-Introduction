@@ -2,34 +2,49 @@
 
 <div class="mvp-fs-applyapplicationform col-12">
     <partial name="~/Views/Shared/Components/ApplyApplicationForm/_Progress.cshtml" />
-    <h2 asp-for="ObjectivesTitleLabel"></h2>
-    <form method="post">
-        <input asp-for="IsNavigation" type="hidden" value="false" />
-        <input asp-for="CurrentStep" type="hidden" value="Objectives"/>
-        <div class="form-group">
-            <label asp-for="Eligibility">
-                @(Model.IsEditing ? Html.Raw(Model.EligibilityLabel.EditableMarkup) : Model.EligibilityLabel.Value)
-            </label>
-            <textarea asp-for="Eligibility" rows="3" class="form-control" required></textarea>
+    <div class="step bg-white">
+        <div class="row">
+            <div class="col-7">
+                <h2 asp-for="ObjectivesTitleLabel"></h2>
+            </div>
+            <div class="col-5 text-right font-weight-bold">
+                @(Html.Raw(Model.IsEditing ?
+                    Model.StepLabelFormat.EditableMarkup :
+                    string.Format(Model.StepLabelFormat.Value, "<span class=\"currentstep\">4</span>", 6)))
+            </div>
         </div>
-        <div class="form-group">
-            <label asp-for="Objectives">
-                @(Model.IsEditing ? Html.Raw(Model.ObjectivesLabel.EditableMarkup) : Model.ObjectivesLabel.Value)
-            </label>
-            <textarea asp-for="Objectives" rows="3" class="form-control" required></textarea>
+        <form id="applicationObjectivesForm" method="post">
+            <input asp-for="IsNavigation" type="hidden" value="false"/>
+            <input asp-for="CurrentStep" type="hidden" value="Objectives"/>
+            <div class="form-group">
+                <label asp-for="Eligibility">
+                    @(Model.IsEditing ? Html.Raw(Model.EligibilityLabel.EditableMarkup) : Model.EligibilityLabel.Value)
+                </label>
+                <span class="text-danger">*</span>
+                <textarea asp-for="Eligibility" rows="3" class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+                <label asp-for="Objectives">
+                    @(Model.IsEditing ? Html.Raw(Model.ObjectivesLabel.EditableMarkup) : Model.ObjectivesLabel.Value)
+                </label>
+                <span class="text-danger">*</span>
+                <textarea asp-for="Objectives" rows="3" class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentors">
+                    @(Model.IsEditing ? Html.Raw(Model.MentorsLabel.EditableMarkup) : Model.MentorsLabel.Value)
+                </label>
+                <input asp-for="Mentors" class="form-control"/>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </form>
+        <form id="applicationBackForm" method="post">
+            <input asp-for="IsNavigation" type="hidden" value="true"/>
+            <input asp-for="CurrentStep" type="hidden" value="Profile"/>
+        </form>
+        <div class="navigation">
+            <button asp-for="PreviousLabel" type="submit" class="btn btn-secondary" form="applicationBackForm"></button>
+            <button asp-for="NextLabel" type="submit" class="btn btn-primary" form="applicationObjectivesForm"></button>
         </div>
-        <div class="form-group">
-            <label asp-for="Mentors">
-                @(Model.IsEditing ? Html.Raw(Model.MentorsLabel.EditableMarkup) : Model.MentorsLabel.Value)
-            </label>
-            <input asp-for="Mentors" class="form-control"/>
-        </div>
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <button asp-for="NextLabel" type="submit" class="btn btn-primary"></button>
-    </form>
-    <form method="post">
-        <input asp-for="IsNavigation" type="hidden" value="true"/>
-        <input asp-for="CurrentStep" type="hidden" value="Profile"/>
-        <button asp-for="PreviousLabel" type="submit" class="btn btn-secondary"></button>
-    </form>
+    </div>
 </div>

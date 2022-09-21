@@ -1,0 +1,115 @@
+﻿@import '../../../_colors.scss';
+
+.mvp-fs-applyapplicationform {
+    z-index: 0;
+
+    h2 {
+        padding-top: 0.5em;
+    }
+
+    .progressbar {
+        margin-bottom: 2em;
+        overflow: hidden;
+        padding: 0;
+        display: flex;
+
+        li {
+            list-style-type: none;
+            flex: 1 1 auto;
+            position: relative;
+            text-align: center;
+            color: $unfocussed-bg;
+
+            &:before {
+                width: 50px;
+                height: 50px;
+                line-height: 45px;
+                display: block;
+                font-size: 1.2em;
+                color: $sitecore-red;
+                border-radius: 50%;
+                margin: 0 auto 10px auto;
+                padding: 2px;
+                border: 2px solid $unfocussed-bg;
+                font-family: FontAwesome;
+                background-color: $background;
+            }
+
+            &:after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: $unfocussed-bg;
+                position: absolute;
+                left: 0;
+                top: 25px;
+                z-index: -1;
+            }
+
+            &.active {
+                color: $sitecore-red;
+
+                &:before {
+                    color: $contrast-text;
+                    border: none;
+                    background-color: $sitecore-red;
+                }
+
+                &:after {
+                    background-color: $sitecore-red;
+                }
+            }
+        }
+    }
+
+    .step {
+        padding: 2em;
+    }
+
+    .navigation {
+        margin-top: 2em;
+    }
+
+    span.currentstep {
+        color: $sitecore-red;
+    }
+
+    .btn {
+        border: none;
+        border-radius: 0;
+
+        i.fa {
+            color: $contrast-text;
+        }
+    }
+
+    .btn-primary {
+        background-color: $sitecore-teal;
+    }
+
+    .btn-secondary {
+        background-color: $unfocussed-bg;
+    }
+
+    input, textarea, select {
+        border-bottom: 2px solid $unfocussed-bg;
+        border-radius: 0px;
+        margin-bottom: 25px;
+        margin-top: 2px;
+        box-sizing: border-box;
+        color: $text;
+        background-color: $background;
+        font-size: 1.2em;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-family: "AvenirNextW05-Regular";
+        width: 100%;
+    }
+
+    input[type=checkbox] {
+        margin-right: 0.5em;
+        width: 1.5em;
+        height: 1.5em;
+    }
+}

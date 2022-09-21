@@ -81,7 +81,7 @@ Languages:
       Value: "What are your objectives for the next year?"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d220b371-be40-4f5d-a203-a8c689b3f255"
+      Value: "9c4af475-4ec6-47a0-88c6-f2b76402237c"
     - ID: "9c31ec21-8cc9-452c-aecd-63feaa35ec6f"
       Hint: StartLabel
       Value: Begin Application
@@ -109,7 +109,7 @@ Languages:
       Value: MVP Category
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220919T115458Z
+      Value: 20220921T132921Z
     - ID: "e9631ea3-2df0-4c18-8e6d-9a84e06717c8"
       Hint: NextLabel
       Value: Next
@@ -125,6 +125,12 @@ Languages:
     - ID: "f6b1ae46-9cd9-487f-a9f8-fd68e3d68430"
       Hint: ContributionNameLabel
       Value: Name
+    - ID: "fb44ffb8-f500-402c-9503-9f74b8024c95"
+      Hint: StepLabelFormat
+      Value: "Step {0} of {1}"
+    - ID: "fd650757-bfc9-44ae-b1de-75d3670b0c6a"
+      Hint: ContributionsDescriptionLabel
+      Value: Please submit contributions according to good judgement. If you have multiple links related to a single contribution submit them with logical type, name and description on the same date.
     - ID: "fd701c89-49b4-4ebc-8056-83a78c88248b"
       Hint: MypTypeStepLabel
       Value: Category

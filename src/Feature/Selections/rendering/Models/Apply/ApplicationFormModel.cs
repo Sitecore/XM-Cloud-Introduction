@@ -128,5 +128,7 @@ namespace Mvp.Feature.Selections.Models.Apply
         public TextField SubmitLabel { get; set; }
 
         public TextField SubmittedMessageLabelFormat { get; set; }
+
+        public TextField StepLabelFormat { get; set; }
     }
 }

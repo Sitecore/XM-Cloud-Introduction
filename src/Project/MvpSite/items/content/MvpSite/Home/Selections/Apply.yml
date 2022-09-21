@@ -25,6 +25,9 @@ SharedFields:
           s:id="{57805937-D345-4A28-8DDF-C62EE43D8EBA}"
           s:par="CacheClearingBehavior=Clear on publish"
           s:ph="main" />
+        <r
+          uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}"
+          s:ph="header-signin" />
       </d>
     </r>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
@@ -51,7 +54,7 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "664219cf-f941-4c99-8ea7-f056200c2af4"
+      Value: "fb1256af-8583-47ea-a9f4-f86ef220858e"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Apply
@@ -61,4 +64,4 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220913T142309Z
+      Value: 20220920T064326Z

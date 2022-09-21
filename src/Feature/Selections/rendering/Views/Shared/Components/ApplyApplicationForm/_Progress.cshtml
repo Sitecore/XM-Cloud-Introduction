@@ -1,23 +1,50 @@
 ﻿@using Mvp.Feature.Selections.Models.Apply
 @model Mvp.Feature.Selections.Models.Apply.ApplicationFormModel
+@{
+    int progressPercentage = 0;
+    switch (Model.NextStep)
+    {
+        case ApplicationStep.Consent:
+            progressPercentage = 16;
+            break;
+        case ApplicationStep.MvpType:
+            progressPercentage = 33;
+            break;
+        case ApplicationStep.Profile:
+            progressPercentage = 50;
+            break;
+        case ApplicationStep.Objectives:
+            progressPercentage = 67;
+            break;
+        case ApplicationStep.Contributions:
+            progressPercentage = 84;
+            break;
+        case ApplicationStep.Confirmation:
+            progressPercentage = 99;
+            break;
+    }
+}
 
-<div class="progress">
-    <div class="progress-bar @(Model.NextStep > ApplicationStep.Consent ? "bg-success" : "bg-primary")" style="width: 16%;">
-        @(Model.IsEditing ? Html.Raw(Model.ConsentStepLabel.EditableMarkup) : Model.ConsentStepLabel.Value)
-    </div>
-    <div class="progress-bar @(Model.NextStep < ApplicationStep.MvpType ? "bg-secondary" : Model.NextStep == ApplicationStep.MvpType ? "bg-primary" : "bg-success")" style="width: 17%;">
-        @(Model.IsEditing ? Html.Raw(Model.MypTypeStepLabel.EditableMarkup) : Model.MypTypeStepLabel.Value)
-    </div>
-    <div class="progress-bar @(Model.NextStep < ApplicationStep.Profile ? "bg-secondary" : Model.NextStep == ApplicationStep.Profile ? "bg-primary" : "bg-success")" style="width: 17%;">
-        @(Model.IsEditing ? Html.Raw(Model.ProfileStepLabel.EditableMarkup) : Model.ProfileStepLabel.Value)
-    </div>
-    <div class="progress-bar @(Model.NextStep < ApplicationStep.Objectives ? "bg-secondary" : Model.NextStep == ApplicationStep.Objectives ? "bg-primary" : "bg-success")" style="width: 17%;">
-        @(Model.IsEditing ? Html.Raw(Model.ObjectivesStepLabel.EditableMarkup) : Model.ObjectivesStepLabel.Value)
-    </div>
-    <div class="progress-bar @(Model.NextStep < ApplicationStep.Contributions ? "bg-secondary" : Model.NextStep == ApplicationStep.Contributions ? "bg-primary" : "bg-success")" style="width: 17%;">
-        @(Model.IsEditing ? Html.Raw(Model.ContributionsStepLabel.EditableMarkup) : Model.ContributionsStepLabel.Value)
-    </div>
-    <div class="progress-bar @(Model.NextStep < ApplicationStep.Confirmation ? "bg-secondary" : Model.NextStep == ApplicationStep.Confirmation ? "bg-primary" : "bg-success")" style="width: 16%;">
-        @(Model.IsEditing ? Html.Raw(Model.ConfirmationStepLabel.EditableMarkup) : Model.ConfirmationStepLabel.Value)
-    </div>
+<ul class="progressbar d-none d-md-flex">
+    <li class="fa-check-square-o @(Model.NextStep >= ApplicationStep.Consent ? "active" : string.Empty)">
+        <strong>@(Model.IsEditing ? Html.Raw(Model.ConsentStepLabel.EditableMarkup) : Model.ConsentStepLabel.Value)</strong>
+    </li>
+    <li class="fa-th-list @(Model.NextStep >= ApplicationStep.MvpType ? "active" : string.Empty)">
+        <strong>@(Model.IsEditing ? Html.Raw(Model.MypTypeStepLabel.EditableMarkup) : Model.MypTypeStepLabel.Value)</strong>
+    </li>
+    <li class="fa-user @(Model.NextStep >= ApplicationStep.Profile ? "active" : string.Empty)">
+        <strong>@(Model.IsEditing ? Html.Raw(Model.ProfileStepLabel.EditableMarkup) : Model.ProfileStepLabel.Value)</strong>
+    </li>
+    <li class="fa-bullseye @(Model.NextStep >= ApplicationStep.Objectives ? "active" : string.Empty)">
+        <strong>@(Model.IsEditing ? Html.Raw(Model.ObjectivesStepLabel.EditableMarkup) : Model.ObjectivesStepLabel.Value)</strong>
+    </li>
+    <li class="fa-handshake-o @(Model.NextStep >= ApplicationStep.Contributions ? "active" : string.Empty)">
+        <strong>@(Model.IsEditing ? Html.Raw(Model.ContributionsStepLabel.EditableMarkup) : Model.ContributionsStepLabel.Value)</strong>
+    </li>
+    <li class="fa-check @(Model.NextStep >= ApplicationStep.Confirmation ? "active" : string.Empty)">
+        <strong>@(Model.IsEditing ? Html.Raw(Model.ConfirmationStepLabel.EditableMarkup) : Model.ConfirmationStepLabel.Value)</strong>
+    </li>
+</ul>
+<div class="progress d-md-none">
+    <div class="progress-bar progress-bar-animated progress-bar-striped" style="width: @progressPercentage%;"></div>
 </div>

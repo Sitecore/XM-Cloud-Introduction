@@ -2,18 +2,32 @@
 
 <div class="mvp-fs-applyapplicationform col-12">
     <partial name="~/Views/Shared/Components/ApplyApplicationForm/_Progress.cshtml" />
-    <h2 asp-for="ConsentTitleLabel"></h2>
-    <div asp-for="ConsentInformation"></div>
-    <form method="post">
-        <input asp-for="IsNavigation" type="hidden" value="false"/>
-        <input asp-for="CurrentStep" type="hidden" value="Consent"/>
-        <div class="form-check">
-            @Html.EditorFor(m => m.IsConsentGiven, new { @class = "form-check-input" })
-            <label asp-for="IsConsentGiven" class="form-check-label">
-                @(Model.IsEditing ? Html.Raw(Model.ConsentLabel.EditableMarkup) : Model.ConsentLabel.Value)
-            </label>
+    <div class="step bg-white">
+        <div class="row">
+            <div class="col-7">
+                <h2 asp-for="ConsentTitleLabel"></h2>
+            </div>
+            <div class="col-5 text-right font-weight-bold">
+                @(Html.Raw(Model.IsEditing ?
+                    Model.StepLabelFormat.EditableMarkup : 
+                    string.Format(Model.StepLabelFormat.Value, "<span class=\"currentstep\">1</span>", 6)))
+            </div>
         </div>
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <button asp-for="StartLabel" type="submit" class="btn btn-primary"></button>
-    </form>
+        
+        <p asp-for="ConsentInformation"></p>
+        <form id="applicationConsentForm" method="post">
+            <input asp-for="IsNavigation" type="hidden" value="false"/>
+            <input asp-for="CurrentStep" type="hidden" value="Consent"/>
+            <div class="form-check">
+                @Html.CheckBoxFor(m => m.IsConsentGiven, new { @class = "align-middle" })
+                <label asp-for="IsConsentGiven" class="w-75 align-middle">
+                    @(Model.IsEditing ? Html.Raw(Model.ConsentLabel.EditableMarkup) : Model.ConsentLabel.Value)
+                </label>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </form>
+        <div class="navigation">
+            <button asp-for="StartLabel" type="submit" class="btn btn-primary" form="applicationConsentForm"></button>
+        </div>
+    </div>
 </div>

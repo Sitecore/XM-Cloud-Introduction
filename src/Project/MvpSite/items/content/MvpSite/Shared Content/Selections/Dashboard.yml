@@ -29,7 +29,7 @@ Languages:
         <link text="Manage Applications" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{D296373D-623E-461B-8D7A-C274E23CBEDB}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ccd9e2cc-a37f-43b9-a917-ef62ec0a4c44"
+      Value: "1caf60c3-fecd-4b59-a86c-09429a29b7c3"
     - ID: "936da302-d3cd-4d65-88f9-b19ad9347885"
       Hint: AdminUsersOverviewLink
       Value: |
@@ -42,6 +42,10 @@ Languages:
       Hint: AdminMvpTypesOverviewLink
       Value: |
         <link text="Manage MVP Types" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{19CFDCCE-D229-4A51-A9A6-2D594EB3DE5A}" />
+    - ID: "d494e955-5392-40bb-8836-67b523381643"
+      Hint: MyCurrentApplicationLink
+      Value: |
+        <link text="My current application" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{B3D36988-B4AE-4915-A6CF-F5133BE4E100}" />
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220913T101751Z
+      Value: 20220920T063340Z

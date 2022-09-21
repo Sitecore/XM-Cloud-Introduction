@@ -394,7 +394,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 !model.IsNavigation.Value &&
                 model.ContributionDate.HasValue &&
                 !string.IsNullOrWhiteSpace(model.ContributionName) &&
-                (string.IsNullOrWhiteSpace(model.ContributionLink.OriginalString) || Uri.IsWellFormedUriString(model.ContributionLink.OriginalString, UriKind.Absolute)))
+                (string.IsNullOrWhiteSpace(model.ContributionLink?.OriginalString) || Uri.IsWellFormedUriString(model.ContributionLink?.OriginalString, UriKind.Absolute)))
             {
                 Contribution contribution = new (Guid.Empty)
                 {
