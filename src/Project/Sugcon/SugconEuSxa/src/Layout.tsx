@@ -19,7 +19,11 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
   return (
     <>
       <Head>
-        <title>{route?.fields?.Title?.value ? 'SUGCON Europe - ' + route?.fields?.Title?.value : 'SUGCON Europe'}</title>
+        <title>
+          {route?.fields?.Title?.value
+            ? 'SUGCON Europe - ' + route?.fields?.Title?.value
+            : 'SUGCON Europe'}
+        </title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
       </Head>
 
