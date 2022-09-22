@@ -1,15 +1,12 @@
 ﻿---
-ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
-Parent: "41f996ad-4163-4cad-9cbc-e0d64107c8d0"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Project/Sugcon/App Route/Content/Title
+ID: "c55cffac-b11e-4a30-9dd9-1674fc51b9a1"
+Parent: "1382c86f-3a60-4b87-92cc-daf6f4166474"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/Sugcon/Social and SEO Tagging/_OpenGraphTags
 SharedFields:
-- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
-  Hint: Type
-  Value: "Single-Line Text"
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 1
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 Languages:
 - Language: en
   Versions:
@@ -17,22 +14,22 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220519T090804Z
+      Value: 20220922T100223Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\sebw@sitecore.net
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\sebw@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a29ceb8a-cb7b-4063-b30b-32720bab6a96"
+      Value: "856ab258-14d4-41af-bd09-2793463aae26"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sebw@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220922T111716Z
+      Value: 20220922T111741Z

@@ -66,6 +66,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220519T144649Z
+    - ID: "26c47756-a47c-4234-89af-d4660ece7ca4"
+      Hint: OgDescription
+      Value: 
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: SugconAnzSxa
@@ -77,16 +80,32 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "68d3b246-7b9a-41a7-a2c1-4940ecf0d394"
+      Hint: OgTitle
+      Value: Sugcon EU
+    - ID: "74f7afe1-a0e2-4a1d-8ba9-e52666806c9f"
+      Hint: OgImage
+      Value: |
+        <image mediaid="{3D7AA8FA-CEC8-4949-8AE0-D7C8EF109236}" />
+    - ID: "79f9d33c-f64e-49e7-b80a-9b26e43a409e"
+      Hint: MetaKeywords
+      Value: Sugcon EU, Europe, Sitecore, Usergroup, Conference
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "372eed5a-e356-4377-ba15-195c8cdea0d3"
+      Value: "c41f95d4-a807-4b80-b18e-f617849699b7"
+    - ID: "924cb302-5abd-4e49-941f-18626daed08d"
+      Hint: OgType
+      Value: article
+    - ID: "afb023d3-4d65-4023-bd85-5f7383e32a08"
+      Hint: MetaDescription
+      Value: 
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
       Value: Home
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rea@sitecore.net
+        sitecore\sebw@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220921T013457Z
+      Value: 20220922T155346Z
