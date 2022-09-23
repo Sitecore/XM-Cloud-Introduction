@@ -66,8 +66,8 @@ export const Default = (props: SponsorListProps): JSX.Element => {
                         <br />
                         {Sponsor?.fields?.SponsorUrlLink?.value ? (
                           <Link field={Sponsor?.fields?.SponsorUrlLink}></Link>
-                          ) : (''
-                          )}
+                        ) : (''
+                        )}
                       </div>
                     );
                   })
@@ -106,8 +106,8 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
                     <br />
                     {Sponsor?.fields?.SponsorUrlLink?.value ? (
                       <Link field={Sponsor?.fields?.SponsorUrlLink}></Link>
-                      ) : (''
-                      )}                    
+                    ) : (''
+                    )}                    
                   </div>
                   <div className="col-12 col-md-6">
                     <div className="sponsorImgPlatinumOuter">
