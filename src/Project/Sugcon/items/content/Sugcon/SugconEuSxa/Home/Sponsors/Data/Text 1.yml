@@ -25,16 +25,16 @@ Languages:
     - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
       Hint: Text
       Value: |
-        <h2>WE WOULD LIKE TO THANK AND EXPRESS OUR GRATITUDE TO OUR SPONSORS</h2>
+        <h1>WE WOULD LIKE TO THANK AND EXPRESS OUR GRATITUDE TO OUR SPONSORS</h1>
         <p>Without the help of these amazing sponsors, we couldn't organize such a great event like SUGCON Europe 2022!&nbsp;</p>
         <p>The entire conference is run by the Sitecore community for the Sitecore community.</p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "68f67bb2-876d-4715-b864-8011f149d627"
+      Value: "fa83ad45-782a-4aa1-a3a8-eb8fd92bd975"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rics@sitecore.net
+        sitecore\sebw@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220706T183142Z
+      Value: 20220920T122045Z

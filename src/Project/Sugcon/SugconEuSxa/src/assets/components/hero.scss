@@ -12,7 +12,7 @@
     padding-right: 20px;
     font-size: 40px;
     background-color: white;
-    opacity: 80%;
+    //opacity: 80%;
 
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.85);
@@ -21,16 +21,15 @@
 @media (min-width: 1824px) {
     .caption {
         position: absolute;
-        top: 20%;
-        left: 30%;
+        //top: 20%;
+        //left: 30%;
         width: 20%;
         color: black;
         padding-left: 20px;
         padding-right: 20px;
         font-size: 40px;
         background-color: white;
-        opacity: 80%;
-    
+        //opacity: 80%;    
         padding: 2rem;
         background-color: rgba(255, 255, 255, 0.85);
     }
@@ -49,4 +48,16 @@
     letter-spacing: 2.8px;
     text-transform: uppercase;
     font-family: "AvenirNextW05-Regular", "Arial";
+}
+.hero h1 {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 60px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.hero-backdrop {
+    width: 60%;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.85);
 }
