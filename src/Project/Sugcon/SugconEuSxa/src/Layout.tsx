@@ -24,7 +24,36 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
             ? 'SUGCON Europe - ' + route?.fields?.Title?.value
             : 'SUGCON Europe'}
         </title>
+        
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
+        
+        {/* Meta Tags */}
+        {route?.fields?.MetaDescription?.value
+          ? <meta name="description" content={`${route?.fields?.MetaDescription?.value}`}/>
+          : ''}
+
+        {route?.fields?.MetaKeywords?.value
+          ? <meta name="keywords" content={`${route?.fields?.MetaKeywords?.value}`}/>
+          : ''}
+        
+        {/* Open Graph Tags */}
+        {route?.fields?.OgTitle?.value
+          ? <meta property="og:title" content={`${route?.fields?.OgTitle?.value}`}/>
+          : ''}
+
+        {route?.fields?.OgDescription?.value
+          ? <meta property="og:description" content={`${route?.fields?.OgDescription?.value}`}/>
+          : ''}
+
+        {route?.fields?.OgImage?.value?.src
+          ? <meta property="og:Image" content={`${route?.fields?.OgImage?.value?.src}`}/>
+          : ''}
+
+        {route?.fields?.OgType?.value
+          ? <meta property="og:Type" content={`${route?.fields?.OgType?.value}`}/>
+          : ''}
+
+        
       </Head>
 
       {/* root placeholder for the app, which we add components to using route data */}
