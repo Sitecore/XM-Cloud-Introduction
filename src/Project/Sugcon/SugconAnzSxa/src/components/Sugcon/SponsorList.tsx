@@ -6,6 +6,8 @@ import {
   ImageField,
   Image,
   RichTextField,
+  Link,
+  LinkField,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
@@ -24,6 +26,7 @@ interface SponsorProps {
     SponsorUrl: Field<string>;
     SponsorLogo: ImageField;
     SponsorDescription: RichTextField;
+    SponsorUrlLink: LinkField;
   };
 }
 
@@ -53,7 +56,7 @@ export const Default = (props: SponsorListProps): JSX.Element => {
                     return (
                       <div
                         key={Sponsor.fields.SponsorName.value}
-                        className="col-6 col-md-4 col-lg-3 SponsorBlock"
+                        className="col-12 col-md-4 col-lg-3 SponsorBlock"
                       >
                         <div className="SponsorImage">
                           <Image field={Sponsor?.fields.SponsorLogo} />
@@ -61,7 +64,11 @@ export const Default = (props: SponsorListProps): JSX.Element => {
                         <br />
                         <RichText field={Sponsor?.fields?.SponsorDescription} />
                         <br />
-                        <Text field={Sponsor?.fields?.SponsorUrl} />
+                        {Sponsor?.fields?.SponsorUrlLink?.value ? (
+                          <Link field={Sponsor?.fields?.SponsorUrlLink}></Link>
+                        ) : (
+                          ''
+                        )}
                       </div>
                     );
                   })
@@ -98,7 +105,11 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
                     <br />
                     <RichText field={Sponsor?.fields?.SponsorDescription} />
                     <br />
-                    <Text field={Sponsor?.fields?.SponsorUrl} />
+                    {Sponsor?.fields?.SponsorUrlLink?.value ? (
+                      <Link field={Sponsor?.fields?.SponsorUrlLink}></Link>
+                    ) : (
+                      ''
+                    )}
                   </div>
                   <div className="col-12 col-md-6">
                     <div className="sponsorImgPlatinumOuter">

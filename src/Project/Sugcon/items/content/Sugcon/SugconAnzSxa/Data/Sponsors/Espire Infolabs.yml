@@ -25,7 +25,7 @@ Languages:
         <image mediaid="{23D89398-B505-458A-A8E8-BA48E2B17BBD}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3087d78b-d440-48db-be80-0ead588201a4"
+      Value: "de1d4c1c-ea03-4ebb-8663-86e53a0ccbdd"
     - ID: "a1f84fce-5b88-48a1-803b-1ca7f6a47563"
       Hint: SponsorDescription
       Value: |
@@ -38,10 +38,14 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\jcy@sitecore.net
+        sitecore\sebw@sitecore.net
     - ID: "c796441d-0c1f-4435-9cf7-9d123ff6b937"
       Hint: SponsorName
       Value: Espire Infolabs
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220906T135327Z
+      Value: 20220921T124117Z
+    - ID: "e879e1b0-4cf7-471c-9a90-3f1cff185c9a"
+      Hint: SponsorUrlLink
+      Value: |
+        <link linktype="external" url="http://www.espire.com/" anchor="" target="" />

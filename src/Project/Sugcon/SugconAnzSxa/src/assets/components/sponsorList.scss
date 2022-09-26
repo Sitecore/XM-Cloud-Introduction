@@ -2,6 +2,7 @@
 .platinum {
     background-color: white;
     padding-top: 25px;
+    padding-bottom: 25px;
 }
 .sponsorTeaser{
     margin-top: 12px;
@@ -50,16 +51,19 @@
         
     }
     img{
-        width: 100%;
+        width: 80%;
         height: 100%;
+        margin-top: 20%;
+        margin-left: 10%;
+
     }
 }
 .SponsorImage{
-width: 218px;
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-margin: 0;
+//width: 218px;
+//position: absolute;
+//top: 50%;
+//transform: translateY(-50%);
+//margin: 0;
 
 
 
@@ -68,16 +72,20 @@ margin: 0;
 .SponsorImage img {
 width: 100%;
 height: auto;   
-max-height: 113px; 
+//max-height: 113px; 
     
 }
 
+.SponsorImage2{
+    margin-top: 20px;
+}
+
 .SponsorBlock{
-padding: 16px;
+padding: 20px;
     background-color: white;
-    width: 250px;
+    //width: 250px;
     margin-top: 30px;
-    height: 145px;
+    //height: 145px;
     position: relative;
     float: left;
     margin-right: 16px;
