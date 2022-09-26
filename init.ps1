@@ -1,36 +1,22 @@
 #Requires -RunAsAdministrator
 [CmdletBinding(DefaultParameterSetName = "no-arguments")]
 Param (
-	[Parameter(HelpMessage = "Enables initialization of values in the .env file, which may be placed in source control.",
-        ParameterSetName = "env-init")]
+	[Parameter(HelpMessage = "Enables initialization of values in the .env file, which may be placed in source control.")]
     [switch]$InitEnv,
-    [Parameter(Mandatory = $true,
-        HelpMessage = "The path to a valid Sitecore license.xml file.",
-        ParameterSetName = "env-init")]
+    [Parameter(Mandatory = $true, HelpMessage = "The path to a valid Sitecore license.xml file.")]
     [string]$LicenseXmlPath,
-
-    # We do not need to use [SecureString] here since the value will be stored unencrypted in .env,
-    # and used only for transient local development environments.
-    [Parameter(Mandatory = $true,
-        HelpMessage = "Sets the sitecore\\admin password for this environment via environment variable.",
-        ParameterSetName = "env-init")]
+    [Parameter(Mandatory = $true, HelpMessage = "Sets the sitecore\\admin password for this environment via environment variable.")]
     [String]$AdminPassword,
-
-    [Parameter(HelpMessage = "The Edge token used when running in Edge Mode.",
-        ParameterSetName = "env-init")]
+    [Parameter(HelpMessage = "The Edge token used when running in Edge Mode.")]
     [string]$Edge_Token,
-
-    [Parameter(HelpMessage = "The Okta domain used by the MVP Rendering Host.",
-        ParameterSetName = "env-init")]
+    [Parameter(HelpMessage = "The Okta domain used by the MVP Rendering Host.")]
     [string]$OKTA_Domain,
-
-    [Parameter(HelpMessage = "The Okta Client Id used by the MVP Rendering Host.",
-        ParameterSetName = "env-init")]
+    [Parameter(HelpMessage = "The Okta Client Id used by the MVP Rendering Host.")]
     [string]$OKTA_Client_Id,
-
-    [Parameter(HelpMessage = "The Okta Client Secret used by the MVP Rendering Host.",
-        ParameterSetName = "env-init")]
-    [string]$OKTA_Client_Secret
+    [Parameter(HelpMessage = "The Okta Client Secret used by the MVP Rendering Host.")]
+    [string]$OKTA_Client_Secret,
+    [Parameter(HelpMessage = "The URL for the MVP Selections API.")]
+    [string]$MVP_Selections_API
 )
 
 $ErrorActionPreference = "Stop";
@@ -51,7 +37,7 @@ $LicenseXmlPath = (Get-Item $LicenseXmlPath).Directory.FullName
 ##################
 # Create .env file
 ##################
-Write-Host "Creating Environment File..." -ForegroundColor Green
+Write-Host "Creating .env file." -ForegroundColor Green
 Copy-Item ".\.env.template" ".\.env" -Force
 
 ################################################
@@ -71,17 +57,17 @@ if (-not $SitecoreGallery) {
 $dockerToolsVersion = "10.2.7"
 Remove-Module SitecoreDockerTools -ErrorAction SilentlyContinue
 if (-not (Get-InstalledModule -Name SitecoreDockerTools -RequiredVersion $dockerToolsVersion -ErrorAction SilentlyContinue)) {
-    Write-Host "Installing SitecoreDockerTools..." -ForegroundColor Green
+    Write-Host "Installing SitecoreDockerTools." -ForegroundColor Green
     Install-Module SitecoreDockerTools -RequiredVersion $dockerToolsVersion -Scope CurrentUser -Repository $SitecoreGallery.Name
 }
-Write-Host "Importing SitecoreDockerTools..." -ForegroundColor Green
+Write-Host "Importing SitecoreDockerTools." -ForegroundColor Green
 Import-Module SitecoreDockerTools -RequiredVersion $dockerToolsVersion
 Write-SitecoreDockerWelcome
 
 ###########################
 # Setup site host variables
 ###########################
-Write-Host "Setting Hosts Values..." -ForegroundColor Green
+Write-Host "Setting HOSTS values." -ForegroundColor Green
 $Host_Suffix = "xmcloudcm.localhost"
 $CM_Host = $Host_Suffix
 $MVP_Host = "mvp.$Host_Suffix"
@@ -105,7 +91,7 @@ try {
             throw "Invalid mkcert.exe file"
         }
     }
-    Write-Host "Generating Traefik TLS certificate..." -ForegroundColor Green
+    Write-Host "Generating Traefik TLS certificate." -ForegroundColor Green
     & $mkcert -install
     & $mkcert "*.$Host_Suffix"
     & $mkcert $Host_Suffix
@@ -123,7 +109,7 @@ finally {
 ################################
 # Add Windows hosts file entries
 ################################
-Write-Host "Adding Windows hosts file entries..." -ForegroundColor Green
+Write-Host "Adding Windows hosts file entries." -ForegroundColor Green
 Add-HostsEntry $CM_Host
 Add-HostsEntry $MVP_Host
 Add-HostsEntry $SUGCON_EU_HOST
@@ -142,13 +128,6 @@ $scjssconfig = @{
 
 ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconAnzSxa\scjssconfig.json"
 ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconEuSxa\scjssconfig.json"
-Set-EnvFileVariable "JSS_DEPLOYMENT_SECRET_xmcloudpreview" -Value $xmCloudBuild.renderingHosts.sugconanz.jssDeploymentSecret
-
-################################
-# Generate Sitecore Api Key
-################################
-$sitecoreApiKey = (New-Guid).Guid
-Set-EnvFileVariable "SITECORE_API_KEY_xmcloudpreview" -Value $sitecoreApiKey
 
 ################################
 # Generate JSS_EDITING_SECRET
@@ -160,56 +139,25 @@ Set-EnvFileVariable "JSS_EDITING_SECRET" -Value $jssEditingSecret
 # Populate the environment file
 ###############################
 if ($InitEnv) {
-	Write-Host "Populating Environment File..." -ForegroundColor Green
-	
-	# HOST_LICENSE_FOLDER
+	Write-Host "Populating .env file." -ForegroundColor Green
 	Set-EnvFileVariable "HOST_LICENSE_FOLDER" -Value $LicenseXmlPath
-	
-	# CM_HOST
 	Set-EnvFileVariable "CM_HOST" -Value $CM_Host
-	
-	# MVP_RENDERING_HOST
 	Set-EnvFileVariable "MVP_RENDERING_HOST" -Value $MVP_Host
-	
-	# REPORTING_API_KEY
 	Set-EnvFileVariable "REPORTING_API_KEY" -Value (Get-SitecoreRandomString 128 -DisallowSpecial)
-	
-	# TELERIK_ENCRYPTION_KEY
 	Set-EnvFileVariable "TELERIK_ENCRYPTION_KEY" -Value (Get-SitecoreRandomString 128)
-	
-	# MEDIA_REQUEST_PROTECTION_SHARED_SECRET
 	Set-EnvFileVariable "MEDIA_REQUEST_PROTECTION_SHARED_SECRET" -Value (Get-SitecoreRandomString 64)
-	
-	# SQL_SA_PASSWORD
-	# Need to ensure it meets SQL complexity requirements
 	Set-EnvFileVariable "SQL_SA_PASSWORD" -Value (Get-SitecoreRandomString 19 -DisallowSpecial -EnforceComplexity)
-	
-	# SQL_SERVER
     Set-EnvFileVariable "SQL_SERVER" -Value "mssql"
-
-    # SQL_SA_LOGIN
     Set-EnvFileVariable "SQL_SA_LOGIN" -Value "sa"
-	
-	# SITECORE_ADMIN_PASSWORD
 	Set-EnvFileVariable "SITECORE_ADMIN_PASSWORD" -Value $AdminPassword
-	
-	# EXPERIENCE_EDGE_TOKEN
 	Set-EnvFileVariable "EXPERIENCE_EDGE_TOKEN" -Value $Edge_Token
-	
-	# JSS_EDITING_SECRET
 	Set-EnvFileVariable "JSS_EDITING_SECRET" -Value (Get-SitecoreRandomString 64 -DisallowSpecial)
-
-    # OKTA_DOMAIN
 	Set-EnvFileVariable "OKTA_DOMAIN" -Value $OKTA_Domain
-
-    # OKTA_CLIENT_ID
 	Set-EnvFileVariable "OKTA_CLIENT_ID" -Value $OKTA_Client_Id
-
-    # OKTA_CLIENT_SECRET
 	Set-EnvFileVariable "OKTA_CLIENT_SECRET" -Value $OKTA_Client_Secret
+    Set-EnvFileVariable "MVP_SELECTIONS_API" -Value $MVP_Selections_API
 }
-
-Write-Host "Done!" -ForegroundColor Green
+Write-Host "Finished populating .env file." -ForegroundColor Green
 
 ##########################
 # Show Certificate Details
