@@ -36,6 +36,7 @@ Examples of how to use them can be seen in the different setup guides for both L
 | OKTA_Domain        | **Yes**               | No                        | Okta domain used by the MVP Rendering host                      |
 | OKTA_Client_Id     | **Yes**               | No                        | Okta Client Id used by the MVP Rendering host                   |
 | OKTA_Client_Secret | **Yes**               | No                        | Okta Client Secret used by the MVP Rendering host               |
+| MVP_Selections_API | **Yes**               | No                        | URL for the MVP Selections API                                  |
 
 ## Okta Configuration
 If you wish to run the MVP Site you will need to provide Okta configuration details. You can generate these values for yourself by [Signing up for an Okta Developer Account](https://developer.okta.com/signup/)
