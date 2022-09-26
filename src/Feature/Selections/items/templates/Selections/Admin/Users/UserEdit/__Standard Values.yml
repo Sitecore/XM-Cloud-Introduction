@@ -1,0 +1,49 @@
+﻿---
+ID: "b4fdec6a-96cc-443c-be07-aa56edb78ac1"
+Parent: "54a4a815-5d37-488b-8e9f-287e21bbcdd4"
+Template: "54a4a815-5d37-488b-8e9f-287e21bbcdd4"
+Path: /sitecore/templates/Feature/Selections/Admin/Users/UserEdit/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "00ee3e02-aa05-4c4b-92a4-a174f25ee854"
+      Hint: SubmitLabel
+      Value: Submit
+    - ID: "09d778dc-06ae-4266-b44b-af0b6727ac2e"
+      Hint: CountryLabel
+      Value: Country
+    - ID: "0f55576a-62b0-4e00-aaa4-db30d9d38bbe"
+      Hint: SuccessLabel
+      Value: User edited successfully
+    - ID: "1e4f80aa-1217-44a6-b754-4892c8656009"
+      Hint: NameLabel
+      Value: Name
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220907T151514Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9543e2ab-0aa7-4e6e-b736-eda92695af06"
+    - ID: "a823c664-740f-4c3c-a6ba-e5215c521ad6"
+      Hint: IdentifierLabel
+      Value: Okta Id
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "ced3a9f2-4609-487a-b9d1-01eff673c5c8"
+      Hint: EmailLabel
+      Value: Email
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220913T071234Z

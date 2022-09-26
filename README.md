@@ -41,7 +41,7 @@ Examples of how to use them can be seen in the different setup guides for both L
 If you wish to run the MVP Site you will need to provide Okta configuration details. You can generate these values for yourself by [Signing up for an Okta Developer Account](https://developer.okta.com/signup/)
 
 # 💻 Running in Full Local Development Mode
-Running in Local Mode will run all of the application elemenets required on your local machine using Docker
+Running in Local Mode will run all of the application elements required on your local machine using Docker
 
 ## Initialize your repository for Local Mode
 First initialize your repo using the `.init/ps1` script, you can see an example of how to init for 'Local Mode' below

@@ -100,7 +100,8 @@ services:
       Okta__OktaDomain: ${OKTA_DOMAIN}
       Okta__ClientId: ${OKTA_CLIENT_ID}
       Okta__ClientSecret: ${OKTA_CLIENT_SECRET}
-      Okta__AuthorizationServerId: ${OKTA_AUTH_SERVER_ID}     
+      Okta__AuthorizationServerId: ${OKTA_AUTH_SERVER_ID}
+      MvpSelectionsApiClient__BaseAddress: ${MVP_SELECTIONS_API}
     depends_on:
       - solution
       - cm
@@ -168,8 +169,9 @@ services:
       ## SugconAnzsugcon/ Rendering Host
       SUGCONANZ_RENDERING_HOST_ENDPOINT_URI: "${SUGCON_ANZ_HOST_INTERNAL_URI}/api/editing/render"
       SUGCONANZ_RENDERING_HOST_PUBLIC_URI: "https://${SUGCON_ANZ_HOST}"
+      ## MVP Rendering Host
+      MVP_RENDERING_HOST_PUBLIC_URI: "https://${MVP_RENDERING_HOST}"
       ## Development Environment Optimizations
       SITECORE_DEVELOPMENT_PATCHES: DevEnvOn,CustomErrorsOff,DebugOn,DiagnosticsOff,InitMessagesOff
       Sitecore_AppSettings_exmEnabled:define: "no" # remove to turn on EXM
-      MVP_RENDERING_HOST_PUBLIC_URI: "https://${MVP_RENDERING_HOST}"
     entrypoint: powershell -Command "& C:\tools\entrypoints\iis\Development.ps1"

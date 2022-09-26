@@ -1,0 +1,70 @@
+﻿---
+ID: "d296373d-623e-461b-8d7a-c274e23cbedb"
+Parent: "b7b943c4-555d-40e1-9677-c68726686119"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/Selections/Admin/Applications
+BranchID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{9A338278-17D5-4397-A365-243B2241E718}"
+          p:before="*"
+          s:ds="{68196976-0E13-4AB1-9085-8FFD529E45E8}"
+          s:id="{5B679B3E-8A19-48EE-8777-6F873E607E51}"
+          s:par="CacheClearingBehavior=Clear on publish"
+          s:ph="/main/column-container-{0BBA88C5-9797-4C27-89FF-B4F09824BB4B}-0" />
+        <r
+          uid="{0BBA88C5-9797-4C27-89FF-B4F09824BB4B}"
+          p:after="r[@uid='{9A338278-17D5-4397-A365-243B2241E718}']"
+          s:id="{57805937-D345-4A28-8DDF-C62EE43D8EBA}"
+          s:par="CacheClearingBehavior=Clear on publish"
+          s:ph="main" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9AC6DDA3-8785-4C63-A2AB-457D8CC56D19}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220905T083541Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a3267a9e-4eac-4959-9816-20ba872215de"
+    - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
+      Hint: MenuTitle
+      Value: Applications
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "c58ed264-1f55-4aa3-a30e-da12ce43cb38"
+      Hint: RequiresAuthentication
+      Value: 1
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220912T154647Z
+    - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
+      Hint: IncludeInMenu
+      Value: 

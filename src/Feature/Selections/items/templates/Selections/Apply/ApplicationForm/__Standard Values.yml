@@ -1,0 +1,142 @@
+﻿---
+ID: "18eb040b-d9ff-4311-a214-f5f834096678"
+Parent: "a398873f-dddc-4cf1-ac7e-991d51adf0ee"
+Template: "a398873f-dddc-4cf1-ac7e-991d51adf0ee"
+Path: /sitecore/templates/Feature/Selections/Apply/ApplicationForm/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "16fd47dc-1e00-4631-a016-2d948cd684c8"
+      Hint: ObjectivesTitleLabel
+      Value: Objectives
+    - ID: "1844ce6f-397d-4ede-a1c0-7b7e8178c452"
+      Hint: ConfirmationTitleLabel
+      Value: Confirmation and Submission
+    - ID: "1ebe61d8-cdf1-4781-81fc-c3a9d3c6a993"
+      Hint: ErrorMessageLabel
+      Value: There is a problem with your User or Application. Please contact the MVP Program to proceed.
+    - ID: "1fff467c-3622-41f7-a553-d1b03f1e7b8f"
+      Hint: MvpTypeLabel
+      Value: Select a category
+    - ID: "20f00986-b72d-4994-ae80-9393223f66b2"
+      Hint: ConsentLabel
+      Value: "I consent to receive communications about Sitecore's business in accordance with Sitecore's Privacy Policy, I understand that I can opt-out at any time"
+    - ID: "2592ad0b-8beb-4122-8991-792067de2c80"
+      Hint: EligibilityLabel
+      Value: "Why do you believe you are eligible to be selected to be a Sitecore MVP?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220913T114105Z
+    - ID: "27e1fe96-4f7f-4f8c-b010-b73b41c10535"
+      Hint: ConfirmationStepLabel
+      Value: Confirmation
+    - ID: "2e70a5be-2946-4298-8c1f-3ef25346ef83"
+      Hint: ObjectivesStepLabel
+      Value: Objectives
+    - ID: "2f8ea22f-e2c5-4f2e-ba34-581dc464e35e"
+      Hint: ProfileTitleLabel
+      Value: Personal
+    - ID: "32909ab5-1add-46cf-a66b-92d169a4b234"
+      Hint: ConsentStepLabel
+      Value: Welcome
+    - ID: "3e5a8229-86ef-4b49-8632-afdaa6267a91"
+      Hint: SubmittedMessageLabelFormat
+      Value: "You successfully submitted your application for the selection of {0} on {1}. Thank you!"
+    - ID: "41136776-745b-4ac0-a5ac-0b9c860d84f2"
+      Hint: ProgramAgreementWarningLabel
+      Value: I understand that, if selected, I will be required to review and agree to the Sitecore MVP Program Agreement.
+    - ID: "4ad06178-072e-440d-92b5-fee1c0b07f88"
+      Hint: ReviewConsentLabel
+      Value: By submitting this application, I understand and agree that Sitecore employees, contractors and existing MVPs may review these materials as part of the MVP selection process.
+    - ID: "4c265294-9b68-4c8e-981f-88f7658b79c8"
+      Hint: ContributionDateLabel
+      Value: Date
+    - ID: "501c1d4f-bee7-46a4-a2b2-48d7fbc9189a"
+      Hint: AddLabel
+      Value: Add
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "548860ef-246b-4924-b5bb-5376cdf347e8"
+      Hint: ContributionsTitleLabel
+      Value: Contributions
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "63fbcb71-0aef-47c0-8d21-b36f3207b372"
+      Hint: CompleteLabel
+      Value: I confirm that my application is ready to be reviewed and processed.
+    - ID: "65aa51bd-274a-4f05-baa0-637789870690"
+      Hint: InactiveMessageLabel
+      Value: There currently is no active selection ongoing to submit an application against.
+    - ID: "6f39bd88-b29c-43d5-9009-300f505c534c"
+      Hint: ContributionsStepLabel
+      Value: Contributions
+    - ID: "896927b2-b118-4c8d-8366-ccafdb1c5629"
+      Hint: ObjectivesLabel
+      Value: "What are your objectives for the next year?"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9c4af475-4ec6-47a0-88c6-f2b76402237c"
+    - ID: "9c31ec21-8cc9-452c-aecd-63feaa35ec6f"
+      Hint: StartLabel
+      Value: Begin Application
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "c3ec3369-32b4-4f98-b316-12082335a348"
+      Hint: ConsentInformation
+      Value: By submitting my contact information I confirm that I have read and agree to the Sitecore Privacy Policy which explains how Sitecore collects, processes and shares my personal data. I consent to my data being processed in accordance with Sitecore's Privacy Policy so that Sitecore can optimize my experience with the Sitecore brand.
+    - ID: "c50c9c90-1694-40d1-bbbe-31dfa09f5568"
+      Hint: ProfileStepLabel
+      Value: Personal
+    - ID: "c7d26ded-fb4a-4c3a-98b8-4a784562a0c1"
+      Hint: ConsentTitleLabel
+      Value: Welcome
+    - ID: "cd8a8bd3-17e0-4488-a7b7-917990af5a77"
+      Hint: ContributionDescriptionLabel
+      Value: Description
+    - ID: "d83af848-62a5-4c21-99ad-b18d38c043c6"
+      Hint: ContributionLinkLabel
+      Value: Link
+    - ID: "d9b976a7-d90b-415f-8ce2-16cfb3f980e1"
+      Hint: MvpTypeTitleLabel
+      Value: MVP Category
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220921T132921Z
+    - ID: "e9631ea3-2df0-4c18-8e6d-9a84e06717c8"
+      Hint: NextLabel
+      Value: Next
+    - ID: "e9a35591-dcb1-40fe-9459-9062baac1419"
+      Hint: MentorsLabel
+      Value: "Did you have any mentors this year?"
+    - ID: "f2df5575-f32b-4c02-aec8-881352827655"
+      Hint: SubmitLabel
+      Value: Submit
+    - ID: "f44ad411-6ad7-4996-9e50-938bdae3216d"
+      Hint: PreviousLabel
+      Value: Previous
+    - ID: "f6b1ae46-9cd9-487f-a9f8-fd68e3d68430"
+      Hint: ContributionNameLabel
+      Value: Name
+    - ID: "fb44ffb8-f500-402c-9503-9f74b8024c95"
+      Hint: StepLabelFormat
+      Value: "Step {0} of {1}"
+    - ID: "fd650757-bfc9-44ae-b1de-75d3670b0c6a"
+      Hint: ContributionsDescriptionLabel
+      Value: Please submit contributions according to good judgement. If you have multiple links related to a single contribution submit them with logical type, name and description on the same date.
+    - ID: "fd701c89-49b4-4ebc-8056-83a78c88248b"
+      Hint: MypTypeStepLabel
+      Value: Category
+    - ID: "fdf9f690-0cb1-4f61-bd55-5e98c70660cd"
+      Hint: ContributionProductsLabel
+      Value: Related Products
+    - ID: "ff55e15a-4d03-4a0b-89a2-fa0773c7a17e"
+      Hint: ContributionTypeLabel
+      Value: Type

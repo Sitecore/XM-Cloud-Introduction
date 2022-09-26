@@ -1,0 +1,30 @@
+﻿---
+ID: "52e7ab6a-1d8f-431c-9e8c-863890d9df7b"
+Parent: "c34e4ad8-acd9-4a7f-904e-c52533153603"
+Template: "54a4a815-5d37-488b-8e9f-287e21bbcdd4"
+Path: /sitecore/content/MvpSite/Shared Content/Selections/Admin/User Edit
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0f55576a-62b0-4e00-aaa4-db30d9d38bbe"
+      Hint: SuccessLabel
+      Value: "User edited successfully!"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220907T151819Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dbaecdfe-ab5e-48a7-8561-15e2437520b7"
+    - ID: "b8cfdd18-c2c8-4e5e-93d2-14b988f05f39"
+      Hint: OverviewLink
+      Value: |
+        <link text="Return to Overview" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{AB56203A-BD8A-4DDA-BDD9-0B09E5BAA0CF}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220913T070815Z

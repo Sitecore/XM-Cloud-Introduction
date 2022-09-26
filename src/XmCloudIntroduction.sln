@@ -5,10 +5,10 @@ VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Files", ".Solution Files", "{196B5D43-B228-4632-9BC3-EAAF79B4EDA5}"
 	ProjectSection(SolutionItems) = preProject
-		nuget.config = nuget.config
+		..\nuget.config = ..\nuget.config
 		..\Packages.props = ..\Packages.props
-		README.md = README.md
-		sitecore.json = sitecore.json
+		..\README.md = ..\README.md
+		..\sitecore.json = ..\sitecore.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{4736C040-62A2-4E10-A376-0FD4B8B72E8D}"
@@ -62,6 +62,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataFetching", "DataFetching", "{3E938C05-FBB8-4FFC-BAC6-52222563CE62}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Foundation.DataFetching.Rendering", "Foundation\DataFetching\rendering\Mvp.Foundation.DataFetching.Rendering.csproj", "{AA28B48F-C2A3-4F20-969B-4E6BAFE56F28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Selections", "Selections", "{D1E80E41-8A3D-4D50-A469-02E5BB87B4CD}"
+	ProjectSection(SolutionItems) = preProject
+		Feature\Selections\Selections.module.json = Feature\Selections\Selections.module.json
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.Selections.Rendering", "Feature\Selections\rendering\Mvp.Feature.Selections.Rendering.csproj", "{B4EC41A8-ECA9-488C-88A0-2B6F91584B02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +124,10 @@ Global
 		{AA28B48F-C2A3-4F20-969B-4E6BAFE56F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA28B48F-C2A3-4F20-969B-4E6BAFE56F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA28B48F-C2A3-4F20-969B-4E6BAFE56F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4EC41A8-ECA9-488C-88A0-2B6F91584B02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4EC41A8-ECA9-488C-88A0-2B6F91584B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4EC41A8-ECA9-488C-88A0-2B6F91584B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4EC41A8-ECA9-488C-88A0-2B6F91584B02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -144,6 +155,8 @@ Global
 		{BADEDFA0-AA01-4004-A69D-794F9EF7747C} = {86BC4421-B47F-446E-A606-B41D5F7A25C0}
 		{3E938C05-FBB8-4FFC-BAC6-52222563CE62} = {4736C040-62A2-4E10-A376-0FD4B8B72E8D}
 		{AA28B48F-C2A3-4F20-969B-4E6BAFE56F28} = {3E938C05-FBB8-4FFC-BAC6-52222563CE62}
+		{D1E80E41-8A3D-4D50-A469-02E5BB87B4CD} = {EE03412B-647E-416F-84A1-427E692BBBDB}
+		{B4EC41A8-ECA9-488C-88A0-2B6F91584B02} = {D1E80E41-8A3D-4D50-A469-02E5BB87B4CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A7C4987-3A11-41A9-8915-5457EF7B5A6F}

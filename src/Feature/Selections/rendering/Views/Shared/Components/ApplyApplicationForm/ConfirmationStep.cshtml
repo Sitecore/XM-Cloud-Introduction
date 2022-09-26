@@ -1,0 +1,49 @@
+﻿@model Mvp.Feature.Selections.Models.Apply.ApplicationFormModel
+
+<div class="mvp-fs-applyapplicationform col-12">
+    <partial name="~/Views/Shared/Components/ApplyApplicationForm/_Progress.cshtml" />
+    <div class="step bg-white">
+        <div class="row">
+            <div class="col-7">
+                <h2 asp-for="ConfirmationTitleLabel"></h2>
+            </div>
+            <div class="col-5 text-right font-weight-bold">
+                @(Html.Raw(Model.IsEditing ?
+                    Model.StepLabelFormat.EditableMarkup :
+                    string.Format(Model.StepLabelFormat.Value, "<span class=\"currentstep\">6</span>", 6)))
+            </div>
+        </div>
+        <form id="applicationConfirmForm" method="post">
+            <input asp-for="IsNavigation" type="hidden" value="false"/>
+            <input asp-for="CurrentStep" type="hidden" value="Confirmation"/>
+            <div class="form-check">
+                @Html.CheckBoxFor(m => m.UnderstandsReviewConsent, new { @class = "align-middle" })
+                <label asp-for="UnderstandsReviewConsent" class="w-75 align-middle">
+                    @(Model.IsEditing ? Html.Raw(Model.ReviewConsentLabel.EditableMarkup) : Model.ReviewConsentLabel.Value)
+                </label>
+            </div>
+            <div class="form-check">
+                @Html.CheckBoxFor(m => m.UnderstandsProgramAgreement, new { @class = "align-middle" })
+                <label asp-for="UnderstandsProgramAgreement" class="w-75 align-middle">
+                    @(Model.IsEditing ? Html.Raw(Model.ProgramAgreementWarningLabel.EditableMarkup) : Model.ProgramAgreementWarningLabel.Value)
+                </label>
+            </div>
+            <div class="form-check">
+                @Html.CheckBoxFor(m => m.IsComplete, new { @class = "align-middle" })
+                <label asp-for="IsComplete" class="w-75 align-middle">
+                    @(Model.IsEditing ? Html.Raw(Model.CompleteLabel.EditableMarkup) : Model.CompleteLabel.Value)
+                </label>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+        </form>
+        <form id="applicationBackForm" method="post">
+            <input asp-for="IsNavigation" type="hidden" value="true"/>
+            <input asp-for="CurrentStep" type="hidden" value="Contributions"/>
+        </form>
+        <div class="navigation">
+            <button asp-for="PreviousLabel" type="submit" class="btn btn-secondary" form="applicationBackForm"></button>
+            <button asp-for="SubmitLabel" type="submit" class="btn btn-primary" form="applicationConfirmForm"></button>
+        </div>
+    </div>
+</div>

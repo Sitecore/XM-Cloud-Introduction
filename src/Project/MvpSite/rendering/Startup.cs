@@ -12,6 +12,7 @@ using Mvp.Feature.BasicContent.Extensions;
 using Mvp.Feature.Forms.Extensions;
 using Mvp.Feature.Navigation.Extensions;
 using Mvp.Feature.People.Exntesions;
+using Mvp.Feature.Selections.Extensions;
 using Mvp.Feature.Social.Extensions;
 using Mvp.Feature.User.Extensions;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
@@ -68,6 +69,7 @@ namespace Mvp.Project.MvpSite.Rendering
                     .AddFeatureSocial()
                     .AddFeaturePeople()
                     .AddFeatureForms()
+                    .AddFeatureSelections()
                     .AddDefaultPartialView("_ComponentNotFound");
               })
               // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
@@ -75,15 +77,13 @@ namespace Mvp.Project.MvpSite.Rendering
               .ForwardHeaders()
 
               // Enable support for the Experience Editor.
-              .WithExperienceEditor(options =>
-              {
-                  options.JssEditingSecret = Configuration.JssEditingSecret;
-              });
+              .WithExperienceEditor(options => { options.JssEditingSecret = Configuration.JssEditingSecret; });
 
             // Register MVP Functionality specific services
             services.AddFeatureSocialServices()
                     .AddFeaturePeopleServices()
                     .AddFeatureFormsServices()
+                    .AddFeatureSelectionsServices()
                     .AddFoundationDataFetchingServices();
             
             services.AddSession();

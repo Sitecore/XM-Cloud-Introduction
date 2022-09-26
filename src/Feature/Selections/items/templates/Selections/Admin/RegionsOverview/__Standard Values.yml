@@ -1,0 +1,40 @@
+﻿---
+ID: "a616d80a-9b87-473c-9fc5-645a1f5cbb50"
+Parent: "b0b35ac8-181e-441b-afff-d06f6d4f21df"
+Template: "b0b35ac8-181e-441b-afff-d06f6d4f21df"
+Path: /sitecore/templates/Feature/Selections/Admin/RegionsOverview/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18048954-f8f4-411b-9f8b-fdde58f8c1c6"
+      Hint: CountryCountTableHeader
+      Value: Country Count
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220826T192419Z
+    - ID: "3a5825b5-8b41-45ce-adbb-b6c0f041c209"
+      Hint: NameTableHeader
+      Value: Name
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "687a3884-1944-45fd-8dfd-19b0b18d716f"
+      Hint: TitleLabel
+      Value: Regions
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4e4b1dd4-f4cd-4ba3-b1c5-118590f775d1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220826T192655Z

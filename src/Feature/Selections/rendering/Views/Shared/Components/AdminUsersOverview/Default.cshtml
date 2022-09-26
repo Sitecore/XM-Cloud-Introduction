@@ -1,0 +1,33 @@
+﻿@using Mvp.Selections.Domain
+@model Mvp.Feature.Selections.Models.Admin.UsersOverviewModel
+
+<div class="mvp-fs-adminusersoverview">
+	<h2 asp-for="TitleLabel"></h2>
+	<table class="table">
+		<thead>
+		<tr>
+			<th asp-for="IdentifierTableHeader"></th>
+			<th asp-for="NameTableHeader"></th>
+			<th asp-for="EmailTableHeader"></th>
+			<th asp-for="CountryTableHeader"></th>
+			<th><a class="btn btn-primary" href=""><i class="fa fa-plus" aria-hidden="true"></i></a></th>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach (User user in Model.List)
+		{
+			<tr>
+				<td>@user.Identifier</td>
+				<td>@user.Name</td>
+				<td>@user.Email</td>
+				<td>@user.Country.Name</td>
+				<td>
+					<a asp-for="EditLink" href="@Model.EditLink.Value.Href?id=@user.Id" class="btn btn-secondary"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+					<a class="btn btn-danger" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
+				</td>
+			</tr>
+		}
+		</tbody>
+	</table>
+	<partial name="_Paging" />
+</div>

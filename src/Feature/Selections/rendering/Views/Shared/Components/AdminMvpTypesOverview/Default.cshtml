@@ -1,0 +1,27 @@
+﻿@using Mvp.Selections.Domain
+@model Mvp.Feature.Selections.Models.Admin.MvpTypesOverviewModel
+
+<div class="mvp-fs-admincountriesoverview">
+	<h2 asp-for="TitleLabel"></h2>
+	<table class="table">
+		<thead>
+		<tr>
+			<th asp-for="NameTableHeader"></th>
+            <th><a class="btn btn-primary" href=""><i class="fa fa-plus" aria-hidden="true"></i></a></th>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach (MvpType mvpType in Model.List)
+		{
+			<tr>
+				<td>@mvpType.Name</td>
+				<td>
+                    <a class="btn btn-secondary" href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                    <a class="btn btn-danger" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
+				</td>
+			</tr>
+		}
+		</tbody>
+	</table>
+	<partial name="_Paging" />
+</div>

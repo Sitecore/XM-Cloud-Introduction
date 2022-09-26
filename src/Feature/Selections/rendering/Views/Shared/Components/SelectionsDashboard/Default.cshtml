@@ -1,0 +1,88 @@
+﻿@using Mvp.Selections.Domain
+@model Mvp.Feature.Selections.Models.DashboardModel
+
+<div class="mvp-fs-dashboard">
+    <div class="mvp-fs-announcements">
+        @if (Model.CurrentSelection?.ApplicationsActive ?? (Model.CurrentSelection?.ApplicationsStart <= DateTime.UtcNow && Model.CurrentSelection.ApplicationsEnd > DateTime.UtcNow))
+        {
+            <div class="alert alert-primary" role="alert">
+                <span asp-for="ApplicationsOpenLabel"></span> @Model.CurrentSelection.ApplicationsEnd.ToString("d")
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-warning" role="alert">
+                <span asp-for="ApplicationsClosedLabel"></span>
+            </div>
+        }
+        @if ((Model.CurrentUser.HasRight(Right.Review) || Model.CurrentUser.HasRight(Right.Admin)) && (Model.CurrentSelection?.ReviewsActive ?? (Model.CurrentSelection?.ReviewsStart <= DateTime.UtcNow && Model.CurrentSelection.ReviewsEnd > DateTime.UtcNow)))
+        {
+            <div class="alert alert-primary" role="alert">
+                <span asp-for="ReviewsOpenLabel"></span> @Model.CurrentSelection.ReviewsEnd.ToString("d")
+            </div>
+        }
+        else if (Model.CurrentUser.HasRight(Right.Review) || Model.CurrentUser.HasRight(Right.Admin))
+        {
+            <div class="alert alert-warning" role="alert">
+                <span asp-for="ReviewsClosedLabel"></span>
+            </div>
+        }
+    </div>
+    <div class="mvp-fs-mysection">
+        <h2 asp-for="MySectionLabel"></h2>
+        <ul>
+            <li>
+                <a asp-for="MyUserOverviewLink"></a>
+            </li>
+            <li>
+                <a asp-for="MyApplicationsOverviewLink"></a>
+            </li>
+            @if (Model.CurrentSelection?.ApplicationsActive ?? (Model.CurrentSelection?.ApplicationsStart <= DateTime.UtcNow && Model.CurrentSelection.ApplicationsEnd > DateTime.UtcNow))
+            {
+                <li>
+                    <a asp-for="MyCurrentApplicationLink"></a>
+                </li>
+            }
+        </ul>
+    </div>
+    @if (Model.CurrentUser.HasRight(Right.Admin))
+    {
+        <div class="mvp-fs-adminsection">
+            <h2 asp-for="AdminSectionLabel"></h2>
+            <ul>
+                <li>
+                    <a asp-for="AdminUsersOverviewLink"></a>
+                </li>
+                <li>
+                    <a asp-for="AdminRolesOverviewLink"></a>
+                </li>
+                <li>
+                    <a asp-for="AdminSelectionsOverviewLink"></a>
+                </li>
+                <li>
+                    <a asp-for="AdminRegionsOverviewLink"></a>
+                </li>
+                <li>
+                    <a asp-for="AdminCountriesOverviewLink"></a>
+                </li>
+                <li>
+                    <a asp-for="AdminApplicationsOverviewLink"></a>
+                </li>
+            </ul>
+        </div>
+    }
+    @if (Model.CurrentUser.HasRight(Right.Review) || Model.CurrentUser.HasRight(Right.Admin))
+    {
+        <div class="mvp-fs-reviewsection">
+            <h2 asp-for="ReviewSectionLabel"></h2>
+            <ul>
+                <li>
+                    <a asp-for="ReviewApplicationsOverviewLink"></a>
+                </li>
+            </ul>
+        </div>
+    }
+    <div>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i> <a asp-for="MvpEmailContactLink"></a>
+    </div>
+</div>
