@@ -43,7 +43,7 @@ namespace Mvp.Feature.Selections.ViewComponents
                     model.CurrentSelection = selectionResponse.Result;
                 }
 
-                if (model.CurrentUser != null && model.CurrentSelection != null)
+                if (model.CurrentUser != null)
                 {
                     result = View(model);
                 }
