@@ -188,12 +188,17 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
         private async Task EstablishUser(ApplicationFormModel model)
         {
             Response<User> userResponse = await Client.GetCurrentUserAsync();
-            if (userResponse.StatusCode == HttpStatusCode.OK && userResponse.Result != null)
+            if (userResponse.StatusCode == HttpStatusCode.OK && userResponse.Result is { Country: { } })
             {
                 model.CurrentUser = userResponse.Result;
             }
             else
             {
+                if (userResponse.Result is { Country: null })
+                {
+                    model.ErrorMessages.Add("Your User doesn't have a Country set.");
+                }
+
                 model.CurrentStep = ApplicationStep.Error;
                 model.NextStep = ApplicationStep.Error;
             }
@@ -263,6 +268,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     }
                     else
                     {
+                        model.ErrorMessages.Add("Something went wrong while giving Consent.");
                         model.NextStep = ApplicationStep.Error;
                     }
                 }
