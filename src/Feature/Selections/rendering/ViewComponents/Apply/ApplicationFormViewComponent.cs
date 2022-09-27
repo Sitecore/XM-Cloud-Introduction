@@ -188,13 +188,17 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
         private async Task EstablishUser(ApplicationFormModel model)
         {
             Response<User> userResponse = await Client.GetCurrentUserAsync();
-            if (userResponse.StatusCode == HttpStatusCode.OK && userResponse.Result != null && userResponse.Result.Country != null)
+            if (userResponse.StatusCode == HttpStatusCode.OK && userResponse.Result is { Country: { } })
             {
                 model.CurrentUser = userResponse.Result;
             }
             else
             {
-                model.ErrorMessages.Add("Your User doesn't have a Country set.");
+                if (userResponse.Result is { Country: null })
+                {
+                    model.ErrorMessages.Add("Your User doesn't have a Country set.");
+                }
+
                 model.CurrentStep = ApplicationStep.Error;
                 model.NextStep = ApplicationStep.Error;
             }
