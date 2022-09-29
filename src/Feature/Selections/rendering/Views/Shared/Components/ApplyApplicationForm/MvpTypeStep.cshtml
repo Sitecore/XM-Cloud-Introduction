@@ -11,7 +11,7 @@
             <div class="col-5 text-right font-weight-bold">
                 @(Html.Raw(Model.IsEditing ?
                     Model.StepLabelFormat.EditableMarkup : 
-                    string.Format(Model.StepLabelFormat.Value, "<span class=\"currentstep\">2</span>", 6)))
+                    string.Format(Model.StepLabelFormat.Value, "<span class=\"currentstep\">3</span>", 6)))
             </div>
         </div>
         <form id="applicationMvpTypeForm" method="post">
@@ -34,7 +34,7 @@
         </form>
         <form id="applicationBackForm" method="post">
             <input asp-for="IsNavigation" type="hidden" value="true" />
-            <input asp-for="CurrentStep" type="hidden" value="Consent"/>
+            <input asp-for="CurrentStep" type="hidden" value="Profile"/>
         </form>
         <div class="navigation">
             <button asp-for="PreviousLabel" type="submit" class="btn btn-secondary" form="applicationBackForm"></button>

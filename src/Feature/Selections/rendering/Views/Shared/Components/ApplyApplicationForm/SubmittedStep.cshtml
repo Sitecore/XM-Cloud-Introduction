@@ -2,29 +2,41 @@
 
 <div class="mvp-fs-applyapplicationform col-12">
     <partial name="~/Views/Shared/Components/ApplyApplicationForm/_Progress.cshtml" />
-    <div class="alert alert-success" role="alert">
-        @if (Model.IsEditing)
-        {
-            @Html.Raw(Model.SubmittedMessageLabelFormat.EditableMarkup)
-        }
-        else
-        {
-            @(string.Format(Model.SubmittedMessageLabelFormat.Value, Model.CurrentSelection.Year, Model.CurrentApplication.ModifiedOn.Value.ToString("d")))
-        }
-    </div>
-    <div>
-        <h2 asp-for="MvpTypeTitleLabel"></h2>
-        <div>@Model.CurrentApplication.MvpType.Name</div>
+    <div class="step bg-white">
+        <div class="alert alert-success" role="alert">
+            @if (Model.IsEditing)
+            {
+                @Html.Raw(Model.SubmittedMessageLabelFormat.EditableMarkup)
+            }
+            else
+            {
+                @(string.Format(Model.SubmittedMessageLabelFormat.Value, Model.CurrentSelection.Year, Model.CurrentApplication.ModifiedOn?.ToString("d")))
+            }
+        </div>
+        <div>
+            <h3 asp-for="MvpTypeTitleLabel"></h3>
+            <p>@Model.CurrentApplication.MvpType.Name</p>
 
-        <h2 asp-for="ObjectivesTitleLabel"></h2>
-        <h3 asp-for="EligibilityLabel"></h3>
-        <div>@Model.CurrentApplication.Eligibility</div>
-        <h3 asp-for="ObjectivesLabel"></h3>
-        <div>@Model.CurrentApplication.Objectives</div>
-        <h3 asp-for="MentorsLabel"></h3>
-        <div>@Model.CurrentApplication.Mentor</div>
+            <h3 asp-for="ObjectivesTitleLabel"></h3>
+            <h4 asp-for="EligibilityLabel"></h4>
+            <p>@Model.CurrentApplication.Eligibility</p>
+            <h4 asp-for="ObjectivesLabel"></h4>
+            <p>@Model.CurrentApplication.Objectives</p>
+            <h4 asp-for="MentorsLabel"></h4>
+            <p>@Model.CurrentApplication.Mentor</p>
 
-        <h2 asp-for="ContributionsTitleLabel"></h2>
-        <partial name="~/Views/Shared/Components/ApplyApplicationForm/_ContributionsTable.cshtml"/>
+            <h3 asp-for="ContributionsTitleLabel"></h3>
+            <partial name="~/Views/Shared/Components/ApplyApplicationForm/_ContributionsTable.cshtml" />
+        </div>
+        @if (Model.CurrentSelection.AreApplicationsOpen())
+        {
+            <form id="applicationRevokeForm">
+                <input asp-for="IsNavigation" type="hidden" value="false"/>
+                <input asp-for="CurrentStep" type="hidden" value="Submitted" />
+            </form>
+            <div class="navigation">
+                <button asp-for="RevokeLabel" type="submit" class="btn btn-danger" form="applicationRevokeForm"></button>
+            </div>
+        }
     </div>
 </div>

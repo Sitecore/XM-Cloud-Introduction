@@ -1,7 +1,7 @@
 ﻿using Mvp.Selections.Domain;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
 
-namespace Mvp.Feature.Selections.Models
+namespace Mvp.Feature.Selections.Models.Any
 {
     public class DashboardModel : BaseModel
     {
@@ -44,5 +44,7 @@ namespace Mvp.Feature.Selections.Models
         public User CurrentUser { get; set; }
 
         public Selection CurrentSelection { get; set; }
+
+        public TextField SignInText { get; set; }
     }
 }

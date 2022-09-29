@@ -11,7 +11,7 @@
             <div class="col-5 text-right font-weight-bold">
                 @(Html.Raw(Model.IsEditing ?
                     Model.StepLabelFormat.EditableMarkup :
-                    string.Format(Model.StepLabelFormat.Value, "<span class=\"currentstep\">3</span>", 6)))
+                    string.Format(Model.StepLabelFormat.Value, "<span class=\"currentstep\">2</span>", 6)))
             </div>
         </div>
         <div class="container-fluid">
@@ -19,29 +19,27 @@
                 <div class="col-6">
                     @Model.CurrentUser.Name<br/>
                     @Model.CurrentUser.Email<br/>
-                    @Model.CurrentUser.Country.Name<br/>
+                    @Model.CurrentUser.Country?.Name<br/>
                     <br/>
-                    <a asp-for="OktaLink" class="btn btn-primary" role="button"></a>
+                    <a asp-for="MyUserLink" class="btn btn-primary" role="button"></a>
                 </div>
                 <div class="col-6">
                     @foreach (ProfileLink link in Model.CurrentUser.Links)
                     {
                         <text>@link.Type: <a href="@link.Uri">@link.Name</a><br/></text>
                     }
-                    <br/>
-                    <a asp-for="MyUserLink" class="btn btn-primary" role="button"></a>
                 </div>
             </div>
         </div>
         <br/>
         <form id="applicationProfileForm" method="post">
-            <input asp-for="IsNavigation" type="hidden" value="true"/>
-            <input asp-for="CurrentStep" type="hidden" value="Objectives"/>
+            <input asp-for="IsNavigation" type="hidden" value="false"/>
+            <input asp-for="CurrentStep" type="hidden" value="Profile"/>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         </form>
         <form id="applicationBackForm" method="post">
             <input asp-for="IsNavigation" type="hidden" value="true"/>
-            <input asp-for="CurrentStep" type="hidden" value="MvpType"/>
+            <input asp-for="CurrentStep" type="hidden" value="Consent"/>
         </form>
         <div class="navigation">
             <button asp-for="PreviousLabel" type="submit" class="btn btn-secondary" form="applicationBackForm"></button>

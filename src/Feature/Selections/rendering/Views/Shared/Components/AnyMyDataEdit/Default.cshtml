@@ -1,18 +1,10 @@
 ﻿@using Mvp.Selections.Domain
-@model Mvp.Feature.Selections.Models.Admin.UserEditModel
+@model Mvp.Feature.Selections.Models.Any.MyDataEditModel
 
-<div class="mvp-fs-adminuseredit">
+<div class="mvp-fs-anymydataedit col-12 bg-white">
+    <h2 asp-for="TitleLabel"></h2>
     <form method="post">
-        <input asp-for="Id" type="hidden"/>
         <input asp-for="IsEdit" type="hidden" value="true"/>
-        <div class="form-group">
-            <label asp-for="Identifier">
-                @(Model.IsEditing ? Html.Raw(Model.IdentifierLabel.EditableMarkup) : Model.IdentifierLabel.Value)
-            </label>
-            <span class="text-danger">*</span>
-            <input asp-for="Identifier" class="form-control" required/>
-            <span asp-validation-for="Identifier" class="text-danger"></span>
-        </div>
         <div class="form-group">
             <label asp-for="Name">
                 @(Model.IsEditing ? Html.Raw(Model.NameLabel.EditableMarkup) : Model.NameLabel.Value)
@@ -41,6 +33,19 @@
                 }
             </select>
             <span asp-validation-for="CountryId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ImageType">
+                @(Model.IsEditing ? Html.Raw(Model.ImageTypeLabel.EditableMarkup) : Model.ImageTypeLabel.Value)
+            </label>
+            <span class="text-danger">*</span>
+            <select asp-for="ImageType" class="form-control" required>
+                @foreach (ImageType imageType in Enum.GetValues<ImageType>())
+                {
+                    <option value="@imageType">@imageType</option>
+                }
+            </select>
+            <span asp-validation-for="ImageType" class="text-danger"></span>
         </div>
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <button asp-for="SubmitLabel" type="submit" class="btn btn-primary"></button>

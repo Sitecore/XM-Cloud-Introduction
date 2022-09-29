@@ -3,13 +3,13 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewComponents;
-using Mvp.Feature.Selections.Models;
+using Mvp.Feature.Selections.Models.Any;
 using Mvp.Selections.Client;
 using Mvp.Selections.Client.Models;
 using Mvp.Selections.Domain;
 using Sitecore.AspNet.RenderingEngine.Binding;
 
-namespace Mvp.Feature.Selections.ViewComponents
+namespace Mvp.Feature.Selections.ViewComponents.Any
 {
     [ViewComponent(Name = ViewComponentName)]
     public class DashboardViewComponent : BaseViewComponent
@@ -43,16 +43,15 @@ namespace Mvp.Feature.Selections.ViewComponents
                     model.CurrentSelection = selectionResponse.Result;
                 }
 
-                if (model.CurrentUser != null)
-                {
-                    result = View(model);
-                }
+                result = model.CurrentUser != null ?
+                    View(model) :
+                    View("SignIn");
             }
 
             return result;
         }
 
-        private void GenerateFakeDataForEdit(DashboardModel model)
+        private static void GenerateFakeDataForEdit(DashboardModel model)
         {
             model.CurrentUser = new User(Guid.NewGuid())
             {

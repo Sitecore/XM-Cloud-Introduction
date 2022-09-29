@@ -41,11 +41,11 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     case ApplicationStep.Consent:
                         await ExecuteConsentStep(model);
                         break;
+                    case ApplicationStep.Profile:
+                        await ExecuteProfileStep(model);
+                        break;
                     case ApplicationStep.MvpType:
                         await ExecuteMvpTypeStep(model);
-                        break;
-                    case ApplicationStep.Profile:
-                        ExecuteProfileStep(model);
                         break;
                     case ApplicationStep.Objectives:
                         await ExecuteObjectivesStep(model);
@@ -56,13 +56,16 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     case ApplicationStep.Confirmation:
                         await ExecuteConfirmationStep(model);
                         break;
+                    case ApplicationStep.Submitted:
+                        await ExecuteSubmittedStep(model);
+                        break;
                 }
 
                 result = model.NextStep switch
                 {
                     ApplicationStep.Consent => View("ConsentStep", model),
-                    ApplicationStep.MvpType => View("MvpTypeStep", model),
                     ApplicationStep.Profile => View("ProfileStep", model),
+                    ApplicationStep.MvpType => View("MvpTypeStep", model),
                     ApplicationStep.Objectives => View("ObjectivesStep", model),
                     ApplicationStep.Contributions => View("ContributionsStep", model),
                     ApplicationStep.Confirmation => View("ConfirmationStep", model),
@@ -159,14 +162,6 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             };
         }
 
-        private static void ExecuteProfileStep(ApplicationFormModel model)
-        {
-            if (model.IsNavigation.HasValue && model.IsNavigation.Value)
-            {
-                model.NextStep = ApplicationStep.Profile;
-            }
-        }
-
         private async Task EstablishSelection(ApplicationFormModel model)
         {
             Response<Selection> selectionResponse = await Client.GetCurrentSelectionAsync();
@@ -188,17 +183,13 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
         private async Task EstablishUser(ApplicationFormModel model)
         {
             Response<User> userResponse = await Client.GetCurrentUserAsync();
-            if (userResponse.StatusCode == HttpStatusCode.OK && userResponse.Result is { Country: { } })
+            if (userResponse.StatusCode == HttpStatusCode.OK && userResponse.Result != null)
             {
                 model.CurrentUser = userResponse.Result;
             }
             else
             {
-                if (userResponse.Result is { Country: null })
-                {
-                    model.ErrorMessages.Add("Your User doesn't have a Country set.");
-                }
-
+                model.ErrorMessages.Add(userResponse.Message);
                 model.CurrentStep = ApplicationStep.Error;
                 model.NextStep = ApplicationStep.Error;
             }
@@ -264,7 +255,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     if (consentResponse.StatusCode == HttpStatusCode.OK && consentResponse.Result != null)
                     {
                         await LoadMvpTypes(model);
-                        model.NextStep = ApplicationStep.MvpType;
+                        model.NextStep = ApplicationStep.Profile;
                     }
                     else
                     {
@@ -276,10 +267,11 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                          (consentsResponse.Result?.Any(c => c.Type == ConsentType.PersonalInformation) ?? false))
                 {
                     await LoadMvpTypes(model);
-                    model.NextStep = ApplicationStep.MvpType;
+                    model.NextStep = ApplicationStep.Profile;
                 }
                 else
                 {
+                    model.ErrorMessages.Add(consentsResponse.Message);
                     model.NextStep = ApplicationStep.Error;
                 }
             }
@@ -290,6 +282,24 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             else
             {
                 model.NextStep = ApplicationStep.Error;
+            }
+        }
+
+        private async Task ExecuteProfileStep(ApplicationFormModel model)
+        {
+            if (model.IsNavigation.HasValue && model.IsNavigation.Value)
+            {
+                model.NextStep = ApplicationStep.Profile;
+            }
+            else if (model.IsNavigation.HasValue && !model.IsNavigation.Value && model.CurrentUser.Country == null)
+            {
+                ModelState.AddModelError(string.Empty, "You must have a Country set on your profile. Edit your details to fix this issue.");
+                model.NextStep = ApplicationStep.Profile;
+            }
+            else if (model.IsNavigation.HasValue && !model.IsNavigation.Value && model.CurrentUser.Country != null)
+            {
+                await LoadMvpTypes(model);
+                model.NextStep = ApplicationStep.MvpType;
             }
         }
 
@@ -308,7 +318,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     if (applicationResponse.StatusCode == HttpStatusCode.OK && applicationResponse.Result != null)
                     {
                         model.CurrentApplication = applicationResponse.Result;
-                        model.NextStep = ApplicationStep.Profile;
+                        model.NextStep = ApplicationStep.Objectives;
                     }
                     else
                     {
@@ -320,7 +330,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 {
                     Application newApplication = new (Guid.Empty)
                     {
-                        Country = model.CurrentUser.Country,
+                        Country = model.CurrentUser.Country!,
                         Selection = model.CurrentSelection,
                         Applicant = model.CurrentUser,
                         Status = ApplicationStatus.Open,
@@ -331,7 +341,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     if (applicationResponse.StatusCode == HttpStatusCode.OK && applicationResponse.Result != null)
                     {
                         model.CurrentApplication = applicationResponse.Result;
-                        model.NextStep = ApplicationStep.Profile;
+                        model.NextStep = ApplicationStep.Objectives;
                     }
                     else
                     {
@@ -419,14 +429,15 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 if (contributionResponse.StatusCode == HttpStatusCode.OK && contributionResponse.Result != null)
                 {
                     model.CurrentApplication.Contributions.Add(contributionResponse.Result);
+                    model.ContributionDate = null;
+                    model.ContributionName = null;
+                    model.ContributionDescription = null;
+                    model.ContributionLink = null;
+                    model.ContributionType = ContributionType.Other;
+                    model.ContributionProductIds = new List<int>();
+                    ModelState.Clear();
                 }
 
-                model.ContributionDate = null;
-                model.ContributionName = null;
-                model.ContributionDescription = null;
-                model.ContributionLink = null;
-                model.ContributionType = ContributionType.Other;
-                model.ContributionProductIds = new List<int>();
                 await LoadProducts(model);
                 model.NextStep = ApplicationStep.Contributions;
             }
@@ -445,6 +456,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 }
                 else
                 {
+                    model.ErrorMessages.Add(deleteResponse.Message);
                     model.NextStep = ApplicationStep.Error;
                 }
             }
@@ -476,6 +488,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 }
                 else
                 {
+                    model.ErrorMessages.Add(applicationResponse.Message);
                     model.NextStep = ApplicationStep.Error;
                 }
             }
@@ -483,6 +496,28 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             {
                 ModelState.AddModelError(string.Empty, "You must agree to all of the above to complete and submit your application.");
                 model.NextStep = ApplicationStep.Confirmation;
+            }
+        }
+
+        private async Task ExecuteSubmittedStep(ApplicationFormModel model)
+        {
+            if (model.IsNavigation.HasValue && !model.IsNavigation.Value)
+            {
+                Application updateApplication = new (model.CurrentApplication.Id)
+                {
+                    Status = ApplicationStatus.Open
+                };
+                Response<Application> applicationResponse = await Client.UpdateApplicationAsync(updateApplication);
+                if (applicationResponse.StatusCode == HttpStatusCode.OK && applicationResponse.Result != null)
+                {
+                    model.CurrentApplication = applicationResponse.Result;
+                    model.NextStep = ApplicationStep.Contributions;
+                }
+                else
+                {
+                    model.ErrorMessages.Add(applicationResponse.Message);
+                    model.NextStep = ApplicationStep.Error;
+                }
             }
         }
 

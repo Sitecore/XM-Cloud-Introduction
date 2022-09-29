@@ -21,7 +21,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (Contribution contribution in Model.CurrentApplication.Contributions)
+                @foreach (Contribution contribution in Model.CurrentApplication.Contributions.OrderByDescending(c => c.Date))
                 {
                     <tr>
                         <td>@contribution.Date.ToString("d")</td>
