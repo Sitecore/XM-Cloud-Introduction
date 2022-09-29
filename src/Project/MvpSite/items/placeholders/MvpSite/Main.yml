@@ -19,7 +19,6 @@ SharedFields:
     {DF26CA0D-A60B-4349-8908-E7A62F7E7272}
     {2E2630AE-5DB0-4FDF-81B6-47DBC3365C36}
     {8ECDA376-8717-4626-A30A-83A93EC24CC3}
-    {8C3EE30A-6487-4649-901A-09B97BEC6C62}
 Languages:
 - Language: en
   Versions:
@@ -30,11 +29,11 @@ Languages:
       Value: 20200513T063543Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "68e63287-6e0a-44cd-8adf-81f54af9abf3"
+      Value: "87d99633-8a9e-46f5-be7d-54ebedc5d008"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220307T091201Z
+      Value: 20220929T122304Z

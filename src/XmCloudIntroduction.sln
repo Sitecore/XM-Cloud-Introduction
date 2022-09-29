@@ -18,24 +18,39 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{0CA01507-AFE6-401B-AD20-3C3A8F34BF09}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MvpSite", "MvpSite", "{C998ECA9-1528-444B-A9AB-538E01A45CEC}"
+	ProjectSection(SolutionItems) = preProject
+		Project\MvpSite\MvpSite.module.json = Project\MvpSite\MvpSite.module.json
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvp.Project.MvpSite.Platform", "Project\MvpSite\platform\Mvp.Project.MvpSite.Platform.csproj", "{816F099C-E14B-4468-9E34-87F993C6484D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Project.MvpSite.Rendering", "Project\MvpSite\rendering\Mvp.Project.MvpSite.Rendering.csproj", "{2C5CF268-B0A9-4578-BB3C-1C93C53798E0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Navigation", "Navigation", "{D284ACCB-FDFD-4A13-B6C9-B2A5B2DD19E9}"
+	ProjectSection(SolutionItems) = preProject
+		Feature\Navigation\Navigation.module.json = Feature\Navigation\Navigation.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.Navigation.Rendering", "Feature\Navigation\rendering\Mvp.Feature.Navigation.Rendering.csproj", "{565AC1EA-01B0-4A93-8230-17081AE133A6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicContent", "BasicContent", "{9024797F-EC79-4019-9076-C157020CF7D5}"
+	ProjectSection(SolutionItems) = preProject
+		Feature\BasicContent\BasicContent.module.json = Feature\BasicContent\BasicContent.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVP.Feature.BasicContent.Rendering", "Feature\BasicContent\rendering\MVP.Feature.BasicContent.Rendering.csproj", "{18086145-57F9-46EB-9213-6764DA298779}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Social", "Social", "{06A25A5C-4B35-4091-81D6-5DE97C6E1744}"
+	ProjectSection(SolutionItems) = preProject
+		Feature\Social\Social.module.json = Feature\Social\Social.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.Social.Rendering", "Feature\Social\rendering\Mvp.Feature.Social.Rendering.csproj", "{79D774C4-1B40-48E3-8F84-880A02A63E7D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sugcon", "Sugcon", "{7B86B212-94E4-4175-B459-3D0A75A7244D}"
+	ProjectSection(SolutionItems) = preProject
+		Project\Sugcon\Sugcon.module.json = Project\Sugcon\Sugcon.module.json
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Sugcon.Platform", "Project\Sugcon\platform\Project.Sugcon.Platform.csproj", "{5FF0FB81-8059-49E2-AF0A-C5CB8798067A}"
 EndProject
@@ -44,6 +59,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Foundation.Configuration.Rendering", "Foundation\Configuration\rendering\Mvp.Foundation.Configuration.Rendering.csproj", "{B9CDEDA7-3719-431E-8D57-72460403E934}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "People", "People", "{F5DFDC1C-FEBA-42A7-8A1A-525028952980}"
+	ProjectSection(SolutionItems) = preProject
+		Feature\People\People.module.json = Feature\People\People.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.People.Rendering", "Feature\People\rendering\Mvp.Feature.People.Rendering.csproj", "{0BD6638A-3A5A-406A-8453-4DA6B35886FC}"
 EndProject
@@ -52,12 +70,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvp.Environment.Platform", "Environment\platform\Mvp.Environment.Platform.csproj", "{89A72153-4995-4607-98B1-B8C75679926E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{444A6903-4CE0-4864-9349-BDE5A1EAED9C}"
+	ProjectSection(SolutionItems) = preProject
+		Feature\User\User.module.json = Feature\User\User.module.json
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.User.Rendering", "Feature\User\rendering\Mvp.Feature.User.Rendering.csproj", "{44C9267F-344E-4AE3-BF21-90874835B7E2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{86BC4421-B47F-446E-A606-B41D5F7A25C0}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.Forms.Rendering", "Feature\Forms\rendering\Mvp.Feature.Forms.Rendering.csproj", "{BADEDFA0-AA01-4004-A69D-794F9EF7747C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataFetching", "DataFetching", "{3E938C05-FBB8-4FFC-BAC6-52222563CE62}"
 EndProject
@@ -69,6 +86,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Selections", "Selections", 
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.Selections.Rendering", "Feature\Selections\rendering\Mvp.Feature.Selections.Rendering.csproj", "{B4EC41A8-ECA9-488C-88A0-2B6F91584B02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Multisite", "Multisite", "{8E8859F4-6EA3-463D-B8DE-B151C505A691}"
+	ProjectSection(SolutionItems) = preProject
+		Foundation\Multisite\Multisite.module.json = Foundation\Multisite\Multisite.module.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -116,10 +138,6 @@ Global
 		{44C9267F-344E-4AE3-BF21-90874835B7E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44C9267F-344E-4AE3-BF21-90874835B7E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44C9267F-344E-4AE3-BF21-90874835B7E2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BADEDFA0-AA01-4004-A69D-794F9EF7747C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BADEDFA0-AA01-4004-A69D-794F9EF7747C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BADEDFA0-AA01-4004-A69D-794F9EF7747C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BADEDFA0-AA01-4004-A69D-794F9EF7747C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AA28B48F-C2A3-4F20-969B-4E6BAFE56F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AA28B48F-C2A3-4F20-969B-4E6BAFE56F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA28B48F-C2A3-4F20-969B-4E6BAFE56F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -151,12 +169,11 @@ Global
 		{89A72153-4995-4607-98B1-B8C75679926E} = {34CC9337-BC03-4C14-A57A-FD29DEE5A9B8}
 		{444A6903-4CE0-4864-9349-BDE5A1EAED9C} = {EE03412B-647E-416F-84A1-427E692BBBDB}
 		{44C9267F-344E-4AE3-BF21-90874835B7E2} = {444A6903-4CE0-4864-9349-BDE5A1EAED9C}
-		{86BC4421-B47F-446E-A606-B41D5F7A25C0} = {EE03412B-647E-416F-84A1-427E692BBBDB}
-		{BADEDFA0-AA01-4004-A69D-794F9EF7747C} = {86BC4421-B47F-446E-A606-B41D5F7A25C0}
 		{3E938C05-FBB8-4FFC-BAC6-52222563CE62} = {4736C040-62A2-4E10-A376-0FD4B8B72E8D}
 		{AA28B48F-C2A3-4F20-969B-4E6BAFE56F28} = {3E938C05-FBB8-4FFC-BAC6-52222563CE62}
 		{D1E80E41-8A3D-4D50-A469-02E5BB87B4CD} = {EE03412B-647E-416F-84A1-427E692BBBDB}
 		{B4EC41A8-ECA9-488C-88A0-2B6F91584B02} = {D1E80E41-8A3D-4D50-A469-02E5BB87B4CD}
+		{8E8859F4-6EA3-463D-B8DE-B151C505A691} = {4736C040-62A2-4E10-A376-0FD4B8B72E8D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A7C4987-3A11-41A9-8915-5457EF7B5A6F}

@@ -9,7 +9,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Mvp.Feature.BasicContent.Extensions;
-using Mvp.Feature.Forms.Extensions;
 using Mvp.Feature.Navigation.Extensions;
 using Mvp.Feature.People.Exntesions;
 using Mvp.Feature.Selections.Extensions;
@@ -68,7 +67,6 @@ namespace Mvp.Project.MvpSite.Rendering
                     .AddFeatureBasicContent()
                     .AddFeatureSocial()
                     .AddFeaturePeople()
-                    .AddFeatureForms()
                     .AddFeatureSelections()
                     .AddDefaultPartialView("_ComponentNotFound");
               })
@@ -82,7 +80,6 @@ namespace Mvp.Project.MvpSite.Rendering
             // Register MVP Functionality specific services
             services.AddFeatureSocialServices()
                     .AddFeaturePeopleServices()
-                    .AddFeatureFormsServices()
                     .AddFeatureSelectionsServices()
                     .AddFoundationDataFetchingServices();
             
@@ -136,7 +133,6 @@ namespace Mvp.Project.MvpSite.Rendering
 
             // Configure Okta Integration
             app.UseFeatureUser();
-            app.UseFeatureForms();
 
             app.UseEndpoints(endpoints =>
                 {
@@ -150,11 +146,6 @@ namespace Mvp.Project.MvpSite.Rendering
                   "healthz",
                   "healthz",
                   new { controller = "Default", action = "Healthz" }
-                );
-                    endpoints.MapControllerRoute(
-                  "getCategories",
-                  "getCategories",
-                  new { controller = "Application", action = "GetCategories" }
                 );
 
                 // Enables the default Sitecore URL pattern with a language prefix.

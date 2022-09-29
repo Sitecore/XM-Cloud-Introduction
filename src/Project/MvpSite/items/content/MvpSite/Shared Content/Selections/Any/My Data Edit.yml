@@ -1,0 +1,27 @@
+﻿---
+ID: "3fd009eb-1dd7-48f6-9c48-31918d032369"
+Parent: "8773fbb5-704f-48ee-b27b-7f4074b75215"
+Template: "17f04812-766f-4d7a-b325-905ab053d0c5"
+Path: /sitecore/content/MvpSite/Shared Content/Selections/Any/My Data Edit
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220928T162844Z
+    - ID: "757f7184-643b-449f-a041-886f9edb81f0"
+      Hint: SuccessLink
+      Value: |
+        <link text="Return to Dashboard" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{0068B880-2204-4759-9519-0ED217BBC156}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "78c990eb-486c-45f3-8744-2baef84a21ac"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220929T083924Z
