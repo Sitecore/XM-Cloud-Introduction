@@ -1,8 +1,4 @@
-﻿@model Route
-
-@{
-    ViewData["Title"] = Model?.ReadField<TextField>("Menu Title")?.Value ?? Model?.ReadField<TextField>("Title")?.Value ?? string.Empty;
-}
+﻿@model LayoutViewModel
 
 <header>
     <sc-placeholder name="header"></sc-placeholder>

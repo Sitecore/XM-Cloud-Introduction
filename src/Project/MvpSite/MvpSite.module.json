@@ -8,6 +8,11 @@
         "allowedPushOperations": "CreateUpdateAndDelete"
       },
       {
+        "name": "layoutmodels",
+        "path": "/sitecore/layout/Models/Project/MvpSite",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
         "name": "placeholders",
         "path": "/sitecore/layout/Placeholder Settings/Project/MvpSite",
         "allowedPushOperations": "CreateUpdateAndDelete"

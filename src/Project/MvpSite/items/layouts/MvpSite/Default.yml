@@ -14,6 +14,9 @@ SharedFields:
 - ID: "a036b2bc-ba04-44f6-a75f-bae6cd242abf"
   Hint: Path
   Value: /Views/Default/Index.cshtml
+- ID: "e9cc5a73-3c8a-4d7d-92ac-3b88c18a996a"
+  Hint: Model
+  Value: /sitecore/layout/Models/Project/MvpSite/LayoutViewModel
 Languages:
 - Language: en
   Versions:
@@ -24,11 +27,11 @@ Languages:
       Value: 20200513T063313Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "048466e5-62a0-4512-a0b5-aa8af1d0e2f4"
+      Value: "3bc700d8-5f86-4265-a01e-6938efb1cfd1"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220303T112424Z
+      Value: 20220930T150038Z
