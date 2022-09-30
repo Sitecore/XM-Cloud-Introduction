@@ -1,4 +1,5 @@
-﻿using Mvp.Selections.Domain;
+﻿using System;
+using Mvp.Selections.Domain;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Feature.Selections.Models.Admin
@@ -16,5 +17,17 @@ namespace Mvp.Feature.Selections.Models.Admin
         public TextField CountryTableHeader { get; set; }
 
         public HyperLinkField EditLink { get; set; }
+
+        public Guid? RemoveUserId { get; set; }
+
+        public User RemoveUser { get; set; }
+
+        public TextField ConfirmMessageLabelFormat { get; set; }
+
+        public TextField ConfirmLabel { get; set; }
+
+        public bool RemoveConfirmed { get; set; } = false;
+
+        public string ErrorMessage { get; set; }
     }
 }

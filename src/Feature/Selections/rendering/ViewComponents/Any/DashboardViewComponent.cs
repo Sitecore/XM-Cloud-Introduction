@@ -45,7 +45,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Any
 
                 result = model.CurrentUser != null ?
                     View(model) :
-                    View("SignIn");
+                    View("SignIn", model);
             }
 
             return result;

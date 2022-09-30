@@ -3540,23 +3540,23 @@ ul.nav.navbar-nav .nav-item.nav-link {
   padding: 10px 18px 7px;
 }
 
-.mvp-fs-adminapplicationsoverview tr *:last-child a i {
+.mvp-fs-adminapplicationsoverview tr *:last-child i {
   color: #fff;
 }
 
-.mvp-fs-admincountriesoverview tr *:last-child a i {
+.mvp-fs-admincountriesoverview tr *:last-child i {
   color: #fff;
 }
 
-.mvp-fs-adminregionsoverview tr *:last-child a i {
+.mvp-fs-adminregionsoverview tr *:last-child i {
   color: #fff;
 }
 
-.mvp-fs-adminsystemrolesoverview tr *:last-child a i {
+.mvp-fs-adminsystemrolesoverview tr *:last-child i {
   color: #fff;
 }
 
-.mvp-fs-adminusersoverview tr *:last-child a i {
+.mvp-fs-adminusersoverview tr *:last-child i {
   color: #fff;
 }
 

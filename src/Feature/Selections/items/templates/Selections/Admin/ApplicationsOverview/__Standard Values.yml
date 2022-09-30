@@ -17,6 +17,9 @@ Languages:
     - ID: "473ef662-2865-4e3b-9fb8-113354549ee7"
       Hint: LastModifiedTableHeader
       Value: Last Modified
+    - ID: "4c5619e4-e30a-4985-9286-dd272c06d38c"
+      Hint: ConfirmMessageLabelFormat
+      Value: "You are about to remove the application of {0} that is in the {1} status and has {2} contributions. Do you want to continue?"
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -25,12 +28,15 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\iva@sitecore.net
+    - ID: "6b0f88dc-513c-4679-967d-24e7ff8ff2be"
+      Hint: ContributionsTableHeader
+      Value: Contributions
     - ID: "7526f76d-067b-4338-b8f3-c5881afad4dc"
       Hint: TitleLabel
       Value: Applications
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "554fcd5c-bc5e-4590-a9b2-a3e24dfca8ad"
+      Value: "0685bba7-0e6d-4300-b8a7-f65365a18cd7"
     - ID: "98b5f2f3-83ce-44bd-b2ea-d8b4d8a67ebd"
       Hint: ApplicantTableHeader
       Value: Applicant
@@ -44,6 +50,9 @@ Languages:
     - ID: "bcc09f16-2955-4160-8c8b-763f81d1f90d"
       Hint: SelectionTableHeader
       Value: Selection
+    - ID: "ca6e455f-887f-4b39-9e28-e5d633795f5f"
+      Hint: ConfirmLabel
+      Value: Yes, continue
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220905T133023Z
+      Value: 20220930T135447Z

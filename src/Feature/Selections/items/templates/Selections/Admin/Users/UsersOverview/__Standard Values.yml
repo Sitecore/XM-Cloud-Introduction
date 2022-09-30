@@ -28,19 +28,25 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\iva@sitecore.net
+    - ID: "70cb103d-8af8-4794-b128-60147c3ea7c9"
+      Hint: ConfirmMessageLabelFormat
+      Value: "Are you sure you want to remove {0} with email {1} from {2}? This will remove all data related to this user including titles, applications and contributions. Do you wish to continue?"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "40ed7e53-c0ff-4975-a089-c140435c09ea"
+      Value: "1965af8a-8699-4c83-9847-df770fe68da8"
     - ID: "978bb6fd-e2bf-4903-aff5-2cfcfce00886"
       Hint: NameTableHeader
       Value: Name
+    - ID: "b61aa1a3-f1fb-4b93-a6bd-837c8a16353d"
+      Hint: ConfirmLabel
+      Value: Yes, continue
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220907T161009Z
+      Value: 20220930T165228Z
     - ID: "ebc928c4-c7d1-4d46-8333-61c074805c49"
       Hint: TitleLabel
       Value: Users

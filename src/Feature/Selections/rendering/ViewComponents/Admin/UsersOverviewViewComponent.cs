@@ -23,21 +23,49 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         public override async Task<IViewComponentResult> InvokeAsync()
         {
+            IViewComponentResult result;
             UsersOverviewModel model = await ModelBinder.Bind<UsersOverviewModel>(ViewContext);
             if (model.IsEditing)
             {
                 GenerateFakeDataForEdit(model);
+                result = View(model);
+            }
+            else if (model.RemoveUserId != null && model.RemoveConfirmed)
+            {
+                // TODO [ILs] Implement remove user
+                Response<bool> removeUserResponse = new () { Result = false }; ////await Client.RemoveUserAsync(model.RemoveUserId.Value);
+                if (removeUserResponse.Result)
+                {
+                    await LoadUsers(model);
+                    result = View(model);
+                }
+                else
+                {
+                    model.ErrorMessage = removeUserResponse.Message;
+                    result = View("Error", model);
+                }
+            }
+            else if (model.RemoveUserId != null && !model.RemoveConfirmed)
+            {
+                Response<User> userResponse = await Client.GetUserAsync(model.RemoveUserId.Value);
+                if (userResponse.StatusCode == HttpStatusCode.OK && userResponse.Result != null)
+                {
+                    model.RemoveUser = userResponse.Result;
+                    result = View("Confirm", model);
+                }
+                else
+                {
+                    model.ErrorMessage = userResponse.Message;
+                    result = View("Error", model);
+                }
             }
             else
             {
-                Response<IList<User>> usersResponse = await Client.GetUsersAsync(model.Page, model.PageSize);
-                if (usersResponse.StatusCode == HttpStatusCode.OK && usersResponse.Result != null)
-                {
-                    model.List.AddRange(usersResponse.Result);
-                }
+                await LoadUsers(model);
+                result = View(model);
             }
 
-            return View(model);
+            return result;
         }
 
         private static void GenerateFakeDataForEdit(UsersOverviewModel model)
@@ -72,6 +100,15 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                     Name = "Country A"
                 }
             });
+        }
+
+        private async Task LoadUsers(UsersOverviewModel model)
+        {
+            Response<IList<User>> usersResponse = await Client.GetUsersAsync(model.Page, model.PageSize);
+            if (usersResponse.StatusCode == HttpStatusCode.OK && usersResponse.Result != null)
+            {
+                model.List.AddRange(usersResponse.Result);
+            }
         }
     }
 }
