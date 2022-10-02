@@ -63,8 +63,6 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public HyperLinkField MyUserLink { get; set; }
 
-        public HyperLinkField OktaLink { get; set; }
-
         public TextField ObjectivesTitleLabel { get; set; }
 
         public TextField EligibilityLabel { get; set; }
@@ -132,5 +130,7 @@ namespace Mvp.Feature.Selections.Models.Apply
         public TextField SubmittedMessageLabelFormat { get; set; }
 
         public TextField StepLabelFormat { get; set; }
+
+        public TextField RevokeLabel { get; set; }
     }
 }

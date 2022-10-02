@@ -1,5 +1,4 @@
-﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
-@using Mvp.Selections.Domain
+﻿@using Mvp.Selections.Domain
 @model Mvp.Feature.Selections.Models.Admin.UserEditModel
 
 <div class="mvp-fs-adminuseredit">
@@ -7,23 +6,35 @@
         <input asp-for="Id" type="hidden"/>
         <input asp-for="IsEdit" type="hidden" value="true"/>
         <div class="form-group">
-            <label asp-for="IdentifierLabel"></label>
+            <label asp-for="Identifier">
+                @(Model.IsEditing ? Html.Raw(Model.IdentifierLabel.EditableMarkup) : Model.IdentifierLabel.Value)
+            </label>
+            <span class="text-danger">*</span>
             <input asp-for="Identifier" class="form-control" required/>
             <span asp-validation-for="Identifier" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="NameLabel"></label>
+            <label asp-for="Name">
+                @(Model.IsEditing ? Html.Raw(Model.NameLabel.EditableMarkup) : Model.NameLabel.Value)
+            </label>
+            <span class="text-danger">*</span>
             <input asp-for="Name" class="form-control" required/>
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="EmailLabel"></label>
+            <label asp-for="Email">
+                @(Model.IsEditing ? Html.Raw(Model.EmailLabel.EditableMarkup) : Model.EmailLabel.Value)
+            </label>
+            <span class="text-danger">*</span>
             <input asp-for="Email" class="form-control" required/>
             <span asp-validation-for="Email" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="CountryLabel"></label>
-            <select asp-for="CountryId" class="form-control">
+            <label asp-for="CountryId">
+                @(Model.IsEditing ? Html.Raw(Model.CountryLabel.EditableMarkup) : Model.CountryLabel.Value)
+            </label>
+            <span class="text-danger">*</span>
+            <select asp-for="CountryId" class="form-control" required>
                 @foreach (Country country in Model.Countries)
                 {
                     <option value="@country.Id">@country.Name</option>

@@ -3,6 +3,10 @@ ID: "005295d9-718f-4e20-bcf7-76c37ca95b0e"
 Parent: "c48165a5-0897-4501-b223-fab365c800f5"
 Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
 Path: /sitecore/layout/Renderings/Feature/Selections/Admin/Users
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
 Languages:
 - Language: en
   Versions:
@@ -21,11 +25,11 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5f7eae69-ed0a-4533-8534-d70d775ca4bd"
+      Value: "e6bcb341-3144-4ecd-a1e7-398a9fbde7a7"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220907T151003Z
+      Value: 20220928T163329Z

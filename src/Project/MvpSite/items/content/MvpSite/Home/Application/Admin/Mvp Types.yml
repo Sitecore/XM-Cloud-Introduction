@@ -1,0 +1,64 @@
+﻿---
+ID: "19cfdcce-d229-4a51-a9a6-2d594eb3de5a"
+Parent: "b7b943c4-555d-40e1-9677-c68726686119"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/Application/Admin/Mvp Types
+BranchID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{FD38B228-0F41-4AE6-BC2D-6EC36034517C}"
+          p:before="*"
+          s:ds="{BAC1B57A-17EA-46B0-8C81-20EEADB0DA6C}"
+          s:id="{F64477D8-7D75-416A-A42E-1D5287DA64DC}"
+          s:par="CacheClearingBehavior=Clear on publish"
+          s:ph="/main/column-container-{B8FEAA1F-5B91-4E45-B7A3-70D537A93E30}-0" />
+        <r
+          uid="{B8FEAA1F-5B91-4E45-B7A3-70D537A93E30}"
+          p:after="r[@uid='{FD38B228-0F41-4AE6-BC2D-6EC36034517C}']"
+          s:id="{57805937-D345-4A28-8DDF-C62EE43D8EBA}"
+          s:par="CacheClearingBehavior=Clear on publish"
+          s:ph="main" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9AC6DDA3-8785-4C63-A2AB-457D8CC56D19}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220912T152342Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "82012f69-110a-4288-ad0a-ab54d44f786c"
+    - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
+      Hint: MenuTitle
+      Value: Mvp Types
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220912T152442Z

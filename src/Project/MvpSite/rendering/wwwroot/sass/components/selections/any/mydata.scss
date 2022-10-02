@@ -1,0 +1,7 @@
+﻿@import '../_form.scss';
+
+.mvp-fs-anymydataedit {
+    padding: 2em;
+
+    @include form;
+}

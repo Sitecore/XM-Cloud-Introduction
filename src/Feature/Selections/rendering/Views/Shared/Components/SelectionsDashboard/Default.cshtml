@@ -1,7 +1,7 @@
 ﻿@using Mvp.Selections.Domain
-@model Mvp.Feature.Selections.Models.DashboardModel
+@model Mvp.Feature.Selections.Models.Any.DashboardModel
 
-<div class="mvp-fs-dashboard">
+<div class="mvp-fs-dashboard col-12 bg-white">
     <div class="mvp-fs-announcements">
         @if (Model.CurrentSelection?.ApplicationsActive ?? (Model.CurrentSelection?.ApplicationsStart <= DateTime.UtcNow && Model.CurrentSelection.ApplicationsEnd > DateTime.UtcNow))
         {
@@ -35,9 +35,9 @@
             <li>
                 <a asp-for="MyUserOverviewLink"></a>
             </li>
-            <li>
+            @*<li>
                 <a asp-for="MyApplicationsOverviewLink"></a>
-            </li>
+            </li>*@
             @if (Model.CurrentSelection?.ApplicationsActive ?? (Model.CurrentSelection?.ApplicationsStart <= DateTime.UtcNow && Model.CurrentSelection.ApplicationsEnd > DateTime.UtcNow))
             {
                 <li>

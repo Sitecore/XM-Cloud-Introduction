@@ -12,7 +12,7 @@ SharedFields:
   Value: office/32x32/window_sidebar.png
 - ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
   Hint: Datasource Template
-  Value: /sitecore/templates/Feature/Selections/Dashboard
+  Value: /sitecore/templates/Feature/Selections/Any/Dashboard
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
   Value: /sitecore/content/MvpSite/Shared Content/Selections
@@ -34,11 +34,11 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "566a1065-6d75-4b50-bfcf-05c1f9370493"
+      Value: "8a6e4b84-4421-4e61-8fbc-1718e6ce968b"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220910T172507Z
+      Value: 20220929T083105Z

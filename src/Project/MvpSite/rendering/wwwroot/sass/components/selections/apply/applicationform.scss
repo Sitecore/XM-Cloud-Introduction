@@ -1,4 +1,5 @@
 ﻿@import '../../../_colors.scss';
+@import '../_form.scss';
 
 .mvp-fs-applyapplicationform {
     z-index: 0;
@@ -74,42 +75,5 @@
         color: $sitecore-red;
     }
 
-    .btn {
-        border: none;
-        border-radius: 0;
-
-        i.fa {
-            color: $contrast-text;
-        }
-    }
-
-    .btn-primary {
-        background-color: $sitecore-teal;
-    }
-
-    .btn-secondary {
-        background-color: $unfocussed-bg;
-    }
-
-    input, textarea, select {
-        border-bottom: 2px solid $unfocussed-bg;
-        border-radius: 0px;
-        margin-bottom: 25px;
-        margin-top: 2px;
-        box-sizing: border-box;
-        color: $text;
-        background-color: $background;
-        font-size: 1.2em;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        font-family: "AvenirNextW05-Regular";
-        width: 100%;
-    }
-
-    input[type=checkbox] {
-        margin-right: 0.5em;
-        width: 1.5em;
-        height: 1.5em;
-    }
+    @include form;
 }

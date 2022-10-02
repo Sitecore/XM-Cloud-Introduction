@@ -1,0 +1,52 @@
+﻿---
+ID: "e27fc180-a7d0-447d-bef5-50ce75abaf8f"
+Parent: "17f04812-766f-4d7a-b325-905ab053d0c5"
+Template: "17f04812-766f-4d7a-b325-905ab053d0c5"
+Path: /sitecore/templates/Feature/Selections/Any/MyDataEdit/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220928T162459Z
+    - ID: "31330bcd-9994-4b03-9ae3-07b86eae8c9f"
+      Hint: CountryLabel
+      Value: Country
+    - ID: "3574bf25-510a-422f-aef4-bffe86ef687a"
+      Hint: SuccessLabel
+      Value: "You have successfully updated your data!"
+    - ID: "370f6461-3a25-499e-9ce0-88e36380a412"
+      Hint: SubmitLabel
+      Value: Save
+    - ID: "453ba886-7a2a-4edb-804d-9d5e48a077d8"
+      Hint: ImageTypeLabel
+      Value: Image Source
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "8034f91f-7007-4706-9c3e-26bf1b4c5ed9"
+      Hint: TitleLabel
+      Value: My Data
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1e506b69-e20c-44f1-b218-b4cad0d21ee1"
+    - ID: "a308268d-a0aa-4d5a-b980-75d956b06e60"
+      Hint: EmailLabel
+      Value: Email
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d067bc1d-8b9d-44f6-b2f7-8b2725242270"
+      Hint: NameLabel
+      Value: Name
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20220928T162640Z

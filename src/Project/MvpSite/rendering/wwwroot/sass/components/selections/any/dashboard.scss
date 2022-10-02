@@ -1,0 +1,17 @@
+﻿@import '../../../_colors.scss';
+
+.mvp-fs-dashboard {
+    padding: 2em;
+
+    ul {
+        list-style: none;
+
+        li::before {
+            content: "•";
+            color: $sitecore-red;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em
+        }
+    }
+}
