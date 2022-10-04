@@ -28,6 +28,11 @@
         "allowedPushOperations": "CreateUpdateAndDelete"
       },
       {
+        "name": "templatesFeature",
+        "path": "/sitecore/templates/Feature/MvpSite",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
         "name": "branche-templates",
         "path": "/sitecore/templates/Branches/Project/MvpSite",
         "allowedPushOperations": "CreateUpdateAndDelete"

@@ -13,5 +13,24 @@ namespace Mvp.Project.MvpSite.Models
 
         [SitecoreRouteField]
         public CheckboxField RequiresAuthentication { get; set; }
+
+        [SitecoreRouteField]
+        public TextField MetaKeywords { get; set; }
+
+        [SitecoreRouteField]
+        public TextField MetaDescription { get; set; }
+
+        [SitecoreRouteField]
+        public TextField OgTitle { get; set; }
+
+        [SitecoreRouteField]
+        public TextField OgDescription { get; set; }
+
+        [SitecoreRouteField]
+        public ImageField OgImage { get; set; }
+
+        [SitecoreRouteField]
+        public TextField OgType { get; set; }
+        
     }
 }

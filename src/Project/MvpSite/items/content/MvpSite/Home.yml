@@ -138,16 +138,35 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20200513T045800Z
+    - ID: "49f3c8e4-225a-40b6-9894-4f409477de62"
+      Hint: MetaKeywords
+      Value: MVP, Most Valuable Professional
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "75c57170-231a-4cf2-bb02-7377e6c93e8f"
+      Value: "198fd8d5-7f00-4749-9c29-b7e4bd29ff1f"
+    - ID: "986ff3ab-18cd-47d7-b294-9a091f0e8cea"
+      Hint: OgType
+      Value: article
+    - ID: "a5dfda7a-ee58-43ae-9783-de102d9ea93c"
+      Hint: OgImage
+      Value: |
+        <image mediaid="{1023987B-1EAD-49A0-BF57-9A1C90A0F88A}" />
+    - ID: "ae1320f3-9221-4417-a3aa-969227038016"
+      Hint: OgTitle
+      Value: Home
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Home
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rea@sitecore.net
+        sitecore\sebw@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220801T014448Z
+      Value: 20221004T072522Z
+    - ID: "e08359cc-7bf5-4866-81a6-1e1d07226667"
+      Hint: MetaDescription
+      Value: MVP Home Description
+    - ID: "eeb29922-a760-44a8-a5ab-f28efbdc641c"
+      Hint: OgDescription
+      Value: MVP Home Description

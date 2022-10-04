@@ -1,8 +1,15 @@
 ﻿---
-ID: "1382c86f-3a60-4b87-92cc-daf6f4166474"
-Parent: "107d7a0a-7182-4abd-8dc3-07f8ac5c2f62"
-Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
-Path: /sitecore/templates/Feature/Sugcon/Social and SEO Tagging
+ID: "eeb29922-a760-44a8-a5ab-f28efbdc641c"
+Parent: "de5b610b-1951-453d-888a-45724f1f28a3"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/MvpSite/Social and SEO Tagging/_OpenGraphTags/Open Graph Tags/OgDescription
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Multi-Line Text"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
 Languages:
 - Language: en
   Versions:
@@ -10,7 +17,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220922T100202Z
+      Value: 20220922T111525Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -21,11 +28,11 @@ Languages:
         sitecore\sebw@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "51a6297b-09f2-40f5-8f1b-710b75dbdf9f"
+      Value: "fb93d4fe-8ee1-4eb8-b1be-9204d0628f82"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sebw@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220927T112713Z
+      Value: 20220922T111532Z
