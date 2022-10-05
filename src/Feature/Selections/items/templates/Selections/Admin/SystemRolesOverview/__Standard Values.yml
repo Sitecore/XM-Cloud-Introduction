@@ -8,6 +8,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "1bcbe431-04ce-4022-b695-13b71d929b57"
+      Hint: ConfirmLabel
+      Value: Yes, continue
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220826T140620Z
@@ -19,12 +22,15 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\iva@sitecore.net
+    - ID: "673d0099-5d6d-452a-8689-d6e06fd010ce"
+      Hint: ConfirmMessageLabelFormat
+      Value: "Are you sure you want to remove system role {0}? This will remove all user assignments. If a user isn't linked to "
     - ID: "68bedcfd-1d2a-4887-9ec0-3c7c14ac98f3"
       Hint: TitleLabel
       Value: System Roles
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d5a13206-d548-4221-8d51-fd8d768501e2"
+      Value: "03bf63ec-1706-4dc5-b524-3ef575d10a6d"
     - ID: "9433d2c9-e193-4e7a-9b12-4376f619c8a9"
       Hint: NameTableHeader
       Value: Name
@@ -34,7 +40,7 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220826T141145Z
+      Value: 20221003T130245Z
     - ID: "dcda52f0-c7d6-4620-a54a-e15f86c980fd"
       Hint: RightsTableHeader
       Value: Rights

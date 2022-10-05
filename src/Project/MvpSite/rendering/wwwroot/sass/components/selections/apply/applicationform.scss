@@ -3,6 +3,7 @@
 
 .mvp-fs-applyapplicationform {
     z-index: 0;
+    word-break: break-all;
 
     h2 {
         padding-top: 0.5em;
@@ -27,7 +28,7 @@
                 line-height: 45px;
                 display: block;
                 font-size: 1.2em;
-                color: $sitecore-red;
+                color: $sitecore-teal;
                 border-radius: 50%;
                 margin: 0 auto 10px auto;
                 padding: 2px;
@@ -48,16 +49,16 @@
             }
 
             &.active {
-                color: $sitecore-red;
+                color: $sitecore-teal;
 
                 &:before {
                     color: $contrast-text;
                     border: none;
-                    background-color: $sitecore-red;
+                    background-color: $sitecore-teal;
                 }
 
                 &:after {
-                    background-color: $sitecore-red;
+                    background-color: $sitecore-teal;
                 }
             }
         }

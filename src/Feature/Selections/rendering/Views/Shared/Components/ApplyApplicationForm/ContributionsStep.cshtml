@@ -14,7 +14,9 @@
                     string.Format(Model.StepLabelFormat.Value, "<span class=\"currentstep\">5</span>", 6)))
             </div>
         </div>
-        <p asp-for="ContributionsDescriptionLabel"></p>
+        <div>
+            @Html.Raw(Model.IsEditing ? Model.ContributionsHelpText.EditableMarkup : Model.ContributionsHelpText.Value)
+        </div>
         <form method="post">
             <input asp-for="IsNavigation" type="hidden" value="false"/>
             <input asp-for="CurrentStep" type="hidden" value="Contributions"/>
@@ -47,7 +49,7 @@
                     <span class="text-danger">*</span>
                     <input asp-for="ContributionName" class="form-control" required/>
                 </div>
-                <div class="form-group col-sm-12 col-md-6">
+                <div class="form-group col-sm-12 col-md-12">
                     <label asp-for="ContributionDescription">
                         @(Model.IsEditing ? Html.Raw(Model.ContributionDescriptionLabel.EditableMarkup) : Model.ContributionDescriptionLabel.Value)
                     </label>

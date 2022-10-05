@@ -53,6 +53,8 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public TextField MvpTypeTitleLabel { get; set; }
 
+        public TextField MvpTypeHelpText { get; set; }
+
         public TextField MvpTypeLabel { get; set; }
 
         public short MvpTypeId { get; set; }
@@ -79,7 +81,7 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public TextField ContributionsTitleLabel { get; set; }
 
-        public TextField ContributionsDescriptionLabel { get; set; }
+        public TextField ContributionsHelpText { get; set; }
 
         public TextField ContributionNameLabel { get; set; }
 

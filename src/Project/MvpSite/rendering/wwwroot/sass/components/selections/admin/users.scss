@@ -1,5 +1,12 @@
 ﻿@import '_overview';
+@import '../_form.scss';
 
 .mvp-fs-adminusersoverview {
     @include overviewtable;
+}
+
+.mvp-fs-adminuseredit {
+    padding: 2em;
+
+    @include form;
 }

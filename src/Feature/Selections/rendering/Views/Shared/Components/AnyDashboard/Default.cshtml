@@ -3,7 +3,7 @@
 
 <div class="mvp-fs-dashboard col-12 bg-white">
     <div class="mvp-fs-announcements">
-        @if (Model.CurrentSelection?.ApplicationsActive ?? (Model.CurrentSelection?.ApplicationsStart <= DateTime.UtcNow && Model.CurrentSelection.ApplicationsEnd > DateTime.UtcNow))
+        @if (Model.CurrentSelection?.AreApplicationsOpen() ?? false)
         {
             <div class="alert alert-primary" role="alert">
                 <span asp-for="ApplicationsOpenLabel"></span> @Model.CurrentSelection.ApplicationsEnd.ToString("d")
@@ -15,7 +15,7 @@
                 <span asp-for="ApplicationsClosedLabel"></span>
             </div>
         }
-        @if ((Model.CurrentUser.HasRight(Right.Review) || Model.CurrentUser.HasRight(Right.Admin)) && (Model.CurrentSelection?.ReviewsActive ?? (Model.CurrentSelection?.ReviewsStart <= DateTime.UtcNow && Model.CurrentSelection.ReviewsEnd > DateTime.UtcNow)))
+        @if ((Model.CurrentUser.HasRight(Right.Review) || Model.CurrentUser.HasRight(Right.Admin)) && (Model.CurrentSelection?.AreReviewsOpen() ?? false))
         {
             <div class="alert alert-primary" role="alert">
                 <span asp-for="ReviewsOpenLabel"></span> @Model.CurrentSelection.ReviewsEnd.ToString("d")
@@ -38,7 +38,7 @@
             @*<li>
                 <a asp-for="MyApplicationsOverviewLink"></a>
             </li>*@
-            @if (Model.CurrentSelection?.ApplicationsActive ?? (Model.CurrentSelection?.ApplicationsStart <= DateTime.UtcNow && Model.CurrentSelection.ApplicationsEnd > DateTime.UtcNow))
+            @if ((Model.CurrentUser.HasRight(Right.Admin) || Model.CurrentUser.HasRight(Right.Apply)) && (Model.CurrentSelection?.AreApplicationsOpen() ?? false))
             {
                 <li>
                     <a asp-for="MyCurrentApplicationLink"></a>
@@ -46,6 +46,17 @@
             }
         </ul>
     </div>
+    @if (Model.CurrentUser.HasRight(Right.Review) || Model.CurrentUser.HasRight(Right.Admin))
+    {
+        <div class="mvp-fs-reviewsection">
+            <h2 asp-for="ReviewSectionLabel"></h2>
+            <ul>
+                <li>
+                    <a asp-for="ReviewApplicationsOverviewLink"></a>
+                </li>
+            </ul>
+        </div>
+    }
     @if (Model.CurrentUser.HasRight(Right.Admin))
     {
         <div class="mvp-fs-adminsection">
@@ -68,17 +79,6 @@
                 </li>
                 <li>
                     <a asp-for="AdminApplicationsOverviewLink"></a>
-                </li>
-            </ul>
-        </div>
-    }
-    @if (Model.CurrentUser.HasRight(Right.Review) || Model.CurrentUser.HasRight(Right.Admin))
-    {
-        <div class="mvp-fs-reviewsection">
-            <h2 asp-for="ReviewSectionLabel"></h2>
-            <ul>
-                <li>
-                    <a asp-for="ReviewApplicationsOverviewLink"></a>
                 </li>
             </ul>
         </div>
