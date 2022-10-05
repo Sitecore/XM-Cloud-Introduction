@@ -3,31 +3,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sitecore MVP - @Model.MenuTitle?.Value</title>
+    <title>Sitecore MVP - @Model?.MenuTitle?.Value</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     
-    @if(!String.IsNullOrEmpty(@Model.MetaKeywords?.Value))
+    @if(!String.IsNullOrEmpty(@Model?.MetaKeywords?.Value))
     {
         <meta name="keywords" content="@Model.MetaKeywords?.Value" />
     }
-    @if(!String.IsNullOrEmpty(@Model.MetaDescription?.Value))
+    @if(!String.IsNullOrEmpty(@Model?.MetaDescription?.Value))
     {
         <meta name="description" content="@Model.MetaDescription?.Value" />
     }
-    @if(!String.IsNullOrEmpty(@Model.OgTitle?.Value))
+    @if(!String.IsNullOrEmpty(@Model?.OgTitle?.Value))
     {
         <meta property="og:title" content="@Model.OgTitle?.Value" />
     }
-    @if(!String.IsNullOrEmpty(@Model.OgDescription?.Value))
+    @if(!String.IsNullOrEmpty(@Model?.OgDescription?.Value))
     {
         <meta property="og:description" content="@Model.OgDescription?.Value" />
     }
-    @if(!String.IsNullOrEmpty(@Model.OgImage?.Value?.Src))
+    @if(!String.IsNullOrEmpty(@Model?.OgImage?.Value?.Src))
     {
         <meta property="og:image" content="@Model.OgImage?.Value?.Src" />
     }
-    @if(!String.IsNullOrEmpty(@Model.OgType?.Value))
+    @if(!String.IsNullOrEmpty(@Model?.OgType?.Value))
     {
         <meta property="og:type" content="@Model.OgType?.Value" />
     }
@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style/main.css?v=1.2" />
-    @if (this.SitecoreContext()!.IsEditing)
+    @if (this.SitecoreContext() != null && this.SitecoreContext()!.IsEditing)
     {
 	    <link rel="stylesheet" href="/style/ee.css?v=1" />
     }
