@@ -14,7 +14,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Any
     [ViewComponent(Name = ViewComponentName)]
     public class DashboardViewComponent : BaseViewComponent
     {
-        public const string ViewComponentName = "SelectionsDashboard";
+        public const string ViewComponentName = "AnyDashboard";
 
         public DashboardViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
             : base(modelBinder, client)

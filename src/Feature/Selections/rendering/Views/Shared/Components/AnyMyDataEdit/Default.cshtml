@@ -27,6 +27,7 @@
             </label>
             <span class="text-danger">*</span>
             <select asp-for="CountryId" class="form-control" required>
+                <option value="">--- Select Country ---</option>
                 @foreach (Country country in Model.Countries)
                 {
                     <option value="@country.Id">@country.Name</option>

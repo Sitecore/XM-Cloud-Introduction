@@ -1,12 +1,12 @@
 ﻿---
 ID: "13175655-0158-41fa-b796-ac2663cfed2a"
-Parent: "2d4d0be8-1256-484f-b61d-bfaf39276ed0"
+Parent: "633763a2-41cf-422a-9928-26e39a8d3a1b"
 Template: "04646a89-996f-4ee7-878a-ffdbf1f0ef0d"
-Path: /sitecore/layout/Renderings/Feature/Selections/Dashboard
+Path: /sitecore/layout/Renderings/Feature/Selections/Any/Dashboard
 SharedFields:
 - ID: "037fe404-dd19-4bf7-8e30-4dadf68b27b0"
   Hint: componentName
-  Value: SelectionsDashboard
+  Value: AnyDashboard
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
   Value: office/32x32/window_sidebar.png
@@ -34,11 +34,11 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8a6e4b84-4421-4e61-8fbc-1718e6ce968b"
+      Value: "dc234075-936e-4088-9659-a52b28d76b06"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220929T083105Z
+      Value: 20221003T153634Z

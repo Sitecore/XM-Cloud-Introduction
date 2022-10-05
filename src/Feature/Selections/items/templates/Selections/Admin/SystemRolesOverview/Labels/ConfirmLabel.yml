@@ -1,8 +1,8 @@
 ﻿---
-ID: "cd8a8bd3-17e0-4488-a7b7-917990af5a77"
-Parent: "69554c9a-4da4-419f-a199-d036f3fa042b"
+ID: "1bcbe431-04ce-4022-b695-13b71d929b57"
+Parent: "c55613b2-7451-42d5-9778-5806684ab95a"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Selections/Apply/ApplicationForm/Contributions Step/ContributionDescriptionLabel
+Path: /sitecore/templates/Feature/Selections/Admin/SystemRolesOverview/Labels/ConfirmLabel
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
@@ -15,13 +15,13 @@ Languages:
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Description
+    Value: Confirm
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220913T113918Z
+      Value: 20221003T125720Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -32,11 +32,11 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "78a2e5e4-3282-4d6f-9ad9-5a38b48ea18a"
+      Value: "0a4f2cb6-fe58-4a60-a645-93232e191f4d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220915T132059Z
+      Value: 20221003T125737Z
