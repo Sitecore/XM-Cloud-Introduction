@@ -11,7 +11,7 @@ on:
     - 'src/**/items/**'
   pull_request:
     branches: [ main ]
-    paths-ignore:
+    paths:
     - .github/workflows/CI-CD_XM_Cloud.yml
     - .github/workflows/deploy_xmCloud.yml
     - 'xmlcloud.build.json'
