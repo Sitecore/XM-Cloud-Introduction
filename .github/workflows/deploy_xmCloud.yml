@@ -16,8 +16,8 @@ on:
     
 jobs:
 
-  deploy-staging:
-    name: Deploy the XM Cloud Staging Site
+  deploy:
+    name: Deploy the XM Cloud ${{ inputs.environmentName }} Site
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
