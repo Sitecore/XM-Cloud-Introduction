@@ -4,7 +4,6 @@ using Mvp.Project.MvpSite.Models;
 using Sitecore.AspNet.RenderingEngine;
 using Sitecore.AspNet.RenderingEngine.Filters;
 using Sitecore.LayoutService.Client.Exceptions;
-using Sitecore.LayoutService.Client.Response.Model;
 using System.Net;
 
 namespace Mvp.Project.MvpSite.Controllers
@@ -21,7 +20,7 @@ namespace Mvp.Project.MvpSite.Controllers
         // (enables model binding to Sitecore objects such as Route,
         // and causes requests to the Sitecore Layout Service for controller actions)
         [UseSitecoreRendering]
-        public IActionResult Index(Route route)
+        public IActionResult Index(LayoutViewModel model)
         {
             var request = HttpContext.GetSitecoreRenderingContext();
 
@@ -43,7 +42,7 @@ namespace Mvp.Project.MvpSite.Controllers
                 }
             }
 
-            return View(route);
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

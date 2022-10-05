@@ -1,8 +1,8 @@
 ﻿---
-ID: "1382c86f-3a60-4b87-92cc-daf6f4166474"
-Parent: "107d7a0a-7182-4abd-8dc3-07f8ac5c2f62"
-Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
-Path: /sitecore/templates/Feature/Sugcon/Social and SEO Tagging
+ID: "f54c7bb8-e3d5-40fa-ac8c-c15a8384b950"
+Parent: "0cadfe65-0e55-424a-b396-45a7445694e2"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/layout/Models/Project/MvpSite
 Languages:
 - Language: en
   Versions:
@@ -10,22 +10,22 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220922T100202Z
+      Value: 20220930T150034Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\sebw@sitecore.net
+        sitecore\iva@sitecore.net
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\sebw@sitecore.net
+        sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "51a6297b-09f2-40f5-8f1b-710b75dbdf9f"
+      Value: "2c449692-cd26-4cfc-9217-4fa64e628a5f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebw@sitecore.net
+        sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220927T112713Z
+      Value: 20220930T150034Z
