@@ -4,6 +4,7 @@ using Mvp.Project.MvpSite.Models;
 using Sitecore.AspNet.RenderingEngine;
 using Sitecore.AspNet.RenderingEngine.Filters;
 using Sitecore.LayoutService.Client.Exceptions;
+using Sitecore.LayoutService.Client.Response.Model.Fields;
 using System.Net;
 
 namespace Mvp.Project.MvpSite.Controllers
@@ -23,7 +24,6 @@ namespace Mvp.Project.MvpSite.Controllers
         public IActionResult Index(LayoutViewModel model)
         {
             var request = HttpContext.GetSitecoreRenderingContext();
-
             if (request.Response.HasErrors)
             {
                 foreach (var error in request.Response.Errors)
@@ -32,7 +32,7 @@ namespace Mvp.Project.MvpSite.Controllers
                     {
                         case ItemNotFoundSitecoreLayoutServiceClientException notFound:
                             Response.StatusCode = (int)HttpStatusCode.NotFound;
-                            return View("NotFound");
+                            return View("NotFound",new LayoutViewModel() { MenuTitle = new TextField("Not Found") } );
                         case InvalidRequestSitecoreLayoutServiceClientException badRequest:
                         case CouldNotContactSitecoreLayoutServiceClientException transportError:
                         case InvalidResponseSitecoreLayoutServiceClientException serverError:
@@ -48,11 +48,9 @@ namespace Mvp.Project.MvpSite.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            var exceptionHandlerPathFeature = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
-
-            return View(new ErrorViewModel
+            return View(new LayoutViewModel
             {
-                IsInvalidRequest = exceptionHandlerPathFeature?.Error is InvalidRequestSitecoreLayoutServiceClientException
+                MenuTitle = new TextField("Error")
             });
         }
 
@@ -60,7 +58,6 @@ namespace Mvp.Project.MvpSite.Controllers
         public IActionResult Healthz()
         {
             // TODO: Do we want to add logic here to confirm connectivity with SC etc?
-
             return Ok("Healthy");
         }
     }
