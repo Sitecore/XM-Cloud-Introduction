@@ -1,8 +1,8 @@
 ﻿@model Mvp.Feature.Navigation.Models.TopLinks
 
-<nav class="navbar navbar-expand p-0 d-none d-md-block" id="topbar">
+<nav class="navbar navbar-expand p-0" id="topbar">
     <div class="container">
-        <div class="nav navbar-nav">
+        <div class="nav navbar-nav d-none d-md-flex col-md-9">
             @foreach (var topLink in Model.Items)
             {
                 <a class="nav-item nav-link" target="_blank" href="@topLink.Fields.Link.Value.Href">@topLink.Fields.Link.Value.Text</a>

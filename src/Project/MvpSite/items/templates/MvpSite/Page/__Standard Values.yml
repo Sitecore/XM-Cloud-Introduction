@@ -27,7 +27,7 @@ SharedFields:
           ds=""
           id="{00147A0F-476B-4C99-8A10-E6B4FCFCECE0}"
           par=""
-          ph="header-signin-disabled"
+          ph="header-signin"
           uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}"
           ccb="Clear on publish" />
         <r
@@ -64,17 +64,17 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "53889486-3781-48fc-881e-cf578abff8cc"
+      Value: "25489bfb-9c04-436d-80ce-623a426c6402"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: $name
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220524T013810Z
+      Value: 20221006T145101Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
       Hint: IncludeInMenu
       Value: 1
