@@ -1,0 +1,12 @@
+{
+    "namespace": "Feature.SeoSocialTags",
+    "items": {
+        "includes": [
+            {
+                "name": "templates",
+                "path": "/sitecore/templates/Feature/MvpSite/Social and SEO Tagging",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            }
+        ]
+    }
+}
