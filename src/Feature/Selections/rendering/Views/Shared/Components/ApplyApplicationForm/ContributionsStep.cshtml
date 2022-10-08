@@ -22,12 +22,20 @@
             <input asp-for="CurrentStep" type="hidden" value="Contributions"/>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-row">
-                <div class="form-group col-sm-12 col-md-6">
+                <div class="form-group col-sm-12 col-md-12">
                     <label asp-for="ContributionDate">
                         @(Model.IsEditing ? Html.Raw(Model.ContributionDateLabel.EditableMarkup) : Model.ContributionDateLabel.Value)
                     </label>
                     <span class="text-danger">*</span>
                     <input asp-for="ContributionDate" type="date" class="form-control" required/>
+                </div>
+
+                <div class="form-group col-sm-12 col-md-6">
+                    <label asp-for="ContributionName">
+                        @(Model.IsEditing ? Html.Raw(Model.ContributionNameLabel.EditableMarkup) : Model.ContributionNameLabel.Value)
+                    </label>
+                    <span class="text-danger">*</span>
+                    <input asp-for="ContributionName" class="form-control" required/>
                 </div>
                 <div class="form-group col-sm-12 col-md-6">
                     <label asp-for="ContributionType">
@@ -42,13 +50,6 @@
                     </select>
                 </div>
 
-                <div class="form-group col-sm-12 col-md-6">
-                    <label asp-for="ContributionName">
-                        @(Model.IsEditing ? Html.Raw(Model.ContributionNameLabel.EditableMarkup) : Model.ContributionNameLabel.Value)
-                    </label>
-                    <span class="text-danger">*</span>
-                    <input asp-for="ContributionName" class="form-control" required/>
-                </div>
                 <div class="form-group col-sm-12 col-md-12">
                     <label asp-for="ContributionDescription">
                         @(Model.IsEditing ? Html.Raw(Model.ContributionDescriptionLabel.EditableMarkup) : Model.ContributionDescriptionLabel.Value)
@@ -60,7 +61,7 @@
                     <label asp-for="ContributionLink">
                         @(Model.IsEditing ? Html.Raw(Model.ContributionLinkLabel.EditableMarkup) : Model.ContributionLinkLabel.Value)
                     </label>
-                    <input asp-for="ContributionLink" class="form-control"/>
+                    <input asp-for="ContributionLink" class="form-control" type="url"/>
                 </div>
                 <div class="form-group col-sm-12 col-md-6">
                     <label asp-for="ContributionProductIds">
@@ -80,7 +81,7 @@
             </div>
         </form>
         <br/>
-        <partial name="~/Views/Shared/Components/ApplyApplicationForm/_ContributionsTable.cshtml"/>
+        <partial name="~/Views/Shared/Components/ApplyApplicationForm/_ContributionsList.cshtml"/>
         <form id="applicationNextForm" method="post">
             <input asp-for="IsNavigation" type="hidden" value="true"/>
             <input asp-for="CurrentStep" type="hidden" value="Confirmation"/>

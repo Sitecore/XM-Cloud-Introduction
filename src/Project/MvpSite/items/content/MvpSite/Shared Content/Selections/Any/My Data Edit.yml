@@ -14,14 +14,14 @@ Languages:
     - ID: "757f7184-643b-449f-a041-886f9edb81f0"
       Hint: SuccessLink
       Value: |
-        <link text="Return to Dashboard" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{0068B880-2204-4759-9519-0ED217BBC156}" />
+        <link text="Ok" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{CA03E6DC-BBF0-45B9-B5F1-758A174BD328}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "78c990eb-486c-45f3-8744-2baef84a21ac"
+      Value: "0671d463-9af3-4026-b223-e1b9ab507787"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220929T083924Z
+      Value: 20221008T121453Z

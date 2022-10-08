@@ -1,0 +1,42 @@
+﻿@using Mvp.Feature.Selections.Models.Apply
+@using Mvp.Selections.Domain
+@model Mvp.Feature.Selections.Models.Apply.ApplicationFormModel
+
+@if (Model.CurrentApplication.Contributions.Any())
+{
+    <div>
+        @foreach (Contribution contribution in Model.CurrentApplication.Contributions.OrderByDescending(c => c.Date))
+        {
+            <div class="card">
+                <div class="card-header">
+                    @contribution.Date.ToString("d")
+                    @if (Model.NextStep == ApplicationStep.Contributions)
+                    {
+                        <form method="post" class="float-right">
+                            <input asp-for="IsNavigation" type="hidden" value="false" />
+                            <input asp-for="CurrentStep" type="hidden" value="Contributions" />
+                            <input asp-for="DeleteContributionId" type="hidden" value="@contribution.Id" />
+                            <button type="submit" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </form>
+                    }
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><span class="badge badge-info">@contribution.Type</span> @contribution.Name</h5>
+                    <p class="card-text">@contribution.Description</p>
+                    @if (contribution.Uri != null)
+                    {
+                        <a href="@contribution.Uri" target="_blank" class="card-link">@Model.ContributionLinkLabel.Value</a><br/>
+                    }
+                    @if (contribution.RelatedProducts.Count > 0)
+                    {
+                        @foreach (Product product in contribution.RelatedProducts)
+                        {
+                            <span class="badge badge-secondary">@product.Name</span>
+                        }
+                    }
+                </div>
+            </div>
+            <br />
+        }
+    </div>
+}

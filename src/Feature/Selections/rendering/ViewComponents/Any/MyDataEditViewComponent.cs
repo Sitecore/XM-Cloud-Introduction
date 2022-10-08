@@ -71,7 +71,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Any
             }
             else
             {
-                result = View(model);
+                result = View("ExperienceEditor", model);
             }
 
             return result;

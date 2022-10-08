@@ -31,6 +31,7 @@ namespace Mvp.Feature.Selections.Extensions
             options.AddViewComponent(DashboardViewComponent.ViewComponentName);
             options.AddViewComponent(ApplicationFormViewComponent.ViewComponentName);
             options.AddViewComponent(MyDataEditViewComponent.ViewComponentName);
+            options.AddViewComponent(MyProfilesFormViewComponent.ViewComponentName);
             return options;
         }
     }

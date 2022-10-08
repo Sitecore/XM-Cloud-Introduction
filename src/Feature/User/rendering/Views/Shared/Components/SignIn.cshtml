@@ -1,8 +1,6 @@
-﻿@using Mvp.Feature.User.Extensions
-
-@if (User.Identity.IsAuthenticated)
+﻿@if (User.Identity?.IsAuthenticated ?? false)
 {
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav col-md-3">
         <li>
             <span class="nav-item nav-link">
                 Hello, @User.Identity.Name
@@ -14,7 +12,7 @@
 }
 else
 {
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav col-md-3">
         <li><a class="nav-item nav-link" asp-controller="User" asp-action="SignIn" id="login-button">Sign In</a></li>
     </ul>
 }

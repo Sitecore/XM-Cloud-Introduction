@@ -26,7 +26,7 @@
             <p>@Model.CurrentApplication.Mentor</p>
 
             <h3 asp-for="ContributionsTitleLabel"></h3>
-            <partial name="~/Views/Shared/Components/ApplyApplicationForm/_ContributionsTable.cshtml" />
+            <partial name="~/Views/Shared/Components/ApplyApplicationForm/_ContributionsList.cshtml" />
         </div>
         @if (Model.CurrentSelection.AreApplicationsOpen())
         {
