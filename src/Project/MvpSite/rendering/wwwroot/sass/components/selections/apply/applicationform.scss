@@ -3,10 +3,13 @@
 
 .mvp-fs-applyapplicationform {
     z-index: 0;
-    word-break: break-all;
 
     h2 {
         padding-top: 0.5em;
+    }
+
+    p {
+        word-wrap: break-word;
     }
 
     .progressbar {
