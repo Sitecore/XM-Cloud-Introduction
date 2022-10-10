@@ -1,4 +1,4 @@
-name: SUGCON EU
+name: CI-CD - SUGCON EU
 on: 
   workflow_dispatch:
   push:

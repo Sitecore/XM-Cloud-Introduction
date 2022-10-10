@@ -1,20 +1,20 @@
-name: MVP Site
+name: CI-CD - MVP Site
 on: 
   workflow_dispatch:
   push:
     branches: [ main ]
     paths:
-      - 'src/**/rendering/**'
       - .github/workflows/CI-CD_MVP.yml
       - .github/workflows/build_DotNet.yml
       - .github/workflows/deploy_azureWebapp.yml
+      - 'src/**/rendering/**'
   pull_request:
     branches: [ main ]
     paths:
-      - 'src/**/rendering/**'
       - .github/workflows/CI-CD_MVP.yml
       - .github/workflows/build_DotNet.yml
       - .github/workflows/deploy_azureWebapp.yml
+      - 'src/**/rendering/**'
 
 jobs:
 

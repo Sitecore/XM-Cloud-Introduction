@@ -1,4 +1,4 @@
-name: SUGCON ANZ
+name: CI-CD - SUGCON ANZ
 on: 
   workflow_dispatch:
   push:
