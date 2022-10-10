@@ -4,6 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Mvp.Feature.Selections.Configuration;
 using Mvp.Feature.Selections.Models.Apply;
 using Mvp.Selections.Client;
 using Mvp.Selections.Client.Models;
@@ -17,9 +19,12 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
     {
         public const string ViewComponentName = "ApplyApplicationForm";
 
-        public ApplicationFormViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
+        private readonly MvpSelectionsOptions _options;
+
+        public ApplicationFormViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client, IOptions<MvpSelectionsOptions> options)
             : base(modelBinder, client)
         {
+            _options = options.Value;
         }
 
         public override async Task<IViewComponentResult> InvokeAsync()
@@ -406,11 +411,16 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 model.NextStep = ApplicationStep.Contributions;
             }
             else if (
-                model.IsNavigation.HasValue &&
-                !model.IsNavigation.Value &&
-                model.ContributionDate.HasValue &&
-                !string.IsNullOrWhiteSpace(model.ContributionName) &&
-                (string.IsNullOrWhiteSpace(model.ContributionLink?.OriginalString) || Uri.IsWellFormedUriString(model.ContributionLink?.OriginalString, UriKind.Absolute)))
+                model.IsNavigation.HasValue
+                && !model.IsNavigation.Value
+                && model.ContributionDate.HasValue
+                && !string.IsNullOrWhiteSpace(model.ContributionName)
+                && (
+                    string.IsNullOrWhiteSpace(model.ContributionLink?.OriginalString)
+                    || Uri.IsWellFormedUriString(model.ContributionLink?.OriginalString, UriKind.Absolute))
+                && model.ContributionDate != null
+                && model.ContributionDate.Value >= model.CurrentSelection.ApplicationsEnd.AddMonths(-_options.TimeFrameMonths)
+                && model.ContributionDate.Value <= model.CurrentSelection.ApplicationsEnd)
             {
                 Contribution contribution = new (Guid.Empty)
                 {
@@ -463,7 +473,26 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             else if (model.IsNavigation.HasValue && !model.IsNavigation.Value)
             {
                 await LoadProducts(model);
-                ModelState.AddModelError(string.Empty, "Your contribution is missing mandatory fields or has an invalid link.");
+                if (
+                    model.ContributionDate == null
+                    || model.ContributionDate.Value <= model.CurrentSelection.ApplicationsEnd.AddMonths(-_options.TimeFrameMonths)
+                    || model.ContributionDate.Value >= model.CurrentSelection.ApplicationsEnd)
+                {
+                    ModelState.AddModelError(string.Empty, $"Your contribution date is not in the valid time frame ({model.CurrentSelection.ApplicationsEnd.AddMonths(-_options.TimeFrameMonths):d} - {model.CurrentSelection.ApplicationsEnd:d}).");
+                }
+
+                if (string.IsNullOrWhiteSpace(model.ContributionName))
+                {
+                    ModelState.AddModelError(string.Empty, "Your contribution name is empty.");
+                }
+
+                if (
+                    !string.IsNullOrWhiteSpace(model.ContributionLink?.OriginalString)
+                    && !Uri.IsWellFormedUriString(model.ContributionLink?.OriginalString, UriKind.Absolute))
+                {
+                    ModelState.AddModelError(string.Empty, "Your contribution link is invalid.");
+                }
+
                 model.NextStep = ApplicationStep.Contributions;
             }
         }
