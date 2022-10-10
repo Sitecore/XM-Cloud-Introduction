@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Mvp.Feature.Selections.Configuration;
 using Mvp.Feature.Selections.Providers;
 using Mvp.Feature.Selections.ViewComponents.Admin;
 using Mvp.Feature.Selections.ViewComponents.Any;
@@ -14,6 +16,8 @@ namespace Mvp.Feature.Selections.Extensions
     {
         public static IServiceCollection AddFeatureSelectionsServices(this IServiceCollection services)
         {
+            services.AddOptions<MvpSelectionsOptions>().Configure<IConfiguration>((options, configuration) =>
+                configuration.GetSection(MvpSelectionsOptions.MvpSelections).Bind(options));
             services.AddScoped<ITokenProvider, HttpContextTokenProvider>();
             services.AddMvpSelectionsApiClient();
             return services;
