@@ -1,0 +1,52 @@
+﻿---
+ID: "f4c54f9c-3276-4ca0-9105-2bc0b0b8e1b4"
+Parent: "6f88e50b-0819-4c20-9f0b-1cff687cafa3"
+Template: "6f88e50b-0819-4c20-9f0b-1cff687cafa3"
+Path: /sitecore/templates/Feature/Selections/Any/MyProfilesForm/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0ac5209d-d8fc-42fc-8ae7-dc8e37cd624b"
+      Hint: NameLabel
+      Value: Name
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221006T170953Z
+    - ID: "4dc81464-a363-4491-aaf1-9794b05d3ae1"
+      Hint: LinkLabel
+      Value: Link
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "6289ac68-fd5e-4084-8971-e88a4a64fb80"
+      Hint: TypeLabel
+      Value: Type
+    - ID: "64a0c692-c440-4dc1-ab7c-873545962d6d"
+      Hint: TitleLabel
+      Value: My Profiles
+    - ID: "73826295-9ee5-4e8d-98a5-515b0dd96f1c"
+      Hint: SubmitLabel
+      Value: Add
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "290a186e-49c2-4b94-b39c-b0cb58552a7a"
+    - ID: "a2e09af7-ba61-435e-bddf-48cc9e0fa60a"
+      Hint: ConfirmLabel
+      Value: Yes, continue
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20221008T123620Z
+    - ID: "faa4b907-feb3-427f-8fe7-a4a87a07e4de"
+      Hint: ConfirmMessageLabelFormat
+      Value: "Are you sure you want to remove the profile {0} linking to {1}?"

@@ -1,0 +1,23 @@
+﻿---
+ID: "24a4e6f5-27aa-4e5e-a163-cedc715dd280"
+Parent: "8773fbb5-704f-48ee-b27b-7f4074b75215"
+Template: "6f88e50b-0819-4c20-9f0b-1cff687cafa3"
+Path: /sitecore/content/MvpSite/Shared Content/Selections/Any/My Profiles Form
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221006T172504Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "70a7a140-2220-4d0e-96ca-f534429ce6c4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20221006T172504Z

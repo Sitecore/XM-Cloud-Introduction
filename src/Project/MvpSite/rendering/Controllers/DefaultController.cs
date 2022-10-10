@@ -1,20 +1,21 @@
-﻿using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Mvp.Project.MvpSite.Models;
 using Sitecore.AspNet.RenderingEngine;
 using Sitecore.AspNet.RenderingEngine.Filters;
 using Sitecore.LayoutService.Client.Exceptions;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
 using System.Net;
+using Microsoft.Extensions.Logging;
 
 namespace Mvp.Project.MvpSite.Controllers
 {
     public class DefaultController : Controller
     {
+        private readonly ILogger<DefaultController> _logger;
 
-        public DefaultController()
+        public DefaultController(ILogger<DefaultController> logger)
         {
-
+            _logger = logger;
         }
 
         // Inject Sitecore rendering middleware for this controller action
@@ -23,19 +24,17 @@ namespace Mvp.Project.MvpSite.Controllers
         [UseSitecoreRendering]
         public IActionResult Index(LayoutViewModel model)
         {
-            var request = HttpContext.GetSitecoreRenderingContext();
-            if (request.Response.HasErrors)
+            ISitecoreRenderingContext request = HttpContext.GetSitecoreRenderingContext();
+            if (request.Response?.HasErrors ?? false)
             {
-                foreach (var error in request.Response.Errors)
+                foreach (SitecoreLayoutServiceClientException error in request.Response.Errors)
                 {
                     switch (error)
                     {
                         case ItemNotFoundSitecoreLayoutServiceClientException notFound:
+                            _logger.LogInformation(notFound, notFound.Message);
                             Response.StatusCode = (int)HttpStatusCode.NotFound;
-                            return View("NotFound",new LayoutViewModel() { MenuTitle = new TextField("Not Found") } );
-                        case InvalidRequestSitecoreLayoutServiceClientException badRequest:
-                        case CouldNotContactSitecoreLayoutServiceClientException transportError:
-                        case InvalidResponseSitecoreLayoutServiceClientException serverError:
+                            return View("NotFound", new LayoutViewModel { MenuTitle = new TextField("Not Found") } );
                         default:
                             throw error;
                     }
