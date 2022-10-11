@@ -2,7 +2,7 @@
 ID: "a991f79a-bb58-4bc3-ac44-21bff5aefd74"
 Parent: "fdb097d5-dc3e-434b-b242-ffe12318de7c"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/MvpSite/Social and SEO Tagging/_OpenGraphTags
+Path: /sitecore/templates/Feature/Social and SEO Tagging/_OpenGraphTags
 SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template

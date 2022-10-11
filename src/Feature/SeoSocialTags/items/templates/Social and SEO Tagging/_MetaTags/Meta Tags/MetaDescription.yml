@@ -2,7 +2,7 @@
 ID: "e08359cc-7bf5-4866-81a6-1e1d07226667"
 Parent: "6626b503-2a19-4328-a04e-28ec64e94da8"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/MvpSite/Social and SEO Tagging/_MetaTags/Meta Tags/MetaDescription
+Path: /sitecore/templates/Feature/Social and SEO Tagging/_MetaTags/Meta Tags/MetaDescription
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
