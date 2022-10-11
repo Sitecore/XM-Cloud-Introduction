@@ -1,8 +1,8 @@
 ﻿---
 ID: "fdb097d5-dc3e-434b-b242-ffe12318de7c"
-Parent: "1fc7d4ea-61e6-4c75-85b0-1e44965c49f1"
+Parent: "8f343079-3cc5-4ef7-bc27-32addb46f45e"
 Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
-Path: /sitecore/templates/Feature/MvpSite/Social and SEO Tagging
+Path: /sitecore/templates/Feature/Social and SEO Tagging
 Languages:
 - Language: en
   Versions:
@@ -21,11 +21,11 @@ Languages:
         sitecore\sebw@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d917f1c0-5c6a-47b1-950b-79d69d7a741c"
+      Value: "52ad7c49-2d75-4ead-8b28-fe100ceca381"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sebw@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221004T072130Z
+      Value: 20221011T104752Z

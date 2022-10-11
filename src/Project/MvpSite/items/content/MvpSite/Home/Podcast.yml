@@ -7,6 +7,18 @@ SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 1000
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}"
+          s:ph="header-signin" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:
@@ -46,7 +58,7 @@ Languages:
       Value: 20200728T080246Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ce4324f9-1b80-41e8-bb66-6a95daa2c826"
+      Value: "452409ae-313b-4bca-98de-98c683cf3b23"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Podcast
@@ -56,4 +68,4 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221006T145101Z
+      Value: 20220928T162952Z

@@ -4,7 +4,7 @@
         "includes": [
             {
                 "name": "templates",
-                "path": "/sitecore/templates/Feature/MvpSite/Social and SEO Tagging",
+                "path": "/sitecore/templates/Feature/Social and SEO Tagging",
                 "allowedPushOperations": "CreateUpdateAndDelete"
             }
         ]

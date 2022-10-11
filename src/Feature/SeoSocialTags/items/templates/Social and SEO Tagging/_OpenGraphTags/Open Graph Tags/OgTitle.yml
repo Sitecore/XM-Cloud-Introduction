@@ -2,7 +2,7 @@
 ID: "ae1320f3-9221-4417-a3aa-969227038016"
 Parent: "de5b610b-1951-453d-888a-45724f1f28a3"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/MvpSite/Social and SEO Tagging/_OpenGraphTags/Open Graph Tags/OgTitle
+Path: /sitecore/templates/Feature/Social and SEO Tagging/_OpenGraphTags/Open Graph Tags/OgTitle
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type

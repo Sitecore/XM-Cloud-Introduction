@@ -20,16 +20,8 @@ SharedFields:
           s:par="CacheClearingBehavior=Clear on publish"
           s:ph="/main/column-container-{61F4DE13-A3CD-4B73-97FE-4A47A53150D2}-0" />
         <r
-          uid="{6410A71D-466B-4BFD-9603-8292FEBF2E7A}"
-          p:after="r[@uid='{3F0B2F20-9239-4E72-ABCE-7E017A094359}']"
-          s:ds="{24A4E6F5-27AA-4E5E-A163-CEDC715DD280}"
-          s:id="{F93F4132-C51C-44C8-B93D-5497E2DD99F6}"
-          s:par=""
-          s:ph="/main/column-container-{61F4DE13-A3CD-4B73-97FE-4A47A53150D2}-0"
-          s:ccb="Clear on publish" />
-        <r
           uid="{61F4DE13-A3CD-4B73-97FE-4A47A53150D2}"
-          p:after="r[@uid='{6410A71D-466B-4BFD-9603-8292FEBF2E7A}']"
+          p:after="r[@uid='{3F0B2F20-9239-4E72-ABCE-7E017A094359}']"
           s:id="{57805937-D345-4A28-8DDF-C62EE43D8EBA}"
           s:par="CacheClearingBehavior=Clear on publish"
           s:ph="main" />
@@ -59,7 +51,7 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "9866abc5-4445-47ff-914f-7b76514d0ed1"
+      Value: "8fe00b62-4de7-457e-9463-3bef81404f53"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: "My-Data"
@@ -72,4 +64,4 @@ Languages:
       Value: 1
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221006T172840Z
+      Value: 20220928T164015Z
