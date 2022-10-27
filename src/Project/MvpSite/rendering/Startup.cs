@@ -15,6 +15,7 @@ using Mvp.Feature.Selections.Extensions;
 using Mvp.Feature.Social.Extensions;
 using Mvp.Feature.User.Extensions;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
+using Mvp.Project.MvpSite.Extensions;
 using Sitecore.AspNet.ExperienceEditor;
 using Sitecore.AspNet.RenderingEngine.Extensions;
 using Sitecore.AspNet.RenderingEngine.Localization;
@@ -115,6 +116,7 @@ namespace Mvp.Project.MvpSite.Rendering
                 app.UseSitecoreExperienceEditor();
 
             // Standard ASP.NET Core routing and static file support.
+            app.EnsureAcceptLanguageHeader();
             app.UseRouting();
             app.UseStaticFiles();
 
