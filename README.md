@@ -81,6 +81,11 @@ Running in Edge Mode with Docker will run only run the Head applications and Tra
 
 ## Create a new environment and deploy the codebase
 You can follow these steps to create a new XM Cloud Project & Environment, then generate an Edge Token used to authenticate your Head applications with your Edge Tenant.
+- Authenticate with the XM Cloud Deploy Application
+  - `dotnet sitecore cloud login`
+- Create a new XM Cloud Project
+  - `dotnet sitecore cloud project create -n <<YOUR_PROJECT_NAME>>`
+  - _Record the returned Project ID._
 - Create an environment that you're going to deploy to:
   - `dotnet sitecore cloud environment create --project-id <<YOUR_PROJECT_ID>> -n <<ENVIRONMENT_NAME>>`
   - _Record the returned Environment ID._
