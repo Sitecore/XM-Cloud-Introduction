@@ -18,7 +18,7 @@ This repository contains the codebase for a series of sites managed by the Techn
 - [NodeJS 16 LTS](https://nodejs.org/en/download/) (or greater)
 - [Docker](https://www.docker.com/)
 
-This repositories maintainers intend to keep this repository running against the latest Windows Container versions as possible to reduce image size and increase performance. You may need to downgrade to an earlier Base OS version if you are running an older Host OS. You can read more about this on the [Wiki](../../wiki/Changing-local-Docker-Image-Base-OS-Versions)
+This repositories maintainers intend to keep this repository running against the latest Docker Windows Container versions as possible to reduce image size and increase performance. You may need to downgrade to an earlier Base OS version if you are running an older Host OS. You can read more about this on the [Wiki](../../wiki/Changing-local-Docker-Image-Base-OS-Versions)
 
 # ▶️ Initializing the repository
 You first need to initialize your .env file which will configure how the different application elements will run. There are a series of parameters you can pass in to override the default behaviour of the application, you can find the full list of parameters with their purpose here.
@@ -41,9 +41,9 @@ If you wish to run the MVP Site you will need to provide Okta configuration deta
 
 # 🏃 Running the Repository
 After you have initialized the repository, you can run it using the `up.ps1` script. There are 3 different ways you can run this repository
-- Full local development Mode
-- Edge development with Docker
-- Edge development without Docker
+- [Full local development Mode](#-running-in-full-local-development-mode)
+- [Edge development with Docker](#-running-in-edge-development-mode-with-docker)
+- [Edge development without Docker](#-running-in-edge-development-mode-without-docker)
 
 The different parameters on the `up.ps1` script control which mode you want to select, along with some other options.
 
