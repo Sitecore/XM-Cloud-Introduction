@@ -1,5 +1,5 @@
 # 📝 Introduction
-This repository is not a Starter Kit or Template Solution, you should not clone this repository for the purposes of starting a new Sitecore project. This is intended as a reference example of a Sitecore XM Cloud implementation.
+**This repository is not a Starter Kit or Template Solution**, you should not clone this repository for the purposes of starting a new Sitecore project. This is intended as a reference example of a Sitecore XM Cloud implementation.
 
 This repository contains the codebase for a series of sites managed by the Technical Marketing Team at Sitecore. You will find the following sites in this repository:
 - [Sitecore MVP Site](https://mvp.sitecore.com)
