@@ -106,7 +106,7 @@ First initialize your repo using the `.init/ps1` script, you will need to pass i
 ```
 
 ## Bring up all the application elements for Edge Mode with Docker
-Once you have initialised the repository with your Edge Token, use the `up.ps1` script to bring up all of the containers required for Edge Mode.
+Once you have initialised the repository with your Edge Token, use the `up.ps1` script, ensuring to pass the `-UseEdge` parameter to bring up all of the containers required for Edge Mode.
 
 ```ps1
 .\up.ps1 -UseEdge
