@@ -20,6 +20,12 @@ This repository contains the codebase for a series of sites managed by the Techn
 
 This repositories maintainers intend to keep this repository running against the latest Docker Windows Container versions as possible to reduce image size and increase performance. You may need to downgrade to an earlier Base OS version if you are running an older Host OS. You can read more about this on the [Wiki](../../wiki/Changing-local-Docker-Image-Base-OS-Versions)
 
+## Okta Account
+If you wish to run the MVP Site you will need to provide Okta configuration details. You can generate these values for yourself by [Signing up for an Okta Developer Account](https://developer.okta.com/signup/)
+
+## Auth0 Account
+When you interact with XM Cloud you will be asked to authenticate with our Auth0 tenant. If you don't have an account already you can follow the registration flow provided by the Auth0 to create one.
+
 # ▶️ Initializing the repository
 You first need to initialize your .env file which will configure how the different application elements will run. There are a series of parameters you can pass in to override the default behaviour of the application, you can find the full list of parameters with their purpose here.
 
@@ -35,9 +41,6 @@ Examples of how to use them can be seen in the different setup guides for both L
 | OKTA_Client_Id     | **Yes**               | No                        | Okta Client Id used by the MVP Rendering host                   |
 | OKTA_Client_Secret | **Yes**               | No                        | Okta Client Secret used by the MVP Rendering host               |
 | MVP_Selections_API | **Yes**               | No                        | URL for the MVP Selections API                                  |
-
-## Okta Configuration
-If you wish to run the MVP Site you will need to provide Okta configuration details. You can generate these values for yourself by [Signing up for an Okta Developer Account](https://developer.okta.com/signup/)
 
 # 🏃 Running the Repository
 After you have initialized the repository, you can run it using the `up.ps1` script. There are 3 different ways you can run this repository
