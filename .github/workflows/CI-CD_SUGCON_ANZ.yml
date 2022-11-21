@@ -36,9 +36,10 @@ jobs:
       JS_BUILD_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
       JS_BUILD_SECRET: ${{ secrets.PROD_XM_CLOUD_EDGE_TOKEN }}
 
-  deploy-anz-site:
+  deploy-staging-anz-site:
     uses: ./.github/workflows/deploy_vercel.yml
     needs: [build-staging-anz-site, build-production-anz-site]
+    if: always() && (needs.build-staging-anz-site.result == 'skipped' || needs.build-production-anz-site.result == 'skipped')
     secrets:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
