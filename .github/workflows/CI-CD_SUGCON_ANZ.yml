@@ -24,7 +24,7 @@ jobs:
       workingDirectory: ./src/Project/Sugcon/SugconAnzSxa
     secrets:
       JS_BUILD_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
-      JS_BUILD_SECRET: ${{ fromJSON('[secrets.PROD_XM_CLOUD_EDGE_TOKEN, secrets.STAGING_XM_CLOUD_EDGE_TOKEN]')[github.ref != 'refs/heads/main'] }}
+      JS_BUILD_SECRET: ${{ fromJSON('["secrets.PROD_XM_CLOUD_EDGE_TOKEN", "secrets.STAGING_XM_CLOUD_EDGE_TOKEN"]')[github.ref != 'refs/heads/main'] }}
 
   deploy-anz-site:
     uses: ./.github/workflows/deploy_vercel.yml
