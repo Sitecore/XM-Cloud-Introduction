@@ -18,17 +18,32 @@ on:
 
 jobs:
 
-  build-eu-site:
+  build-staging-eu-site:
+    if: github.ref != 'refs/heads/main'
     uses: ./.github/workflows/build_NextJs.yml
     with:
       workingDirectory: ./src/Project/Sugcon/SugconEuSxa
     secrets:
       JS_BUILD_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
-      JS_BUILD_SECRET: ${{ secrets.JS_BUILD_SECRET }}
+      JS_BUILD_SECRET: ${{ secrets.STAGING_XM_CLOUD_EDGE_TOKEN }}
+    
+  build-production-eu-site:
+    if: github.ref == 'refs/heads/main'  
+    uses: ./.github/workflows/build_NextJs.yml
+    with:
+      workingDirectory: ./src/Project/Sugcon/SugconEuSxa
+    secrets:
+      JS_BUILD_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
+      JS_BUILD_SECRET: ${{ secrets.PROD_XM_CLOUD_EDGE_TOKEN }}
 
   deploy-eu-site:
     uses: ./.github/workflows/deploy_vercel.yml
-    needs: build-eu-site 
+    needs: [build-staging-eu-site, build-production-eu-site]
+    if: always() && 
+        needs.build-staging-eu-site.result != 'failure' &&
+        needs.build-staging-eu-site.result != 'cancelled' && 
+        needs.build-production-eu-site.result != 'failure' &&
+        needs.build-production-eu-site.result != 'cancelled'
     secrets:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
