@@ -1,28 +1,39 @@
 {
-    "deployItems": {
-        "modules": [
-            "Foundation.*",
-            "Feature.*",
-            "project.*"
-        ]
+  "deployItems": {
+    "modules": ["Foundation.*", "Feature.*", "project.*"]
+  },
+  "buildTargets": ["./XmCloud.sln"],
+  "renderingHosts": {
+    "sugconanz": {
+      "path": "./src/Project/Sugcon/SugconAnzSxa",
+      "nodeVersion": "16.15.1",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa"
     },
-    "buildTargets": [
-        "./XmCloud.sln"
-    ],
-    "renderingHosts": {
-        "sugconanz": {
-            "path": "./src/Project/Sugcon/SugconAnzSxa",
-            "nodeVersion": "16.15.1",
-            "jssDeploymentSecret":"110F1C44A496B45478640DD36F80C18C9",
-            "enabled": true,
-            "type": "sxa"
-        },
-        "sugconeu": {
-            "path": "./src/Project/Sugcon/SugconEuSxa",
-            "nodeVersion": "16.15.1",
-            "jssDeploymentSecret":"110F1C44A496B45478640DD36F80C18C9",
-            "enabled": true,
-            "type": "sxa"
-        }
+    "sugconeu": {
+      "path": "./src/Project/Sugcon/SugconEuSxa",
+      "nodeVersion": "16.15.1",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa"
     }
-}
+  },
+  "postActions": {
+    "actions": {
+      "populateSchema": {
+        "indexNames": []
+      },
+      "reindex": {
+        "indexNames": []
+      },
+      "publish": {
+        "path": "",
+        "languages": [],
+        "itemIds": [],
+        "targets": [],
+        "republish": false
+      }
+    }
+  }
+} 
