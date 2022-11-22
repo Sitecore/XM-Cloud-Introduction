@@ -6,6 +6,9 @@ using Sitecore.LayoutService.Client.Exceptions;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
 using System.Net;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http.Extensions;
+using Okta.AspNetCore;
 
 namespace Mvp.Project.MvpSite.Controllers
 {
@@ -24,6 +27,7 @@ namespace Mvp.Project.MvpSite.Controllers
         [UseSitecoreRendering]
         public IActionResult Index(LayoutViewModel model)
         {
+            IActionResult result = null;
             ISitecoreRenderingContext request = HttpContext.GetSitecoreRenderingContext();
             if (request.Response?.HasErrors ?? false)
             {
@@ -33,19 +37,28 @@ namespace Mvp.Project.MvpSite.Controllers
                     {
                         case ItemNotFoundSitecoreLayoutServiceClientException notFound:
                             _logger.LogInformation(notFound, notFound.Message);
-                            return Render404();
+                            result = Render404();
+                            break;
                         default:
                             throw error;
                     }
                 }
             }
-
-            if (IsSecurePage(request) && !HttpContext.User.Identity.IsAuthenticated)
+            else if (!(HttpContext.User.Identity?.IsAuthenticated ?? false) && IsSecurePage(request))
             {
-                return Render404();
+                AuthenticationProperties properties = new()
+                {
+                    RedirectUri = HttpContext.Request.GetEncodedUrl()
+                };
+
+                result = Challenge(properties, OktaDefaults.MvcAuthenticationScheme);
+            }
+            else
+            {
+                result = View(model);
             }
 
-            return View(model);
+            return result;
         }
 
         private IActionResult Render404()
@@ -56,7 +69,7 @@ namespace Mvp.Project.MvpSite.Controllers
 
         private static bool IsSecurePage(ISitecoreRenderingContext request)
         {
-            return request.Response.Content.Sitecore.Route.Fields["RequiresAuthentication"].Read<CheckboxField>().Value;
+            return request.Response?.Content?.Sitecore?.Route?.Fields["RequiresAuthentication"].Read<CheckboxField>().Value ?? false;
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
