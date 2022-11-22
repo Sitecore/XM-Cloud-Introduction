@@ -74,10 +74,12 @@ margin: 0;
 }
 
 .SponsorImage img {
-width: 100%;
-height: auto;   
-max-height: 113px; 
-    
+    max-width: 100%;
+    height: auto;
+    max-height: 113px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .SponsorBlock{
