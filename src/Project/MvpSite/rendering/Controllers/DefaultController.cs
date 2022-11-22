@@ -33,15 +33,30 @@ namespace Mvp.Project.MvpSite.Controllers
                     {
                         case ItemNotFoundSitecoreLayoutServiceClientException notFound:
                             _logger.LogInformation(notFound, notFound.Message);
-                            Response.StatusCode = (int)HttpStatusCode.NotFound;
-                            return View("NotFound", new LayoutViewModel { MenuTitle = new TextField("Not Found") } );
+                            return Render404();
                         default:
                             throw error;
                     }
                 }
             }
 
+            if (IsSecurePage(request) && !HttpContext.User.Identity.IsAuthenticated)
+            {
+                return Render404();
+            }
+
             return View(model);
+        }
+
+        private IActionResult Render404()
+        {
+            Response.StatusCode = (int)HttpStatusCode.NotFound;
+            return View("NotFound", new LayoutViewModel { MenuTitle = new TextField("Not Found") });
+        }
+
+        private static bool IsSecurePage(ISitecoreRenderingContext request)
+        {
+            return request.Response.Content.Sitecore.Route.Fields["RequiresAuthentication"].Read<CheckboxField>().Value;
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
