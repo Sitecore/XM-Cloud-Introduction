@@ -2,7 +2,12 @@
   "deployItems": {
     "modules": ["Foundation.*", "Feature.*", "project.*"]
   },
-  "buildTargets": ["./XmCloud.sln"],
+  "buildTargets": 
+  [
+    "./src/Environment/platform/Mvp.Environment.Platform.csproj",
+    "./src/Project/MvpSite/platform/Mvp.Project.MvpSite.Platform.csproj",
+    "./src/Project/Sugcon/platform/Project.Sugcon.Platform.csproj"
+  ],
   "renderingHosts": {
     "sugconanz": {
       "path": "./src/Project/Sugcon/SugconAnzSxa",
