@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Mvp.Feature.User.Helpers;
 using Okta.AspNetCore;
 
 namespace Mvp.Feature.User.Extensions
@@ -12,8 +14,8 @@ namespace Mvp.Feature.User.Extensions
     {
         public static void AddFeatureUser(this IServiceCollection services, IConfiguration configuration)
         {
-            var okta = configuration.GetSection("Okta").Get<OktaMvcOptions>();
-                okta.Scope = new List<string> { "openid", "profile", "email" };
+            OktaMvcOptions okta = configuration.GetSection("Okta").Get<OktaMvcOptions>();
+                okta.Scope = new List<string> { "openid", "profile", "email", "offline_access" };
 
             services.AddAuthentication(options =>
             {
@@ -24,24 +26,17 @@ namespace Mvp.Feature.User.Extensions
             .AddCookie(options =>
             {
                 options.LoginPath = new PathString("/user/signin");
+                options.Events.OnValidatePrincipal += new RefreshTokenHelper(okta).OnValidatePrincipal;
             })            
             .AddOktaMvc(okta);
         }
 
-
-        public static void UseFeatureUser(this IApplicationBuilder app)
+        public static void MapOktaSigninRoute(this IEndpointRouteBuilder endpoints)
         {
-            app.UseAuthentication();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "OktaSignin",
-                    pattern: "user/{action=SignIn}",
-                    defaults: new { controller = "User" });
-            });
+            endpoints.MapControllerRoute(
+                name: "OktaSignin",
+                pattern: "user/{action=SignIn}",
+                defaults: new { controller = "User" });
         }
     }
 }
