@@ -26,8 +26,10 @@ namespace Mvp.Project.MvpSite.Rendering
 {
     public class Startup
     {
-        private static readonly string _defaultLanguage = "en";
+        private const string DefaultLanguage = "en";
+
         public IConfiguration DotNetConfiguration { get; }
+        
         private MvpSiteSettings Configuration { get; }
 
         public Startup(IConfiguration configuration)
@@ -53,7 +55,7 @@ namespace Mvp.Project.MvpSite.Rendering
 
             // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge & local edge endpoint
             services.AddSitecoreLayoutService()
-              .AddGraphQlHandler("default", Configuration.DefaultSiteName, Configuration.ExperienceEdgeToken, Configuration.LayoutServiceUri)
+              .AddGraphQlHandler("default", Configuration.DefaultSiteName!, Configuration.ExperienceEdgeToken!, Configuration.LayoutServiceUri!)
               .AsDefaultHandler();
 
             services.AddFeatureUser(DotNetConfiguration);
@@ -92,7 +94,7 @@ namespace Mvp.Project.MvpSite.Rendering
         {
             // When running behind HTTPS termination, set the request scheme according to forwarded protocol headers.
             // Also set the Request IP, so that it can be passed on to the Sitecore Layout Service for tracking and personalization.
-            app.UseForwardedHeaders(ConfigureForwarding(env));
+            app.UseForwardedHeaders(ConfigureForwarding());
             app.UseSession();
 
             if (!env.IsDevelopment())
@@ -102,12 +104,12 @@ namespace Mvp.Project.MvpSite.Rendering
                 app.UseHsts();
             }
 
-            //Add recirects for old mvp pages
-            var options = new RewriteOptions()
+            //Add redirects for old mvp pages
+            RewriteOptions rewriteOptions = new RewriteOptions()
               .AddRedirect("mvps/(.*)", "Directory?fc_personyear=$1")
               .AddRedirect("mvps$", "Directory")
               .AddRedirect("Search(.*)", "Directory$1");
-            app.UseRewriter(options);
+            app.UseRewriter(rewriteOptions);
 
             // The Experience Editor endpoint should not be enabled in production DMZ.
             // See the SDK documentation for details.
@@ -124,8 +126,8 @@ namespace Mvp.Project.MvpSite.Rendering
             app.UseRequestLocalization(options =>
             {
                 // If you add languages in Sitecore which this site / Rendering Host should support, add them here.
-                var supportedCultures = new List<CultureInfo> { new CultureInfo(_defaultLanguage) };
-                options.DefaultRequestCulture = new RequestCulture(_defaultLanguage, _defaultLanguage);
+                List<CultureInfo> supportedCultures = new () { new CultureInfo(DefaultLanguage) };
+                options.DefaultRequestCulture = new RequestCulture(DefaultLanguage, DefaultLanguage);
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
 
@@ -133,8 +135,9 @@ namespace Mvp.Project.MvpSite.Rendering
                 options.UseSitecoreRequestLocalization();
             });
 
-            // Configure Okta Integration
-            app.UseFeatureUser();
+            // Enable Authentication & Authorization
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
                 {
@@ -150,6 +153,8 @@ namespace Mvp.Project.MvpSite.Rendering
                   new { controller = "Default", action = "Healthz" }
                 );
 
+                endpoints.MapOktaSigninRoute();
+
                 // Enables the default Sitecore URL pattern with a language prefix.
                 endpoints.MapSitecoreLocalizedRoute("sitecore", "Index", "Default");
 
@@ -158,9 +163,9 @@ namespace Mvp.Project.MvpSite.Rendering
             });
         }
 
-        private ForwardedHeadersOptions ConfigureForwarding(IWebHostEnvironment env)
+        private static ForwardedHeadersOptions ConfigureForwarding()
         {
-            var options = new ForwardedHeadersOptions
+            ForwardedHeadersOptions options = new ()
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             };
