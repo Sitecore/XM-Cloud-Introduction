@@ -143,7 +143,7 @@ namespace Mvp.Feature.People.PeopleFinder
             {
                 var client = graphQLClientFactory.CreateGraphQlClient();
                 var allPeople = await GetAllPeople(client, string.Empty);
-                mvps = allPeople.Where(x => x.Awards != null & x.Awards.TargetItems.Any())
+                mvps = allPeople.Where(x => x.Awards != null && x.Awards.TargetItems.Any())
                                 .OrderBy(x => x.FirstName.Value + x.LastName.Value)
                                 .ToList();
 
