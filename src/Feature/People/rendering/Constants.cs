@@ -24,33 +24,31 @@ namespace Mvp.Feature.People
         public static class GraphQlQueries
         {
             public const string GetMvps = @"
-                 fragment personItemFields on Item {
+                fragment personItemFields on Item {
                   id,
                   name,
                   path,
-                  firstName: field(name:""first name"") {
+                  ... on Person {
+                    firstName {
                       value
-                  },
-                  lastName: field(name:""last name"") {
+                    },
+                    lastName {
                       value
-  								},
-                  email: field(name:""email"") {
+                    }, 
+                    email {
                       value
-  								},
-                  country: field(name:""country"") {
-   										... on LookupField
-                                  {
-                                    targetItem
-                                    {
-                                      name
-                                    }
-                                  }
-  								}
-  								awards: field(name:""awards"") {
+                    },
+                    country{
+                      targetItem
+                      {
+                        name
+                      }
+                    },
+                    awards {
                       ... on MultilistField {
                         targetItems{
-                           name,
-                           parent {
+                          name,
+                          parent {
                             name
                           }
                           field(name:""type"") {
@@ -64,8 +62,9 @@ namespace Mvp.Feature.People
                           }
                         }
                       }
-  					}
-               }
+                    }
+                  }
+                }
 
                 query(
                   $pageSize: Int!
