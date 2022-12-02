@@ -5,25 +5,36 @@
     <h2 asp-for="TitleLabel"></h2>
     <table class="table table-striped table-hover">
         <thead>
-            <tr>
-                <th asp-for="IdentifierTableHeader" scope="col"></th>
-                <th asp-for="NameTableHeader" scope="col"></th>
-                <th asp-for="EmailTableHeader" scope="col"></th>
-                <th asp-for="CountryTableHeader" scope="col"></th>
-                <th scope="col"></th>
-            </tr>
+        <tr>
+            <th scope="col"></th>
+            <th asp-for="IdentifierTableHeader" scope="col"></th>
+            <th asp-for="NameTableHeader" scope="col"></th>
+            <th asp-for="EmailTableHeader" scope="col"></th>
+            <th asp-for="CountryTableHeader" scope="col"></th>
+            <th scope="col"></th>
+        </tr>
         </thead>
         <tbody>
             @foreach (User user in Model.List)
             {
                 <tr>
+                    <td>
+                        @if (user.ImageUri != null)
+                        {
+                            <img src="@user.ImageUri" alt="@user.Name"/>
+                        }
+                        else
+                        {
+                            <i class="fa fa-user"></i>
+                        }
+                    </td>
                     <td>@user.Identifier</td>
                     <td>@user.Name</td>
                     <td>@user.Email</td>
                     <td>@user.Country?.Name</td>
                     <td>
                         <form id="remove@(user.Id)Form" method="post">
-                            <input asp-for="RemoveUserId" type="hidden" value="@user.Id" />
+                            <input asp-for="RemoveUserId" type="hidden" value="@user.Id"/>
                         </form>
                         <a asp-for="EditLink" href="@Model.EditLink.Value.Href?id=@user.Id" class="btn btn-secondary"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                         <button type="submit" class="btn btn-danger" form="remove@(user.Id)Form"><i class="fa fa-trash" aria-hidden="true"></i></button>

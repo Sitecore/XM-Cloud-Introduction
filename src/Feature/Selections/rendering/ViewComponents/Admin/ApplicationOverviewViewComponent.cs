@@ -107,7 +107,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         private async Task LoadApplications(ApplicationsOverviewModel model)
         {
-            Response<IList<Application>> response = await Client.GetApplicationsAsync(model.Page, model.PageSize);
+            Response<IList<Application>> response = await Client.GetApplicationsAsync(null, model.Page, model.PageSize);
             if (response.StatusCode == HttpStatusCode.OK && response.Result != null)
             {
                 model.List.AddRange(response.Result);
