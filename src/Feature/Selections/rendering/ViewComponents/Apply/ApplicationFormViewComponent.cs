@@ -207,7 +207,11 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 await LoadOpenCurrentApplication(model);
                 if (model.CurrentApplication != null)
                 {
-                    model.MvpTypeId = model.CurrentApplication.MvpType.Id;
+                    if (model.CurrentStep != ApplicationStep.MvpType || (model.IsNavigation ?? false))
+                    {
+                        model.MvpTypeId = model.CurrentApplication.MvpType.Id;
+                    }
+
                     if (string.IsNullOrWhiteSpace(model.Eligibility))
                     {
                         model.Eligibility = model.CurrentApplication.Eligibility;
