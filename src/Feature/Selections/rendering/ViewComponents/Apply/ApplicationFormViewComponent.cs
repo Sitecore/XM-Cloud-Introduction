@@ -207,7 +207,11 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 await LoadOpenCurrentApplication(model);
                 if (model.CurrentApplication != null)
                 {
-                    model.MvpTypeId = model.CurrentApplication.MvpType.Id;
+                    if (model.CurrentStep != ApplicationStep.MvpType || (model.IsNavigation ?? false))
+                    {
+                        model.MvpTypeId = model.CurrentApplication.MvpType.Id;
+                    }
+
                     if (string.IsNullOrWhiteSpace(model.Eligibility))
                     {
                         model.Eligibility = model.CurrentApplication.Eligibility;
@@ -571,7 +575,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
         private async Task LoadOpenCurrentApplication(ApplicationFormModel model)
         {
             Response<IList<Application>> applicationsResponse =
-                await Client.GetApplicationsAsync(model.CurrentUser.Id, ApplicationStatus.Open);
+                await Client.GetApplicationsForUserAsync(model.CurrentUser.Id, ApplicationStatus.Open);
             if (applicationsResponse.StatusCode == HttpStatusCode.OK && applicationsResponse.Result != null)
             {
                 model.CurrentApplication =
@@ -582,7 +586,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
         private async Task LoadSubmittedCurrentApplication(ApplicationFormModel model)
         {
             Response<IList<Application>> applicationsResponse =
-                await Client.GetApplicationsAsync(model.CurrentUser.Id, ApplicationStatus.Submitted);
+                await Client.GetApplicationsForUserAsync(model.CurrentUser.Id, ApplicationStatus.Submitted);
             if (applicationsResponse.StatusCode == HttpStatusCode.OK && applicationsResponse.Result != null)
             {
                 model.CurrentApplication =

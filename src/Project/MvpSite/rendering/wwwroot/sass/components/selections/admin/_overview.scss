@@ -2,4 +2,12 @@
     tr *:last-child i {
         color: #fff;
     }
+
+    td {
+        vertical-align: middle;
+
+        i.fa.fa-user {
+            font-size: 80px;
+        }
+    }
 }

@@ -51,7 +51,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                     model.Identifier = user.Identifier;
                     model.Name = user.Name;
                     model.Email = user.Email;
-                    model.CountryId = user.Country.Id;
+                    model.CountryId = user.Country?.Id ?? 0;
                     ModelState.Clear();
                 }
                 else if (userResponse != null && userResponse.StatusCode != HttpStatusCode.OK)
