@@ -8,7 +8,7 @@
 		<tr>
 			<th asp-for="NameTableHeader"></th>
 			<th asp-for="CountryCountTableHeader"></th>
-			<th><a class="btn btn-primary" href=""><i class="fa fa-plus" aria-hidden="true"></i></a></th>
+			<th></th>
 		</tr>
 		</thead>
 		<tbody>
@@ -17,10 +17,7 @@
 			<tr>
 				<td>@region.Name</td>
 				<td>@region.Countries.Count</td>
-				<td>
-					<a class="btn btn-secondary" href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
-					<a class="btn btn-danger" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
-				</td>
+				<td></td>
 			</tr>
 		}
 		</tbody>
