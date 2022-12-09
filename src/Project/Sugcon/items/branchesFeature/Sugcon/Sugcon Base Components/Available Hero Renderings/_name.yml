@@ -15,6 +15,7 @@ SharedFields:
     {9796870A-1BC3-4D1F-99CD-ECD6DA7240F0}
     {96127B34-218D-4D4E-9203-65B7E24A42E6}
     {571484C3-4498-4884-9F53-8B0CFA3E032F}
+    {BDD0D9AF-C678-46B7-8135-ACADCBEB8A7D}
 Languages:
 - Language: en
   Versions:
@@ -29,11 +30,11 @@ Languages:
         sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "cfaf2569-700b-4a06-aab9-502fb3df4dc5"
+      Value: "ed9c1701-60d8-461c-9a86-833b8a6e10f3"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\sebastian.tecsi@gmail.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220520T143048Z
+      Value: 20221207T203344Z
