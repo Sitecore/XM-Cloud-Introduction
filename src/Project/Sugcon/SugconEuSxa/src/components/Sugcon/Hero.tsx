@@ -30,7 +30,7 @@ export const Default = (props: HeroProps): JSX.Element => {
           <div className="thumbnail">
             <Image media={props.fields.BackgroundImage} className="img-fluid heroimage"></Image>
             <div className="col-12">
-              <div className="caption d-none d-md-block hero-backdrop">
+              <div className="caption d-md-block hero-backdrop">
                 <p className="hero-label">
                   <Text field={props.fields.Label} />
                 </p>
