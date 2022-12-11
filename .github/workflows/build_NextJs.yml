@@ -6,11 +6,6 @@ on:
       workingDirectory:
         required: true
         type: string
-    secrets:
-      JS_BUILD_ENDPOINT:
-        required: true
-      JS_BUILD_SECRET:
-        required: true
     
 jobs:
 
@@ -19,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FETCH_WITH: GraphQL
-      GRAPH_QL_ENDPOINT: ${{ secrets.JS_BUILD_ENDPOINT }}
-      SITECORE_API_KEY: ${{ secrets.JS_BUILD_SECRET }}
+      GRAPH_QL_ENDPOINT: https://www.google.com
+      DISABLE_SSG_FETCH: true
     defaults:
       run:
         working-directory: ${{ inputs.workingDirectory }}
