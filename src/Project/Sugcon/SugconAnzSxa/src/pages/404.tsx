@@ -6,10 +6,12 @@ import SitecorePage from './[[...path]]';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   let props = { notFound: false };
-  props = await sitecorePagePropsFactory.create({
-    ...context,
-    params: { ...context.params, path: '/NotFound' },
-  });
+  if (!process.env.DISABLE_SSG_FETCH) {
+    props = await sitecorePagePropsFactory.create({
+      ...context,
+      params: { ...context.params, path: '/NotFound' },
+    });
+  }
 
   return {
     props,
@@ -21,13 +23,17 @@ export default function Custom404Page({
   layoutData,
   componentProps,
 }: SitecorePageProps): JSX.Element {
-  return (
-    <SitecorePage
-      notFound={true}
-      layoutData={layoutData}
-      componentProps={componentProps}
-      dictionary={{}}
-      locale=""
-    />
-  );
+  if (!process.env.DISABLE_SSG_FETCH) {
+    return (
+      <SitecorePage
+        notFound={true}
+        layoutData={layoutData}
+        componentProps={componentProps}
+        dictionary={{}}
+        locale=""
+      />
+    );
+  } else {
+    <div />;
+  }
 }

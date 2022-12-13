@@ -37,7 +37,7 @@ export const getStaticPaths: GetStaticPaths = async (context) => {
   // ahead of time (non-development mode in this example).
   // See https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration
 
-  if (process.env.NODE_ENV !== 'development') {
+  if (process.env.NODE_ENV !== 'development' && !process.env.DISABLE_SSG_FETCH) {
     // Note: Next.js runs export in production mode
     const paths = await sitemapFetcher.fetch(context);
 
