@@ -1,11 +1,12 @@
 import React from 'react';
-import { Text, Field, ImageField, Image } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Text, Field, ImageField, Image, RichText as JssRichText } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 interface Fields {
   Text: Field<string>;
   Label: Field<string>;
   BackgroundImage: ImageField;
+  Description: Field<string>;
 }
 
 type HeroProps = ComponentProps & {
@@ -29,13 +30,16 @@ export const Default = (props: HeroProps): JSX.Element => {
           <div className="thumbnail">
             <Image media={props.fields.BackgroundImage} className="img-fluid heroimage"></Image>
             <div className="col-12">
-              <div className="caption d-none d-md-block hero-backdrop">
+              <div className="caption d-md-block hero-backdrop">
                 <p className="hero-label">
                   <Text field={props.fields.Label} />
                 </p>
-                <p className="h1 py-4">
+                <h1 className="h1 py-4">
                   <Text className="contentTitle" field={props.fields.Text} />
-                </p>
+                </h1>
+                <div className="hero-text">
+                  <JssRichText field={props.fields.Description} />
+                </div>
               </div>
             </div>
           </div>
