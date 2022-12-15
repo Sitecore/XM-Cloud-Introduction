@@ -41,7 +41,6 @@ export const Default = (props: AnnouncementBarProps): JSX.Element => {
           </div>
         </div>
       </div>
-
     );
   }
   return <AnnouncementBar {...props} />;
