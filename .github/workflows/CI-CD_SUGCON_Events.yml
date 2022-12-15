@@ -1,0 +1,26 @@
+name: CI-CD - SUGCON Events
+on: 
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - .github/workflows/CI-CD_SUGCON_Events.yml
+      - .github/workflows/build_NextJs.yml
+      - .github/workflows/deploy_vercel.yml
+      - 'src/Project/Sugcon/SugconHomeStatic/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - .github/workflows/CI-CD_SUGCON_Events.yml
+      - .github/workflows/build_NextJs.yml
+      - .github/workflows/deploy_vercel.yml
+      - 'src/Project/Sugcon/SugconHomeStatic/**'
+
+jobs:
+
+  deploy-events-site:
+    uses: ./.github/workflows/deploy_vercel.yml
+    secrets:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_SUGCON_EVENTS_PROJECT_ID }}
