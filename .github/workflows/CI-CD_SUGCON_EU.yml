@@ -34,7 +34,7 @@ jobs:
     uses: ./.github/workflows/deploy_vercel.yml
     needs: [build-staging-eu-site, build-production-eu-site]
     if: always() && 
-        github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push'))
+        (github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push'))) &&
         needs.build-staging-anz-site.result != 'failure' &&
         needs.build-staging-anz-site.result != 'cancelled' && 
         needs.build-production-anz-site.result != 'failure' &&
