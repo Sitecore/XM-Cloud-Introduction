@@ -32,6 +32,7 @@ jobs:
 
   deploy-eu-site:
     uses: ./.github/workflows/deploy_vercel.yml
+    if: github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push'))
     needs: [build-staging-eu-site, build-production-eu-site]
     if: always() && 
         needs.build-staging-eu-site.result != 'failure' &&
