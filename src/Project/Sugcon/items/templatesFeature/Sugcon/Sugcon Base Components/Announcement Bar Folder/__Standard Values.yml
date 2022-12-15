@@ -1,0 +1,33 @@
+﻿---
+ID: "2cc638f8-c8e6-4ecc-8af8-9dad8796e4d1"
+Parent: "fd415609-9326-46c6-aa29-eb04b7d3d574"
+Template: "fd415609-9326-46c6-aa29-eb04b7d3d574"
+Path: /sitecore/templates/Feature/Sugcon/Sugcon Base Components/Announcement Bar Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {443B4313-9B24-422B-BB64-20BC14A53DC5}
+    {FD415609-9326-46C6-AA29-EB04B7D3D574}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071628Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "17efd743-1ddf-4408-9f50-e64abc1105ea"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.tecsi@gmail.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20221207T203343Z
