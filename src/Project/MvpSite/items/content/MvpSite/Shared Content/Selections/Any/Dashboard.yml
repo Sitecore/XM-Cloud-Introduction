@@ -12,6 +12,10 @@ Languages:
       Hint: AdminRolesOverviewLink
       Value: |
         <link class="" id="{EFE98BAE-B170-4B27-B997-910263A64635}" querystring="" anchor="" target="" title="" linktype="internal" text="Manage Roles" url="/MvpSite/Home/Application/Admin/Roles" />
+    - ID: "257e4c4a-a95d-4ee3-a7bb-c740191141e4"
+      Hint: AdminScoreCardsLink
+      Value: |
+        <link text="Score Cards" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{3CBA0CD1-F6D7-4836-B065-430B2F728AA7}" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220910T171926Z
@@ -29,7 +33,7 @@ Languages:
         <link class="" id="{D296373D-623E-461B-8D7A-C274E23CBEDB}" querystring="" anchor="" target="" title="" linktype="internal" text="Manage Applications" url="/MvpSite/Home/Application/Admin/Applications" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5baba400-9bf8-4ec1-b6c1-0a70dc4db726"
+      Value: "3cfe2737-c8b9-429a-874d-df3c45bdae9f"
     - ID: "936da302-d3cd-4d65-88f9-b19ad9347885"
       Hint: AdminUsersOverviewLink
       Value: |
@@ -48,7 +52,7 @@ Languages:
         <link class="" id="{B3D36988-B4AE-4915-A6CF-F5133BE4E100}" querystring="" anchor="" target="" title="" linktype="internal" text="My current application" url="/MvpSite/Home/Application/Apply" />
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220929T083638Z
+      Value: 20230104T204123Z
     - ID: "e92345c5-d175-4515-abe4-4f5ddf7deae4"
       Hint: MyUserOverviewLink
       Value: |

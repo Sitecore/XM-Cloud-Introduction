@@ -1,0 +1,32 @@
+﻿@using Mvp.Selections.Domain
+@model ICollection<Contribution>
+
+@if (Model is { Count: > 0 })
+{
+    <div>
+        @foreach (Contribution contribution in Model.OrderByDescending(c => c.Date))
+        {
+            <div class="card">
+                <div class="card-header">
+                    @contribution.Date.ToString("d")
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><span class="badge badge-info">@contribution.Type</span> @contribution.Name</h5>
+                    <p class="card-text">@contribution.Description</p>
+                    @if (contribution.Uri != null)
+                    {
+                        <a href="@contribution.Uri" target="_blank" class="card-link">@contribution.Uri.Host</a><br/>
+                    }
+                    @if (contribution.RelatedProducts.Count > 0)
+                    {
+                        @foreach (Product product in contribution.RelatedProducts)
+                        {
+                            <span class="badge badge-secondary">@product.Name</span>
+                        }
+                    }
+                </div>
+            </div>
+            <br />
+        }
+    </div>
+}

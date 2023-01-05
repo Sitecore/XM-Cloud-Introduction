@@ -5,6 +5,8 @@ namespace Mvp.Feature.Selections.Models.Any
 {
     public class DashboardModel : BaseModel
     {
+        public HyperLinkField AdminScoreCardsLink { get; set; }
+
         public HyperLinkField AdminUsersOverviewLink { get; set; }
 
         public HyperLinkField AdminRolesOverviewLink { get; set; }

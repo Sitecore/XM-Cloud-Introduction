@@ -1,0 +1,27 @@
+﻿---
+ID: "61a3fe7a-a0fa-4138-ae29-fb3a3d2bbcce"
+Parent: "c34e4ad8-acd9-4a7f-904e-c52533153603"
+Template: "0f3f372c-4cc2-4e00-b00a-e2543a134573"
+Path: /sitecore/content/MvpSite/Shared Content/Selections/Admin/Score Cards
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230104T203827Z
+    - ID: "5ec5fd70-ff18-438f-90c4-805cc1e540c2"
+      Hint: DetailLink
+      Value: |
+        <link text="Detail" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{60B72918-91B1-4B91-AA1C-BB4E08824C70}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "32aa1eb4-d3b1-46c6-85a4-3186afbf654a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230105T001254Z
