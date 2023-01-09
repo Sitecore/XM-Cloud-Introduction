@@ -1,0 +1,64 @@
+﻿---
+ID: "c83e023f-08b5-4184-a880-c920de2b0ea1"
+Parent: "0f3f372c-4cc2-4e00-b00a-e2543a134573"
+Template: "0f3f372c-4cc2-4e00-b00a-e2543a134573"
+Path: /sitecore/templates/Feature/Selections/Admin/ScoreCards/ScoreCards/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "12c0d929-0da8-45d4-9721-558bf20f250c"
+      Hint: SelectionLabel
+      Value: Selection
+    - ID: "221f4525-cbba-48fd-b0cd-ef1271fb5b7d"
+      Hint: SubmitLabel
+      Value: Submit
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230104T203714Z
+    - ID: "3778b019-7d37-4182-b75d-6de2ba840f60"
+      Hint: ReviewCountTableHeader
+      Value: # of Reviews
+    - ID: "4dbbe4c0-8602-4b18-aa55-df4d51ab6a15"
+      Hint: MvpTypeLabel
+      Value: MVP Type
+    - ID: "524d5fcd-97d6-4169-98e4-cd2eca848a70"
+      Hint: MinTableHeader
+      Value: Min
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "7108dc91-f1f2-4a63-a3ff-701ff031ddd0"
+      Hint: MaxTableHeader
+      Value: Max
+    - ID: "8bfb5b5a-8acb-464e-afc2-f7bbe0754d83"
+      Hint: AverageTableHeader
+      Value: Average
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7ebd4daf-482d-44ac-a646-60b1c029370f"
+    - ID: "90cc1848-ea0f-467d-bc9b-eb09d1b29d17"
+      Hint: MedianTableHeader
+      Value: Median
+    - ID: "aaac7bdf-091e-4fba-9e8c-f3557a2fd80b"
+      Hint: CountryTableHeader
+      Value: Country
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230104T224105Z
+    - ID: "da68863c-2e37-46d7-b798-6e988824a349"
+      Hint: NameTableHeader
+      Value: Name
+    - ID: "e6db4899-96ce-4079-970c-b1ab8424d076"
+      Hint: TitleLabel
+      Value: Score Cards

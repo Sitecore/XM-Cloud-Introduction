@@ -44,7 +44,7 @@ namespace Mvp.Project.MvpSite.Controllers
                     }
                 }
             }
-            else if (!(HttpContext.User.Identity?.IsAuthenticated ?? false) && IsSecurePage(request))
+            else if (!(HttpContext.User.Identity?.IsAuthenticated ?? false) && IsSecurePage(request) && !(request.Response?.Content?.Sitecore?.Context?.IsEditing ?? false))
             {
                 AuthenticationProperties properties = new()
                 {

@@ -29,7 +29,6 @@
                         <form id="remove@(application.Id)Form" method="post">
                             <input asp-for="RemoveApplicationId" type="hidden" value="@application.Id" />
                         </form>
-                        <a class="btn btn-secondary" href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
                         <button type="submit" class="btn btn-danger" form="remove@(application.Id)Form"><i class="fa fa-trash" aria-hidden="true"></i></button>
                     </td>
                 </tr>
