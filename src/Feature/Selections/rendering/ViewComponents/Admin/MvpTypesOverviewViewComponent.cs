@@ -29,10 +29,10 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                Response<IList<MvpType>> regionsResponse = await Client.GetMvpTypesAsync(model.Page, model.PageSize);
-                if (regionsResponse.StatusCode == HttpStatusCode.OK && regionsResponse.Result != null)
+                Response<IList<MvpType>> mvpTypesResponse = await Client.GetMvpTypesAsync(model.Page, model.PageSize);
+                if (mvpTypesResponse.StatusCode == HttpStatusCode.OK && mvpTypesResponse.Result != null)
                 {
-                    model.List.AddRange(regionsResponse.Result);
+                    model.List.AddRange(mvpTypesResponse.Result);
                 }
             }
 

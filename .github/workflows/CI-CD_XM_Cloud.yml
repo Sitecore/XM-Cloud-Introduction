@@ -29,6 +29,7 @@ jobs:
 
   deploy-staging:
     uses: ./.github/workflows/deploy_xmCloud.yml
+    if: github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push'))
     needs: build-dotnet 
     with:
       environmentName: Staging

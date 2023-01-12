@@ -21,7 +21,6 @@
                         <form id="remove@(role.Id)Form" method="post">
                             <input asp-for="RemoveSystemRoleId" type="hidden" value="@role.Id" />
                         </form>
-                        <a class="btn btn-secondary" href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
                         <button type="submit" class="btn btn-danger" form="remove@(role.Id)Form"><i class="fa fa-trash" aria-hidden="true"></i></button>
                     </td>
                 </tr>
