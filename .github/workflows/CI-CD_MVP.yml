@@ -25,7 +25,8 @@ jobs:
 
   deploy-mvp-staging:
     uses: ./.github/workflows/deploy_azureWebapp.yml
-    needs: build-dotnet 
+    needs: build-dotnet
+    if: github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push')) 
     with:
       buildConfiguration: Debug
       projectLocation: src/Project/MvpSite/rendering
