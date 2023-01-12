@@ -46,7 +46,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^1.19.1",
+    "@graphql-codegen/cli": "^2.16.4",
     "@graphql-codegen/plugin-helpers": "^1.18.1",
     "@graphql-codegen/typed-document-node": "^1.18.4",
     "@graphql-codegen/typescript": "^1.21.1",
