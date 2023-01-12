@@ -5,6 +5,8 @@ import {
   ImageField,
   Image,
   RichText as JssRichText,
+  LinkField,
+  Link,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
@@ -13,6 +15,7 @@ interface Fields {
   Label: Field<string>;
   BackgroundImage: ImageField;
   Description: Field<string>;
+  Link: LinkField;
 }
 
 type HeroProps = ComponentProps & {
@@ -45,6 +48,7 @@ export const Default = (props: HeroProps): JSX.Element => {
                 </h1>
                 <div className="hero-text">
                   <JssRichText field={props.fields.Description} />
+                  <Link className="link-button primary" field={props.fields.Link}></Link>
                 </div>
               </div>
             </div>
