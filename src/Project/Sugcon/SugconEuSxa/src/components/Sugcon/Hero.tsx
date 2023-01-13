@@ -53,13 +53,11 @@ export const Default = (props: HeroProps): JSX.Element => {
                   {sitecoreContext.pageState === 'edit' ? (
                     props.fields?.Link ? (
                       <Link className="link-button primary" field={props.fields.Link}></Link>
-                      
                     ) : (
                       ''
                     )
                   ) : (
                     props.fields?.Link?.value?.href ? (
-                      
                       <Link className="link-button primary" field={props.fields.Link}></Link>
                     ) : (
                       ''
