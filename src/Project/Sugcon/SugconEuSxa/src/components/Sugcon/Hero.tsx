@@ -7,6 +7,7 @@ import {
   RichText as JssRichText,
   LinkField,
   Link,
+  useSitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
@@ -32,6 +33,7 @@ const Hero = (props: HeroProps): JSX.Element => (
 );
 
 export const Default = (props: HeroProps): JSX.Element => {
+  const { sitecoreContext } = useSitecoreContext();
   if (props.fields) {
     return (
       <div className={`component hero ${props.params.styles}`}>
@@ -48,10 +50,20 @@ export const Default = (props: HeroProps): JSX.Element => {
                 </h1>
                 <div className="hero-text">
                   <JssRichText field={props.fields.Description} />
-                  {props.fields.Link ? (
-                    <Link className="link-button primary" field={props.fields.Link}></Link>
+                  {sitecoreContext.pageState === 'edit' ? (
+                    props.fields?.Link ? (
+                      <Link className="link-button primary" field={props.fields.Link}></Link>
+                      
+                    ) : (
+                      ''
+                    )
                   ) : (
-                    ''
+                    props.fields?.Link?.value?.href ? (
+                      
+                      <Link className="link-button primary" field={props.fields.Link}></Link>
+                    ) : (
+                      ''
+                    )
                   )}
                 </div>
               </div>

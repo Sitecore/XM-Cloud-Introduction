@@ -114,4 +114,9 @@
     &:hover {
         opacity: 0.5;
     }
+
+    &::after {
+        content: none;
+    }
+
 }
