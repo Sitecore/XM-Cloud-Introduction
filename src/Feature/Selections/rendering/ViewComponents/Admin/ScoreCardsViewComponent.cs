@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -33,16 +34,23 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                await LoadSelections(model);
-                await LoadMvpTypes(model);
+                List<Task> loadTasks = new ()
+                {
+                    LoadSelections(model),
+                    LoadMvpTypes(model)
+                };
+
                 if (model.SelectedMvpTypeId > 0 && model.SelectedSelectionId != Guid.Empty)
                 {
-                    await LoadScoreCards(model);
+                    loadTasks.Add(LoadScoreCards(model));
+                    loadTasks.Add(LoadTitles(model));
                 }
 
-                result = string.IsNullOrWhiteSpace(model.ErrorMessage)
-                    ? View(model)
-                    : View("Error", model);
+                await Task.WhenAll(loadTasks);
+
+                result = model.ErrorMessages.Count > 0
+                    ? View("~/Views/Shared/_Error.cshtml", model)
+                    : View(model);
             }
 
             return result;
@@ -122,7 +130,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += mvpTypesResponse.Message;
+                model.ErrorMessages.Add(mvpTypesResponse.Message);
             }
         }
 
@@ -135,7 +143,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += selectionsResponse.Message;
+                model.ErrorMessages.Add(selectionsResponse.Message);
             }
         }
 
@@ -148,7 +156,24 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += scoreCardsResponse.Message;
+                model.ErrorMessages.Add(scoreCardsResponse.Message);
+            }
+        }
+
+        private async Task LoadTitles(ScoreCardsModel model)
+        {
+            short? year = model.Selections.SingleOrDefault(s => s.Id == model.SelectedSelectionId)?.Year;
+            if (year.HasValue)
+            {
+                Response<IList<Title>> titlesResponse = await Client.GetTitlesAsync(null, null, new List<short> { year.Value });
+                if (titlesResponse.StatusCode == HttpStatusCode.OK && titlesResponse.Result != null)
+                {
+                    model.Titles.AddRange(titlesResponse.Result);
+                }
+                else
+                {
+                    model.ErrorMessages.Add(titlesResponse.Message);
+                }
             }
         }
     }

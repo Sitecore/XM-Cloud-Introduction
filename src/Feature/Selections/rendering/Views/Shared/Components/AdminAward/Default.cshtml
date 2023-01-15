@@ -1,0 +1,26 @@
+﻿@model Mvp.Feature.Selections.Models.Admin.AwardModel
+
+<div class="mvp-fs-adminaward col-12 bg-white">
+    <h2 asp-for="TitleLabel"></h2>
+    <div class="row">
+        <div class="col-9">
+            @if (Model.IsRemove)
+            {
+                <partial name="~/Views/Shared/Components/AdminAward/_Remove.cshtml"/>
+            }
+            else
+            {
+                <partial name="~/Views/Shared/Components/AdminAward/_Award.cshtml"/>
+            }
+            @if (Model.IsEditing)
+            {
+                <hr/>
+                <partial name="~/Views/Shared/Components/AdminAward/_Remove.cshtml" />
+            }
+        </div>
+        <div class="col-3">
+            <h3 asp-for="CommentsLabel"></h3>
+            <partial name="~/Views/Shared/_Comments.cshtml" model="Model.Comments.Select(c => c)" />
+        </div>
+    </div>
+</div>

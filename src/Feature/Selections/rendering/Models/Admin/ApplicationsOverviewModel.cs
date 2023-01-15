@@ -29,7 +29,5 @@ namespace Mvp.Feature.Selections.Models.Admin
         public TextField ConfirmLabel { get; set; }
 
         public bool RemoveConfirmed { get; set; } = false;
-
-        public string ErrorMessage { get; set; }
     }
 }

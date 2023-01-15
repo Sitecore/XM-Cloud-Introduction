@@ -1,0 +1,19 @@
+﻿@model Mvp.Feature.Selections.Models.Admin.AwardModel
+
+<form method="post">
+    <input asp-for="IsConfirmed" value="true" type="hidden" />
+    <input asp-for="IsRemove" value="true" type="hidden" />
+    <input asp-for="TitleId" type="hidden"/>
+    @if (Model.IsEditing)
+    {
+        @Html.Raw(Model.ConfirmRemoveAwardLabelFormat.EditableMarkup)
+    }
+    else
+    {
+        @(string.Format(Model.ConfirmRemoveAwardLabelFormat.Value, Model.Title?.MvpType.Name, Model.Title?.Application.Applicant.Name, Model.Title?.Application.Selection.Year))
+    }
+    <div class="form-group">
+        <a asp-for="ReturnLink" class="btn btn-secondary" role="button">@(Model.IsEditing ? Html.Raw(Model.CancelLabel.EditableMarkup) : Model.CancelLabel.Value)</a>
+        <button asp-for="ConfirmLabel" type="submit" class="btn btn-danger"></button>
+    </div>
+</form>

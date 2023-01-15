@@ -5,6 +5,9 @@
 <div class="mvp-fs-adminscorecarddetail col-12 bg-white">
     <h2 asp-for="TitleLabel"></h2>
     <p>Score detail for @Model.Application?.Applicant?.Name from @Model.Application?.Country?.Name for @Model.Application?.MvpType?.Name MVP</p>
+    <h3 asp-for="CommentsLabel"></h3>
+    <partial name="~/Views/Shared/_Comments.cshtml" model="Model.Comments.Select(c => c)"/>
+
     <h3 asp-for="ReviewsLabel"></h3>
     @foreach (Review review in Model.Reviews)
     {
@@ -42,6 +45,7 @@
         </div>
         <br/>
     }
+
     <h3 asp-for="ApplicationLabel"></h3>
     <p>@Model.Application?.Eligibility</p>
     <p>@Model.Application?.Objectives</p>

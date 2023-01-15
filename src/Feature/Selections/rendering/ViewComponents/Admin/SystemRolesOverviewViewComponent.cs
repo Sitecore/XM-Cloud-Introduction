@@ -7,6 +7,7 @@ using Mvp.Feature.Selections.Models.Admin;
 using Mvp.Selections.Client;
 using Mvp.Selections.Client.Models;
 using Mvp.Selections.Domain;
+using Mvp.Selections.Domain.Roles;
 using Sitecore.AspNet.RenderingEngine.Binding;
 
 namespace Mvp.Feature.Selections.ViewComponents.Admin
@@ -40,7 +41,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 }
                 else
                 {
-                    model.ErrorMessage = roleResponse.Message;
+                    model.ErrorMessages.Add(roleResponse.Message);
                 }
             }
             else if (model.RemoveSystemRoleId != null && model.RemoveConfirmed)
@@ -53,7 +54,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 }
                 else
                 {
-                    model.ErrorMessage = removeResponse.Message;
+                    model.ErrorMessages.Add(removeResponse.Message);
                 }
             }
             else
@@ -62,9 +63,9 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 result = View(model);
             }
 
-            return string.IsNullOrWhiteSpace(model.ErrorMessage) ?
-                result :
-                View("Error", model);
+            return model.ErrorMessages.Count > 0
+                ? View("~/Views/Shared/_Error.cshtml", model)
+                : result;
         }
 
         private static void GenerateFakeDataForEdit(SystemRolesOverviewModel model)
@@ -100,7 +101,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage = rolesResponse.Message;
+                model.ErrorMessages.Add(rolesResponse.Message);
             }
         }
     }

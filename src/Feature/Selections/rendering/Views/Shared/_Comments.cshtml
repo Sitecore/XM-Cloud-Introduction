@@ -1,0 +1,23 @@
+﻿@using Mvp.Selections.Domain.Comments
+@model IEnumerable<Comment>
+
+@{ int commentCount = 0; }
+@foreach (Comment comment in Model)
+{
+    commentCount++;
+    <div class="card">
+        <div class="card-body">
+            @comment.Value
+        </div>
+        <div class="card-footer">
+            @comment.User.Name (@((comment.ModifiedOn ?? comment.CreatedOn).ToString("g")))
+        </div>
+    </div>
+    <br/><br/>
+}
+@if (commentCount == 0)
+{
+    <div class="alert alert-info" role="alert">
+        No comments
+    </div>
+}
