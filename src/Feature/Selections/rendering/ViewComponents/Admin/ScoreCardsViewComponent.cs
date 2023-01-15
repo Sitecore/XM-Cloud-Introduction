@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -38,6 +39,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 if (model.SelectedMvpTypeId > 0 && model.SelectedSelectionId != Guid.Empty)
                 {
                     await LoadScoreCards(model);
+                    await LoadTitles(model);
                 }
 
                 result = string.IsNullOrWhiteSpace(model.ErrorMessage)
@@ -122,7 +124,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += mvpTypesResponse.Message;
+                model.ErrorMessage += mvpTypesResponse.Message + Environment.NewLine;
             }
         }
 
@@ -135,7 +137,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += selectionsResponse.Message;
+                model.ErrorMessage += selectionsResponse.Message + Environment.NewLine;
             }
         }
 
@@ -148,7 +150,24 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += scoreCardsResponse.Message;
+                model.ErrorMessage += scoreCardsResponse.Message + Environment.NewLine;
+            }
+        }
+
+        private async Task LoadTitles(ScoreCardsModel model)
+        {
+            short? year = model.Selections.SingleOrDefault(s => s.Id == model.SelectedSelectionId)?.Year;
+            if (year.HasValue)
+            {
+                Response<IList<Title>> titlesResponse = await Client.GetTitlesAsync(null, null, new List<short> { year.Value });
+                if (titlesResponse.StatusCode == HttpStatusCode.OK && titlesResponse.Result != null)
+                {
+                    model.Titles.AddRange(titlesResponse.Result);
+                }
+                else
+                {
+                    model.ErrorMessage += titlesResponse.Message + Environment.NewLine;
+                }
             }
         }
     }

@@ -18,6 +18,8 @@ namespace Mvp.Feature.Selections.Models.Admin
 
         public List<ScoreCard> ScoreCards { get; set; } = new ();
 
+        public List<Title> Titles { get; set; } = new ();
+
         public string ErrorMessage { get; set; } = string.Empty;
 
         public TextField TitleLabel { get; set; }
@@ -27,6 +29,8 @@ namespace Mvp.Feature.Selections.Models.Admin
         public TextField MvpTypeLabel { get; set; }
 
         public TextField SubmitLabel { get; set; }
+
+        public TextField AwardedLabel { get; set; }
 
         public TextField NameTableHeader { get; set; }
 
@@ -43,6 +47,8 @@ namespace Mvp.Feature.Selections.Models.Admin
         public TextField MaxTableHeader { get; set; }
 
         public HyperLinkField DetailLink { get; set; }
+
+        public HyperLinkField AwardLink { get; set; }
 
         public static string Color(int score)
         {

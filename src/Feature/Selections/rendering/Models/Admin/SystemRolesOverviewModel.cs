@@ -1,5 +1,5 @@
 ﻿using System;
-using Mvp.Selections.Domain;
+using Mvp.Selections.Domain.Roles;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Feature.Selections.Models.Admin

@@ -38,6 +38,7 @@ namespace Mvp.Feature.Selections.Extensions
             options.AddViewComponent(MyProfilesFormViewComponent.ViewComponentName);
             options.AddViewComponent(ScoreCardsViewComponent.ViewComponentName);
             options.AddViewComponent(ScoreCardDetailViewComponent.ViewComponentName);
+            options.AddViewComponent(AwardViewComponent.ViewComponentName);
             return options;
         }
     }

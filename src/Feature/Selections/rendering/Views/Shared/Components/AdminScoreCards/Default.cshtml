@@ -52,6 +52,7 @@
             @for (int i = 0; i < Model.ScoreCards.Count; i++)
             {
                 ScoreCard card = Model.ScoreCards[i];
+                Title title = Model.Titles.FirstOrDefault(t => t.Application.Id == card.Applicant.ApplicationId);
                 <tr>
                     <td>@(i + 1)</td>
                     <td>
@@ -64,7 +65,15 @@
                             <i class="fa fa-user"></i>
                         }
                     </td>
-                    <td>@card.Applicant.Name</td>
+                    <td>
+                        @card.Applicant.Name
+                        @if (title != null)
+                        {
+                            <span class="badge badge-success">
+                                @(Model.IsEditing ? Html.Raw(Model.AwardedLabel.EditableMarkup) : Model.AwardedLabel.Value)
+                            </span>
+                        }
+                    </td>
                     <td>@card.Applicant.Country.Name</td>
                     <td>@card.ReviewCount</td>
                     <td style="color: @ScoreCardsModel.Color(card.Average);">@card.Average%</td>
@@ -73,6 +82,14 @@
                     <td style="color: @ScoreCardsModel.Color(card.Max);">@card.Max%</td>
                     <td>
                         <a asp-for="DetailLink" href="@Model.DetailLink.Value.Href?applicationid=@card.Applicant.ApplicationId" class="btn btn-secondary"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        @if (title != null)
+                        {
+                            <a asp-for="AwardLink" href="@Model.AwardLink.Value.Href?titleid=@title.Id&isremove=true" class="btn btn-danger"><i class="fa fa-trophy" aria-hidden="true"></i></a>
+                        }
+                        else
+                        {
+                            <a asp-for="AwardLink" href="@Model.AwardLink.Value.Href?applicationid=@card.Applicant.ApplicationId&mvptypeid=@card.Applicant.MvpType.Id" class="btn btn-success"><i class="fa fa-trophy" aria-hidden="true"></i></a>
+                        }
                     </td>
                 </tr>
             }
