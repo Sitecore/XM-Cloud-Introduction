@@ -1,0 +1,27 @@
+﻿---
+ID: "cf9b4046-cc01-4744-b45a-369c296d309b"
+Parent: "c34e4ad8-acd9-4a7f-904e-c52533153603"
+Template: "a2688050-ae1e-4aa1-a061-06c74b4b66fc"
+Path: /sitecore/content/MvpSite/Shared Content/Selections/Admin/Award
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230114T211136Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5755c230-ce7e-4703-8d20-a4ab105d9d11"
+    - ID: "90caf381-3e40-44e7-8c8b-2ec6ba50bffb"
+      Hint: ReturnLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{3CBA0CD1-F6D7-4836-B065-430B2F728AA7}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230114T211218Z

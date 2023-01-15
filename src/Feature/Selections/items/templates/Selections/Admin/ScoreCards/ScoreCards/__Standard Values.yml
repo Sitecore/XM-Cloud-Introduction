@@ -42,20 +42,23 @@ Languages:
       Value: Average
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7ebd4daf-482d-44ac-a646-60b1c029370f"
+      Value: "dd7b8f06-73e4-421c-82b8-e65cfcb4d30b"
     - ID: "90cc1848-ea0f-467d-bc9b-eb09d1b29d17"
       Hint: MedianTableHeader
       Value: Median
     - ID: "aaac7bdf-091e-4fba-9e8c-f3557a2fd80b"
       Hint: CountryTableHeader
       Value: Country
+    - ID: "b52f8b73-7434-4a8d-a7b0-ad0adc3736a0"
+      Hint: AwardedLabel
+      Value: Awarded
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230104T224105Z
+      Value: 20230114T200405Z
     - ID: "da68863c-2e37-46d7-b798-6e988824a349"
       Hint: NameTableHeader
       Value: Name

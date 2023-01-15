@@ -20,6 +20,9 @@ Languages:
     - ID: "35937293-4a31-4e01-8a87-a823f936f5c3"
       Hint: ReviewsLabel
       Value: Reviews
+    - ID: "3bc7c076-a48c-45ce-9d31-1737bff09ec6"
+      Hint: CommentsLabel
+      Value: Comments
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -30,11 +33,11 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "30766dd5-7dd7-4b7c-96bf-990a3b893eb6"
+      Value: "99bece43-be95-4fd8-9d46-bc6a156a3d4f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230105T120253Z
+      Value: 20230115T120736Z
