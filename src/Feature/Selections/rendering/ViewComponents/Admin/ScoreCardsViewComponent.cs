@@ -34,19 +34,15 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                List<Task> loadTasks = new ()
-                {
+                await Task.WhenAll(
                     LoadSelections(model),
-                    LoadMvpTypes(model)
-                };
-
+                    LoadMvpTypes(model));
                 if (model.SelectedMvpTypeId > 0 && model.SelectedSelectionId != Guid.Empty)
                 {
-                    loadTasks.Add(LoadScoreCards(model));
-                    loadTasks.Add(LoadTitles(model));
+                    await Task.WhenAll(
+                        LoadScoreCards(model),
+                        LoadTitles(model));
                 }
-
-                await Task.WhenAll(loadTasks);
 
                 result = model.ErrorMessages.Count > 0
                     ? View("~/Views/Shared/_Error.cshtml", model)
