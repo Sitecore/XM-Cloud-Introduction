@@ -1,0 +1,64 @@
+﻿---
+ID: "b8fb7daf-da38-4a90-b011-9ce86ad8e182"
+Parent: "a2688050-ae1e-4aa1-a061-06c74b4b66fc"
+Template: "a2688050-ae1e-4aa1-a061-06c74b4b66fc"
+Path: /sitecore/templates/Feature/Selections/Admin/ScoreCards/Award/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "100ecb5b-18f4-4932-95aa-e71363acbe55"
+      Hint: WarningLabel
+      Value: Warning
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230114T210315Z
+    - ID: "3b9cb9e7-758b-43d0-8952-557b832589bd"
+      Hint: ConfirmRemoveAwardLabelFormat
+      Value: "You are removing the {0} MVP Award from {1} for {2}. Do you wish to continue?"
+    - ID: "50a70fb0-3e1b-4d5c-aa8a-90d1032cef47"
+      Hint: MvpTypeLabel
+      Value: MVP Category
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "6edd075f-0c11-4583-b00f-171550c168a7"
+      Hint: SuccessRemoveLabelFormat
+      Value: "You have successfully removed the {0} MVP Award to {1} for {2}."
+    - ID: "758848d5-a3bb-4a61-a012-6248715e7dee"
+      Hint: SuccessLabelFormat
+      Value: "You have successfully awarded the {0} MVP Award to {1} for {2}!"
+    - ID: "8737ae95-6a6b-4f32-a729-4ac1804d0601"
+      Hint: ReturnLabel
+      Value: Return
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "40b99ea6-18ed-41c3-a09d-6fe5d3d364fa"
+    - ID: "99317a03-12bc-4704-ae59-cb93bb75fdd3"
+      Hint: CommentsLabel
+      Value: Comments
+    - ID: "b99c9fca-3ddb-49e0-848d-a39601a338ac"
+      Hint: CancelLabel
+      Value: Cancel
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "c707c0ef-5e64-414b-859f-d60d0c69f638"
+      Hint: ConfirmLabel
+      Value: Confirm
+    - ID: "d350c745-c8d7-4f79-84ad-f5ab1848b026"
+      Hint: TitleLabel
+      Value: Award
+    - ID: "d565dd45-2ee8-46a6-be36-335742754bec"
+      Hint: ConfirmAwardLabelFormat
+      Value: "You are awarding {0} from {1} the selected MVP Award for {2}. Do you wish to continue?"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230115T000504Z

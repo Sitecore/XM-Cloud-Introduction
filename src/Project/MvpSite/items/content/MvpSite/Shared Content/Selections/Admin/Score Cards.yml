@@ -17,11 +17,15 @@ Languages:
         <link text="Detail" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{60B72918-91B1-4B91-AA1C-BB4E08824C70}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "32aa1eb4-d3b1-46c6-85a4-3186afbf654a"
+      Value: "03aa1ce5-9af9-4d49-b188-d5c82cc046ed"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\iva@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230105T001254Z
+      Value: 20230114T200718Z
+    - ID: "e27c1693-f273-48e7-98bd-0c99517de656"
+      Hint: AwardLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{B1C371F8-54D7-4E72-9AF4-2EF592DD96CB}" />

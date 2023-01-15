@@ -1,0 +1,40 @@
+﻿---
+ID: "95e166be-36d6-4cf3-847e-22dcdeb3c727"
+Parent: "04bac52d-1f3d-4457-8e99-2a95a17f5218"
+Template: "04bac52d-1f3d-4457-8e99-2a95a17f5218"
+Path: /sitecore/templates/Feature/Selections/Admin/ApplicationComment/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "05b3a230-c0ca-4956-88b5-c165d0d6f4b7"
+      Hint: CommentLabel
+      Value: Comment
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230115T130440Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "58bcc773-6630-445d-b2df-515c6939461a"
+      Hint: ConfirmLabel
+      Value: Post
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "be88c959-085a-4f21-b2ea-024f61ccde0b"
+    - ID: "9f67b544-66e6-491c-8c94-7b4df6170945"
+      Hint: TitleLabel
+      Value: Add Comment
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\iva@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230115T130458Z

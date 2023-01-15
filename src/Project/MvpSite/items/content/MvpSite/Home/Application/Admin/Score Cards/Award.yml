@@ -1,8 +1,8 @@
 ﻿---
-ID: "60b72918-91b1-4b91-aa1c-bb4e08824c70"
+ID: "b1c371f8-54d7-4e72-9af4-2ef592dd96cb"
 Parent: "3cba0cd1-f6d7-4836-b065-430b2f728aa7"
 Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
-Path: /sitecore/content/MvpSite/Home/Application/Admin/Score Cards/Detail
+Path: /sitecore/content/MvpSite/Home/Application/Admin/Score Cards/Award
 BranchID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
 SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
@@ -13,22 +13,15 @@ SharedFields:
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
         <r
-          uid="{1694C490-90FC-4D31-B51C-FB77AFD9C855}"
+          uid="{2AE00A7B-664B-4AC4-B758-B6798D2B53EE}"
           p:before="*"
-          s:ds="{98143765-363D-490F-8C7E-3B69F6DB3148}"
-          s:id="{3955ECE2-6B9F-423E-8235-2C2DD593460D}"
+          s:ds="{CF9B4046-CC01-4744-B45A-369C296D309B}"
+          s:id="{D93D004B-21FD-4805-B15E-415A87B673EE}"
           s:par="CacheClearingBehavior=Clear on publish&amp;CSSStyles"
-          s:ph="/main/column-container-{5954EFE9-2F6A-4CF8-9258-B341EE7AC1C1}-0" />
+          s:ph="/main/column-container-{4CE5DCFE-1A7A-458D-A2D1-ADE0A9CF4751}-0" />
         <r
-          uid="{A40296AE-D96A-48B3-BE97-12FDCC4DC882}"
-          p:after="r[@uid='{1694C490-90FC-4D31-B51C-FB77AFD9C855}']"
-          s:ds="{45CDCDB9-0B96-4543-804F-C5423D6FEF11}"
-          s:id="{70AE24CB-A797-4DF8-91DE-084D96105757}"
-          s:par="CacheClearingBehavior=Clear on publish&amp;CSSStyles"
-          s:ph="/main/column-container-{5954EFE9-2F6A-4CF8-9258-B341EE7AC1C1}-0" />
-        <r
-          uid="{5954EFE9-2F6A-4CF8-9258-B341EE7AC1C1}"
-          p:after="r[@uid='{A40296AE-D96A-48B3-BE97-12FDCC4DC882}']"
+          uid="{4CE5DCFE-1A7A-458D-A2D1-ADE0A9CF4751}"
+          p:after="r[@uid='{2AE00A7B-664B-4AC4-B758-B6798D2B53EE}']"
           s:id="{57805937-D345-4A28-8DDF-C62EE43D8EBA}"
           s:par="CacheClearingBehavior=Clear on publish&amp;CSSStyles"
           s:ph="main" />
@@ -47,7 +40,7 @@ Languages:
       Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20230105T001217Z
+      Value: 20230114T200650Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -58,10 +51,10 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "332ce45f-e615-4988-b256-09c7083bc9d2"
+      Value: "0c2b9348-c637-44ea-940c-5789d85e8f7c"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
-      Value: Detail
+      Value: Award
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
@@ -71,7 +64,7 @@ Languages:
       Value: 1
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230115T130648Z
+      Value: 20230115T130033Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
       Hint: IncludeInMenu
       Value: 
