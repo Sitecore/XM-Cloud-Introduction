@@ -34,17 +34,23 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                await LoadSelections(model);
-                await LoadMvpTypes(model);
+                List<Task> loadTasks = new ()
+                {
+                    LoadSelections(model),
+                    LoadMvpTypes(model)
+                };
+
                 if (model.SelectedMvpTypeId > 0 && model.SelectedSelectionId != Guid.Empty)
                 {
-                    await LoadScoreCards(model);
-                    await LoadTitles(model);
+                    loadTasks.Add(LoadScoreCards(model));
+                    loadTasks.Add(LoadTitles(model));
                 }
 
-                result = string.IsNullOrWhiteSpace(model.ErrorMessage)
-                    ? View(model)
-                    : View("Error", model);
+                await Task.WhenAll(loadTasks);
+
+                result = model.ErrorMessages.Count > 0
+                    ? View("~/Views/Shared/_Error.cshtml", model)
+                    : View(model);
             }
 
             return result;
@@ -124,7 +130,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += mvpTypesResponse.Message + Environment.NewLine;
+                model.ErrorMessages.Add(mvpTypesResponse.Message);
             }
         }
 
@@ -137,7 +143,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += selectionsResponse.Message + Environment.NewLine;
+                model.ErrorMessages.Add(selectionsResponse.Message);
             }
         }
 
@@ -150,7 +156,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += scoreCardsResponse.Message + Environment.NewLine;
+                model.ErrorMessages.Add(scoreCardsResponse.Message);
             }
         }
 
@@ -166,7 +172,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 }
                 else
                 {
-                    model.ErrorMessage += titlesResponse.Message + Environment.NewLine;
+                    model.ErrorMessages.Add(titlesResponse.Message);
                 }
             }
         }

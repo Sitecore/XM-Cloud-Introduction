@@ -8,8 +8,6 @@ namespace Mvp.Feature.Selections.Models.Admin
 {
     public class AwardModel : BaseModel
     {
-        public string ErrorMessage { get; set; }
-
         public TextField TitleLabel { get; set; }
 
         public TextField CommentsLabel { get; set; }

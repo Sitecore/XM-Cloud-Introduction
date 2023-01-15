@@ -1,4 +1,5 @@
-﻿using Sitecore.AspNet.RenderingEngine.Binding.Attributes;
+﻿using System.Collections.Generic;
+using Sitecore.AspNet.RenderingEngine.Binding.Attributes;
 
 namespace Mvp.Feature.Selections.Models
 {
@@ -6,5 +7,7 @@ namespace Mvp.Feature.Selections.Models
     {
         [SitecoreContextProperty]
         public bool IsEditing { get; set; }
+
+        public List<string> ErrorMessages { get; set; } = new ();
     }
 }

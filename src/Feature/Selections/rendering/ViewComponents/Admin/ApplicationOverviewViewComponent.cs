@@ -40,8 +40,8 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 }
                 else
                 {
-                    model.ErrorMessage = applicationResponse.Message;
-                    result = View("Error", model);
+                    model.ErrorMessages.Add(applicationResponse.Message);
+                    result = View("~/Views/Shared/_Error.cshtml", model);
                 }
             }
             else if (model.RemoveApplicationId != null && model.RemoveConfirmed)
@@ -54,8 +54,8 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 }
                 else
                 {
-                    model.ErrorMessage = removeApplicationResponse.Message;
-                    result = View("Error", model);
+                    model.ErrorMessages.Add(removeApplicationResponse.Message);
+                    result = View("~/Views/Shared/_Error.cshtml", model);
                 }
             }
             else

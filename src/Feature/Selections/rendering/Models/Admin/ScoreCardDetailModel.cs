@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Mvp.Selections.Domain;
+using Mvp.Selections.Domain.Comments;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Feature.Selections.Models.Admin
@@ -16,13 +17,15 @@ namespace Mvp.Feature.Selections.Models.Admin
 
         public List<ScoreCategory> ScoreCategories { get; set; } = new ();
 
-        public string ErrorMessage { get; set; } = string.Empty;
+        public List<Comment> Comments { get; set; } = new ();
 
         public TextField TitleLabel { get; set; }
 
         public TextField ReviewsLabel { get; set; }
 
         public TextField ApplicationLabel { get; set; }
+
+        public TextField CommentsLabel { get; set; }
 
         public static decimal CalculateValue(ScoreCategory category, Review review)
         {

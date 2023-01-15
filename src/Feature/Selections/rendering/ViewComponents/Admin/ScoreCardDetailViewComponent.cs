@@ -7,6 +7,7 @@ using Mvp.Feature.Selections.Models.Admin;
 using Mvp.Selections.Client;
 using Mvp.Selections.Client.Models;
 using Mvp.Selections.Domain;
+using Mvp.Selections.Domain.Comments;
 using Sitecore.AspNet.RenderingEngine.Binding;
 
 namespace Mvp.Feature.Selections.ViewComponents.Admin
@@ -34,14 +35,16 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             {
                 if (model.ApplicationId != Guid.Empty)
                 {
-                    await LoadApplication(model);
-                    await LoadReviews(model);
+                    await Task.WhenAll(
+                        LoadApplication(model),
+                        LoadReviews(model),
+                        LoadComments(model));
                     await LoadScoreCategories(model);
                 }
 
-                result = string.IsNullOrWhiteSpace(model.ErrorMessage)
-                    ? View(model)
-                    : View("Error", model);
+                result = model.ErrorMessages.Count > 0
+                    ? View("~/Views/Shared/_Error.cshtml", model)
+                    : View(model);
             }
 
             return result;
@@ -209,24 +212,21 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 }
                 else
                 {
-                    model.ErrorMessage += scoreCategoriesResponse.Message;
+                    model.ErrorMessages.Add(scoreCategoriesResponse.Message);
                 }
             }
         }
 
         private async Task LoadReviews(ScoreCardDetailModel model)
         {
-            if (model.Application != null)
+            Response<IList<Review>> reviewsResponse = await Client.GetReviewsAsync(model.ApplicationId, 1, short.MaxValue);
+            if (reviewsResponse.StatusCode == HttpStatusCode.OK && reviewsResponse.Result != null)
             {
-                Response<IList<Review>> reviewsResponse = await Client.GetReviewsAsync(model.ApplicationId, 1, short.MaxValue);
-                if (reviewsResponse.StatusCode == HttpStatusCode.OK && reviewsResponse.Result != null)
-                {
-                    model.Reviews.AddRange(reviewsResponse.Result);
-                }
-                else
-                {
-                    model.ErrorMessage += reviewsResponse.Message;
-                }
+                model.Reviews.AddRange(reviewsResponse.Result);
+            }
+            else
+            {
+                model.ErrorMessages.Add(reviewsResponse.Message);
             }
         }
 
@@ -239,7 +239,20 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += applicationResponse.Message;
+                model.ErrorMessages.Add(applicationResponse.Message);
+            }
+        }
+
+        private async Task LoadComments(ScoreCardDetailModel model)
+        {
+            Response<IList<ApplicationComment>> getResponse = await Client.GetApplicationCommentsAsync(model.ApplicationId);
+            if (getResponse.StatusCode == HttpStatusCode.OK && getResponse.Result != null)
+            {
+                model.Comments.AddRange(getResponse.Result);
+            }
+            else
+            {
+                model.ErrorMessages.Add(getResponse.Message);
             }
         }
     }

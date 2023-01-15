@@ -1,5 +1,4 @@
-﻿@using Mvp.Selections.Domain.Comments
-@model Mvp.Feature.Selections.Models.Admin.AwardModel
+﻿@model Mvp.Feature.Selections.Models.Admin.AwardModel
 
 <div class="mvp-fs-adminaward col-12 bg-white">
     <h2 asp-for="TitleLabel"></h2>
@@ -21,18 +20,7 @@
         </div>
         <div class="col-3">
             <h3 asp-for="CommentsLabel"></h3>
-            @foreach (ApplicationComment comment in Model.Comments)
-            {
-                <div class="card">
-                    <div class="card-body">
-                        @comment.Value
-                    </div>
-                    <div class="card-footer">
-                        @comment.User.Name (@((comment.ModifiedOn ?? comment.CreatedOn).ToString("g")))
-                    </div>
-                </div>
-                <br/><br/>
-            }
+            <partial name="~/Views/Shared/_Comments.cshtml" model="Model.Comments.Select(c => c)" />
         </div>
     </div>
 </div>

@@ -53,8 +53,8 @@ namespace Mvp.Feature.Selections.ViewComponents.Any
                         }
                         else
                         {
-                            model.ErrorMessage = removeResponse.Message;
-                            result = View("Error", model);
+                            model.ErrorMessages.Add(removeResponse.Message);
+                            result = View("~/Views/Shared/_Error.cshtml", model);
                         }
                     }
                     else if (model.IsEdit && ModelState.IsValid)
@@ -74,8 +74,8 @@ namespace Mvp.Feature.Selections.ViewComponents.Any
                         }
                         else
                         {
-                            model.ErrorMessage = newResponse.Message;
-                            result = View("Error", model);
+                            model.ErrorMessages.Add(newResponse.Message);
+                            result = View("~/Views/Shared/_Error.cshtml", model);
                         }
                     }
                     else if (!model.IsEdit)
@@ -90,8 +90,8 @@ namespace Mvp.Feature.Selections.ViewComponents.Any
                 }
                 else
                 {
-                    model.ErrorMessage = userResponse.Message;
-                    result = View("Error", model);
+                    model.ErrorMessages.Add(userResponse.Message);
+                    result = View("~/Views/Shared/_Error.cshtml", model);
                 }
             }
             else

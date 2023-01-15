@@ -44,17 +44,19 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 }
                 else
                 {
-                    await LoadApplication(model);
-                    await LoadMvpTypes(model);
+                    await Task.WhenAll(
+                        LoadApplication(model),
+                        LoadMvpTypes(model),
+                        LoadComments(model));
                     if (model.IsConfirmed)
                     {
                         await AwardTitle(model);
                     }
                 }
 
-                result = string.IsNullOrWhiteSpace(model.ErrorMessage)
-                    ? model.IsConfirmed ? View("Success", model) : View(model)
-                    : View("Error", model);
+                result = model.ErrorMessages.Count > 0
+                    ? View("~/Views/Shared/_Error.cshtml", model)
+                    : model.IsConfirmed ? View("Success", model) : View(model);
             }
 
             return result;
@@ -149,7 +151,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += addResponse.Message + Environment.NewLine;
+                model.ErrorMessages.Add(addResponse.Message);
             }
         }
 
@@ -158,7 +160,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             Response<bool> removeResponse = await Client.RemoveTitleAsync(model.TitleId);
             if (removeResponse.StatusCode != HttpStatusCode.NoContent)
             {
-                model.ErrorMessage += removeResponse.Message + Environment.NewLine;
+                model.ErrorMessages.Add(removeResponse.Message);
             }
         }
 
@@ -171,7 +173,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += mvpTypesResponse.Message + Environment.NewLine;
+                model.ErrorMessages.Add(mvpTypesResponse.Message);
             }
         }
 
@@ -184,7 +186,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += applicationResponse.Message + Environment.NewLine;
+                model.ErrorMessages.Add(applicationResponse.Message);
             }
         }
 
@@ -197,7 +199,20 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                model.ErrorMessage += titleResponse.Message + Environment.NewLine;
+                model.ErrorMessages.Add(titleResponse.Message);
+            }
+        }
+
+        private async Task LoadComments(AwardModel model)
+        {
+            Response<IList<ApplicationComment>> getResponse = await Client.GetApplicationCommentsAsync(model.ApplicationId);
+            if (getResponse.StatusCode == HttpStatusCode.OK && getResponse.Result != null)
+            {
+                model.Comments.AddRange(getResponse.Result);
+            }
+            else
+            {
+                model.ErrorMessages.Add(getResponse.Message);
             }
         }
     }

@@ -39,8 +39,6 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public TextField ErrorMessageLabel { get; set; }
 
-        public List<string> ErrorMessages { get; init; } = new ();
-
         public TextField ConsentTitleLabel { get; set; }
 
         public TextField ConsentLabel { get; set; }

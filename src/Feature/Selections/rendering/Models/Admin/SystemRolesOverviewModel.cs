@@ -23,7 +23,5 @@ namespace Mvp.Feature.Selections.Models.Admin
         public TextField ConfirmMessageLabelFormat { get; set; }
 
         public TextField ConfirmLabel { get; set; }
-
-        public string ErrorMessage { get; set; }
     }
 }

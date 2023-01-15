@@ -1,0 +1,18 @@
+﻿@model Mvp.Feature.Selections.Models.Admin.ApplicationCommentModel
+
+<div class="mvp-fs-adminapplicationcomment col-12 bg-white">
+    <h2 asp-for="TitleLabel"></h2>
+    <form method="post">
+        <input asp-for="ApplicationId" type="hidden" />
+        <div class="form-group">
+            <label asp-for="Comment">
+                @(Model.IsEditing ? Html.Raw(Model.CommentLabel.EditableMarkup) : Model.CommentLabel.Value)
+            </label>
+            <span class="text-danger">*</span>
+            <textarea asp-for="Comment" rows="3" class="form-control" required=""></textarea>
+        </div>
+        <div class="form-group">
+            <button asp-for="ConfirmLabel" type="submit" class="btn btn-primary"></button>
+        </div>
+    </form>
+</div>

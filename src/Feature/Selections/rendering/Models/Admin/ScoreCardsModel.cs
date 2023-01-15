@@ -20,8 +20,6 @@ namespace Mvp.Feature.Selections.Models.Admin
 
         public List<Title> Titles { get; set; } = new ();
 
-        public string ErrorMessage { get; set; } = string.Empty;
-
         public TextField TitleLabel { get; set; }
 
         public TextField SelectionLabel { get; set; }
