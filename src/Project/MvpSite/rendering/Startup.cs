@@ -108,7 +108,7 @@ namespace Mvp.Project.MvpSite.Rendering
             RewriteOptions rewriteOptions = new RewriteOptions()
               .AddRedirect("mvps/(.*)", "Directory?fc_Year=$1")
               .AddRedirect("mvps$", "Directory")
-              .AddRedirect("search(.*)", "Directory$1");
+              .AddRedirect("search(.*)", "Directory$1")
               .AddRedirect("Search(.*)", "Directory$1");
             app.UseRewriter(rewriteOptions);
 
