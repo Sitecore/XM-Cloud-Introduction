@@ -11,23 +11,9 @@ FROM ${DEBUG_BASE_IMAGE} as debug
 ARG ARTIFACTS_FOLDER=/artifacts/mvp-rendering/
 
 USER ContainerAdministrator
-COPY ./Development.ps1 ./tools/
-WORKDIR /app
-COPY --from=solution ${ARTIFACTS_FOLDER} ./
+WORKDIR /app/src/project/MvpSite/rendering
 USER ContainerUser
 ENV ASPNETCORE_URLS "http://+:80"
 EXPOSE 80
-ENTRYPOINT ["pwsh", "-File", "c:\\tools\\Development.ps1"]
 
-
-# release image (aspnet)
-FROM ${RELEASE_BASE_IMAGE} as release
-ARG ENTRYPOINT_ASSEMBLY
-ARG ARTIFACTS_FOLDER=/artifacts/mvp-rendering/
-
-ENV ENTRYPOINT_ASSEMBLY="${ENTRYPOINT_ASSEMBLY}"
-WORKDIR /app
-COPY --from=solution ${ARTIFACTS_FOLDER} ./
-EXPOSE 80
-EXPOSE 443
-ENTRYPOINT dotnet %ENTRYPOINT_ASSEMBLY%
+ENTRYPOINT ["dotnet", "watch"]

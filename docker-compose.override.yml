@@ -79,7 +79,6 @@ services:
     restart: ${DOCKER_RESTART}
     build:
       context: ./docker/build/rendering
-      target: ${BUILD_CONFIGURATION}
       args:
         DEBUG_BASE_IMAGE: ${NETCORE_BUILD_IMAGE}
         RELEASE_BASE_IMAGE: ${NETCORE_RELEASE_IMAGE}
@@ -87,7 +86,7 @@ services:
         ENTRYPOINT_ASSEMBLY: Mvp.Project.MvpSite.dll
         ARTIFACTS_FOLDER: /artifacts/mvp-rendering
     volumes:
-      - ${LOCAL_DEPLOY_PATH}\mvp-rendering:C:\deploy
+      - .\:C:\app
     environment:
       ENTRYPOINT_ASSEMBLY: Mvp.Project.MvpSite.dll
       ASPNETCORE_ENVIRONMENT: "Development"
