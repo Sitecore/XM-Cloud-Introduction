@@ -1,5 +1,14 @@
 import React from 'react';
-import { Field, Text, ImageField, Image } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  Field,
+  Text,
+  RichText,
+  ImageField,
+  Image,
+  RichTextField,
+  Link,
+  LinkField,
+} from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
   Category: Field<string>;
@@ -16,6 +25,8 @@ interface SponsorProps {
     SponsorName: Field<string>;
     SponsorUrl: Field<string>;
     SponsorLogo: ImageField;
+    SponsorDescription: RichTextField;
+    SponsorUrlLink: LinkField;
   };
 }
 
@@ -45,9 +56,9 @@ export const Default = (props: SponsorListProps): JSX.Element => {
                     return (
                       <div
                         key={Sponsor.fields.SponsorName.value}
-                        className="col-6 col-md-4 col-lg-3 SponsorBlock"
+                        className="col-6 col-md-4 col-lg-3 sponsorBlock"
                       >
-                        <div className="SponsorImage">
+                        <div className="sponsorImage">
                           <Image field={Sponsor?.fields.SponsorLogo} />
                         </div>
                       </div>
@@ -76,7 +87,7 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
             props.fields?.Sponsors?.map((Sponsor) => {
               return (
                 <div key={Sponsor.fields.SponsorName.value} className="row">
-                  <div className="col-12 col-md-6">
+                  <div className="col-12 col-md-6 sponsorBlockPlatinum">
                     <p className="sponsorLabel">
                       <Text field={props?.fields?.Category} />
                     </p>
@@ -84,8 +95,12 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
                       <Text field={Sponsor?.fields?.SponsorName} />
                     </h2>
                     <br />
-                    <Text field={Sponsor?.fields?.SponsorUrl} />
-                    <br />
+                    <RichText field={Sponsor?.fields?.SponsorDescription} />
+                    {Sponsor?.fields?.SponsorUrlLink?.value?.href ? (
+                      <Link field={Sponsor?.fields?.SponsorUrlLink}></Link>
+                    ) : (
+                      ''
+                    )}
                   </div>
                   <div className="col-12 col-md-6">
                     <div className="sponsorImgPlatinumOuter">
@@ -100,6 +115,50 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
               );
             })
           )}
+        </div>
+      </div>
+    );
+  }
+
+  return <SponsorListDefaultComponent {...props} />;
+};
+
+export const GoldSilver = (props: SponsorListProps): JSX.Element => {
+  if (props.fields) {
+    return (
+      <div className={`component sponsor-list default ${props.params.styles}`}>
+        <div className="component-content container">
+          <div className="row">
+            <div className="col-12 sponsorGoldSilver">
+              <h2>
+                <Text field={props.fields?.Category} />
+              </h2>
+              <div className="row">
+                {props.fields?.Sponsors?.length == 0 ? (
+                  <div>No Organizers</div>
+                ) : (
+                  props.fields?.Sponsors?.map((Sponsor) => {
+                    return (
+                      <div
+                        key={Sponsor.fields.SponsorName.value}
+                        className="col-12 col-md-4 col-lg-4 sponsorBlockGoldSilver"
+                      >
+                        <div className="sponsorImageGoldSilver">
+                          <Image field={Sponsor?.fields.SponsorLogo} />
+                        </div>
+                        <RichText field={Sponsor?.fields?.SponsorDescription} />
+                        {Sponsor?.fields?.SponsorUrlLink?.value?.href ? (
+                          <Link field={Sponsor?.fields?.SponsorUrlLink}></Link>
+                        ) : (
+                          ''
+                        )}
+                      </div>
+                    );
+                  })
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

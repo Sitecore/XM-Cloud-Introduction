@@ -3,12 +3,13 @@
     background-color: white;
     padding-top: 25px;
 }
-.sponsorTeaser{
+
+.sponsorTeaser {
     margin-top: 12px;
-  
+
 }
-  
-.sponsorLabel{
+
+.sponsorLabel {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 10px;
@@ -19,20 +20,27 @@
     line-height: 39px;
 
 }
-.sponsorName{
+
+.sponsor-list {
+    margin-bottom: 10px;
+}
+
+.sponsorName {
     font-size: 48px;
     line-height: 55px;
     width: 100%;
     color: #232323;
     font-weight: 900;
-    font-family: 'AvenirNextW05-Bold',Arial, Helvetica, sans-serif;
+    font-family: 'AvenirNextW05-Bold', Arial, Helvetica, sans-serif;
     margin-bottom: 0;
     word-break: break-word;
 }
+
 .sponsorImgPlatinumOuter {
     position: relative;
     width: 100%;
 }
+
 .sponsorImgPlatinum {
 
     padding-top: 40px;
@@ -52,33 +60,43 @@
         right: -10px;
         border-top: 15px solid #fe2911;
         border-right: 15px solid #fe2911;
-        
+
     }
-    img{
-        width: 100%;
+
+    img {
+        width: 80%;
         height: 100%;
+        margin-top: 20%;
+        margin-left: 10%;
+
     }
 }
-.SponsorImage{
-width: 218px;
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-margin: 0;
+
+.sponsorImage {
+    width: 218px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
 
 
 
 }
 
-.defaultSponsor{
-    h2{
+.sponsor-image-gold-silver {
+    //text-decoration: none;   
+}
+
+
+.defaultSponsor {
+    h2 {
         margin-bottom: 0px;
-        max-width: 720px; 
+        max-width: 720px;
         margin-top: 50px;
     }
 }
 
-.SponsorImage img {
+.sponsorImage img {
     max-width: 100%;
     height: auto;
     max-height: 113px;
@@ -87,15 +105,61 @@ margin: 0;
     margin-right: auto;
 }
 
-.SponsorBlock{
-padding: 16px;
+
+.sponsorGoldSilver {
+    h2 {
+        margin-bottom: 0px;
+        max-width: 720px;
+        margin-top: 50px;
+    }   
+}
+
+.sponsorImageGoldSilver img {
+    width: 100%;
+    height: auto;
+    //max-height: 113px; 
+
+}
+
+.sponsorBlock {
+    padding: 16px;
     background-color: white;
     width: 250px;
-    margin-top: 30px;
+    margin-top: 20px;
     height: 145px;
     position: relative;
     float: left;
     margin-right: 16px;
-    
 
+
+}
+
+.sponsorBlockGoldSilver {
+    padding: 20px;
+    background-color: white;
+    //width: 250px;
+    margin-top: 20px;
+    //height: 145px;
+    position: relative;
+    float: left;
+    margin-right: 16px;
+
+    a[target="_blank"]:after {
+        content: "";
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+.sponsorBlockPlatinum {
+    a[target="_blank"]:after {
+        content: "";
+    }
+
+    a {
+        text-decoration: none;
+    }
 }
