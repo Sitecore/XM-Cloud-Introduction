@@ -113,8 +113,14 @@ namespace Mvp.Feature.People.PeopleFinder
 
         private IList<MvpSearchResult> ApplyFilteringToMvpListing(IList<MvpSearchResult> mvps, SearchParams searchParams)
         {
-            var keyword = string.IsNullOrWhiteSpace(searchParams.Keyword) ? searchParams.Keyword : searchParams.Keyword.ToLowerInvariant();
-            return mvps.Where(x => string.IsNullOrWhiteSpace(searchParams.Keyword) || x.FirstName.Value.ToLowerInvariant().Contains(keyword) || x.LastName.Value.ToLowerInvariant().Contains(keyword)).ToList();
+            return mvps.Where(
+                mvp => string.IsNullOrWhiteSpace(searchParams.Keyword) ||
+                DoesMvpFullnameMatchKeywords(searchParams.Keyword, mvp)).ToList();
+        }
+
+        private static bool DoesMvpFullnameMatchKeywords(string keyword, MvpSearchResult x)
+        {
+            return $"{x.FirstName.Value.ToLowerInvariant()}{x.LastName.Value.ToLowerInvariant()}".Contains(keyword.ToLowerInvariant().Replace(" ", string.Empty));
         }
 
         private static Person GeneratePersonRecord(MvpSearchResult mvpSearchResult)
