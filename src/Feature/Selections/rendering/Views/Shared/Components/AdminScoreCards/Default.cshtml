@@ -12,7 +12,7 @@
             </label>
             <span class="text-danger">*</span>
             <select asp-for="SelectedSelectionId" class="form-control">
-                @foreach (Selection selection in Model.Selections)
+                @foreach (Selection selection in Model.Selections.OrderByDescending(s => s.Year))
                 {
                     <option value="@selection.Id">@selection.Year</option>
                 }

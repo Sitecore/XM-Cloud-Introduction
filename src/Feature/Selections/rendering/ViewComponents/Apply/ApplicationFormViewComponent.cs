@@ -47,7 +47,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                         await ExecuteConsentStep(model);
                         break;
                     case ApplicationStep.Profile:
-                        await ExecuteProfileStep(model);
+                        ExecuteProfileStep(model);
                         break;
                     case ApplicationStep.MvpType:
                         await ExecuteMvpTypeStep(model);
@@ -152,18 +152,20 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 MvpType = mvpType1
             };
 
-            model.MvpTypes.Add(mvpType1);
-            model.MvpTypes.Add(new MvpType(2)
-            {
-                Name = "Ipsum MVP"
-            });
-
             model.Products.Add(product1);
             model.Products.Add(product2);
 
             model.CurrentSelection = new Selection(Guid.NewGuid())
             {
-                Year = (short)DateTime.UtcNow.Year
+                Year = (short)DateTime.UtcNow.Year,
+                MvpTypes = new List<MvpType>
+                {
+                    mvpType1,
+                    new (2)
+                    {
+                        Name = "Ipsum MVP"
+                    }
+                }
             };
         }
 
@@ -261,9 +263,8 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                         Type = ConsentType.PersonalInformation
                     };
                     Response<Consent> consentResponse = await Client.GiveConsentAsync(consent);
-                    if (consentResponse.StatusCode == HttpStatusCode.OK && consentResponse.Result != null)
+                    if (consentResponse.StatusCode == HttpStatusCode.Created && consentResponse.Result != null)
                     {
-                        await LoadMvpTypes(model);
                         model.NextStep = ApplicationStep.Profile;
                     }
                     else
@@ -275,7 +276,6 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 else if (consentsResponse.StatusCode == HttpStatusCode.OK &&
                          (consentsResponse.Result?.Any(c => c.Type == ConsentType.PersonalInformation) ?? false))
                 {
-                    await LoadMvpTypes(model);
                     model.NextStep = ApplicationStep.Profile;
                 }
                 else
@@ -294,7 +294,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             }
         }
 
-        private async Task ExecuteProfileStep(ApplicationFormModel model)
+        private void ExecuteProfileStep(ApplicationFormModel model)
         {
             if (model.IsNavigation.HasValue && model.IsNavigation.Value)
             {
@@ -307,7 +307,6 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             }
             else if (model.IsNavigation.HasValue && !model.IsNavigation.Value && model.CurrentUser.Country != null)
             {
-                await LoadMvpTypes(model);
                 model.NextStep = ApplicationStep.MvpType;
             }
         }
@@ -347,7 +346,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     };
                     Response<Application> applicationResponse =
                         await Client.AddApplicationAsync(model.CurrentSelection.Id, newApplication);
-                    if (applicationResponse.StatusCode == HttpStatusCode.OK && applicationResponse.Result != null)
+                    if (applicationResponse.StatusCode == HttpStatusCode.Created && applicationResponse.Result != null)
                     {
                         model.CurrentApplication = applicationResponse.Result;
                         model.NextStep = ApplicationStep.Objectives;
@@ -361,12 +360,10 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             }
             else if ((model.IsNavigation.HasValue && model.IsNavigation.Value) || !model.IsNavigation.HasValue)
             {
-                await LoadMvpTypes(model);
                 model.NextStep = ApplicationStep.MvpType;
             }
             else if (model.IsNavigation.HasValue && !model.IsNavigation.Value)
             {
-                await LoadMvpTypes(model);
                 ModelState.AddModelError(string.Empty, "MVP Category must be selected.");
                 model.NextStep = ApplicationStep.MvpType;
             }
@@ -440,7 +437,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 }
 
                 Response<Contribution> contributionResponse = await Client.AddContributionAsync(model.CurrentApplication.Id, contribution);
-                if (contributionResponse.StatusCode == HttpStatusCode.OK && contributionResponse.Result != null)
+                if (contributionResponse.StatusCode == HttpStatusCode.Created && contributionResponse.Result != null)
                 {
                     model.CurrentApplication.Contributions.Add(contributionResponse.Result);
                     model.ContributionDate = null;
@@ -551,15 +548,6 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     model.ErrorMessages.Add(applicationResponse.Message);
                     model.NextStep = ApplicationStep.Error;
                 }
-            }
-        }
-
-        private async Task LoadMvpTypes(ApplicationFormModel model)
-        {
-            Response<IList<MvpType>> mvpTypesResponse = await Client.GetMvpTypesAsync(1, short.MaxValue);
-            if (mvpTypesResponse.StatusCode == HttpStatusCode.OK && mvpTypesResponse.Result != null)
-            {
-                model.MvpTypes.AddRange(mvpTypesResponse.Result);
             }
         }
 
