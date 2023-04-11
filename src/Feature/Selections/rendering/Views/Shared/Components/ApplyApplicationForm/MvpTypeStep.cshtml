@@ -26,7 +26,7 @@
                 </label>
                 <span class="text-danger">*</span>
                 <select asp-for="MvpTypeId" class="form-control">
-                    @foreach (MvpType mvpType in Model.MvpTypes)
+                    @foreach (MvpType mvpType in Model.CurrentSelection.MvpTypes)
                     {
                         <option value="@mvpType.Id">@mvpType.Name</option>
                     }

@@ -104,7 +104,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         private async Task LoadUsers(UsersOverviewModel model)
         {
-            Response<IList<User>> usersResponse = await Client.GetUsersAsync(model.Page, model.PageSize);
+            Response<IList<User>> usersResponse = await Client.GetUsersAsync(page: model.Page, pageSize: model.PageSize);
             if (usersResponse.StatusCode == HttpStatusCode.OK && usersResponse.Result != null)
             {
                 model.List.AddRange(usersResponse.Result);
