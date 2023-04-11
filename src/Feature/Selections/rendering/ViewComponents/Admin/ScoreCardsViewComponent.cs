@@ -161,7 +161,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             short? year = model.Selections.SingleOrDefault(s => s.Id == model.SelectedSelectionId)?.Year;
             if (year.HasValue)
             {
-                Response<IList<Title>> titlesResponse = await Client.GetTitlesAsync(null, null, new List<short> { year.Value });
+                Response<IList<Title>> titlesResponse = await Client.GetTitlesAsync(null, null, new List<short> { year.Value }, null, 1, short.MaxValue);
                 if (titlesResponse.StatusCode == HttpStatusCode.OK && titlesResponse.Result != null)
                 {
                     model.Titles.AddRange(titlesResponse.Result);
