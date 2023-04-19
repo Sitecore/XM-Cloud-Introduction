@@ -46,7 +46,7 @@ if (-Not $SkipBuild) {
 
     # Build all containers in the Sitecore instance, forcing a pull of latest base containers
     Write-Host "Building containers..." -ForegroundColor Green
-    docker-compose build
+    docker compose build
     if ($LASTEXITCODE -ne 0) {
         Write-Error "Container build failed, see errors above."
     }
@@ -55,7 +55,7 @@ if (-Not $SkipBuild) {
 if ($UseEdge) {
     # Start the container using the edge override to only run traefik & host containers
     Write-Host "Starting Sitecore hosts running againt edge..." -ForegroundColor Green
-    docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml -f .\docker-compose.edge.yml up -d
+    docker compose -f .\docker-compose.yml -f .\docker-compose.override.yml -f .\docker-compose.edge.yml up -d
 
     # Wait for Traefik to expose Rendering Host route
     Write-Host "Waiting for MVP Rendering Host to become available..." -ForegroundColor Green
@@ -84,7 +84,7 @@ if ($UseEdge) {
 else {
     # Start the Sitecore instance
     Write-Host "Starting Sitecore environment, all roles running locally..." -ForegroundColor Green
-    docker-compose up -d
+    docker compose up -d
 
     # Wait for Traefik to expose CM route
     Write-Host "Waiting for CM to become available..." -ForegroundColor Green
