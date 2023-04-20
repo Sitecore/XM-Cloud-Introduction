@@ -87,6 +87,9 @@ namespace Mvp.Project.MvpSite.Rendering
                     .AddFoundationDataFetchingServices();
             
             services.AddSession();
+
+            // The following line enables Application Insights telemetry collection.
+            services.AddApplicationInsightsTelemetry();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -106,8 +109,9 @@ namespace Mvp.Project.MvpSite.Rendering
 
             //Add redirects for old mvp pages
             RewriteOptions rewriteOptions = new RewriteOptions()
-              .AddRedirect("mvps/(.*)", "Directory?fc_personyear=$1")
+              .AddRedirect("mvps/(.*)", "Directory?fc_Year=$1")
               .AddRedirect("mvps$", "Directory")
+              .AddRedirect("search(.*)", "Directory$1")
               .AddRedirect("Search(.*)", "Directory$1");
             app.UseRewriter(rewriteOptions);
 

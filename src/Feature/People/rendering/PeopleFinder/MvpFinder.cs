@@ -1,4 +1,5 @@
 ﻿using GraphQL.Client.Abstractions;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -78,9 +79,18 @@ namespace Mvp.Feature.People.PeopleFinder
 
         private static bool DoesMvpMatchSelectedFacets(string[] selectedAwards, string[] selectedYears, string[] selectedCountries, MvpSearchResult mvp)
         {
-            return MvpMatchesAwardTypeFacet(selectedAwards, mvp) 
-                && MvpMatchesYearFacet(selectedYears, mvp) 
-                && MvpMatchesCountryFacet(selectedCountries, mvp);
+            if(!MvpMatchesCountryFacet(selectedCountries, mvp))
+            {
+                return false;
+            }
+
+            foreach(var award in mvp.Awards.TargetItems)
+            {
+                if (AwardMatchesYearFacet(selectedYears, award) && AwardMatchesAwardTypeFacet(selectedAwards, award))
+                    return true;
+            }
+
+            return false;
         }
 
         private static bool MvpMatchesCountryFacet(string[] selectedCountries, MvpSearchResult mvp)
@@ -89,22 +99,28 @@ namespace Mvp.Feature.People.PeopleFinder
                 || selectedCountries.Any(x => x.ToLowerInvariant() == mvp.Country.TargetItem?.Name.ToLowerInvariant());
         }
 
-        private static bool MvpMatchesYearFacet(string[] selectedYears, MvpSearchResult mvp)
+        private static bool AwardMatchesYearFacet(string[] selectedYears, Awards award)
         {
-            return selectedYears.Length == 0 
-                || mvp.Awards.TargetItems.Any(x => selectedYears.Any(y => y.ToLowerInvariant() == x.Parent.Name.ToLowerInvariant()));
+            return selectedYears.Length == 0
+                || selectedYears.Any(y => y.ToLowerInvariant() == award.Parent.Name.ToLowerInvariant());
         }
 
-        private static bool MvpMatchesAwardTypeFacet(string[] selectedAwards, MvpSearchResult mvp)
+        private static bool AwardMatchesAwardTypeFacet(string[] selectedAwards, Awards award)
         {
-            return selectedAwards.Length == 0 
-                || mvp.Awards.TargetItems.Any(x => selectedAwards.Any(y => y.ToLowerInvariant() == x.Field.TargetItem.Field.Value.ToLowerInvariant()));
+            return selectedAwards.Length == 0
+                || selectedAwards.Any(y => y.ToLowerInvariant() == award.Field.TargetItem.Field.Value.ToLowerInvariant());
         }
 
         private IList<MvpSearchResult> ApplyFilteringToMvpListing(IList<MvpSearchResult> mvps, SearchParams searchParams)
         {
-            var keyword = string.IsNullOrWhiteSpace(searchParams.Keyword) ? searchParams.Keyword : searchParams.Keyword.ToLowerInvariant();
-            return mvps.Where(x => string.IsNullOrWhiteSpace(searchParams.Keyword) || x.FirstName.Value.ToLowerInvariant().Contains(keyword) || x.LastName.Value.ToLowerInvariant().Contains(keyword)).ToList();
+            return mvps.Where(
+                mvp => string.IsNullOrWhiteSpace(searchParams.Keyword) ||
+                DoesMvpFullnameMatchKeywords(searchParams.Keyword, mvp)).ToList();
+        }
+
+        private static bool DoesMvpFullnameMatchKeywords(string keyword, MvpSearchResult x)
+        {
+            return $"{x.FirstName.Value.ToLowerInvariant()}{x.LastName.Value.ToLowerInvariant()}".Contains(keyword.ToLowerInvariant().Replace(" ", string.Empty));
         }
 
         private static Person GeneratePersonRecord(MvpSearchResult mvpSearchResult)

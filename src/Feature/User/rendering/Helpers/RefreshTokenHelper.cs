@@ -47,6 +47,7 @@ namespace Mvp.Feature.User.Helpers
                     DateTimeOffset updatedExpiresAt = DateTimeOffset.UtcNow.AddSeconds(tokenResponse.ExpiresIn);
                     context.Properties.UpdateTokenValue("expires_at", updatedExpiresAt.ToString());
                     context.Properties.UpdateTokenValue("access_token", tokenResponse.AccessToken);
+                    context.Properties.UpdateTokenValue("id_token", tokenResponse.IdToken);
                     context.Properties.UpdateTokenValue("refresh_token", tokenResponse.RefreshToken);
                     context.ShouldRenew = true;
                 }

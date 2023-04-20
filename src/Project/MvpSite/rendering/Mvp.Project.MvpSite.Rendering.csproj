@@ -43,6 +43,7 @@
 		<PackageReference Include="Sitecore.LayoutService.Client" />
 		<PackageReference Include="Sitecore.AspNet.RenderingEngine" />
 		<PackageReference Include="Sitecore.AspNet.ExperienceEditor" />
+		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" />
 	</ItemGroup>
 
 	<ItemGroup>

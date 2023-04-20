@@ -4,6 +4,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { Placeholder, getPublicUrl, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
+import { parse as parseQuery } from 'querystring';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
@@ -15,6 +16,8 @@ interface LayoutProps {
 
 const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
   const { route } = layoutData.sitecore;
+  const metaCustomAttributesDetails = route?.fields?.MetaCustomAttributes?.value;
+  const metaCustomAttributesQueryAsArray = Object.entries(parseQuery(metaCustomAttributesDetails));
 
   return (
     <>
@@ -37,6 +40,13 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
         ) : (
           ''
         )}
+
+        {route?.fields?.MetaCustomAttributes?.value
+          ? metaCustomAttributesQueryAsArray.map(([key, value]: [string, string]) => (
+              <meta key={key} name={key} content={value} />
+            ))
+          : ''}
+
         {/* Open Graph Tags */}
         {route?.fields?.OgTitle?.value ? (
           <meta property="og:title" content={`${route?.fields?.OgTitle?.value}`} />

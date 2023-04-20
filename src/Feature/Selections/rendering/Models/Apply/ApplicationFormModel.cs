@@ -57,8 +57,6 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public short MvpTypeId { get; set; }
 
-        public List<MvpType> MvpTypes { get; } = new ();
-
         public TextField ProfileTitleLabel { get; set; }
 
         public HyperLinkField MyUserLink { get; set; }
