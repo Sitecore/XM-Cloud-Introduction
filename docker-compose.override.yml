@@ -7,7 +7,8 @@ services:
       args:
         PARENT_IMAGE: ${NODEJS_PARENT_IMAGE}
         NODEJS_VERSION: ${NODEJS_VERSION}
-    scale: 0
+    deploy:
+      replicas: 0
 
   sugconeu:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-sugcon-eu:${VERSION:-latest}
@@ -60,7 +61,7 @@ services:
       - "traefik.http.routers.sugconanz-secure.tls=true"
 
   # The solution build image is added here so it can be referenced as a build dependency
-  # for the images which use its output. Setting "scale: 0" means docker-compose will not
+  # for the images which use its output. Setting "deploy.replicas: 0" means docker-compose will not
   # include it in the running environment. See Dockerfile for more details.
   solution:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
@@ -71,7 +72,8 @@ services:
         BUILD_CONFIGURATION: ${BUILD_CONFIGURATION}
         BUILD_IMAGE: ${SOLUTION_BUILD_IMAGE}
         BASE_IMAGE: ${SOLUTION_BASE_IMAGE}
-    scale: 0
+    deploy:
+      replicas: 0
 
   # Container used to run the MVP Rendering host.
   mvp-rendering:
@@ -159,7 +161,6 @@ services:
     environment:
       Sitecore__ExternalCdUrl: "${CM_HOST}"
       SITECORE_LICENSE_LOCATION: c:\license\license.xml
-      JSS_EdgeWebsite_DEPLOYMENT_SECRET: ${JSS_EdgeWebsite_DEPLOYMENT_SECRET}
       SITECORE_JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
       SITECORE_Pages_Client_Host: ${SITECORE_Pages_Client_Host}
       SITECORE_Pages_CORS_Allowed_Origins: ${SITECORE_Pages_CORS_Allowed_Origins}
@@ -175,4 +176,5 @@ services:
       SITECORE_DEVELOPMENT_PATCHES: DevEnvOn,CustomErrorsOff,DebugOn,DiagnosticsOff,InitMessagesOff
       Sitecore_AppSettings_exmEnabled:define: "no" # remove to turn on EXM
       MVP_RENDERING_EDITING_HOST_URI: "http://mvp-rendering/"
-    entrypoint: powershell -Command "& C:\tools\entrypoints\iis\Development.ps1"
+      RENDERING_HOST_INTERNAL_URI: ${SUGCON_EU_HOST_INTERNAL_URI}
+    entrypoint: powershell -Command "& C:\\tools\\entrypoints\\iis\\Development.ps1"

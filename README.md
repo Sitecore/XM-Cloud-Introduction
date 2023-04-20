@@ -19,6 +19,10 @@ This repository contains the codebase for a series of sites managed by the Techn
 - [NodeJS 16 LTS](https://nodejs.org/en/download/) (or greater)
 - [Docker](https://www.docker.com/)
 
+## Docker Compose v2
+This repository uses Docker Compose v2. As of June 2023 v1 is no longer supported by Docker. You can read more about the differences between the two versions [here](https://docs.docker.com/compose/compose-v2/).
+
+## Base Image Versions
 This repositories maintainers intend to keep this repository running against the latest Docker Windows Container versions as possible to reduce image size and increase performance. You may need to downgrade to an earlier Base OS version if you are running an older Host OS. You can read more about this on the [Wiki](../../wiki/Changing-local-Docker-Image-Base-OS-Versions)
 
 ## Okta Account

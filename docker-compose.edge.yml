@@ -19,14 +19,19 @@ services:
       SITECORE_API_KEY: ${EXPERIENCE_EDGE_TOKEN}
       GRAPH_QL_ENDPOINT: ${GRAPH_QL_ENDPOINT}
 
-  # Scale all containers down 0 to just run hosts & treafik
+  # Set containers below to 'deploy.replicas: 0' to just run hosts & treafik
   mssql:
-    scale: 0
+    deploy:
+      replicas: 0
   solr:
-    scale: 0
+    deploy:
+      replicas: 0
   cm:
-    scale: 0
+    deploy:
+      replicas: 0
   mssql-init:
-    scale: 0
+    deploy:
+      replicas: 0
   solr-init:
-    scale: 0
+    deploy:
+      replicas: 0
