@@ -1,18 +1,8 @@
 ﻿---
-ID: "60985bff-7e5d-40a5-8209-de015a43e6e4"
-Parent: "41f996ad-4163-4cad-9cbc-e0d64107c8d0"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Project/Sugcon/App Route/Content/Content
-SharedFields:
-- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
-  Hint: Source
-  Value: "query:$xaRichTextProfile"
-- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
-  Hint: Type
-  Value: Rich Text
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 2
+ID: "41f996ad-4163-4cad-9cbc-e0d64107c8d0"
+Parent: "36cad6cf-d418-43ca-bc57-656e44069116"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Sugcon/Page/Content
 Languages:
 - Language: en
   Versions:
@@ -31,11 +21,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "23fe1e01-0582-4706-978f-4a583945582b"
+      Value: "96daeb15-b81c-4a58-a3a2-b2b5f142b303"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebw@sitecore.net
+        sitecore\xmc-e2e-admin@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220922T111716Z
+      Value: 20220519T090804Z

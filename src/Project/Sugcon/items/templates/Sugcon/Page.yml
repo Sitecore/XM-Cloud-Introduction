@@ -2,11 +2,11 @@
 ID: "36cad6cf-d418-43ca-bc57-656e44069116"
 Parent: "cbb0cd20-5e73-4759-9abe-40afa8cedb84"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/Sugcon/App Route
+Path: /sitecore/templates/Project/Sugcon/Page
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Apps/32x32/Routes.png
+  Value: Office/32x32/document_text.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Value: |
@@ -37,11 +37,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f70aeaae-add6-4eff-879c-c606c7c10cd2"
+      Value: "9bc9282a-e80a-4e6a-8bb9-b529005d7189"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebw@sitecore.net
+        sitecore\1ISa5gYrpM
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220922T111716Z
+      Value: 20230501T030154Z
