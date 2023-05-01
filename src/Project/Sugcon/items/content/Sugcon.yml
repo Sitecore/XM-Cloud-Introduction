@@ -19,6 +19,8 @@ SharedFields:
     {7574F439-0B48-48BE-BA6B-94B1A3CE01A3}
     {D912C30C-7A98-4A8D-A094-611D9AF9605D}
     {6DE1F4E9-815D-491D-923D-D5038100DBEE}
+    {02CD7086-1F87-41EC-B40F-B92C1226895B}
+    {D315A501-6503-4545-A5D8-B9FECBA1097D}
 - ID: "7d29b525-8118-45c6-a89b-773a6a576ec7"
   Hint: SharedSites
   Value: "{974649FE-65AC-419B-986A-8832B1406A78}"
@@ -55,11 +57,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "10d5f3ba-8f2b-4b1e-b3a8-331a75f06be6"
+      Value: "5bee6649-f634-416d-b87f-1525e7f2aae0"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\1ISa5gYrpM
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220523T080344Z
+      Value: 20230501T023806Z
