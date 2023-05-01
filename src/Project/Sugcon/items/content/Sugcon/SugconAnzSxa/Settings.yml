@@ -25,7 +25,7 @@ SharedFields:
   Value: "{AC9DA469-725C-469D-929A-F5075AF7B815}"
 - ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
   Hint: Name
-  Value: "sugconanz"
+  Value: sugconanz
 - ID: "5764d2d4-724d-4313-a81b-9246c911faff"
   Hint: AppDatasourcesPath
   Value: "{FD109357-E3E5-4E43-B852-E2B97A13FE04}"
@@ -47,6 +47,9 @@ SharedFields:
 - ID: "a7bbad73-b933-49ff-95c8-1c269cb35e7c"
   Hint: DictionaryPath
   Value: "{6B2FB379-1331-4B87-9B68-DF2EFD14F3DC}"
+- ID: "af332c24-fe17-41e7-8caf-8e64c588fe72"
+  Hint: EditingTheme
+  Value: "{3BCAB9EF-1E4F-4C23-B452-783BB82AA686}"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 2000
@@ -80,11 +83,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3a2a2722-2251-4ec4-948c-ff69e8b2c74a"
+      Value: "da3849d8-79e3-4416-8516-f1feb190f2cf"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\1ISa5gYrpM
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220519T195206Z
+      Value: 20230501T061618Z
