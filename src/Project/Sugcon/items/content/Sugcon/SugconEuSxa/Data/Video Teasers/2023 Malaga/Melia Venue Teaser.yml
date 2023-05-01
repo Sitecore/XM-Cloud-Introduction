@@ -1,0 +1,37 @@
+﻿---
+ID: "4c94a878-bb39-457c-9b37-57b3bb7834d3"
+Parent: "b186bd80-89a9-47e2-873a-79f2bedf7ddf"
+Template: "84383b2b-fe12-4299-ad64-25289da95fdc"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Data/Video Teasers/2023 Malaga/Melia Venue Teaser
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0b3d5a2a-d322-41a6-9305-883b88d12ab7"
+      Hint: Videos
+      Value: "{9E97C574-2A8A-4B3F-8C48-61CA593659D1}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221202T094743Z
+    - ID: "4959559d-4d0a-401d-9341-187b7f541d71"
+      Hint: Headline
+      Value: Melia Venue Teaser
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebw@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebw@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "500da163-2bca-4ddf-a7ad-ec9568ff6cd1"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebw@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20221202T094940Z

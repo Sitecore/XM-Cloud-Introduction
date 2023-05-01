@@ -31,6 +31,12 @@ export default function Custom404Page({
         componentProps={componentProps}
         dictionary={{}}
         locale=""
+        site={{
+          name: 'sugconanz',
+          hostName: '',
+          language: 'en',
+          pointOfSale: undefined,
+        }}
       />
     );
   } else {

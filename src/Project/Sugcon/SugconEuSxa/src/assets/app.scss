@@ -7,7 +7,9 @@
 // Required
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
+@import "bootstrap/scss/maps";
 @import "bootstrap/scss/root";
+
 
 // Optional Bootstrap components here
 @import "bootstrap/scss/utilities";
@@ -49,8 +51,8 @@
 
 @import 'AvenirNext.scss';
 
-a[target="_blank"]:after {
-    content: "\1F5D7";
+a[target='_blank']:after {
+    content: '\1F5D7'
 }
 
 /*
@@ -58,10 +60,7 @@ Hides Sitecore Experience Editor markup,
 if you run the app in connected mode while the Sitecore cookies
 are set to edit mode.
 */
-.scChromeData,
-.scpm {
-    display: none !important;
-}
+.scChromeData, .scpm { display: none !important; }
 
 /*
 Styles for default JSS error components
@@ -140,15 +139,15 @@ h3 {
     font-family: 'AvenirNextW05-Bold',Arial, Helvetica, sans-serif;;
     font-size: 24px;
   }
-.centered-block {
-    max-width: 1200px;
-    margin: auto;
+ .centered-block {
+     max-width: 1200px;
+     margin: auto;
     display: grid;
-}
+ } 
 
 .background-dark-grey {
     background-color: #707070;
-}
+ }
 
 .background-light-grey {
     background-color: #f6f6f6;

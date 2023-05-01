@@ -5,7 +5,7 @@ import {
   useComponentProps,
   Text,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import { fetchSessionizeData } from 'lib/sessionize/fetchSessionizeData';
+import { fetchSessionizeData } from 'lib/sessionize/fetch-sessonize-data';
 import { ComponentData } from 'lib/sessionize/sessionizeData';
 
 const Session = (): JSX.Element => (
@@ -13,7 +13,6 @@ const Session = (): JSX.Element => (
     <p>Speaker Component</p>
   </div>
 );
-
 export const getStaticProps: GetStaticComponentProps = async (rendering) => {
   const sessionizeSessionsUrl = rendering?.fields?.SessionizeURL.value;
   return await fetchSessionizeData(sessionizeSessionsUrl);

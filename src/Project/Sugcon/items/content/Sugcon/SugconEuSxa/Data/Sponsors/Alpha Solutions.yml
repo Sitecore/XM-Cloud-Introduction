@@ -17,20 +17,20 @@ Languages:
     - ID: "7de86eb1-7ccc-4068-9870-b3a46a150aa1"
       Hint: SponsorLogo
       Value: |
-        <image mediaid="{467998C1-93A6-4DA2-97D8-CFFD6977598D}" ></image>
+        <image mediaid="{467998C1-93A6-4DA2-97D8-CFFD6977598D}" alt="Alpha Solutions" height="" width="" hspace="" vspace=""></image>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7132c80d-4d89-4fe5-bbac-dcaecce08b95"
+      Value: "ae74bbc3-9a09-4e28-8e68-687e0a5af15f"
     - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
       Hint: SponsorUrl
-      Value: "https://mvp-cd.sitecore.com/-/media/Sugcon/EU/Sponsors/alpha_solutions_logo.jpg"
+      Value: 
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rics@sitecore.net
+        sitecore\lfSOQMR9mw
     - ID: "c796441d-0c1f-4435-9cf7-9d123ff6b937"
       Hint: SponsorName
       Value: Alpha Solutions
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220706T183511Z
+      Value: 20230303T045218Z

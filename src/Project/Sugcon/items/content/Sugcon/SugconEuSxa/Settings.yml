@@ -3,7 +3,6 @@ ID: "201b85d8-8dc3-4530-854f-8459838cb98f"
 Parent: "30704fd3-0a27-4669-9609-791500474245"
 Template: "9edd8bd7-5b8e-4fc9-a3ba-88e562916e34"
 Path: /sitecore/content/Sugcon/SugconEuSxa/Settings
-BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "0129da3f-8c86-4591-ae32-6ec923413923"
   Hint: DictionaryDomain
@@ -25,7 +24,7 @@ SharedFields:
   Value: "{AC9DA469-725C-469D-929A-F5075AF7B815}"
 - ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
   Hint: Name
-  Value: "sugconeu"
+  Value: sugconeu
 - ID: "5764d2d4-724d-4313-a81b-9246c911faff"
   Hint: AppDatasourcesPath
   Value: "{BB2FB96A-95B5-485D-AD43-E725B0E43909}"
@@ -35,9 +34,18 @@ SharedFields:
 - ID: "5e8ed724-126a-4bb7-8106-85c2d1042c9e"
   Hint: ServerSideRenderingEngineApplicationUrl
   Value: "https://sugconeu.xmcloudcm.localhost"
+- ID: "64971fa7-f8ac-4c88-9bb2-2949f2a28670"
+  Hint: RobotsContent
+  Value: |
+    User-agent: *
+    Disallow: 
+    
 - ID: "72e83c8d-3578-4e50-b4c0-93a78a1729f2"
   Hint: FilesystemPath
   Value: /dist/SugconEuSxa
+- ID: "7517c0bf-69e3-4975-b141-5a2eb90ebadc"
+  Hint: SitemapMode
+  Value: "{EC88D456-37C9-4E27-9E61-43BF3001D1C0}"
 - ID: "89849738-34ee-46bc-b525-825f1153189e"
   Hint: ServerSideRenderingEngineEndpointUrl
   Value: "http://sugconeu:3000/api/editing/render"
@@ -47,6 +55,9 @@ SharedFields:
 - ID: "a7bbad73-b933-49ff-95c8-1c269cb35e7c"
   Hint: DictionaryPath
   Value: "{F0BE8F2B-1F07-42E2-B74C-D2C0008C1A93}"
+- ID: "af332c24-fe17-41e7-8caf-8e64c588fe72"
+  Hint: EditingTheme
+  Value: "{3BCAB9EF-1E4F-4C23-B452-783BB82AA686}"
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 2000
@@ -67,6 +78,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220519T091040Z
@@ -80,11 +94,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3393648c-4d84-4344-a8a0-e1be56c37b4c"
+      Value: "0697ab1d-d83b-4fa8-84db-f5a3b2853713"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\1ISa5gYrpM
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220519T200041Z
+      Value: 20230501T220910Z

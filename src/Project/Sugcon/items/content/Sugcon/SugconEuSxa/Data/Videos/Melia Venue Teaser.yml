@@ -1,0 +1,37 @@
+﻿---
+ID: "9e97c574-2a8a-4b3f-8c48-61ca593659d1"
+Parent: "8e09461d-9ac4-408f-8bd7-8416bfcd0cf4"
+Template: "64acede4-1711-4df4-ab7c-efb822a8fe7c"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Data/Videos/Melia Venue Teaser
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221202T094841Z
+    - ID: "4babb508-6a3f-466a-8b81-e35bf485dc3c"
+      Hint: youtubeId
+      Value: wFUQ69zDW9s 
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebw@sitecore.net
+    - ID: "56a17772-058b-47d3-8e73-8bbdd0ab24ba"
+      Hint: Title
+      Value: Melia Venue Teaser
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebw@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8a4fdcdd-b3a1-4258-a4fd-af5dda017c27"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebw@sitecore.net
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20221202T094928Z

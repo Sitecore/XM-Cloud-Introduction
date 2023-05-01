@@ -5,7 +5,7 @@ import {
   useComponentProps,
   Text,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import { fetchSessionizeData } from 'lib/sessionize/fetchSessionizeData';
+import { fetchSessionizeData } from 'lib/sessionize/fetch-sessonize-data';
 import { ComponentData } from 'lib/sessionize/sessionizeData';
 
 const Speaker = (): JSX.Element => (

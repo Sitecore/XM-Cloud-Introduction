@@ -1,10 +1,12 @@
 const jssConfig = require('./src/temp/config');
-const packageConfig = require('./package.json').config;
 const { getPublicUrl } = require('@sitecore-jss/sitecore-jss-nextjs');
 const plugins = require('./src/temp/next-config-plugins') || {};
 
 const publicUrl = getPublicUrl();
 
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
   // Set assetPrefix to our public URL
   assetPrefix: publicUrl,
@@ -23,7 +25,10 @@ const nextConfig = {
     locales: ['en'],
     // This is the locale that will be used when visiting a non-locale
     // prefixed path e.g. `/styleguide`.
-    defaultLocale: packageConfig.language,
+    defaultLocale: jssConfig.defaultLanguage,
+  },
+  images: {
+    domains: ['mvp-cd.sitecore.com'],
   },
   
   // Enable React Strict Mode
@@ -47,16 +52,18 @@ const nextConfig = {
         source: '/layouts/system/:path*',
         destination: `${jssConfig.sitecoreApiHost}/layouts/system/:path*`,
       },
+      // healthz check
+      {
+        source: '/healthz',
+        destination: '/api/healthz',
+      },
+      // rewrite for Sitecore service pages
+      {
+        source: '/sitecore/service/:path*',
+        destination: `${jssConfig.sitecoreApiHost}/sitecore/service/:path*`,
+      }, 
     ];
   },
-
-  typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
-    ignoreBuildErrors: true
-  }
 };
 
 module.exports = () => {

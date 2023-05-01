@@ -17,20 +17,20 @@ Languages:
     - ID: "7de86eb1-7ccc-4068-9870-b3a46a150aa1"
       Hint: SponsorLogo
       Value: |
-        <image mediaid="{15763E16-C6A8-4990-A722-5BB891EA4D6C}" ></image>
+        <image mediaid="{15763E16-C6A8-4990-A722-5BB891EA4D6C}" alt="Epam" height="" width="" hspace="" vspace=""></image>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "878fb409-a6d3-4f87-b0c7-a22b9d785945"
+      Value: "8df42c15-97d2-4118-96a8-c73cde2b87ba"
     - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
       Hint: SponsorUrl
-      Value: "https://www.epam.com/"
+      Value: 
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rics@sitecore.net
+        sitecore\lfSOQMR9mw
     - ID: "c796441d-0c1f-4435-9cf7-9d123ff6b937"
       Hint: SponsorName
       Value: Epam
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220706T183511Z
+      Value: 20230303T045246Z

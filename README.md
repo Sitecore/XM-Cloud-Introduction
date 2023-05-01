@@ -49,6 +49,10 @@ Examples of how to use them can be seen in the different setup guides for both L
 | SUCGON_ANZ_CDP_CLIENT_KEY  | No                    | **Yes**                   | CDP Client key for SUGCON ANZ Site                              |
 | SUCGON_ANZ_CDP_TARGET_URL  | No                    | **Yes**                   | CDP Target URL for SUGCON ANZ Site                              |
 | SUCGON_ANZ_CDP_POINTOFSALE | No                    | **Yes**                   | CDP POS for SUGCON ANZ Site                                     |
+| SUCGON_EU_CDP_CLIENT_KEY   | No                    | **Yes**                   | CDP Client key for SUGCON EU Site                               |
+| SUCGON_EU_CDP_TARGET_URL   | No                    | **Yes**                   | CDP Target URL for SUGCON EU Site                               |
+| SUCGON_EU_CDP_POINTOFSALE  | No                    | **Yes**                   | CDP POS for SUGCON EU Site                                      |
+
 
 # 🏃 Running the Repository
 After you have initialized the repository, you can run it using the `up.ps1` script. There are 3 different ways you can run this repository

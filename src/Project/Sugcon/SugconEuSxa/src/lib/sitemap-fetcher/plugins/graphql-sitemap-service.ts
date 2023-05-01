@@ -1,29 +1,32 @@
-import { GraphQLSitemapService } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  MultisiteGraphQLSitemapService,
+  StaticPath,
+  constants,
+  SiteInfo,
+} from '@sitecore-jss/sitecore-jss-nextjs';
 import config from 'temp/config';
 import { SitemapFetcherPlugin } from '..';
 import { GetStaticPathsContext } from 'next';
-import { StaticPath, constants } from '@sitecore-jss/sitecore-jss-nextjs';
+import { siteResolver } from 'lib/site-resolver';
 
 class GraphqlSitemapServicePlugin implements SitemapFetcherPlugin {
-  _graphqlSitemapService: GraphQLSitemapService;
+  _graphqlSitemapService: MultisiteGraphQLSitemapService;
 
   constructor() {
-    this._graphqlSitemapService = new GraphQLSitemapService({
+    this._graphqlSitemapService = new MultisiteGraphQLSitemapService({
       endpoint: config.graphQLEndpoint,
       apiKey: config.sitecoreApiKey,
-      siteName: config.jssAppName,
-      rootItemId: '36CAD6CF-D418-43CA-BC57-656E44069116',
+      sites: [...new Set(siteResolver.sites.map((site: SiteInfo) => site.name))],
     });
   }
 
   async exec(context?: GetStaticPathsContext): Promise<StaticPath[]> {
-    if (process.env.EXPORT_MODE) {
-      // Disconnected Export mode
-      if (process.env.JSS_MODE !== constants.JSS_MODE.DISCONNECTED) {
-        return this._graphqlSitemapService.fetchExportSitemap(config.defaultLanguage);
-      }
+    if (process.env.JSS_MODE === constants.JSS_MODE.DISCONNECTED) {
+      return [];
     }
-    return this._graphqlSitemapService.fetchSSGSitemap(context?.locales || []);
+    return process.env.EXPORT_MODE
+      ? this._graphqlSitemapService.fetchExportSitemap(config.defaultLanguage)
+      : this._graphqlSitemapService.fetchSSGSitemap(context?.locales || []);
   }
 }
 

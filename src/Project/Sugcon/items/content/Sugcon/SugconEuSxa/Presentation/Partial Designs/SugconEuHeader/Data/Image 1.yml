@@ -21,7 +21,7 @@ Languages:
     - ID: "57caf172-ce57-4e48-b3a1-46f8aea71c08"
       Hint: Image
       Value: |
-        <image mediaid="{514E9CC6-AF44-4F32-A5E2-7F3A30E8FED9}" />
+        <image mediaid="{514E9CC6-AF44-4F32-A5E2-7F3A30E8FED9}" alt="Sugcon Europe" height="" width="" hspace="" vspace="" />
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
@@ -32,11 +32,11 @@ Languages:
         <link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{A42272AA-3CD4-4943-AAC8-0142DB3ABFFA}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "9a8460db-dc44-4403-baf5-f4b180b49dcc"
+      Value: "cb3c532c-916a-4667-99b6-d8d9c9ac8d95"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\thd@sitecore.net
+        sitecore\lfSOQMR9mw
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220815T153258Z
+      Value: 20230203T123421Z

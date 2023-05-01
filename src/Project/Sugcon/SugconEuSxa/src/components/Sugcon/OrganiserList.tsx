@@ -35,33 +35,33 @@ export const Default = (props: OrganiserListProps): JSX.Element => {
   if (props.fields) {
     return (
       <div className="container component">
-        <div className="row">
-          {props.fields?.Organisers?.length == 0 ? (
-            <div>No Organisers</div>
-          ) : (
-            props.fields?.Organisers?.map((Organizer) => {
-              return (
+          <div className="row">
+            {props.fields?.Organisers?.length == 0 ? (
+              <div>No Organisers</div>
+            ) : (
+              props.fields?.Organisers?.map((Organizer) => {
+                return (
                 <div key={Organizer.fields.Name.value} className="col-12 col-md-3 organizer">
-                  <div className="card">
-                    <p>
-                      <Image field={Organizer?.fields?.Image} />
-                    </p>
-                    <div className="cardBody">
-                      <h3>
-                        <Text field={Organizer?.fields?.Name} />
-                      </h3>
+                    <div className="card">
                       <p>
-                        <Link field={Organizer?.fields?.LinkedInLink}></Link> /
-                        <Link field={Organizer?.fields?.TwitterLink}></Link>
+                        <Image field={Organizer?.fields?.Image} />
                       </p>
+                      <div className="cardBody">
+                        <h3>
+                          <Text field={Organizer?.fields?.Name} />
+                        </h3>
+                        <p>
+                          <Link field={Organizer?.fields?.LinkedInLink}></Link> /
+                          <Link field={Organizer?.fields?.TwitterLink}></Link>
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })
-          )}
+                );
+              })
+            )}
+          </div>
         </div>
-      </div>
     );
   }
 

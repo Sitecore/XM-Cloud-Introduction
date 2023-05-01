@@ -1,0 +1,52 @@
+﻿---
+ID: "9c46a103-9873-47f0-a6fc-5c42dd9e6aaa"
+Parent: "22d368d0-1424-438d-bed1-650710367f70"
+Template: "a9668aad-7e76-49a5-978a-bff6bf8a8a6f"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Home/Sponsors/Data/Hero 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230119T085910Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "5d11b89b-88a9-4fbd-9da9-9c1c3882b46a"
+      Hint: Link
+      Value: |
+        <link linktype="mailto" text="Contact us" url="mailto:community@sitecore.com" anchor="" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "76951572-38f3-442a-aab8-41c02e6a2bdc"
+      Hint: Description
+      Value: |
+        <p>The Organisation Committee invites Sitecore Partners, Technology Vendors and Individuals to become a sponsor. We offer various packages to present and promote yourself. Your support is crucial for the success of the event. If you interested in being a sponsor, please contact us on <a href="mailto:community@sitecore.com?subject=SUGCON%20Europe%202023%20sponsorship">community@sitecore.com</a>.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8d82a580-d326-428a-b55d-100cfbaadc00"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\rea@sitecore.net
+    - ID: "c1413fde-0dd2-4fc9-842d-5ccc7c753564"
+      Hint: BackgroundImage
+      Value: |
+        <image mediaid="{98917EE1-B2E9-4D93-BFA9-F32C7B1F8A20}" />
+    - ID: "d08fa491-162f-44ad-85c0-af9269b9195c"
+      Hint: Text
+      Value: Become a proud SUGCON Europe 2023 Sponsor
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230201T220714Z
+    - ID: "db8d95de-6511-487f-acc0-31f25fa76e52"
+      Hint: Label
+      Value: sponsorship
