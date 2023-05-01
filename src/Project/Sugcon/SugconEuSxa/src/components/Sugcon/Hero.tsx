@@ -42,11 +42,11 @@ export const Default = (props: HeroProps): JSX.Element => {
             <Image media={props.fields.BackgroundImage} className="img-fluid heroimage"></Image>
             <div className="col-12">
               <div className="caption d-md-block hero-backdrop">
-              <p className="hero-label">
-                <Text field={props.fields.Label} />
-              </p>
+                <p className="hero-label">
+                  <Text field={props.fields.Label} />
+                </p>
                 <h1 className="h1 py-4">
-                <Text className="contentTitle" field={props.fields.Text} />
+                  <Text className="contentTitle" field={props.fields.Text} />
                 </h1>
                 <div className="hero-text">
                   <JssRichText field={props.fields.Description} />

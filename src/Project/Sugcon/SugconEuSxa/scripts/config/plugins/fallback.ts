@@ -12,7 +12,7 @@ class FallbackPlugin implements ConfigPlugin {
     return Object.assign({}, config, {
       defaultLanguage: config.defaultLanguage || 'en',
       sitecoreApiKey: config.sitecoreApiKey || 'no-api-key-set',
-      sitecoreApiHost: config.sitecoreApiKey || '',
+      sitecoreApiHost: config.sitecoreApiHost || '',
     });
   }
 }
