@@ -7,7 +7,9 @@
 // Required
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
+@import "bootstrap/scss/maps";
 @import "bootstrap/scss/root";
+
 
 // Optional Bootstrap components here
 @import "bootstrap/scss/utilities";
@@ -79,7 +81,6 @@ header{
     }
     .navigation{
         margin-top: 50px;
-      
     }
     .richtext{
         background-color: #707070;
