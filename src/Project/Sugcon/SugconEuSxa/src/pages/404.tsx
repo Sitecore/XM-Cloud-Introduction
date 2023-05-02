@@ -22,24 +22,23 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export default function Custom404Page({
   layoutData,
   componentProps,
+  notFound,
+  site,
+  locale,
+  dictionary,
 }: SitecorePageProps): JSX.Element {
   if (!process.env.DISABLE_SSG_FETCH) {
     return (
       <SitecorePage
-        notFound={true}
+        notFound={notFound}
         layoutData={layoutData}
         componentProps={componentProps}
-        dictionary={{}}
-        locale=""
-        site={{
-          name: 'sugconanz',
-          hostName: '',
-          language: 'en',
-          pointOfSale: undefined,
-        }}
+        dictionary={dictionary}
+        locale={locale}
+        site={site}
       />
     );
   } else {
-    <div />;
+    return <div />;
   }
 }
