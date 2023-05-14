@@ -4,9 +4,19 @@ import {
   GetStaticComponentProps,
   useComponentProps,
   Text,
+  ComponentRendering,
+  Field,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import { fetchSessionizeData } from 'lib/sessionize/fetchSessionizeData';
+import { fetchSessionizeData } from 'lib/sessionize/fetch-sessonize-data';
 import { ComponentData } from 'lib/sessionize/sessionizeData';
+
+interface Fields {
+  SessionizeURL: Field<string>;
+}
+
+type SpeakerRendering = ComponentRendering & {
+  fields: Fields;
+};
 
 const Speaker = (): JSX.Element => (
   <div>
@@ -14,7 +24,7 @@ const Speaker = (): JSX.Element => (
   </div>
 );
 
-export const getStaticProps: GetStaticComponentProps = async (rendering) => {
+export const getStaticProps: GetStaticComponentProps = async (rendering: SpeakerRendering) => {
   const sessionizeSpeakerUrl = rendering?.fields?.SessionizeURL.value;
   return await fetchSessionizeData(sessionizeSpeakerUrl);
 };

@@ -3,6 +3,11 @@ ID: "d9d7dcf2-0c98-4c7d-a4fc-8534c6bc3886"
 Parent: "f9b079a6-b3ba-481f-ad66-4bb87328e72d"
 Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
 Path: /sitecore/media library/Project/Sugcon/shared
+SharedFields:
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    ar|sugcon\Tenant Member|pe|+item:read|+item:create|pd|+item:rename|+item:delete|+item:write|+item:read|+item:create|
 Languages:
 - Language: en
   Versions:
@@ -21,11 +26,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "44059dfb-2975-4c4c-a676-47f9e7f9db8e"
+      Value: "fdd202df-fcb0-40bc-a154-7b2f59f8e115"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\sebw@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220520T083031Z
+      Value: 20221206T104752Z

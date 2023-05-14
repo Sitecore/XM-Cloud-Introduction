@@ -25,16 +25,15 @@ Languages:
     - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
       Hint: Text
       Value: |
-        <h1>WE WOULD LIKE TO THANK AND EXPRESS OUR GRATITUDE TO OUR SPONSORS</h1>
-        <p>Without the help of these amazing sponsors, we couldn't organize such a great event like SUGCON Europe 2022!&nbsp;</p>
-        <p>The entire conference is run by the Sitecore community for the Sitecore community.</p>
+        <h1>Become a proud SUGCON Europe 2023 Sponsor</h1>
+        <p>The Organisation Committee invites Sitecore Partners, Technology Vendors and Individuals to become a sponsor. We offer various packages to present and promote yourself. Your support is crucial for the success of the event. If you interested in being a sponsor, please contact us on <a href="mailto:community@sitecore.com?subject=SUGCON%20Europe%202023%20sponsorship">community@sitecore.com</a>.</p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fa83ad45-782a-4aa1-a3a8-eb8fd92bd975"
+      Value: "44ca8ee4-7591-436d-bd94-f8582a9fbb5d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebw@sitecore.net
+        sitecore\tarnok.tamas@allwin.hu
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220920T122045Z
+      Value: 20230119T072720Z

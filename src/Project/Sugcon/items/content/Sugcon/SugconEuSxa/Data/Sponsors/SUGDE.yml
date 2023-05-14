@@ -20,17 +20,56 @@ Languages:
         <image mediaid="{F5A1E648-BDD5-412F-9C34-604BB40BE846}" ></image>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2202c7f9-5e65-45b2-a141-b43cbc709db6"
+      Value: "8e71f1f9-1acf-49a2-9df5-ceec9609a251"
     - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
       Hint: SponsorUrl
       Value: "https://www.sitecore-usergroup.de/"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rics@sitecore.net
+        sitecore\lfSOQMR9mw
     - ID: "c796441d-0c1f-4435-9cf7-9d123ff6b937"
       Hint: SponsorName
       Value: SUGDE
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220706T183621Z
+      Value: 20230201T222640Z
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230201T222607Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\lfSOQMR9mw
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\lfSOQMR9mw
+    - ID: "7de86eb1-7ccc-4068-9870-b3a46a150aa1"
+      Hint: SponsorLogo
+      Value: |
+        <image mediaid="{F5A1E648-BDD5-412F-9C34-604BB40BE846}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f22ce8e8-4b64-487f-8aa7-4c7cfc777b48"
+    - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
+      Hint: SponsorUrl
+      Value: "https://www.sitecore-usergroup.de/"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\lfSOQMR9mw
+    - ID: "c796441d-0c1f-4435-9cf7-9d123ff6b937"
+      Hint: SponsorName
+      Value: SUGDE
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20230201T222607Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230208T140441Z

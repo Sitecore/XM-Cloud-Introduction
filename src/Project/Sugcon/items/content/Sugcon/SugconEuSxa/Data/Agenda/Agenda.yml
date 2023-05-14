@@ -8,6 +8,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220810T160909Z
@@ -21,17 +24,52 @@ Languages:
         sitecore\thd@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "82781107-4824-4610-96ac-674e1e1ae9c1"
+      Value: "8ce693fb-8147-4fe9-9da0-62a40372b269"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\thd@sitecore.net
+        sitecore\a.vershalovich@brimit.com
     - ID: "bd677d16-2cc9-4211-a8b7-7569e4683169"
       Hint: SessionizeURL
-      Value: "https://sessionize.com/api/v2/1wt79jwg/view/GridSmart"
+      Value: "https://sessionize.com/api/v2/di9e6tfk/view/GridSmart"
     - ID: "c96d0edb-dba3-4436-855f-9914049bf9a1"
       Hint: Title
-      Value: SUGCON EU 2022 Agenda
+      Value: SUGCON Europe 2023 Agenda
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220810T160936Z
+      Value: 20230119T111305Z
+  - Version: 2
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230314T120502Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\thd@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\lfSOQMR9mw
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "07b977e0-45f2-4f7d-854d-e214bc004ea5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\lfSOQMR9mw
+    - ID: "bd677d16-2cc9-4211-a8b7-7569e4683169"
+      Hint: SessionizeURL
+      Value: "https://sessionize.com/api/v2/di9e6tfk/view/GridSmart"
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20230314T120502Z
+    - ID: "c96d0edb-dba3-4436-855f-9914049bf9a1"
+      Hint: Title
+      Value: SUGCON Europe 2023 Agenda
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230314T123820Z

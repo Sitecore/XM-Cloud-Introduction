@@ -26,6 +26,10 @@ services:
       JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
       SITECORE_API_KEY: "${SITECORE_API_KEY}"
       FETCH_WITH: "GraphQL"
+      NEXT_PUBLIC_CDP_CLIENT_KEY: ${SUCGON_EU_CDP_CLIENT_KEY}
+      NEXT_PUBLIC_CDP_TARGET_URL: ${SUCGON_EU_CDP_TARGET_URL}
+      NEXT_PUBLIC_CDP_POINTOFSALE: ${SUCGON_EU_CDP_POINTOFSALE}
+      NODE_ENV: ${NODE_ENV}
     depends_on:
       - cm
       - nodejs
@@ -34,6 +38,10 @@ services:
       - "traefik.http.routers.rendering-secure.entrypoints=websecure"
       - "traefik.http.routers.rendering-secure.rule=Host(`${SUGCON_EU_HOST}`)"
       - "traefik.http.routers.rendering-secure.tls=true"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/healthz"]
+      interval: 60s
+      timeout: 30s
   
   sugconanz:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-sugcon-anz:${VERSION:-latest}
@@ -51,6 +59,10 @@ services:
       JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
       SITECORE_API_KEY: "${SUGCONANZ_API_KEY}"
       FETCH_WITH: "GraphQL"
+      NEXT_PUBLIC_CDP_CLIENT_KEY: ${SUCGON_ANZ_CDP_CLIENT_KEY}
+      NEXT_PUBLIC_CDP_TARGET_URL: ${SUCGON_ANZ_CDP_TARGET_URL}
+      NEXT_PUBLIC_CDP_POINTOFSALE: ${SUCGON_ANZ_CDP_POINTOFSALE}
+      NODE_ENV: ${NODE_ENV}
     depends_on:
       - cm
       - nodejs
@@ -59,6 +71,10 @@ services:
       - "traefik.http.routers.sugconanz-secure.entrypoints=websecure"
       - "traefik.http.routers.sugconanz-secure.rule=Host(`${SUGCON_ANZ_HOST}`)"
       - "traefik.http.routers.sugconanz-secure.tls=true"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/healthz"]
+      interval: 60s
+      timeout: 30s
 
   # The solution build image is added here so it can be referenced as a build dependency
   # for the images which use its output. Setting "deploy.replicas: 0" means docker-compose will not

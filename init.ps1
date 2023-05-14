@@ -16,7 +16,19 @@ Param (
     [Parameter(HelpMessage = "The Okta Client Secret used by the MVP Rendering Host.")]
     [string]$OKTA_Client_Secret,
     [Parameter(HelpMessage = "The URL for the MVP Selections API.")]
-    [string]$MVP_Selections_API
+    [string]$MVP_Selections_API,
+    [Parameter(HelpMessage = "SUGCON ANZ CPD Client Key.")]
+    [string]$SUCGON_ANZ_CDP_CLIENT_KEY,
+    [Parameter(HelpMessage = "SUGCON ANZ CPD Target URL.")]
+    [string]$SUCGON_ANZ_CDP_TARGET_URL,
+    [Parameter(HelpMessage = "SUGCON ANZ CPD Point of Sale.")]
+    [string]$SUCGON_ANZ_CDP_POINTOFSALE,
+    [Parameter(HelpMessage = "SUGCON EU CPD Client Key.")]
+    [string]$SUCGON_EU_CDP_CLIENT_KEY,
+    [Parameter(HelpMessage = "SUGCON EU CPD Target URL.")]
+    [string]$SUCGON_EU_CDP_TARGET_URL,
+    [Parameter(HelpMessage = "SUGCON EU CPD Point of Sale.")]
+    [string]$SUCGON_EU_CDP_POINTOFSALE
 )
 
 $ErrorActionPreference = "Stop";
@@ -156,6 +168,12 @@ if ($InitEnv) {
 	Set-EnvFileVariable "OKTA_CLIENT_ID" -Value $OKTA_Client_Id
 	Set-EnvFileVariable "OKTA_CLIENT_SECRET" -Value $OKTA_Client_Secret
     Set-EnvFileVariable "MVP_SELECTIONS_API" -Value $MVP_Selections_API
+    Set-EnvFileVariable "SUCGON_ANZ_CDP_CLIENT_KEY" -Value $SUCGON_ANZ_CDP_CLIENT_KEY
+    Set-EnvFileVariable "SUCGON_ANZ_CDP_TARGET_URL" -Value $SUCGON_ANZ_CDP_TARGET_URL
+    Set-EnvFileVariable "SUCGON_ANZ_CDP_POINTOFSALE" -Value $SUCGON_ANZ_CDP_POINTOFSALE
+    Set-EnvFileVariable "SUCGON_EU_CDP_CLIENT_KEY" -Value $SUCGON_EU_CDP_CLIENT_KEY
+    Set-EnvFileVariable "SUCGON_EU_CDP_TARGET_URL" -Value $SUCGON_EU_CDP_TARGET_URL
+    Set-EnvFileVariable "SUCGON_EU_CDP_POINTOFSALE" -Value $SUCGON_EU_CDP_POINTOFSALE
 }
 Write-Host "Finished populating .env file." -ForegroundColor Green
 

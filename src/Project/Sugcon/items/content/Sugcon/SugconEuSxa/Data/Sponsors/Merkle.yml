@@ -1,0 +1,44 @@
+﻿---
+ID: "b262a0b4-0e5c-4a92-a491-0cd95711d19c"
+Parent: "5e5d79ca-f551-440c-aa35-4becb8e22e99"
+Template: "dbf996a5-21c9-49d6-bbb4-dce6d4700576"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Data/Sponsors/Merkle
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230201T222715Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\lfSOQMR9mw
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\lfSOQMR9mw
+    - ID: "7de86eb1-7ccc-4068-9870-b3a46a150aa1"
+      Hint: SponsorLogo
+      Value: |
+        <image mediaid="{72E0B4FE-7A51-4818-933A-70C6D86F1D78}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5da44216-b89c-4c40-aba9-e69f4ec7f8c7"
+    - ID: "b65985cc-f1a9-4443-abbe-4345ea304146"
+      Hint: SponsorUrl
+      Value: "https://www.merkle.com/"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\lfSOQMR9mw
+    - ID: "c796441d-0c1f-4435-9cf7-9d123ff6b937"
+      Hint: SponsorName
+      Value: Merkle
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230201T223121Z

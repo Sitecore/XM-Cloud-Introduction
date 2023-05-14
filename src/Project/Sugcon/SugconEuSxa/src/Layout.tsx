@@ -1,10 +1,16 @@
 /**
- * This Layout needs for SXA example.
+ * This Layout is needed for Starter Kit.
  */
 import React from 'react';
 import Head from 'next/head';
-import { Placeholder, getPublicUrl, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
-import { parse as parseQuery } from 'querystring';
+import {
+  Placeholder,
+  getPublicUrl,
+  LayoutServiceData,
+  Field,
+  ImageField,
+} from '@sitecore-jss/sitecore-jss-nextjs';
+import Scripts from 'src/Scripts';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
@@ -14,87 +20,93 @@ interface LayoutProps {
   layoutData: LayoutServiceData;
 }
 
+interface RouteFields {
+  [key: string]: unknown;
+  Title?: Field;
+  MetaDescription?: Field;
+  MetaKeywords?: Field;
+  OgTitle?: Field;
+  OgDescription?: Field;
+  OgImage?: ImageField;
+  OgType?: Field;
+}
+
 const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
   const { route } = layoutData.sitecore;
-  const metaCustomAttributesDetails = route?.fields?.MetaCustomAttributes?.value;
-  const metaCustomAttributesQueryAsArray = Object.entries(parseQuery(metaCustomAttributesDetails));
+  const fields = route?.fields as RouteFields;
+  const isPageEditing = layoutData.sitecore.context.pageEditing;
+  const mainClassPageEditing = isPageEditing ? 'editing-mode' : 'prod-mode';
 
   return (
     <>
+      <Scripts />
       <Head>
         <title>
-          {route?.fields?.Title?.value
-            ? 'SUGCON Europe - ' + route?.fields?.Title?.value
-            : 'SUGCON Europe'}
+          {fields?.Title?.value ? 'SUGCON ANZ - ' + fields.Title.value.toString() : 'SUGCON ANZ'}
         </title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
         {/* Meta Tags */}
-        {route?.fields?.MetaDescription?.value ? (
-          <meta name="description" content={`${route?.fields?.MetaDescription?.value}`} />
+        {fields?.MetaDescription?.value ? (
+          <meta name="description" content={`${fields?.MetaDescription?.value}`} />
         ) : (
           ''
         )}
 
-        {route?.fields?.MetaKeywords?.value ? (
-          <meta name="keywords" content={`${route?.fields?.MetaKeywords?.value}`} />
+        {fields?.MetaKeywords?.value ? (
+          <meta name="keywords" content={`${fields?.MetaKeywords?.value}`} />
         ) : (
           ''
         )}
-
-        {route?.fields?.MetaCustomAttributes?.value
-          ? metaCustomAttributesQueryAsArray.map(([key, value]: [string, string]) => (
-              <meta key={key} name={key} content={value} />
-            ))
-          : ''}
-
         {/* Open Graph Tags */}
-        {route?.fields?.OgTitle?.value ? (
-          <meta property="og:title" content={`${route?.fields?.OgTitle?.value}`} />
+        {fields?.OgTitle?.value ? (
+          <meta property="og:title" content={`${fields?.OgTitle?.value}`} />
         ) : (
           ''
         )}
 
-        {route?.fields?.OgDescription?.value ? (
-          <meta property="og:description" content={`${route?.fields?.OgDescription?.value}`} />
+        {fields?.OgDescription?.value ? (
+          <meta property="og:description" content={`${fields?.OgDescription?.value}`} />
         ) : (
           ''
         )}
 
-        {route?.fields?.OgImage?.value?.src ? (
-          <meta property="og:Image" content={`${route?.fields?.OgImage?.value?.src}`} />
+        {fields?.OgImage?.value?.src ? (
+          <meta property="og:Image" content={`${fields?.OgImage?.value?.src}`} />
         ) : (
           ''
         )}
 
-        {route?.fields?.OgType?.value ? (
-          <meta property="og:Type" content={`${route?.fields?.OgType?.value}`} />
+        {fields?.OgType?.value ? (
+          <meta property="og:Type" content={`${fields?.OgType?.value}`} />
         ) : (
           ''
         )}
       </Head>
 
       {/* root placeholder for the app, which we add components to using route data */}
-      <header>
-        <div id="header" className="container-fluid">
-          <div className="row">
-            {route && <Placeholder name="headless-header" rendering={route} />}
+      <div className={mainClassPageEditing}>
+        <header>
+          <div id="header" className="container-fluid">
+            <div className="row">
+              {route && <Placeholder name="headless-header" rendering={route} />}
+            </div>
           </div>
-        </div>
-      </header>
-      <main>
-        <div id="content" className="container-fluid">
-          <div className="row">
-            {route && <Placeholder name="headless-main" rendering={route} />}
+        </header>
+        <main>
+          <div id="content" className="container-fluid">
+            <div className="row">
+              {route && <Placeholder name="headless-main" rendering={route} />}
+            </div>
           </div>
-        </div>
-      </main>
-      <footer>
-        <div id="footer" className="container-fluid">
-          <div className="row">
-            {route && <Placeholder name="headless-footer" rendering={route} />}
+        </main>
+        <footer>
+          <div id="footer" className="container-fluid">
+            <div className="row">
+              {route && <Placeholder name="headless-footer" rendering={route} />}
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </>
   );
 };

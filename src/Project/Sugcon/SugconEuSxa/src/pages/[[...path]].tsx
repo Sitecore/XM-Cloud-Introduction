@@ -2,25 +2,65 @@ import { useEffect } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Layout from 'src/Layout';
 import {
+  RenderingType,
   SitecoreContext,
   ComponentPropsContext,
   handleEditorFastRefresh,
+  EditingComponentPlaceholder,
+  StaticPath,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { SitecorePageProps } from 'lib/page-props';
 import { sitecorePagePropsFactory } from 'lib/page-props-factory';
-import { componentFactory } from 'temp/componentFactory';
+// different componentFactory method will be used based on whether page is being edited
+import { componentFactory, editingComponentFactory } from 'temp/componentFactory';
 import { sitemapFetcher } from 'lib/sitemap-fetcher';
+import Custom404Page from './404';
 
-const SitecorePage = ({ componentProps, layoutData }: SitecorePageProps): JSX.Element => {
+const SitecorePage = ({
+  notFound,
+  componentProps,
+  layoutData,
+  dictionary,
+  site,
+}: SitecorePageProps): JSX.Element => {
   useEffect(() => {
-    // Since Sitecore editors do not support Fast Refresh, need to refresh EE chromes after Fast Refresh finished
+    // Since Sitecore editors do not support Fast Refresh, need to refresh editor chromes after Fast Refresh finished
     handleEditorFastRefresh();
   }, []);
 
+  if (notFound || !layoutData.sitecore.route) {
+    // Shouldn't hit this (as long as 'notFound' is being returned below), but just to be safe
+    return (
+      <Custom404Page
+        componentProps={componentProps}
+        dictionary={dictionary}
+        layoutData={layoutData}
+        locale=""
+        site={site}
+        notFound={true}
+      />
+    );
+  }
+
+  const isEditing = layoutData.sitecore.context.pageEditing;
+  const isComponentRendering =
+    layoutData.sitecore.context.renderingType === RenderingType.Component;
+
   return (
     <ComponentPropsContext value={componentProps}>
-      <SitecoreContext componentFactory={componentFactory} layoutData={layoutData}>
-        <Layout layoutData={layoutData} />
+      <SitecoreContext
+        componentFactory={isEditing ? editingComponentFactory : componentFactory}
+        layoutData={layoutData}
+      >
+        {/*
+          Sitecore Pages supports component rendering to avoid refreshing the entire page during component editing.
+          If you are using Experience Editor only, this logic can be removed, Layout can be left.
+        */}
+        {isComponentRendering ? (
+          <EditingComponentPlaceholder rendering={layoutData.sitecore.route} />
+        ) : (
+          <Layout layoutData={layoutData} />
+        )}
       </SitecoreContext>
     </ComponentPropsContext>
   );
@@ -35,21 +75,26 @@ export const getStaticPaths: GetStaticPaths = async (context) => {
   // will be generated on request (development mode in this example).
   // Alternatively, the entire sitemap could be pre-rendered
   // ahead of time (non-development mode in this example).
-  // See https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration
+  // See https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration
+
+  let paths: StaticPath[] = [];
+  let fallback: boolean | 'blocking' = 'blocking';
 
   if (process.env.NODE_ENV !== 'development' && !process.env.DISABLE_SSG_FETCH) {
-    // Note: Next.js runs export in production mode
-    const paths = await sitemapFetcher.fetch(context);
+    try {
+      // Note: Next.js runs export in production mode
+      paths = await sitemapFetcher.fetch(context);
+    } catch (error) {
+      console.log('Error occurred while fetching static paths');
+      console.log(error);
+    }
 
-    return {
-      paths,
-      fallback: process.env.EXPORT_MODE ? false : 'blocking',
-    };
+    fallback = process.env.EXPORT_MODE ? false : fallback;
   }
 
   return {
-    paths: [],
-    fallback: 'blocking',
+    paths,
+    fallback,
   };
 };
 
@@ -58,6 +103,13 @@ export const getStaticPaths: GetStaticPaths = async (context) => {
 // revalidation (or fallback) is enabled and a new request comes in.
 export const getStaticProps: GetStaticProps = async (context) => {
   const props = await sitecorePagePropsFactory.create(context);
+
+  // Check if we have a redirect (e.g. custom error page)
+  if (props.redirect) {
+    return {
+      redirect: props.redirect,
+    };
+  }
 
   return {
     props,

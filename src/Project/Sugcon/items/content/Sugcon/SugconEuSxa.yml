@@ -3,7 +3,6 @@ ID: "30704fd3-0a27-4669-9609-791500474245"
 Parent: "f85d6dc6-5fb6-49c7-8e63-f5c4a0c3ce46"
 Template: "ac9da469-725c-469d-929a-f5075af7b815"
 Path: /sitecore/content/Sugcon/SugconEuSxa
-BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "1230d2cb-4948-4d43-8a3b-b39978f6f1b3"
   Hint: Modules
@@ -20,9 +19,19 @@ SharedFields:
     {BEBF4026-24A3-4EA6-986A-518B76DBD71A}
     {385F31BE-FF0C-4D84-A627-9ECD21295AFD}
     {F0EA389E-F78D-440B-9429-F04FE735344A}
+- ID: "2b2fe9fd-78a6-40eb-b9f9-28409d8d3700"
+  Hint: SitemapMediaItems
+  Value: "{0299D511-E5AD-43CD-9C89-C04EF74C89A3}"
+- ID: "2f325664-bba1-4eac-8d8f-c365d2f40245"
+  Hint: RoleDomain
+  Value: sugcon
 - ID: "33d9005e-1f71-415f-b107-53b965c3b037"
   Hint: SiteMediaLibrary
-  Value: "{31F19E86-C38D-41C0-B993-3CBA95A0F2EB}"
+  Value: "{02BFDDCE-A693-4A81-A9C5-8AEB917C0FD2}"
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    ar|sugcon\Site Admin|pe|+item:create|+item:read|+item:rename|+item:delete|+item:write|+item:admin|pd|+item:create|+item:read|+item:rename|+item:delete|+item:write|+item:admin|
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{A0EECF65-09AD-4A10-AE46-7DF70106CFE6}"
@@ -44,11 +53,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "49a8dbd2-2dbd-4bed-8df6-2cf7199eb653"
+      Value: "84e05af1-59e9-4d42-a7cf-2c8e6c850102"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\1MFZdpR12gJMNJ4h7RpQuvn0j2Bk2cFE
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220519T091045Z
+      Value: 20230414T122424Z

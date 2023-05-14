@@ -38,7 +38,7 @@
         padding: 2rem;
         background-color: rgba(255, 255, 255, 0.85);
     }
-}
+  }
 
 .heroimage {
     top: 0;
@@ -48,8 +48,8 @@
     object-fit: cover;
 
     @media (min-width: 1024px) {
-        width: 3000px;
-        height: 650px;
+    width: 3000px;
+    height: 650px;
         position: relative;
     }
 }

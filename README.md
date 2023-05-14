@@ -36,16 +36,25 @@ You first need to initialize your .env file which will configure how the differe
 
 Examples of how to use them can be seen in the different setup guides for both Local Mode and Edge Mode below.
 
-| Parameter          | Required for MVP Site | Required for SUGCON Sites | Purpose                                                         |
-|--------------------|-----------------------|---------------------------|-----------------------------------------------------------------|
-| LicenseXmlPath     | **Yes**               | **Yes**                   | Used to specify the path to the license file                    |
-| AdminPassword      | **Yes**               | **Yes**                   | Used to specify the password for the Sitecore admin user        |
-| InitEnv            | No                    | No                        | Used to force a full initialisation of the repository           |
-| Edge_Token         | No                    | No                        | Used to authenticate with XM Cloud, when running in 'Edge Mode' |
-| OKTA_Domain        | **Yes**               | No                        | Okta domain used by the MVP Rendering host                      |
-| OKTA_Client_Id     | **Yes**               | No                        | Okta Client Id used by the MVP Rendering host                   |
-| OKTA_Client_Secret | **Yes**               | No                        | Okta Client Secret used by the MVP Rendering host               |
-| MVP_Selections_API | **Yes**               | No                        | URL for the MVP Selections API                                  |
+| Parameter                  | Required for MVP Site | Required for SUGCON Sites | Purpose                                                         |
+|----------------------------|-----------------------|---------------------------|-----------------------------------------------------------------|
+| LicenseXmlPath             | **Yes**               | **Yes**                   | Used to specify the path to the license file                    |
+| AdminPassword              | **Yes**               | **Yes**                   | Used to specify the password for the Sitecore admin user        |
+| InitEnv                    | No                    | No                        | Used to force a full initialisation of the repository           |
+| Edge_Token                 | No                    | No                        | Used to authenticate with XM Cloud, when running in 'Edge Mode' |
+| OKTA_Domain                | **Yes**               | No                        | Okta domain used by the MVP Rendering host                      |
+| OKTA_Client_Id             | **Yes**               | No                        | Okta Client Id used by the MVP Rendering host                   |
+| OKTA_Client_Secret         | **Yes**               | No                        | Okta Client Secret used by the MVP Rendering host               |
+| MVP_Selections_API         | **Yes**               | No                        | URL for the MVP Selections API                                  |
+| SUCGON_ANZ_CDP_CLIENT_KEY  | No                    | No                        | CDP Client key for SUGCON ANZ Site                              |
+| SUCGON_ANZ_CDP_TARGET_URL  | No                    | No                        | CDP Target URL for SUGCON ANZ Site                              |
+| SUCGON_ANZ_CDP_POINTOFSALE | No                    | No                        | CDP POS for SUGCON ANZ Site                                     |
+| SUCGON_EU_CDP_CLIENT_KEY   | No                    | No                        | CDP Client key for SUGCON EU Site                               |
+| SUCGON_EU_CDP_TARGET_URL   | No                    | No                        | CDP Target URL for SUGCON EU Site                               |
+| SUCGON_EU_CDP_POINTOFSALE  | No                    | No                        | CDP POS for SUGCON EU Site                                      |
+
+## Embeded Personalisation
+Embedded Personalisation is disabled locally by default. If you wish to enable it you will need to populate the different `xx_CDP_CLIENT_KEY`, `xx_CDP_TARGET_URL` & `xx_CDP_POINTOFSALE` parameters with valid values and change the `NODE_ENV` parameter from `development` to another value.
 
 # 🏃 Running the Repository
 After you have initialized the repository, you can run it using the `up.ps1` script. There are 3 different ways you can run this repository

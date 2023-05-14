@@ -14,23 +14,32 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220607T175752Z
+    - ID: "5d11b89b-88a9-4fbd-9da9-9c1c3882b46a"
+      Hint: Link
+      Value: |
+        <link linktype="external" text="Save your spot now!" url="https://sugcon-europe-2023.eventbrite.co.uk/" anchor="" target="_blank" />
+    - ID: "76951572-38f3-442a-aab8-41c02e6a2bdc"
+      Hint: Description
+      Value: |
+        <p>The Sitecore User Group Conference (SUGCON) 2023 will take place in Malaga, Spain on March 23-24.
+        This is the 8th User Group Conference in Europe and we're looking forward to engaging with the vibrant local Sitecore community of marketers and developers from both Partners and Customers.</p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b0ed3b3a-2acb-4eee-bb7e-0e372f7efe44"
+      Value: "e460299c-5548-4120-b2a9-26cc4b2a2b66"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\a.vershalovich@brimit.com
     - ID: "c1413fde-0dd2-4fc9-842d-5ccc7c753564"
       Hint: BackgroundImage
       Value: |
-        <image mediaid="{0734E2DB-D921-4E39-B26A-317B50136024}" />
+        <image mediaid="c54777fb-784f-492a-a57d-7bfc2afec8c1" />
     - ID: "d08fa491-162f-44ad-85c0-af9269b9195c"
       Hint: Text
-      Value: "Thank you!"
+      Value: "23-24 March 2023, Malaga, Spain"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220613T185021Z
+      Value: 20230203T125549Z
     - ID: "db8d95de-6511-487f-acc0-31f25fa76e52"
       Hint: Label
       Value: SUGCON EUROPE

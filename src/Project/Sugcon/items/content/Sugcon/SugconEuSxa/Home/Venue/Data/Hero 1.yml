@@ -1,0 +1,51 @@
+﻿---
+ID: "37963aaf-40eb-4bec-b649-bef39d3030bb"
+Parent: "1be2d334-53c3-44ef-953d-7dbb1dbeb540"
+Template: "a9668aad-7e76-49a5-978a-bff6bf8a8a6f"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Home/Venue/Data/Hero 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221202T094223Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebw@sitecore.net
+    - ID: "5d11b89b-88a9-4fbd-9da9-9c1c3882b46a"
+      Hint: Link
+      Value: |
+        <link linktype="external" text="Book your room now!" url="https://bit.ly/SUGCONEurope2023Hotel" anchor="" target="_blank" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebw@sitecore.net
+    - ID: "76951572-38f3-442a-aab8-41c02e6a2bdc"
+      Hint: Description
+      Value: <p>Magnificent Convention Center with 14 meeting rooms capacity up to 450 people. 10 minutes from Malaga International Airport and 15 minutes from Malaga Ave station</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b3b83d66-64d9-41dc-b941-3261dba96e5b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "c1413fde-0dd2-4fc9-842d-5ccc7c753564"
+      Hint: BackgroundImage
+      Value: |
+        <image mediaid="df113b76-f002-4e11-bd50-96af27c5758b" />
+    - ID: "d08fa491-162f-44ad-85c0-af9269b9195c"
+      Hint: Text
+      Value: Meliá Costa del Sol Convention Center
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230303T062457Z
+    - ID: "db8d95de-6511-487f-acc0-31f25fa76e52"
+      Hint: Label
+      Value: Venue

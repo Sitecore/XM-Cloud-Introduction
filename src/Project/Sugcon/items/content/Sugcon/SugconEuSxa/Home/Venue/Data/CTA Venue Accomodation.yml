@@ -1,0 +1,51 @@
+﻿---
+ID: "ab56c4b5-d9d8-4592-b653-01a29210bd26"
+Parent: "1be2d334-53c3-44ef-953d-7dbb1dbeb540"
+Template: "2a05bfc6-1eea-4013-9daf-9d079e3fd255"
+Path: /sitecore/content/Sugcon/SugconEuSxa/Home/Venue/Data/CTA Venue Accomodation
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0168f4ed-ee6c-4962-9153-94f1fb972c55"
+      Hint: Image
+      Value: |
+        <image mediaid="{D515D584-09F5-45E5-9917-DECAD21366DC}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230106T093756Z
+    - ID: "2bd32ceb-9f35-41d4-a255-81dbf1f80e6b"
+      Hint: Headline
+      Value: Venue Accommodation
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebw@sitecore.net
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebw@sitecore.net
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9119006a-d9e6-444f-aceb-252326b5ed1d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "d4c32718-a2cb-48c5-9769-14d20450d6f7"
+      Hint: Link
+      Value: |
+        <link linktype="external" text="Book your room now" url="https://bit.ly/SUGCONEurope2023Hotel" anchor="" target="_blank" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230303T062452Z
+    - ID: "fdc6957b-c9fa-46ad-b03c-254c12c4c47a"
+      Hint: Text
+      Value: |
+        <h2>Travelers’ Choice</h2>
+        <p> Hotel Melia Costa del Sol is ranked #9 of 75 hotels in Torremolinos and is recognized with <strong>Traveller’s choice</strong> award for the consistently great reviews and top 10% ranking on Trip advisor.</p>
+        <img alt="Trip Advisor Rating 4.5 Excellent" src="-/media/BEE3224EA896477AB3C708D705BB4CF5.ashx?h=74&amp;w=270" style="height: 74px; width: 270px;" />

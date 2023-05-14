@@ -4,17 +4,26 @@ import {
   GetStaticComponentProps,
   useComponentProps,
   Text,
+  Field,
+  ComponentRendering,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import { fetchSessionizeData } from 'lib/sessionize/fetchSessionizeData';
+import { fetchSessionizeData } from 'lib/sessionize/fetch-sessonize-data';
 import { ComponentData } from 'lib/sessionize/sessionizeData';
+
+interface Fields {
+  SessionizeURL: Field<string>;
+}
+
+type SessionRendering = ComponentRendering & {
+  fields: Fields;
+};
 
 const Session = (): JSX.Element => (
   <div>
     <p>Speaker Component</p>
   </div>
 );
-
-export const getStaticProps: GetStaticComponentProps = async (rendering) => {
+export const getStaticProps: GetStaticComponentProps = async (rendering: SessionRendering) => {
   const sessionizeSessionsUrl = rendering?.fields?.SessionizeURL.value;
   return await fetchSessionizeData(sessionizeSessionsUrl);
 };
