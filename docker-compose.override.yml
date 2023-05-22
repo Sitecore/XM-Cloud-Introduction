@@ -76,6 +76,39 @@ services:
       interval: 60s
       timeout: 30s
 
+  sugconindia:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-sugcon-india:${VERSION:-latest}
+    build:
+      context: ./docker/build/sugcon
+      target: ${BUILD_CONFIGURATION}
+      args:
+        PARENT_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}
+    volumes:
+      - .\src\Project\Sugcon\SugconIndiaSxa:C:\app
+    environment:
+      SITECORE_API_HOST: "http://cm"
+      NEXTJS_DIST_DIR: ".next-container"
+      PUBLIC_URL: "https://${SUGCON_INDIA_HOST}"
+      JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
+      SITECORE_API_KEY: "${SITECORE_API_KEY}"
+      FETCH_WITH: "GraphQL"
+      NEXT_PUBLIC_CDP_CLIENT_KEY: ${SUCGON_INDIA_CDP_CLIENT_KEY}
+      NEXT_PUBLIC_CDP_TARGET_URL: ${SUCGON_INDIA_CDP_TARGET_URL}
+      NEXT_PUBLIC_CDP_POINTOFSALE: ${SUCGON_INDIA_CDP_POINTOFSALE}
+      NODE_ENV: ${NODE_ENV}
+    depends_on:
+      - cm
+      - nodejs
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sugconindia-secure.entrypoints=websecure"
+      - "traefik.http.routers.sugconindia-secure.rule=Host(`${SUGCON_INDIA_HOST}`)"
+      - "traefik.http.routers.sugconindia-secure.tls=true"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/healthz"]
+      interval: 60s
+      timeout: 30s
+
   # The solution build image is added here so it can be referenced as a build dependency
   # for the images which use its output. Setting "deploy.replicas: 0" means docker-compose will not
   # include it in the running environment. See Dockerfile for more details.

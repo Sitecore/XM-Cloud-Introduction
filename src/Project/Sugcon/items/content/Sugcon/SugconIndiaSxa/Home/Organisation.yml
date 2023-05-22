@@ -1,0 +1,141 @@
+﻿---
+ID: "ac2ea7c1-506e-4b60-8cd6-b0f7a6bd68e5"
+Parent: "9259a6b1-5202-4850-9e4b-b9d56c126d15"
+Template: "36cad6cf-d418-43ca-bc57-656e44069116"
+Path: /sitecore/content/Sugcon/SugconIndiaSxa/Home/Organisation
+SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{0B4D371E-3D34-46EF-B88C-1535B1C07C5C}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{15526986-11D8-4E37-B907-5B839542891D}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{C4D09157-C742-44CA-AD84-66F3717EDF98}"
+              p:before="*"
+              s:ds="local:/Data/OrganiserList 1"
+              s:id="{CE4B14F7-2845-4CA4-AB42-0F0ACC60499B}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B2D9E3259-9D2D-45DC-B6E6-2B43F79F8CA2%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=2"
+              s:ph="/headless-main/container-1" />
+            <r
+              uid="{00C49F26-2637-4706-8BE0-1CF2B08F9A4F}"
+              p:after="*[1=2]"
+              s:id="{01BB6244-4E0F-4A9B-9352-1F2C64982655}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220523T080800Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Organisation
+    - ID: "79f9d33c-f64e-49e7-b80a-9b26e43a409e"
+      Hint: MetaKeywords
+      Value: Organisation
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c1d4e7a0-7cd9-45e0-983d-b9fe740c7a1d"
+    - ID: "afb023d3-4d65-4023-bd85-5f7383e32a08"
+      Hint: MetaDescription
+      Value: Organisation
+    - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
+      Hint: Title
+      Value: Organisation
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\tarnok.tamas@allwin.hu
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230120T140946Z
+  - Version: 2
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{C4D09157-C742-44CA-AD84-66F3717EDF98}"
+              p:before="*"
+              s:ds="local:/Data/OrganiserList 1"
+              s:id="{CE4B14F7-2845-4CA4-AB42-0F0ACC60499B}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7B2D9E3259-9D2D-45DC-B6E6-2B43F79F8CA2%7D&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=2"
+              s:ph="/headless-main/container-1" />
+            <r
+              uid="{00C49F26-2637-4706-8BE0-1CF2B08F9A4F}"
+              p:after="*[1=2]"
+              s:id="{01BB6244-4E0F-4A9B-9352-1F2C64982655}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;DynamicPlaceholderId=1"
+              s:ph="headless-main" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230201T214819Z
+    - ID: "26c47756-a47c-4234-89af-d4660ece7ca4"
+      Hint: OgDescription
+      Value: Meet the dedicated and experienced team behind SUGCON India 2023. Learn about their passion for Sitecore and commitment to delivering a successful conference.
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Organisation
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\lfSOQMR9mw
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\lfSOQMR9mw
+    - ID: "68d3b246-7b9a-41a7-a2c1-4940ecf0d394"
+      Hint: OgTitle
+      Value: SUGCON India 2023 Organization Team | The Indian Sitecore User Group Conference
+    - ID: "74f7afe1-a0e2-4a1d-8ba9-e52666806c9f"
+      Hint: OgImage
+      Value: |
+        <image mediaid="{3D7AA8FA-CEC8-4949-8AE0-D7C8EF109236}" />
+    - ID: "79f9d33c-f64e-49e7-b80a-9b26e43a409e"
+      Hint: MetaKeywords
+      Value: SUGCON, India, Sitecore, User Group, Conference, Organization Team, Dedicated, Experienced, Passion, Commitment, Successful
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "59e62b2e-a6b6-4f5c-b571-496e478383f4"
+    - ID: "924cb302-5abd-4e49-941f-18626daed08d"
+      Hint: OgType
+      Value: website
+    - ID: "afb023d3-4d65-4023-bd85-5f7383e32a08"
+      Hint: MetaDescription
+      Value: Meet the dedicated and experienced team behind SUGCON India 2023. Learn about their passion for Sitecore and commitment to delivering a successful conference.
+    - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
+      Hint: Title
+      Value: Organisation
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\1ISa5gYrpM
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20230201T214819Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230522T010331Z

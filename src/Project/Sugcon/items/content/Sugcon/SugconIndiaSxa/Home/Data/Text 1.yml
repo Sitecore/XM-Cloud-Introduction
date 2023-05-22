@@ -1,0 +1,99 @@
+﻿---
+ID: "2a8bd0e7-b23a-4408-9cf1-63939fe9ec42"
+Parent: "0e3aa890-58cc-4685-802f-da658585d3ee"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: /sitecore/content/Sugcon/SugconIndiaSxa/Home/Data/Text 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220613T204019Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: "<h1>Organizing Committee and Sitecore would like to thank all SUGCON Europe 2022 attendees! </h1><p>We hope that you found the conference to be informative, helpful, inspirational, and fun.</p><p>We would like to thank all speakers for your valuable insights, tips and tricks, know-how, and overall outstanding content! We extremely appreciate уour efforts in sharing your experience with the community.</p><p>We want to express our gratitude to all sponsors. Your support made SUGCON Europe 2022 a success!</p><p>In order to make next year’s conference even more successful, we request that you fill out the post-event survey. We thank you in advance for your comments and suggestions and we will do our best to make SUGCON Europe 2023 even better.</p><p><strong>Sitecore Community is truly the best in the world! See you next year!</strong></p>"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "498b1bd8-1046-4fca-9871-c9b3a53ffdc3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\anastasia.plati@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20221201T194233Z
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20221202T091503Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebw@sitecore.net
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <p>The Sitecore User Group Conference (SUGCON) - Europe 2023, brings the user community together and provides the perfect platform to gain knowledge and get inspired by the potential of the Sitecore platforms and services. After many very successful events, we are expecting over 300 attendees to attend the event in Malaga, Spain.</p>
+        <p><span style="color: #000000;">Sessions will include community speakers and members of the Sitecore product and development teams. The goal of the conference is to share knowledge through the whole community, which includes beginner and advanced-level topics and presentations. The one-and-a-half-day agenda is full of education and sharing of great ideas from the community.</span></p>
+        <div><span style="color: #000000;"><br />
+        </span></div>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "55502167-779e-4773-a7ed-65a27d2eadfd"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\lfSOQMR9mw
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20221202T091503Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230206T152216Z
+  - Version: 3
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230206T152219Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\xmc-e2e-admin@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\lfSOQMR9mw
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <p>The Sitecore User Group Conference (SUGCON) - India 2023, brings the user community together and provides the perfect platform to gain knowledge and get inspired by the potential of the Sitecore platforms and services. After many very successful events, we are expecting over 300 attendees to attend the event in New Delhi.</p>
+        <p>Sessions will include community speakers and members of the Sitecore product and development teams. The goal of the conference is to share knowledge through the whole community, which includes beginner and advanced-level topics and presentations. The one-and-a-half-day agenda is full of education and sharing of great ideas from the community<br />
+        </p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "696a790f-e697-4643-af03-d55d1c94fdab"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\1ISa5gYrpM
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 20230206T152219Z
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230522T011911Z

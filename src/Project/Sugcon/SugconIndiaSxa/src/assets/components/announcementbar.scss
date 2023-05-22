@@ -1,0 +1,32 @@
+.announcementbar {
+    width: 100%;
+    display: grid;
+
+    .innercomponent {
+        a {
+            font-weight: 700;
+            font-size: 17px;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            color: white;
+
+            :after {
+                content: none;
+            }
+        }
+
+        p {
+            color: white;
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .cta-container {
+            -ms-flex-align: center;
+            align-items: center;
+            display: -ms-flexbox;
+            display: flex;
+        }
+    }
+}
