@@ -1,0 +1,39 @@
+name: CI-CD - SUGCON India
+on: 
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - .github/workflows/CI-CD_SUGCON_India.yml
+      - .github/workflows/build_NextJs.yml
+      - .github/workflows/deploy_vercel.yml
+      - 'src/Project/Sugcon/SugconIndiaSxa/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - .github/workflows/CI-CD_SUGCON_India.yml
+      - .github/workflows/build_NextJs.yml
+      - .github/workflows/deploy_vercel.yml
+      - 'src/Project/Sugcon/SugconIndiaSxa/**'
+
+jobs:
+
+  build-india-site:
+    if: github.ref != 'refs/heads/main'
+    uses: ./.github/workflows/build_NextJs.yml
+    with:
+      workingDirectory: ./src/Project/Sugcon/SugconIndiaSxa
+
+  deploy-staging-india-site:
+    uses: ./.github/workflows/deploy_vercel.yml
+    needs: build-india-site
+    if: always() && 
+        (github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push'))) &&
+        needs.build-staging-india-site.result != 'failure' &&
+        needs.build-staging-india-site.result != 'cancelled' && 
+        needs.build-production-india-site.result != 'failure' &&
+        needs.build-production-india-site.result != 'cancelled'
+    secrets:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_SUGCON_INDIA_PROJECT_ID }}
