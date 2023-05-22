@@ -5,6 +5,7 @@ This repository contains the codebase for a series of sites managed by the Techn
 - [Sitecore MVP Site](https://mvp.sitecore.com)
 - [SUGCON EU Site](https://europe.sugcon.events)
 - [SUGCON ANZ Site](https://anz.sugcon.events)
+- [SUGCON India Site](https://india.sugcon.events)
 - [SUGCON Events Site](https://www.sugcon.events)
 
 # ✅ Build Status
@@ -12,6 +13,7 @@ This repository contains the codebase for a series of sites managed by the Techn
 [![MVP Site Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_MVP.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_MVP.yml)
 [![SUGCON ANZ Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_ANZ.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_ANZ.yml)
 [![SUGCON EU Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_EU.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_EU.yml)
+[![SUGCON India Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_India.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_India.yml)
 [![SUGCON Events Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_Events.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_Events.yml)
 
 # ✋ Prerequisites
@@ -36,22 +38,25 @@ You first need to initialize your .env file which will configure how the differe
 
 Examples of how to use them can be seen in the different setup guides for both Local Mode and Edge Mode below.
 
-| Parameter                  | Required for MVP Site | Required for SUGCON Sites | Purpose                                                         |
-|----------------------------|-----------------------|---------------------------|-----------------------------------------------------------------|
-| LicenseXmlPath             | **Yes**               | **Yes**                   | Used to specify the path to the license file                    |
-| AdminPassword              | **Yes**               | **Yes**                   | Used to specify the password for the Sitecore admin user        |
-| InitEnv                    | No                    | No                        | Used to force a full initialisation of the repository           |
-| Edge_Token                 | No                    | No                        | Used to authenticate with XM Cloud, when running in 'Edge Mode' |
-| OKTA_Domain                | **Yes**               | No                        | Okta domain used by the MVP Rendering host                      |
-| OKTA_Client_Id             | **Yes**               | No                        | Okta Client Id used by the MVP Rendering host                   |
-| OKTA_Client_Secret         | **Yes**               | No                        | Okta Client Secret used by the MVP Rendering host               |
-| MVP_Selections_API         | **Yes**               | No                        | URL for the MVP Selections API                                  |
-| SUCGON_ANZ_CDP_CLIENT_KEY  | No                    | No                        | CDP Client key for SUGCON ANZ Site                              |
-| SUCGON_ANZ_CDP_TARGET_URL  | No                    | No                        | CDP Target URL for SUGCON ANZ Site                              |
-| SUCGON_ANZ_CDP_POINTOFSALE | No                    | No                        | CDP POS for SUGCON ANZ Site                                     |
-| SUCGON_EU_CDP_CLIENT_KEY   | No                    | No                        | CDP Client key for SUGCON EU Site                               |
-| SUCGON_EU_CDP_TARGET_URL   | No                    | No                        | CDP Target URL for SUGCON EU Site                               |
-| SUCGON_EU_CDP_POINTOFSALE  | No                    | No                        | CDP POS for SUGCON EU Site                                      |
+| Parameter                    | Required for MVP Site | Required for SUGCON Sites | Purpose                                                         |
+|------------------------------|-----------------------|---------------------------|-----------------------------------------------------------------|
+| LicenseXmlPath               | **Yes**               | **Yes**                   | Used to specify the path to the license file                    |
+| AdminPassword                | **Yes**               | **Yes**                   | Used to specify the password for the Sitecore admin user        |
+| InitEnv                      | No                    | No                        | Used to force a full initialisation of the repository           |
+| Edge_Token                   | No                    | No                        | Used to authenticate with XM Cloud, when running in 'Edge Mode' |
+| OKTA_Domain                  | **Yes**               | No                        | Okta domain used by the MVP Rendering host                      |
+| OKTA_Client_Id               | **Yes**               | No                        | Okta Client Id used by the MVP Rendering host                   |
+| OKTA_Client_Secret           | **Yes**               | No                        | Okta Client Secret used by the MVP Rendering host               |
+| MVP_Selections_API           | **Yes**               | No                        | URL for the MVP Selections API                                  |
+| SUCGON_ANZ_CDP_CLIENT_KEY    | No                    | No                        | CDP Client key for SUGCON ANZ Site                              |
+| SUCGON_ANZ_CDP_TARGET_URL    | No                    | No                        | CDP Target URL for SUGCON ANZ Site                              |
+| SUCGON_ANZ_CDP_POINTOFSALE   | No                    | No                        | CDP POS for SUGCON ANZ Site                                     |
+| SUCGON_EU_CDP_CLIENT_KEY     | No                    | No                        | CDP Client key for SUGCON EU Site                               |
+| SUCGON_EU_CDP_TARGET_URL     | No                    | No                        | CDP Target URL for SUGCON EU Site                               |
+| SUCGON_EU_CDP_POINTOFSALE    | No                    | No                        | CDP POS for SUGCON EU Site                                      |
+| SUCGON_INDIA_CDP_CLIENT_KEY  | No                    | No                        | CDP Client key for SUGCON India Site                            |
+| SUCGON_INDIA_CDP_TARGET_URL  | No                    | No                        | CDP Target URL for SUGCON India Site                            |
+| SUCGON_INDIA_CDP_POINTOFSALE | No                    | No                        | CDP POS for SUGCON India Site                                   |
 
 ## Embeded Personalisation
 Embedded Personalisation is disabled locally by default. If you wish to enable it you will need to populate the different `xx_CDP_CLIENT_KEY`, `xx_CDP_TARGET_URL` & `xx_CDP_POINTOFSALE` parameters with valid values and change the `NODE_ENV` parameter from `development` to another value.
