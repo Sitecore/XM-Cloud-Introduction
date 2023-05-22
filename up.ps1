@@ -23,6 +23,7 @@ $xmCloudHost = $envContent | Where-Object { $_ -imatch "^CM_HOST=.+" }
 $mvpHost = $envContent | Where-Object { $_ -imatch "^MVP_RENDERING_HOST=.+" }
 $sugconeuHost = $envContent | Where-Object { $_ -imatch "^SUGCON_EU_HOST=.+" }
 $sugconanzHost = $envContent | Where-Object { $_ -imatch "^SUGCON_ANZ_HOST=.+" }
+$sugconindiaHost = $envContent | Where-Object { $_ -imatch "^SUGCON_INDIA_HOST=.+" }
 $sitecoreDockerRegistry = $envContent | Where-Object { $_ -imatch "^SITECORE_DOCKER_REGISTRY=.+" }
 $sitecoreVersion = $envContent | Where-Object { $_ -imatch "^SITECORE_VERSION=.+" }
 
@@ -79,7 +80,7 @@ if ($UseEdge) {
     Write-Host "Opening site..." -ForegroundColor Green
     Start-Process https://$mvpHost
     Start-Process https://$sugconeuHost
-    Start-Process https://$sugconanzHost
+    Start-Process https://$sugconanzHost    
 }
 else {
     # Start the Sitecore instance
@@ -149,5 +150,6 @@ else {
         Start-Process https://$mvpHost
         Start-Process https://$sugconeuHost
         Start-Process https://$sugconanzHost
+        Start-Process https://$sugconindiaHost
     }
 }
