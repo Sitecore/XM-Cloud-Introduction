@@ -8,6 +8,10 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "0a82b3e3-f9ac-42e6-a7ac-4ffd422a0b4d"
+      Hint: LinkedInLink
+      Value: |
+        <link text="LinkedIn" linktype="external" url="https://www.linkedin.com/in/hardeepsinghbhamra/" anchor="" target="" />
     - ID: "1d574813-214f-4fc2-98ff-8ffd36a5aed1"
       Hint: TwitterLink
       Value: |
@@ -29,14 +33,14 @@ Languages:
         sitecore\1ISa5gYrpM
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f8784aa8-243e-4e2a-917c-6def42b79782"
+      Value: "42bd571b-2802-4e9c-9c46-bafff868284f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\1ISa5gYrpM
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230522T013609Z
+      Value: 20230524T224552Z
     - ID: "ed25e568-5800-4b53-b376-b2e58c217665"
       Hint: Name
       Value: Hardeep Bhamra
