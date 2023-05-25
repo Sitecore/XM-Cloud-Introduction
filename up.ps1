@@ -31,6 +31,7 @@ $xmCloudHost = $xmCloudHost.Split("=")[1]
 $mvpHost = $mvpHost.Split("=")[1]
 $sugconeuHost = $sugconeuHost.Split("=")[1]
 $sugconanzHost = $sugconanzHost.Split("=")[1]
+$sugconindiaHost = $sugconindiaHost.Split("=")[1]
 $sitecoreDockerRegistry = $sitecoreDockerRegistry.Split("=")[1]
 $sitecoreVersion = $sitecoreVersion.Split("=")[1]
 

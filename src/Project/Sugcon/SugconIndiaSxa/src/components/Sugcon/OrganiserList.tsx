@@ -44,14 +44,20 @@ export const Default = (props: OrganiserListProps): JSX.Element => {
                 <div key={Organizer.fields.Name.value} className="col-12 col-md-3 organizer">
                   <div className="card">
                     <p>
-                      <Image field={Organizer?.fields?.Image} />
+                      <Image field={Organizer?.fields?.Image} srcSet={[{ mw: 259 }, { mw: 259 }]} />
                     </p>
                     <div className="cardBody">
                       <h3>
                         <Text field={Organizer?.fields?.Name} />
                       </h3>
                       <p>
-                        <Link field={Organizer?.fields?.LinkedInLink}></Link> /
+                        <Link field={Organizer?.fields?.LinkedInLink}></Link>
+                        {Organizer?.fields?.LinkedInLink?.value?.href &&
+                        Organizer?.fields?.TwitterLink?.value?.href ? (
+                          <span> / </span>
+                        ) : (
+                          <></>
+                        )}
                         <Link field={Organizer?.fields?.TwitterLink}></Link>
                       </p>
                     </div>
