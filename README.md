@@ -149,4 +149,13 @@ Running with the `-EdgeNoDocker` switch, will setup configuration files for each
 After completing the init setup above you will be able to run the MVP Site either directly from within Visual Studio, or by using the DotNet CLI.
 
 - To run from within Visual Studio, open the `src\XmCloudIntroduction.sln`, ensure that the `Mvp.Project.MvpSite.Rendering` project is set as your StartUp Project, then hit F5.
+  - The site should then be started loaded in the browser automatically
 - To run from the DotNet CLI, open a new terminal window and navigate to the `src\Project\MvpSite\rendering` folder, then run `dotnet restore && dotnet run`
+  - You can then access the site at `https://localhost:5001` or `http://localhost:5000`
+
+### Running the SUGCON Sites
+
+After completing the init setup above you will be able to run the SUGCON Sites directly using the NPM CLI, they are all built using SXA Headless so the process is the same for each of them.
+
+- Open a new terminal window and navigate to the `src\Project\Sugcon\<<SUGCON_SITE>>` folder, then run `npm i && npm run start:connected`
+  - You can then access the site at `http://localhost:3000`

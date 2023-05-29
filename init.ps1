@@ -227,15 +227,28 @@ if ($EdgeNoDocker) {
     $appSettings.MvpSelectionsApiClient.BaseAddress = $env:MVP_SELECTIONS_API
     $appSettings | ConvertTo-Json | Out-File "src/Project/MvpSite/rendering/appsettings.Development.json"
     Write-Host "Finsihed Configuring MVP Head"
+
+    Write-Host "Creating .env for SUGCON Sites"
+    $sugconEnvContents = 
+@"
+SITECORE_API_HOST=${env:EXPERIENCE_EDGE_URL}
+SITECORE_API_KEY=${env:EXPERIENCE_EDGE_TOKEN}
+GRAPH_QL_ENDPOINT=${env:GRAPH_QL_ENDPOINT}
+FETCH_WITH="GraphQL"
+"@
+
+    Write-Host "Writing .env files for SUGCON Heads"
+    $sugconEnvContents | Out-File "src/Project/Sugcon/SugconAnzSxa/.env"
+    $sugconEnvContents | Out-File "src/Project/Sugcon/SugconEuSxa/.env"
+    $sugconEnvContents | Out-File "src/Project/Sugcon/SugconIndiaSxa/.env"
 }
 else {
-    Write-Host "Removing files used to configure Edge Mode without Docker" -ForegroundColor Green
-    
-    Write-Host "Configuring MVP Head"
+    Write-Host "Cleaning any files used to run Edge Mode without Docker" -ForegroundColor Green
     git restore 'src/Project/MvpSite/rendering/appsettings.Development.json'
-    Write-Host "Finsihed Configuring MVP Head"
+    if(Test-Path './src/Project/Sugcon/SugconAnzSxa/.env') { Remove-Item -Path './src/Project/Sugcon/SugconAnzSxa/.env' -Force }
+    if(Test-Path './src/Project/Sugcon/SugconEuSxa/.env') { Remove-Item -Path './src/Project/Sugcon/SugconEuSxa/.env' -Force }
+    if(Test-Path './src/Project/Sugcon/SugconIndiaSxa/.env') { Remove-Item -Path './src/Project/Sugcon/SugconIndiaSxa/.env' -Force }
 }
-
 
 ##########################
 # Show Certificate Details
