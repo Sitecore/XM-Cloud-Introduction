@@ -139,7 +139,7 @@ Once you have initialized the repository with your Edge Token, use the `up.ps1` 
 First initialize your repo using the `.init/ps1` script, you will need to pass in the `-Edge_Token` & `-EdgeNoDocker` parameters to ensure that the repository is correct initialised.
 
 ```ps1
-.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Edge_Token "<<YOUR_EDGE_TOKEN>>" - EdgeNoDocker
+.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Edge_Token "<<YOUR_EDGE_TOKEN>>" -EdgeNoDocker
 ```
 
 Running with the `-EdgeNoDocker` switch, will setup configuration files for each of the heads included in this repository. You can then manually run each of them using either NPM or DotNet.
@@ -149,4 +149,4 @@ Running with the `-EdgeNoDocker` switch, will setup configuration files for each
 After completing the init setup above you will be able to run the MVP Site either directly from within Visual Studio, or by using the DotNet CLI.
 
 - To run from within Visual Studio, open the `src\XmCloudIntroduction.sln`, ensure that the `Mvp.Project.MvpSite.Rendering` project is set as your StartUp Project, then hit F5.
-- To run from the DotNet CLI, open a new terminal window and navigate to the `src\Project\MvpSite\rendering` folder, then run `dotnet run`
+- To run from the DotNet CLI, open a new terminal window and navigate to the `src\Project\MvpSite\rendering` folder, then run `dotnet restore && dotnet run`
