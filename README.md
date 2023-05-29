@@ -135,7 +135,7 @@ Once you have initialized the repository with your Edge Token, use the `up.ps1` 
 
 ## 💻+🌏 Running in Edge Development Mode without Docker
 
-### Initialize your repository for Edge Development Mode with Docker
+### Initialize your repository for Edge Development Mode without Docker
 First initialize your repo using the `.init/ps1` script, you will need to pass in the `-Edge_Token` & `-EdgeNoDocker` parameters to ensure that the repository is correct initialised.
 
 ```ps1
