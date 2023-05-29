@@ -57,6 +57,8 @@ Examples of how to use them can be seen in the different setup guides for both L
 | SUCGON_INDIA_CDP_CLIENT_KEY  | No                    | No                        | CDP Client key for SUGCON India Site                            |
 | SUCGON_INDIA_CDP_TARGET_URL  | No                    | No                        | CDP Target URL for SUGCON India Site                            |
 | SUCGON_INDIA_CDP_POINTOFSALE | No                    | No                        | CDP POS for SUGCON India Site                                   |
+| EdgeNoDocker                 | No                    | No                        | Used to initialise the repo for Edge Developer without Docker   |
+
 
 ## Embeded Personalisation
 Embedded Personalisation is disabled locally by default. If you wish to enable it you will need to populate the different `xx_CDP_CLIENT_KEY`, `xx_CDP_TARGET_URL` & `xx_CDP_POINTOFSALE` parameters with valid values and change the `NODE_ENV` parameter from `development` to another value.
@@ -98,7 +100,7 @@ Next, use the `up.ps1` script to bring up all of the containers required for Loc
 ## 🐋+🌏 Running in Edge Development Mode with Docker
 Running in Edge Mode with Docker will run only run the Head applications and Traefik. To be able to run the sites in this repository locally against Edge, you will need to have access to an active XM Cloud Subscription with enough entitlements to be able to create a new Project & Environment to run against.
 
-## Create a new environment and deploy the codebase
+### Create a new environment and deploy the codebase
 You can follow these steps to create a new XM Cloud Project & Environment, then generate an Edge Token used to authenticate your Head applications with your Edge Tenant.
 - Authenticate with the XM Cloud Deploy Application
   - `dotnet sitecore cloud login`
@@ -121,10 +123,10 @@ If you want more information about the Cloud plugin for the CLI then you access 
 First initialize your repo using the `.init/ps1` script, you will need to pass in the `-Edge_Token` parameter set to the value you generated in the previous step.
 
 ```ps1
-.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" --Edge_Token "<<YOUR_EDGE_TOKEN>>"
+.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Edge_Token "<<YOUR_EDGE_TOKEN>>"
 ```
 
-## Bring up all the application elements for Edge Mode with Docker
+### Bring up all the application elements for Edge Mode with Docker
 Once you have initialized the repository with your Edge Token, use the `up.ps1` script, ensuring to pass the `-UseEdge` parameter to bring up all of the containers required for Edge Mode.
 
 ```ps1
@@ -132,4 +134,19 @@ Once you have initialized the repository with your Edge Token, use the `up.ps1` 
 ```
 
 ## 💻+🌏 Running in Edge Development Mode without Docker
-Coming soon...
+
+### Initialize your repository for Edge Development Mode with Docker
+First initialize your repo using the `.init/ps1` script, you will need to pass in the `-Edge_Token` & `-EdgeNoDocker` parameters to ensure that the repository is correct initialised.
+
+```ps1
+.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Edge_Token "<<YOUR_EDGE_TOKEN>>" - EdgeNoDocker
+```
+
+Running with the `-EdgeNoDocker` switch, will setup configuration files for each of the heads included in this repository. You can then manually run each of them using either NPM or DotNet.
+
+### Running the MVP Site
+
+After completing the init setup above you will be able to run the MVP Site either directly from within Visual Studio, or by using the DotNet CLI.
+
+- To run from within Visual Studio, open the `src\XmCloudIntroduction.sln`, ensure that the `Mvp.Project.MvpSite.Rendering` project is set as your StartUp Project, then hit F5.
+- To run from the DotNet CLI, open a new terminal window and navigate to the `src\Project\MvpSite\rendering` folder, then run `dotnet run`

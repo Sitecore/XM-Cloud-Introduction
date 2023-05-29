@@ -34,7 +34,9 @@ Param (
     [Parameter(HelpMessage = "SUGCON INDIA CPD Target URL.")]
     [string]$SUCGON_INDIA_CDP_TARGET_URL,
     [Parameter(HelpMessage = "SUGCON INDIA CPD Point of Sale.")]
-    [string]$SUCGON_INDIA_CDP_POINTOFSALE
+    [string]$SUCGON_INDIA_CDP_POINTOFSALE,
+    [Parameter(HelpMessage = "Switch to setup the heads to run against edge without docker.")]
+    [switch]$EdgeNoDocker
 )
 
 $ErrorActionPreference = "Stop";
@@ -96,34 +98,34 @@ $SUGCON_INDIA_HOST = "sugconindia.$Host_Suffix"
 ##################################
 # Configure TLS/HTTPS certificates
 ##################################
-Push-Location docker\traefik\certs
-try {
-    $mkcert = ".\mkcert.exe"
-    if ($null -ne (Get-Command mkcert.exe -ErrorAction SilentlyContinue)) {
-        # mkcert installed in PATH
-        $mkcert = "mkcert"
-    } elseif (-not (Test-Path $mkcert)) {
-        Write-Host "Downloading and installing mkcert certificate tool..." -ForegroundColor Green
-        Invoke-WebRequest "https://github.com/FiloSottile/mkcert/releases/download/v1.4.1/mkcert-v1.4.1-windows-amd64.exe" -UseBasicParsing -OutFile mkcert.exe
-        if ((Get-FileHash mkcert.exe).Hash -ne "1BE92F598145F61CA67DD9F5C687DFEC17953548D013715FF54067B34D7C3246") {
-            Remove-Item mkcert.exe -Force
-            throw "Invalid mkcert.exe file"
-        }
-    }
-    Write-Host "Generating Traefik TLS certificate." -ForegroundColor Green
-    & $mkcert -install
-    & $mkcert "*.$Host_Suffix"
-    & $mkcert $Host_Suffix
+# Push-Location docker\traefik\certs
+# try {
+#     $mkcert = ".\mkcert.exe"
+#     if ($null -ne (Get-Command mkcert.exe -ErrorAction SilentlyContinue)) {
+#         # mkcert installed in PATH
+#         $mkcert = "mkcert"
+#     } elseif (-not (Test-Path $mkcert)) {
+#         Write-Host "Downloading and installing mkcert certificate tool..." -ForegroundColor Green
+#         Invoke-WebRequest "https://github.com/FiloSottile/mkcert/releases/download/v1.4.1/mkcert-v1.4.1-windows-amd64.exe" -UseBasicParsing -OutFile mkcert.exe
+#         if ((Get-FileHash mkcert.exe).Hash -ne "1BE92F598145F61CA67DD9F5C687DFEC17953548D013715FF54067B34D7C3246") {
+#             Remove-Item mkcert.exe -Force
+#             throw "Invalid mkcert.exe file"
+#         }
+#     }
+#     Write-Host "Generating Traefik TLS certificate." -ForegroundColor Green
+#     & $mkcert -install
+#     & $mkcert "*.$Host_Suffix"
+#     & $mkcert $Host_Suffix
 
-    # stash CAROOT path for messaging at the end of the script
-    $caRoot = "$(& $mkcert -CAROOT)\rootCA.pem"
-}
-catch {
-    Write-Error "An error occurred while attempting to generate TLS certificate: $_"
-}
-finally {
-    Pop-Location
-}
+#     # stash CAROOT path for messaging at the end of the script
+#     $caRoot = "$(& $mkcert -CAROOT)\rootCA.pem"
+# }
+# catch {
+#     Write-Error "An error occurred while attempting to generate TLS certificate: $_"
+# }
+# finally {
+#     Pop-Location
+# }
 
 ################################
 # Add Windows hosts file entries
@@ -189,6 +191,52 @@ if ($InitEnv) {
 }
 Write-Host "Finished populating .env file." -ForegroundColor Green
 
+##################################
+# Configure/Reset EdgeNoDockerMode
+##################################
+if ($EdgeNoDocker) {
+
+    # Ensure Edge token is passed in when attempting to setup Edge Mode without Docker
+    if($Edge_Token -eq "")
+    {
+        Write-Error "Edge Token is required when running in Edge Mode without Docker"
+        exit -1
+    }
+
+    Write-Host "Configuring heads to run in Edge Mode without Docker" -ForegroundColor Green
+
+    # Read .env into PS runtime for each access
+    get-content .env | ForEach-Object {
+        if(-Not $_.StartsWith("#") -and -Not $_ -eq "") { 
+            $splitChar = $_.IndexOf('=')
+            $name = $_.Substring(0, $splitChar)
+            $value = $_.Substring($splitChar + 1)
+            set-content env:\$name $value
+        }
+    } 
+    
+    Write-Host "Configuring MVP Head"
+    $appSettings = Get-Content 'src/Project/MvpSite/rendering/appsettings.Development.json' | ConvertFrom-Json
+    $appSettings.Sitecore.InstanceUri = $env:EXPERIENCE_EDGE_URL
+    $appSettings.Sitecore.LayoutServicePath = "/api/graphql/v1"
+    $appSettings.Sitecore.ExperienceEdgeToken = $env:EXPERIENCE_EDGE_TOKEN
+    $appSettings.Okta.OktaDomain = $env:OKTA_DOMAIN
+    $appSettings.Okta.ClientId = $env:OKTA_CLIENT_ID
+    $appSettings.Okta.ClientSecret = $env:OKTA_CLIENT_SECRET
+    $appSettings.Okta.AuthorizationServerId = $env:OKTA_AUTH_SERVER_ID
+    $appSettings.MvpSelectionsApiClient.BaseAddress = $env:MVP_SELECTIONS_API
+    $appSettings | ConvertTo-Json | Out-File "src/Project/MvpSite/rendering/appsettings.Development.json"
+    Write-Host "Finsihed Configuring MVP Head"
+}
+else {
+    Write-Host "Removing files used to configure Edge Mode without Docker" -ForegroundColor Green
+    
+    Write-Host "Configuring MVP Head"
+    git restore 'src/Project/MvpSite/rendering/appsettings.Development.json'
+    Write-Host "Finsihed Configuring MVP Head"
+}
+
+
 ##########################
 # Show Certificate Details
 ##########################
@@ -210,3 +258,4 @@ catch {
 finally {
     Pop-Location
 }
+
