@@ -40,6 +40,17 @@ Param (
 $ErrorActionPreference = "Stop";
 
 ###############
+# Dotnet Exists
+###############
+Write-Host "Checking Dotnet SDK installation." -ForegroundColor Green
+$DotNetExists=Test-Path($Env:Programfiles + "\dotnet\sdk")
+
+if (-not ($DotNetExists))
+{
+	Write-Error "DotNet SDK not present. Install from https://aka.ms/dotnet-download" 
+}
+
+###############
 # License Check
 ###############
 Write-Host "Checking for existence of License." -ForegroundColor Green
