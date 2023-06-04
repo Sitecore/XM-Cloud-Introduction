@@ -17,7 +17,7 @@ This repository contains the codebase for a series of sites managed by the Techn
 [![SUGCON Events Deploy Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_Events.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_Events.yml)
 
 # ✋ Prerequisites
-- [DotNet 6.0](https://dotnet.microsoft.com/en-us/download)
+- [DotNet 6.0 SDK](https://dotnet.microsoft.com/en-us/download)
 - [NodeJS 16 LTS](https://nodejs.org/en/download/) (or greater)
 - [Docker](https://www.docker.com/)
 
