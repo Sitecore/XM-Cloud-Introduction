@@ -81,7 +81,8 @@ if ($UseEdge) {
     Write-Host "Opening site..." -ForegroundColor Green
     Start-Process https://$mvpHost
     Start-Process https://$sugconeuHost
-    Start-Process https://$sugconanzHost    
+    Start-Process https://$sugconanzHost
+    Start-Process https://$sugconindiaHost    
 }
 else {
     # Start the Sitecore instance
