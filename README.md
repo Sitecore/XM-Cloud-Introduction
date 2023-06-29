@@ -42,7 +42,7 @@ Examples of how to use them can be seen in the different setup guides for both L
 |------------------------------|-----------------------|---------------------------|-----------------------------------------------------------------|
 | LicenseXmlPath               | **Yes**               | **Yes**                   | Used to specify the path to the license file                    |
 | AdminPassword                | **Yes**               | **Yes**                   | Used to specify the password for the Sitecore admin user        |
-| InitEnv                      | No                    | No                        | Used to force a full initialisation of the repository           |
+| InitEnv                      | No                    | No                        | Used to force a full initialization of the repository           |
 | Edge_Token                   | No                    | No                        | Used to authenticate with XM Cloud, when running in 'Edge Mode' |
 | OKTA_Domain                  | **Yes**               | No                        | Okta domain used by the MVP Rendering host                      |
 | OKTA_Client_Id               | **Yes**               | No                        | Okta Client Id used by the MVP Rendering host                   |
@@ -57,11 +57,11 @@ Examples of how to use them can be seen in the different setup guides for both L
 | SUCGON_INDIA_CDP_CLIENT_KEY  | No                    | No                        | CDP Client key for SUGCON India Site                            |
 | SUCGON_INDIA_CDP_TARGET_URL  | No                    | No                        | CDP Target URL for SUGCON India Site                            |
 | SUCGON_INDIA_CDP_POINTOFSALE | No                    | No                        | CDP POS for SUGCON India Site                                   |
-| EdgeNoDocker                 | No                    | No                        | Used to initialise the repo for Edge Developer without Docker   |
+| EdgeNoDocker                 | No                    | No                        | Used to initialize the repo for Edge Developer without Docker   |
 
 
-## Embeded Personalisation
-Embedded Personalisation is disabled locally by default. If you wish to enable it you will need to populate the different `xx_CDP_CLIENT_KEY`, `xx_CDP_TARGET_URL` & `xx_CDP_POINTOFSALE` parameters with valid values and change the `NODE_ENV` parameter from `development` to another value.
+## Embedded Personalization
+Embedded Personalization is disabled locally by default. If you wish to enable it you will need to populate the different `xx_CDP_CLIENT_KEY`, `xx_CDP_TARGET_URL` & `xx_CDP_POINTOFSALE` parameters with valid values and change the `NODE_ENV` parameter from `development` to another value.
 
 # 🏃 Running the Repository
 After you have initialized the repository, you can run it using the `up.ps1` script. There are 3 different ways you can run this repository
@@ -136,7 +136,7 @@ Once you have initialized the repository with your Edge Token, use the `up.ps1` 
 ## 💻+🌏 Running in Edge Development Mode without Docker
 
 ### Initialize your repository for Edge Development Mode without Docker
-First initialize your repo using the `.init/ps1` script, you will need to pass in the `-Edge_Token` & `-EdgeNoDocker` parameters to ensure that the repository is correct initialised.
+First initialize your repo using the `.init/ps1` script, you will need to pass in the `-Edge_Token` & `-EdgeNoDocker` parameters to ensure that the repository is correct initialized.
 
 ```ps1
 .\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Edge_Token "<<YOUR_EDGE_TOKEN>>" -EdgeNoDocker
