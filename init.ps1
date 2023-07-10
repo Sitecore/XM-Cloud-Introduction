@@ -74,8 +74,6 @@ Set-EnvFileVariable "JSS_EDITING_SECRET" -Value $jssEditingSecret
 if ($InitEnv) {
 	Write-Host "Populating .env file." -ForegroundColor Green
 	Set-EnvFileVariable "HOST_LICENSE_FOLDER" -Value $LicenseXmlPath
-	Set-EnvFileVariable "CM_HOST" -Value $CM_Host
-	Set-EnvFileVariable "MVP_RENDERING_HOST" -Value $MVP_Host
 	Set-EnvFileVariable "REPORTING_API_KEY" -Value (Get-SitecoreRandomString 128 -DisallowSpecial)
 	Set-EnvFileVariable "TELERIK_ENCRYPTION_KEY" -Value (Get-SitecoreRandomString 128 -DisallowSpecial)
 	Set-EnvFileVariable "MEDIA_REQUEST_PROTECTION_SHARED_SECRET" -Value (Get-SitecoreRandomString 64 -DisallowSpecial)
