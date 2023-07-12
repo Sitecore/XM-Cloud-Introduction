@@ -152,7 +152,7 @@ FETCH_WITH="GraphQL"
 
     Write-Host
     Write-Host ("#"*75) -ForegroundColor Cyan
-    Write-Host "Configuration Edge Mode without Docker complete" -ForegroundColor Cyan
+    Write-Host "Configuring Edge Mode without Docker complete" -ForegroundColor Cyan
     Write-Host "You can now run the different sites directly, please see the README for further details." -ForegroundColor Cyan
     Write-Host ("#"*75) -ForegroundColor Cyan
     exit 0
@@ -254,14 +254,6 @@ Add-HostsEntry $MVP_Host
 Add-HostsEntry $SUGCON_EU_HOST
 Add-HostsEntry $SUGCON_ANZ_HOST
 Add-HostsEntry $SUGCON_INDIA_HOST
-
-
-
-
-
-
-
-
 
 ##########################
 # Show Certificate Details
