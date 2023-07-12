@@ -97,7 +97,6 @@ Set-EnvFileVariable "JSS_EDITING_SECRET" -Value $jssEditingSecret
 ###############################
 if ($InitEnv) {
 	Write-Host "Populating .env file." -ForegroundColor Green
-	Set-EnvFileVariable "HOST_LICENSE_FOLDER" -Value $LicenseXmlPath
 	Set-EnvFileVariable "REPORTING_API_KEY" -Value (Get-SitecoreRandomString 128 -DisallowSpecial)
 	Set-EnvFileVariable "TELERIK_ENCRYPTION_KEY" -Value (Get-SitecoreRandomString 128 -DisallowSpecial)
 	Set-EnvFileVariable "MEDIA_REQUEST_PROTECTION_SHARED_SECRET" -Value (Get-SitecoreRandomString 64 -DisallowSpecial)
@@ -202,6 +201,7 @@ if (-not (Test-Path $LicenseXmlPath)) {
 }
 # We actually want the folder that it's in for mounting
 $LicenseXmlPath = (Get-Item $LicenseXmlPath).Directory.FullName
+Set-EnvFileVariable "HOST_LICENSE_FOLDER" -Value $LicenseXmlPath
 
 ###########################
 # Setup site host variables
