@@ -41,6 +41,30 @@ Param (
 
 $ErrorActionPreference = "Stop";
 
+################################################
+# Retrieve and import SitecoreDockerTools module
+################################################
+# Check for Sitecore Gallery
+Import-Module PowerShellGet
+$SitecoreGallery = Get-PSRepository | Where-Object { $_.SourceLocation -eq "https://sitecore.myget.org/F/sc-powershell/api/v2" }
+if (-not $SitecoreGallery) {
+    Write-Host "Adding Sitecore PowerShell Gallery..." -ForegroundColor Green
+	Unregister-PSRepository -Name SitecoreGallery -ErrorAction SilentlyContinue
+    Register-PSRepository -Name SitecoreGallery -SourceLocation https://sitecore.myget.org/F/sc-powershell/api/v2 -InstallationPolicy Trusted
+    $SitecoreGallery = Get-PSRepository -Name SitecoreGallery
+}
+
+# Install and Import SitecoreDockerTools
+$dockerToolsVersion = "10.2.7"
+Remove-Module SitecoreDockerTools -ErrorAction SilentlyContinue
+if (-not (Get-InstalledModule -Name SitecoreDockerTools -RequiredVersion $dockerToolsVersion -ErrorAction SilentlyContinue)) {
+    Write-Host "Installing SitecoreDockerTools." -ForegroundColor Green
+    Install-Module SitecoreDockerTools -RequiredVersion $dockerToolsVersion -Scope CurrentUser -Repository $SitecoreGallery.Name
+}
+Write-Host "Importing SitecoreDockerTools." -ForegroundColor Green
+Import-Module SitecoreDockerTools -RequiredVersion $dockerToolsVersion
+Write-SitecoreDockerWelcome
+
 ##################
 # Create .env file
 ##################
@@ -113,37 +137,38 @@ if ($Edge_NoDocker) {
 
     Write-Host "Configuring heads to run in Edge Mode without Docker" -ForegroundColor Green
 
-    # Read .env into PS runtime for each access
+    # Read .env into HashTable
+    $envVars = @{}
     get-content .env | ForEach-Object {
         if(-Not $_.StartsWith("#") -and -Not $_ -eq "") { 
             $splitChar = $_.IndexOf('=')
             $name = $_.Substring(0, $splitChar)
             $value = $_.Substring($splitChar + 1)
-            set-content env:\$name $value
+            $envVars.Add($name,$value)
         }
     } 
-    
+   
     Write-Host "Configuring MVP Head"
     $appSettings = Get-Content 'src/Project/MvpSite/rendering/appsettings.Development.json' | ConvertFrom-Json
-    $appSettings.Sitecore.InstanceUri = $env:EXPERIENCE_EDGE_URL
+    $appSettings.Sitecore.InstanceUri = $envVars.EXPERIENCE_EDGE_URL
     $appSettings.Sitecore.LayoutServicePath = "/api/graphql/v1"
-    $appSettings.Sitecore.ExperienceEdgeToken = $env:EXPERIENCE_EDGE_TOKEN
-    $appSettings.Okta.OktaDomain = $env:OKTA_DOMAIN
-    $appSettings.Okta.ClientId = $env:OKTA_CLIENT_ID
-    $appSettings.Okta.ClientSecret = $env:OKTA_CLIENT_SECRET
-    $appSettings.Okta.AuthorizationServerId = $env:OKTA_AUTH_SERVER_ID
-    $appSettings.MvpSelectionsApiClient.BaseAddress = $env:MVP_SELECTIONS_API
+    $appSettings.Sitecore.ExperienceEdgeToken = $envVars.EXPERIENCE_EDGE_TOKEN
+    $appSettings.Okta.OktaDomain = $envVars.OKTA_DOMAIN
+    $appSettings.Okta.ClientId = $envVars.OKTA_CLIENT_ID
+    $appSettings.Okta.ClientSecret = $envVars.OKTA_CLIENT_SECRET
+    $appSettings.Okta.AuthorizationServerId = $envVars.OKTA_AUTH_SERVER_ID
+    $appSettings.MvpSelectionsApiClient.BaseAddress = $envVars.MVP_SELECTIONS_API
     $appSettings | ConvertTo-Json | Out-File "src/Project/MvpSite/rendering/appsettings.Development.json"
     Write-Host "Finsihed Configuring MVP Head"
 
     Write-Host "Creating .env for SUGCON Sites"
     $sugconEnvContents = 
 @"
-SITECORE_API_HOST=${env:EXPERIENCE_EDGE_URL}
-SITECORE_API_KEY=${env:EXPERIENCE_EDGE_TOKEN}
-GRAPH_QL_ENDPOINT=${env:GRAPH_QL_ENDPOINT}
+SITECORE_API_HOST={0}
+SITECORE_API_KEY={1}
+GRAPH_QL_ENDPOINT={2}
 FETCH_WITH="GraphQL"
-"@
+"@ -f $envVars.EXPERIENCE_EDGE_URL, $envVars.EXPERIENCE_EDGE_TOKEN, $envVars.GRAPH_QL_ENDPOINT
 
     Write-Host "Writing .env files for SUGCON Heads"
     $sugconEnvContents | Out-File "src/Project/Sugcon/SugconAnzSxa/.env"
@@ -177,30 +202,6 @@ if (-not (Test-Path $LicenseXmlPath)) {
 }
 # We actually want the folder that it's in for mounting
 $LicenseXmlPath = (Get-Item $LicenseXmlPath).Directory.FullName
-
-################################################
-# Retrieve and import SitecoreDockerTools module
-################################################
-# Check for Sitecore Gallery
-Import-Module PowerShellGet
-$SitecoreGallery = Get-PSRepository | Where-Object { $_.SourceLocation -eq "https://sitecore.myget.org/F/sc-powershell/api/v2" }
-if (-not $SitecoreGallery) {
-    Write-Host "Adding Sitecore PowerShell Gallery..." -ForegroundColor Green
-	Unregister-PSRepository -Name SitecoreGallery -ErrorAction SilentlyContinue
-    Register-PSRepository -Name SitecoreGallery -SourceLocation https://sitecore.myget.org/F/sc-powershell/api/v2 -InstallationPolicy Trusted
-    $SitecoreGallery = Get-PSRepository -Name SitecoreGallery
-}
-
-# Install and Import SitecoreDockerTools
-$dockerToolsVersion = "10.2.7"
-Remove-Module SitecoreDockerTools -ErrorAction SilentlyContinue
-if (-not (Get-InstalledModule -Name SitecoreDockerTools -RequiredVersion $dockerToolsVersion -ErrorAction SilentlyContinue)) {
-    Write-Host "Installing SitecoreDockerTools." -ForegroundColor Green
-    Install-Module SitecoreDockerTools -RequiredVersion $dockerToolsVersion -Scope CurrentUser -Repository $SitecoreGallery.Name
-}
-Write-Host "Importing SitecoreDockerTools." -ForegroundColor Green
-Import-Module SitecoreDockerTools -RequiredVersion $dockerToolsVersion
-Write-SitecoreDockerWelcome
 
 ###########################
 # Setup site host variables
