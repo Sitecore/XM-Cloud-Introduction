@@ -34,6 +34,7 @@ If you wish to run the MVP Site you will need to provide Okta configuration deta
 When you interact with XM Cloud you will be asked to authenticate with our Auth0 tenant. If you don't have an account already you can follow the registration flow provided by the Auth0 to create one.
 
 # ▶️ Initializing the repository
+
 You first need to initialize the repository, which will configure how the different application elements will run. There are a series of parameters you can pass into the `init.ps1` script to achieve this, you can find the full list of parameters with their purpose here.
 
 You must be in "administrator mode" to run the `init.ps1` script.
@@ -44,7 +45,7 @@ Examples of how to use them can be seen in the setup guides for the different ru
 |------------------------------|-----------------------|---------------------------|-------------------------|------------------------|-----------------------------------------------------------------|
 | LicenseXmlPath               | No                    | No                        | **Yes**                 | No                     | Used to specify the path to the license file                    |
 | AdminPassword                | No                    | No                        | **Yes**                 | No                     | Used to specify the password for the Sitecore admin user        |
-| InitEnv                      | No                    | No                        | No                      | No                     | Used to force a full initialisation of the repository           |
+| InitEnv                      | No                    | No                        | No                      | No                     | Used to force a full initialization of the repository           |
 | Edge_Token                   | No                    | No                        | No                      | **Yes**                | Used to authenticate with XM Cloud, when running in 'Edge Mode' |
 | OKTA_Domain                  | **Yes**               | No                        | No                      | No                     | Okta domain used by the MVP Rendering host                      |
 | OKTA_Client_Id               | **Yes**               | No                        | No                      | No                     | Okta Client Id used by the MVP Rendering host                   |
@@ -59,10 +60,10 @@ Examples of how to use them can be seen in the setup guides for the different ru
 | SUCGON_INDIA_CDP_CLIENT_KEY  | No                    | No                        | No                      | No                     | CDP Client key for SUGCON India Site                            |
 | SUCGON_INDIA_CDP_TARGET_URL  | No                    | No                        | No                      | No                     | CDP Target URL for SUGCON India Site                            |
 | SUCGON_INDIA_CDP_POINTOFSALE | No                    | No                        | No                      | No                     | CDP POS for SUGCON India Site                                   |
-| Edge_NoDocker                | No                    | No                        | No                      | No                     | Used to initialise the repo for Edge Developer without Docker   |
+| Edge_NoDocker                | No                    | No                        | No                      | No                     | Used to initialize the repo for Edge Developer without Docker   |
 
-## Embeded Personalisation
-Embedded Personalisation is disabled locally by default. If you wish to enable it you will need to populate the different `xx_CDP_CLIENT_KEY`, `xx_CDP_TARGET_URL` & `xx_CDP_POINTOFSALE` parameters with valid values and change the `NODE_ENV` parameter from `development` to another value.
+## Embedded Personalization
+Embedded Personalization is disabled locally by default. If you wish to enable it you will need to populate the different `xx_CDP_CLIENT_KEY`, `xx_CDP_TARGET_URL` & `xx_CDP_POINTOFSALE` parameters with valid values and change the `NODE_ENV` parameter from `development` to another value.
 
 # 🏃 Running the Repository
 After you have initialized the repository, you can run it using the `up.ps1` script. There are 3 different ways you can run this repository
@@ -137,7 +138,7 @@ Once you have initialized the repository with your Edge Token, use the `up.ps1` 
 ## 💻+🌏 Running in Edge Development Mode without Docker
 
 ### Initialize your repository for Edge Development Mode without Docker
-First initialize your repo using the `.init/ps1` script, you will need to pass in the `-Edge_Token` & `-EdgeNoDocker` parameters to ensure that the repository is correct initialised.
+First initialize your repo using the `.init/ps1` script, you will need to pass in the `-Edge_Token` & `-EdgeNoDocker` parameters to ensure that the repository is correct initialized.
 
 ```ps1
 .\init.ps1 -InitEnv -Edge_Token "<<YOUR_EDGE_TOKEN>>" -Edge_NoDocker
