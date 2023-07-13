@@ -19,7 +19,7 @@ This repository contains the codebase for a series of sites managed by the Techn
 # ✋ Prerequisites
 - [DotNet 6.0](https://dotnet.microsoft.com/en-us/download)
 - [NodeJS 16 LTS](https://nodejs.org/en/download/) (or greater)
-- [Docker](https://www.docker.com/)
+- [Docker](https://www.docker.com/) (Not required when running in Edge Development Mode without Docker)
 
 ## Docker Compose v2
 This repository uses Docker Compose v2. As of June 2023 v1 is no longer supported by Docker. You can read more about the differences between the two versions [here](https://docs.docker.com/compose/compose-v2/).
@@ -34,32 +34,36 @@ If you wish to run the MVP Site you will need to provide Okta configuration deta
 When you interact with XM Cloud you will be asked to authenticate with our Auth0 tenant. If you don't have an account already you can follow the registration flow provided by the Auth0 to create one.
 
 # ▶️ Initializing the repository
-You first need to initialize your .env file which will configure how the different application elements will run. There are a series of parameters you can pass in to override the default behaviour of the application, you can find the full list of parameters with their purpose here.
 
-Examples of how to use them can be seen in the different setup guides for both Local Mode and Edge Mode below.
+You first need to initialize the repository, which will configure how the different application elements will run. There are a series of parameters you can pass into the `init.ps1` script to achieve this, you can find the full list of parameters with their purpose here.
 
-| Parameter                    | Required for MVP Site | Required for SUGCON Sites | Purpose                                                         |
-|------------------------------|-----------------------|---------------------------|-----------------------------------------------------------------|
-| LicenseXmlPath               | **Yes**               | **Yes**                   | Used to specify the path to the license file                    |
-| AdminPassword                | **Yes**               | **Yes**                   | Used to specify the password for the Sitecore admin user        |
-| InitEnv                      | No                    | No                        | Used to force a full initialisation of the repository           |
-| Edge_Token                   | No                    | No                        | Used to authenticate with XM Cloud, when running in 'Edge Mode' |
-| OKTA_Domain                  | **Yes**               | No                        | Okta domain used by the MVP Rendering host                      |
-| OKTA_Client_Id               | **Yes**               | No                        | Okta Client Id used by the MVP Rendering host                   |
-| OKTA_Client_Secret           | **Yes**               | No                        | Okta Client Secret used by the MVP Rendering host               |
-| MVP_Selections_API           | **Yes**               | No                        | URL for the MVP Selections API                                  |
-| SUCGON_ANZ_CDP_CLIENT_KEY    | No                    | No                        | CDP Client key for SUGCON ANZ Site                              |
-| SUCGON_ANZ_CDP_TARGET_URL    | No                    | No                        | CDP Target URL for SUGCON ANZ Site                              |
-| SUCGON_ANZ_CDP_POINTOFSALE   | No                    | No                        | CDP POS for SUGCON ANZ Site                                     |
-| SUCGON_EU_CDP_CLIENT_KEY     | No                    | No                        | CDP Client key for SUGCON EU Site                               |
-| SUCGON_EU_CDP_TARGET_URL     | No                    | No                        | CDP Target URL for SUGCON EU Site                               |
-| SUCGON_EU_CDP_POINTOFSALE    | No                    | No                        | CDP POS for SUGCON EU Site                                      |
-| SUCGON_INDIA_CDP_CLIENT_KEY  | No                    | No                        | CDP Client key for SUGCON India Site                            |
-| SUCGON_INDIA_CDP_TARGET_URL  | No                    | No                        | CDP Target URL for SUGCON India Site                            |
-| SUCGON_INDIA_CDP_POINTOFSALE | No                    | No                        | CDP POS for SUGCON India Site                                   |
+You must be in "administrator mode" to run the `init.ps1` script.
 
-## Embeded Personalisation
-Embedded Personalisation is disabled locally by default. If you wish to enable it you will need to populate the different `xx_CDP_CLIENT_KEY`, `xx_CDP_TARGET_URL` & `xx_CDP_POINTOFSALE` parameters with valid values and change the `NODE_ENV` parameter from `development` to another value.
+Examples of how to use them can be seen in the setup guides for the different running modes below .
+
+| Parameter                    | Required for MVP Site | Required for SUGCON Sites | Required for full local | Required for Edge Mode | Purpose                                                         |
+|------------------------------|-----------------------|---------------------------|-------------------------|------------------------|-----------------------------------------------------------------|
+| LicenseXmlPath               | No                    | No                        | **Yes**                 | No                     | Used to specify the path to the license file                    |
+| AdminPassword                | No                    | No                        | **Yes**                 | No                     | Used to specify the password for the Sitecore admin user        |
+| InitEnv                      | No                    | No                        | No                      | No                     | Used to force a full initialization of the repository           |
+| Edge_Token                   | No                    | No                        | No                      | **Yes**                | Used to authenticate with XM Cloud, when running in 'Edge Mode' |
+| OKTA_Domain                  | **Yes**               | No                        | No                      | No                     | Okta domain used by the MVP Rendering host                      |
+| OKTA_Client_Id               | **Yes**               | No                        | No                      | No                     | Okta Client Id used by the MVP Rendering host                   |
+| OKTA_Client_Secret           | **Yes**               | No                        | No                      | No                     | Okta Client Secret used by the MVP Rendering host               |
+| MVP_Selections_API           | No                    | No                        | No                      | No                     | URL for the MVP Selections API                                  |
+| SUCGON_ANZ_CDP_CLIENT_KEY    | No                    | No                        | No                      | No                     | CDP Client key for SUGCON ANZ Site                              |
+| SUCGON_ANZ_CDP_TARGET_URL    | No                    | No                        | No                      | No                     | CDP Target URL for SUGCON ANZ Site                              |
+| SUCGON_ANZ_CDP_POINTOFSALE   | No                    | No                        | No                      | No                     | CDP POS for SUGCON ANZ Site                                     |
+| SUCGON_EU_CDP_CLIENT_KEY     | No                    | No                        | No                      | No                     | CDP Client key for SUGCON EU Site                               |
+| SUCGON_EU_CDP_TARGET_URL     | No                    | No                        | No                      | No                     | CDP Target URL for SUGCON EU Site                               |
+| SUCGON_EU_CDP_POINTOFSALE    | No                    | No                        | No                      | No                     | CDP POS for SUGCON EU Site                                      |
+| SUCGON_INDIA_CDP_CLIENT_KEY  | No                    | No                        | No                      | No                     | CDP Client key for SUGCON India Site                            |
+| SUCGON_INDIA_CDP_TARGET_URL  | No                    | No                        | No                      | No                     | CDP Target URL for SUGCON India Site                            |
+| SUCGON_INDIA_CDP_POINTOFSALE | No                    | No                        | No                      | No                     | CDP POS for SUGCON India Site                                   |
+| Edge_NoDocker                | No                    | No                        | No                      | No                     | Used to initialize the repo for Edge Developer without Docker   |
+
+## Embedded Personalization
+Embedded Personalization is disabled locally by default. If you wish to enable it you will need to populate the different `xx_CDP_CLIENT_KEY`, `xx_CDP_TARGET_URL` & `xx_CDP_POINTOFSALE` parameters with valid values and change the `NODE_ENV` parameter from `development` to another value.
 
 # 🏃 Running the Repository
 After you have initialized the repository, you can run it using the `up.ps1` script. There are 3 different ways you can run this repository
@@ -98,7 +102,7 @@ Next, use the `up.ps1` script to bring up all of the containers required for Loc
 ## 🐋+🌏 Running in Edge Development Mode with Docker
 Running in Edge Mode with Docker will run only run the Head applications and Traefik. To be able to run the sites in this repository locally against Edge, you will need to have access to an active XM Cloud Subscription with enough entitlements to be able to create a new Project & Environment to run against.
 
-## Create a new environment and deploy the codebase
+### Create a new environment and deploy the codebase
 You can follow these steps to create a new XM Cloud Project & Environment, then generate an Edge Token used to authenticate your Head applications with your Edge Tenant.
 - Authenticate with the XM Cloud Deploy Application
   - `dotnet sitecore cloud login`
@@ -121,10 +125,10 @@ If you want more information about the Cloud plugin for the CLI then you access 
 First initialize your repo using the `.init/ps1` script, you will need to pass in the `-Edge_Token` parameter set to the value you generated in the previous step.
 
 ```ps1
-.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" --Edge_Token "<<YOUR_EDGE_TOKEN>>"
+.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Edge_Token "<<YOUR_EDGE_TOKEN>>"
 ```
 
-## Bring up all the application elements for Edge Mode with Docker
+### Bring up all the application elements for Edge Mode with Docker
 Once you have initialized the repository with your Edge Token, use the `up.ps1` script, ensuring to pass the `-UseEdge` parameter to bring up all of the containers required for Edge Mode.
 
 ```ps1
@@ -132,4 +136,28 @@ Once you have initialized the repository with your Edge Token, use the `up.ps1` 
 ```
 
 ## 💻+🌏 Running in Edge Development Mode without Docker
-Coming soon...
+
+### Initialize your repository for Edge Development Mode without Docker
+First initialize your repo using the `.init/ps1` script, you will need to pass in the `-Edge_Token` & `-EdgeNoDocker` parameters to ensure that the repository is correct initialized.
+
+```ps1
+.\init.ps1 -InitEnv -Edge_Token "<<YOUR_EDGE_TOKEN>>" -Edge_NoDocker
+```
+
+Running with the `-EdgeNoDocker` switch, will setup configuration files for each of the heads included in this repository. You can then manually run each of them using either NPM or DotNet.
+
+### Running the MVP Site
+
+After completing the init setup above you will be able to run the MVP Site either directly from within Visual Studio, or by using the DotNet CLI.
+
+- To run from within Visual Studio, open the `src\XmCloudIntroduction.sln`, ensure that the `Mvp.Project.MvpSite.Rendering` project is set as your StartUp Project, then hit F5.
+  - The site should then be started loaded in the browser automatically
+- To run from the DotNet CLI, open a new terminal window and navigate to the `src\Project\MvpSite\rendering` folder, then run `dotnet restore && dotnet run`
+  - You can then access the site at `https://localhost:5001` or `http://localhost:5000`
+
+### Running the SUGCON Sites
+
+After completing the init setup above you will be able to run the SUGCON Sites directly using the NPM CLI, they are all built using SXA Headless so the process is the same for each of them.
+
+- Open a new terminal window and navigate to the `src\Project\Sugcon\<<SUGCON_SITE>>` folder, then run `npm i && npm run start:connected`
+  - You can then access the site at `http://localhost:3000`
