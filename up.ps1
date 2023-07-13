@@ -24,6 +24,7 @@ $mvpHost = $envContent | Where-Object { $_ -imatch "^MVP_RENDERING_HOST=.+" }
 $sugconeuHost = $envContent | Where-Object { $_ -imatch "^SUGCON_EU_HOST=.+" }
 $sugconanzHost = $envContent | Where-Object { $_ -imatch "^SUGCON_ANZ_HOST=.+" }
 $sugconindiaHost = $envContent | Where-Object { $_ -imatch "^SUGCON_INDIA_HOST=.+" }
+$sugconNaHost = $envContent | Where-Object { $_ -imatch "^SUGCON_NA_HOST=.+" }
 $sitecoreDockerRegistry = $envContent | Where-Object { $_ -imatch "^SITECORE_DOCKER_REGISTRY=.+" }
 $sitecoreVersion = $envContent | Where-Object { $_ -imatch "^SITECORE_VERSION=.+" }
 
@@ -32,6 +33,7 @@ $mvpHost = $mvpHost.Split("=")[1]
 $sugconeuHost = $sugconeuHost.Split("=")[1]
 $sugconanzHost = $sugconanzHost.Split("=")[1]
 $sugconindiaHost = $sugconindiaHost.Split("=")[1]
+$sugconNaHost = $sugconNaHost.Split("=")[1]
 $sitecoreDockerRegistry = $sitecoreDockerRegistry.Split("=")[1]
 $sitecoreVersion = $sitecoreVersion.Split("=")[1]
 
@@ -82,7 +84,8 @@ if ($UseEdge) {
     Start-Process https://$mvpHost
     Start-Process https://$sugconeuHost
     Start-Process https://$sugconanzHost
-    Start-Process https://$sugconindiaHost    
+    Start-Process https://$sugconindiaHost  
+    Start-Process https://$sugconNaHost  
 }
 else {
     # Start the Sitecore instance
@@ -153,5 +156,6 @@ else {
         Start-Process https://$sugconeuHost
         Start-Process https://$sugconanzHost
         Start-Process https://$sugconindiaHost
+        Start-Process https://$sugconNaHost
     }
 }

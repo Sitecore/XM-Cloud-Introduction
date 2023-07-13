@@ -42,9 +42,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
       <Scripts />
       <Head>
         <title>
-          {fields?.Title?.value
-            ? 'SUGCON Europe - ' + fields.Title.value.toString()
-            : 'SUGCON Europe'}
+          {fields?.Title?.value ? 'SUGCON NA - ' + fields.Title.value.toString() : 'SUGCON NA'}
         </title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
         {/* Meta Tags */}

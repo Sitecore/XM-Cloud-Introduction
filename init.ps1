@@ -34,7 +34,13 @@ Param (
     [Parameter(HelpMessage = "SUGCON INDIA CPD Target URL.")]
     [string]$SUCGON_INDIA_CDP_TARGET_URL,
     [Parameter(HelpMessage = "SUGCON INDIA CPD Point of Sale.")]
-    [string]$SUCGON_INDIA_CDP_POINTOFSALE
+    [string]$SUCGON_INDIA_CDP_POINTOFSALE,
+    [Parameter(HelpMessage = "SUGCON INDIA CPD Client Key.")]
+    [string]$SUCGON_NA_CDP_CLIENT_KEY,
+    [Parameter(HelpMessage = "SUGCON NA CPD Target URL.")]
+    [string]$SUCGON_NA_CDP_TARGET_URL,
+    [Parameter(HelpMessage = "SUGCON NA CPD Point of Sale.")]
+    [string]$SUCGON_NA_CDP_POINTOFSALE
 )
 
 $ErrorActionPreference = "Stop";
@@ -92,6 +98,7 @@ $MVP_Host = "mvp.$Host_Suffix"
 $SUGCON_EU_HOST = "sugconeu.$Host_Suffix"
 $SUGCON_ANZ_HOST = "sugconanz.$Host_Suffix"
 $SUGCON_INDIA_HOST = "sugconindia.$Host_Suffix"
+$SUGCON_NA_HOST = "sugconna.$Host_Suffix"
 
 ##################################
 # Configure TLS/HTTPS certificates
@@ -134,6 +141,7 @@ Add-HostsEntry $MVP_Host
 Add-HostsEntry $SUGCON_EU_HOST
 Add-HostsEntry $SUGCON_ANZ_HOST
 Add-HostsEntry $SUGCON_INDIA_HOST
+Add-HostsEntry $SUGCON_NA_HOST
 
 ###############################
 # Generate scjssconfig
@@ -149,6 +157,7 @@ $scjssconfig = @{
 ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconAnzSxa\scjssconfig.json"
 ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconEuSxa\scjssconfig.json"
 ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconIndiaSxa\scjssconfig.json"
+ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconNaSxa\scjssconfig.json"
 
 ################################
 # Generate JSS_EDITING_SECRET
@@ -186,6 +195,9 @@ if ($InitEnv) {
     Set-EnvFileVariable "SUCGON_INDIA_CDP_CLIENT_KEY" -Value $SUCGON_INDIA_CDP_CLIENT_KEY
     Set-EnvFileVariable "SUCGON_INDIA_CDP_TARGET_URL" -Value $SUCGON_INDIA_CDP_TARGET_URL
     Set-EnvFileVariable "SUCGON_INDIA_CDP_POINTOFSALE" -Value $SUCGON_INDIA_CDP_POINTOFSALE
+    Set-EnvFileVariable "SUCGON_NA_CDP_CLIENT_KEY" -Value $SUCGON_NA_CDP_CLIENT_KEY
+    Set-EnvFileVariable "SUCGON_NA_CDP_TARGET_URL" -Value $SUCGON_NA_CDP_TARGET_URL
+    Set-EnvFileVariable "SUCGON_NA_CDP_POINTOFSALE" -Value $SUCGON_NA_CDP_POINTOFSALE
 }
 Write-Host "Finished populating .env file." -ForegroundColor Green
 
