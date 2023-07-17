@@ -3,7 +3,6 @@ ID: "f7f4361e-e6f1-4fd4-93e4-8bfef5a24931"
 Parent: "46b8a855-1f45-4206-9f56-80df85a52610"
 Template: "9edd8bd7-5b8e-4fc9-a3ba-88e562916e34"
 Path: /sitecore/content/Sugcon/SugconNaSxa/Settings
-BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "0129da3f-8c86-4591-ae32-6ec923413923"
   Hint: DictionaryDomain
@@ -11,6 +10,9 @@ SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: "{C2DC4690-AF44-48C7-BB21-90D1AD246732}"
+- ID: "1864e99d-c29a-40bf-96e0-b3e7896a013b"
+  Hint: UseLanguageSpecificLayout
+  Value: 
 - ID: "300fb7a0-b27f-44dd-9af0-b37a19723e0e"
   Hint: RouteTemplateName
   Value: Settings Route
@@ -71,11 +73,16 @@ Languages:
         sitecore\crVWEAtR8y
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "24aab103-9e51-4a43-82bd-3fa14940c578"
+      Value: "065a8f31-f6e2-49b7-bf25-ef511e473c7a"
+    - ID: "9ce73b35-34d3-49dc-bd5a-ce1e8267fda9"
+      Hint: ComponentDataSourceTemplates
+      Value: |
+        {2A05BFC6-1EEA-4013-9DAF-9D079E3FD255}
+        {A9668AAD-7E76-49A5-978A-BFF6BF8A8A6F}
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\crVWEAtR8y
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230713T013012Z
+      Value: 20230717T151459Z

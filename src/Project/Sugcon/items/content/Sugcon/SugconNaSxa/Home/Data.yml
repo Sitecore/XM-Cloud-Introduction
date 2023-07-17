@@ -1,15 +1,8 @@
 ﻿---
-ID: "894608fc-52aa-4661-aeac-27f5dd773aab"
-Parent: "5f6f0e00-63a2-4ed6-beba-d89befea6768"
-Template: "26ec1d18-11b2-4dd9-8326-f6115f4fd7eb"
-Path: /sitecore/content/Sugcon/SugconNaSxa/Presentation/Available Renderings
-SharedFields:
-- ID: "7147ca94-cd06-4aba-8af3-e179a24f4de5"
-  Hint: IsShared
-  Value: 
-- ID: "878c9a33-e760-4cb8-aad3-b2309383bf10"
-  Hint: Group renderings in sections
-  Value: 1
+ID: "5f9bc393-3d30-44a3-b7a1-22b77b70fbd9"
+Parent: "1dba673b-3641-4138-8454-52148208759c"
+Template: "1c82e550-ebcd-4e5d-8abd-d50d0809541e"
+Path: /sitecore/content/Sugcon/SugconNaSxa/Home/Data
 Languages:
 - Language: en
   Versions:
@@ -17,22 +10,22 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20230713T013016Z
+      Value: 20230713T163552Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\crVWEAtR8y
+        sitecore\UzWooIJE3y
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\crVWEAtR8y
+        sitecore\UzWooIJE3y
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "89c7a6cf-2424-43da-8ac4-8926b9e73081"
+      Value: "ac236ef0-77a1-46d1-900a-5938135baa0a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\UzWooIJE3y
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230713T160449Z
+      Value: 20230713T163552Z

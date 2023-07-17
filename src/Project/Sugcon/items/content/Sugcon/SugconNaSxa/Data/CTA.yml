@@ -1,15 +1,8 @@
 ﻿---
-ID: "894608fc-52aa-4661-aeac-27f5dd773aab"
-Parent: "5f6f0e00-63a2-4ed6-beba-d89befea6768"
-Template: "26ec1d18-11b2-4dd9-8326-f6115f4fd7eb"
-Path: /sitecore/content/Sugcon/SugconNaSxa/Presentation/Available Renderings
-SharedFields:
-- ID: "7147ca94-cd06-4aba-8af3-e179a24f4de5"
-  Hint: IsShared
-  Value: 
-- ID: "878c9a33-e760-4cb8-aad3-b2309383bf10"
-  Hint: Group renderings in sections
-  Value: 1
+ID: "db7c29ee-13ad-4a16-9706-c3ec7fbd36b1"
+Parent: "c79044cf-03f7-4808-835b-7d0fc04e87ca"
+Template: "185291a6-334d-496e-ae86-d7cbc37c077e"
+Path: /sitecore/content/Sugcon/SugconNaSxa/Data/CTA
 Languages:
 - Language: en
   Versions:
@@ -17,7 +10,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20230713T013016Z
+      Value: 20230717T144138Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -28,11 +21,11 @@ Languages:
         sitecore\crVWEAtR8y
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "89c7a6cf-2424-43da-8ac4-8926b9e73081"
+      Value: "e0f35864-ab0b-4c7b-993b-d5d2bb628c40"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\UzWooIJE3y
+        sitecore\crVWEAtR8y
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230713T160449Z
+      Value: 20230717T144138Z
