@@ -35,6 +35,12 @@ Param (
     [string]$SUCGON_INDIA_CDP_TARGET_URL,
     [Parameter(HelpMessage = "SUGCON INDIA CPD Point of Sale.")]
     [string]$SUCGON_INDIA_CDP_POINTOFSALE,
+    [Parameter(HelpMessage = "SUGCON INDIA CPD Client Key.")]
+    [string]$SUCGON_NA_CDP_CLIENT_KEY,
+    [Parameter(HelpMessage = "SUGCON NA CPD Target URL.")]
+    [string]$SUCGON_NA_CDP_TARGET_URL,
+    [Parameter(HelpMessage = "SUGCON NA CPD Point of Sale.")]
+    [string]$SUCGON_NA_CDP_POINTOFSALE
     [Parameter(HelpMessage = "Switch to setup the heads to run against edge without docker.")]
     [switch]$Edge_NoDocker
 )
@@ -85,6 +91,7 @@ $scjssconfig = @{
 ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconAnzSxa\scjssconfig.json"
 ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconEuSxa\scjssconfig.json"
 ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconIndiaSxa\scjssconfig.json"
+ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconNaSxa\scjssconfig.json"
 
 ################################
 # Generate JSS_EDITING_SECRET
@@ -173,6 +180,7 @@ FETCH_WITH="GraphQL"
     $sugconEnvContents | Out-File "src/Project/Sugcon/SugconAnzSxa/.env"
     $sugconEnvContents | Out-File "src/Project/Sugcon/SugconEuSxa/.env"
     $sugconEnvContents | Out-File "src/Project/Sugcon/SugconIndiaSxa/.env"
+    $sugconEnvContents | Out-File "src/Project/Sugcon/SugconNaSxa/.env"
 
     Write-Host
     Write-Host ("#"*75) -ForegroundColor Cyan
@@ -187,6 +195,7 @@ else {
     if(Test-Path './src/Project/Sugcon/SugconAnzSxa/.env') { Remove-Item -Path './src/Project/Sugcon/SugconAnzSxa/.env' -Force }
     if(Test-Path './src/Project/Sugcon/SugconEuSxa/.env') { Remove-Item -Path './src/Project/Sugcon/SugconEuSxa/.env' -Force }
     if(Test-Path './src/Project/Sugcon/SugconIndiaSxa/.env') { Remove-Item -Path './src/Project/Sugcon/SugconIndiaSxa/.env' -Force }
+    if(Test-Path './src/Project/Sugcon/SugconNaSxa/.env') { Remove-Item -Path './src/Project/Sugcon/SugconNaSxa/.env' -Force }
 }
 
 ###############
@@ -213,6 +222,7 @@ $MVP_Host = "mvp.$Host_Suffix"
 $SUGCON_EU_HOST = "sugconeu.$Host_Suffix"
 $SUGCON_ANZ_HOST = "sugconanz.$Host_Suffix"
 $SUGCON_INDIA_HOST = "sugconindia.$Host_Suffix"
+$SUGCON_NA_HOST = "sugconna.$Host_Suffix"
 
 ##################################
 # Configure TLS/HTTPS certificates
@@ -255,6 +265,7 @@ Add-HostsEntry $MVP_Host
 Add-HostsEntry $SUGCON_EU_HOST
 Add-HostsEntry $SUGCON_ANZ_HOST
 Add-HostsEntry $SUGCON_INDIA_HOST
+Add-HostsEntry $SUGCON_NA_HOST
 
 ##########################
 # Show Certificate Details

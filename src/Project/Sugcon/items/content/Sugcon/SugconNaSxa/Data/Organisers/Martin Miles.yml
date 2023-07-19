@@ -1,0 +1,34 @@
+﻿---
+ID: "327b571e-3cf7-4627-a102-1259d0b58561"
+Parent: "f1cf6311-0fea-4c74-a60a-3ff88f7c03d1"
+Template: "040dffbf-bdb3-4424-a867-49e927d9c3e5"
+Path: /sitecore/content/Sugcon/SugconNaSxa/Data/Organisers/Martin Miles
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230719T102303Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\UzWooIJE3y
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\UzWooIJE3y
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cc334ccd-4b07-4b02-9d26-1791bc76b192"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\UzWooIJE3y
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230719T102303Z
+    - ID: "ed25e568-5800-4b53-b376-b2e58c217665"
+      Hint: Name
+      Value: Martin Miles

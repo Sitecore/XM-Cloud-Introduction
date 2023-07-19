@@ -1,0 +1,31 @@
+﻿---
+ID: "61a496fe-b235-4dd5-9025-5cef57ac5d96"
+Parent: "a47c2c72-650a-4342-8760-0c7400dcf6da"
+Template: "443b4313-9b24-422b-bb64-20bc14a53dc5"
+Path: /sitecore/content/Sugcon/SugconNaSxa/Presentation/Partial Designs/SugconNaHeader/Data/Announcement 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230713T162810Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\UzWooIJE3y
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\UzWooIJE3y
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1c18927c-c9a6-4f28-b7ec-fc53284d3285"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\UzWooIJE3y
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230713T162810Z

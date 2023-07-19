@@ -1,0 +1,45 @@
+﻿---
+ID: "8d005dda-e448-4cdf-be26-ff0e9c591de7"
+Parent: "db7c29ee-13ad-4a16-9706-c3ec7fbd36b1"
+Template: "2a05bfc6-1eea-4013-9daf-9d079e3fd255"
+Path: /sitecore/content/Sugcon/SugconNaSxa/Data/CTA/Venue
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0168f4ed-ee6c-4962-9153-94f1fb972c55"
+      Hint: Image
+      Value: |
+        <image mediaid="{3F9AEC4F-0218-4B25-9B88-0D4776B48184}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230717T144221Z
+    - ID: "2bd32ceb-9f35-41d4-a255-81dbf1f80e6b"
+      Hint: Headline
+      Value: Radisson Blu Mall of America
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\crVWEAtR8y
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\crVWEAtR8y
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d7387619-ab6c-4de1-a67c-43ce95f04d54"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\crVWEAtR8y
+    - ID: "d4c32718-a2cb-48c5-9769-14d20450d6f7"
+      Hint: Link
+      Value: |
+        <link text="Explore the event venue" linktype="external" url="https://book.passkey.com/event/50634256/owner/10695459/home" anchor="" title="Link to SUGCON NA 2023 Venue" target="" />
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230718T175046Z
+    - ID: "fdc6957b-c9fa-46ad-b03c-254c12c4c47a"
+      Hint: Text
+      Value: Welcome to the Radisson Blu Mall of America, an elegant hotel offering the ultimate in style and convenience with direct access via skyway to the mall. Take our free shuttle to commute to Minneapolis&ndash;Saint Paul International Airport (MSP), or hop on the nearby Metro light rail transit to explore the Twin Cities area.
