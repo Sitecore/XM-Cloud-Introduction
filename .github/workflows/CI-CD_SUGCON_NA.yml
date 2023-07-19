@@ -1,0 +1,39 @@
+name: CI-CD - SUGCON NA
+on: 
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - .github/workflows/CI-CD_SUGCON_NA.yml
+      - .github/workflows/build_NextJs.yml
+      - .github/workflows/deploy_vercel.yml
+      - 'src/Project/Sugcon/SugconNaSxa/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - .github/workflows/CI-CD_SUGCON_NA.yml
+      - .github/workflows/build_NextJs.yml
+      - .github/workflows/deploy_vercel.yml
+      - 'src/Project/Sugcon/SugconNaSxa/**'
+
+jobs:
+
+  build-na-site:
+    if: github.ref != 'refs/heads/main'
+    uses: ./.github/workflows/build_NextJs.yml
+    with:
+      workingDirectory: ./src/Project/Sugcon/SugconNaSxa
+
+  deploy-na-site:
+    uses: ./.github/workflows/deploy_vercel.yml
+    needs: build-na-site
+    if: always() && 
+        (github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push'))) &&
+        needs.build-staging-anz-site.result != 'failure' &&
+        needs.build-staging-anz-site.result != 'cancelled' && 
+        needs.build-production-anz-site.result != 'failure' &&
+        needs.build-production-anz-site.result != 'cancelled'
+    secrets:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_SUGCON_NA_PROJECT_ID }}
