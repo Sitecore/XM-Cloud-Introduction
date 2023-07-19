@@ -25,10 +25,24 @@ Languages:
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
               uid="{CF642C45-F0DD-45D9-9F7E-BAEBCB91F9A3}"
+              p:before="*"
               s:ds="bfcdc9e1-e63e-41ff-a3ea-5f65b9f62f1e"
               s:id="{CAA0C742-F052-49FB-825B-A03494798DB7}"
               s:par="ComponentName=Main-Promo&amp;ComponentConfiguration&amp;LibraryId=7rrjh2JjMpkkMmKgML1C8D&amp;ComponentId=Sop6ZTPDPW&amp;ComponentVersion=responsive&amp;ComponentRevision=staged&amp;ComponentHostName=https%3A%2F%2Ffeaas.blob.core.windows.net&amp;ComponentInstanceId=9FUCjj_sBsgb2Tv&amp;ComponentDataOverride&amp;ComponentHTMLOverride&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
               s:ph="headless-main" />
+            <r
+              uid="{8271CB5F-64F4-4AE8-853E-794EDC64C652}"
+              p:after="r[@uid='{CF642C45-F0DD-45D9-9F7E-BAEBCB91F9A3}']"
+              s:id="{01BB6244-4E0F-4A9B-9352-1F2C64982655}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="headless-main" />
+            <r
+              uid="{4D30F033-606A-4E4E-A2C9-85D19E3073E4}"
+              p:after="*[1=2]"
+              s:ds="8d005dda-e448-4cdf-be26-ff0e9c591de7"
+              s:id="{CAA0C742-F052-49FB-825B-A03494798DB7}"
+              s:par="ComponentName=Venue&amp;ComponentConfiguration&amp;LibraryId=7rrjh2JjMpkkMmKgML1C8D&amp;ComponentId=nOHWwKczQG&amp;ComponentVersion=responsive&amp;ComponentRevision=staged&amp;ComponentHostName=https%3A%2F%2Ffeaas.blob.core.windows.net&amp;ComponentInstanceId=0TtBuZn_kqRQm3f&amp;ComponentDataOverride&amp;ComponentHTMLOverride&amp;GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+              s:ph="/headless-main/container-2" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -47,7 +61,7 @@ Languages:
         sitecore\UzWooIJE3y
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6cef156d-96d6-4fa8-976e-844af13e04ee"
+      Value: "80c09c83-92f2-408e-a572-f21cbeaff5fe"
     - ID: "ba1885c7-230a-493c-a75a-9caa5e8e4d3f"
       Hint: Title
       Value: Venue
@@ -57,4 +71,4 @@ Languages:
         sitecore\crVWEAtR8y
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230718T135327Z
+      Value: 20230718T174957Z
