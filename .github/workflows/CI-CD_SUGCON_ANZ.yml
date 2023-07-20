@@ -29,10 +29,8 @@ jobs:
     needs: build-anz-site
     if: always() && 
         (github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push'))) &&
-        needs.build-staging-anz-site.result != 'failure' &&
-        needs.build-staging-anz-site.result != 'cancelled' && 
-        needs.build-production-anz-site.result != 'failure' &&
-        needs.build-production-anz-site.result != 'cancelled'
+        needs.build-anz-site.result != 'failure' &&
+        needs.build-anz-site.result != 'cancelled' 
     secrets:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
