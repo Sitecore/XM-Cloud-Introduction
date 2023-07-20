@@ -30,7 +30,7 @@ jobs:
     if: always() && 
         (github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push'))) &&
         needs.build-eu-site.result != 'failure' &&
-        needs.build-eu-site.result != 'cancelled' && 
+        needs.build-eu-site.result != 'cancelled'
     secrets:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
