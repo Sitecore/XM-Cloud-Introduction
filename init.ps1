@@ -40,7 +40,7 @@ Param (
     [Parameter(HelpMessage = "SUGCON NA CPD Target URL.")]
     [string]$SUCGON_NA_CDP_TARGET_URL,
     [Parameter(HelpMessage = "SUGCON NA CPD Point of Sale.")]
-    [string]$SUCGON_NA_CDP_POINTOFSALE
+    [string]$SUCGON_NA_CDP_POINTOFSALE,
     [Parameter(HelpMessage = "Switch to setup the heads to run against edge without docker.")]
     [switch]$Edge_NoDocker
 )
