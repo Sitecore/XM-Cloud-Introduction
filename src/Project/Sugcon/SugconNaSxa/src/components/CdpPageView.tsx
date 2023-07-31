@@ -1,7 +1,6 @@
 import {
   CdpHelper,
   LayoutServicePageState,
-  SiteInfo,
   useSitecoreContext,
   PosResolver,
 } from '@sitecore-jss/sitecore-jss-nextjs';
@@ -9,6 +8,7 @@ import { useEffect } from 'react';
 import config from 'temp/config';
 import { init } from '@sitecore/engage';
 import { siteResolver } from 'lib/site-resolver';
+import { SiteInfo } from '@sitecore-jss/sitecore-jss-nextjs/site';
 
 /**
  * This is the CDP page view component.

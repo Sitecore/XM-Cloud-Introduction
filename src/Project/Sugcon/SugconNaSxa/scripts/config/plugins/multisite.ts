@@ -1,6 +1,7 @@
 import chalk from 'chalk';
 import { ConfigPlugin, JssConfig } from '..';
-import { GraphQLSiteInfoService, SiteInfo } from '@sitecore-jss/sitecore-jss-nextjs';
+import { GraphQLSiteInfoService } from '@sitecore-jss/sitecore-jss-nextjs';
+import { SiteInfo } from '@sitecore-jss/sitecore-jss-nextjs/site';
 
 /**
  * This plugin will set the "sites" config prop.
