@@ -1,4 +1,4 @@
-import { SiteInfo, SiteResolver } from '@sitecore-jss/sitecore-jss-nextjs/middleware';
+import { SiteInfo, SiteResolver } from '@sitecore-jss/sitecore-jss-nextjs';
 import * as plugins from 'temp/site-resolver-plugins';
 
 /*
