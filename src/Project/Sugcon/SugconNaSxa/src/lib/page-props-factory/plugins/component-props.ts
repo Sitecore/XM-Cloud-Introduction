@@ -21,13 +21,13 @@ class ComponentPropsPlugin implements Plugin {
       props.componentProps = await this.componentPropsService.fetchServerSideComponentProps({
         layoutData: props.layoutData,
         context,
-        componentModule,
+        moduleFactory: componentModule,
       });
     } else {
       props.componentProps = await this.componentPropsService.fetchStaticComponentProps({
         layoutData: props.layoutData,
         context,
-        componentModule,
+        moduleFactory: componentModule,
       });
     }
 

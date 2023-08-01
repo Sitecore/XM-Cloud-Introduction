@@ -5,7 +5,6 @@ import {
   RenderingType,
   SitecoreContext,
   ComponentPropsContext,
-  handleEditorFastRefresh,
   EditingComponentPlaceholder,
   StaticPath,
 } from '@sitecore-jss/sitecore-jss-nextjs';
@@ -15,6 +14,7 @@ import { sitecorePagePropsFactory } from 'lib/page-props-factory';
 import { componentFactory, editingComponentFactory } from 'temp/componentFactory';
 import { sitemapFetcher } from 'lib/sitemap-fetcher';
 import Custom404Page from './404';
+import { handleEditorFastRefresh } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 
 const SitecorePage = ({
   notFound,

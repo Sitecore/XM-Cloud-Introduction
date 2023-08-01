@@ -3,8 +3,8 @@ import {
   DictionaryPhrases,
   ComponentPropsCollection,
   LayoutServiceData,
-  SiteInfo,
 } from '@sitecore-jss/sitecore-jss-nextjs';
+import { SiteInfo } from '@sitecore-jss/sitecore-jss-nextjs/site';
 
 /**
  * Sitecore page props
