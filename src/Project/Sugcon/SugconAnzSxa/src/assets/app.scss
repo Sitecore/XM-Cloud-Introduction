@@ -71,24 +71,25 @@ Styles for default JSS error components
     background-color: lightyellow;
 }
 
-body{
+body {
     background-color: #f6f6f6;
+    width: 100%;
+    display: grid;
 }
-header{
+header {
     background-color: white;
-    .component{
-        margin-top: 5px;
-    }
-    .navigation{
+    display: grid;
+    width: 100%;
+    .navigation {
         margin-top: 50px;
     }
-    .richtext{
-        background-color: #707070;
+    .richtext {
+        background-color: #666;
         font-size: 0.8em;
         a {
             text-decoration: none;
             color: white;
-            :after{
+            :after {
                 content: none;
             }
         }
@@ -98,9 +99,8 @@ header{
             padding-bottom: 10px;
         }
     }
-
 }
-footer{
+footer {
     background-color: #707070;
     color: white;
     display: grid;
@@ -110,14 +110,12 @@ footer{
         margin-top: 0px;
     }
 }
-
 p{
     font-family: 'AvenirNextW05-Regular','Arial';
     color: #707070;
       font-size: 18px;
   }
-
-h1{
+h1 {
     margin-top: 0;
     color: #232323;
     font-weight: 900;
@@ -129,7 +127,6 @@ h1{
         text-decoration: none;
     }
 }
-
 h2{
     color: #232323;
     font-weight: 900;
@@ -142,21 +139,28 @@ h3 {
     font-family: 'AvenirNextW05-Bold',Arial, Helvetica, sans-serif;;
     font-size: 24px;
   }
-
-.component{
-    margin-top: 15px;
-  }
  .centered-block {
      max-width: 1200px;
      margin: auto;
+    display: grid;
  } 
 
- .background-dark-grey{
-    background-color: #707070;
+.background-dark-grey {
+    background-color: #666;
  }
+
+.background-light-grey {
+    background-color: #f6f6f6;
+}
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
 // Finally add custom components
+@import "components/cta";
 @import "components/hero";
+@import "components/fixed-width-container";
 @import "components/organiserList";
 @import "components/sponsorList";
 @import "components/title";
 @import "components/navigation";
+@import "components/announcementbar";
