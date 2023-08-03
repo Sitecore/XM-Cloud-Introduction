@@ -1,45 +1,57 @@
 .thumbnail {
     position: relative;
+    padding: 60px 20px;
 }
 
 .caption {
-    position: absolute;
-    top: 45%;
-    left: 10%;
-    width: 30%;
+
     color: black;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 40px;
     background-color: white;
-    opacity: 80%;
+    //opacity: 80%;
 
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.85);
+
+    @media (min-width: 1024px) {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        width: 30%;
+    }
 }
 
 @media (min-width: 1824px) {
     .caption {
         position: absolute;
-        top: 20%;
-        left: 30%;
+        //top: 20%;
+        //left: 30%;
         width: 20%;
         color: black;
         padding-left: 20px;
         padding-right: 20px;
         font-size: 40px;
         background-color: white;
-        opacity: 80%;
-    
+        //opacity: 80%;    
         padding: 2rem;
         background-color: rgba(255, 255, 255, 0.85);
     }
   }
 
 .heroimage {
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+
+    @media (min-width: 1024px) {
     width: 3000px;
     height: 650px;
-    object-fit: cover;
+        position: relative;
+    }
 }
 
 .hero-label {
@@ -49,4 +61,62 @@
     letter-spacing: 2.8px;
     text-transform: uppercase;
     font-family: "AvenirNextW05-Regular", "Arial";
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 60px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.hero-backdrop {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.85);
+
+    @media (min-width: 1024px) {
+        width: 60%;
+        position: absolute;
+    }
+}
+
+.hero-text {
+    p {
+        color: #000;
+    }
+}
+
+.link-button  {
+    display: inline-block;
+    font-weight: 400;
+    text-decoration: none;
+    transition: 0.3s all;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    min-width: 229px;
+    text-align: center;
+    padding: 16px 30px 17px;
+}
+
+.link-button.primary, .link-button.primary a {
+    border: 1px solid #AB0000;
+    background-color: #AB0000;
+    color: #fff;
+    opacity: 1;
+    transition: opacity 0.5s;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &::after {
+        content: none;
+    }
+
 }

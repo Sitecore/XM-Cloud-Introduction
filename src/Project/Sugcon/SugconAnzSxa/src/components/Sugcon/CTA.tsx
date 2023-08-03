@@ -31,38 +31,26 @@ const CTA = (props: CTAProps): JSX.Element => (
 export const Default = (props: CTAProps): JSX.Element => {
   if (props.fields) {
     return (
-      <div className={`component cta mb-3 ${props.params.styles}`}>
+      <div className={`component cta ${props.params.styles}`}>
         <div className="row justify-content-start">
           <div className="col-12 col-lg-5">
-            <div className="bg-white text-dark p-2">
+            <div className="bg-white text-dark p-5">
               <h3 className="pb-4">
                 <Text field={props.fields.Headline} />
               </h3>
               <div className="pb-3 fs-5">
                 <RichText field={props.fields.Text} />
               </div>
-              <div className="text-dark fs-5 fw-bold">
-                <Link field={props.fields.Link}></Link>
-                <i className="bi bi-arrow-right"></i>
+              <div className="text-dark fs-5 fw-bold link-wrapper">
+                <Link className="link-arrow" field={props.fields.Link}></Link>
+                <i className="bi bi-arrow-right red-color"></i>
               </div>
             </div>
           </div>
-          <div className="ctaImage col-lg-7">
-            <Image media={props.fields.Image} className="img-fluid"></Image>
+          <div className="col-lg-7">
+            <Image media={props.fields.Image} className="img-fluid ctaImage"></Image>
           </div>
         </div>
-      </div>
-    );
-  }
-  return <CTA {...props} />;
-};
-
-export const Test = (props: CTAProps): JSX.Element => {
-  if (props.fields) {
-    return (
-      <div>
-        <p>CTA Component</p>
-        <Text field={props.fields.Headline} />
       </div>
     );
   }

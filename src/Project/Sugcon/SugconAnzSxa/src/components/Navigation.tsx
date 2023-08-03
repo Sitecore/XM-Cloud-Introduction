@@ -166,23 +166,6 @@ const NavigationList = (props: NavigationProps) => {
 
   return (
     <>
-      {/* <li
-        className={props.fields.Styles.concat('rel-level' + props.relativeLevel).join(' ')}
-        key={props.fields.Id}
-        tabIndex={0}
-      >
-        <div className="navigation-title">
-          <Link
-            field={getLinkField(props)}
-            editable={sitecoreContext.pageEditing}
-            onClick={props.handleClick}
-          >
-            {getNavigationText(props)}
-          </Link>
-        </div>
-        {children.length > 0 ? <ul className="clearfix">{children}</ul> : null}
-      </li> */}
-
       <li className={props.fields.Styles.join(' ')} key={props.fields.Id} tabIndex={0}>
         <div className="navigation-title">
           <Link
