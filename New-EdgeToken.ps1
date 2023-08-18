@@ -7,6 +7,13 @@ param (
 
 $ErrorActionPreference = "Stop"
 
+Write-Host "Restoring Sitecore CLI..." -ForegroundColor Green
+dotnet tool restore
+Write-Host "Installing Sitecore CLI Plugins..."
+dotnet sitecore --help | Out-Null
+Write-Host "Logging into Sitecore..." -ForegroundColor Green
+dotnet sitecore cloud login
+
 $XmCloudVersion = (get-content sitecore.json | ConvertFrom-Json).plugins -match 'Sitecore.DevEx.Extensibility.XMCloud' 
 if ($XmCloudVersion -eq '' -or $LASTEXITCODE -ne 0) {
     Write-Error "Unable to find version of XM Cloud Plugin"
