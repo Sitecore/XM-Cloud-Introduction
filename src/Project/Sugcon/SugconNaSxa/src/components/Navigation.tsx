@@ -108,7 +108,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
 
       <div className={`component navigation ${styles}`}>
         <div className="component-content d-flex justify-content-end">
-          <nav className="navbar navbar-expand-lg navbar-light">
+          <nav className="navbar navbar-expand-xl navbar-light">
             <button
               className="navbar-toggler ms-auto mb-3"
               type="button"
