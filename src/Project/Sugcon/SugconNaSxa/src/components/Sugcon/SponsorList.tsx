@@ -79,13 +79,13 @@ export const Default = (props: SponsorListProps): JSX.Element => {
 export const Platinum = (props: SponsorListProps): JSX.Element => {
   if (props.fields) {
     return (
-      <div className={`component sponsor-list sponsor-platinum ${props.params.styles}`}>
-        <div className="component-content container">
+      <div className={`component ${props.params.styles}`}>
+        <div className="component-content container default">
           <div className="row">
             <h2>
               <Text field={props.fields?.Category} />
             </h2>
-            <div className="row">
+            <div className="row sponsor-list sponsor-platinum">
               {props.fields?.Sponsors?.length == 0 ? (
                 <div>No Organizers</div>
               ) : (
