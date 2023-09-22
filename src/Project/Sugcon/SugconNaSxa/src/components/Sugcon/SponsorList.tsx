@@ -86,40 +86,40 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
               <Text field={props.fields?.Category} />
             </h2>
             <div className="row">
-            {props.fields?.Sponsors?.length == 0 ? (
-              <div>No Organizers</div>
-            ) : (
-              props.fields?.Sponsors?.map((Sponsor) => {
-                return (
-                  <div key={Sponsor.fields.SponsorName.value} className="row">
-                    <div className="col-12 col-md-6 sponsor--platinum__block">
-                      <p className="sponsor-platinum__label">
-                        <Text field={props?.fields?.Category} />
-                      </p>
-                      <h3 className="sponsor-platinum__name">
-                        <Text field={Sponsor?.fields?.SponsorName} />
-                      </h3>
-                      <br />
-                      <RichText field={Sponsor?.fields?.SponsorDescription} />
-                      {Sponsor?.fields?.SponsorUrlLink?.value?.href ? (
-                        <Link field={Sponsor?.fields?.SponsorUrlLink}></Link>
-                      ) : (
-                        ''
-                      )}
-                    </div>
-                    <div className="col-12 col-md-6">
-                      <div className="sponsor--platinum__img--outer">
-                        <div className="sponsor--platinum__img">
-                          <picture>
-                            <Image field={Sponsor?.fields?.SponsorLogo} />
-                          </picture>
+              {props.fields?.Sponsors?.length == 0 ? (
+                <div>No Organizers</div>
+              ) : (
+                props.fields?.Sponsors?.map((Sponsor) => {
+                  return (
+                    <div key={Sponsor.fields.SponsorName.value} className="row">
+                      <div className="col-12 col-md-6 sponsor--platinum__block">
+                        <p className="sponsor-platinum__label">
+                          <Text field={props?.fields?.Category} />
+                        </p>
+                        <h3 className="sponsor-platinum__name">
+                          <Text field={Sponsor?.fields?.SponsorName} />
+                        </h3>
+                        <br />
+                        <RichText field={Sponsor?.fields?.SponsorDescription} />
+                        {Sponsor?.fields?.SponsorUrlLink?.value?.href ? (
+                          <Link field={Sponsor?.fields?.SponsorUrlLink}></Link>
+                        ) : (
+                          ''
+                        )}
+                      </div>
+                      <div className="col-12 col-md-6">
+                        <div className="sponsor--platinum__img--outer">
+                          <div className="sponsor--platinum__img">
+                            <picture>
+                              <Image field={Sponsor?.fields?.SponsorLogo} />
+                            </picture>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })
-            )}
+                  );
+                })
+              )}
             </div>
           </div>
         </div>
