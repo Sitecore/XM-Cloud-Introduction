@@ -93,9 +93,6 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
                   return (
                     <div key={Sponsor.fields.SponsorName.value} className="row">
                       <div className="col-12 col-md-6 sponsor--platinum__block">
-                        <p className="sponsor-platinum__label">
-                          <Text field={props?.fields?.Category} />
-                        </p>
                         <h3 className="sponsor-platinum__name">
                           <Text field={Sponsor?.fields?.SponsorName} />
                         </h3>
