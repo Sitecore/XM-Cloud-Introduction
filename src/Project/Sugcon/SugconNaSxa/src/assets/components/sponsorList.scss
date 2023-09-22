@@ -41,18 +41,6 @@
     padding-right: 40px;
     padding-left: 20px;
 
-    :after {
-        display: block;
-        content: " ";
-        position: absolute;
-        width: 87px;
-        height: 87px;
-        top: -10px;
-        right: -10px;
-        border-top: 15px solid #fe2911;
-        border-right: 15px solid #fe2911;
-    }
-
     img {
         width: 80%;
         height: 100%;
