@@ -45,9 +45,6 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
           {fields?.Title?.value ? 'SUGCON NA - ' + fields.Title.value.toString() : 'SUGCON NA'}
         </title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&display=swap" rel="stylesheet" />
         {/* Meta Tags */}
         {fields?.MetaDescription?.value ? (
           <meta name="description" content={`${fields?.MetaDescription?.value}`} />
