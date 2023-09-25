@@ -85,13 +85,13 @@ export const Platinum = (props: SponsorListProps): JSX.Element => {
             <h2>
               <Text field={props.fields?.Category} />
             </h2>
-            <div className="row sponsor-list sponsor-platinum">
+            <div className="row sponsor-list">
               {props.fields?.Sponsors?.length == 0 ? (
                 <div>No Organizers</div>
               ) : (
                 props.fields?.Sponsors?.map((Sponsor) => {
                   return (
-                    <div key={Sponsor.fields.SponsorName.value} className="row">
+                    <div key={Sponsor.fields.SponsorName.value} className="row sponsor-platinum">
                       <div className="col-12 col-md-6 sponsor--platinum__block">
                         <h3 className="sponsor-platinum__name">
                           <Text field={Sponsor?.fields?.SponsorName} />
