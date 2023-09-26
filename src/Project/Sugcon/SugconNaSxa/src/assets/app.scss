@@ -98,12 +98,10 @@ header {
       padding-top: 10px;
       padding-bottom: 10px;
     }
-  }
-}
-#header {
-  img {
-    width: 315px;
-    margin: 15px;
+    img {
+      width: 315px;
+      margin: 15px;
+    }
   }
 }
 footer {
@@ -111,6 +109,7 @@ footer {
   color: white;
   display: grid;
   width: 100%;
+  margin-top: 25px;
   .component {
     padding: 20px;
     margin-top: 0px;
