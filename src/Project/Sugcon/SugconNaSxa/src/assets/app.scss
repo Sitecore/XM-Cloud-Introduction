@@ -80,6 +80,10 @@ header {
   background-color: white;
   display: grid;
   width: 100%;
+  img {
+    width: 315px;
+    margin: 15px;
+  }
   .navigation {
     margin-top: 50px;
   }
@@ -97,10 +101,6 @@ header {
       margin: 0;
       padding-top: 10px;
       padding-bottom: 10px;
-    }
-    img {
-      width: 315px;
-      margin: 15px;
     }
   }
 }
