@@ -43,6 +43,7 @@ export const Default = (props: CTAProps): JSX.Element => {
               </div>
               <div className="text-dark fs-5 fw-bold link-wrapper">
                 <Link className="link-arrow" field={props.fields.Link}></Link>
+                <i className="bi bi-arrow-right red-color"></i>
               </div>
             </div>
           </div>
