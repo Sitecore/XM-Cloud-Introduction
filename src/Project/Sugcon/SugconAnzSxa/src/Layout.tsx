@@ -83,7 +83,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
         )}
       </Head>
 
-      {/* root placeholder for the app, which we add components to using route data */}
+      {/* Root placeholder for the app, which we add components to using route data */}
       <div className={mainClassPageEditing}>
         <header>
           <div id="header" className="container-fluid">
