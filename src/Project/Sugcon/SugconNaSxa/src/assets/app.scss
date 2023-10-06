@@ -81,14 +81,16 @@ header {
   display: grid;
   width: 100%;
   img {
-    width: 315px;
+    width: 250px;
     margin: 15px;
+    @media (min-width: 576px) {
+      width: 315px;
+    }
   }
   .navigation {
-    margin-top: 50px;
+    margin-top: 25px;
   }
   .richtext {
-    background-color: #666;
     font-size: 0.8em;
     a {
       text-decoration: none;
