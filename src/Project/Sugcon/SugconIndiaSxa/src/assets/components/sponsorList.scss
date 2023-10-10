@@ -25,7 +25,7 @@
   width: 100%;
   color: #232323;
   font-weight: 900;
-  font-family: 'AvenirNextW05-Bold', Arial, Helvetica, sans-serif;
+  font-family: 'Mulish', 'AvenirNextW05-Bold', Arial, Helvetica, sans-serif;
   margin-bottom: 0;
   word-break: break-word;
 }
@@ -40,18 +40,6 @@
   padding-bottom: 40px;
   padding-right: 40px;
   padding-left: 20px;
-
-  :after {
-    display: block;
-    content: ' ';
-    position: absolute;
-    width: 87px;
-    height: 87px;
-    top: -10px;
-    right: -10px;
-    border-top: 15px solid #fe2911;
-    border-right: 15px solid #fe2911;
-  }
 
   img {
     width: 80%;
@@ -123,7 +111,8 @@
   }
 
   a {
-    text-decoration: none;
+    color: #28327d;
+    text-decoration: underline;
   }
 }
 
@@ -133,6 +122,7 @@
   }
 
   a {
-    text-decoration: none;
+    color: #28327d;
+    text-decoration: underline;
   }
 }
