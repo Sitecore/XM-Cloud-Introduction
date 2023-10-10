@@ -48,8 +48,6 @@
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import 'bootstrap/scss/utilities/api';
 
-@import 'AvenirNext.scss';
-
 a[target='_blank']:after {
   content: '\1F5D7';
 }
@@ -82,6 +80,13 @@ header {
   background-color: white;
   display: grid;
   width: 100%;
+  img {
+    width: 250px;
+    margin: 15px;
+    @media (min-width: 576px) {
+      width: 315px;
+    }
+  }
   .navigation {
     margin-top: 50px;
   }
@@ -107,13 +112,14 @@ footer {
   color: white;
   display: grid;
   width: 100%;
+  margin-top: 25px;
   .component {
     padding: 20px;
     margin-top: 0px;
   }
 }
 p {
-  font-family: 'AvenirNextW05-Regular', 'Arial';
+  font-family: 'Mulish', 'AvenirNextW05-Regular', 'Arial';
   color: #707070;
   font-size: 18px;
 }
@@ -121,7 +127,7 @@ h1 {
   margin-top: 0;
   color: #232323;
   font-weight: 900;
-  font-family: 'AvenirNextW05-Bold';
+  font-family: 'Mulish', 'AvenirNextW05-Bold';
   font-size: 48px;
   line-height: 50px;
 
@@ -132,13 +138,13 @@ h1 {
 h2 {
   color: #232323;
   font-weight: 900;
-  font-family: 'AvenirNextW05-Bold';
+  font-family: 'Mulish', 'AvenirNextW05-Bold';
   font-size: 36px;
 }
 h3 {
   color: #232323;
   font-weight: 900;
-  font-family: 'AvenirNextW05-Bold', Arial, Helvetica, sans-serif;
+  font-family: 'Mulish', 'AvenirNextW05-Bold', Arial, Helvetica, sans-serif;
   font-size: 24px;
 }
 .centered-block {
