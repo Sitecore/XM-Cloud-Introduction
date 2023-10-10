@@ -1,17 +1,16 @@
 /*Organiser*/
 
-.organizer
-{
+.organizer {
   padding-left: 12px;
   padding-right: 12px;
   margin-top: 24px;
 
   a {
-      color: #19a5a2;
+    color: #19a5a2;
   }
 }
 
-.card img{
+.card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -22,6 +21,6 @@
   padding: 16px;
 }
 
-.cardBody h3{
+.cardBody h3 {
   font-size: 1.2em;
 }
