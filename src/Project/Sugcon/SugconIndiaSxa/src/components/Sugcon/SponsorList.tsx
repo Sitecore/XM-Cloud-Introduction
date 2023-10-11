@@ -75,46 +75,49 @@ export const Default = (props: SponsorListProps): JSX.Element => {
 
   return <SponsorListDefaultComponent {...props} />;
 };
-
 export const Platinum = (props: SponsorListProps): JSX.Element => {
   if (props.fields) {
     return (
-      <div className={`component sponsor-list sponsor-platinum ${props.params.styles}`}>
-        <div className="component-content container">
-          {props.fields?.Sponsors?.length == 0 ? (
-            <div>No Organizers</div>
-          ) : (
-            props.fields?.Sponsors?.map((Sponsor) => {
-              return (
-                <div key={Sponsor.fields.SponsorName.value} className="row">
-                  <div className="col-12 col-md-6 sponsor--platinum__block">
-                    <p className="sponsor-platinum__label">
-                      <Text field={props?.fields?.Category} />
-                    </p>
-                    <h2 className="sponsor-platinum__name">
-                      <Text field={Sponsor?.fields?.SponsorName} />
-                    </h2>
-                    <br />
-                    <RichText field={Sponsor?.fields?.SponsorDescription} />
-                    {Sponsor?.fields?.SponsorUrlLink?.value?.href ? (
-                      <Link field={Sponsor?.fields?.SponsorUrlLink}></Link>
-                    ) : (
-                      ''
-                    )}
-                  </div>
-                  <div className="col-12 col-md-6">
-                    <div className="sponsor--platinum__img--outer">
-                      <div className="sponsor--platinum__img">
-                        <picture>
-                          <Image field={Sponsor?.fields?.SponsorLogo} />
-                        </picture>
+      <div className={`component ${props.params.styles}`}>
+        <div className="component-content container default">
+          <div className="row">
+            <h2>
+              <Text field={props.fields?.Category} />
+            </h2>
+            <div className="row sponsor-list">
+              {props.fields?.Sponsors?.length == 0 ? (
+                <div>No Organizers</div>
+              ) : (
+                props.fields?.Sponsors?.map((Sponsor) => {
+                  return (
+                    <div key={Sponsor.fields.SponsorName.value} className="row sponsor-platinum">
+                      <div className="col-12 col-md-6 sponsor--platinum__block">
+                        <h3 className="sponsor-platinum__name">
+                          <Text field={Sponsor?.fields?.SponsorName} />
+                        </h3>
+                        <br />
+                        <RichText field={Sponsor?.fields?.SponsorDescription} />
+                        {Sponsor?.fields?.SponsorUrlLink?.value?.href ? (
+                          <Link field={Sponsor?.fields?.SponsorUrlLink}></Link>
+                        ) : (
+                          ''
+                        )}
+                      </div>
+                      <div className="col-12 col-md-6">
+                        <div className="sponsor--platinum__img--outer">
+                          <div className="sponsor--platinum__img">
+                            <picture>
+                              <Image field={Sponsor?.fields?.SponsorLogo} />
+                            </picture>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              );
-            })
-          )}
+                  );
+                })
+              )}
+            </div>
+          </div>
         </div>
       </div>
     );
