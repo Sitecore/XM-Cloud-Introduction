@@ -73,13 +73,13 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
         )}
 
         {fields?.OgImage?.value?.src ? (
-          <meta property="og:Image" content={`${fields?.OgImage?.value?.src}`} />
+          <meta property="og:image" content={`${fields?.OgImage?.value?.src}`} />
         ) : (
           ''
         )}
 
         {fields?.OgType?.value ? (
-          <meta property="og:Type" content={`${fields?.OgType?.value}`} />
+          <meta property="og:type" content={`${fields?.OgType?.value}`} />
         ) : (
           ''
         )}
