@@ -59,7 +59,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
         )}
         {/* Open Graph Tags */}
         {fields?.OgTitle?.value ? (
-          <meta property="og:title" content={`${fields?.OgTitle?.value}`} />
+          <meta name="title" property="og:title" content={`${fields?.OgTitle?.value}`} />
         ) : (
           ''
         )}
@@ -71,7 +71,7 @@ const Layout = ({ layoutData }: LayoutProps): JSX.Element => {
         )}
 
         {fields?.OgImage?.value?.src ? (
-          <meta property="og:image" content={`${fields?.OgImage?.value?.src}`} />
+          <meta name="image" property="og:image" content={`${fields?.OgImage?.value?.src}`} />
         ) : (
           ''
         )}
