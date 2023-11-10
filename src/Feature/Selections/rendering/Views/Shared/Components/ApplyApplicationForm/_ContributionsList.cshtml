@@ -12,17 +12,24 @@
                     @contribution.Date.ToString("d")
                     @if (Model.NextStep == ApplicationStep.Contributions)
                     {
-                        <form method="post" class="float-right">
+                        <form method="post" class="float-right" onsubmit="return confirm('@Model.ContributionConfirmDeleteLabel.Value');">
                             <input asp-for="IsNavigation" type="hidden" value="false" />
                             <input asp-for="CurrentStep" type="hidden" value="Contributions" />
                             <input asp-for="DeleteContributionId" type="hidden" value="@contribution.Id" />
                             <button type="submit" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
                         </form>
+
+                        <form method="post" class="float-right">
+                            <input asp-for="IsNavigation" type="hidden" value="false" />
+                            <input asp-for="CurrentStep" type="hidden" value="Contributions" />
+                            <input asp-for="UpdateContributionId" type="hidden" value="@contribution.Id" />
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                        </form>
                     }
                 </div>
                 <div class="card-body">
                     <h5 class="card-title"><span class="badge badge-info">@contribution.Type</span> @contribution.Name</h5>
-                    <p class="card-text">@contribution.Description</p>
+                    <p class="card-text">@Html.Raw(Markdig.Markdown.ToHtml(contribution.Description))</p>
                     @if (contribution.Uri != null)
                     {
                         <a href="@contribution.Uri" target="_blank" class="card-link">@Model.ContributionLinkLabel.Value</a><br/>

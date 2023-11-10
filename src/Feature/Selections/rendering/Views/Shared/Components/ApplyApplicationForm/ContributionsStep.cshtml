@@ -20,6 +20,7 @@
         <form method="post">
             <input asp-for="IsNavigation" type="hidden" value="false"/>
             <input asp-for="CurrentStep" type="hidden" value="Contributions"/>
+            <input asp-for="UpdateContributionId" type="hidden"/>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-row">
                 <div class="form-group col-sm-12 col-md-12">
@@ -76,7 +77,15 @@
                 </div>
 
                 <div class="col-12">
-                    <button asp-for="AddLabel" type="submit" class="btn btn-primary"></button>
+                    @if (Model.UpdateContributionId.HasValue)
+                    {
+                        <input asp-for="IsUpdate" type="hidden" value="true"/>
+                        <button asp-for="UpdateLabel" type="submit" class="btn btn-primary"></button>
+                    }
+                    else
+                    {
+                        <button asp-for="AddLabel" type="submit" class="btn btn-primary"></button>
+                    }
                 </div>
             </div>
         </form>

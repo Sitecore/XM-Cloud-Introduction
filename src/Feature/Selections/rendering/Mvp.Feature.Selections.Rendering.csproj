@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Markdig" />
     <PackageReference Include="Mvp.Selections.Client" />
     <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
     <PackageReference Include="Sitecore.LayoutService.Client" />
