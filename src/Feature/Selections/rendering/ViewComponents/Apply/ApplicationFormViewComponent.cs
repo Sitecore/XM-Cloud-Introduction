@@ -452,7 +452,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     Uri = model.ContributionLink,
                     Type = model.ContributionType
                 };
-                foreach (int productId in model.ContributionProductIds ?? new List<int>())
+                foreach (int productId in model.ContributionProductIds)
                 {
                     contribution.RelatedProducts.Add(new Product(productId));
                 }

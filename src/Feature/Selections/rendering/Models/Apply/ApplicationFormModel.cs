@@ -101,7 +101,7 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public TextField ContributionProductsLabel { get; set; }
 
-        public List<int> ContributionProductIds { get; set; }
+        public List<int> ContributionProductIds { get; set; } = new ();
 
         public List<Product> Products { get; } = new ();
 
