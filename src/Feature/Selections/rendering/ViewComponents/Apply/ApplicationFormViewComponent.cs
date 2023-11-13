@@ -411,6 +411,27 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 await LoadProducts(model);
                 model.NextStep = ApplicationStep.Contributions;
             }
+            else if (model.IsNavigation.HasValue && !model.IsNavigation.Value && model.UpdateContributionId.HasValue && !model.IsUpdate)
+            {
+                Contribution editContribution =
+                    model.CurrentApplication.Contributions.FirstOrDefault(c =>
+                        c.Id == model.UpdateContributionId.Value);
+                if (editContribution != null)
+                {
+                    model.ContributionDate = editContribution.Date;
+                    model.ContributionName = editContribution.Name;
+                    model.ContributionDescription = editContribution.Description;
+                    model.ContributionLink = editContribution.Uri;
+                    model.ContributionType = editContribution.Type;
+                    foreach (Product product in editContribution.RelatedProducts)
+                    {
+                        model.ContributionProductIds.Add(product.Id);
+                    }
+                }
+
+                await LoadProducts(model);
+                model.NextStep = ApplicationStep.Contributions;
+            }
             else if (
                 model.IsNavigation.HasValue
                 && !model.IsNavigation.Value
@@ -423,7 +444,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 && model.ContributionDate.Value >= model.CurrentSelection.ApplicationsEnd.AddMonths(-_options.TimeFrameMonths)
                 && model.ContributionDate.Value <= model.CurrentSelection.ApplicationsEnd)
             {
-                Contribution contribution = new (Guid.Empty)
+                Contribution contribution = new (model.UpdateContributionId ?? Guid.Empty)
                 {
                     Date = model.ContributionDate.Value,
                     Name = model.ContributionName,
@@ -436,9 +457,23 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     contribution.RelatedProducts.Add(new Product(productId));
                 }
 
-                Response<Contribution> contributionResponse = await Client.AddContributionAsync(model.CurrentApplication.Id, contribution);
-                if (contributionResponse.StatusCode == HttpStatusCode.Created && contributionResponse.Result != null)
+                Response<Contribution> contributionResponse = model.UpdateContributionId.HasValue
+                    ? await Client.UpdateContributionAsync(model.UpdateContributionId.Value, contribution)
+                    : await Client.AddContributionAsync(model.CurrentApplication.Id, contribution);
+                if (contributionResponse.StatusCode is HttpStatusCode.Created or HttpStatusCode.OK && contributionResponse.Result != null)
                 {
+                    if (model.UpdateContributionId.HasValue)
+                    {
+                        Contribution editContribution =
+                            model.CurrentApplication.Contributions.FirstOrDefault(c =>
+                                c.Id == model.UpdateContributionId.Value);
+                        if (editContribution != null)
+                        {
+                            model.CurrentApplication.Contributions.Remove(editContribution);
+                        }
+                    }
+
+                    model.UpdateContributionId = null;
                     model.CurrentApplication.Contributions.Add(contributionResponse.Result);
                     model.ContributionDate = null;
                     model.ContributionName = null;
@@ -447,6 +482,11 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     model.ContributionType = ContributionType.Other;
                     model.ContributionProductIds = new List<int>();
                     ModelState.Clear();
+                }
+                else
+                {
+                    model.ErrorMessages.Add(contributionResponse.Message);
+                    model.NextStep = ApplicationStep.Error;
                 }
 
                 await LoadProducts(model);

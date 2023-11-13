@@ -37,5 +37,6 @@
     <PackageReference Update="Mvp.Selections.Client" Version="4.4.0" />
     <PackageReference Update="StyleCop.Analyzers" Version="1.1.118" />
     <PackageReference Update="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+    <PackageReference Update="Markdig" Version="0.33.0" />
   </ItemGroup>
 </Project>

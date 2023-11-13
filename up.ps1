@@ -28,6 +28,18 @@ $sugconNaHost = $envContent | Where-Object { $_ -imatch "^SUGCON_NA_HOST=.+" }
 $sitecoreDockerRegistry = $envContent | Where-Object { $_ -imatch "^SITECORE_DOCKER_REGISTRY=.+" }
 $sitecoreVersion = $envContent | Where-Object { $_ -imatch "^SITECORE_VERSION=.+" }
 
+if ([string]::IsNullOrEmpty($xmCloudHost) -or
+    [string]::IsNullOrEmpty($mvpHost) -or
+    [string]::IsNullOrEmpty($sugconeuHost) -or
+    [string]::IsNullOrEmpty($sugconanzHost) -or
+    [string]::IsNullOrEmpty($sugconindiaHost) -or
+    [string]::IsNullOrEmpty($sugconNaHost) -or
+    [string]::IsNullOrEmpty($sitecoreDockerRegistry) -or
+    [string]::IsNullOrEmpty($sitecoreVersion))
+{
+    throw "Missing hostname, docker registry or sitecore version ENV variable!"
+}
+
 $xmCloudHost = $xmCloudHost.Split("=")[1]
 $mvpHost = $mvpHost.Split("=")[1]
 $sugconeuHost = $sugconeuHost.Split("=")[1]

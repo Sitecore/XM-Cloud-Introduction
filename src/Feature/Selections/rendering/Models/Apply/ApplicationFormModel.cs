@@ -107,7 +107,15 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public TextField AddLabel { get; set; }
 
+        public TextField UpdateLabel { get; set; }
+
         public Guid? DeleteContributionId { get; set; }
+
+        public Guid? UpdateContributionId { get; set; }
+
+        public bool IsUpdate { get; set; } = false;
+
+        public TextField ContributionConfirmDeleteLabel { get; set; }
 
         public TextField ConfirmationTitleLabel { get; set; }
 
