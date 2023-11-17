@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp6.0</TargetFramework>
+    <TargetFramework>netcoreapp8.0</TargetFramework>
     <AssemblyName>Mvp.Feature.Navigation</AssemblyName>
     <RootNamespace>Mvp.Feature.Navigation</RootNamespace>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
