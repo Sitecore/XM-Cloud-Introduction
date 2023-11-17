@@ -16,6 +16,41 @@
             </tr>
         </thead>
         <tbody>
+            <form id="filterForm" method="post">
+            <tr>
+                <td>
+                    <select asp-for="Filter.SelectionId" class="w-100">
+                        <option value=""></option>
+                            @foreach (Selection selection in Model.Selections)
+                            {
+                            <option value="@selection.Id">@selection.Year</option>
+                            }
+                    </select>
+                </td>
+                <td>
+                    <select asp-for="Filter.CountryId" class="w-100">
+                        <option value=""></option>
+                        @foreach (Country country in Model.Countries)
+                        {
+                            <option value="@country.Id">@country.Name</option>
+                        }
+                    </select>
+                </td>
+                <td><input asp-for="Filter.ApplicantName" class="w-100" /></td>
+                <td>
+                    <select asp-for="Filter.Status" class="w-100">
+                        <option value=""></option>
+                        @foreach (ApplicationStatus status in Enum.GetValues<ApplicationStatus>())
+                        {
+                            <option value="@status">@status</option>
+                        }
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+                <td><button type="submit" class="btn btn-primary"><i class="fa fa-filter"></i></button></td>
+            </tr>
+            </form>
             @foreach (Application application in Model.List)
             {
                 <tr>
@@ -26,6 +61,10 @@
                     <td>@application.Contributions.Count</td>
                     <td>@application.ModifiedOn?.ToString("u")</td>
                     <td>
+                        @if (application.Status == ApplicationStatus.Submitted)
+                        {
+                            <a href="@string.Format(Model.ReviewLinkFormat.Value, application.Id.ToString("D"))" class="btn btn-primary" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        }
                         <form id="remove@(application.Id)Form" method="post">
                             <input asp-for="RemoveApplicationId" type="hidden" value="@application.Id" />
                         </form>
