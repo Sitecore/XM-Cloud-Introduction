@@ -39,6 +39,8 @@ namespace Mvp.Feature.Selections.Models.Admin
 
         public List<Selection> Selections { get; set; } = new ();
 
+        public HyperLinkField ReviewSettingsLink { get; set; }
+
         public class ApplicationOverviewFilter
         {
             public Guid? SelectionId { get; set; }

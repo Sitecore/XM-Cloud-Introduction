@@ -1,0 +1,76 @@
+﻿---
+ID: "dc0b8ee2-e860-415c-8db1-98e3ea870bd3"
+Parent: "582d1a0e-6115-4638-80e3-ad051dc1b1e4"
+Template: "582d1a0e-6115-4638-80e3-ad051dc1b1e4"
+Path: /sitecore/templates/Feature/Selections/Admin/ApplicationReviewSettings/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "06d952f9-6414-48fc-a340-bcdc66a92540"
+      Hint: AddReviewerTitleLabel
+      Value: Add Reviewer(s)
+    - ID: "0e2011d1-7be3-465d-a83b-692a86640c15"
+      Hint: ApplicationIdLabel
+      Value: ID
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20231117T190508Z
+    - ID: "334aacfa-fa69-489e-994f-932fa391df27"
+      Hint: ApplicationCountryNameLabel
+      Value: Country
+    - ID: "3566d6ed-5aad-43ca-9a5a-11802f2e476c"
+      Hint: ReviewersLabel
+      Value: Reviewers
+    - ID: "39fbf760-28ca-4bc5-b78d-0ae1852b1e67"
+      Hint: ConfirmDeleteLabelFormat
+      Value: "Are you sure you want to remove {0} from reviewing this application?"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "6f54e73f-8d5a-4c54-867c-46dbd03d6a89"
+      Hint: AddReviewerCancelLabel
+      Value: Cancel
+    - ID: "7fd3774b-d000-4954-8d30-d1911cb7fa98"
+      Hint: ReviewerRemoveText
+      Value: You can only remove a Reviewer that's assigned to a role specific to this application. To remove review rights for countries, regions and/or MVP Types use the Role Management screens.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fdd483a9-aef1-4bde-9908-87a6027c9432"
+    - ID: "90da8cf5-f08d-4d2e-8ce7-f74354960249"
+      Hint: AddReviewerSubmitLabel
+      Value: Add
+    - ID: "918f3198-a63b-460c-bcd1-fe63236d4e3a"
+      Hint: ApplicationApplicantNameLabel
+      Value: Applicant Name
+    - ID: "99ca9a3b-6ac1-419a-910d-f87b611f7721"
+      Hint: AddReviewerUserEmailLabel
+      Value: User Email
+    - ID: "a3aca246-206e-4514-b470-a385b76b0cf9"
+      Hint: TitleLabel
+      Value: Application Review Settings
+    - ID: "b31c8f94-6af2-43b7-b09d-94785b8fb9fb"
+      Hint: ApplicationSelectionYearLabel
+      Value: Selection Year
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "c62b26cf-21be-4180-92ce-7f9a794881c4"
+      Hint: AddReviewerLabel
+      Value: Add Reviewer(s)
+    - ID: "cdaff429-67fa-4eae-b26c-bc0a87596a45"
+      Hint: ApplicationDataLabel
+      Value: Application Data
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20231121T111512Z
+    - ID: "f36c3020-8d0b-4fbd-8f97-74700ad8dcc9"
+      Hint: ApplicationMvpTypeNameLabel
+      Value: MVP Type

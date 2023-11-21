@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            <form id="filterForm" method="post">
+            <form id="filterForm">
             <tr>
                 <td>
                     <select asp-for="Filter.SelectionId" class="w-100">
@@ -61,12 +61,13 @@
                     <td>@application.Contributions.Count</td>
                     <td>@application.ModifiedOn?.ToString("u")</td>
                     <td>
+                        <a asp-for="ReviewSettingsLink" href="@Model.ReviewSettingsLink.Value.Href?id=@application.Id" class="btn btn-primary"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                         @if (application.Status == ApplicationStatus.Submitted)
                         {
                             <a href="@string.Format(Model.ReviewLinkFormat.Value, application.Id.ToString("D"))" class="btn btn-primary" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
                         }
                         <form id="remove@(application.Id)Form" method="post">
-                            <input asp-for="RemoveApplicationId" type="hidden" value="@application.Id" />
+                            <input asp-for="RemoveApplicationId" type="hidden" value="@application.Id"/>
                         </form>
                         <button type="submit" class="btn btn-danger" form="remove@(application.Id)Form"><i class="fa fa-trash" aria-hidden="true"></i></button>
                     </td>

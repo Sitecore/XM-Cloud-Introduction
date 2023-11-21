@@ -40,6 +40,7 @@ namespace Mvp.Feature.Selections.Extensions
             options.AddViewComponent(ScoreCardDetailViewComponent.ViewComponentName);
             options.AddViewComponent(AwardViewComponent.ViewComponentName);
             options.AddViewComponent(ApplicationCommentViewComponent.ViewComponentName);
+            options.AddViewComponent(ApplicationReviewSettingsViewComponent.ViewComponentName);
             return options;
         }
     }

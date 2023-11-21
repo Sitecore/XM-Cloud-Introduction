@@ -500,8 +500,12 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 Response<bool> deleteResponse = await Client.RemoveContributionAsync(model.CurrentApplication.Id, model.DeleteContributionId.Value);
                 if (deleteResponse.StatusCode == HttpStatusCode.NoContent)
                 {
-                    Contribution contribution = model.CurrentApplication.Contributions.Single(c => c.Id == model.DeleteContributionId);
-                    model.CurrentApplication.Contributions.Remove(contribution);
+                    Contribution contribution = model.CurrentApplication.Contributions.SingleOrDefault(c => c.Id == model.DeleteContributionId);
+                    if (contribution != null)
+                    {
+                        model.CurrentApplication.Contributions.Remove(contribution);
+                    }
+
                     await LoadProducts(model);
                     model.NextStep = ApplicationStep.Contributions;
                 }
