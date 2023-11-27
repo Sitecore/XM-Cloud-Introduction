@@ -25,6 +25,8 @@ namespace Mvp.Feature.Selections.Models.Any
 
         public HyperLinkField MyApplicationsOverviewLink { get; set; }
 
+        public HyperLinkField MyContributionsOverviewLink { get; set; }
+
         public HyperLinkField MyCurrentApplicationLink { get; set; }
 
         public HyperLinkField MvpEmailContactLink { get; set; }

@@ -44,6 +44,9 @@
                     <a asp-for="MyCurrentApplicationLink"></a>
                 </li>
             }
+            <li>
+                <a asp-for="MyContributionsOverviewLink"></a>
+            </li>
         </ul>
     </div>
     @if (Model.CurrentUser.HasRight(Right.Review) || Model.CurrentUser.HasRight(Right.Admin))
