@@ -19,6 +19,14 @@ Param (
 $ErrorActionPreference = "Stop";
 
 $envContent = Get-Content .env -Encoding UTF8
+
+# Double check whether init has been run
+$envCheckVariable = "HOST_LICENSE_FOLDER"
+$envCheck = $envContent | Where-Object { $_ -imatch "^$envCheckVariable=.+" }
+if (-not $envCheck) {
+    throw "$envCheckVariable does not have a value. Did you run 'init.ps1 -InitEnv'?"
+}
+
 $xmCloudHost = $envContent | Where-Object { $_ -imatch "^CM_HOST=.+" }
 $mvpHost = $envContent | Where-Object { $_ -imatch "^MVP_RENDERING_HOST=.+" }
 $sugconeuHost = $envContent | Where-Object { $_ -imatch "^SUGCON_EU_HOST=.+" }
@@ -48,13 +56,6 @@ $sugconindiaHost = $sugconindiaHost.Split("=")[1]
 $sugconNaHost = $sugconNaHost.Split("=")[1]
 $sitecoreDockerRegistry = $sitecoreDockerRegistry.Split("=")[1]
 $sitecoreVersion = $sitecoreVersion.Split("=")[1]
-
-# Double check whether init has been run
-$envCheckVariable = "HOST_LICENSE_FOLDER"
-$envCheck = $envContent | Where-Object { $_ -imatch "^$envCheckVariable=.+" }
-if (-not $envCheck) {
-    throw "$envCheckVariable does not have a value. Did you run 'init.ps1 -InitEnv'?"
-}
 
 if (-Not $SkipBuild) {
     Write-Host "Keeping XM Cloud base image up to date" -ForegroundColor Green
