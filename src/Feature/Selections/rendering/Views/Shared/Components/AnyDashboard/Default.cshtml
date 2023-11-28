@@ -6,7 +6,13 @@
         @if (Model.CurrentSelection?.AreApplicationsOpen() ?? false)
         {
             <div class="alert alert-primary" role="alert">
-                <span asp-for="ApplicationsOpenLabel"></span> @Model.CurrentSelection.ApplicationsEnd.ToString("d")
+                <span asp-for="ApplicationsOpenLabel"></span>
+                <div class="d-inline countdown" data-date="@Model.CurrentSelection.ApplicationsEnd.ToString("O")">
+                    <span class="countdown-days"></span>d
+                    <span class="countdown-hours"></span>h
+                    <span class="countdown-minutes"></span>m
+                    <span class="countdown-seconds"></span>s
+                </div>
             </div>
         }
         else
@@ -18,7 +24,13 @@
         @if ((Model.CurrentUser.HasRight(Right.Review) || Model.CurrentUser.HasRight(Right.Admin)) && (Model.CurrentSelection?.AreReviewsOpen() ?? false))
         {
             <div class="alert alert-primary" role="alert">
-                <span asp-for="ReviewsOpenLabel"></span> @Model.CurrentSelection.ReviewsEnd.ToString("d")
+                <span asp-for="ReviewsOpenLabel"></span>
+                <div class="d-inline countdown" data-date="@Model.CurrentSelection.ReviewsEnd.ToString("O")">
+                    <span class="countdown-days"></span>d
+                    <span class="countdown-hours"></span>h
+                    <span class="countdown-minutes"></span>m
+                    <span class="countdown-seconds"></span>s
+                </div>
             </div>
         }
         else if (Model.CurrentUser.HasRight(Right.Review) || Model.CurrentUser.HasRight(Right.Admin))
