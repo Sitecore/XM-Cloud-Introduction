@@ -27,22 +27,22 @@
 
 <ul class="progressbar d-none d-md-flex">
     <li class="fa-check-square-o @(Model.NextStep >= ApplicationStep.Consent ? "active" : string.Empty)">
-        <strong>@(Model.IsEditing ? Html.Raw(Model.ConsentStepLabel.EditableMarkup) : Model.ConsentStepLabel.Value)</strong>
+        <strong>@(Model.IsEditing ? Html.Raw(Model.ConsentStepLabel?.EditableMarkup) : Model.ConsentStepLabel?.Value)</strong>
     </li>
     <li class="fa-user @(Model.NextStep >= ApplicationStep.Profile ? "active" : string.Empty)">
-        <strong>@(Model.IsEditing ? Html.Raw(Model.ProfileStepLabel.EditableMarkup) : Model.ProfileStepLabel.Value)</strong>
+        <strong>@(Model.IsEditing ? Html.Raw(Model.ProfileStepLabel?.EditableMarkup) : Model.ProfileStepLabel?.Value)</strong>
     </li>
     <li class="fa-th-list @(Model.NextStep >= ApplicationStep.MvpType ? "active" : string.Empty)">
-        <strong>@(Model.IsEditing ? Html.Raw(Model.MypTypeStepLabel.EditableMarkup) : Model.MypTypeStepLabel.Value)</strong>
+        <strong>@(Model.IsEditing ? Html.Raw(Model.MypTypeStepLabel?.EditableMarkup) : Model.MypTypeStepLabel?.Value)</strong>
     </li>
     <li class="fa-bullseye @(Model.NextStep >= ApplicationStep.Objectives ? "active" : string.Empty)">
-        <strong>@(Model.IsEditing ? Html.Raw(Model.ObjectivesStepLabel.EditableMarkup) : Model.ObjectivesStepLabel.Value)</strong>
+        <strong>@(Model.IsEditing ? Html.Raw(Model.ObjectivesStepLabel?.EditableMarkup) : Model.ObjectivesStepLabel?.Value)</strong>
     </li>
     <li class="fa-handshake-o @(Model.NextStep >= ApplicationStep.Contributions ? "active" : string.Empty)">
-        <strong>@(Model.IsEditing ? Html.Raw(Model.ContributionsStepLabel.EditableMarkup) : Model.ContributionsStepLabel.Value)</strong>
+        <strong>@(Model.IsEditing ? Html.Raw(Model.ContributionsStepLabel?.EditableMarkup) : Model.ContributionsStepLabel?.Value)</strong>
     </li>
     <li class="fa-check @(Model.NextStep >= ApplicationStep.Confirmation ? "active" : string.Empty)">
-        <strong>@(Model.IsEditing ? Html.Raw(Model.ConfirmationStepLabel.EditableMarkup) : Model.ConfirmationStepLabel.Value)</strong>
+        <strong>@(Model.IsEditing ? Html.Raw(Model.ConfirmationStepLabel?.EditableMarkup) : Model.ConfirmationStepLabel?.Value)</strong>
     </li>
 </ul>
 <div class="progress d-md-none">

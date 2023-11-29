@@ -10,7 +10,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col font-weight-bold">
-                        @Html.Raw(Model.IsEditing ? Model.ApplicationIdLabel.EditableMarkup : Model.ApplicationIdLabel.Value)
+                        @Html.Raw(Model.IsEditing ? Model.ApplicationIdLabel?.EditableMarkup : Model.ApplicationIdLabel?.Value)
                     </div>
                     <div class="col">
                         @Model.Application.Id
@@ -18,7 +18,7 @@
                 </div>
                 <div class="row">
                     <div class="col font-weight-bold">
-                        @Html.Raw(Model.IsEditing ? Model.ApplicationApplicantNameLabel.EditableMarkup : Model.ApplicationApplicantNameLabel.Value)
+                        @Html.Raw(Model.IsEditing ? Model.ApplicationApplicantNameLabel?.EditableMarkup : Model.ApplicationApplicantNameLabel?.Value)
                     </div>
                     <div class="col">
                         @Model.Application.Applicant.Name
@@ -26,7 +26,7 @@
                 </div>
                 <div class="row">
                     <div class="col font-weight-bold">
-                        @Html.Raw(Model.IsEditing ? Model.ApplicationSelectionYearLabel.EditableMarkup : Model.ApplicationSelectionYearLabel.Value)
+                        @Html.Raw(Model.IsEditing ? Model.ApplicationSelectionYearLabel?.EditableMarkup : Model.ApplicationSelectionYearLabel?.Value)
                     </div>
                     <div class="col">
                         @Model.Application.Selection.Year
@@ -34,7 +34,7 @@
                 </div>
                 <div class="row">
                     <div class="col font-weight-bold">
-                        @Html.Raw(Model.IsEditing ? Model.ApplicationMvpTypeNameLabel.EditableMarkup : Model.ApplicationMvpTypeNameLabel.Value)
+                        @Html.Raw(Model.IsEditing ? Model.ApplicationMvpTypeNameLabel?.EditableMarkup : Model.ApplicationMvpTypeNameLabel?.Value)
                     </div>
                     <div class="col">
                         @Model.Application.MvpType.Name
@@ -42,7 +42,7 @@
                 </div>
                 <div class="row">
                     <div class="col font-weight-bold">
-                        @Html.Raw(Model.IsEditing ? Model.ApplicationCountryNameLabel.EditableMarkup : Model.ApplicationCountryNameLabel.Value)
+                        @Html.Raw(Model.IsEditing ? Model.ApplicationCountryNameLabel?.EditableMarkup : Model.ApplicationCountryNameLabel?.Value)
                     </div>
                     <div class="col">
                         @Model.Application.Country.Name
@@ -55,7 +55,7 @@
         <div class="card-body">
             <h3 asp-for="ReviewersLabel" class="card-title"></h3>
             <div class="alert alert-warning">
-                @Html.Raw(Model.IsEditing ? Model.ReviewerRemoveText.EditableMarkup : Model.ReviewerRemoveText.Value)
+                @Html.Raw(Model.IsEditing ? Model.ReviewerRemoveText?.EditableMarkup : Model.ReviewerRemoveText?.Value)
             </div>
             <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
             <ul class="list-group">
@@ -95,7 +95,7 @@
                     <form id="addReviewerForm" method="post">
                         <div class="form-group">
                             <label asp-for="AddReviewerUserEmailLabel">
-                                @(Model.IsEditing ? Html.Raw(Model.AddReviewerUserEmailLabel.EditableMarkup) : Model.AddReviewerUserEmailLabel.Value)
+                                @(Model.IsEditing ? Html.Raw(Model.AddReviewerUserEmailLabel?.EditableMarkup) : Model.AddReviewerUserEmailLabel?.Value)
                             </label>
                             <span class="text-danger">*</span>
                             <input asp-for="AddReviewerUserEmails" type="email" class="form-control" value="" required/>

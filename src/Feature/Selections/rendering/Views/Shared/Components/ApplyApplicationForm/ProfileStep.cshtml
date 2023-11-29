@@ -10,8 +10,8 @@
             </div>
             <div class="col-5 text-right font-weight-bold">
                 @(Html.Raw(Model.IsEditing ?
-                    Model.StepLabelFormat.EditableMarkup :
-                    string.Format(Model.StepLabelFormat.Value, "<span class=\"currentstep\">2</span>", 6)))
+                    Model.StepLabelFormat?.EditableMarkup :
+                    string.Format(Model.StepLabelFormat?.Value ?? "{0} / {1}", "<span class=\"currentstep\">2</span>", 6)))
             </div>
         </div>
         <div class="container-fluid">

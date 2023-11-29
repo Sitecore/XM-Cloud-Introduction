@@ -8,7 +8,7 @@
     <form>
         <div class="form-group">
             <label asp-for="SelectedSelectionId">
-                @(Model.IsEditing ? Html.Raw(Model.SelectionLabel.EditableMarkup) : Model.SelectionLabel.Value)
+                @(Model.IsEditing ? Html.Raw(Model.SelectionLabel?.EditableMarkup) : Model.SelectionLabel?.Value)
             </label>
             <span class="text-danger">*</span>
             <select asp-for="SelectedSelectionId" class="form-control">
@@ -20,7 +20,7 @@
         </div>
         <div class="form-group">
             <label asp-for="SelectedMvpTypeId">
-                @(Model.IsEditing ? Html.Raw(Model.MvpTypeLabel.EditableMarkup) : Model.MvpTypeLabel.Value)
+                @(Model.IsEditing ? Html.Raw(Model.MvpTypeLabel?.EditableMarkup) : Model.MvpTypeLabel?.Value)
             </label>
             <span class="text-danger">*</span>
             <select asp-for="SelectedMvpTypeId" class="form-control">
@@ -70,7 +70,7 @@
                         @if (title != null)
                         {
                             <span class="badge badge-success">
-                                @(Model.IsEditing ? Html.Raw(Model.AwardedLabel.EditableMarkup) : Model.AwardedLabel.Value)
+                                @(Model.IsEditing ? Html.Raw(Model.AwardedLabel?.EditableMarkup) : Model.AwardedLabel?.Value)
                             </span>
                         }
                     </td>

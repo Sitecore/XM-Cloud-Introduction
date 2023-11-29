@@ -5,9 +5,9 @@
     <p>
         @if (Model.IsEditing)
         {
-            @Html.Raw(Model.ConfirmMessageLabelFormat.EditableMarkup)
+            @Html.Raw(Model.ConfirmMessageLabelFormat?.EditableMarkup)
         }
-        else
+        else if(Model.ConfirmMessageLabelFormat != null)
         {
             @string.Format(Model.ConfirmMessageLabelFormat.Value, Model.RemoveUser.Name, Model.RemoveUser.Email, Model.RemoveUser.Country?.Name ?? "nowhere")
         }

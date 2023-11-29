@@ -9,8 +9,8 @@
             </div>
             <div class="col-5 text-right font-weight-bold">
                 @(Html.Raw(Model.IsEditing ?
-                    Model.StepLabelFormat.EditableMarkup :
-                    string.Format(Model.StepLabelFormat.Value, "<span class=\"currentstep\">4</span>", 6)))
+                    Model.StepLabelFormat?.EditableMarkup :
+                    string.Format(Model.StepLabelFormat?.Value ?? "{0} / {1}", "<span class=\"currentstep\">4</span>", 6)))
             </div>
         </div>
         <form id="applicationObjectivesForm" method="post">
@@ -18,21 +18,21 @@
             <input asp-for="CurrentStep" type="hidden" value="Objectives"/>
             <div class="form-group">
                 <label asp-for="Eligibility">
-                    @(Model.IsEditing ? Html.Raw(Model.EligibilityLabel.EditableMarkup) : Model.EligibilityLabel.Value)
+                    @(Model.IsEditing ? Html.Raw(Model.EligibilityLabel?.EditableMarkup) : Model.EligibilityLabel?.Value)
                 </label>
                 <span class="text-danger">*</span>
                 <textarea asp-for="Eligibility" rows="3" class="form-control" required></textarea>
             </div>
             <div class="form-group">
                 <label asp-for="Objectives">
-                    @(Model.IsEditing ? Html.Raw(Model.ObjectivesLabel.EditableMarkup) : Model.ObjectivesLabel.Value)
+                    @(Model.IsEditing ? Html.Raw(Model.ObjectivesLabel?.EditableMarkup) : Model.ObjectivesLabel?.Value)
                 </label>
                 <span class="text-danger">*</span>
                 <textarea asp-for="Objectives" rows="3" class="form-control" required></textarea>
             </div>
             <div class="form-group">
                 <label asp-for="Mentors">
-                    @(Model.IsEditing ? Html.Raw(Model.MentorsLabel.EditableMarkup) : Model.MentorsLabel.Value)
+                    @(Model.IsEditing ? Html.Raw(Model.MentorsLabel?.EditableMarkup) : Model.MentorsLabel?.Value)
                 </label>
                 <input asp-for="Mentors" class="form-control"/>
             </div>
