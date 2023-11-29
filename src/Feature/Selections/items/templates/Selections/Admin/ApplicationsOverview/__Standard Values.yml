@@ -3,6 +3,10 @@ ID: "b0d3b284-953a-412f-9b27-943e0ee90b82"
 Parent: "2f1ea555-8e46-42b5-825d-b6ad690e281a"
 Template: "2f1ea555-8e46-42b5-825d-b6ad690e281a"
 Path: /sitecore/templates/Feature/Selections/Admin/ApplicationsOverview/__Standard Values
+SharedFields:
+- ID: "cef2023f-2ad0-457d-9675-337027435dfb"
+  Hint: ReviewLinkFormat
+  Value: "https://mvp-review.sitecore.com/application/{0}"
 Languages:
 - Language: en
   Versions:
@@ -24,6 +28,10 @@ Languages:
       Hint: __Owner
       Value: |
         sitecore\iva@sitecore.net
+    - ID: "56746c42-c9c1-4466-884b-18fb3eab2f9d"
+      Hint: ReviewSettingsLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{EAD2DA16-2304-4833-9BB2-094FEFB46B64}" />
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
@@ -36,7 +44,7 @@ Languages:
       Value: Applications
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0685bba7-0e6d-4300-b8a7-f65365a18cd7"
+      Value: "bfdc7dc2-fce8-4d08-8fe6-0236122f4d87"
     - ID: "98b5f2f3-83ce-44bd-b2ea-d8b4d8a67ebd"
       Hint: ApplicantTableHeader
       Value: Applicant
@@ -46,7 +54,7 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\ed7gR4aY22
     - ID: "bcc09f16-2955-4160-8c8b-763f81d1f90d"
       Hint: SelectionTableHeader
       Value: Selection
@@ -55,4 +63,4 @@ Languages:
       Value: Yes, continue
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220930T135447Z
+      Value: 20231117T195612Z

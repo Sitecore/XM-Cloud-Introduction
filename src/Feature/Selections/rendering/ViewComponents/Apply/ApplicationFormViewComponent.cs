@@ -423,6 +423,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     model.ContributionDescription = editContribution.Description;
                     model.ContributionLink = editContribution.Uri;
                     model.ContributionType = editContribution.Type;
+                    model.ContributionIsPublic = editContribution.IsPublic;
                     foreach (Product product in editContribution.RelatedProducts)
                     {
                         model.ContributionProductIds.Add(product.Id);
@@ -450,7 +451,8 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     Name = model.ContributionName,
                     Description = model.ContributionDescription,
                     Uri = model.ContributionLink,
-                    Type = model.ContributionType
+                    Type = model.ContributionType,
+                    IsPublic = model.ContributionIsPublic
                 };
                 foreach (int productId in model.ContributionProductIds)
                 {
@@ -481,6 +483,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     model.ContributionLink = null;
                     model.ContributionType = ContributionType.Other;
                     model.ContributionProductIds = new List<int>();
+                    model.ContributionIsPublic = false;
                     ModelState.Clear();
                 }
                 else
@@ -500,8 +503,12 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 Response<bool> deleteResponse = await Client.RemoveContributionAsync(model.CurrentApplication.Id, model.DeleteContributionId.Value);
                 if (deleteResponse.StatusCode == HttpStatusCode.NoContent)
                 {
-                    Contribution contribution = model.CurrentApplication.Contributions.Single(c => c.Id == model.DeleteContributionId);
-                    model.CurrentApplication.Contributions.Remove(contribution);
+                    Contribution contribution = model.CurrentApplication.Contributions.SingleOrDefault(c => c.Id == model.DeleteContributionId);
+                    if (contribution != null)
+                    {
+                        model.CurrentApplication.Contributions.Remove(contribution);
+                    }
+
                     await LoadProducts(model);
                     model.NextStep = ApplicationStep.Contributions;
                 }
@@ -581,6 +588,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 if (applicationResponse.StatusCode == HttpStatusCode.OK && applicationResponse.Result != null)
                 {
                     model.CurrentApplication = applicationResponse.Result;
+                    await LoadProducts(model);
                     model.NextStep = ApplicationStep.Contributions;
                 }
                 else

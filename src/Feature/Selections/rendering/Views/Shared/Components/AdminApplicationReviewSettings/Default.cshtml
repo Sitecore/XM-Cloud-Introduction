@@ -1,0 +1,113 @@
+﻿@using Mvp.Selections.Domain
+@using Mvp.Selections.Domain.Roles
+@model Mvp.Feature.Selections.Models.Admin.ApplicationReviewSettingsModel
+
+<div class="mvp-fs-adminapplicationreviewsettings col-12 bg-white">
+    <h2 asp-for="TitleLabel"></h2>
+    <div class="card">
+        <div class="card-body">
+            <h3 asp-for="ApplicationDataLabel" class="card-title"></h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col font-weight-bold">
+                        @Html.Raw(Model.IsEditing ? Model.ApplicationIdLabel.EditableMarkup : Model.ApplicationIdLabel.Value)
+                    </div>
+                    <div class="col">
+                        @Model.Application.Id
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col font-weight-bold">
+                        @Html.Raw(Model.IsEditing ? Model.ApplicationApplicantNameLabel.EditableMarkup : Model.ApplicationApplicantNameLabel.Value)
+                    </div>
+                    <div class="col">
+                        @Model.Application.Applicant.Name
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col font-weight-bold">
+                        @Html.Raw(Model.IsEditing ? Model.ApplicationSelectionYearLabel.EditableMarkup : Model.ApplicationSelectionYearLabel.Value)
+                    </div>
+                    <div class="col">
+                        @Model.Application.Selection.Year
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col font-weight-bold">
+                        @Html.Raw(Model.IsEditing ? Model.ApplicationMvpTypeNameLabel.EditableMarkup : Model.ApplicationMvpTypeNameLabel.Value)
+                    </div>
+                    <div class="col">
+                        @Model.Application.MvpType.Name
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col font-weight-bold">
+                        @Html.Raw(Model.IsEditing ? Model.ApplicationCountryNameLabel.EditableMarkup : Model.ApplicationCountryNameLabel.Value)
+                    </div>
+                    <div class="col">
+                        @Model.Application.Country.Name
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h3 asp-for="ReviewersLabel" class="card-title"></h3>
+            <div class="alert alert-warning">
+                @Html.Raw(Model.IsEditing ? Model.ReviewerRemoveText.EditableMarkup : Model.ReviewerRemoveText.Value)
+            </div>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+            <ul class="list-group">
+                @foreach (User user in Model.Reviewers)
+                {
+                    string roles = string.Join(", ", user.Roles.OfType<SelectionRole>().Select(sr => sr.Name));
+                    <li class="list-group-item">
+                        @user.Name
+                        @if (user.HasRight(Right.Admin))
+                        {
+                            <span class="badge badge-info">Admin</span>
+                        }
+                        (@roles)
+                        @if (user.Roles.OfType<SelectionRole>().Any(sr => sr.ApplicationId == Model.Application.Id))
+                        {
+                            <form method="post" onsubmit="return confirm('@string.Format(Model.ConfirmDeleteLabelFormat.Value, user.Name)');">
+                                <input asp-for="RemoveReviewerUserId" type="hidden" value="@user.Id"/>
+                                <button type="submit" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            </form>
+                        }
+                    </li>
+                }
+            </ul>
+            <button asp-for="AddReviewerLabel" type="button" class="btn btn-primary " data-toggle="modal" data-target="#addReviewerModal"></button>
+        </div>
+    </div>
+    <div class="modal fade@(Model.IsEditing ? " show" : string.Empty)" id="addReviewerModal" tabindex="-1" aria-labelledby="addReviewerModalLabel" aria-hidden="true" style="@(Model.IsEditing ? "position:relative;top:auto;right:auto;bottom:auto;left:auto;z-index:1;display:block;" : null)">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 asp-for="AddReviewerTitleLabel" class="modal-title" id="addReviewerModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="@Model.AddReviewerCancelLabel.Value">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="addReviewerForm" method="post">
+                        <div class="form-group">
+                            <label asp-for="AddReviewerUserEmailLabel">
+                                @(Model.IsEditing ? Html.Raw(Model.AddReviewerUserEmailLabel.EditableMarkup) : Model.AddReviewerUserEmailLabel.Value)
+                            </label>
+                            <span class="text-danger">*</span>
+                            <input asp-for="AddReviewerUserEmails" type="email" class="form-control" value="" required/>
+                        </div>
+                        <button id="addMoreReviewers" type="button" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button asp-for="AddReviewerCancelLabel" type="button" class="btn btn-secondary" data-dismiss="modal"></button>
+                    <button asp-for="AddReviewerSubmitLabel" type="submit" class="btn btn-primary" form="addReviewerForm"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -11,6 +11,9 @@ Languages:
     - ID: "095894c5-c355-40f8-b47e-045c65af22f2"
       Hint: ContributionsHelpText
       Value: <p>Please submit contributions according to good judgement. If you have multiple links related to a single contribution submit them with logical type, name and description on the same date.</p>
+    - ID: "09bd36f1-af7d-421c-8c03-b3efdf8b82e3"
+      Hint: PublicContributionLabel
+      Value: This is a public contribution. I consent to its contents to be used by Sitecore in public facing publications.
     - ID: "0a7f8beb-4172-4149-8e75-6402ca9666a6"
       Hint: UpdateLabel
       Value: Update
@@ -94,7 +97,7 @@ Languages:
       Value: "What are your objectives for the next year?"
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "17b2ec1f-950c-456b-8bdd-ec87bf9c4ff7"
+      Value: "39a85f8b-bb0d-4756-a31c-a5451a25762e"
     - ID: "9c31ec21-8cc9-452c-aecd-63feaa35ec6f"
       Hint: StartLabel
       Value: Begin Application
@@ -125,7 +128,7 @@ Languages:
       Value: MVP Category
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20231110T115329Z
+      Value: 20231127T113400Z
     - ID: "e9631ea3-2df0-4c18-8e6d-9a84e06717c8"
       Hint: NextLabel
       Value: Next

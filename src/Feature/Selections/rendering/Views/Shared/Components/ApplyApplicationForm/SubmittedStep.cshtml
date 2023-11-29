@@ -19,9 +19,9 @@
 
             <h3 asp-for="ObjectivesTitleLabel"></h3>
             <h4 asp-for="EligibilityLabel"></h4>
-            <p>@Model.CurrentApplication.Eligibility</p>
+            <p>@Html.Raw(Markdig.Markdown.ToHtml(Model.CurrentApplication.Eligibility ?? string.Empty))</p>
             <h4 asp-for="ObjectivesLabel"></h4>
-            <p>@Model.CurrentApplication.Objectives</p>
+            <p>@Html.Raw(Markdig.Markdown.ToHtml(Model.CurrentApplication.Objectives ?? string.Empty))</p>
             <h4 asp-for="MentorsLabel"></h4>
             <p>@Model.CurrentApplication.Mentor</p>
 
@@ -30,7 +30,7 @@
         </div>
         @if (Model.CurrentSelection.AreApplicationsOpen())
         {
-            <form id="applicationRevokeForm">
+            <form id="applicationRevokeForm" method="post">
                 <input asp-for="IsNavigation" type="hidden" value="false"/>
                 <input asp-for="CurrentStep" type="hidden" value="Submitted" />
             </form>

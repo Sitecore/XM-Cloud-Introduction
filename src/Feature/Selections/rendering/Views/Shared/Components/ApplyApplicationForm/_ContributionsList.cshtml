@@ -28,7 +28,13 @@
                     }
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title"><span class="badge badge-info">@contribution.Type</span> @contribution.Name</h5>
+                    <h5 class="card-title">
+                        <span class="badge badge-info">@contribution.Type</span> @contribution.Name
+                        @if (contribution.IsPublic)
+                        {
+                            <i class="fa fa-eye text-success" aria-hidden="true" title="Public"></i>
+                        }
+                    </h5>
                     <p class="card-text">@Html.Raw(Markdig.Markdown.ToHtml(contribution.Description))</p>
                     @if (contribution.Uri != null)
                     {

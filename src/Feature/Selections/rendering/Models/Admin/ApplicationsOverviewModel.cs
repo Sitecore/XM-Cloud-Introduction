@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Mvp.Selections.Domain;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
 
@@ -29,5 +30,26 @@ namespace Mvp.Feature.Selections.Models.Admin
         public TextField ConfirmLabel { get; set; }
 
         public bool RemoveConfirmed { get; set; } = false;
+
+        public TextField ReviewLinkFormat { get; set; }
+
+        public ApplicationOverviewFilter Filter { get; set; } = new ();
+
+        public List<Country> Countries { get; set; } = new ();
+
+        public List<Selection> Selections { get; set; } = new ();
+
+        public HyperLinkField ReviewSettingsLink { get; set; }
+
+        public class ApplicationOverviewFilter
+        {
+            public Guid? SelectionId { get; set; }
+
+            public short? CountryId { get; set; }
+
+            public string ApplicantName { get; set; }
+
+            public ApplicationStatus? Status { get; set; }
+        }
     }
 }

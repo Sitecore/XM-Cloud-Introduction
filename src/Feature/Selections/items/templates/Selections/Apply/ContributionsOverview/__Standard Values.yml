@@ -1,0 +1,49 @@
+﻿---
+ID: "94eb63db-0a37-4aef-9d03-74f444e63de9"
+Parent: "7349f3a8-82df-4a07-96fb-43ed57e60c94"
+Template: "7349f3a8-82df-4a07-96fb-43ed57e60c94"
+Path: /sitecore/templates/Feature/Selections/Apply/ContributionsOverview/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20231127T145522Z
+    - ID: "301bd626-95d0-40f1-af9b-9c4cfd329cc2"
+      Hint: IsPublicTableHeader
+      Value: Public
+    - ID: "3d36f840-10cf-4fe0-8471-e0253d7992e0"
+      Hint: NameTableHeader
+      Value: Name
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "682ce552-204a-470c-aecf-3aa12a04946f"
+      Hint: UriTableHeader
+      Value: Link
+    - ID: "859fa3d8-5303-49cc-877b-408c85e7d9f5"
+      Hint: TitleLabel
+      Value: Your Contributions
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "949ba1f3-3a7b-4c69-9d04-538379e398c9"
+    - ID: "8fd18232-9a61-46ea-a791-d610088a754e"
+      Hint: DateTableHeader
+      Value: Date
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20231127T145549Z
+    - ID: "fadc5f8c-4fe0-4a71-b4a4-4e91936c0f6f"
+      Hint: TypeTableHeader
+      Value: Type

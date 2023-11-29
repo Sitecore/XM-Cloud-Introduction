@@ -1,0 +1,42 @@
+﻿@using Mvp.Selections.Domain
+@model Mvp.Feature.Selections.Models.Apply.ContributionOverviewModel
+
+<div class="mvp-fs-applycontributionoverview col-12 bg-white">
+    <h2 asp-for="TitleLabel"></h2>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th asp-for="DateTableHeader" scope="col"></th>
+                <th asp-for="NameTableHeader" scope="col"></th>
+                <th asp-for="TypeTableHeader" scope="col"></th>
+                <th asp-for="UriTableHeader" scope="col"></th>
+                <th asp-for="IsPublicTableHeader" scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Contribution contribution in Model.List)
+            {
+                <tr>
+                    <td>@contribution.Date.ToString("d")</td>
+                    <td>@contribution.Name</td>
+                    <td>@contribution.Type</td>
+                    <td>
+                        @if (contribution.Uri != null && !string.IsNullOrWhiteSpace(contribution.Uri.OriginalString))
+                        {
+                            <a href="@contribution.Uri.ToString()" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                        }
+                    </td>
+                    <td>@contribution.IsPublic</td>
+                    <td>
+                        <form id="togglePublic@(contribution.Id)Form" method="post">
+                            <input asp-for="TogglePublicContributionId" type="hidden" value="@contribution.Id" />
+                        </form>
+                        <button type="submit" class="btn btn-primary" form="togglePublic@(contribution.Id)Form"><i class="fa fa-@(contribution.IsPublic ? "eye-slash" : "eye")" aria-hidden="true"></i></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <partial name="_Paging" />
+</div>

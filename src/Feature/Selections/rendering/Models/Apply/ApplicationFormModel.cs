@@ -103,6 +103,10 @@ namespace Mvp.Feature.Selections.Models.Apply
 
         public List<int> ContributionProductIds { get; set; } = new ();
 
+        public TextField PublicContributionLabel { get; set; }
+
+        public bool ContributionIsPublic { get; set; } = false;
+
         public List<Product> Products { get; } = new ();
 
         public TextField AddLabel { get; set; }

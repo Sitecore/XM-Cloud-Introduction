@@ -40,6 +40,7 @@ namespace Mvp.Project.MvpSite.Controllers
                             result = Render404();
                             break;
                         default:
+                            _logger.LogError(error, error.Message);
                             throw error;
                     }
                 }

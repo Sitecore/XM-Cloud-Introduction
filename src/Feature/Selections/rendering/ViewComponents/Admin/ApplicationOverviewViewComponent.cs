@@ -49,7 +49,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 Response<bool> removeApplicationResponse = await Client.RemoveApplicationAsync(model.RemoveApplicationId.Value);
                 if (removeApplicationResponse.Result)
                 {
-                    await LoadApplications(model);
+                    Task.WaitAll(LoadApplications(model), LoadFilterValues(model));
                     result = View(model);
                 }
                 else
@@ -60,7 +60,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             }
             else
             {
-                await LoadApplications(model);
+                Task.WaitAll(LoadApplications(model), LoadFilterValues(model));
                 result = View(model);
             }
 
@@ -107,10 +107,43 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         private async Task LoadApplications(ApplicationsOverviewModel model)
         {
-            Response<IList<Application>> response = await Client.GetApplicationsAsync(null, model.Page, model.PageSize);
+            Response<IList<Application>> response = await Client.GetApplicationsAsync(null, model.Filter.ApplicantName, model.Filter.SelectionId, model.Filter.CountryId, model.Filter.Status, model.Page, model.PageSize);
             if (response.StatusCode == HttpStatusCode.OK && response.Result != null)
             {
                 model.List.AddRange(response.Result);
+            }
+        }
+
+        private async Task LoadFilterValues(ApplicationsOverviewModel model)
+        {
+            Task<Response<IList<Country>>> countriesResponseTask = Client.GetCountriesAsync(1, short.MaxValue);
+            Task<Response<IList<Selection>>> selectionResponseTask = Client.GetSelectionsAsync(1, short.MaxValue);
+            List<Task> tasks = new () { countriesResponseTask, selectionResponseTask };
+            while (tasks.Count > 0)
+            {
+                Task finished = await Task.WhenAny(tasks);
+                tasks.Remove(finished);
+                if (finished == countriesResponseTask)
+                {
+                    Response<IList<Country>> countriesResponse = await (Task<Response<IList<Country>>>)finished;
+                    if (countriesResponse.StatusCode == HttpStatusCode.OK && countriesResponse.Result != null)
+                    {
+                        model.Countries.AddRange(countriesResponse.Result);
+                    }
+                }
+                else if (finished == selectionResponseTask)
+                {
+                    Response<IList<Selection>> selectionResponse = await (Task<Response<IList<Selection>>>)finished;
+                    if (selectionResponse.StatusCode == HttpStatusCode.OK && selectionResponse.Result != null)
+                    {
+                        model.Selections.AddRange(selectionResponse.Result);
+                    }
+                }
+                else
+                {
+                    await finished;
+                    tasks.Remove(finished);
+                }
             }
         }
     }
