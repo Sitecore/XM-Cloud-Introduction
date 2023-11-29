@@ -31,13 +31,17 @@ Languages:
       Hint: AdminRegionsOverviewLink
       Value: |
         <link class="" id="{9C44BE33-3170-4916-9090-E0E8BCDEB30A}" querystring="" anchor="" target="" title="" linktype="internal" text="Manage Regions" url="/MvpSite/Home/Application/Admin/Regions" />
+    - ID: "4e29f938-b34d-4ae2-9616-7e3bdae88bb7"
+      Hint: MyContributionsOverviewLink
+      Value: |
+        <link text="My Contributions" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{31EEF19E-0CAC-46F7-B36A-B7109A487454}" />
     - ID: "8872eadd-a560-448d-9feb-1eae76500941"
       Hint: AdminApplicationsOverviewLink
       Value: |
         <link class="" id="{D296373D-623E-461B-8D7A-C274E23CBEDB}" querystring="" anchor="" target="" title="" linktype="internal" text="Manage Applications" url="/MvpSite/Home/Application/Admin/Applications" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6d74e04d-b5a9-4e4b-86b8-3d4421f15a19"
+      Value: "b13eef3f-0b2b-42fc-b03c-74c0e6cf5baf"
     - ID: "936da302-d3cd-4d65-88f9-b19ad9347885"
       Hint: AdminUsersOverviewLink
       Value: |
@@ -45,7 +49,7 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\ed7gR4aY22
     - ID: "c5e13ef1-9849-4441-adbb-8e3f7f49fcc4"
       Hint: AdminMvpTypesOverviewLink
       Value: |
@@ -56,7 +60,7 @@ Languages:
         <link class="" id="{B3D36988-B4AE-4915-A6CF-F5133BE4E100}" querystring="" anchor="" target="" title="" linktype="internal" text="My current application" url="/MvpSite/Home/Application/Apply" />
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230115T140037Z
+      Value: 20231127T151753Z
     - ID: "e638de5c-90a5-4764-a574-dfde0a612346"
       Hint: AdminSelectionsOverviewLink
       Value: |
