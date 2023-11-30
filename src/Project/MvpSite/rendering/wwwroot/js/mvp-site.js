@@ -28,7 +28,8 @@
 
             const x = setInterval(function () {
                 let now = new Date().getTime();
-                let distance = countDownDate - now;
+                let nowUTC = new Date(now + new Date().getTimezoneOffset() * 60000);
+                let distance = countDownDate - nowUTC;
                 let days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
