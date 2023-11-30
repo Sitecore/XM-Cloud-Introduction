@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Mvp.Feature.Selections.Models.Filters;
 using Mvp.Selections.Domain;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
 
@@ -7,6 +8,12 @@ namespace Mvp.Feature.Selections.Models.Admin
 {
     public class ApplicationsOverviewModel : ListModel<Application>
     {
+        public ApplicationsOverviewModel()
+        {
+            Filter = new ApplicationFilter($"{nameof(Filter)}");
+            base.Filter = Filter;
+        }
+
         public TextField TitleLabel { get; set; }
 
         public TextField SelectionTableHeader { get; set; }
@@ -33,23 +40,12 @@ namespace Mvp.Feature.Selections.Models.Admin
 
         public TextField ReviewLinkFormat { get; set; }
 
-        public ApplicationOverviewFilter Filter { get; set; } = new ();
-
         public List<Country> Countries { get; set; } = new ();
 
         public List<Selection> Selections { get; set; } = new ();
 
         public HyperLinkField ReviewSettingsLink { get; set; }
 
-        public class ApplicationOverviewFilter
-        {
-            public Guid? SelectionId { get; set; }
-
-            public short? CountryId { get; set; }
-
-            public string ApplicantName { get; set; }
-
-            public ApplicationStatus? Status { get; set; }
-        }
+        public new ApplicationFilter Filter { get; set; }
     }
 }

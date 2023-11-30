@@ -2,12 +2,12 @@
 	<ul class="pagination">
 		@if (Model.Page > 1)
 		{
-			<li class="page-item"><a class="page-link" href="?p=@(Model.Page - 1)">&lt;</a></li>
+			<li class="page-item"><a class="page-link" href="?p=@(Model.Page - 1)@Model.Filter.ToQueryString()">&lt;</a></li>
 		}
 
 		@if (Model.List.Count == Model.PageSize)
 		{
-			<li class="page-item"><a class="page-link" href="?p=@(Model.Page + 1)">&gt;</a></li>
+			<li class="page-item"><a class="page-link" href="?p=@(Model.Page + 1)@Model.Filter.ToQueryString()">&gt;</a></li>
 		}
 	</ul>
 </nav>

@@ -1,6 +1,16 @@
 ﻿@mixin overviewtable() {
-    tr *:last-child i {
-        color: #fff;
+    tr *:last-child {
+        i {
+            color: #fff;
+        }
+
+        form {
+            display: none;
+        }
+
+        .btn {
+            margin-bottom: 0.25rem;
+        }
     }
 
     td {
