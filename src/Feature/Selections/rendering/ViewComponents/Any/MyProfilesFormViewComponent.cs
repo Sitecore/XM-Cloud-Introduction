@@ -66,7 +66,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Any
                             Type = model.Type
                         };
                         Response<ProfileLink> newResponse = await Client.AddProfileLinkAsync(user.Id, newProfileLink);
-                        if (newResponse.StatusCode == HttpStatusCode.OK && newResponse.Result != null)
+                        if (newResponse.StatusCode == HttpStatusCode.Created && newResponse.Result != null)
                         {
                             model.Links.Add(newResponse.Result);
                             ModelState.Clear();
