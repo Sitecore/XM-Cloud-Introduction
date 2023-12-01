@@ -6,7 +6,7 @@
     <input asp-for="ApplicationId" type="hidden"/>
     <div class="form-group">
         <label asp-for="MvpTypeId">
-            @(Model.IsEditing ? Html.Raw(Model.MvpTypeLabel.EditableMarkup) : Model.MvpTypeLabel.Value)
+            @(Model.IsEditing ? Html.Raw(Model.MvpTypeLabel?.EditableMarkup) : Model.MvpTypeLabel?.Value)
         </label>
         <span class="text-danger">*</span>
         <select asp-for="MvpTypeId" class="form-control" required>
@@ -18,20 +18,20 @@
     </div>
     <div class="form-group">
         <label asp-for="Warning">
-            @(Model.IsEditing ? Html.Raw(Model.WarningLabel.EditableMarkup) : Model.WarningLabel.Value)
+            @(Model.IsEditing ? Html.Raw(Model.WarningLabel?.EditableMarkup) : Model.WarningLabel?.Value)
         </label>
         <textarea asp-for="Warning" rows="3" class="form-control"></textarea>
     </div>
     @if (Model.IsEditing)
     {
-        @Html.Raw(Model.ConfirmAwardLabelFormat.EditableMarkup)
+        @Html.Raw(Model.ConfirmAwardLabelFormat?.EditableMarkup)
     }
-    else
+    else if (Model.ConfirmAwardLabelFormat != null)
     {
         @(string.Format(Model.ConfirmAwardLabelFormat.Value, Model.Application.Applicant.Name, Model.Application.Country.Name, Model.Application.Selection.Year))
     }
     <div class="form-group">
-        <a asp-for="ReturnLink" class="btn btn-secondary" role="button">@(Model.IsEditing ? Html.Raw(Model.CancelLabel.EditableMarkup) : Model.CancelLabel.Value)</a>
+        <a asp-for="ReturnLink" class="btn btn-secondary" role="button">@(Model.IsEditing ? Html.Raw(Model.CancelLabel?.EditableMarkup) : Model.CancelLabel?.Value)</a>
         <button asp-for="ConfirmLabel" type="submit" class="btn btn-primary"></button>
     </div>
 </form>

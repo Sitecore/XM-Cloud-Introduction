@@ -11,7 +11,7 @@
             <input asp-for="IsEdit" type="hidden" value="true" />
             <div class="form-group">
                 <label asp-for="Name">
-                    @(Model.IsEditing ? Html.Raw(Model.NameLabel.EditableMarkup) : Model.NameLabel.Value)
+                    @(Model.IsEditing ? Html.Raw(Model.NameLabel?.EditableMarkup) : Model.NameLabel?.Value)
                 </label>
                 <span class="text-danger">*</span>
                 <input asp-for="Name" class="form-control" required />
@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Email">
-                    @(Model.IsEditing ? Html.Raw(Model.EmailLabel.EditableMarkup) : Model.EmailLabel.Value)
+                    @(Model.IsEditing ? Html.Raw(Model.EmailLabel?.EditableMarkup) : Model.EmailLabel?.Value)
                 </label>
                 <span class="text-danger">*</span>
                 <input asp-for="Email" class="form-control" required />
@@ -27,7 +27,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="CountryId">
-                    @(Model.IsEditing ? Html.Raw(Model.CountryLabel.EditableMarkup) : Model.CountryLabel.Value)
+                    @(Model.IsEditing ? Html.Raw(Model.CountryLabel?.EditableMarkup) : Model.CountryLabel?.Value)
                 </label>
                 <span class="text-danger">*</span>
                 <select asp-for="CountryId" class="form-control" required>
@@ -41,7 +41,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="ImageType">
-                    @(Model.IsEditing ? Html.Raw(Model.ImageTypeLabel.EditableMarkup) : Model.ImageTypeLabel.Value)
+                    @(Model.IsEditing ? Html.Raw(Model.ImageTypeLabel?.EditableMarkup) : Model.ImageTypeLabel?.Value)
                 </label>
                 <span class="text-danger">*</span>
                 <select asp-for="ImageType" class="form-control" required>

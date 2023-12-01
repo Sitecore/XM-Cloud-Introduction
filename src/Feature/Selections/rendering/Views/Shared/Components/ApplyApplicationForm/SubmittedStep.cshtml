@@ -6,9 +6,9 @@
         <div class="alert alert-success" role="alert">
             @if (Model.IsEditing)
             {
-                @Html.Raw(Model.SubmittedMessageLabelFormat.EditableMarkup)
+                @Html.Raw(Model.SubmittedMessageLabelFormat?.EditableMarkup)
             }
-            else
+            else if(Model.SubmittedMessageLabelFormat != null)
             {
                 @(string.Format(Model.SubmittedMessageLabelFormat.Value, Model.CurrentSelection.Year, Model.CurrentApplication.ModifiedOn?.ToString("d")))
             }

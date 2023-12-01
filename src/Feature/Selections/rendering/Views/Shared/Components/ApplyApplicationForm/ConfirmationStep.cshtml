@@ -9,8 +9,8 @@
             </div>
             <div class="col-5 text-right font-weight-bold">
                 @(Html.Raw(Model.IsEditing ?
-                    Model.StepLabelFormat.EditableMarkup :
-                    string.Format(Model.StepLabelFormat.Value, "<span class=\"currentstep\">6</span>", 6)))
+                    Model.StepLabelFormat?.EditableMarkup :
+                    string.Format(Model.StepLabelFormat?.Value ?? "{0} / {1}", "<span class=\"currentstep\">6</span>", 6)))
             </div>
         </div>
         <form id="applicationConfirmForm" method="post">
@@ -19,19 +19,19 @@
             <div class="form-check">
                 @Html.CheckBoxFor(m => m.UnderstandsReviewConsent, new { @class = "align-middle" })
                 <label asp-for="UnderstandsReviewConsent" class="w-75 align-middle">
-                    @(Model.IsEditing ? Html.Raw(Model.ReviewConsentLabel.EditableMarkup) : Model.ReviewConsentLabel.Value)
+                    @(Model.IsEditing ? Html.Raw(Model.ReviewConsentLabel?.EditableMarkup) : Model.ReviewConsentLabel?.Value)
                 </label>
             </div>
             <div class="form-check">
                 @Html.CheckBoxFor(m => m.UnderstandsProgramAgreement, new { @class = "align-middle" })
                 <label asp-for="UnderstandsProgramAgreement" class="w-75 align-middle">
-                    @(Model.IsEditing ? Html.Raw(Model.ProgramAgreementWarningLabel.EditableMarkup) : Model.ProgramAgreementWarningLabel.Value)
+                    @(Model.IsEditing ? Html.Raw(Model.ProgramAgreementWarningLabel?.EditableMarkup) : Model.ProgramAgreementWarningLabel?.Value)
                 </label>
             </div>
             <div class="form-check">
                 @Html.CheckBoxFor(m => m.IsComplete, new { @class = "align-middle" })
                 <label asp-for="IsComplete" class="w-75 align-middle">
-                    @(Model.IsEditing ? Html.Raw(Model.CompleteLabel.EditableMarkup) : Model.CompleteLabel.Value)
+                    @(Model.IsEditing ? Html.Raw(Model.CompleteLabel?.EditableMarkup) : Model.CompleteLabel?.Value)
                 </label>
             </div>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>

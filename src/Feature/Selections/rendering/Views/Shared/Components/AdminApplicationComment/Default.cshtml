@@ -6,7 +6,7 @@
         <input asp-for="ApplicationId" type="hidden" />
         <div class="form-group">
             <label asp-for="Comment">
-                @(Model.IsEditing ? Html.Raw(Model.CommentLabel.EditableMarkup) : Model.CommentLabel.Value)
+                @(Model.IsEditing ? Html.Raw(Model.CommentLabel?.EditableMarkup) : Model.CommentLabel?.Value)
             </label>
             <span class="text-danger">*</span>
             <textarea asp-for="Comment" rows="3" class="form-control" required=""></textarea>

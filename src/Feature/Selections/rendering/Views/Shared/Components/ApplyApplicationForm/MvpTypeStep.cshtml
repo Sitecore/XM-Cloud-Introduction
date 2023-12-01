@@ -10,19 +10,19 @@
             </div>
             <div class="col-5 text-right font-weight-bold">
                 @(Html.Raw(Model.IsEditing ?
-                    Model.StepLabelFormat.EditableMarkup : 
-                    string.Format(Model.StepLabelFormat.Value, "<span class=\"currentstep\">3</span>", 6)))
+                    Model.StepLabelFormat?.EditableMarkup :
+                    string.Format(Model.StepLabelFormat?.Value ?? "{0} / {1}", "<span class=\"currentstep\">3</span>", 6)))
             </div>
         </div>
         <div>
-            @Html.Raw(Model.IsEditing ? Model.MvpTypeHelpText.EditableMarkup : Model.MvpTypeHelpText.Value)
+            @Html.Raw(Model.IsEditing ? Model.MvpTypeHelpText?.EditableMarkup : Model.MvpTypeHelpText?.Value)
         </div>
         <form id="applicationMvpTypeForm" method="post">
             <input asp-for="IsNavigation" type="hidden" value="false" />
             <input asp-for="CurrentStep" type="hidden" value="MvpType"/>
             <div class="form-group">
                 <label asp-for="MvpTypeId">
-                    @(Model.IsEditing ? Html.Raw(Model.MvpTypeLabel.EditableMarkup) : Model.MvpTypeLabel.Value)
+                    @(Model.IsEditing ? Html.Raw(Model.MvpTypeLabel?.EditableMarkup) : Model.MvpTypeLabel?.Value)
                 </label>
                 <span class="text-danger">*</span>
                 <select asp-for="MvpTypeId" class="form-control">
