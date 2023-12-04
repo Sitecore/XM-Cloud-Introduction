@@ -8,7 +8,7 @@
   <PropertyGroup>
     <PlatformVersion>1.*</PlatformVersion>
     <SitecoreAspNetVersion>20.0.*</SitecoreAspNetVersion>
-    <DotNetVersion>6.0.0</DotNetVersion>
+    <DotNetVersion>8.0.0</DotNetVersion>
   </PropertyGroup>
   <ItemGroup>
     <!-- Platform -->
