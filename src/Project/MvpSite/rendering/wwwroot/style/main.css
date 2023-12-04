@@ -3531,13 +3531,13 @@ ul.nav.navbar-nav .nav-item.nav-link {
   padding: 10px 18px 7px;
 }
 
-.mvp-fs-adminapplicationsoverview tr *:last-child i {
+.mvp-fs-adminapplicationsoverview tr > *:last-child i {
   color: #fff;
 }
-.mvp-fs-adminapplicationsoverview tr *:last-child form {
+.mvp-fs-adminapplicationsoverview tr > *:last-child form {
   display: none;
 }
-.mvp-fs-adminapplicationsoverview tr *:last-child .btn {
+.mvp-fs-adminapplicationsoverview tr > *:last-child .btn {
   margin-bottom: 0.25rem;
 }
 .mvp-fs-adminapplicationsoverview td {
@@ -3547,13 +3547,13 @@ ul.nav.navbar-nav .nav-item.nav-link {
   font-size: 80px;
 }
 
-.mvp-fs-admincountriesoverview tr *:last-child i {
+.mvp-fs-admincountriesoverview tr > *:last-child i {
   color: #fff;
 }
-.mvp-fs-admincountriesoverview tr *:last-child form {
+.mvp-fs-admincountriesoverview tr > *:last-child form {
   display: none;
 }
-.mvp-fs-admincountriesoverview tr *:last-child .btn {
+.mvp-fs-admincountriesoverview tr > *:last-child .btn {
   margin-bottom: 0.25rem;
 }
 .mvp-fs-admincountriesoverview td {
@@ -3563,13 +3563,13 @@ ul.nav.navbar-nav .nav-item.nav-link {
   font-size: 80px;
 }
 
-.mvp-fs-adminregionsoverview tr *:last-child i {
+.mvp-fs-adminregionsoverview tr > *:last-child i {
   color: #fff;
 }
-.mvp-fs-adminregionsoverview tr *:last-child form {
+.mvp-fs-adminregionsoverview tr > *:last-child form {
   display: none;
 }
-.mvp-fs-adminregionsoverview tr *:last-child .btn {
+.mvp-fs-adminregionsoverview tr > *:last-child .btn {
   margin-bottom: 0.25rem;
 }
 .mvp-fs-adminregionsoverview td {
@@ -3579,13 +3579,13 @@ ul.nav.navbar-nav .nav-item.nav-link {
   font-size: 80px;
 }
 
-.mvp-fs-adminsystemrolesoverview tr *:last-child i {
+.mvp-fs-adminsystemrolesoverview tr > *:last-child i {
   color: #fff;
 }
-.mvp-fs-adminsystemrolesoverview tr *:last-child form {
+.mvp-fs-adminsystemrolesoverview tr > *:last-child form {
   display: none;
 }
-.mvp-fs-adminsystemrolesoverview tr *:last-child .btn {
+.mvp-fs-adminsystemrolesoverview tr > *:last-child .btn {
   margin-bottom: 0.25rem;
 }
 .mvp-fs-adminsystemrolesoverview td {
@@ -3595,13 +3595,13 @@ ul.nav.navbar-nav .nav-item.nav-link {
   font-size: 80px;
 }
 
-.mvp-fs-adminusersoverview tr *:last-child i {
+.mvp-fs-adminusersoverview tr > *:last-child i {
   color: #fff;
 }
-.mvp-fs-adminusersoverview tr *:last-child form {
+.mvp-fs-adminusersoverview tr > *:last-child form {
   display: none;
 }
-.mvp-fs-adminusersoverview tr *:last-child .btn {
+.mvp-fs-adminusersoverview tr > *:last-child .btn {
   margin-bottom: 0.25rem;
 }
 .mvp-fs-adminusersoverview td {
@@ -3648,13 +3648,13 @@ ul.nav.navbar-nav .nav-item.nav-link {
   height: 1.5em;
 }
 
-.mvp-fs-adminscorecards tr *:last-child i {
+.mvp-fs-adminscorecards tr > *:last-child i {
   color: #fff;
 }
-.mvp-fs-adminscorecards tr *:last-child form {
+.mvp-fs-adminscorecards tr > *:last-child form {
   display: none;
 }
-.mvp-fs-adminscorecards tr *:last-child .btn {
+.mvp-fs-adminscorecards tr > *:last-child .btn {
   margin-bottom: 0.25rem;
 }
 .mvp-fs-adminscorecards td {
@@ -3875,13 +3875,13 @@ ul.nav.navbar-nav .nav-item.nav-link {
   height: 1.5em;
 }
 
-.mvp-fs-applycontributionoverview tr *:last-child i {
+.mvp-fs-applycontributionoverview tr > *:last-child i {
   color: #fff;
 }
-.mvp-fs-applycontributionoverview tr *:last-child form {
+.mvp-fs-applycontributionoverview tr > *:last-child form {
   display: none;
 }
-.mvp-fs-applycontributionoverview tr *:last-child .btn {
+.mvp-fs-applycontributionoverview tr > *:last-child .btn {
   margin-bottom: 0.25rem;
 }
 .mvp-fs-applycontributionoverview td {
