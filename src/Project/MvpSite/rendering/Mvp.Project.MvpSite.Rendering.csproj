@@ -23,6 +23,7 @@
 
 	<ItemGroup>
 	  <Content Remove="compilerconfig.json" />
+	  <Content Remove="Views\Shared\NotFound.cshtml" />
 	</ItemGroup>
 
 	<ItemGroup>

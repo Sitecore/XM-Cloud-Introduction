@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http.Extensions;
 using Okta.AspNetCore;
+using Mvp.Project.MvpSite.Middleware;
 
 namespace Mvp.Project.MvpSite.Controllers
 {
@@ -24,7 +25,7 @@ namespace Mvp.Project.MvpSite.Controllers
         // Inject Sitecore rendering middleware for this controller action
         // (enables model binding to Sitecore objects such as Route,
         // and causes requests to the Sitecore Layout Service for controller actions)
-        [UseSitecoreRendering]
+        [UseSitecoreRendering(typeof(CustomRenderingEnginePipeline))]
         public IActionResult Index(LayoutViewModel model)
         {
             IActionResult result = null;
@@ -35,12 +36,7 @@ namespace Mvp.Project.MvpSite.Controllers
                 {
                     switch (error)
                     {
-                        case ItemNotFoundSitecoreLayoutServiceClientException notFound:
-                            _logger.LogInformation(notFound, notFound.Message);
-                            result = Render404();
-                            break;
                         default:
-                            _logger.LogError(error, error.Message);
                             throw error;
                     }
                 }
@@ -60,12 +56,6 @@ namespace Mvp.Project.MvpSite.Controllers
             }
 
             return result;
-        }
-
-        private IActionResult Render404()
-        {
-            Response.StatusCode = (int)HttpStatusCode.NotFound;
-            return View("NotFound", new LayoutViewModel { MenuTitle = new TextField("Not Found") });
         }
 
         private static bool IsSecurePage(ISitecoreRenderingContext request)

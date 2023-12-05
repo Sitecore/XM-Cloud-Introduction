@@ -10,5 +10,11 @@ namespace Mvp.Project.MvpSite.Extensions
             app.UseMiddleware<EnsureAcceptLanguageHeaderMiddleware>();
             return app;
         }
+
+        public static IApplicationBuilder UseCustomSitecoreRenderingEngine(this IApplicationBuilder app)
+        {
+            app.UseMiddleware<CustomRenderingEngineMiddleware>();
+            return app;
+        }
     }
 }
