@@ -10,9 +10,11 @@
 
         public string? DefaultSiteName { get; set; }
 
+        public string? RootItemId { get; set; }
+
         public string? NotFoundPage { get; set; }
 
-        public string? DefaultLanguageHeader { get; set; }
+        public string? DefaultAcceptLanguageHeader { get; set; }
 
         public Uri? RenderingHostUri { get; set; }
 

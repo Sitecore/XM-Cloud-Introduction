@@ -60,8 +60,8 @@ namespace Mvp.Project.MvpSite.Middleware
                 var query = Constants.GraphQlQueries.GetSitemapQuery;
                 var variables = (object)new
                 {
-                    rootItemId = "{94DE9AC3-A9F7-40AB-AE90-ACDA364B9C40}",
-                    language = "en"
+                    rootItemId = _configuration.RootItemId,
+                    language = _configuration.DefaultAcceptLanguageHeader
                 };
 
                 var request = _graphQLRequestBuilder.BuildRequest(query, variables);

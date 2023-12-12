@@ -92,18 +92,6 @@ public class MvpSitemapUrlProvider : ISitemapUrlProvider
         return Task.FromResult<IReadOnlyCollection<SitemapNode>>(nodes);
     }
 
-
-    private List<Mvp> GetMvpList() {
-        return (
-            [
-                new () { Id = 1, Name = "Home" },
-                new () { Id = 2, Name = "About" },
-                new() { Id = 3, Name = "Become an MVP" },
-                new() { Id = 4, Name = "Contact" },
-                new() { Id = 5, Name = "MVP List" }
-            ]);
-    }
-
     private List<Result> GetSiteMap()
     {
         CustomGraphQlLayoutServiceHandler customGraphQlLayoutServiceHandler = new(_configuration, _graphQLRequestBuilder, _graphQLClientFactory);
