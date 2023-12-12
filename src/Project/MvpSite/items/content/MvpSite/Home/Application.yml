@@ -23,7 +23,7 @@ SharedFields:
           p:before="*"
           s:ds="{5C0D2E63-B9A6-49BF-81B1-E25DF54CB76E}"
           s:id="{13175655-0158-41FA-B796-AC2663CFED2A}"
-          s:par=""
+          s:par="CSSStyles"
           s:ph="/main/column-container-{413EB6EB-522B-4E53-825B-21992D7DD3F3}-0"
           s:ccb="Clear on publish" />
         <r
@@ -58,20 +58,20 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7bc00d1f-bc82-4fb1-8e39-4bf16d147865"
+      Value: "d012b766-3d48-4f7b-b8e8-72b026eb270e"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Application
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\ed7gR4aY22
     - ID: "c58ed264-1f55-4aa3-a30e-da12ce43cb38"
       Hint: RequiresAuthentication
       Value: 1
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221006T145101Z
+      Value: 20231129T105709Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
       Hint: IncludeInMenu
       Value: 1

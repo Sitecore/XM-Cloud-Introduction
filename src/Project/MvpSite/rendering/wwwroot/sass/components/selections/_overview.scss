@@ -1,5 +1,5 @@
 ﻿@mixin overviewtable() {
-    tr *:last-child {
+    tr>*:last-child {
         i {
             color: #fff;
         }

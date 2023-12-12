@@ -1,0 +1,76 @@
+﻿---
+ID: "638ab4aa-be76-421b-950f-5f1651c65d2e"
+Parent: "843be933-bfe7-474c-95f0-db9730f49e7f"
+Template: "843be933-bfe7-474c-95f0-db9730f49e7f"
+Path: /sitecore/templates/Feature/Selections/Admin/SelectionsOverview/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18cd98c7-d43c-4b89-9eca-7564b7ac0bfd"
+      Hint: ApplicationsStartTableHeader
+      Value: Applications Start UTC
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20231204T145438Z
+    - ID: "2803625a-41df-43bc-9770-9c08ce1b37c5"
+      Hint: AreApplicationsOpenTableHeader
+      Value: Applications Open
+    - ID: "420ac7fc-aa57-4ca3-8923-d7c12e503e65"
+      Hint: YearTableHeader
+      Value: Year
+    - ID: "4e74b50f-7bc2-4e60-b104-a46cdc66f0b3"
+      Hint: ReviewsStartTableHeader
+      Value: Reviews Start UTC
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "52b5ce2c-34d8-40ea-80b1-27a44c9d725e"
+      Hint: TitleLabel
+      Value: Selections
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "66e94106-b780-47c8-9144-79696049ddaf"
+      Hint: ReviewsActiveTableHeader
+      Value: Reviews Active
+    - ID: "79441020-97a4-4a64-b34f-f60b4ba6b9d2"
+      Hint: ApplicationsEndTableHeader
+      Value: Applications End UTC
+    - ID: "8405a874-2fa1-48d4-8d3f-aae778945ed7"
+      Hint: ActivateLabel
+      Value: Activate
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dffdf2d9-b4cd-4157-8c13-37de137da9ed"
+    - ID: "923d5328-0d2a-457d-a0d0-7b23bb935b01"
+      Hint: ApplicationsActiveTableHeader
+      Value: Applications Active
+    - ID: "9f66032c-b9ec-462b-928e-8b88d7fa017a"
+      Hint: ApplicationsLabel
+      Value: Applications
+    - ID: "ac42feca-2db1-4212-8ac8-c81ff3ec1515"
+      Hint: AreReviewsOpenTableHeader
+      Value: Reviews Open
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "bfd3ef8c-805e-4c2a-927c-51f2d0402b02"
+      Hint: ClearOverrideLabel
+      Value: Clear override
+    - ID: "d1fc15ab-ab6b-465e-936a-760169d16afa"
+      Hint: ReviewsEndTableHeader
+      Value: Reviews End UTC
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20231204T164450Z
+    - ID: "ed666d6d-c661-4946-927c-e5d278eecdc1"
+      Hint: ReviewsLabel
+      Value: Reviews
+    - ID: "f9583951-3f31-4392-ad14-8dc0bdc7f224"
+      Hint: DeactivateLabel
+      Value: Deactivate
