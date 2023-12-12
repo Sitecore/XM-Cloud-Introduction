@@ -58,6 +58,8 @@ namespace Mvp.Project.MvpSite.Rendering
               .AddGraphQlHandler("default", Configuration.DefaultSiteName!, Configuration.ExperienceEdgeToken!, Configuration.LayoutServiceUri!)
               .AsDefaultHandler();
 
+            services.AddHttpContextAccessor();
+            services.AddSitemap();
             services.AddFeatureUser(DotNetConfiguration);
 
             // Register the Sitecore Rendering Engine services.
@@ -141,8 +143,7 @@ namespace Mvp.Project.MvpSite.Rendering
 
             // Enable Authentication & Authorization
             app.UseAuthentication();
-            app.UseAuthorization();
-
+            app.UseAuthorization();            
             app.UseEndpoints(endpoints =>
                 {
                     endpoints.MapControllerRoute(
@@ -155,6 +156,12 @@ namespace Mvp.Project.MvpSite.Rendering
                   "healthz",
                   "healthz",
                   new { controller = "Default", action = "Healthz" }
+                  );
+
+                  endpoints.MapControllerRoute(
+                    "Sitemap",
+                    "sitemap.xml",
+                    new { controller = "Default", action = "SiteMap" }
                 );
 
                 endpoints.MapOktaSigninRoute();

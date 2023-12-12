@@ -7,6 +7,9 @@ SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 1000
+- ID: "e319ae64-c32a-4e79-b102-256f8c869dae"
+  Hint: IncludeinSitemap
+  Value: 1
 Languages:
 - Language: en
   Versions:
@@ -46,14 +49,14 @@ Languages:
       Value: 20200728T080246Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ce4324f9-1b80-41e8-bb66-6a95daa2c826"
+      Value: "52bb1a29-4676-40fc-bd13-932b5a1513f9"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Podcast
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\qDWz4GMo2o
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221006T145101Z
+      Value: 20231212T001413Z

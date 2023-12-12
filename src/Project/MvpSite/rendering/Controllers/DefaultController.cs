@@ -4,22 +4,25 @@ using Sitecore.AspNet.RenderingEngine;
 using Sitecore.AspNet.RenderingEngine.Filters;
 using Sitecore.LayoutService.Client.Exceptions;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
-using System.Net;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http.Extensions;
 using Okta.AspNetCore;
 using Mvp.Project.MvpSite.Middleware;
+using Microsoft.AspNetCore.Http;
+using Mvp.Project.MvpSite.Rendering;
 
 namespace Mvp.Project.MvpSite.Controllers
 {
     public class DefaultController : Controller
     {
         private readonly ILogger<DefaultController> _logger;
+        private readonly SitemapBuilder _sitemap;
 
-        public DefaultController(ILogger<DefaultController> logger)
+        public DefaultController(ILogger<DefaultController> logger, SitemapBuilder sitemap)
         {
             _logger = logger;
+            _sitemap = sitemap;
         }
 
         // Inject Sitecore rendering middleware for this controller action
@@ -77,6 +80,13 @@ namespace Mvp.Project.MvpSite.Controllers
         {
             // TODO: Do we want to add logic here to confirm connectivity with SC etc?
             return Ok("Healthy");
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IResult SiteMap()
+        {
+            var xml =  _sitemap.GenerateAsync();
+            return Results.Stream(xml.Result, "text/xml");
         }
     }
 }

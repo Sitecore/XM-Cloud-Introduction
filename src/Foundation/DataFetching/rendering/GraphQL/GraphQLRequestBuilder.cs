@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
-using Mvp.Foundation.DataFetching.GraphQL;
 using System.Collections.Generic;
 
 namespace Mvp.Foundation.DataFetching.GraphQL

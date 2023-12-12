@@ -12,6 +12,8 @@
 
         public string? NotFoundPage { get; set; }
 
+        public string? DefaultLanguageHeader { get; set; }
+
         public Uri? RenderingHostUri { get; set; }
 
         public bool EnableExperienceEditor { get; set; }
