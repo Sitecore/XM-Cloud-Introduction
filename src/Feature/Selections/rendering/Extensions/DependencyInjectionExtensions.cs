@@ -42,6 +42,7 @@ namespace Mvp.Feature.Selections.Extensions
             options.AddViewComponent(ApplicationCommentViewComponent.ViewComponentName);
             options.AddViewComponent(ApplicationReviewSettingsViewComponent.ViewComponentName);
             options.AddViewComponent(ContributionOverviewViewComponent.ViewComponentName);
+            options.AddViewComponent(SelectionOverviewViewComponent.ViewComponentName);
             return options;
         }
     }
