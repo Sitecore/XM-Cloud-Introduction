@@ -1,20 +1,21 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Sitecore.AspNet.RenderingEngine.Configuration;
-using Sitecore.AspNet.RenderingEngine;
-using Sitecore.LayoutService.Client;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Options;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
+using Mvp.Foundation.Configuration.Rendering.AppSettings;
+using Mvp.Foundation.DataFetching.GraphQL;
+using Sitecore.AspNet.RenderingEngine;
+using Sitecore.AspNet.RenderingEngine.Configuration;
+using Sitecore.AspNet.RenderingEngine.Middleware;
+using Sitecore.LayoutService.Client;
+using Sitecore.LayoutService.Client.Exceptions;
+using Sitecore.LayoutService.Client.Request;
 using Sitecore.LayoutService.Client.Response;
 using System;
-using Sitecore.LayoutService.Client.Request;
 using System.Collections.Generic;
-using Sitecore.AspNet.RenderingEngine.Middleware;
-using Mvp.Foundation.DataFetching.GraphQL;
-using Microsoft.Extensions.Configuration;
-using Mvp.Foundation.Configuration.Rendering.AppSettings;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace Mvp.Project.MvpSite.Middleware
 {
@@ -48,7 +49,24 @@ namespace Mvp.Project.MvpSite.Middleware
                 SitecoreLayoutResponse response = await GetSitecoreLayoutResponse(httpContext).ConfigureAwait(continueOnCapturedContext: false);
 
                 //Check not found page and set status code - start
-                if (response.Request.Path() == _configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>().NotFoundPage) { httpContext.Response.StatusCode = (int)HttpStatusCode.NotFound; }
+                if (response.HasErrors)
+                {
+                    foreach (SitecoreLayoutServiceClientException error in response.Errors)
+                    {
+                        switch (error)
+                        {
+                            case ItemNotFoundSitecoreLayoutServiceClientException:
+                                httpContext.Request.Path = _configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>().NotFoundPage;
+                                sitecoreLayoutRequest = _requestMapper.Map(httpContext.Request);
+                                response = await GetSitecoreLayoutResponse(httpContext).ConfigureAwait(continueOnCapturedContext: false);
+                                if (response.Request.Path() == _configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>().NotFoundPage) { httpContext.Response.StatusCode = (int)HttpStatusCode.NotFound; }
+                                break;
+
+                            default:
+                                throw error;
+                        }
+                    }
+                }
                 //Check not found page and set status code - end
 
                 SitecoreRenderingContext renderingContext = new()
@@ -66,21 +84,14 @@ namespace Mvp.Project.MvpSite.Middleware
             foreach (Action<HttpContext> postRenderingAction in (IEnumerable<Action<HttpContext>>)_options.PostRenderingActions)
                 postRenderingAction(httpContext);
 
-            httpContext.Items.Add((object)nameof(RenderingEngineMiddleware), (object)null);
+            httpContext.Items.Add(nameof(RenderingEngineMiddleware), null);
 
             await _next(httpContext).ConfigureAwait(continueOnCapturedContext: false);
         }
 
         private async Task<SitecoreLayoutResponse> GetSitecoreLayoutResponse(HttpContext httpContext)
         {
-            //intercept for not found logic - start
-            CustomGraphQlLayoutServiceHandler customGraphQlLayoutServiceHandler = new(_configuration,_graphQLRequestBuilder, _graphQLClientFactory);
             SitecoreLayoutRequest sitecoreLayoutRequest = _requestMapper.Map(httpContext.Request);
-            bool retVal = await customGraphQlLayoutServiceHandler.CheckLayoutExists(sitecoreLayoutRequest);
-            if (!retVal)  httpContext.Request.Path = _configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>().NotFoundPage;
-            //intercept for not found logic - end
-
-            sitecoreLayoutRequest = _requestMapper.Map(httpContext.Request);
             return await _layoutService.Request(sitecoreLayoutRequest).ConfigureAwait(continueOnCapturedContext: false);
         }
     }
