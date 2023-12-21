@@ -10,6 +10,8 @@
 
         public string? DefaultSiteName { get; set; }
 
+        public string? NotFoundPage { get; set; }
+
         public Uri? RenderingHostUri { get; set; }
 
         public bool EnableExperienceEditor { get; set; }
