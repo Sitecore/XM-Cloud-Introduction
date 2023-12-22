@@ -16,6 +16,8 @@
 
         public string? DefaultAcceptLanguageHeader { get; set; }
 
+        public string? DefaultLanguage { get; set; }
+
         public Uri? RenderingHostUri { get; set; }
 
         public bool EnableExperienceEditor { get; set; }

@@ -7,6 +7,9 @@ SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: "{EF8DD6F4-1BB8-4831-A1A6-DEFA3594051A}"
+- ID: "76fb6ffd-4487-4028-a1cf-705fbe360cba"
+  Hint: Priority
+  Value: "{F5FE29B6-3AA5-4648-8380-E67A5DC01D81}"
 - ID: "8e50d26e-5046-490d-8d62-113d2821ad38"
   Hint: Logo SVG path
   Value: /images/sitecore.svg
@@ -44,11 +47,11 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8c19dc75-f7cd-44ea-b514-fe5ce7a0ad32"
+      Value: "4acc87e8-3c1c-481e-b0d0-5e1705f6d9db"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\qDWz4GMo2o
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220524T013824Z
+      Value: 20231221T100926Z

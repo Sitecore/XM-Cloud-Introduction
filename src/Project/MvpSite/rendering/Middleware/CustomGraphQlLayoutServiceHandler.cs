@@ -1,10 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
 using Mvp.Foundation.DataFetching.GraphQL;
-using Mvp.Project.MvpSite.Models;
-using Sitecore.LayoutService.Client.Request;
-using Sitecore.LayoutService.Client.RequestHandlers.GraphQL;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -23,58 +19,20 @@ namespace Mvp.Project.MvpSite.Middleware
             _configuration = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
         }
 
-        public async Task<bool> CheckLayoutExists(
-          SitecoreLayoutRequest layoutrequest)
-        {
-            try
-            {
-                var client = _graphQLClientFactory.CreateGraphQlClient();
-                var query = Constants.GraphQlQueries.GetItem;
-                var variables = (object)new
-                {
-                    path = layoutrequest.Path(),
-                    language = layoutrequest.Language(),
-                    site = _configuration.DefaultSiteName
-                };
-
-                var request = _graphQLRequestBuilder.BuildRequest(query, variables);
-                var graphQlResponse = await client.SendQueryAsync<LayoutQueryResponse>(request);
-
-                string str = graphQlResponse.Data.Layout.Item.Rendered.ToString();
-                if (str == null) return false;
-            }
-            catch(Exception ex)
-            {
-                _ = ex.Message;//log this?
-                return false;
-            }
-            
-            return true;
-        }
-
         public async Task<List<Result>> GetSitemap()
         {
-            try
+            var client = _graphQLClientFactory.CreateGraphQlClient();
+            var query = Constants.GraphQlQueries.GetSitemapQuery;
+            var variables = (object)new
             {
-                var client = _graphQLClientFactory.CreateGraphQlClient();
-                var query = Constants.GraphQlQueries.GetSitemapQuery;
-                var variables = (object)new
-                {
-                    rootItemId = _configuration.RootItemId,
-                    language = _configuration.DefaultAcceptLanguageHeader
-                };
+                rootItemId = _configuration.RootItemId,
+                language = _configuration.DefaultLanguage
+            };
 
-                var request = _graphQLRequestBuilder.BuildRequest(query, variables);
-                var graphQlResponse = await client.SendQueryAsync<SitemapData>(request);
+            var request = _graphQLRequestBuilder.BuildRequest(query, variables);
+            var graphQlResponse = await client.SendQueryAsync<SitemapData>(request);
 
-                return graphQlResponse.Data.Search.Results;
-            }
-            catch (Exception ex)
-            {
-                _ = ex.Message;//log this?
-                return null;
-            }
-
+            return graphQlResponse.Data.Search.Results;
         }
     }
 }

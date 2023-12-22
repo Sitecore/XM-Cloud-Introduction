@@ -9,6 +9,9 @@ SharedFields:
   Value: |
     {6AEC120A-7222-42C6-A8E8-53F9354AEF53}
     {EF8DD6F4-1BB8-4831-A1A6-DEFA3594051A}
+- ID: "76fb6ffd-4487-4028-a1cf-705fbe360cba"
+  Hint: Priority
+  Value: "{F5FE29B6-3AA5-4648-8380-E67A5DC01D81}"
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -64,17 +67,17 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "25489bfb-9c04-436d-80ce-623a426c6402"
+      Value: "229afc9b-9061-486d-a456-c7a9fd3e076a"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: $name
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\qDWz4GMo2o
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221006T145101Z
+      Value: 20231221T100908Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
       Hint: IncludeInMenu
       Value: 1

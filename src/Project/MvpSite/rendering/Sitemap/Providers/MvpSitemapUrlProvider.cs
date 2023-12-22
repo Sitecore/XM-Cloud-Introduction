@@ -80,11 +80,11 @@ public class MvpSitemapUrlProvider : ISitemapUrlProvider
 
             SitemapNode node = new(url)
             {
-                LastModificationDate = DateTime.ParseExact(result.UpdatedDatetime.Value,
+                LastModificationDate = DateTime.ParseExact(result.UpdatedDatetime?.Value,
                 "yyyyMMdd'T'HHmmss'Z'",
                 CultureInfo.InvariantCulture),
-                Priority = Convert.ToDecimal(result.Priority.TargetItem.DisplayName),
-                ChangeFrequency = GetChangeFrequency(result.ChangeFrequency.TargetItem.DisplayName)
+                Priority = Convert.ToDecimal(result.Priority?.TargetItem?.DisplayName),
+                ChangeFrequency = GetChangeFrequency(result.ChangeFrequency?.TargetItem?.DisplayName)
             };
             nodes.Add(node);
         }
