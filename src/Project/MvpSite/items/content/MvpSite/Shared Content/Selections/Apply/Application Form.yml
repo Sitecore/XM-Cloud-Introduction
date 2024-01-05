@@ -8,6 +8,20 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "095894c5-c355-40f8-b47e-045c65af22f2"
+      Hint: ContributionsHelpText
+      Value: |
+        <p><strong>Please add your contributions from December 1st, 2022. </strong></p>
+        <p>For each entry, please make sure we can validate your contribution (e.g. provide a link). If you have done more than 10 blog posts, you don&rsquo;t have to link all of them one-by-one, instead, please link to a listing page which contains the blog posts that you would like reviewed. </p>
+        <p><strong>Please remember that we are looking for quality and not quantity. </strong></p>
+        <p>Where applicable, please select one or more Sitecore products related to your contribution.</p>
+        <p>Please submit contributions according to good judgement. If you have multiple links related to a single contribution submit them with logical type, name and description on the same date.</p>
+    - ID: "1ebe61d8-cdf1-4781-81fc-c3a9d3c6a993"
+      Hint: ErrorMessageLabel
+      Value: There is a problem with your User or Application. Please try to sign in again or contact the MVP Program to proceed.
+    - ID: "20f00986-b72d-4994-ae80-9393223f66b2"
+      Hint: ConsentLabel
+      Value: "I confirm that I did contribute to the Sitecore Community in the last 12 months. I consent to receive communications about Sitecore's business in accordance with Sitecore's Privacy Policy, I understand that I can opt-out at any time"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220913T142034Z
@@ -15,16 +29,29 @@ Languages:
       Hint: MyUserLink
       Value: |
         <link text="Edit my details" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{CA03E6DC-BBF0-45B9-B5F1-758A174BD328}" />
+    - ID: "6988876a-5b0c-4e3c-ae73-3baa95e11cd2"
+      Hint: MvpTypeHelpText
+      Value: |
+        <p>Categories represent the way in which an individual is contributing to the community. </p>
+        <p>If you are on the business side, potentially an executive at a Sitecore partner or customer, and supporting the Sitecore ecosystem through evangelism and raising awareness, please select the <strong>Ambassador</strong> category.</p>
+        <p>If you are using Sitecore as part of the marketing or strategy team and you are supporting your customers by showing how to achieve more with Sitecore products, please select the <strong>Strategy</strong> category.</p>
+        <p>If you are part of an implementation team (including development, architecture, DevOps, etc.) and your contributions help other technical teams with building on Sitecore products, please select the <strong>Technology</strong> category.</p>
+        <p>Select the MVP Category you desire to apply for. If you are in doubt, you can review the <a href="~/link.aspx?_id=0D97B45DC5894495A4959AAFF4FBD2C3&amp;_z=z">available categories</a>.</p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fdcaf350-9aa6-4dfb-be8f-10e56b848cdf"
+      Value: "0bcb332d-28db-421b-a74d-8568aadbbdea"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "c3ec3369-32b4-4f98-b316-12082335a348"
+      Hint: ConsentInformation
+      Value: |
+        <p>By submitting my Sitecore MVP Application, I confirm that&nbsp;I have read the Sitecore MVP website and know what the MVP Program is about. I confirm that I did contribute to the Sitecore Community in the last 12 months. If I apply without any evidence of my contributions, I acknowledge that I may be excluded from future MVP applications.</p>
+        <p>By submitting my contact information, I confirm that I have read and agree to the Sitecore Privacy Policy which explains how Sitecore collects, processes and shares my personal data. I consent to my data being processed in accordance with Sitecore's Privacy Policy so that Sitecore can optimize my experience with the Sitecore brand.</p>
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220929T080934Z
+      Value: 20230612T164019Z
     - ID: "fdf9f690-0cb1-4f61-bd55-5e98c70660cd"
       Hint: ContributionProductsLabel
       Value: Related Products

@@ -1,0 +1,135 @@
+{
+    "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+    "namespace": "Project.Sugcon2024.Sugcon",
+    "items": {
+      "includes": [
+        {
+            "name": "Templates",
+            "path": "/sitecore/templates/Project/Sugcon2024",
+            "allowedPushOperations": "createUpdateAndDelete"
+        },
+        {
+          "name": "Media",
+          "path": "/sitecore/Media Library/Project/Sugcon2024",
+          "rules": [
+            {
+              "path": "/shared",
+              "scope": "singleItem",
+              "allowedPushOperations": "createOnly"
+            },
+            {
+              "path": "/EU",
+              "scope": "singleItem",
+              "allowedPushOperations": "createOnly"
+            }
+          ]
+        },
+        {
+          "name": "Renderings",
+          "path": "/sitecore/Layout/Renderings/Project/Sugcon2024",
+          "allowedPushOperations": "createUpdateAndDelete"
+        },
+        {
+          "name": "PlaceholderSettings",
+          "path": "/sitecore/Layout/Placeholder Settings/Project/Sugcon2024",
+          "allowedPushOperations": "createUpdateAndDelete"
+        },
+        {
+          "name": "SiteCollection",
+          "path": "/sitecore/content/Sugcon2024",
+          "scope": "singleItem",
+          "allowedPushOperations": "createAndUpdate"
+        },
+        {
+          "name": "SiteEU",
+          "path": "/sitecore/content/Sugcon2024/EU",
+          "rules": [
+            {
+              "path": "/home",
+              "scope": "singleItem",
+              "allowedPushOperations": "createOnly"
+            },
+            {
+              "path": "/Media",
+              "scope": "singleItem",
+              "allowedPushOperations": "createAndUpdate"
+            },
+            {
+              "path": "/Data",
+              "scope": "itemAndChildren",
+              "allowedPushOperations": "createAndUpdate"
+            },
+            {
+              "path": "/Dictionary",
+              "scope": "itemAndChildren",
+              "allowedPushOperations": "createOnly"
+            },
+            {
+              "path": "/Presentation",
+              "scope": "itemAndDescendants",
+              "allowedPushOperations": "createAndUpdate"
+            },
+            {
+              "path": "/Settings/Site Grouping",
+              "scope": "itemAndDescendants",
+              "allowedPushOperations": "createOnly"
+            },
+            {
+              "path": "/Settings",
+              "scope": "itemAndChildren",
+              "allowedPushOperations": "createAndUpdate"
+            },
+            {
+              "path": "*", 
+              "scope": "ignored"
+            }
+          ]
+        },
+        {
+            "name": "SiteShared",
+            "path": "/sitecore/content/Sugcon2024/Shared",
+            "rules": [
+              {
+                "path": "/home",
+                "scope": "singleItem",
+                "allowedPushOperations": "createOnly"
+              },
+              {
+                "path": "/Media",
+                "scope": "singleItem",
+                "allowedPushOperations": "createAndUpdate"
+              },
+              {
+                "path": "/Data",
+                "scope": "itemAndChildren",
+                "allowedPushOperations": "createAndUpdate"
+              },
+              {
+                "path": "/Dictionary",
+                "scope": "itemAndChildren",
+                "allowedPushOperations": "createOnly"
+              },
+              {
+                "path": "/Presentation",
+                "scope": "itemAndDescendants",
+                "allowedPushOperations": "createAndUpdate"
+              },
+              {
+                "path": "/Settings/Site Grouping",
+                "scope": "itemAndDescendants",
+                "allowedPushOperations": "createOnly"
+              },
+              {
+                "path": "/Settings",
+                "scope": "itemAndChildren",
+                "allowedPushOperations": "createAndUpdate"
+              },
+              {
+                "path": "*", 
+                "scope": "ignored"
+              }
+            ]
+          }
+      ]
+    }
+  }

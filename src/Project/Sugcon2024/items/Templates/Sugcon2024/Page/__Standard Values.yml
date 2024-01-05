@@ -1,0 +1,40 @@
+﻿---
+ID: "7ab59a71-df23-46ef-8847-608031521f60"
+Parent: "28f60da7-21f8-4791-9ecf-f65a93e105a4"
+Template: "28f60da7-21f8-4791-9ecf-f65a93e105a4"
+Path: /sitecore/templates/Project/Sugcon2024/Page/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {28F60DA7-21F8-4791-9ECF-F65A93E105A4}
+    {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240105T121329Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c5f3bb07-3d33-4ab3-ae43-492c2388d917"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240105T121334Z
+    - ID: "ecefdd88-c772-4eab-9faf-24b23e769f27"
+      Hint: Title
+      Value: $name
