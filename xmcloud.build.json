@@ -36,6 +36,20 @@
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa"
+    },
+    "sugcon2024eu": {
+      "path": "./src/Project/Sugcon2024/Sugcon",
+      "nodeVersion": "16.15.1",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa"
+    },
+    "sugcon2024shared": {
+      "path": "./src/Project/Sugcon2024/Sugcon",
+      "nodeVersion": "16.15.1",
+      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
+      "enabled": true,
+      "type": "sxa"
     }
   },
   "postActions": {
