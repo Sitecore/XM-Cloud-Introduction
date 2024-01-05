@@ -1,10 +1,10 @@
 {
-  "name": "sxastarter",
+  "name": "sugcon",
   "description": "Application utilizing Sitecore JavaScript Services and Next.js",
   "version": "21.5.3",
   "private": true,
   "config": {
-    "appName": "sxastarter",
+    "appName": "sugcon",
     "rootPlaceholders": [
       "jss-main"
     ],
