@@ -175,39 +175,6 @@ services:
       interval: 60s
       timeout: 30s
 
-  sugcon2024shared:
-    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-sugcon2024shared:${VERSION:-latest}
-    build:
-      context: ./docker/build/sugcon
-      target: ${BUILD_CONFIGURATION}
-      args:
-        PARENT_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}
-    volumes:
-      - .\src\Project\Sugcon2024\Sugcon:C:\app
-    environment:
-      SITECORE_API_HOST: "http://cm"
-      NEXTJS_DIST_DIR: ".next-container"
-      PUBLIC_URL: "https://${SUGCON2024_SHARED_HOST}"
-      JSS_EDITING_SECRET: ${JSS_EDITING_SECRET}
-      SITECORE_API_KEY: "${SITECORE_API_KEY}"
-      FETCH_WITH: "GraphQL"
-      NEXT_PUBLIC_CDP_CLIENT_KEY: ${SUCGON2024_SHARED_CDP_CLIENT_KEY}
-      NEXT_PUBLIC_CDP_TARGET_URL: ${SUCGON2024_SHARED_CDP_TARGET_URL}
-      NEXT_PUBLIC_CDP_POINTOFSALE: ${SUCGON2024_SHARED_CDP_POINTOFSALE}
-      NODE_ENV: ${NODE_ENV}
-    depends_on:
-      - cm
-      - nodejs
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.sugon2024shared-secure.entrypoints=websecure"
-      - "traefik.http.routers.sugon2024shared-secure.rule=Host(`${SUGCON2024_SHARED_HOST}`)"
-      - "traefik.http.routers.sugon2024shared-secure.tls=true"
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000/api/healthz"]
-      interval: 60s
-      timeout: 30s
-
   # The solution build image is added here so it can be referenced as a build dependency
   # for the images which use its output. Setting "deploy.replicas: 0" means docker-compose will not
   # include it in the running environment. See Dockerfile for more details.
