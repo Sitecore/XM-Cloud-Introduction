@@ -37,11 +37,6 @@ services:
       SITECORE_API_KEY: ${EXPERIENCE_EDGE_TOKEN}
       GRAPH_QL_ENDPOINT: ${GRAPH_QL_ENDPOINT}
       
-  sugcon2024shared:
-    environment:
-      SITECORE_API_HOST: ${EXPERIENCE_EDGE_URL}
-      SITECORE_API_KEY: ${EXPERIENCE_EDGE_TOKEN}
-      GRAPH_QL_ENDPOINT: ${GRAPH_QL_ENDPOINT}
   # Set containers below to 'deploy.replicas: 0' to just run hosts & treafik
   mssql:
     deploy:
