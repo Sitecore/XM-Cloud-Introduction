@@ -36,15 +36,15 @@ Languages:
             <li>Eagerness to share their success stories with the whole community</li>
         </ul>
         <h2>How to apply</h2>
-        <p>To apply to the Sitecore MVP mentorship program as a mentor or mentee please send the Sitecore team an email at <a target="_blank" title="Sign up for the Mentor Program" href="mailto:mvp-program@sitecore.com?subject=Mentor%20Program">mvp-program@sitecore.com</a></p>
-        <p><em>Please note that if you are applying as a mentor,&nbsp;you must be a Sitecore MVP.</em></p>
+        <p>To apply to the Sitecore MVP mentorship program as a mentor or mentee please send the Sitecore team an email at <a href="mailto:mvp-program@sitecore.com?subject=Mentor%20Program">mvp-program@sitecore.com</a></p>
+        <p><em>Please note that if you are applying as a mentor you must be a Sitecore 2022 MVP.</em></p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6894f88b-a33f-4979-8d95-6ac71619ff79"
+      Value: "67224aff-0fdf-4cb7-8e3e-293c92611639"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\tamas.varga@sitecore.com
+        sitecore\tamas
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230201T134131Z
+      Value: 20220203T090508Z

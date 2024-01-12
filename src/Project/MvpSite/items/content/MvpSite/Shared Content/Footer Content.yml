@@ -8,16 +8,13 @@ Languages:
   Versions:
   - Version: 1
     Fields:
-    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
-      Hint: __Lock
-      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220302T083733Z
     - ID: "2d0a5d7e-65b6-4eb2-b2a6-012a0453a253"
       Hint: Content
       Value: |
-        <p>© Copyright 2022, Sitecore. All Rights Reserved&nbsp;| <a href="https://www.sitecore.com/trust" rel="noopener noreferrer" target="_blank">Legal</a>| <a href="https://www.sitecore.com/trust/privacy-policy" rel="noopener noreferrer" target="_blank">Privacy</a>&nbsp;| <a href="https://www.sitecore.com/own-the-experience" rel="noopener noreferrer" target="_blank">Own the Experience</a>| <a href="mailto:mvp-program@sitecore.com" rel="noopener noreferrer">mvp-program@sitecore.com</a></p>
+        &copy; Copyright 2022, Sitecore. All Rights Reserved&nbsp; |                         <a rel="noopener noreferrer" href="https://www.sitecore.com/trust" target="_blank">Legal</a>|                         <a rel="noopener noreferrer" href="https://www.sitecore.com/trust/privacy-policy" target="_blank">Privacy</a>&nbsp;|                         <a rel="noopener noreferrer" href="https://www.sitecore.com/own-the-experience" target="_blank">Own the Experience</a>|                         <a href="mailto:mvp-program@sitecore.com">mvp-program@sitecore.com</a>
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -28,7 +25,7 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4ce37510-2608-48ab-86ac-237c17783642"
+      Value: "5c019323-a92b-4e65-9bcc-2a28ddfd380e"
     - ID: "adec49d5-e4dd-420e-9225-db7fd95f8633"
       Hint: Social Media Links
       Value: |
@@ -40,51 +37,7 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\jcy@sitecore.net
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20221115T144659Z
-  - Version: 2
-    Fields:
-    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
-      Hint: __Lock
-      Value: <r />
-    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
-      Hint: __Created
-      Value: 20221115T144727Z
-    - ID: "2d0a5d7e-65b6-4eb2-b2a6-012a0453a253"
-      Hint: Content
-      Value: |
-        &copy; Copyright 2023, Sitecore. All Rights Reserved&nbsp;| <a href="https://www.sitecore.com/legal" rel="noopener noreferrer" target="_blank">Legal</a>&nbsp;| <a href="https://www.sitecore.com/trust/privacy-policy" rel="noopener noreferrer" target="_blank">Privacy</a>&nbsp;| <a href="https://www.sitecore.com/own-the-experience" rel="noopener noreferrer" target="_blank">Own the Experience</a>| <a href="mailto:mvp-program@sitecore.com" rel="noopener noreferrer">mvp-program@sitecore.com</a>
-    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
-      Hint: __Owner
-      Value: |
         sitecore\Admin
-    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
-      Hint: __Created by
-      Value: |
-        sitecore\jcy@sitecore.net
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "6d0b1bc8-0b31-42b9-aacb-87b14dcdfc04"
-    - ID: "9857f526-390f-48df-b6d1-1a97cc328e8f"
-      Hint: __Version Name
-      Value: Legal link change
-    - ID: "adec49d5-e4dd-420e-9225-db7fd95f8633"
-      Hint: Social Media Links
-      Value: |
-        {8B0A36D6-11B8-48A0-B2A5-3E6C4196BD32}
-        {89DC529D-E275-4B1F-B510-81962D93A19F}
-        {AA0550BB-2DCF-4157-AA4B-C79A7C0F8093}
-        {B7E9C86F-B750-4FC2-AAE7-50BD44D0C26D}
-        {85E4402A-8CB4-414F-BDD4-9306809022EF}
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\tamas.varga@sitecore.com
-    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
-      Hint: __Valid from
-      Value: 20221115T144727Z
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230115T151328Z
+      Value: 20220302T191837Z

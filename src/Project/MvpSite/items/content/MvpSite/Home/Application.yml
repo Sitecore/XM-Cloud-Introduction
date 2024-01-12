@@ -3,6 +3,7 @@ ID: "0068b880-2204-4759-9519-0ed217bbc156"
 Parent: "94de9ac3-a9f7-40ab-ae90-acda364b9c40"
 Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
 Path: /sitecore/content/MvpSite/Home/Application
+BranchID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
@@ -22,7 +23,7 @@ SharedFields:
           p:before="*"
           s:ds="{5C0D2E63-B9A6-49BF-81B1-E25DF54CB76E}"
           s:id="{13175655-0158-41FA-B796-AC2663CFED2A}"
-          s:par=""
+          s:par="CSSStyles"
           s:ph="/main/column-container-{413EB6EB-522B-4E53-825B-21992D7DD3F3}-0"
           s:ccb="Clear on publish" />
         <r
@@ -31,9 +32,6 @@ SharedFields:
           s:id="{57805937-D345-4A28-8DDF-C62EE43D8EBA}"
           s:par="CacheClearingBehavior=Clear on publish"
           s:ph="main" />
-        <r
-          uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}"
-          s:ph="header-signin" />
       </d>
     </r>
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
@@ -60,20 +58,20 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "dbcae796-dd3c-4c85-84cc-66e81687241b"
+      Value: "d012b766-3d48-4f7b-b8e8-72b026eb270e"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Application
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rea@sitecore.net
+        sitecore\ed7gR4aY22
     - ID: "c58ed264-1f55-4aa3-a30e-da12ce43cb38"
       Hint: RequiresAuthentication
       Value: 1
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221004T075426Z
+      Value: 20231129T105709Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
       Hint: IncludeInMenu
       Value: 1

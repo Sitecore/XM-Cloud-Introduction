@@ -17,15 +17,15 @@ Languages:
       Value: 20200528T230642Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "484af48f-6656-4d7c-8f28-be0eecd15a73"
+      Value: "3f215800-919a-462d-89f6-e8eb041aaeaa"
     - ID: "aff6fd57-80bd-4b53-adb9-164b922d5763"
       Hint: Link
       Value: |
-        <link text="Sitecore Community" linktype="external" url="https://community.sitecore.com/" anchor="" title="Sitecore Community" target="" />
+        <link text="Sitecore Community" linktype="anchor" url="https://community.sitecore.net/" anchor="https://community.sitecore.net/" title="Sitecore Community" class="" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\tamas.varga@sitecore.com
+        sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230116T172449Z
+      Value: 20200528T230718Z

@@ -20,10 +20,10 @@ Languages:
     - ID: "5e0174e0-52ca-4cc1-a6d5-1ae75954b019"
       Hint: TeaserLink
       Value: |
-        <link text="Apply now" linktype="external" url="https://mvp.sitecore.com/application" anchor="" target="" />
+        <link text="Link" linktype="external" url="https://www.google.com" anchor="" target="" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5d2cd3d4-78fe-4469-962f-41292d7f2f03"
+      Value: "8cead6fa-0bce-4d18-8829-41ff0e0ac3ca"
     - ID: "9b1f902b-cfcf-4965-b4d0-3880f610272d"
       Hint: TeaserImage
       Value: |
@@ -31,15 +31,13 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebw@sitecore.net
+        sitecore\admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221102T171603Z
+      Value: 20200721T134234Z
     - ID: "fa7c2f07-7f57-49f9-9f94-d5e9631d110d"
       Hint: TeaserText
       Value: |
         <p>The MVP Program is open for all individuals who work with the Sitecore platform.</p>
-        <p>The key to become and MVP is to share your expertise through online and offline channels.</p>
-        <div id="gtx-trans" style="position: absolute; left: 138px; top: 53px;">
-        <div class="gtx-trans-icon">&nbsp;</div>
-        </div>
+        <p>The key to be nominated is to share your expertise through online and offline channels.</p>
+        

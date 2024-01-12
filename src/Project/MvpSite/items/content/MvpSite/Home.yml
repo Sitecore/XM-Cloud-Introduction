@@ -113,17 +113,9 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{5B5FFD19-552C-4A6D-BB5F-0D2A24DD1839}">
-              <p:da
-                name="ccb" />
-            </r>
-            <r
               uid="{AD5E24E0-631B-423E-A835-B62F51AF661B}">
               <p:d />
             </r>
-            <r
-              uid="{D2DE8BE0-C911-46EB-9A32-DB8B4863AB2B}"
-              s:par="" />
             <r
               uid="{CAB9C343-0F22-4C4A-B9FD-983D952391C3}">
               <p:d />
@@ -133,15 +125,13 @@ Languages:
               p:after="r[@uid='{D2DE8BE0-C911-46EB-9A32-DB8B4863AB2B}']"
               s:ds="{5E3A3F5B-CBF7-4D13-8A39-2BC9D5FD3F22}"
               s:id="{A921AEC7-5DF7-4F8E-835A-6A5111CF94CF}"
-              s:par="ContentListType={E58A021E-74D2-471E-9EBA-B09616350605}&amp;ContentListLimit="
-              s:ph="/main/column-container-{D2DE8BE0-C911-46EB-9A32-DB8B4863AB2B}-0" />
-            <r
-              uid="{79F96B2D-698D-4B48-AC4C-1F1B71157C5F}">
-              <p:da
-                name="ccb" />
-            </r>
+              s:par="ContentListType=%7BE58A021E-74D2-471E-9EBA-B09616350605%7D&amp;ContentListLimit"
+              s:ph="/main/column-container-{D2DE8BE0-C911-46EB-9A32-DB8B4863AB2B}-0"
+              s:ccb="Clear on publish" />
             <r
               uid="{7A931726-B26B-44A0-BCE2-7A1023245601}"
+              s:ccb="Clear on publish"
+              s:ds=""
               s:par="" />
           </d>
         </r>
@@ -150,10 +140,10 @@ Languages:
       Value: 20200513T045800Z
     - ID: "49f3c8e4-225a-40b6-9894-4f409477de62"
       Hint: MetaKeywords
-      Value: Sitecore MVP, Most Valuable Professional, Sitecore Community
+      Value: MVP, Most Valuable Professional
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "423f04e7-939e-4215-9047-060a9a4b82fe"
+      Value: "198fd8d5-7f00-4749-9c29-b7e4bd29ff1f"
     - ID: "986ff3ab-18cd-47d7-b294-9a091f0e8cea"
       Hint: OgType
       Value: article
@@ -163,20 +153,20 @@ Languages:
         <image mediaid="{1023987B-1EAD-49A0-BF57-9A1C90A0F88A}" />
     - ID: "ae1320f3-9221-4417-a3aa-969227038016"
       Hint: OgTitle
-      Value: Sitecore MVP Program
+      Value: Home
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Home
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Rob Earlam
+        sitecore\sebw@sitecore.net
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230515T222708Z
+      Value: 20221004T072522Z
     - ID: "e08359cc-7bf5-4866-81a6-1e1d07226667"
       Hint: MetaDescription
-      Value: The Sitecore MVP Program is created to celebrate the most active Sitecore Community members from around the world who provide valuable expertise to the Sitecore ecosystem.
+      Value: MVP Home Description
     - ID: "eeb29922-a760-44a8-a5ab-f28efbdc641c"
       Hint: OgDescription
-      Value: The Sitecore MVP Program is created to celebrate the most active Sitecore Community members from around the world who provide valuable expertise to the Sitecore ecosystem.
+      Value: MVP Home Description

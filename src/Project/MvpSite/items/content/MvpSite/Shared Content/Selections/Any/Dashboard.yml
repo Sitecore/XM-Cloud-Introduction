@@ -22,7 +22,7 @@ Languages:
     - ID: "280ca93b-b813-47a4-8d73-26d0f02d165a"
       Hint: ReviewApplicationsOverviewLink
       Value: |
-        <link text="MVP Review Application" linktype="external" url="https://mvp-review.sitecore.com/" anchor="" target="_blank" />
+        <link text="Review Application" linktype="external" url="https://mvp-review.sitecore.com/" anchor="" target="_blank" />
     - ID: "33a43201-0f1c-4cb2-996a-8e6ee1260007"
       Hint: AdminCountriesOverviewLink
       Value: |
@@ -35,17 +35,13 @@ Languages:
       Hint: MyContributionsOverviewLink
       Value: |
         <link text="My Contributions" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{31EEF19E-0CAC-46F7-B36A-B7109A487454}" />
-    - ID: "6888acdc-5caa-4256-ab6c-66c84c89a55d"
-      Hint: MvpEmailContactLink
-      Value: |
-        <link text="Contact mvp-program@sitecore.net" linktype="mailto" style="" url="mailto:mvp-program@sitecore.com?subject=Need help with MVP Application" title="" />
     - ID: "8872eadd-a560-448d-9feb-1eae76500941"
       Hint: AdminApplicationsOverviewLink
       Value: |
         <link class="" id="{D296373D-623E-461B-8D7A-C274E23CBEDB}" querystring="" anchor="" target="" title="" linktype="internal" text="Manage Applications" url="/MvpSite/Home/Application/Admin/Applications" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "bc8d6ac1-e009-408e-8365-bb098e392518"
+      Value: "b13eef3f-0b2b-42fc-b03c-74c0e6cf5baf"
     - ID: "936da302-d3cd-4d65-88f9-b19ad9347885"
       Hint: AdminUsersOverviewLink
       Value: |
@@ -53,7 +49,7 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\ivan.lieckens@sitecore.com
+        sitecore\ed7gR4aY22
     - ID: "c5e13ef1-9849-4441-adbb-8e3f7f49fcc4"
       Hint: AdminMvpTypesOverviewLink
       Value: |
@@ -64,11 +60,11 @@ Languages:
         <link class="" id="{B3D36988-B4AE-4915-A6CF-F5133BE4E100}" querystring="" anchor="" target="" title="" linktype="internal" text="My current application" url="/MvpSite/Home/Application/Apply" />
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20231129T101426Z
+      Value: 20231127T151753Z
     - ID: "e638de5c-90a5-4764-a574-dfde0a612346"
       Hint: AdminSelectionsOverviewLink
       Value: |
-        <link text="Manage selections" linktype="anchor" url="ComingSoon" anchor="ComingSoon" title="" class="" />
+        <link text="Manage Selections" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{9FCC74CA-4F5F-44CC-B74C-40257F285964}" />
     - ID: "e92345c5-d175-4515-abe4-4f5ddf7deae4"
       Hint: MyUserOverviewLink
       Value: |

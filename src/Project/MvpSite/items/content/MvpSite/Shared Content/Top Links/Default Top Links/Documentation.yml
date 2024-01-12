@@ -17,15 +17,15 @@ Languages:
       Value: 20200528T230559Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "bb5b16f6-2b19-4383-8062-9ae599930513"
+      Value: "26cd460c-57dd-42d4-a7e7-fd2356c2aff7"
     - ID: "aff6fd57-80bd-4b53-adb9-164b922d5763"
       Hint: Link
       Value: |
-        <link text="Documentation" linktype="external" url="https://doc.sitecore.com/" anchor="" title="Documentation" target="" />
+        <link text="Documentation" linktype="anchor" url="https://doc.sitecore.com/" anchor="https://doc.sitecore.com/" title="Documentation" class="" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\tamas.varga@sitecore.com
+        sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230116T172517Z
+      Value: 20211020T051119Z
