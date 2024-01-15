@@ -1,14 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Mvp.Project.MvpSite.Middleware;
 using Mvp.Project.MvpSite.Models;
+using Okta.AspNetCore;
 using Sitecore.AspNet.RenderingEngine;
 using Sitecore.LayoutService.Client.Exceptions;
-using Sitecore.LayoutService.Client.Response.Model.Fields;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Http.Extensions;
-using Mvp.Project.MvpSite.Middleware;
-using Okta.AspNetCore;
 using Sitecore.LayoutService.Client.Response.Model;
+using Sitecore.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Project.MvpSite.Controllers
 {

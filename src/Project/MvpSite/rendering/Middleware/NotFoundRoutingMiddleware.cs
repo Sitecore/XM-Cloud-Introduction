@@ -24,11 +24,7 @@ namespace Mvp.Project.MvpSite.Middleware
 
         private readonly MvpSiteSettings _settings;
 
-        private readonly ISitecoreLayoutRequestMapper _requestMapper;
-        
-        private readonly ISitecoreLayoutClient _layoutService;
-        
-        private readonly IOptions<RenderingEngineOptions> _options;
+        private readonly RenderingEngineMiddleware _renderingEngine;
         
         public NotFoundRoutingMiddleware(
             RequestDelegate next,
@@ -41,9 +37,7 @@ namespace Mvp.Project.MvpSite.Middleware
             _next = next;
             _settings = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
             _logger = logger;
-            _requestMapper = requestMapper;
-            _layoutService = layoutService;
-            _options = options;
+            _renderingEngine = new RenderingEngineMiddleware(_next, requestMapper, layoutService, options);
         }
 
         public async Task InvokeAsync(HttpContext context, IViewComponentHelper viewComponentHelper, IHtmlHelper htmlHelper)
@@ -70,7 +64,7 @@ namespace Mvp.Project.MvpSite.Middleware
                     context.Features.Set<ISitecoreRenderingContext>(null);
                     
                     // [IVA] Finally we re-run the RenderingEngine
-                    await new RenderingEngineMiddleware(_next, _requestMapper, _layoutService, _options).Invoke(context, viewComponentHelper, htmlHelper);
+                    await _renderingEngine.Invoke(context, viewComponentHelper, htmlHelper);
                 }
                 else
                 {
