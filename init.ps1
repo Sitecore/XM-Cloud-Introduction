@@ -35,12 +35,18 @@ Param (
     [string]$SUCGON_INDIA_CDP_TARGET_URL,
     [Parameter(HelpMessage = "SUGCON INDIA CPD Point of Sale.")]
     [string]$SUCGON_INDIA_CDP_POINTOFSALE,
-    [Parameter(HelpMessage = "SUGCON INDIA CPD Client Key.")]
+    [Parameter(HelpMessage = "SUGCON NA CPD Client Key.")]
     [string]$SUCGON_NA_CDP_CLIENT_KEY,
     [Parameter(HelpMessage = "SUGCON NA CPD Target URL.")]
     [string]$SUCGON_NA_CDP_TARGET_URL,
     [Parameter(HelpMessage = "SUGCON NA CPD Point of Sale.")]
     [string]$SUCGON_NA_CDP_POINTOFSALE,
+    [Parameter(HelpMessage = "SUGCON2024 EU CPD Client Key.")]
+    [string]$SUCGON2024_EU_CDP_CLIENT_KEY,
+    [Parameter(HelpMessage = "SUGCON2024 EU CPD Target URL.")]
+    [string]$SUCGON2024_EU_CDP_TARGET_URL,
+    [Parameter(HelpMessage = "SUGCON2024 EU CPD Point of Sale.")]
+    [string]$SUCGON2024_EU_CDP_POINTOFSALE,
     [Parameter(HelpMessage = "Switch to setup the heads to run against edge without docker.")]
     [switch]$Edge_NoDocker
 )
@@ -126,6 +132,12 @@ if ($InitEnv) {
     Set-EnvFileVariable "SUCGON_INDIA_CDP_CLIENT_KEY" -Value $SUCGON_INDIA_CDP_CLIENT_KEY
     Set-EnvFileVariable "SUCGON_INDIA_CDP_TARGET_URL" -Value $SUCGON_INDIA_CDP_TARGET_URL
     Set-EnvFileVariable "SUCGON_INDIA_CDP_POINTOFSALE" -Value $SUCGON_INDIA_CDP_POINTOFSALE
+    Set-EnvFileVariable "SUCGON_NA_CDP_CLIENT_KEY" -Value $SUCGON_NA_CDP_CLIENT_KEY
+    Set-EnvFileVariable "SUCGON_NA_CDP_TARGET_URL" -Value $SUCGON_NA_CDP_TARGET_URL
+    Set-EnvFileVariable "SUCGON_NA_CDP_POINTOFSALE" -Value $SUCGON_NA_CDP_POINTOFSALE
+    Set-EnvFileVariable "SUCGON2024_EU_CDP_CLIENT_KEY" -Value $SUCGON2024_EU_CDP_CLIENT_KEY
+    Set-EnvFileVariable "SUCGON2024_EU_CDP_TARGET_URL" -Value $SUCGON2024_EU_CDP_TARGET_URL
+    Set-EnvFileVariable "SUCGON2024_EU_CDP_POINTOFSALE" -Value $SUCGON2024_EU_CDP_POINTOFSALE
 }
 Write-Host "Finished populating .env file." -ForegroundColor Green
 
@@ -223,6 +235,7 @@ $SUGCON_EU_HOST = "sugconeu.$Host_Suffix"
 $SUGCON_ANZ_HOST = "sugconanz.$Host_Suffix"
 $SUGCON_INDIA_HOST = "sugconindia.$Host_Suffix"
 $SUGCON_NA_HOST = "sugconna.$Host_Suffix"
+$SUGCON2024_EU_HOST = "sugconeu2024.$Host_Suffix"
 
 ##################################
 # Configure TLS/HTTPS certificates
@@ -266,6 +279,7 @@ Add-HostsEntry $SUGCON_EU_HOST
 Add-HostsEntry $SUGCON_ANZ_HOST
 Add-HostsEntry $SUGCON_INDIA_HOST
 Add-HostsEntry $SUGCON_NA_HOST
+Add-HostsEntry $SUGCON2024_EU_HOST
 
 ##########################
 # Show Certificate Details

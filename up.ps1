@@ -33,6 +33,7 @@ $sugconeuHost = $envContent | Where-Object { $_ -imatch "^SUGCON_EU_HOST=.+" }
 $sugconanzHost = $envContent | Where-Object { $_ -imatch "^SUGCON_ANZ_HOST=.+" }
 $sugconindiaHost = $envContent | Where-Object { $_ -imatch "^SUGCON_INDIA_HOST=.+" }
 $sugconNaHost = $envContent | Where-Object { $_ -imatch "^SUGCON_NA_HOST=.+" }
+$sugcon2024EuHost = $envContent | Where-Object { $_ -imatch "^SUGCON2024_EU_HOST=.+" }
 $sitecoreDockerRegistry = $envContent | Where-Object { $_ -imatch "^SITECORE_DOCKER_REGISTRY=.+" }
 $sitecoreVersion = $envContent | Where-Object { $_ -imatch "^SITECORE_VERSION=.+" }
 
@@ -42,6 +43,7 @@ if ([string]::IsNullOrEmpty($xmCloudHost) -or
     [string]::IsNullOrEmpty($sugconanzHost) -or
     [string]::IsNullOrEmpty($sugconindiaHost) -or
     [string]::IsNullOrEmpty($sugconNaHost) -or
+    [string]::IsNullOrEmpty($sugcon2024EuHost) -or
     [string]::IsNullOrEmpty($sitecoreDockerRegistry) -or
     [string]::IsNullOrEmpty($sitecoreVersion))
 {
@@ -54,6 +56,7 @@ $sugconeuHost = $sugconeuHost.Split("=")[1]
 $sugconanzHost = $sugconanzHost.Split("=")[1]
 $sugconindiaHost = $sugconindiaHost.Split("=")[1]
 $sugconNaHost = $sugconNaHost.Split("=")[1]
+$sugcon2024EuHost = $sugcon2024EuHost.Split("=")[1]
 $sitecoreDockerRegistry = $sitecoreDockerRegistry.Split("=")[1]
 $sitecoreVersion = $sitecoreVersion.Split("=")[1]
 
@@ -99,6 +102,7 @@ if ($UseEdge) {
     Start-Process https://$sugconanzHost
     Start-Process https://$sugconindiaHost  
     Start-Process https://$sugconNaHost  
+    Start-Process https://$sugcon2024EuHost
 }
 else {
     # Start the Sitecore instance
@@ -170,5 +174,6 @@ else {
         Start-Process https://$sugconanzHost
         Start-Process https://$sugconindiaHost
         Start-Process https://$sugconNaHost
+        Start-Process https://$sugcon2024EuHost
     }
 }

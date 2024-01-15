@@ -42,26 +42,29 @@ You must be in "administrator mode" to run the `init.ps1` script.
 
 Examples of how to use them can be seen in the setup guides for the different running modes below .
 
-| Parameter                    | Required for MVP Site | Required for SUGCON Sites | Required for full local | Required for Edge Mode | Purpose                                                         |
-|------------------------------|-----------------------|---------------------------|-------------------------|------------------------|-----------------------------------------------------------------|
-| LicenseXmlPath               | No                    | No                        | **Yes**                 | No                     | Used to specify the path to the license file                    |
-| AdminPassword                | No                    | No                        | **Yes**                 | No                     | Used to specify the password for the Sitecore admin user        |
-| InitEnv                      | No                    | No                        | No                      | No                     | Used to force a full initialization of the repository           |
-| Edge_Token                   | No                    | No                        | No                      | **Yes**                | Used to authenticate with XM Cloud, when running in 'Edge Mode' |
-| OKTA_Domain                  | **Yes**               | No                        | No                      | No                     | Okta domain used by the MVP Rendering host                      |
-| OKTA_Client_Id               | **Yes**               | No                        | No                      | No                     | Okta Client Id used by the MVP Rendering host                   |
-| OKTA_Client_Secret           | **Yes**               | No                        | No                      | No                     | Okta Client Secret used by the MVP Rendering host               |
-| MVP_Selections_API           | No                    | No                        | No                      | No                     | URL for the MVP Selections API                                  |
-| SUCGON_ANZ_CDP_CLIENT_KEY    | No                    | No                        | No                      | No                     | CDP Client key for SUGCON ANZ Site                              |
-| SUCGON_ANZ_CDP_TARGET_URL    | No                    | No                        | No                      | No                     | CDP Target URL for SUGCON ANZ Site                              |
-| SUCGON_ANZ_CDP_POINTOFSALE   | No                    | No                        | No                      | No                     | CDP POS for SUGCON ANZ Site                                     |
-| SUCGON_EU_CDP_CLIENT_KEY     | No                    | No                        | No                      | No                     | CDP Client key for SUGCON EU Site                               |
-| SUCGON_EU_CDP_TARGET_URL     | No                    | No                        | No                      | No                     | CDP Target URL for SUGCON EU Site                               |
-| SUCGON_EU_CDP_POINTOFSALE    | No                    | No                        | No                      | No                     | CDP POS for SUGCON EU Site                                      |
-| SUCGON_INDIA_CDP_CLIENT_KEY  | No                    | No                        | No                      | No                     | CDP Client key for SUGCON India Site                            |
-| SUCGON_INDIA_CDP_TARGET_URL  | No                    | No                        | No                      | No                     | CDP Target URL for SUGCON India Site                            |
-| SUCGON_INDIA_CDP_POINTOFSALE | No                    | No                        | No                      | No                     | CDP POS for SUGCON India Site                                   |
-| Edge_NoDocker                | No                    | No                        | No                      | No                     | Used to initialize the repo for Edge Developer without Docker   |
+| Parameter                     | Required for MVP Site | Required for SUGCON Sites | Required for full local | Required for Edge Mode | Purpose                                                         |
+|-------------------------------|-----------------------|---------------------------|-------------------------|------------------------|-----------------------------------------------------------------|
+| LicenseXmlPath                | No                    | No                        | **Yes**                 | No                     | Used to specify the path to the license file                    |
+| AdminPassword                 | No                    | No                        | **Yes**                 | No                     | Used to specify the password for the Sitecore admin user        |
+| InitEnv                       | No                    | No                        | No                      | No                     | Used to force a full initialization of the repository           |
+| Edge_Token                    | No                    | No                        | No                      | **Yes**                | Used to authenticate with XM Cloud, when running in 'Edge Mode' |
+| OKTA_Domain                   | **Yes**               | No                        | No                      | No                     | Okta domain used by the MVP Rendering host                      |
+| OKTA_Client_Id                | **Yes**               | No                        | No                      | No                     | Okta Client Id used by the MVP Rendering host                   |
+| OKTA_Client_Secret            | **Yes**               | No                        | No                      | No                     | Okta Client Secret used by the MVP Rendering host               |
+| MVP_Selections_API            | No                    | No                        | No                      | No                     | URL for the MVP Selections API                                  |
+| SUCGON_ANZ_CDP_CLIENT_KEY     | No                    | No                        | No                      | No                     | CDP Client key for SUGCON ANZ Site                              |
+| SUCGON_ANZ_CDP_TARGET_URL     | No                    | No                        | No                      | No                     | CDP Target URL for SUGCON ANZ Site                              |
+| SUCGON_ANZ_CDP_POINTOFSALE    | No                    | No                        | No                      | No                     | CDP POS for SUGCON ANZ Site                                     |
+| SUCGON_EU_CDP_CLIENT_KEY      | No                    | No                        | No                      | No                     | CDP Client key for SUGCON EU Site                               |
+| SUCGON_EU_CDP_TARGET_URL      | No                    | No                        | No                      | No                     | CDP Target URL for SUGCON EU Site                               |
+| SUCGON_EU_CDP_POINTOFSALE     | No                    | No                        | No                      | No                     | CDP POS for SUGCON EU Site                                      |
+| SUCGON_INDIA_CDP_CLIENT_KEY   | No                    | No                        | No                      | No                     | CDP Client key for SUGCON India Site                            |
+| SUCGON_INDIA_CDP_TARGET_URL   | No                    | No                        | No                      | No                     | CDP Target URL for SUGCON India Site                            |
+| SUCGON_INDIA_CDP_POINTOFSALE  | No                    | No                        | No                      | No                     | CDP POS for SUGCON India Site                                   |
+| SUCGON2024_EU_CDP_CLIENT_KEY  | No                    | No                        | No                      | No                     | CDP Client key for SUGCON2024 EU Site                           |
+| SUCGON2024_EU_CDP_TARGET_URL  | No                    | No                        | No                      | No                     | CDP Target URL for SUGCON2024 EU Site                           |
+| SUCGON2024_EU_CDP_POINTOFSALE | No                    | No                        | No                      | No                     | CDP POS for SUGCON2024 EU Site                                  |
+| Edge_NoDocker                 | No                    | No                        | No                      | No                     | Used to initialize the repo for Edge Developer without Docker   |
 
 ## Embedded Personalization
 Embedded Personalization is disabled locally by default. If you wish to enable it you will need to populate the different `xx_CDP_CLIENT_KEY`, `xx_CDP_TARGET_URL` & `xx_CDP_POINTOFSALE` parameters with valid values and change the `NODE_ENV` parameter from `development` to another value.
