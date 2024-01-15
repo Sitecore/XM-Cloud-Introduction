@@ -11,28 +11,28 @@
   "renderingHosts": {
     "sugconanz": {
       "path": "./src/Project/Sugcon/SugconAnzSxa",
-      "nodeVersion": "16.15.1",
+      "nodeVersion": "20.10.0",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa"
     },
     "sugconeu": {
       "path": "./src/Project/Sugcon/SugconEuSxa",
-      "nodeVersion": "16.15.1",
+      "nodeVersion": "20.10.0",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa"
     },
     "sugconindia": {
       "path": "./src/Project/Sugcon/SugconIndiaSxa",
-      "nodeVersion": "16.15.1",
+      "nodeVersion": "20.10.0",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa"
     },
     "sugconna": {
       "path": "./src/Project/Sugcon/SugconNaSxa",
-      "nodeVersion": "16.15.1",
+      "nodeVersion": "20.10.0",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
       "type": "sxa"
