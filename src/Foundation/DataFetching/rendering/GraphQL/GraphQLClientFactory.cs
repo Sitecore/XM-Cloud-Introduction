@@ -1,31 +1,32 @@
 ﻿using GraphQL.Client.Abstractions;
 using GraphQL.Client.Http;
 using GraphQL.Client.Serializer.Newtonsoft;
-using Microsoft.Extensions.Configuration;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
 using System.Net.Http;
+using Microsoft.Extensions.Configuration;
 
 namespace Mvp.Foundation.DataFetching.GraphQL
 {
     public class GraphQLClientFactory : IGraphQLClientFactory
     {
-        private readonly HttpClient httpClient;
-        private MvpSiteSettings configuration;
+        private readonly HttpClient _httpClient;
+        
+        private readonly MvpSiteSettings _configuration;
 
         public GraphQLClientFactory(IConfiguration configuration, HttpClient httpClient)
         {
-            this.httpClient = httpClient;
-            this.configuration = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
+            _httpClient = httpClient;
+            _configuration = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
         }
 
         public IGraphQLClient CreateGraphQlClient()
         {
-            var graphQLHttpClientOptions = new GraphQLHttpClientOptions
+            GraphQLHttpClientOptions graphQLHttpClientOptions = new ()
             {
-                EndPoint = this.configuration.LayoutServiceUri
+                EndPoint = _configuration.LayoutServiceUri
             };
 
-            return new GraphQLHttpClient(graphQLHttpClientOptions, new NewtonsoftJsonSerializer(), httpClient);
+            return new GraphQLHttpClient(graphQLHttpClientOptions, new NewtonsoftJsonSerializer(), _httpClient);
         }
     }
 }

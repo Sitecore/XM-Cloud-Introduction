@@ -1,15 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Mvp.Project.MvpSite.Models;
 using Sitecore.AspNet.RenderingEngine;
-using Sitecore.AspNet.RenderingEngine.Filters;
 using Sitecore.LayoutService.Client.Exceptions;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
-using System.Net;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http.Extensions;
-using Okta.AspNetCore;
 using Mvp.Project.MvpSite.Middleware;
+using Okta.AspNetCore;
+using Sitecore.LayoutService.Client.Response.Model;
 
 namespace Mvp.Project.MvpSite.Controllers
 {
@@ -25,7 +24,7 @@ namespace Mvp.Project.MvpSite.Controllers
         // Inject Sitecore rendering middleware for this controller action
         // (enables model binding to Sitecore objects such as Route,
         // and causes requests to the Sitecore Layout Service for controller actions)
-        [UseSitecoreRendering(typeof(CustomRenderingEnginePipeline))]
+        [UseMvpSiteRendering]
         public IActionResult Index(LayoutViewModel model)
         {
             IActionResult result = null;
@@ -37,6 +36,7 @@ namespace Mvp.Project.MvpSite.Controllers
                     switch (error)
                     {
                         default:
+                            _logger.LogError(error, error.Message);
                             throw error;
                     }
                 }
@@ -60,7 +60,13 @@ namespace Mvp.Project.MvpSite.Controllers
 
         private static bool IsSecurePage(ISitecoreRenderingContext request)
         {
-            return request.Response?.Content?.Sitecore?.Route?.Fields["RequiresAuthentication"].Read<CheckboxField>().Value ?? false;
+            bool result = false;
+            if (request.Response?.Content?.Sitecore?.Route?.Fields.TryGetValue("RequiresAuthentication", out IFieldReader requiresAuthFieldReader) ?? false)
+            {
+                result = requiresAuthFieldReader.Read<CheckboxField>().Value;
+            }
+            
+            return result;
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

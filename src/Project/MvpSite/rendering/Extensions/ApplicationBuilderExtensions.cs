@@ -11,9 +11,9 @@ namespace Mvp.Project.MvpSite.Extensions
             return app;
         }
 
-        public static IApplicationBuilder UseCustomSitecoreRenderingEngine(this IApplicationBuilder app)
+        public static IApplicationBuilder UseNotFoundRouting(this IApplicationBuilder app)
         {
-            app.UseMiddleware<CustomRenderingEngineMiddleware>();
+            app.UseMiddleware<NotFoundRoutingMiddleware>();
             return app;
         }
     }
