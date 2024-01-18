@@ -118,8 +118,10 @@ namespace Mvp.Project.MvpSite.Rendering
             // The Experience Editor endpoint should not be enabled in production DMZ.
             // See the SDK documentation for details.
             if (Configuration.EnableExperienceEditor)
+            {
                 // Enable the Sitecore Experience Editor POST endpoint.
                 app.UseSitecoreExperienceEditor();
+            }
 
             // Standard ASP.NET Core routing and static file support.
             app.EnsureAcceptLanguageHeader();
