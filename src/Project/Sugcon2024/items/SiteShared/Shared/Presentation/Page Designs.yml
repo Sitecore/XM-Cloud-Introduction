@@ -5,6 +5,9 @@ Template: "81b2e2b0-3fd9-439a-b994-b14db5c264bb"
 Path: /sitecore/content/Sugcon2024/Shared/Presentation/Page Designs
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
+- ID: "ba1f60d6-3deb-40cc-bb61-eec772279ee1"
+  Hint: TemplatesMapping
+  Value: "%7bF5D59B30-223D-4E5A-967D-19DAF7934DB6%7d%3d%257BAE6A7C57-1307-41C0-A613-949F33266DE4%257D%26%7b28F60DA7-21F8-4791-9ECF-F65A93E105A4%7d%3d%257B47B6EA94-7583-4582-B014-9DFEC2C93583%257D"
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{2EA756FA-AED6-4599-83B7-36FEFE229B31}"
@@ -26,11 +29,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a608240b-34d8-4453-948b-116ca41054cd"
+      Value: "c6c7aeca-9946-4237-95a6-cca26cd9ea39"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\UOUBIWQRx7
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240105T121450Z
+      Value: 20240123T185141Z
