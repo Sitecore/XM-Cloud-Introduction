@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({
         minWidth="50%"
       >
         <Box width="auto" alignSelf="end" maxWidth="620px">
-          <Heading as="H1" fontSize="30px" fontWeight="bold" mb="33px">
+          <Heading as="h1" fontSize="30px" fontWeight="bold" mb="33px">
             {title}
           </Heading>
           <Text fontSize="18px" mb={3}>
