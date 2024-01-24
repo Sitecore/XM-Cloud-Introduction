@@ -16,6 +16,7 @@ jobs:
       FETCH_WITH: GraphQL
       GRAPH_QL_ENDPOINT: https://www.google.com
       DISABLE_SSG_FETCH: true
+      SITECORE_API_HOST: https://www.google.com
     defaults:
       run:
         working-directory: ${{ inputs.workingDirectory }}
