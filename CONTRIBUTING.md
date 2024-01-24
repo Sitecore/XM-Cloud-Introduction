@@ -21,5 +21,7 @@ Sitecore has a _"No commitment"_ approach to this repository. The required funct
 ## Contribution Process
 Sitecore is open to contributions from the community, but make no commitment to incorporate these changes. All contributions must be submitted by the standard GitHub pull request flow, or by logging an issue to be resolved by Sitecore.
 
+You can find more [PR guidelines](/docs/PULL_REQUESTS.md) in the docs.
+
 ## Support
 This is not a supported product. Github Issues are accepted but there is no commitment to resolving issues. Sitecore will respond to them as time permits.

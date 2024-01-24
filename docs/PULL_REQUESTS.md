@@ -21,21 +21,14 @@ Many times the pull request is the team's first opportunity to collaborate on an
 ## Reviewing a Pull Request
 
 - Who can review? Simple, everyone should review code. If you are new to a project, you'll get a feeling for the structure other projects. If you are experienced, you'll be able to offer more insights.
-- Each project will need to decide who is able to officially approve a request. If you are principle reviewer, try to finish a review within 24 hours. When you approve a PR, leave a comment saying it looks good or a simple (thumbs up). Some systems have official approval buttons.
-- Merging a pull request is the responsibility of the person who opened the PR. Why? There may be additional tasks such as deploying or updating a tag.
-- When reviewing, open the code in a browser if possible. It can be hard to grasp a change until you see it live.
+- Merging a pull request is the responsibility of the Sitecore Developer Relations team.
+- When reviewing, visualize the changes if possible. It can be hard to grasp a change until you see it live.
 - Remember to be polite. As one guideline says "Accept that many programming decisions are opinions. Discuss tradeoffs, which you prefer, and reach a resolution quickly."
 - We are all learning. As long as the code does not violate agreed standards, the author has a right to use whatever solution they want.
 - If possible, don't just leave a comment about a potential issue, recommend a fix. Sketch the solution if possible.
 - If you think there is a better solution, but are not sure, you can say that. Just note that it is a gut feeling and the code may be fine.
 - A comment is the start of a conversation, you may need to clarify and expand on your suggestions.
 - For more guidelines on review code, see the [thoughtbot guide](https://github.com/thoughtbot/guides/blob/main/code-review/README.md) and the [guide by github](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/best-practices-for-pull-requests).
-- Begin a comment with an emoji communicating the intent of the comment. These include:
-  - :wrench: - An issue that needs to be fixed before the PR will be approved.
-  - :information_desk_person: - An alternative solution or improvement that will improve the code but will not prevent the PR from being approved.
-  - :question: - A question to help understand a portion of the code under review. Questions should be answered by the reviewee before PR approval.
-  - :thought_balloon: - A comment or observation that will not prevent the PR from being approved.
-
 
 ## Receiving Feedback
 - Assume everyone is acting in good faith. It's hard to communicate tone on the web. So assume that everyone is giving suggestions in a compassionate manner. It's almost certainly true.
