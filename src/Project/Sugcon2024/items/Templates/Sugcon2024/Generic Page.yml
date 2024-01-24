@@ -1,0 +1,46 @@
+﻿---
+ID: "f5d59b30-223d-4e5a-967d-19daf7934db6"
+Parent: "aa7ea3cd-0f71-4031-8afa-8cb36cf60d96"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Sugcon2024/Generic Page
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/document_text.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {47151711-26CA-434E-8132-D3E0B7D26683}
+    {371D5FBB-5498-4D94-AB2B-E3B70EEBE78C}
+    {4414A1F9-826A-4647-8DF4-ED6A95E64C43}
+    {F39A594A-7BC9-4DB0-BAA1-88543409C1F9}
+    {6650FB34-7EA1-4245-A919-5CC0F002A6D7}
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{3834783E-6EAA-420D-8F89-028D0C511A36}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240105T121329Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f3ef15b2-ab1d-4cb7-b5bd-01757bd64585"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\UOUBIWQRx7
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240123T184508Z
