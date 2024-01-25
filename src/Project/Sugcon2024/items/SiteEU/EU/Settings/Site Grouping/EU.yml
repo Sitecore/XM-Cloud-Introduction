@@ -17,6 +17,9 @@ SharedFields:
 - ID: "9eaf6dc9-b811-4cda-9edd-9697faba628a"
   Hint: POS
   Value: en=Sugcon2024EU
+- ID: "b59e43ab-84da-49f3-87a1-d2fcf648365b"
+  Hint: Scheme
+  Value: https
 - ID: "cb4e9e2e-2b66-43dc-ad3f-9caf363d28d3"
   Hint: SiteName
   Value: EU
@@ -47,11 +50,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "e62922bb-5310-44fe-94bc-e9ef91b3c07d"
+      Value: "d0d37bef-62c9-4cf6-b8e3-0199cb7ff5dc"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\1ISa5gYrpM
+        sitecore\UOUBIWQRx7
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240108T035552Z
+      Value: 20240124T214039Z
