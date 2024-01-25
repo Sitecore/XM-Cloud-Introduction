@@ -1,5 +1,4 @@
 services:
-
   nodejs:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}
     build:
@@ -42,7 +41,7 @@ services:
       test: ["CMD", "curl", "-f", "http://localhost:3000/api/healthz"]
       interval: 60s
       timeout: 30s
-  
+
   sugconanz:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-sugcon-anz:${VERSION:-latest}
     build:
@@ -212,7 +211,7 @@ services:
       MVP_RENDERING_EDITING_HOST_URI: "http://mvp-rendering"
       Sitecore__InstanceUri: "http://cm"
       Sitecore__RenderingHostUri: "https://${MVP_RENDERING_HOST}"
-      Sitecore__EnableExperienceEditor: "true" 
+      Sitecore__EnableExperienceEditor: "true"
       Sitecore__JssEditingSecret: ${JSS_EDITING_SECRET}
       Okta__OktaDomain: ${OKTA_DOMAIN}
       Okta__ClientId: ${OKTA_CLIENT_ID}
@@ -226,19 +225,16 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.mvp-secure.entrypoints=websecure"
       - "traefik.http.routers.mvp-secure.rule=Host(`${MVP_RENDERING_HOST}`)"
-      - "traefik.http.routers.mvp-secure.tls=true"   
+      - "traefik.http.routers.mvp-secure.tls=true"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost/healthz"]
       interval: 60s
       timeout: 30s
 
-
   # Mount the Traefik configuration and certs.
   traefik:
     volumes:
       - ./docker/traefik:C:/etc/traefik
-    depends_on:
-      - cm
 
   # Mount our SQL data folder and use our custom image with the Headless Services (JSS)
   # module data added. See Dockerfile for details.
@@ -267,8 +263,6 @@ services:
         PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xmcloud-cm:${SITECORE_VERSION}
         SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
         TOOLS_IMAGE: ${TOOLS_IMAGE}
-    depends_on:
-      - solution
     volumes:
       - ${LOCAL_DEPLOY_PATH}\platform:C:\deploy
       - ${LOCAL_DATA_PATH}\cm:C:\inetpub\wwwroot\App_Data\logs
