@@ -113,7 +113,7 @@
     "start:connected": "npm-run-all --serial bootstrap --parallel next:dev start:watch-components",
     "start:production": "npm-run-all --serial bootstrap next:build next:start",
     "start:watch-components": "ts-node --project tsconfig.scripts.json scripts/generate-component-builder/index.ts --watch",
-    "prestorybook":"npm run bootstrap",
+    "prebuild-storybook":"npm run bootstrap",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
