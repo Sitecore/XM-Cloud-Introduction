@@ -1,35 +1,31 @@
 import React from 'react';
 import { Box, Heading, Text, Button, Image, Flex, Link } from '@chakra-ui/react';
+import { Field, ImageField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
 
 // Define the type of props that Hero will accept
-export interface HeroProps {
+interface Fields {
   /** Title of the event banner */
-  title: string;
+  Title: Field<string>;
 
   /** Date of the event */
-  date: string;
+  Date: Field<string>;
 
   /** Description of the event */
-  description: string;
-
-  /** Text for the registration button */
-  buttonText: string;
+  Description: Field<string>;
 
   /** URL for the event image */
-  imageUrl: string;
+  Image: ImageField;
 
   /** Link to trigger when the button is clicked */
-  callToActionLink: string;
+  CallToAction: LinkField;
 }
 
-const Hero: React.FC<HeroProps> = ({
-  title,
-  date,
-  description,
-  buttonText,
-  imageUrl,
-  callToActionLink,
-}) => {
+type HeroProps = {
+  params: { [key: string]: string };
+  fields: Fields;
+};
+
+export const Default = (props: HeroProps): JSX.Element => {
   return (
     <Flex
       direction={{ base: 'column', md: 'row' }}
@@ -47,29 +43,35 @@ const Hero: React.FC<HeroProps> = ({
         minWidth="50%"
       >
         <Box width="auto" alignSelf="end" maxWidth="620px">
-          <Heading as="h1" fontSize="30px" fontWeight="bold" mb="33px">
-            {title}
+          <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
+            {props.fields.Title.value}
           </Heading>
+          {props.fields.Date?.value !== '' && (
           <Text fontSize="18px" mb={3}>
-            {date}
+            {props.fields.Date.value}
           </Text>
+          )}
+          {props.fields.Description?.value !== '' && (
           <Text mb={5} fontSize="18px">
-            {description}
+            {props.fields.Description.value}
           </Text>
+          )}
+          {props.fields.CallToAction?.value?.href !== '' && (
           <Box width="auto" alignSelf="start">
-            <Link href={callToActionLink} isExternal>
+            <Link href={props.fields.CallToAction?.value?.href} isExternal={props.fields.CallToAction?.value?.target == "_blank" }>
               <Button colorScheme="red" size="lg" borderRadius="full">
-                {buttonText}
+                {props.fields.CallToAction?.value?.text}
               </Button>
             </Link>
           </Box>
+          )}
         </Box>
       </Flex>
       <Box flex="1" position="relative" minWidth="50%" maxHeight="400px">
         {' '}
         <Image
-          src={imageUrl}
-          alt="Event image"
+          src={props.fields.Image?.value?.src}
+          alt={props.fields.Image?.value?.alt}
           width="full"
           height="100%"
           maxHeight="400px"
@@ -79,5 +81,3 @@ const Hero: React.FC<HeroProps> = ({
     </Flex>
   );
 };
-
-export default Hero;
