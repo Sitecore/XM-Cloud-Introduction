@@ -1,18 +1,21 @@
-import { Meta, StoryObj } from '@storybook/react';
-import Hero from './Hero';
+import { Meta } from '@storybook/react';
+//import { Meta, StoryObj } from '@storybook/react';
+
+import { Default } from './Hero';
 
 const meta = {
   title: 'Components/Hero',
-  component: Hero,
+  component: Default,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof Hero>;
+} satisfies Meta<typeof Default>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+/*type Story = StoryObj<typeof meta>;
+
 
 export const Primary: Story = {
   args: {
@@ -23,5 +26,6 @@ export const Primary: Story = {
     buttonText: 'Register now',
     imageUrl: 'https://picsum.photos/1200/800',
     callToActionLink: '',
+    
   },
-};
+};*/
