@@ -1,9 +1,9 @@
-import CdpPageView from 'components/CdpPageView';
+import SugConCdpPageView from 'components/Sugcon/SugConCdpPageView';
 
 const Scripts = (): JSX.Element => {
   return (
     <>
-      <CdpPageView />
+      <SugConCdpPageView />
     </>
   );
 };

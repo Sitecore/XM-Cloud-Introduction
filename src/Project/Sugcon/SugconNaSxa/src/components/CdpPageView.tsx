@@ -68,7 +68,7 @@ const CdpPageView = (): JSX.Element => {
     if (disabled()) {
       return;
     }
-
+    
     const siteInfo = siteResolver.getByName(site?.name || config.jssAppName);
     const language = route.itemLanguage || config.defaultLanguage;
     const pageVariantId = CdpHelper.getPageVariantId(route.itemId, language, variantId as string);
