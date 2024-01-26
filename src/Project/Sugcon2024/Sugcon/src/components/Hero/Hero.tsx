@@ -47,23 +47,26 @@ export const Default = (props: HeroProps): JSX.Element => {
             {props.fields.Title.value}
           </Heading>
           {props.fields.Date?.value !== '' && (
-          <Text fontSize="18px" mb={3}>
-            {props.fields.Date.value}
-          </Text>
+            <Text fontSize="18px" mb={3}>
+              {props.fields.Date.value}
+            </Text>
           )}
           {props.fields.Description?.value !== '' && (
-          <Text mb={5} fontSize="18px">
-            {props.fields.Description.value}
-          </Text>
+            <Text mb={5} fontSize="18px">
+              {props.fields.Description.value}
+            </Text>
           )}
           {props.fields.CallToAction?.value?.href !== '' && (
-          <Box width="auto" alignSelf="start">
-            <Link href={props.fields.CallToAction?.value?.href} isExternal={props.fields.CallToAction?.value?.target == "_blank" }>
-              <Button colorScheme="red" size="lg" borderRadius="full">
-                {props.fields.CallToAction?.value?.text}
-              </Button>
-            </Link>
-          </Box>
+            <Box width="auto" alignSelf="start">
+              <Link
+                href={props.fields.CallToAction?.value?.href}
+                isExternal={props.fields.CallToAction?.value?.target == '_blank'}
+              >
+                <Button colorScheme="red" size="lg" borderRadius="full">
+                  {props.fields.CallToAction?.value?.text}
+                </Button>
+              </Link>
+            </Box>
           )}
         </Box>
       </Flex>
@@ -71,7 +74,7 @@ export const Default = (props: HeroProps): JSX.Element => {
         {' '}
         <Image
           src={props.fields.Image?.value?.src}
-          alt={props.fields.Image?.value?.alt}
+          //alt={props.fields.Image?.value?.alt}
           width="full"
           height="100%"
           maxHeight="400px"
