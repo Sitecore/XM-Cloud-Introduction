@@ -1,4 +1,4 @@
-# SUGCON EU Site
+# SUGCON NA Site
 This is a headless Next.js site that uses the following technologies:
 - Sitecore XM Cloud (Content Management)
 - Sitecore JSS and Headless SXA (headless SDK)
