@@ -1,4 +1,34 @@
 import { extendTheme, ThemeConfig } from '@chakra-ui/react';
+import { defineStyleConfig } from '@chakra-ui/react';
+
+const Button = defineStyleConfig({
+  baseStyle: {
+    borderRadius: 'full',
+  },
+  sizes: {
+    md: {
+      fontSize: '18px',
+      px: 10,
+      py: 8,
+    },
+  },
+  // Two variants: outline and solid
+  variants: {
+    primary: {
+      bg: '#EB1F1F',
+      color: 'white',
+    },
+    secondary: {
+      bg: 'white',
+      color: '#374086',
+    },
+  },
+  // The default size and variant values
+  defaultProps: {
+    size: 'md',
+    variant: 'primary',
+  },
+});
 
 const config: ThemeConfig = {
   initialColorMode: 'light',
@@ -20,15 +50,27 @@ const colors = {
   },
 };
 
-const components = {
-  Button: {
-    baseStyle: {
-      bg: '#EB1F1F',
-      color: '#FFFFFF',
+const fonts = {
+  body: 'Mulish, sans-serif',
+  heading: 'Mulish, sans-serif',
+};
+
+const styles = {
+  global: {
+    'html, body': {
+      fontFamily: 'Mulish, sans-serif',
     },
   },
 };
 
-const theme = extendTheme({ config, colors, components });
+const theme = extendTheme({
+  config,
+  colors,
+  components: {
+    Button,
+  },
+  fonts,
+  styles,
+});
 
 export default theme;
