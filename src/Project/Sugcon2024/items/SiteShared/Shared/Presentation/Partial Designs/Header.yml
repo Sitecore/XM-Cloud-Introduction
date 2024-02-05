@@ -10,7 +10,23 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{EEDEF058-2177-47D1-AC11-8D72CD43E161}" />
+    <image mediaid="{1A280859-89AA-4DBF-A234-BC7DAFC15098}" />
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{CE0C28F7-640B-4E78-ACEA-C70F5E071BC1}"
+          s:ds="query:$site/Data/Images/Logo"
+          s:id="{AB2EDBA0-3960-4F12-B765-579DC231894A}"
+          s:par="GridParameters&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header"
+          s:ccb="Clear on publish" />
+      </d>
+    </r>
 Languages:
 - Language: en
   Versions:
@@ -29,11 +45,11 @@ Languages:
         sitecore\UOUBIWQRx7
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a8f22b59-1237-4edd-9836-66ec02bb593f"
+      Value: "82a5e15b-0cf5-46ab-9811-5f9c6459698a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\UOUBIWQRx7
+        sitecore\cdJph8P5Hr
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240123T184027Z
+      Value: 20240205T195057Z
