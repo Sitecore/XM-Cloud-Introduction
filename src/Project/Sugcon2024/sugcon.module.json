@@ -135,23 +135,6 @@
             "path": "/sitecore/System/Settings/Services/API Keys/sugcon2024",
             "allowedPushOperations": "createUpdateAndDelete",
             "scope": "singleItem"
-          },
-          {
-            "name": "RenderingHosts",
-            "path": "/sitecore/System/Settings/Services/Rendering Hosts",
-            "rules": [
-                {
-                    "path": "/sugcon2024",
-                    "scope": "singleItem",
-                    "allowedPushOperations": "createUpdateAndDelete"
-                },
-                {
-                    "path": "*", 
-                    "scope": "ignored"
-                  }
-
-            ]
-            
           }
       ]
     }

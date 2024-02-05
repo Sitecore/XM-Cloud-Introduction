@@ -1,8 +1,8 @@
 ﻿---
-ID: "6c290668-9cce-4855-9918-3da026a1399d"
-Parent: "895e25c4-12b2-4b2c-8233-82f3b79eef53"
-Template: "bc71d442-3e4f-46ba-887c-746e54f9bb83"
-Path: /sitecore/system/Settings/Services/Rendering Hosts/sugcon2024
+ID: "b62b47e2-99a2-4fca-bb62-a78503b67776"
+Parent: "968dab46-6eda-4775-8a0f-85037e2d92f2"
+Template: "489433f5-e659-4912-9511-119d3f9acd8a"
+Path: /sitecore/content/Sugcon2024/EU/Data/Heros
 Languages:
 - Language: en
   Versions:
@@ -10,22 +10,22 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20240105T160840Z
+      Value: 20240127T221841Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\B8tFS9iKgv
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\B8tFS9iKgv
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5bbcc4cd-c583-4907-947a-0bb842482d0b"
+      Value: "a4d46ba6-fe20-4e08-840a-1db94dd80eac"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\B8tFS9iKgv
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240105T160840Z
+      Value: 20240127T222044Z

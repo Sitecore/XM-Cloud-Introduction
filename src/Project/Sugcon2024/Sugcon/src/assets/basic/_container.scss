@@ -1,8 +1,9 @@
 @import "@sass/abstracts/mixins";
 @import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
 
 body {
-  font-family: Roboto;
+  font-family: 'Mulish', sans-serif;
   color: $main-color;
 }
 
