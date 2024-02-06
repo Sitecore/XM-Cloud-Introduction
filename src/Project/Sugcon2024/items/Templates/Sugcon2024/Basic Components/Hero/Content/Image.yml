@@ -15,7 +15,7 @@ SharedFields:
   Value: Image
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 400
+  Value: 600
 Languages:
 - Language: "de-DE"
   Fields:
@@ -66,14 +66,14 @@ Languages:
         sitecore\adamnaj
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5e439913-1be4-42bf-ad19-b0f1fe63117f"
+      Value: "f9273258-8c34-4ad3-a155-dbdfce7e33c4"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\UOUBIWQRx7
+        sitecore\B8tFS9iKgv
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240125T183706Z
+      Value: 20240130T032318Z
     - ID: "fa622538-0c13-4130-a001-45984241aa00"
       Hint: Enable Language Fallback
       Value: 1
