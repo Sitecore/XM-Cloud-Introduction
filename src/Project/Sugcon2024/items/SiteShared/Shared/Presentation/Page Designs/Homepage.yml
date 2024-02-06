@@ -2,7 +2,7 @@
 ID: "47b6ea94-7583-4582-b014-9dfec2c93583"
 Parent: "7b609994-f6b0-45c6-aa6c-d835052d46c5"
 Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
-Path: /sitecore/content/Sugcon2024/Shared/Presentation/Page Designs/Homepage
+Path: /sitecore/content/Sugcon2024/Shared/Presentation/Page Designs/HomePage
 SharedFields:
 - ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
   Hint: PartialDesigns

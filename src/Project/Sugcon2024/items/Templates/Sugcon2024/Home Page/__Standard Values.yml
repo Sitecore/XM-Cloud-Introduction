@@ -1,8 +1,8 @@
 ﻿---
-ID: "3834783e-6eaa-420d-8f89-028d0c511a36"
-Parent: "f5d59b30-223d-4e5a-967d-19daf7934db6"
-Template: "f5d59b30-223d-4e5a-967d-19daf7934db6"
-Path: /sitecore/templates/Project/Sugcon2024/Generic Page/__Standard Values
+ID: "7ab59a71-df23-46ef-8847-608031521f60"
+Parent: "28f60da7-21f8-4791-9ecf-f65a93e105a4"
+Template: "28f60da7-21f8-4791-9ecf-f65a93e105a4"
+Path: /sitecore/templates/Project/Sugcon2024/Home Page/__Standard Values
 SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
@@ -28,14 +28,14 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "04ba73d3-9653-4e89-96b4-873381047216"
-    - ID: "b0c01040-9941-4a8f-8400-b274c377885e"
-      Hint: Title
-      Value: $name
+      Value: "c326e49c-9671-457d-b9da-c5cca13231c7"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\UOUBIWQRx7
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240206T160336Z
+      Value: 20240206T160446Z
+    - ID: "ecefdd88-c772-4eab-9faf-24b23e769f27"
+      Hint: Title
+      Value: $name
