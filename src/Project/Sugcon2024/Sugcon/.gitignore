@@ -31,3 +31,8 @@ scjssconfig.json
 
 # vercel
 .vercel
+
+#storybook
+*.DS_Store
+node_modules
+storybook-static
