@@ -6,7 +6,7 @@ Path: /sitecore/templates/Feature/BehavioralPersonalization/Persona/Persona Info
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
-  Value: "query:../../*[@@templateid='{DC2AA247-F832-4F95-B855-4341C1FD880A}']"
+  Value: "query:../../*"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
   Value: Name Lookup Value List
@@ -41,11 +41,11 @@ Languages:
         sitecore\Y6cPXOeDwf
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "30e2f22b-c71f-4679-b9cb-1c3231885153"
+      Value: "8ab92b1b-2f25-4389-b3d7-d934bf665d17"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Y6cPXOeDwf
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240205T155115Z
+      Value: 20240205T161325Z
