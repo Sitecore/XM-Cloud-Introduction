@@ -11,6 +11,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20240202T174119Z
+    - ID: "29ffe726-267c-4fbe-b550-4afc952d975d"
+      Hint: Name
+      Value: $name
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -21,11 +24,11 @@ Languages:
         sitecore\Y6cPXOeDwf
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "d7d1a7a7-9171-48fb-9ece-6fcd381ce893"
+      Value: "01cf35dd-9583-4659-b308-47acccc0eb5d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Y6cPXOeDwf
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240202T174119Z
+      Value: 20240205T155745Z
