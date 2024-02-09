@@ -3,6 +3,7 @@ import {
   LayoutServicePageState,
   useSitecoreContext,
   PosResolver,
+  RouteData,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { useEffect } from 'react';
 import config from 'temp/config';
@@ -25,7 +26,7 @@ const SugConCdpPageView = (): JSX.Element => {
    * Creates a page view event using the Sitecore Engage SDK.
    */
   const createPageView = async (
-    route: any,
+    route: RouteData | undefined,
     language: string,
     site: SiteInfo,
     pageVariantId: string
@@ -44,7 +45,7 @@ const SugConCdpPageView = (): JSX.Element => {
     let additionalData = {};
 
     // Add Additional Meta Data to Page View
-    if (route?.fields.ProfileAttributes) {
+    if (route?.fields?.ProfileAttributes) {
       additionalData = {
         profileAttributes: route?.fields.ProfileAttributes,
       };
@@ -55,7 +56,7 @@ const SugConCdpPageView = (): JSX.Element => {
         channel: 'WEB',
         currency: 'USD',
         pointOfSale,
-        page: route.name,
+        page: route ? route.name : '',
         pageVariantId,
         language,
       },
