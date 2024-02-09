@@ -9,10 +9,6 @@ import {
   import { init } from '@sitecore/engage';
   import { siteResolver } from 'lib/site-resolver';
   import { SiteInfo } from '@sitecore-jss/sitecore-jss-nextjs/site';
-
-  interface CdpRouteFields {
-    [key: string]: unknown;
-  }
   
   /**
    * This is the CDP page view component.
@@ -39,14 +35,19 @@ import {
         clientKey: process.env.NEXT_PUBLIC_CDP_CLIENT_KEY || '',
         targetURL: process.env.NEXT_PUBLIC_CDP_TARGET_URL || '',
         // Replace with the top level cookie domain of the website that is being integrated e.g ".example.com" and not "www.example.com"
-        cookieDomain: window.location.host.replace(/^www\./, ''),
+        cookieDomain: (process.env.NODE_ENV === 'development' ? '' : window.location.host.replace(/^www\./, '')),
         // Cookie may be created in personalize middleware (server), but if not we should create it here
         forceServerCookieMode: false,
       });
 
-      const routeFields = route?.fields as CdpRouteFields;
-
-      // TODO: Add the fields that I create for Behavioral Profile/Targeting to here to pass as additionalData
+      let additionalData = {};
+      
+      // Add Additional Meta Data to Page View
+      if (route?.fields.ProfileAttributes) {
+        additionalData = {
+          profileAttributes: route?.fields.ProfileAttributes,
+        }
+      }
 
       engage.pageView({
         channel: 'WEB',
@@ -55,7 +56,7 @@ import {
         page: route.name,
         pageVariantId,
         language,
-      });
+      }, additionalData);
     };
   
     /**
