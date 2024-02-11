@@ -42,14 +42,14 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
       bg="#f0f0f0"
       w="100vw"
       boxShadow="-20px 19px 40px 0px rgba(0, 0, 0, 0.2) inset"
-      maxHeight="400px"
+      maxHeight={{ base: 'auto', md: '400px' }}
     >
       <Flex
         direction="column"
         margin="0 auto" // Center the content box
         p={5}
-        flexGrow={1}
         minWidth="50%"
+        height="100%"
       >
         <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
           <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
@@ -77,14 +77,13 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
           )}
         </Box>
       </Flex>
-      <Box flex="1" position="relative" minWidth="50%" maxHeight="400px">
+      <Box minWidth={{ base: '100%', md: '50%' }} maxHeight="400px">
         {' '}
         <Image
           src={props.fields.Image?.value?.src}
           //alt={props.fields.Image?.value?.alt}
           width="full"
           height="100%"
-          maxHeight="400px"
           objectFit="cover"
         />
       </Box>
@@ -100,13 +99,13 @@ export const HeroEvent = (props: HeroProps): JSX.Element => {
       bg="black"
       color="white"
       w="100vw"
-      maxHeight="400px"
+      maxHeight={{ base: 'auto', md: '400px' }}
     >
       <Flex
         direction="column"
         margin="0 auto" // Center the content box
         p={5}
-        flexGrow={1}
+        height="100%"
         minWidth="50%"
       >
         <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
@@ -120,14 +119,12 @@ export const HeroEvent = (props: HeroProps): JSX.Element => {
           )}
         </Box>
       </Flex>
-      <Box flex="1" position="relative" minWidth="50%" maxHeight="400px">
-        {' '}
+      <Box minWidth={{ base: '100%', md: '50%' }} maxHeight="400px" height="100%">
         <Image
           src={props.fields.Image?.value?.src}
           //alt={props.fields.Image?.value?.alt}
           width="full"
           height="100%"
-          maxHeight="400px"
           objectFit="cover"
         />
       </Box>
