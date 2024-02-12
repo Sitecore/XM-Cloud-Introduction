@@ -40,17 +40,9 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
       direction={{ base: 'column', md: 'row' }}
       alignItems="center"
       bg="#f0f0f0"
-      w="100vw"
-      boxShadow="-20px 19px 40px 0px rgba(0, 0, 0, 0.2) inset"
-      maxHeight="400px"
+      maxHeight={{ base: 'auto', md: '400px' }}
     >
-      <Flex
-        direction="column"
-        margin="0 auto" // Center the content box
-        p={5}
-        flexGrow={1}
-        minWidth="50%"
-      >
+      <Flex direction="column" p={5} minWidth="50%" height="100%" ml={6} mr={6}>
         <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
           <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
             {props.fields.Headline?.value}
@@ -77,14 +69,13 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
           )}
         </Box>
       </Flex>
-      <Box flex="1" position="relative" minWidth="50%" maxHeight="400px">
+      <Box minWidth={{ base: '100%', md: '50%' }} maxHeight="400px">
         {' '}
         <Image
           src={props.fields.Image?.value?.src}
           //alt={props.fields.Image?.value?.alt}
           width="full"
           height="100%"
-          maxHeight="400px"
           objectFit="cover"
         />
       </Box>
@@ -99,16 +90,9 @@ export const HeroEvent = (props: HeroProps): JSX.Element => {
       alignItems="center"
       bg="black"
       color="white"
-      w="100vw"
-      maxHeight="400px"
+      maxHeight={{ base: 'auto', md: '400px' }}
     >
-      <Flex
-        direction="column"
-        margin="0 auto" // Center the content box
-        p={5}
-        flexGrow={1}
-        minWidth="50%"
-      >
+      <Flex direction="column" ml={6} mr={6} p={5} height="100%" minWidth="50%">
         <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
           <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
             {props.fields.Headline?.value}
@@ -120,14 +104,12 @@ export const HeroEvent = (props: HeroProps): JSX.Element => {
           )}
         </Box>
       </Flex>
-      <Box flex="1" position="relative" minWidth="50%" maxHeight="400px">
-        {' '}
+      <Box minWidth={{ base: '100%', md: '50%' }} maxHeight="400px" height="100%">
         <Image
           src={props.fields.Image?.value?.src}
           //alt={props.fields.Image?.value?.alt}
           width="full"
           height="100%"
-          maxHeight="400px"
           objectFit="cover"
         />
       </Box>
@@ -151,13 +133,13 @@ export const HeroJustificationLetter = (props: HeroProps): JSX.Element => {
       bgGradient={`linear(${bgGradientDirection}, #F2F2F2, #F2F2F2 50%, #374086)`}
       zIndex={1}
     >
-      {/* Content box that should take the left half of the screen */}
       <Box
         mb={14}
-        w={{ base: '50vw' }} // Take full width on base, and half viewport width on md and up
-        maxWidth="620px" // Max width is 620px
+        w={{ base: 'auto', md: '50vw' }}
+        maxWidth="620px"
         zIndex={2}
-        mr={10}
+        ml={{ base: 'auto', md: '6' }}
+        mr={{ base: 'auto', md: '10' }}
         justifyContent="flex-start"
         alignItems="flex-start"
       >
@@ -189,12 +171,13 @@ export const HeroJustificationLetter = (props: HeroProps): JSX.Element => {
 
       {/* Background Image */}
       <Box
+        display={{ base: 'none', md: 'block' }}
         position="absolute"
         right={0}
         top={-14}
         bottom={0}
-        left="50%" // Start from the middle of the screen
-        width="50vw" // Take up the right half of the screen
+        left="50%"
+        width="50vw"
         backgroundImage="url('/images/SUGCON-justification-letter-chatbox-artwork.svg')"
         backgroundSize="contain"
         backgroundPosition="right center"
