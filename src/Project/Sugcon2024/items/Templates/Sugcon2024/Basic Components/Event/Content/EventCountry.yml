@@ -2,7 +2,7 @@
 ID: "62021e27-9c59-4ff7-abce-ed67822289a8"
 Parent: "223156d6-e163-499f-9096-191c87054e0a"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Project/Sugcon2024/Basic Components/Event/Content/Country
+Path: /sitecore/templates/Project/Sugcon2024/Basic Components/Event/Content/EventCountry
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
@@ -12,6 +12,10 @@ SharedFields:
   Value: 700
 Languages:
 - Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Event Country
   Versions:
   - Version: 1
     Fields:
@@ -28,11 +32,11 @@ Languages:
         sitecore\UOUBIWQRx7
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7d335f53-aba1-4d7a-bafb-28ce32962e37"
+      Value: "8e7a8471-f7d9-437d-88e9-093cc179d83e"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\UOUBIWQRx7
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240206T185929Z
+      Value: 20240212T174745Z

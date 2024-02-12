@@ -36,7 +36,6 @@ export type EventTeaserProps = {
 };
 
 export const Default = (props: EventTeaserProps): JSX.Element => {
-  console.log('testing');
   return (
     <Box w="80%" mx="auto" mt={20}>
       <Heading as="h2" size="lg">

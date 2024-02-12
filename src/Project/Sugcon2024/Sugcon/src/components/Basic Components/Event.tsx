@@ -8,19 +8,19 @@ export interface Fields {
   Image: ImageField;
 
   /** Name of the event */
-  Name: Field<string>;
+  EventName: Field<string>;
 
   /** Date of the event */
-  Date: Field<string>;
+  EventDate: Field<string>;
 
   /** City of the event */
-  City: Field<string>;
+  EventCity: Field<string>;
 
   /** State of the event */
-  State: Field<string>;
+  EventState: Field<string>;
 
   /** Country of the event */
-  Country: Field<string>;
+  EventCountry: Field<string>;
 
   /** Link to event website */
   LinkToSite: LinkField;
@@ -28,12 +28,14 @@ export interface Fields {
 
 export const Default = (props: Fields): JSX.Element => {
   const dateString: string =
-    props.Date?.value !== '0001-01-01T00:00:00Z' ? new Date(props.Date?.value).toDateString() : '';
+    props.EventDate?.value !== '0001-01-01T00:00:00Z'
+      ? new Date(props.EventDate?.value).toDateString()
+      : '';
 
   const location: string[] = [];
-  props.City?.value != '' ? location.push(props.City?.value) : '';
-  props.State?.value != '' ? location.push(props.State?.value) : '';
-  props.Country?.value != '' ? location.push(props.Country?.value) : '';
+  props.EventCity?.value != '' ? location.push(props.EventCity?.value) : '';
+  props.EventState?.value != '' ? location.push(props.EventState?.value) : '';
+  props.EventCountry?.value != '' ? location.push(props.EventCountry?.value) : '';
 
   const locationString = location.join(', ');
 
@@ -42,7 +44,7 @@ export const Default = (props: Fields): JSX.Element => {
       <Box px={8} py={4} bg="#F2F2F2" borderRadius="lg" position="relative">
         <Image src={props.Image?.value?.src} maxH={50} />
         <Heading as="h3" size="lg" mt={2}>
-          {props.Name?.value}
+          {props.EventName?.value}
         </Heading>
         <Text fontSize="12px" mb={0}>
           {dateString}
