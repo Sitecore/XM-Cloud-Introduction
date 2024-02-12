@@ -28,16 +28,16 @@ export const Teaser: Story = {
           name: 'SUGCON EU',
           displayName: 'SUGCON EU',
           fields: {
-            City: {
+            EventCity: {
               value: 'Philadelphia',
             },
-            Country: {
+            EventCountry: {
               value: 'USA',
             },
-            Name: {
+            EventName: {
               value: 'SUGCON Europe',
             },
-            Date: {
+            EventDate: {
               value: '2024-02-08T05:00:00Z',
             },
             LinkToSite: {
@@ -56,7 +56,7 @@ export const Teaser: Story = {
                 alt: '',
               },
             },
-            State: {
+            EventState: {
               value: 'PA',
             },
           },
@@ -67,16 +67,16 @@ export const Teaser: Story = {
           name: 'SUGCON NA',
           displayName: 'SUGCON NA',
           fields: {
-            City: {
+            EventCity: {
               value: 'Pittsburg',
             },
-            Country: {
+            EventCountry: {
               value: 'USA',
             },
-            Name: {
+            EventName: {
               value: 'SUGCON North America',
             },
-            Date: {
+            EventDate: {
               value: '2024-02-06T05:00:00Z',
             },
             LinkToSite: {
@@ -95,7 +95,7 @@ export const Teaser: Story = {
                 alt: '',
               },
             },
-            State: {
+            EventState: {
               value: 'PA',
             },
           },
@@ -106,16 +106,16 @@ export const Teaser: Story = {
           name: 'SUGCON EU',
           displayName: 'SUGCON EU',
           fields: {
-            City: {
+            EventCity: {
               value: 'Philadelphia',
             },
-            Country: {
+            EventCountry: {
               value: 'USA',
             },
-            Name: {
+            EventName: {
               value: 'SUGCON Europe',
             },
-            Date: {
+            EventDate: {
               value: '2024-02-08T05:00:00Z',
             },
             LinkToSite: {
@@ -134,7 +134,7 @@ export const Teaser: Story = {
                 alt: '',
               },
             },
-            State: {
+            EventState: {
               value: 'PA',
             },
           },
@@ -145,16 +145,16 @@ export const Teaser: Story = {
           name: 'SUGCON NA',
           displayName: 'SUGCON NA',
           fields: {
-            City: {
+            EventCity: {
               value: 'Pittsburg',
             },
-            Country: {
+            EventCountry: {
               value: 'USA',
             },
-            Name: {
+            EventName: {
               value: 'SUGCON North America',
             },
-            Date: {
+            EventDate: {
               value: '2024-02-06T05:00:00Z',
             },
             LinkToSite: {
@@ -173,7 +173,7 @@ export const Teaser: Story = {
                 alt: '',
               },
             },
-            State: {
+            EventState: {
               value: 'PA',
             },
           },
