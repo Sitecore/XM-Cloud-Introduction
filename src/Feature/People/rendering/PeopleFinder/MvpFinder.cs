@@ -1,50 +1,48 @@
-﻿using GraphQL.Client.Abstractions;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
+﻿////using GraphQL.Client.Abstractions;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+////using Microsoft.Extensions.Logging;
 using Mvp.Feature.People.Facets;
 using Mvp.Feature.People.Models;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
-using Mvp.Foundation.DataFetching.GraphQL;
+////using Mvp.Foundation.DataFetching.GraphQL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+////using GraphQL;
+using Mvp.Foundation.DataFetching.GraphQL.Models;
+using Mvp.Selections.Client;
+using Mvp.Selections.Client.Models;
+using Mvp.Selections.Domain;
 
 namespace Mvp.Feature.People.PeopleFinder
 {
-    public class MvpFinder : IPeopleFinder
+    public class MvpFinder(
+        ////IGraphQLRequestBuilder graphQLRequestBuilder,
+        ////IGraphQLClientFactory graphQLClientFactory,
+        IMemoryCache memoryCache,
+        IConfiguration configuration,
+        IFacetBuilder facetBuilder,
+        ////ILogger<MvpFinder> logger,
+        MvpSelectionsApiClient apiClient)
+        : IPeopleFinder
     {
-        private readonly IGraphQLRequestBuilder graphQLRequestBuilder;
-        private readonly IGraphQLClientFactory graphQLClientFactory;
-        private readonly IMemoryCache memoryCache;
-        private readonly IFacetBuilder facetBuilder;
-        private readonly ILogger<MvpFinder> logger;
-        private MvpSiteSettings Configuration { get; }
-
-        public MvpFinder(IGraphQLRequestBuilder graphQLRequestBuilder, IGraphQLClientFactory graphQLClientFactory, IMemoryCache memoryCache, IConfiguration configuration, IFacetBuilder facetBuilder, ILogger<MvpFinder> logger)
-        {
-            this.graphQLRequestBuilder = graphQLRequestBuilder;
-            this.graphQLClientFactory = graphQLClientFactory;
-            this.memoryCache = memoryCache;
-            this.facetBuilder = facetBuilder;
-            this.logger = logger;
-            Configuration = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
-        }
+        private MvpSiteSettings Configuration { get; } = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
 
         public async Task<PeopleSearchResults> FindPeople(SearchParams searchParams)
         {
-            var pageSize = 21;
-            var currentPage = searchParams.CurrentPage > 1 ? searchParams.CurrentPage : 1;
-            var mvps = await GetAllMvps();
-            var filteredMvps = ApplyFilteringToMvpListing(mvps, searchParams);
-            var facets = facetBuilder.CalculateFacets(filteredMvps, searchParams);
-            var filteredAndFacetedMvps = ApplyFacetingToMvpListing(filteredMvps, searchParams);
-            var resultPage = ApplyPaging(filteredAndFacetedMvps, currentPage, pageSize);
+            int pageSize = 21;
+            int currentPage = searchParams.CurrentPage > 1 ? searchParams.CurrentPage : 1;
+            IList<MvpSearchResult> mvps = await GetAllMvps();
+            IList<MvpSearchResult> filteredMvps = ApplyFilteringToMvpListing(mvps, searchParams);
+            IDictionary<string, List<Facet>> facets = facetBuilder.CalculateFacets(filteredMvps, searchParams);
+            IList<MvpSearchResult> filteredAndFacetedMvps = ApplyFacetingToMvpListing(filteredMvps, searchParams);
+            IList<MvpSearchResult> resultPage = ApplyPaging(filteredAndFacetedMvps, currentPage, pageSize);
 
-            var people = new List<Person>();
-            foreach (var mvpSearchResult in resultPage)
+            List<Person> people = new ();
+            foreach (MvpSearchResult mvpSearchResult in resultPage)
             {
                 people.Add(GeneratePersonRecord(mvpSearchResult));
             }
@@ -64,12 +62,12 @@ namespace Mvp.Feature.People.PeopleFinder
             if (string.IsNullOrWhiteSpace(searchParams.Award) && string.IsNullOrWhiteSpace(searchParams.Year) && string.IsNullOrWhiteSpace(searchParams.Country))
                 return mvps;
 
-            var selectedAwards = string.IsNullOrWhiteSpace(searchParams.Award) ? Array.Empty<string>() : searchParams.Award.Split('|');
-            var selectedYears = string.IsNullOrWhiteSpace(searchParams.Year) ? Array.Empty<string>() : searchParams.Year.Split('|');
-            var selectedCountries = string.IsNullOrWhiteSpace(searchParams.Country) ? Array.Empty<string>() : searchParams.Country.Split('|');
+            string[] selectedAwards = string.IsNullOrWhiteSpace(searchParams.Award) ? Array.Empty<string>() : searchParams.Award.Split('|');
+            string[] selectedYears = string.IsNullOrWhiteSpace(searchParams.Year) ? Array.Empty<string>() : searchParams.Year.Split('|');
+            string[] selectedCountries = string.IsNullOrWhiteSpace(searchParams.Country) ? Array.Empty<string>() : searchParams.Country.Split('|');
 
-            var facetedMvps = new List<MvpSearchResult>();
-            foreach (var mvp in mvps)
+            List<MvpSearchResult> facetedMvps = new ();
+            foreach (MvpSearchResult mvp in mvps)
             {
                 if (DoesMvpMatchSelectedFacets(selectedAwards, selectedYears, selectedCountries, mvp))
                     facetedMvps.Add(mvp);
@@ -84,7 +82,7 @@ namespace Mvp.Feature.People.PeopleFinder
                 return false;
             }
 
-            foreach(var award in mvp.Awards.TargetItems)
+            foreach(Awards award in mvp.Awards.TargetItems)
             {
                 if (AwardMatchesYearFacet(selectedYears, award) && AwardMatchesAwardTypeFacet(selectedAwards, award))
                     return true;
@@ -125,7 +123,7 @@ namespace Mvp.Feature.People.PeopleFinder
 
         private static Person GeneratePersonRecord(MvpSearchResult mvpSearchResult)
         {
-            var latestAward = mvpSearchResult.Awards.TargetItems.OrderByDescending(x => x.Parent.Name).First();
+            Awards latestAward = mvpSearchResult.Awards.TargetItems.OrderByDescending(x => x.Parent.Name).First();
             return new Person
             {
                 FirstName = mvpSearchResult.FirstName.Value,
@@ -142,7 +140,7 @@ namespace Mvp.Feature.People.PeopleFinder
         {
             if(currentPage > 1)
             {
-                var startIndex = (currentPage - 1) * pageSize;
+                int startIndex = (currentPage - 1) * pageSize;
                 return mvps.Skip(startIndex).Take(pageSize).ToList();
             }
             else
@@ -157,9 +155,9 @@ namespace Mvp.Feature.People.PeopleFinder
 
             if (!memoryCache.TryGetValue(key, out IList<MvpSearchResult> mvps))
             {
-                var client = graphQLClientFactory.CreateGraphQlClient();
-                var allPeople = await GetAllPeople(client, string.Empty);
-                mvps = allPeople.Where(x => x.Awards?.TargetItems != null && x.Awards.TargetItems.Any())
+                ////IGraphQLClient client = graphQLClientFactory.CreateGraphQlClient();
+                IList<MvpSearchResult> allPeople = await GetAllPeopleFromApi();
+                mvps = allPeople.Where(x => x.Awards?.TargetItems != null && x.Awards.TargetItems.Length != 0)
                                 .OrderBy(x => x.FirstName.Value + x.LastName.Value)
                                 .ToList();
 
@@ -169,29 +167,121 @@ namespace Mvp.Feature.People.PeopleFinder
             return mvps;
         }
 
-        private async Task<IList<MvpSearchResult>> GetAllPeople(IGraphQLClient client, string endCursor)
+        // TODO [IVA] This is a temp solution to get the 2024 MVPs displayed
+        private async Task<IList<MvpSearchResult>> GetAllPeopleFromApi()
         {
-            var mvps = new List<MvpSearchResult>();
-            var variables = new
+            List<MvpSearchResult> result = [];
+            List<Title> allTitles = [];
+            Response<IList<Title>> titlesResponse;
+            int page = 1;
+            do
             {
-                pageSize = Configuration.MvpDirectoryGraphQLQueryPageSize,
-                endCursor = endCursor,
-                mvpPeopleRoot = Constants.MVP_PEOPLE_ROOT_ITEM_SHORT_ID,
-                mvpPersonTemplate = Constants.MVP_PERSON_TEMPLATE_SHORT_ID
-            };
+                titlesResponse = await apiClient.GetTitlesAsync(page: page, pageSize: 1000);
+                if (titlesResponse.StatusCode == HttpStatusCode.OK && titlesResponse.Result?.Count > 0)
+                {
+                    allTitles.AddRange(titlesResponse.Result);
+                    page++;
+                }
+            } while (titlesResponse.Result?.Count > 0);
 
-            var request = graphQLRequestBuilder.BuildRequest(Constants.GraphQlQueries.GetMvps, variables);
-            logger.LogInformation($"Making GraphQL Request for MVPs, endCursor: '{endCursor}'");
-
-            var response = await client.SendQueryAsync<MvpSearchResponse>(request);
-            mvps.AddRange(response.Data.Search.Results);
-
-            if(response.Data.Search.PageInfo.hasNextPage)
+            foreach (Title title in allTitles)
             {
-                mvps.AddRange(await GetAllPeople(client, response.Data.Search.PageInfo.endCursor));
+                MvpSearchResult mvp =
+                    result.SingleOrDefault(r => r.Name == title.Application.Applicant.Name);
+                if (mvp != null)
+                {
+                    mvp.Awards.TargetItems =
+                    [
+                        ..mvp.Awards.TargetItems,
+                        new Awards
+                        {
+                            Field = new TargetItemFieldValueItem
+                            {
+                                TargetItem = new FieldValueItem { Field = new ValueItem { Value = title.MvpType.Name } }
+                            },
+                            Parent = new NameItem { Name = title.Application.Selection.Year.ToString() }
+                        }
+                    ];
+                    if (title.Application.Applicant.CreatedOn > DateTime.Parse(mvp.Path))
+                    {
+                        mvp.Email.Value = GetImageUri(title.Application.Applicant);
+                        mvp.Country.TargetItem.Name = title.Application.Country.Name;
+                    }
+                }
+                else
+                {
+                    mvp = new MvpSearchResult
+                    {
+                        Id = title.Application.Applicant.Id.ToString("N"),
+                        FirstName = new ValueItem { Value = string.Empty },
+                        LastName = new ValueItem { Value = title.Application.Applicant.Name },
+                        Name = title.Application.Applicant.Name,
+                        Country = new CountryData
+                            { TargetItem = new TargetItem { Name = title.Application.Country.Name } },
+                        Email = new ValueItem { Value = GetImageUri(title.Application.Applicant) },
+                        Awards = new AwardData
+                        {
+                            TargetItems =
+                            [
+                                new Awards
+                                {
+                                    Field = new TargetItemFieldValueItem
+                                        { TargetItem = new FieldValueItem { Field = new ValueItem { Value = title.MvpType.Name } } },
+                                    Parent = new NameItem { Name = title.Application.Selection.Year.ToString() }
+                                }
+                            ]
+                        },
+                        Path = title.Application.Applicant.CreatedOn.ToString("O")
+                    };
+                    result.Add(mvp);
+                }
             }
 
-            return mvps;
+            return result;
         }
+
+        private static string GetImageUri(User applicant)
+        {
+            string result;
+            switch (applicant.ImageType)
+            {
+                case ImageType.Gravatar:
+                    result = applicant.ImageUri?.ToString();
+                    // ReSharper disable StringLiteralTypo - Url Encoding
+                    result = !string.IsNullOrWhiteSpace(result) ? $"{result}?s=253&d=https%3A%2F%2Fmvp.sitecore.net%2Fimages%2Fmvp-base-user-grey.png" : string.Empty;
+                    // ReSharper restore StringLiteralTypo - Url Encoding
+                    break;
+                default:
+                    result = applicant.ImageUri?.ToString() ?? string.Empty;
+                    break;
+            }
+            
+            return  result;
+        }
+
+        ////private async Task<IList<MvpSearchResult>> GetAllPeople(IGraphQLClient client, string endCursor)
+        ////{
+        ////    List<MvpSearchResult> mvps = new ();
+        ////    var variables = new
+        ////    {
+        ////        pageSize = Configuration.MvpDirectoryGraphQLQueryPageSize,
+        ////        endCursor,
+        ////        mvpPeopleRoot = Constants.MVP_PEOPLE_ROOT_ITEM_SHORT_ID,
+        ////        mvpPersonTemplate = Constants.MVP_PERSON_TEMPLATE_SHORT_ID
+        ////    };
+
+        ////    GraphQLHttpRequestWithHeaders request = graphQLRequestBuilder.BuildRequest(Constants.GraphQlQueries.GetMvps, variables);
+        ////    logger.LogInformation($"Making GraphQL Request for MVPs, endCursor: '{endCursor}'");
+
+        ////    GraphQLResponse<MvpSearchResponse> response = await client.SendQueryAsync<MvpSearchResponse>(request);
+        ////    mvps.AddRange(response.Data.Search.Results);
+
+        ////    if(response.Data.Search.PageInfo.hasNextPage)
+        ////    {
+        ////        mvps.AddRange(await GetAllPeople(client, response.Data.Search.PageInfo.endCursor));
+        ////    }
+
+        ////    return mvps;
+        ////}
     }
 }

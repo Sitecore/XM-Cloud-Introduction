@@ -19,7 +19,7 @@
                     <a class="content">
                         <!--Get users latest MVP year-->
                         <div class="mvp-year">@person.MvpYear</div>
-                        <img class="card-img-top" src="@person.Email.ToGravatar("253", "https://mvp.sitecore.net/images/mvp-base-user-grey.png")" alt="@person.FirstName @person.LastName Sitecore MVP" />
+                        <img class="card-img-top" src="@(string.IsNullOrWhiteSpace(person.Email) ? "https://mvp.sitecore.net/images/mvp-base-user-grey.png" : person.Email)" alt="@person.FirstName @person.LastName Sitecore MVP" />
                         <div class="card-body">
                             <div class="mvp-category">@person.MvpCategory</div>
                             <h5 class="card-title">@person.FirstName @person.LastName </h5>
