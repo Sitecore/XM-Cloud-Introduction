@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Files", ".Solutio
 		..\Packages.props = ..\Packages.props
 		..\README.md = ..\README.md
 		..\sitecore.json = ..\sitecore.json
+		XmCloudIntroduction.sln.DotSettings = XmCloudIntroduction.sln.DotSettings
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{4736C040-62A2-4E10-A376-0FD4B8B72E8D}"
