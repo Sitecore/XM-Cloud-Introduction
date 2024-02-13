@@ -1,15 +1,11 @@
 import React from 'react';
-import {
-  Box,
-  Heading,
-  Text,
-  Button,
-  Image,
-  Flex,
-  Link,
-  useBreakpointValue,
-} from '@chakra-ui/react';
+import { Box, Heading, Text, Image, Flex, useBreakpointValue } from '@chakra-ui/react';
 import { Field, ImageField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+import { ButtonLink } from '../../basics/ButtonLink';
+import {
+  isSitecoreLinkFieldPopulated,
+  isSitecoreTextFieldPopulated,
+} from 'lib/utils/sitecoreUtils';
 
 // Define the type of props that Hero will accept
 interface Fields {
@@ -47,24 +43,19 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
           <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
             {props.fields.Headline?.value}
           </Heading>
-          {props.fields.EventDate?.value !== '' && (
+          {isSitecoreTextFieldPopulated(props.fields.EventDate) && (
             <Text fontSize="18px" mb={6}>
               {props.fields.EventDate?.value}
             </Text>
           )}
-          {props.fields.Text?.value !== '' && (
+          {isSitecoreTextFieldPopulated(props.fields.Text) && (
             <Text mb={6} fontSize="18px">
               {props.fields.Text?.value}
             </Text>
           )}
-          {props.fields.CallToAction?.value?.href !== '' && (
+          {isSitecoreLinkFieldPopulated(props.fields.CallToAction) && (
             <Box width="auto" alignSelf="start">
-              <Link
-                href={props.fields.CallToAction?.value?.href}
-                isExternal={props.fields.CallToAction?.value?.target == '_blank'}
-              >
-                <Button variant="primary">{props.fields.CallToAction?.value?.anchor}</Button>
-              </Link>
+              <ButtonLink field={props.fields.CallToAction} />
             </Box>
           )}
         </Box>
@@ -97,7 +88,7 @@ export const HeroEvent = (props: HeroProps): JSX.Element => {
           <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
             {props.fields.Headline?.value}
           </Heading>
-          {props.fields.Text?.value !== '' && (
+          {isSitecoreTextFieldPopulated(props.fields.Text) && (
             <Text mb={6} fontSize="18px">
               {props.fields.Text?.value}
             </Text>
@@ -146,19 +137,14 @@ export const HeroJustificationLetter = (props: HeroProps): JSX.Element => {
         <Heading as="h2" fontSize="30px" color="black" fontWeight="bold" mt={10} mb="33px">
           {props.fields.Headline?.value}
         </Heading>
-        {props.fields.Text?.value && (
+        {isSitecoreTextFieldPopulated(props.fields.Text) && (
           <Text mb={6} fontSize="18px" color="black">
             {props.fields.Text?.value}
           </Text>
         )}
-        {props.fields.CallToAction?.value?.href !== '' && (
+        {isSitecoreLinkFieldPopulated(props.fields.CallToAction) && (
           <Box width="auto" alignSelf="start">
-            <Link
-              href={props.fields.CallToAction?.value?.href}
-              isExternal={props.fields.CallToAction?.value?.target == '_blank'}
-            >
-              <Button variant="secondary">{props.fields.CallToAction?.value?.anchor}</Button>
-            </Link>
+            <ButtonLink field={props.fields.CallToAction} variant="secondary" />
           </Box>
         )}
       </Box>
