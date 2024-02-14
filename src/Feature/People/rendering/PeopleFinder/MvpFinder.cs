@@ -118,7 +118,7 @@ namespace Mvp.Feature.People.PeopleFinder
 
         private static bool DoesMvpFullnameMatchKeywords(string keyword, MvpSearchResult x)
         {
-            return $"{x.FirstName.Value.ToLowerInvariant()}{x.LastName.Value.ToLowerInvariant()}".Contains(keyword.ToLowerInvariant().Replace(" ", string.Empty));
+            return $"{x.FirstName.Value.ToLowerInvariant()}{x.LastName.Value.ToLowerInvariant()}".Replace(" ", string.Empty).Contains(keyword.ToLowerInvariant().Replace(" ", string.Empty));
         }
 
         private static Person GeneratePersonRecord(MvpSearchResult mvpSearchResult)
