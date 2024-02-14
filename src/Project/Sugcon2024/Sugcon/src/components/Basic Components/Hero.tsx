@@ -37,6 +37,7 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
       alignItems="center"
       bg="#f0f0f0"
       maxHeight={{ base: 'auto', md: '400px' }}
+      w="100%"
     >
       <Flex direction="column" p={5} minWidth="50%" height="100%" ml={6} mr={6}>
         <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
@@ -60,7 +61,7 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
           )}
         </Box>
       </Flex>
-      <Box minWidth={{ base: '100%', md: '50%' }} maxHeight="400px">
+      <Box minWidth={{ base: '100%', md: '50%' }} maxHeight="400px" h="100%" overflow="hidden">
         {' '}
         <Image
           src={props.fields.Image?.value?.src}
@@ -82,6 +83,7 @@ export const HeroEvent = (props: HeroProps): JSX.Element => {
       bg="black"
       color="white"
       maxHeight={{ base: 'auto', md: '400px' }}
+      w="100%"
     >
       <Flex direction="column" ml={6} mr={6} p={5} height="100%" minWidth="50%">
         <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
@@ -95,7 +97,7 @@ export const HeroEvent = (props: HeroProps): JSX.Element => {
           )}
         </Box>
       </Flex>
-      <Box minWidth={{ base: '100%', md: '50%' }} maxHeight="400px" height="100%">
+      <Box minWidth={{ base: '100%', md: '50%' }} maxHeight="400px" h="100%" overflow="hidden">
         <Image
           src={props.fields.Image?.value?.src}
           //alt={props.fields.Image?.value?.alt}
@@ -166,7 +168,7 @@ export const HeroJustificationLetter = (props: HeroProps): JSX.Element => {
         width="50vw"
         backgroundImage="url('/images/SUGCON-justification-letter-chatbox-artwork.svg')"
         backgroundSize="contain"
-        backgroundPosition="right center"
+        backgroundPosition="right bottom"
         backgroundRepeat="no-repeat"
         zIndex={0}
       />
