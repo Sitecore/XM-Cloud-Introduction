@@ -1,0 +1,33 @@
+﻿---
+ID: "70ae7f06-14ec-45e0-a84d-b32df368c8fe"
+Parent: "b4f2bc1d-695b-465e-8eba-8fd809d201e1"
+Template: "b4f2bc1d-695b-465e-8eba-8fd809d201e1"
+Path: /sitecore/templates/Project/Sugcon2024/Basic Components/Person Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {CF5CF584-6F21-436C-BE31-D5823D25A420}
+    {B4F2BC1D-695B-465E-8EBA-8FD809D201E1}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8654a568-c8ce-4eeb-b707-63d734f5409c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\UOUBIWQRx7
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240213T192554Z
