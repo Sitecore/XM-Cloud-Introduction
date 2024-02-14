@@ -8,8 +8,8 @@ const Button = defineStyleConfig({
   sizes: {
     md: {
       fontSize: '18px',
-      px: 10,
-      py: 8,
+      px: '42px',
+      py: '24px',
     },
   },
   // Two variants: outline and solid
@@ -17,10 +17,20 @@ const Button = defineStyleConfig({
     primary: {
       bg: '#EB1F1F',
       color: 'white',
+      _hover: {
+        // Hover state
+        bg: 'white', // Example hover background color
+        color: '#EB1F1F', // Hover state text color (if you want to change it)
+      },
     },
     secondary: {
       bg: 'white',
       color: '#374086',
+      _hover: {
+        // Hover state
+        bg: '#374086', // Example hover background color
+        color: 'white', // Hover state text color (if you want to change it)
+      },
     },
   },
   // The default size and variant values
