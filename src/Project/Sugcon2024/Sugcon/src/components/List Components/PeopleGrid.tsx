@@ -42,9 +42,11 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
   return (
     <Box w="100%" mt={20} className={styles}>
       <Box w="80%" pt={10} m="auto">
-        <Heading as="h2" size="lg">
-          {props.fields?.Headline?.value}
-        </Heading>
+        {props.fields?.Headline?.value !== '' && (
+          <Heading as="h2" size="lg">
+            {props.fields?.Headline?.value}
+          </Heading>
+        )}
         <SimpleGrid columns={{ base: 1, md: cols }} mt={10}>
           {props.fields?.People.map((person, idx) => {
             const pp: PersonProps = {
