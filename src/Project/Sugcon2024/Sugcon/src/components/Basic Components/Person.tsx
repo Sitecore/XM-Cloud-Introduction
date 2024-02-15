@@ -19,11 +19,11 @@ export interface PersonFields {
   /** Person's Biography */
   Biography: Field<string>;
 
-  /** Social Link 1 */
-  SocialLink1: LinkField;
+  /** Linkedin Link */
+  Linkedin: LinkField;
 
-  /** Social Link 2 */
-  SocialLink2: LinkField;
+  /** Twitter Link */
+  Twitter: LinkField;
 }
 
 export type PersonProps = {
@@ -44,31 +44,31 @@ export const Default = (props: PersonProps): JSX.Element => {
       <Text fontSize="12px" mb={0}>
         {props.fields.Company?.value}
       </Text>
-      {props.params?.DisplaySocialLinks == '1' && props.fields.SocialLink1?.value?.href !== '' && (
+      {props.params?.DisplaySocialLinks == '1' && props.fields.Linkedin?.value?.href !== '' && (
         <Link
-          href={props.fields.SocialLink1?.value?.href}
-          isExternal={props.fields.SocialLink1?.value?.target == '_blank'}
+          href={props.fields.Linkedin?.value?.href}
+          isExternal={props.fields.Linkedin?.value?.target == '_blank'}
           fontSize="12px"
           mt={3}
           textDecoration="underline"
           color="#28327D"
         >
-          {props.fields.SocialLink1?.value?.text}
+          Linkedin
         </Link>
       )}
       {props.params?.DisplaySocialLinks == '1' &&
-        props.fields.SocialLink1?.value?.href !== '' &&
-        props.fields.SocialLink2?.value?.href !== '' && <Box display="inline"> / </Box>}
-      {props.params?.DisplaySocialLinks == '1' && props.fields.SocialLink2?.value?.href !== '' && (
+        props.fields.Linkedin?.value?.href !== '' &&
+        props.fields.Twitter?.value?.href !== '' && <Box display="inline"> / </Box>}
+      {props.params?.DisplaySocialLinks == '1' && props.fields.Twitter?.value?.href !== '' && (
         <Link
-          href={props.fields.SocialLink2?.value?.href}
-          isExternal={props.fields.SocialLink2?.value?.target == '_blank'}
+          href={props.fields.Twitter?.value?.href}
+          isExternal={props.fields.Twitter?.value?.target == '_blank'}
           fontSize="12px"
           mt={3}
           textDecoration="underline"
           color="#28327D"
         >
-          {props.fields.SocialLink2?.value?.text}
+          Twitter
         </Link>
       )}
     </Box>

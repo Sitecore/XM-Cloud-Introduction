@@ -28,7 +28,7 @@ export const Teaser: Story = {
           name: 'Eric Sanner',
           displayName: 'Eric Sanner',
           fields: {
-            SocialLink2: {
+            Twitter: {
               value: {
                 href: 'https://blogs.perficient.com/author/esanner',
                 text: 'Blogs',
@@ -50,7 +50,7 @@ export const Teaser: Story = {
             Biography: {
               value: 'This is a test',
             },
-            SocialLink1: {
+            Linkedin: {
               value: {
                 href: 'https://www.linkedin.com/in/ericsanner/',
                 text: 'Linkedin',
@@ -76,7 +76,7 @@ export const Teaser: Story = {
           name: 'Chet Potvin',
           displayName: 'Chet Potvin',
           fields: {
-            SocialLink2: {
+            Twitter: {
               value: {
                 href: '',
               },
@@ -93,7 +93,7 @@ export const Teaser: Story = {
             Biography: {
               value: '',
             },
-            SocialLink1: {
+            Linkedin: {
               value: {
                 href: '',
               },
@@ -114,7 +114,7 @@ export const Teaser: Story = {
           name: 'Dave Ambrose',
           displayName: 'Dave Ambrose',
           fields: {
-            SocialLink2: {
+            Twitter: {
               value: {
                 href: '',
               },
@@ -131,7 +131,7 @@ export const Teaser: Story = {
             Biography: {
               value: '',
             },
-            SocialLink1: {
+            Linkedin: {
               value: {
                 href: '',
               },
@@ -152,7 +152,7 @@ export const Teaser: Story = {
           name: 'Joshua Hoover',
           displayName: 'Joshua Hoover',
           fields: {
-            SocialLink2: {
+            Twitter: {
               value: {
                 href: '',
               },
@@ -169,7 +169,7 @@ export const Teaser: Story = {
             Biography: {
               value: '',
             },
-            SocialLink1: {
+            Linkedin: {
               value: {
                 href: '',
               },
