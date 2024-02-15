@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using Mvp.Selections.Domain;
@@ -39,6 +40,8 @@ namespace Mvp.Feature.Selections.Models.Any
         [Required]
         [FromForm(Name = $"{nameof(MyDataEditModel)}.{nameof(ImageType)}")]
         public ImageType ImageType { get; set; }
+
+        public Uri ImageUri { get; set; }
 
         public List<Consent> Consents { get; init; } = new ();
 
