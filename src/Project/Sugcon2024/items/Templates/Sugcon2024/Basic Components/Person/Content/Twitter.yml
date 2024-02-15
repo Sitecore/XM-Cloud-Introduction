@@ -15,7 +15,7 @@ Languages:
   Fields:
   - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
     Hint: Title
-    Value: Social Link 2
+    Value: Twitter
   Versions:
   - Version: 1
     Fields:
@@ -32,11 +32,11 @@ Languages:
         sitecore\UOUBIWQRx7
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7bbc3985-22f3-4b28-9d9a-da2d1e453ef9"
+      Value: "4fc99e9a-eb44-41f5-bf63-b180408c1886"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\UOUBIWQRx7
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240213T193736Z
+      Value: 20240215T194434Z
