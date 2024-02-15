@@ -12,14 +12,10 @@ using Sitecore.AspNet.RenderingEngine.Binding;
 namespace Mvp.Feature.Selections.ViewComponents.Any
 {
     [ViewComponent(Name = ViewComponentName)]
-    public class MyDataEditViewComponent : BaseViewComponent
+    public class MyDataEditViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
+        : BaseViewComponent(modelBinder, client)
     {
         public const string ViewComponentName = "AnyMyDataEdit";
-
-        public MyDataEditViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
-            : base(modelBinder, client)
-        {
-        }
 
         public override async Task<IViewComponentResult> InvokeAsync()
         {
@@ -52,6 +48,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Any
                     model.Email = user.Email;
                     model.CountryId = user.Country?.Id ?? 0;
                     model.ImageType = user.ImageType;
+                    model.ImageUri = user.ImageUri;
                     ModelState.Clear();
                 }
                 else if (userResponse != null && userResponse.StatusCode != HttpStatusCode.OK)
