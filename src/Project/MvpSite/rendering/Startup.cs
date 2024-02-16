@@ -83,8 +83,7 @@ namespace Mvp.Project.MvpSite.Rendering
             // Register MVP Functionality specific services
             services.AddFeatureSocialServices()
                     .AddFeaturePeopleServices()
-                    .AddFeatureSelectionsServices()
-                    .AddFoundationDataFetchingServices();
+                    .AddFeatureSelectionsServices();
             
             services.AddSession();
 
