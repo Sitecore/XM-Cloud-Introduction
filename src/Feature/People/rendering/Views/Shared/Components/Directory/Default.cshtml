@@ -1,0 +1,67 @@
+﻿@using Mvp.Feature.People.Models.Directory
+@model Mvp.Feature.People.Models.Directory.DirectoryViewModel
+
+<section class="mvp-fp-directory bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 asp-for="TopTitleLabel"></h2>
+                <h1 asp-for="TitleLabel"></h1>
+            </div>
+        </div>
+        <form class="col-12">
+            <div class="row">
+                <div class="input-group col-12">
+                    <input asp-for="Query" name="@DirectoryViewModel.QueryQueryStringKey" class="form-control" placeholder="@Model.SearchLabel?.Value" />
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-search text-white" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    @foreach (FacetViewModel facet in Model.Facets)
+                    {
+                        <partial name="~/Views/Shared/Components/Directory/_Facet.cshtml" model="facet" />
+                    }
+                </div>
+                <div class="col-8">
+                    <div>
+                        <span asp-for="PagingResults"></span> @string.Format(Model.PagingResultsFormat.Value, Model.FirstResult, Model.LastResult, Model.TotalResults)
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-3">
+                        @foreach (DirectoryResultViewModel result in Model.Results)
+                        {
+                            <partial name="~/Views/Shared/Components/Directory/_Result.cshtml" model="result" />
+                        }
+                    </div>
+                    <div class="btn-toolbar justify-content-center">
+                        @{
+                            int startPage = Model.Page > 3 ? Model.Page - 2 : Model.Page;
+                            int totalPages = Model.TotalResults / Model.PageSize;
+                            int endPage = totalPages > Model.Page + 2 ? Model.Page + 2 : totalPages;
+                        }
+                        @if (Model.Page > 1)
+                        {
+                            <div class="btn-group">
+                                <a href="?@DirectoryViewModel.PageQueryStringKey=@(Model.Page - 1)" class="btn btn-secondary">&lt;&lt;</a>
+                            </div>
+                        }
+                        <div class="btn-group">
+                            @for (int i = startPage; i <= endPage; i++)
+                            {
+                                <a href="?@DirectoryViewModel.PageQueryStringKey=@i" class="btn btn-secondary">@i</a>
+                            }
+                        </div>
+                        @if (totalPages >= endPage && Model.Page < totalPages)
+                        {
+                            <div class="btn-group">
+                                <a href="?@DirectoryViewModel.PageQueryStringKey=@(Model.Page + 1)" class="btn btn-secondary">&gt;&gt;</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
