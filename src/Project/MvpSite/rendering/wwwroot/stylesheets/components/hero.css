@@ -15,7 +15,7 @@
 /* line 33, ../../sass/components/hero.scss */
 .hero.dark-image sup { color: #fff !important; }
 /* line 37, ../../sass/components/hero.scss */
-.hero.dark-image h1.animated span.text-animation { overflow: hidden; font-family: AvenirNextW05-Bold; background: linear-gradient(to right, #fff, #fff, #fff); background-size: 700% 400%; animation: type 4s linear; -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; -webkit-animation-fill-mode: forwards; line-height: initial; }
+.hero.dark-image h1.animated span.text-animation { overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; background: linear-gradient(to right, #fff, #fff, #fff); background-size: 700% 400%; animation: type 4s linear; -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; -webkit-animation-fill-mode: forwards; line-height: initial; }
 /* line 51, ../../sass/components/hero.scss */
 .hero .background-image { position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-repeat: no-repeat; background-size: cover; background-position: center; }
 /* line 61, ../../sass/components/hero.scss */
@@ -45,7 +45,7 @@
 /* line 125, ../../sass/components/hero.scss */
 .hero p.author, .hero p.past-reading { font-size: 14px; line-height: 20px; }
 /* line 130, ../../sass/components/hero.scss */
-.hero p.author { font-family: AvenirNextW05-Demi; margin-top: 40px; margin-bottom: 0; }
+.hero p.author { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; margin-top: 40px; margin-bottom: 0; }
 /* line 137, ../../sass/components/hero.scss */
 .hero .headline-image { max-width: 400px; margin-top: 15px; }
 /* line 142, ../../sass/components/hero.scss */
@@ -61,7 +61,7 @@
 /* line 175, ../../sass/components/hero.scss */
 .hero h1.animated { min-height: 82px; }
 /* line 178, ../../sass/components/hero.scss */
-.hero h1.animated span.text-animation { overflow: hidden; font-family: AvenirNextW05-Bold; background: linear-gradient(to right, #000, transparent, transparent); background-size: 700% 400%; animation: type 4s linear; -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; -webkit-animation-fill-mode: forwards; line-height: initial; }
+.hero h1.animated span.text-animation { overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; background: linear-gradient(to right, #000, transparent, transparent); background-size: 700% 400%; animation: type 4s linear; -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; -webkit-animation-fill-mode: forwards; line-height: initial; }
 /* line 192, ../../sass/components/hero.scss */
 .hero.medium { padding-top: 40px; background-image: url(../images/hero-plus-pattern.png); background-repeat: no-repeat; background-position: right 12px; background-size: 530px; padding-bottom: 20px; }
 /* line 200, ../../sass/components/hero.scss */
