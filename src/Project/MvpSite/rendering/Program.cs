@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Builder;
-using Mvp.Project.MvpSite.Rendering;
+using Mvp.Project.MvpSite;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-var startup = new Startup(builder.Configuration);
+Startup startup = new (builder.Configuration);
 
 startup.ConfigureServices(builder.Services);
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 startup.Configure(app, app.Environment);
 
