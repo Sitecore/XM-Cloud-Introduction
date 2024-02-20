@@ -6,7 +6,7 @@ section.application-form .card { z-index: 0; border: none; padding: 25px 0; posi
 /* line 14, ../../sass/components/application.scss */
 section.application-form .card p { text-align: left; line-height: 28px; margin-bottom: 32px; }
 /* line 22, ../../sass/components/application.scss */
-section.application-form .btn.btn-primary, section.application-form .btn.btn-secondary { border: none; font-size: 17px; border-radius: 0; font-weight: 500; letter-spacing: 0.5px; padding: 16px 30px 17px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+section.application-form .btn.btn-primary, section.application-form .btn.btn-secondary { border: none; font-size: 17px; border-radius: 0; font-weight: 500; letter-spacing: 0.5px; padding: 16px 30px 17px; font-family: 'AvenirNextW05-Demi'; }
 /* line 33, ../../sass/components/application.scss */
 section.application-form .btn.btn-primary { background-color: #1ca6a3; }
 /* line 37, ../../sass/components/application.scss */
@@ -29,11 +29,11 @@ section.application-form .steps span { color: #fe2911; font-weight: 800; font-si
 /* line 92, ../../sass/components/application.scss */
 #application-form fieldset:not(:first-of-type) { display: none; }
 /* line 97, ../../sass/components/application.scss */
-#application-form .dropdown-group label { display: block; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+#application-form .dropdown-group label { display: block; font-family: AvenirNextW05-Light; }
 /* line 104, ../../sass/components/application.scss */
-#application-form .form-group select { padding: 15px 15px 15px 15px !important; border-bottom: 2px solid #ccc; border-radius: 0px; margin-bottom: 25px; margin-top: 2px; box-sizing: border-box; color: #3c3c3c; background-color: #F6F6F6; font-size: 18px; border-top: none; border-left: none; border-right: none; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 18px; }
+#application-form .form-group select { padding: 15px 15px 15px 15px !important; border-bottom: 2px solid #ccc; border-radius: 0px; margin-bottom: 25px; margin-top: 2px; box-sizing: border-box; color: #3c3c3c; background-color: #F6F6F6; font-size: 18px; border-top: none; border-left: none; border-right: none; font-family: 'AvenirNextW05-Regular'; font-size: 18px; }
 /* line 121, ../../sass/components/application.scss */
-#application-form .form-group label.fieldlabels { display: block; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 16px; margin-bottom: 0; }
+#application-form .form-group label.fieldlabels { display: block; font-family: 'AvenirNextW05-Demi'; font-size: 16px; margin-bottom: 0; }
 /* line 128, ../../sass/components/application.scss */
 #application-form .form-group.row { padding: 0 20px; }
 /* line 132, ../../sass/components/application.scss */
@@ -49,7 +49,7 @@ section.application-form .steps span { color: #fe2911; font-weight: 800; font-si
 .form-card + .form-group.row { margin-top: 30px; }
 
 /* line 158, ../../sass/components/application.scss */
-#application-form input, #application-form textarea { padding: 15px 15px 15px 15px; border-bottom: 2px solid #ccc; border-radius: 0px; margin-bottom: 25px; margin-top: 2px; box-sizing: border-box; color: #3c3c3c; background-color: #F6F6F6; font-size: 18px; border-top: none; border-left: none; border-right: none; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; width: 100%; }
+#application-form input, #application-form textarea { padding: 15px 15px 15px 15px; border-bottom: 2px solid #ccc; border-radius: 0px; margin-bottom: 25px; margin-top: 2px; box-sizing: border-box; color: #3c3c3c; background-color: #F6F6F6; font-size: 18px; border-top: none; border-left: none; border-right: none; font-family: 'AvenirNextW05-Regular'; width: 100%; }
 
 /* line 176, ../../sass/components/application.scss */
 #application-form input:focus, #application-form textarea:focus { -moz-box-shadow: none !important; -webkit-box-shadow: none !important; box-shadow: none !important; border: 1px solid #fe2911; outline-width: 0; }
@@ -109,7 +109,7 @@ section.application-form .steps span { color: #fe2911; font-weight: 800; font-si
 #progressbar #confirmation:before { font-family: FontAwesome; content: ""; }
 
 /* line 292, ../../sass/components/application.scss */
-.progress-wrap h3 { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 18px; margin-bottom: 10px; }
+.progress-wrap h3 { font-family: 'AvenirNextW05-Demi'; font-size: 18px; margin-bottom: 10px; }
 /* line 297, ../../sass/components/application.scss */
 .progress-wrap .progress { margin-bottom: 20px; }
 

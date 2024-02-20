@@ -14,7 +14,6 @@
 
 
   <ItemGroup>
-	  <PackageReference Include="Mvp.Selections.Client" />
 	  <PackageReference Include="Sitecore.LayoutService.Client" />
 	  <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
     <PackageReference Include="GraphQL.Client" />

@@ -9,7 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Files", ".Solutio
 		..\Packages.props = ..\Packages.props
 		..\README.md = ..\README.md
 		..\sitecore.json = ..\sitecore.json
-		XmCloudIntroduction.sln.DotSettings = XmCloudIntroduction.sln.DotSettings
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{4736C040-62A2-4E10-A376-0FD4B8B72E8D}"
@@ -98,11 +97,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{A3BB19D0
 		Feature\Forms\Forms.module.json = Feature\Forms\Forms.module.json
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BehavioralPersonalization", "BehavioralPersonalization", "{FA0F7310-D73E-40CE-8918-3D9B0B929EC8}"
-	ProjectSection(SolutionItems) = preProject
-		Feature\BehavioralPersonalization\BehavioralPersonalization.module.json = Feature\BehavioralPersonalization\BehavioralPersonalization.module.json
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -186,7 +180,6 @@ Global
 		{B4EC41A8-ECA9-488C-88A0-2B6F91584B02} = {D1E80E41-8A3D-4D50-A469-02E5BB87B4CD}
 		{8E8859F4-6EA3-463D-B8DE-B151C505A691} = {4736C040-62A2-4E10-A376-0FD4B8B72E8D}
 		{A3BB19D0-CE43-4EE3-8B52-72E95B19E5A4} = {EE03412B-647E-416F-84A1-427E692BBBDB}
-		{FA0F7310-D73E-40CE-8918-3D9B0B929EC8} = {EE03412B-647E-416F-84A1-427E692BBBDB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A7C4987-3A11-41A9-8915-5457EF7B5A6F}

@@ -18,7 +18,7 @@
 /* line 37, ../../sass/components/page-overview-panel.scss */
 .page-overview-panel ul { padding-left: 25px; }
 /* line 40, ../../sass/components/page-overview-panel.scss */
-.page-overview-panel ul li { list-style-type: none; position: relative; margin-bottom: 1rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; color: #707070; font-size: 18px; }
+.page-overview-panel ul li { list-style-type: none; position: relative; margin-bottom: 1rem; font-family: AvenirNextW05-Regular; color: #707070; font-size: 18px; }
 /* line 48, ../../sass/components/page-overview-panel.scss */
 .page-overview-panel ul li:before { content: " "; position: absolute; left: -29px; top: 9px; width: 7px; height: 7px; background-color: #19a5a2; border-radius: 150px; background-repeat: no-repeat; }
 /* line 60, ../../sass/components/page-overview-panel.scss */

@@ -4,24 +4,26 @@ using System.Threading.Tasks;
 
 namespace Mvp.Project.MvpSite.Middleware
 {
-    public class EnsureAcceptLanguageHeaderMiddleware(RequestDelegate next, IConfiguration configuration)
+    public class EnsureAcceptLanguageHeaderMiddleware
     {
-        private readonly string _defaultLanguage = configuration.GetValue<string>("DefaultAcceptLanguageHeader");
-        
+        private readonly RequestDelegate next;
+        private readonly IConfiguration configuration;
+
+        public EnsureAcceptLanguageHeaderMiddleware(RequestDelegate next, IConfiguration configuration)
+        {
+            this.next = next;
+            this.configuration = configuration;
+        }
+
         public async Task Invoke(HttpContext httpContext)
         {
             if (!httpContext.Request.Headers.ContainsKey("Accept-Language"))
             {
-                
-                httpContext.Request.Headers.Append("Accept-Language", _defaultLanguage);
-            }
-            else
-            {
-                // NOTE [IVA] Hard fix for #555373 until V22 release
-                httpContext.Request.Headers.AcceptLanguage = _defaultLanguage;
+                var defaultLang = configuration.GetValue<string>("DefaultAcceptLanguageHeader");
+                httpContext.Request.Headers.Add("Accept-Language", defaultLang);
             }
 
-            await next(httpContext);
+            await next(httpContext).ConfigureAwait(false);
         }
     }
 }
