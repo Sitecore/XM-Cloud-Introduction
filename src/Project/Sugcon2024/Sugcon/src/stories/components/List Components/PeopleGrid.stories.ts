@@ -17,6 +17,8 @@ export const Teaser: Story = {
   args: {
     params: {
       Columns: '4',
+      Alphabetize: '1',
+      LinkToBio: '1',
       DisplaySocialLinks: '1',
       Styles: 'red-linear-gradient',
     },

@@ -1,5 +1,21 @@
 import React from 'react';
-import { Box, Heading, Text, Image, Link } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Link,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  ModalFooter,
+  useDisclosure,
+} from '@chakra-ui/react';
 import { Field, ImageField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
 
 // Define the type of props that Hero will accept
@@ -32,12 +48,29 @@ export type PersonProps = {
 };
 
 export const Default = (props: PersonProps): JSX.Element => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box mb={30}>
-      <Image src={props.fields.Image?.value?.src} w={200} borderRadius={15} mb={10} />
-      <Heading as="h3" size="md" mt={2}>
-        {props.fields.Name?.value}
-      </Heading>
+      <Image
+        src={props.fields.Image?.value?.src}
+        w={200}
+        borderRadius={15}
+        mb={10}
+        onClick={props.params?.LinkToBio == '1' ? onOpen : undefined}
+      />
+
+      {props.params?.LinkToBio == '1' && (
+        <Button onClick={onOpen} variant="link">
+          <Heading as="h3" size="md" mt={2}>
+            {props.fields.Name?.value}
+          </Heading>
+        </Button>
+      )}
+      {!props.params?.LinkToBio && (
+        <Heading as="h3" size="md" mt={2}>
+          {props.fields.Name?.value}
+        </Heading>
+      )}
       <Text fontSize="12px" mb={0}>
         {props.fields.JobRole?.value}
       </Text>
@@ -70,6 +103,37 @@ export const Default = (props: PersonProps): JSX.Element => {
         >
           Twitter
         </Link>
+      )}
+      {props.params?.LinkToBio == '1' && (
+        <Modal isOpen={isOpen} onClose={onClose} isCentered={true}>
+          <ModalOverlay />
+          <ModalContent minW={{ base: '80%', lg: 800 }} minH={{ base: 100, lg: 200 }}>
+            <ModalHeader></ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <Flex flexWrap="wrap">
+                <Box w={{ base: '100%', md: 'inherit' }} px={10} mb={{ base: 10, md: 0 }}>
+                  <Image src={props.fields.Image?.value?.src} w={200} borderRadius={15} />
+                </Box>
+                <Box>
+                  <Heading as="h3" size="lg">
+                    {props.fields.Name?.value}
+                  </Heading>
+                  <Text fontSize="12px" mb={0}>
+                    {props.fields.JobRole?.value}
+                  </Text>
+                  <Text fontSize="12px" mb={0}>
+                    {props.fields.Company?.value}
+                  </Text>
+                  <Text fontSize="12px" mb={0}>
+                    {props.fields.Biography?.value}
+                  </Text>
+                </Box>
+              </Flex>
+            </ModalBody>
+            <ModalFooter></ModalFooter>
+          </ModalContent>
+        </Modal>
       )}
     </Box>
   );
