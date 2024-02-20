@@ -1,25 +1,18 @@
 ﻿---
-ID: "36cad6cf-d418-43ca-bc57-656e44069116"
-Parent: "cbb0cd20-5e73-4759-9abe-40afa8cedb84"
+ID: "dc2aa247-f832-4f95-b855-4341c1fd880a"
+Parent: "6bcfb81c-8b0c-4382-abc5-428d064ee1d0"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/Sugcon/Page
+Path: /sitecore/templates/Feature/BehavioralPersonalization/Persona Attribute
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Office/32x32/document_text.png
+  Value: Apps/32x32/UI.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
-  Value: |
-    {47151711-26CA-434E-8132-D3E0B7D26683}
-    {371D5FBB-5498-4D94-AB2B-E3B70EEBE78C}
-    {4414A1F9-826A-4647-8DF4-ED6A95E64C43}
-    {6650FB34-7EA1-4245-A919-5CC0F002A6D7}
-    {68BB4B9E-FF24-4893-8227-0BA204DBD111}
-    {C55CFFAC-B11E-4A30-9DD9-1674FC51B9A1}
-    {39D68637-12C7-4E23-B8D7-ED170C919BC2}
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
 - ID: "f7d48a55-2158-4f02-9356-756654404f73"
   Hint: __Standard values
-  Value: "{C83513F7-5864-40F7-93A3-4E8A42830D01}"
+  Value: "{D8D8F462-1F06-4DA1-AC51-4C1F4C32B016}"
 Languages:
 - Language: en
   Versions:
@@ -27,22 +20,22 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20220519T090801Z
+      Value: 20240205T150910Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\Y6cPXOeDwf
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\Y6cPXOeDwf
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "e4f0ced9-a94c-4cc5-afcf-99a447cf03b4"
+      Value: "3fa7013b-a55d-4954-ba27-974a928fa758"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Y6cPXOeDwf
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240202T174744Z
+      Value: 20240205T151008Z
