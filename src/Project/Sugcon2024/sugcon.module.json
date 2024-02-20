@@ -9,6 +9,11 @@
             "allowedPushOperations": "createUpdateAndDelete"
         },
         {
+          "name": "Modules",
+          "path": "/sitecore/system/Settings/Project/Sugcon2024",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+      }, 
+        {
           "name": "Media",
           "path": "/sitecore/Media Library/Project/Sugcon2024",
           "rules": [
