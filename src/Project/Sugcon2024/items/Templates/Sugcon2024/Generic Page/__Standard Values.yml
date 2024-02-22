@@ -7,8 +7,9 @@ SharedFields:
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: |
-    {28F60DA7-21F8-4791-9ECF-F65A93E105A4}
+    {F5D59B30-223D-4E5A-967D-19DAF7934DB6}
     {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
+    {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
 Languages:
 - Language: en
   Versions:
@@ -27,7 +28,7 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2ecdea24-409a-454f-bd4e-4f532537c71e"
+      Value: "04ba73d3-9653-4e89-96b4-873381047216"
     - ID: "b0c01040-9941-4a8f-8400-b274c377885e"
       Hint: Title
       Value: $name
@@ -37,4 +38,4 @@ Languages:
         sitecore\UOUBIWQRx7
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240123T184508Z
+      Value: 20240206T160336Z
