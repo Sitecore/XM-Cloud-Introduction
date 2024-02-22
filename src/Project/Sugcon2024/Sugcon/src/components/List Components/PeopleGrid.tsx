@@ -39,6 +39,10 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
   const styles = props.params && props.params.Styles ? props.params.Styles : '';
   const cols = props.params && props.params.Columns ? parseInt(props.params.Columns) : 4;
 
+  if (props.params && props.params.Alphabetize == '1') {
+    props.fields?.People.sort((a, b) => (a.fields.Name.value > b.fields.Name.value ? 1 : -1));
+  }
+
   return (
     <Box w="100%" mt={20} className={styles}>
       <Box w="80%" pt={10} m="auto">
