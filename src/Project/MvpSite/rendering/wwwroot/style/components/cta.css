@@ -5,7 +5,7 @@
 a.cta, button.cta {
   display: inline-block;
   font-weight: 400;
-  font-family: AvenirNextW05-Demi;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-decoration: none;
   transition: 0.3s all;
   font-size: 17px;
@@ -303,7 +303,7 @@ a.link-arrow, span.link-arrow {
   clear: left;
   position: relative;
   text-decoration: none;
-  font-family: AvenirNextW05-Bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: 0.5px;
   border-bottom: none !important;
   line-height: 26px; }

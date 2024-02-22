@@ -128,6 +128,7 @@
             "path": "/Settings",
             "scope": "itemAndChildren",
             "allowedPushOperations": "createAndUpdate"
+
           },
           {
             "path": "*",
