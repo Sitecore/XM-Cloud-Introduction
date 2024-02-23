@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Heading, Text, Flex, Link } from '@chakra-ui/react';
-import { LinkField, TextField, useSitecoreContext } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Box, Heading } from '@chakra-ui/react';
+import { Link, LinkField, Text, TextField, useSitecoreContext } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentParams, ComponentRendering } from '@sitecore-jss/sitecore-jss-nextjs';
+import bg from '../../assets/images/SUGCON-hero-artwork.jpg';
 
 interface Fields {
   data: {
@@ -33,9 +34,24 @@ interface Fields {
 }
 
 type PageTitleProps = {
-  rendering: ComponentRendering & { params: ComponentParams };
   params: { [key: string]: string };
   fields: Fields;
+};
+type ComponentContentProps = {
+  id: string;
+  styles: string;
+  children: JSX.Element;
+};
+
+const ComponentContent = (props: ComponentContentProps) => {
+  const id = props.id;
+  return (
+    <div className={`component title ${props.styles}`} id={id ? id : undefined}>
+      <div className="component-content">
+        <div className="field-title">{props.children}</div>
+      </div>
+    </div>
+  );
 };
 
 export const Default = (props: PageTitleProps): JSX.Element => {
@@ -54,6 +70,7 @@ export const Default = (props: PageTitleProps): JSX.Element => {
       editable: true,
     },
   };
+  
   if (sitecoreContext.pageState !== 'normal') {
     link.value.querystring = `sc_site=${datasource?.url?.siteName}`;
     if (!text.value) {
@@ -63,38 +80,14 @@ export const Default = (props: PageTitleProps): JSX.Element => {
   }
 
   return (
-    <Flex
-      direction={{ base: 'column', md: 'row' }}
-      alignItems="center"
-      bg="#f0f0f0"
-      w="100vw"
-      boxShadow="-20px 19px 40px 0px rgba(0, 0, 0, 0.2) inset"
-      maxHeight="400px"
-    >
-      <Flex
-        direction="column"
-        margin="0 auto" // Center the content box
-        p={5}
-        flexGrow={1}
-        minWidth="50%"
-      >
-        <Box width="auto" alignSelf="end" maxWidth="620px">
-          <Heading as="h1" fontSize="30px" fontWeight="bold" mb="33px">
-            <>
-              {sitecoreContext.pageState === 'edit' ? (
-                <Text>{text.value}</Text>
-              ) : (
-                <Link href={link.value.href} isExternal={link.value.target == '_blank'}>
-                  <Text>{text.value}</Text>
-                </Link>
-              )}
-            </>
+    <Box width="100%" background="linear-gradient(#eb1f1f 40% , #2B317B)" backgroundImage={bg.src} backgroundPosition="center" backgroundSize="cover" backgroundRepeat="no-repeat" color="white">
+      <Box w="80%" pt={10} m="auto">
+        <>
+          <Heading as="h1" size="lg" fontSize="30px" fontWeight="normal" mb="33px">
+            <Text field={text} />
           </Heading>
-        </Box>
-      </Flex>
-      <Box flex="1" position="relative" minWidth="50%" maxHeight="400px">
-        {' '}
+        </>
       </Box>
-    </Flex>
+    </Box>
   );
 };
