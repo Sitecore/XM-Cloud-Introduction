@@ -14,8 +14,7 @@ $hamburger-margin: 18px;
 
 .navigation.navigation-horizontal {
   width: 100%;
-  padding-right: 70px;
-  margin-top: -15px;
+  padding-right: 70px;  
 
   .menu-mobile-navigate {
     display: none;
@@ -41,13 +40,13 @@ $hamburger-margin: 18px;
   
     .level0, .level1 {
       float: left;
-      margin-left: 30px;
+      margin-left: 24px;
 
       >.navigation-title {
         >a {
           border-width: 0;
-          font-size: $text-size-14;
-          font-weight: 400;
+          font-size: $text-size-18;
+          font-weight: bold;
         }
       }
     }
@@ -61,7 +60,7 @@ $hamburger-margin: 18px;
       bottom: 0;
       right: 0;
       left: 0;
-      background-color: $bg-black-active;
+      background-color: $bg-basic-color;
       z-index: 1;
 
       * {
@@ -88,8 +87,9 @@ $hamburger-margin: 18px;
           >a {
             font-size: $text-size-30;
             line-height: 90px;
+            margin: auto;
             >span {
-              color: $text-white;
+              color: $text-black;
             }
           }
         }
