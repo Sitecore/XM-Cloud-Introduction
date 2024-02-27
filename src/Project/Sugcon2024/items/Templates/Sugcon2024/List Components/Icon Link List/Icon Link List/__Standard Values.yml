@@ -1,0 +1,27 @@
+﻿---
+ID: "e8f3d792-dc4c-4470-83d7-f37be11bccc8"
+Parent: "bb0274c3-cd31-452e-9ffd-f7ea74b472a5"
+Template: "bb0274c3-cd31-452e-9ffd-f7ea74b472a5"
+Path: /sitecore/templates/Project/Sugcon2024/List Components/Icon Link List/Icon Link List/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{B1C7330C-7B3D-4587-88D6-F0EF242323C8}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20111206T092520Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0453b439-6b2a-4690-bb02-c262a592c63b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240215T155929Z

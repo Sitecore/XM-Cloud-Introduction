@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Link as JssLink,
-  Text,
-  LinkField,
-  TextField,
-  Field,
-} from '@sitecore-jss/sitecore-jss-nextjs';
+import { Link as JssLink, Text, LinkField, TextField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';

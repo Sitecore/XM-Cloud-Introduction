@@ -5,10 +5,13 @@
 
   a {
     border: none;
+
+    svg {
+      display: inline-block;
+    }
   }
   li {
     display: inline-block;
     margin-left: $middle-margin;
   }
 }
-
