@@ -1,7 +1,7 @@
 ﻿---
 ID: "aa7ea3cd-0f71-4031-8afa-8cb36cf60d96"
 Parent: "825b30b4-b40b-422e-9920-23a1b6bda89c"
-Template: "77157d54-90c8-4014-9b9e-540d24e71d03"
+Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
 Path: /sitecore/templates/Project/Sugcon2024
 Languages:
 - Language: en
@@ -21,11 +21,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3f7b865a-bc3c-4d1b-be98-3eb6068f0d21"
+      Value: "ac012d93-b016-4027-b7cc-5a1ad92890a3"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\UOUBIWQRx7
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240105T121328Z
+      Value: 20240206T160227Z

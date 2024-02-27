@@ -52,6 +52,10 @@ a[target='_blank']:after {
   content: '\1F5D7';
 }
 
+.organizers-container a[target='_blank']:after{
+  content: none;
+}
+
 /*
 Hides Sitecore Experience Editor markup,
 if you run the app in connected mode while the Sitecore cookies
@@ -119,7 +123,7 @@ footer {
   }
 }
 p {
-  font-family: 'Mulish', 'AvenirNextW05-Regular', 'Arial';
+  font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Arial';
   color: #707070;
   font-size: 18px;
 }
@@ -127,7 +131,7 @@ h1 {
   margin-top: 0;
   color: #232323;
   font-weight: 900;
-  font-family: 'Mulish', 'AvenirNextW05-Bold';
+  font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 48px;
   line-height: 50px;
 
@@ -138,13 +142,13 @@ h1 {
 h2 {
   color: #232323;
   font-weight: 900;
-  font-family: 'Mulish', 'AvenirNextW05-Bold';
+  font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 36px;
 }
 h3 {
   color: #232323;
   font-weight: 900;
-  font-family: 'Mulish', 'AvenirNextW05-Bold', Arial, Helvetica, sans-serif;
+  font-family: 'Mulish', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", Arial, Helvetica, sans-serif;
   font-size: 24px;
 }
 .centered-block {
