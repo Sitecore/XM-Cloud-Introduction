@@ -7,6 +7,7 @@ import {
   useSitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { Box, Flex, UnorderedList, ListItem, Button } from '@chakra-ui/react';
+import Link from 'next/link';
 
 interface Fields {
   Id: string;
@@ -98,7 +99,11 @@ export const Default = (props: NavigationProps): JSX.Element => {
     />
   );
 
-  const registerNow = <Button variant="primary">Register now</Button>;
+  const registerNow = (
+    <Link href="/register" passHref>
+      <Button variant="primary">Register now</Button>
+    </Link>
+  );
 
   const list = [
     homeItem, // Add the homeItem as the first element in the list

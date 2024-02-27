@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Default as Navigation } from '../../../components/Navigation';
-import { TextField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { SitecoreContext } from '@sitecore-jss/sitecore-jss-react';
 
 const meta = {
@@ -25,28 +24,6 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const title: TextField = {
-  value: 'testvalue',
-  editable: 'false',
-};
-
-// export const PrimaryNavigation: Story = {
-//   name: 'Primary Navigation',
-//   args: {
-//     fields: {
-//       Id: '',
-//       DisplayName: 'Testing',
-//       Title: title,
-//       NavigationTitle: title,
-//       Href: '#',
-//       Querystring: '',
-//       Children: [],
-//       Styles: [],
-//     },
-//     relativeLevel: 1,
-//   },
-// };
-
 export const PrimaryNavigation: Story = {
   name: 'Primary Navigation',
   args: {
@@ -67,8 +44,8 @@ export const PrimaryNavigation: Story = {
           Href: '/Sessssions',
           Querystring: '',
           NavigationTitle: {
-            value: 'Sessssions',
-            editable: 'Sessssions',
+            value: 'Sessions',
+            editable: 'Sessions',
           },
           Children: [
             {
@@ -146,14 +123,16 @@ export const PrimaryNavigation: Story = {
       ],
     },
     fields: {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       '0': {
         Id: '9dc1fb0c-996c-4130-bc07-d5773bf2e824',
         Styles: ['level1', 'submenu', 'item0', 'odd', 'first'],
-        Href: '/Seeeeessions',
+        Href: '/Sessions',
         Querystring: '',
         NavigationTitle: {
-          value: 'Seeeeessions',
-          editable: 'Seeeeessions',
+          value: 'Sessions',
+          editable: 'Sessions',
         },
         Children: [
           {
@@ -233,8 +212,8 @@ export const PrimaryNavigation: Story = {
       FieldNames: 'Default',
       LevelFrom: '{1BB88840-5FB3-4353-AD8D-81136F6FF75A}',
       LevelTo: '{A59325BB-5A27-46F9-8110-9D499715F3BE}',
-      Styles: 'navigation-horizontal',
-      styles: ' navigation-horizontal',
+      Styles: '',
+      styles: '',
     },
   },
 };
