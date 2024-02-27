@@ -38,6 +38,11 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@sitecore-feaas/clientside": "^0.5.5",
     "@sitecore-jss/sitecore-jss-nextjs": "~21.5.3",
     "@sitecore/engage": "^1.4.1",
@@ -114,7 +119,7 @@
     "start:production": "npm-run-all --serial bootstrap next:build next:start",
     "start:watch-components": "ts-node --project tsconfig.scripts.json scripts/generate-component-builder/index.ts --watch",
     "storybook": "storybook dev -p 6006",
-    "prebuild-storybook":"npm run bootstrap",
+    "prebuild-storybook": "npm run bootstrap",
     "build-storybook": "storybook build"
   },
   "eslintConfig": {

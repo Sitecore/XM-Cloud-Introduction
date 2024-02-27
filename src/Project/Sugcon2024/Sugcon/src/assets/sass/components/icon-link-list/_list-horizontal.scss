@@ -1,0 +1,14 @@
+@import '@sass/abstracts/vars';
+@import '@sass/abstracts/mixins';
+
+.icon-link-list.list-horizontal {
+
+  a {
+    border: none;
+  }
+  li {
+    display: inline-block;
+    margin-left: $middle-margin;
+  }
+}
+
