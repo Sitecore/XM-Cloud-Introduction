@@ -1,0 +1,27 @@
+﻿---
+ID: "3bfa2e0e-f3be-4bf3-a13b-03f483916dcb"
+Parent: "0c5c8db1-5dc6-4a54-a232-750f004bfb84"
+Template: "a1854dfd-e74f-42ab-a85e-e0f566c5679c"
+Path: /sitecore/content/Sugcon2024/Shared/Data/Icons
+SharedFields:
+- ID: "6fd695e7-7f6d-4ca5-8b49-a829e5950ae9"
+  Hint: __Subitems Sorting
+  Value: "{C1FF011E-B02A-44E3-8444-9FC89CFC28CE}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240215T161835Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e3d39a28-d76f-4e84-ace3-2c66d7a87736"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240215T162247Z
