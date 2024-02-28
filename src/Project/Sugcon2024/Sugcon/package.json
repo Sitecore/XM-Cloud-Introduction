@@ -56,7 +56,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.52.3",
-    "sass-alias": "^1.0.5"
+    "sass-alias": "^1.0.5",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^1.21.8",
