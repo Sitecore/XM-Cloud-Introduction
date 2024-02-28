@@ -1,0 +1,27 @@
+﻿---
+ID: "8fd5426c-e34c-4873-8183-07dae0b855a5"
+Parent: "1dfa17c5-0b40-4d43-a718-720bd65f65e6"
+Template: "1dfa17c5-0b40-4d43-a718-720bd65f65e6"
+Path: /sitecore/templates/Project/Sugcon2024/Events/Rendering Parameters/Agenda/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211012T120926Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JssImport
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "67fe6b55-6fd8-4f00-8d2d-475e117d7706"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240228T183906Z
