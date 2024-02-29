@@ -1,14 +1,15 @@
 ﻿---
-ID: "9f82a542-7b09-4603-b529-4213d7039d43"
-Parent: "ecda7ebd-d9ff-4fe0-9dd2-3b560ca14f03"
-Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
-Path: /sitecore/content/Sugcon2024/Shared/Presentation/Available Renderings/Basic Components
+ID: "cb50acd9-94fb-47cf-b39d-dd44c88748d1"
+Parent: "18ca38b5-11f4-45cf-8dc9-f8a2bd88145a"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Sugcon2024/Basic Components/ActionBanner/ActionBanner/Content/Text
 SharedFields:
-- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
-  Hint: Renderings
-  Value: |
-    {4718D9E1-E2BC-4FDD-8305-4CBA3DF7466B}
-    {B2ABBD0A-B9C5-4DA2-A0F4-40C24E2EBE39}
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Multi-Line Text"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
 Languages:
 - Language: en
   Versions:
@@ -16,22 +17,22 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20240220T125902Z
+      Value: 20240229T094259Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\UzWooIJE3y
+        sitecore\x3rLvWVVyq
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\UzWooIJE3y
+        sitecore\x3rLvWVVyq
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "431b6964-9130-4fdf-9bb9-28d781bfcce3"
+      Value: "7cd01a12-54eb-4385-b9c2-3dbf0a600dca"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\x3rLvWVVyq
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240229T094530Z
+      Value: 20240229T094259Z
