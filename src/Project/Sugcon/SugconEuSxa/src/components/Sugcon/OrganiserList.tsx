@@ -34,7 +34,7 @@ export const Default = (props: OrganiserListProps): JSX.Element => {
   console.log(props);
   if (props.fields) {
     return (
-      <div className="container component">
+      <div className="container component organizers-container">
         <div className="row">
           {props.fields?.Organisers?.length == 0 ? (
             <div>No Organisers</div>

@@ -3,7 +3,3 @@ ID: "5e2adc96-bb41-473e-ac79-295b5a9ca3e3"
 Parent: "358fbe1b-55e0-467b-be91-681cce3c22bf"
 Template: "358fbe1b-55e0-467b-be91-681cce3c22bf"
 Path: /sitecore/templates/Project/Sugcon2024/Basic Components/Event Folder/__Standard Values
-Languages:
-- Language: en
-  Versions:
-  - Version: 1

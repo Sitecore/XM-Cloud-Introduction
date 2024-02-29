@@ -1,0 +1,38 @@
+@import "@sass/abstracts/mixins";
+@import "@sass/abstracts/vars";
+@import '@fontawesome/scss/mixins';
+@import "@fontawesome/scss/variables";
+
+.icon-link-list {
+    background: $link-list-bg;
+    h1, h2, h3, h4, h5, h6 {
+        @include border-basic(bottom, $link-list-header-border);
+    }
+    >.component-content {
+        ul {
+            background: $link-list-items-bg;
+        }
+        li {
+            background: $link-list-item-bg;
+            display: block;
+            font-size: $font-normal;
+            
+            a {
+                display: inline;
+                color: $link-list-item-color;
+                position: relative;
+                padding-left: 10px;
+                font-size: 1.25em;
+                text-decoration: none;
+            }
+
+            .icon-list-link {
+                svg {
+                    height: 1.25em;
+                }
+            }
+        }
+    }
+    @import "../../base/links";
+    @import "../../variants/icon-link-list";
+}

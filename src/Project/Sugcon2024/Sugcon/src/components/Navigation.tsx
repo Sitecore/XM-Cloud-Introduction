@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import {
-  Link,
   LinkField,
+  Link as SitecoreLink,
   Text,
   TextField,
   useSitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Box, Flex, UnorderedList, ListItem, Button } from '@chakra-ui/react';
+import Link from 'next/link';
 
 interface Fields {
   Id: string;
@@ -18,11 +20,22 @@ interface Fields {
   Styles: string[];
 }
 
-type NavigationProps = {
+export type NavigationProps = {
   params?: { [key: string]: string };
   fields: Fields;
   handleClick: (event?: React.MouseEvent<HTMLElement>) => void;
   relativeLevel: number;
+};
+
+const homeFields: Fields = {
+  Id: 'home',
+  DisplayName: 'Home',
+  Title: { value: 'Home', editable: 'Home' },
+  NavigationTitle: { value: 'Home', editable: 'Home' },
+  Href: '/',
+  Querystring: '',
+  Children: [],
+  Styles: ['level1'], // Add any specific styles if needed
 };
 
 const getNavigationText = function (props: NavigationProps): JSX.Element | string {
@@ -48,7 +61,7 @@ const getLinkField = (props: NavigationProps): LinkField => ({
 });
 
 export const Default = (props: NavigationProps): JSX.Element => {
-  const [isOpenMenu, openMenu] = useState(false);
+  const [isOpenMenu, setOpenMenu] = useState(false);
   const { sitecoreContext } = useSitecoreContext();
   const styles =
     props.params != null
@@ -56,11 +69,13 @@ export const Default = (props: NavigationProps): JSX.Element => {
       : '';
   const id = props.params != null ? props.params.RenderingIdentifier : null;
 
+  console.log(props);
+
   if (!Object.values(props.fields).length) {
     return (
-      <div className={`component navigation ${styles}`} id={id ? id : undefined}>
-        <div className="component-content">[Navigation]</div>
-      </div>
+      <Box className={`component navigation ${styles}`} id={id || undefined}>
+        <Box className="component-content">[Navigation]</Box>
+      </Box>
     );
   }
 
@@ -68,51 +83,67 @@ export const Default = (props: NavigationProps): JSX.Element => {
     if (event && sitecoreContext?.pageEditing) {
       event.preventDefault();
     }
-
     if (flag !== undefined) {
-      return openMenu(flag);
+      setOpenMenu(flag);
+    } else {
+      setOpenMenu(!isOpenMenu);
     }
-
-    openMenu(!isOpenMenu);
   };
 
-  const list = Object.values(props.fields)
-    .filter((element) => element)
-    .map((element: Fields, key: number) => (
-      <NavigationList
-        key={`${key}${element.Id}`}
-        fields={element}
-        handleClick={(event: React.MouseEvent<HTMLElement>) => handleToggleMenu(event, false)}
-        relativeLevel={1}
-      />
-    ));
+  const homeItem = (
+    <NavigationList
+      key="home"
+      fields={homeFields}
+      handleClick={(event: React.MouseEvent<HTMLElement>) => handleToggleMenu(event, false)}
+      relativeLevel={1}
+    />
+  );
+
+  const registerNow = (
+    <Link href="/register" passHref>
+      <Button variant="primary">Register now</Button>
+    </Link>
+  );
+
+  const list = [
+    homeItem, // Add the homeItem as the first element in the list
+    ...Object.values(props.fields)
+      .filter((element) => element)
+      .map((element: Fields, key: number) => (
+        <NavigationList
+          key={`${key}${element.Id}`}
+          fields={element}
+          handleClick={(event: React.MouseEvent<HTMLElement>) => handleToggleMenu(event, false)}
+          relativeLevel={1}
+        />
+      )),
+    registerNow,
+  ];
 
   return (
-    <div className={`component navigation ${styles}`} id={id ? id : undefined}>
-      <label className="menu-mobile-navigate-wrapper">
+    <Box className={`component navigation ${styles}`} id={id || undefined}>
+      <Box as="label" className="menu-mobile-navigate-wrapper">
         <input
           type="checkbox"
           className="menu-mobile-navigate"
           checked={isOpenMenu}
           onChange={() => handleToggleMenu()}
         />
-        <div className="menu-humburger" />
-        <div className="component-content">
+        <Box className="menu-humburger" />
+        <Box className="component-content">
           <nav>
-            <ul className="clearfix">{list}</ul>
+            <UnorderedList className="clearfix">{list}</UnorderedList>
           </nav>
-        </div>
-      </label>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
 const NavigationList = (props: NavigationProps) => {
   const { sitecoreContext } = useSitecoreContext();
-  const [active, setActive] = useState(false);
-  const classNameList = `${props.fields.Styles.concat('rel-level' + props.relativeLevel).join(
-    ' '
-  )}`;
+  const [isActive, setIsActive] = useState(false);
+  const classNameList = props.fields.Styles?.concat('rel-level' + props.relativeLevel).join(' ');
 
   let children: JSX.Element[] = [];
   if (props.fields.Children && props.fields.Children.length) {
@@ -127,24 +158,26 @@ const NavigationList = (props: NavigationProps) => {
   }
 
   return (
-    <li className={`${classNameList} ${active ? 'active' : ''}`} key={props.fields.Id} tabIndex={0}>
-      <div
+    <ListItem
+      className={`${classNameList} ${isActive ? 'active' : ''}`}
+      key={props.fields.Id}
+      tabIndex={0}
+    >
+      <Flex
         className={`navigation-title ${children.length ? 'child' : ''}`}
-        onClick={() => setActive(() => !active)}
+        onClick={() => setIsActive(!isActive)}
       >
-        <Link
+        <SitecoreLink
           field={getLinkField(props)}
           editable={sitecoreContext.pageEditing}
           onClick={props.handleClick}
         >
           {getNavigationText(props)}
-        </Link>
-      </div>
-      {children.length > 0 ? <ul className="clearfix">{children}</ul> : null}
-    </li>
+        </SitecoreLink>
+      </Flex>
+    </ListItem>
   );
 };
-
 const getLinkTitle = (props: NavigationProps): string | undefined => {
   let title;
   if (props.fields.NavigationTitle?.value) {
