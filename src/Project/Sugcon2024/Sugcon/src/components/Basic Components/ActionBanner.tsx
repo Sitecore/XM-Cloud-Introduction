@@ -1,5 +1,10 @@
 import React from 'react';
-import { Field, Link as JssLink, LinkField, Text as JssText } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  Field,
+  Link as JssLink,
+  LinkField,
+  Text as JssText,
+} from '@sitecore-jss/sitecore-jss-nextjs';
 
 interface Fields {
   Title: Field<string>;
@@ -27,9 +32,17 @@ export const Default = (props: ActionBannerProps): JSX.Element => {
     return (
       <div className={`component action-banner ${props.params.styles}`} id={id ? id : undefined}>
         <div className="component-content">
-          <div className="col-1"><h2><JssText field={props.fields.Title} /></h2></div>
-          <div className="col-2"><JssText field={props.fields.Text} /></div>
-          <div className="col-1"><JssLink field={props.fields.CallToAction} /></div>
+          <div className="col-1">
+            <h2>
+              <JssText field={props.fields.Title} />
+            </h2>
+          </div>
+          <div className="col-2">
+            <JssText field={props.fields.Text} />
+          </div>
+          <div className="col-1">
+            <JssLink field={props.fields.CallToAction} />
+          </div>
         </div>
       </div>
     );
