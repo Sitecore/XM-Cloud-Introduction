@@ -1,0 +1,36 @@
+﻿---
+ID: "827a00ee-e79f-4f3e-a35e-a31d34beacc7"
+Parent: "aa40029c-6410-4cb0-944c-649a20e083c8"
+Template: "aa40029c-6410-4cb0-944c-649a20e083c8"
+Path: /sitecore/templates/Project/Sugcon2024/Basic Components/ActionBanner/ActionBanner Folder/__Standard Values
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/hand_touch.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {7CC37FCE-33BD-464A-8B32-0A65B4BC502E}
+    {AA40029C-6410-4CB0-944C-649A20E083C8}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20120621T071605Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cae7c856-0df2-42c1-a200-511eb5626e9f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240229T094652Z

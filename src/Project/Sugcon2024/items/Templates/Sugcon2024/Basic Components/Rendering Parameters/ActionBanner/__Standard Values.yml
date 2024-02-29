@@ -1,0 +1,27 @@
+﻿---
+ID: "4be1b864-aa58-4c1f-8ca9-909f6c86c86e"
+Parent: "5165bb7e-e67f-4530-8b4a-20b0ac60bebe"
+Template: "5165bb7e-e67f-4530-8b4a-20b0ac60bebe"
+Path: /sitecore/templates/Project/Sugcon2024/Basic Components/Rendering Parameters/ActionBanner/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20211012T120926Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\JssImport
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b70142fc-1526-4645-88c6-beaedfe6aaf7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240229T075858Z

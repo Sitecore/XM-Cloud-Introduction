@@ -1,0 +1,30 @@
+.component.action-banner {
+  background-color: red;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+
+
+  .component-content {
+    max-width: 70%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+
+    div {
+      display: flex;
+      padding: 10px;
+      align-content: center;
+      justify-content: center;
+
+    }
+
+    .col-1 {
+      width: 30%;
+    }
+
+    .col-2 {
+      width: 60%;
+    }
+  }
+}
