@@ -1,0 +1,55 @@
+﻿---
+ID: "04640cff-555e-4c20-bc46-ed1b6f635fca"
+Parent: "ff0bc016-2d01-4f55-a020-ef6fc2fe7559"
+Template: "664e5035-eb8c-4ba1-9731-a098fcc9127a"
+Path: /sitecore/system/Settings/Rules/Insert Options/Rules/Images Logo Folder Rule
+SharedFields:
+- ID: "fa307b86-da2a-44bd-887d-e2057cdb4948"
+  Hint: Rule
+  Value: |
+    <ruleset>
+      <rule
+        uid="{93DC1B22-655B-4CBE-90E1-7C2729094227}">
+        <conditions>
+          <condition
+            id="{5DE6D53E-EA62-4D17-8BDD-FEBCD80AC07B}"
+            uid="C8CFAF46462E47E68DEE857C9F91BF4E"
+            templateid="{F7A45276-87F1-4EA5-BF25-E3C7CB7AA993}" />
+        </conditions>
+        <actions>
+          <action
+            id="{918FFCF0-F9E1-4DB6-A191-3EFA5A91C583}"
+            uid="5C81145EEB004CC4BD9FB0E31CEBC656"
+            insertoptionid="{4116CAAA-0C9C-4F83-90A1-6D7F52AD83AA}" />
+        </actions>
+      </rule>
+    </ruleset>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240226T143846Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\cdJph8P5Hr
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\cdJph8P5Hr
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "bf3d7960-0ba9-41ec-aacf-1a02160d2c2a"
+    - ID: "9e0287d9-af90-41ad-8d36-332375e194d6"
+      Hint: Name
+      Value: Gives authors the ability to create a specialized subfolder under the Images Data folder for Logos.
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\cdJph8P5Hr
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240226T170251Z
