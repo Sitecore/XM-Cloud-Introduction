@@ -13,11 +13,14 @@ Languages:
       Value: 20220905T133130Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "459e5873-4539-4e3c-b3ca-7f1c37e44c2b"
+      Value: "b81983d0-6f33-4f7e-93eb-32cdff2668aa"
+    - ID: "a8e81d10-91db-4d09-a5cc-160d049c0c2e"
+      Hint: CountryTableHeader
+      Value: Country/Territory
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\tamas.varga@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220910T171857Z
+      Value: 20221027T134847Z

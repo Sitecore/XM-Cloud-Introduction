@@ -3,7 +3,6 @@ ID: "ec78f8c9-2b9a-436d-8148-c31ae8c11cff"
 Parent: "f85d6dc6-5fb6-49c7-8e63-f5c4a0c3ce46"
 Template: "ac9da469-725c-469d-929a-f5075af7b815"
 Path: /sitecore/content/Sugcon/SugconIndiaSxa
-BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "1230d2cb-4948-4d43-8a3b-b39978f6f1b3"
   Hint: Modules
@@ -23,6 +22,9 @@ SharedFields:
     {385F31BE-FF0C-4D84-A627-9ECD21295AFD}
     {F0EA389E-F78D-440B-9429-F04FE735344A}
     {AC1A27CA-6BF3-4D23-915E-668326D52CF1}
+- ID: "2b2fe9fd-78a6-40eb-b9f9-28409d8d3700"
+  Hint: SitemapMediaItems
+  Value: "{AE2F2EE4-AD94-4CE8-B821-856B7B7EC20D}"
 - ID: "33d9005e-1f71-415f-b107-53b965c3b037"
   Hint: SiteMediaLibrary
   Value: "{C2261602-577B-4805-A857-C4671184D05A}"
@@ -47,11 +49,11 @@ Languages:
         sitecore\1ISa5gYrpM
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "618ffa1d-4d4a-415b-9def-6d13601d389c"
+      Value: "6554fdde-8ca1-480e-9b30-865d58bfa693"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\1ISa5gYrpM
+        sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230518T045120Z
+      Value: 20240229T133118Z

@@ -3,7 +3,3 @@ ID: "5280f5d0-5552-4113-b951-8c5213bcaad3"
 Parent: "8e84def2-fad3-401b-844f-6efa81d09def"
 Template: "8e84def2-fad3-401b-844f-6efa81d09def"
 Path: /sitecore/templates/Project/Sugcon2024/Basic Components/Rendering Parameters/Event Teaser/__Standard Values
-Languages:
-- Language: en
-  Versions:
-  - Version: 1

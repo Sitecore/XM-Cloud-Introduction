@@ -22,6 +22,9 @@ SharedFields:
     {7574F439-0B48-48BE-BA6B-94B1A3CE01A3}
     {D912C30C-7A98-4A8D-A094-611D9AF9605D}
     {6DE1F4E9-815D-491D-923D-D5038100DBEE}
+- ID: "74484bdf-7c86-463c-b49f-7b73b9afc965"
+  Hint: __Publishing groups
+  Value: "{8E080626-DDC3-4EF4-A1D1-F0BE4A200254}"
 - ID: "7d29b525-8118-45c6-a89b-773a6a576ec7"
   Hint: SharedSites
   Value: "{AB6C671B-7948-40A6-B1F3-6852BFAF2D44}"
@@ -58,11 +61,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "e2db1e9f-619b-4b7c-93c3-fcc188a09dcf"
+      Value: "ea8f3729-6ba2-4de6-a405-ebc08ec7722d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240105T121618Z
+      Value: 20240207T115647Z

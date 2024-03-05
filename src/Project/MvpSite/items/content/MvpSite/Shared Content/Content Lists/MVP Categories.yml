@@ -8,6 +8,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20200629T111535Z
@@ -15,22 +18,21 @@ Languages:
       Hint: Selected Items
       Value: |
         {6770CEE3-D0A6-4F68-94EC-9C8D0B23F8AD}
-        {201315D2-844B-4004-8100-A7244EE24137}
         {17302488-06E8-4B59-8165-FFECC726C258}
         {FCD0EB59-694C-46D8-83ED-81C814015EAE}
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "bc7d23f9-bf7a-45c1-99e8-92402a1609b9"
+      Value: "4e3ac67a-2af6-4954-bbf4-4a3245c76265"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\xmc-e2e-admin@sitecore.com
+        sitecore\tamas.varga@sitecore.com
     - ID: "d40ebb0f-36ff-4035-85f0-412555f4e599"
       Hint: ContentListType
       Value: "{E58A021E-74D2-471E-9EBA-B09616350605}"
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220524T013437Z
+      Value: 20240214T142000Z
     - ID: "e18a5161-33b5-4652-af07-a19404c2d2ab"
       Hint: ContentListTitle
       Value: 

@@ -19,9 +19,10 @@ SharedFields:
     {BEBF4026-24A3-4EA6-986A-518B76DBD71A}
     {385F31BE-FF0C-4D84-A627-9ECD21295AFD}
     {F0EA389E-F78D-440B-9429-F04FE735344A}
+    {D7EEAF4D-2B58-4029-B141-844221565EF0}
 - ID: "2b2fe9fd-78a6-40eb-b9f9-28409d8d3700"
   Hint: SitemapMediaItems
-  Value: "{0299D511-E5AD-43CD-9C89-C04EF74C89A3}"
+  Value: "{702C966E-B321-4FD8-8158-A9917E7B9526}"
 - ID: "2f325664-bba1-4eac-8d8f-c365d2f40245"
   Hint: RoleDomain
   Value: sugcon
@@ -53,11 +54,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "84e05af1-59e9-4d42-a7cf-2c8e6c850102"
+      Value: "19434fc9-e890-45e2-8d32-53cefcae25b8"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\1MFZdpR12gJMNJ4h7RpQuvn0j2Bk2cFE
+        sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230414T122424Z
+      Value: 20240229T133118Z

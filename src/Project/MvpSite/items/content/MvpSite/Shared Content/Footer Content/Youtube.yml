@@ -20,15 +20,15 @@ Languages:
       Value: youtube
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f1b18e14-9a14-4e50-abc9-4e7b90a5f0a0"
+      Value: "a58a0e3b-2a93-4346-9f25-cce47b6c5291"
     - ID: "aff6fd57-80bd-4b53-adb9-164b922d5763"
       Hint: Link
       Value: |
-        <link text="Go to MasterSitecore Youtube Channel" linktype="external" url="https://www.youtube.com/user/mastersitecore" anchor="" title="Go to MasterSitecore Youtube Channel" target="_blank" />
+        <link text="Go to MasterSitecore Youtube Channel" linktype="external" url="https://youtube.com/discoversitecore" anchor="" title="Go to MasterSitecore Youtube Channel" target="_blank" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\tamas.varga@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220303T133807Z
+      Value: 20230115T152605Z

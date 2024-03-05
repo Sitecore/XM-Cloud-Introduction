@@ -3,7 +3,6 @@ ID: "46b8a855-1f45-4206-9f56-80df85a52610"
 Parent: "f85d6dc6-5fb6-49c7-8e63-f5c4a0c3ce46"
 Template: "ac9da469-725c-469d-929a-f5075af7b815"
 Path: /sitecore/content/Sugcon/SugconNaSxa
-BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "1230d2cb-4948-4d43-8a3b-b39978f6f1b3"
   Hint: Modules
@@ -26,10 +25,14 @@ SharedFields:
     {AC1A27CA-6BF3-4D23-915E-668326D52CF1}
 - ID: "2b2fe9fd-78a6-40eb-b9f9-28409d8d3700"
   Hint: SitemapMediaItems
-  Value: "{16478326-0D21-4E11-A05F-9CD83095C60F}"
+  Value: "{6A04D9E6-8489-4865-9FF2-79450837C5F7}"
 - ID: "33d9005e-1f71-415f-b107-53b965c3b037"
   Hint: SiteMediaLibrary
   Value: "{74205FE8-4946-4CC1-895B-46EC697EC0A0}"
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    au|sitecore\Y5zw1Fr1Ie|pd|+item:delete|+item:admin|+item:write|+item:read|+item:rename|+item:create|pe|+item:delete|+item:admin|+item:write|+item:read|+item:rename|+item:create|au|sitecore\5fDjzKe0uY|pd|+item:delete|+item:admin|+item:write|+item:read|+item:rename|+item:create|pe|+item:delete|+item:admin|+item:write|+item:read|+item:rename|+item:create|
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{A0EECF65-09AD-4A10-AE46-7DF70106CFE6}"
@@ -51,11 +54,11 @@ Languages:
         sitecore\crVWEAtR8y
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ee0b24ec-22e4-478e-8c30-b89ade6777bd"
+      Value: "2ca9fe4f-0dda-4825-b738-eff525386833"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\crVWEAtR8y
+        sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230713T013624Z
+      Value: 20240229T133118Z

@@ -24,10 +24,13 @@ SharedFields:
     {AC1A27CA-6BF3-4D23-915E-668326D52CF1}
 - ID: "2b2fe9fd-78a6-40eb-b9f9-28409d8d3700"
   Hint: SitemapMediaItems
-  Value: "{8F7D9A47-6F60-46A7-963C-DF455CBC3469}"
+  Value: "{48DB8DC0-83F4-4CEF-B937-7B3A8AC6E229}"
 - ID: "33d9005e-1f71-415f-b107-53b965c3b037"
   Hint: SiteMediaLibrary
   Value: "{28A372D7-CFE7-45A2-B242-7DA75CCF7772}"
+- ID: "74484bdf-7c86-463c-b49f-7b73b9afc965"
+  Hint: __Publishing groups
+  Value: "{8E080626-DDC3-4EF4-A1D1-F0BE4A200254}"
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{A0EECF65-09AD-4A10-AE46-7DF70106CFE6}"
@@ -49,11 +52,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8b1a7c46-69e7-4838-a277-fd73032b2505"
+      Value: "8162c59a-8537-4721-886b-a54e4313f82e"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\0neeGqg3TZ
+        sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240105T154438Z
+      Value: 20240229T125646Z

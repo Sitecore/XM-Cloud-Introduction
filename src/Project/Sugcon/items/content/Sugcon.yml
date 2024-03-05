@@ -3,7 +3,6 @@ ID: "f85d6dc6-5fb6-49c7-8e63-f5c4a0c3ce46"
 Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
 Template: "10a884e7-4f1c-4179-81ee-7600d6f3e85d"
 Path: /sitecore/content/Sugcon
-BranchID: "2d3805b9-3089-44f3-b952-d45c44add7f8"
 SharedFields:
 - ID: "102b58da-2a86-4953-b3cd-c9f91256b657"
   Hint: PlaceholderSettingsFolder
@@ -21,6 +20,9 @@ SharedFields:
     {6DE1F4E9-815D-491D-923D-D5038100DBEE}
     {02CD7086-1F87-41EC-B40F-B92C1226895B}
     {D315A501-6503-4545-A5D8-B9FECBA1097D}
+- ID: "2f325664-bba1-4eac-8d8f-c365d2f40245"
+  Hint: RoleDomain
+  Value: sugcon
 - ID: "7d29b525-8118-45c6-a89b-773a6a576ec7"
   Hint: SharedSites
   Value: "{974649FE-65AC-419B-986A-8832B1406A78}"
@@ -33,6 +35,10 @@ SharedFields:
 - ID: "9c596379-f8d4-45d1-a064-cdf1ede2e7c7"
   Hint: Templates
   Value: "{CBB0CD20-5E73-4759-9ABE-40AFA8CEDB84}"
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    ar|sugcon\Tenant Admin|pd|+item:delete|+item:admin|+item:write|+item:read|+item:rename|+item:create|pe|+item:delete|+item:admin|+item:write|+item:read|+item:rename|+item:create|au|sitecore\w3HS2rbHw2|pd|+item:write|+item:read|+item:rename|+item:create|pe|+item:write|+item:read|+item:rename|+item:create|au|sitecore\5fDjzKe0uY|pd|+item:write|+item:read|+item:rename|+item:create|pe|+item:write|+item:read|+item:rename|+item:create|
 - ID: "e90a4413-c111-4951-9b6a-00c4ce7fb289"
   Hint: MediaLibrary
   Value: "{F9B079A6-B3BA-481F-AD66-4BB87328E72D}"
@@ -57,11 +63,11 @@ Languages:
         sitecore\xmc-e2e-admin@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5bee6649-f634-416d-b87f-1525e7f2aae0"
+      Value: "3d9b4b63-7ca6-450d-a919-0f5d7c837150"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\1ISa5gYrpM
+        sitecore\Rob Earlam
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230501T023806Z
+      Value: 20230811T043516Z
