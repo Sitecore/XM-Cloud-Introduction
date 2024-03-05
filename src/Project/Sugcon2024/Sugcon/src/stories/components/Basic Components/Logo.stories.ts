@@ -20,7 +20,7 @@ export const Logo: Story = {
     fields: {
       Image: {
         value: {
-          src: 'https://picsum.photos/400/200',
+          src: 'https://img.logoipsum.com/300.svg',
           alt: 'Logo',
           width: '200',
           height: '50',
@@ -28,12 +28,12 @@ export const Logo: Story = {
       },
       TargetUrl: {
         value: {
-          href: 'https://www.sitecore.com',
+          href: 'https://logoipsum.com/',
           anchor: 'Home',
         },
       },
       ImageCaption: {
-        value: 'SUGCON 2024 Logo',
+        value: 'A circular logo with red, yellow and blue stripes',
       }
     },
   },
