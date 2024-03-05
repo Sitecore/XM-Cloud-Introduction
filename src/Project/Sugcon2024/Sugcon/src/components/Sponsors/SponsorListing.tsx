@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   ComponentParams,
-  ComponentRendering,
   ImageField,
   LinkField,
   TextField,
@@ -23,7 +22,6 @@ import {
   Alert,
   AlertIcon,
   Box,
-  Button,
   useDisclosure,
   Modal,
   ModalOverlay,
@@ -31,12 +29,12 @@ import {
   ModalCloseButton,
   ModalBody,
   HStack,
+  Center,
 } from '@chakra-ui/react';
 
-interface SponsorListingProps {
-  rendering: ComponentRendering & { params: ComponentParams };
+export interface SponsorListingProps {
   params: ComponentParams;
-  fields: Fields;
+  fields?: Fields | undefined;
 }
 
 interface Fields {
@@ -57,16 +55,31 @@ type Sponsor = {
   };
 };
 
+export const ErrorMessage = (): JSX.Element => (
+  <Alert status="warning">
+    <AlertIcon />
+    No variant or datasource selected for SponsorListing component
+  </Alert>
+);
+
+/**
+ * Default component for the SponsorListing component.
+ * The inner content of the wrapper depends on the variant.
+ * @param {SponsorListingWrapperProps} props - Props for the SponsorListingWrapper component.
+ * @returns {JSX.Element} The rendered SponsorListingWrapper component.
+ */
 export const Default = (props: SponsorListingProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
 
+  if (props.fields) {
+    return FullDetails(props);
+  }
+
+  // Fallback if no variant or datasource is selected
   return (
     <div className={`component ${props.params.styles}`} id={id ? id : undefined}>
       <div className="component-content">
-        <Alert status="warning">
-          <AlertIcon />
-          No variant selected for SponsorListing component
-        </Alert>
+        <ErrorMessage />
       </div>
     </div>
   );
@@ -80,36 +93,39 @@ export const Default = (props: SponsorListingProps): JSX.Element => {
 const SponsorListingWrapper = (props: SponsorListingWrapperProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
 
-  return (
-    <div className={`component ${props.params.styles}`} id={id ? id : undefined}>
-      <div className="component-content">
-        <Box w={{ base: '100vw', md: '80vw' }} my="20" mx={{ base: '20px', md: 'auto' }}>
-          <Card variant={'unstyled'}>
-            <CardHeader>
-              {/* Rendering Title if it exists */}
-              {props.fields.Title && (
-                <Heading as={'h1'} size={'xl'}>
-                  {/* Rendering Title with JssText component */}
-                  <JssText field={props.fields.Title} />
-                </Heading>
-              )}
-            </CardHeader>
-            <CardBody as={Flex}>
-              {/* Rendering children components */}
-              <Stack
-                direction={{ base: 'column', md: 'row' }}
-                gap={32}
-                justifyContent={'space-between'}
-                w={'full'}
-              >
-                {props.children}
-              </Stack>
-            </CardBody>
-          </Card>
-        </Box>
+  if (props.fields) {
+    return (
+      <div className={`component ${props.params.styles}`} id={id ? id : undefined}>
+        <div className="component-content">
+          <Box w={{ base: '100vw', md: '80vw' }} my="20" mx={{ base: '20px', md: 'auto' }}>
+            <Card variant={'unstyled'}>
+              <CardHeader my={8}>
+                {/* Rendering Title if it exists */}
+                {props.fields.Title && (
+                  <Heading as={'h1'} size={'xl'}>
+                    {/* Rendering Title with JssText component */}
+                    <JssText field={props.fields.Title} />
+                  </Heading>
+                )}
+              </CardHeader>
+              <CardBody as={Flex}>
+                {/* Rendering children components */}
+                <Stack
+                  direction={{ base: 'column', md: 'row' }}
+                  gap={32}
+                  w={'full'}
+                  verticalAlign={'middle'}
+                >
+                  {props.children}
+                </Stack>
+              </CardBody>
+            </Card>
+          </Box>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+  return <ErrorMessage />;
 };
 
 /**
@@ -131,8 +147,17 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
         {props.fields.Sponsors.map((sponsor, index) => (
           <Stack gap={8} key={index}>
             {/* Render sponsor logo */}
-            <Image as={JssImage} field={sponsor.fields.SponsorLogo} />
 
+            <Box height={170} w={'full'}>
+              <Center>
+                <Image
+                  as={JssImage}
+                  field={sponsor.fields.SponsorLogo}
+                  src={sponsor.fields.SponsorLogo.value?.src}
+                  height={150}
+                />
+              </Center>
+            </Box>
             {/* Render sponsor name */}
             <Heading as={'h2'} size={'lg'}>
               <JssText field={sponsor.fields.SponsorName} />
@@ -142,9 +167,7 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
             <JssRichText field={sponsor.fields.SponsorBio} />
 
             {/* Render sponsor URL as a link */}
-            <ChakraLink as={JssLink} field={sponsor.fields.SponsorURL}>
-              Visit sponsor site
-            </ChakraLink>
+            <ChakraLink as={JssLink} field={sponsor.fields.SponsorURL} />
           </Stack>
         ))}
       </SponsorListingWrapper>
@@ -171,10 +194,11 @@ export const LogoOnly = (props: SponsorListingProps): JSX.Element => {
         {props.fields.Sponsors.map((sponsor, index) => (
           <React.Fragment key={index}>
             {/* Render sponsor logo as a button */}
-            <Button onClick={onOpen} variant="unstyled">
-              <JssImage field={sponsor.fields.SponsorLogo} />
-            </Button>
-
+            <JssImage
+              field={sponsor.fields.SponsorLogo}
+              onClick={onOpen}
+              style={{ cursor: 'pointer' }}
+            />
             {/* Render modal for the sponsor */}
             {RenderModal(isOpen, onClose, sponsor)}
           </React.Fragment>
@@ -203,8 +227,8 @@ function RenderModal(isOpen: boolean, onClose: () => void, sponsor: Sponsor) {
         <ModalCloseButton size="lg" />
         <ModalBody p="8">
           <HStack>
-            <JssImage field={sponsor.fields.SponsorLogo} width="1024" />
-            <Stack gap={8}>
+            <JssImage field={sponsor.fields.SponsorLogo} width="800" />
+            <Stack gap={8} ml={16}>
               <Heading as={'h2'} size={'lg'}>
                 <JssText field={sponsor.fields.SponsorName} />
               </Heading>
