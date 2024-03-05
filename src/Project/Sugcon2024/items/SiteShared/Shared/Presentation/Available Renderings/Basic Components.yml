@@ -6,7 +6,9 @@ Path: /sitecore/content/Sugcon2024/Shared/Presentation/Available Renderings/Basi
 SharedFields:
 - ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
   Hint: Renderings
-  Value: "{4718D9E1-E2BC-4FDD-8305-4CBA3DF7466B}"
+  Value: |
+    {4718D9E1-E2BC-4FDD-8305-4CBA3DF7466B}
+    {B2ABBD0A-B9C5-4DA2-A0F4-40C24E2EBE39}
 Languages:
 - Language: en
   Versions:
@@ -25,11 +27,11 @@ Languages:
         sitecore\UzWooIJE3y
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "180c7779-0fe4-4e3a-8052-b6254cd24bcb"
+      Value: "431b6964-9130-4fdf-9bb9-28d781bfcce3"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\UzWooIJE3y
+        sitecore\x3rLvWVVyq
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240220T125912Z
+      Value: 20240229T094530Z

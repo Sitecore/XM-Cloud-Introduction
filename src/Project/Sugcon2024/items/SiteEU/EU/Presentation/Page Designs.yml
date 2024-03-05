@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "b8e4a393-a450-432d-93d5-42e8734c9d2d"
 Parent: "834c44aa-cd4f-4784-ace1-5bd8e434cf6b"
 Template: "81b2e2b0-3fd9-439a-b994-b14db5c264bb"
@@ -29,11 +29,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6e383da8-b2c7-45dd-9c66-74ca30347fd3"
+      Value: "cf1bf995-a689-4e04-b23d-3d9c30c55a91"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\x3rLvWVVyq
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240207T122433Z
+      Value: 20240228T195731Z

@@ -9,6 +9,11 @@
         "allowedPushOperations": "createUpdateAndDelete"
       },
       {
+        "name": "Branches",
+        "path": "/sitecore/templates/Branches/Project/Sugcon2024",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
         "name": "Modules",
         "path": "/sitecore/system/Settings/Project/Sugcon2024",
         "allowedPushOperations": "createAndUpdate"
@@ -146,6 +151,22 @@
         "path": "/sitecore/System/Settings/Services/API Keys/sugcon2024",
         "allowedPushOperations": "createUpdateAndDelete",
         "scope": "singleItem"
+      },
+      {
+        "name": "InsertRules",
+        "path": "/sitecore/system/Settings/Rules/Insert Options/Rules",
+        "rules": [
+          {
+            "path": "/Images Logo Folder Rule",
+            "scope": "singleItem",
+            "allowedPushOperations": "createUpdateAndDelete"
+          },
+          {
+            "path": "*",
+            "scope": "ignored"
+          }
+        ]
+
       }
     ]
   }
