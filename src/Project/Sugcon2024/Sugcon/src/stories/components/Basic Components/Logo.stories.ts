@@ -12,7 +12,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 export const Logo: Story = {
-  name: 'Logo ',
+  name: 'Logo',
   args: {
     params: {
       styles: '',
@@ -20,10 +20,10 @@ export const Logo: Story = {
     fields: {
       Image: {
         value: {
-          src: 'https://picsum.photos/1200/800',
+          src: 'https://picsum.photos/400/200',
           alt: 'Logo',
-          width: '1200',
-          height: '800',
+          width: '200',
+          height: '50',
         },
       },
       TargetUrl: {
