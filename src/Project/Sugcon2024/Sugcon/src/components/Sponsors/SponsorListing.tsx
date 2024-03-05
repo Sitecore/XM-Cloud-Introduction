@@ -14,6 +14,7 @@ import {
 import {
   Flex,
   Heading,
+  Image,
   Stack,
   Link as ChakraLink,
   Card,
@@ -87,7 +88,7 @@ const SponsorListingWrapper = (props: SponsorListingWrapperProps): JSX.Element =
             <CardHeader>
               {/* Rendering Title if it exists */}
               {props.fields.Title && (
-                <Heading as={'h1'} size={'xl'} mb={16}>
+                <Heading as={'h1'} size={'xl'}>
                   {/* Rendering Title with JssText component */}
                   <JssText field={props.fields.Title} />
                 </Heading>
@@ -95,7 +96,12 @@ const SponsorListingWrapper = (props: SponsorListingWrapperProps): JSX.Element =
             </CardHeader>
             <CardBody as={Flex}>
               {/* Rendering children components */}
-              <Stack direction={{ base: 'column', md: 'row' }} gap={32} w={'full'}>
+              <Stack
+                direction={{ base: 'column', md: 'row' }}
+                gap={32}
+                justifyContent={'space-between'}
+                w={'full'}
+              >
                 {props.children}
               </Stack>
             </CardBody>
@@ -125,9 +131,8 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
         {props.fields.Sponsors.map((sponsor, index) => (
           <Stack gap={8} key={index}>
             {/* Render sponsor logo */}
-            <Box maxH={400}>
-              <JssImage field={sponsor.fields.SponsorLogo} />
-            </Box>
+            <Image as={JssImage} field={sponsor.fields.SponsorLogo} />
+
             {/* Render sponsor name */}
             <Heading as={'h2'} size={'lg'}>
               <JssText field={sponsor.fields.SponsorName} />
@@ -166,13 +171,7 @@ export const LogoOnly = (props: SponsorListingProps): JSX.Element => {
         {props.fields.Sponsors.map((sponsor, index) => (
           <React.Fragment key={index}>
             {/* Render sponsor logo as a button */}
-            <Button
-              onClick={onOpen}
-              variant="unstyled"
-              maxW={'sm'}
-              maxH={'90'}
-              title={`More information about ${sponsor.fields.SponsorName.value}`}
-            >
+            <Button onClick={onOpen} variant="unstyled">
               <JssImage field={sponsor.fields.SponsorLogo} />
             </Button>
 
@@ -205,12 +204,14 @@ function RenderModal(isOpen: boolean, onClose: () => void, sponsor: Sponsor) {
         <ModalBody p="8">
           <HStack>
             <JssImage field={sponsor.fields.SponsorLogo} width="1024" />
-            <Stack gap={8} p={16}>
+            <Stack gap={8}>
               <Heading as={'h2'} size={'lg'}>
                 <JssText field={sponsor.fields.SponsorName} />
               </Heading>
               <JssRichText field={sponsor.fields.SponsorBio} />
-              <ChakraLink as={JssLink} field={sponsor.fields.SponsorURL} />
+              <ChakraLink as={JssLink} field={sponsor.fields.SponsorURL}>
+                Visit sponsor site
+              </ChakraLink>
             </Stack>
           </HStack>
         </ModalBody>
