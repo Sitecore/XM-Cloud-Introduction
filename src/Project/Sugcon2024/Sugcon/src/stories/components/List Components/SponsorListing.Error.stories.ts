@@ -5,7 +5,7 @@ const meta = {
   title: 'Components/SponsorListing',
   component: SponsorListing,
   parameters: {
-    layout: 'centered',
+    layout: 'padded',
   },
   tags: ['autodocs'],
   argTypes: {},
@@ -14,8 +14,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const SponsorListFullDetails: Story = {
-  name: 'Error',
+export const Error: Story = {
+  name: 'No variant or datasource',
   args: {
     params: {
       styles: '',

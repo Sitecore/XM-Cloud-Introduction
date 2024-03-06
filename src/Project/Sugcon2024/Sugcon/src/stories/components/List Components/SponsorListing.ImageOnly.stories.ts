@@ -1,14 +1,15 @@
 import { Meta, StoryObj } from '@storybook/react';
+import { Story } from '@storybook/blocks';
 import { LogoOnly } from 'src/components/Sponsors/SponsorListing';
-import { Default as DefaultSponsorListing } from '../List Components/SponsorListing.stories';
+import { Default as DefaultSponsorListing } from './SponsorListing.Default.stories';
 
 const meta = {
   title: 'Components/SponsorListing',
+  
   component: LogoOnly,
   parameters: {
-    layout: 'centered',
+    layout: 'padded',
   },
-  tags: ['autodocs'],
   argTypes: {},
 } satisfies Meta<typeof LogoOnly>;
 
