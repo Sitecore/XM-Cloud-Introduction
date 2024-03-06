@@ -5,7 +5,7 @@ const meta = {
   title: 'Components/SponsorListing',
   component: SponsorListing,
   parameters: {
-    layout: 'centered',
+    layout: 'padded',
   },
   tags: ['autodocs'],
   argTypes: {},
@@ -42,7 +42,7 @@ export const Default: Story = {
             SponsorURL: {
               value: {
                 href: 'https://www.sitecore.com',
-                anchor: 'Learn more',
+                text: 'Visit Sponsor Site',
               },
             },
           },
@@ -64,7 +64,7 @@ export const Default: Story = {
             SponsorURL: {
               value: {
                 href: 'https://www.microsoft.com',
-                anchor: 'Learn more',
+                text: 'Visit Sponsor Site',
               },
             },
           },
@@ -77,6 +77,7 @@ export const Default: Story = {
             SponsorURL: {
               value: {
                 href: 'https://www.salesforce.com',
+                text: 'Visit Sponsor Site',
               },
             },
             SponsorBio: {
