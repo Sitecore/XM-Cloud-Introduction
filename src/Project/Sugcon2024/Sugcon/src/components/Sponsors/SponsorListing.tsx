@@ -184,7 +184,7 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
  * @param {SponsorListingProps} props - Props object containing data and configurations for the component.
  * @returns {JSX.Element} - Returns JSX element representing the LogoOnly component.
  */
-export const LogoOnly = (props: SponsorListingProps): JSX.Element => {
+export const LogoWithPopup = (props: SponsorListingProps): JSX.Element => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   // If props contain fields data, render sponsor logos
@@ -201,6 +201,33 @@ export const LogoOnly = (props: SponsorListingProps): JSX.Element => {
             />
             {/* Render modal for the sponsor */}
             {RenderModal(isOpen, onClose, sponsor)}
+          </React.Fragment>
+        ))}
+      </SponsorListingWrapper>
+    );
+  }
+
+  // If props do not contain fields data, render default component
+  return <Default {...props} />;
+};
+
+/**
+ * LogoOnly Variant
+ * Rendering variant that displays sponsor logos only, and optionally provides a modal for each logo.
+ * @param {SponsorListingProps} props - Props object containing data and configurations for the component.
+ * @returns {JSX.Element} - Returns JSX element representing the LogoOnly component.
+ */
+export const LogoOnly = (props: SponsorListingProps): JSX.Element => {
+  // If props contain fields data, render sponsor logos
+  if (props.fields) {
+    return (
+      <SponsorListingWrapper {...props}>
+        {props.fields.Sponsors.map((sponsor, index) => (
+          <React.Fragment key={index}>
+            {/* Render sponsor logo as a button */}
+            <JssImage
+              field={sponsor.fields.SponsorLogo}
+            />
           </React.Fragment>
         ))}
       </SponsorListingWrapper>
