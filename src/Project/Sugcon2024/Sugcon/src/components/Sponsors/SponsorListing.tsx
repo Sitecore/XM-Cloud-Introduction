@@ -148,13 +148,13 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
           <Stack gap={8} key={index}>
             {/* Render sponsor logo */}
 
-            <Box height={170} w={'full'}>
+            <Box height={'100%'} maxHeight={170} w={'full'} verticalAlign={'bottom'}>
               <Center>
                 <Image
                   as={JssImage}
                   field={sponsor.fields.SponsorLogo}
                   src={sponsor.fields.SponsorLogo.value?.src}
-                  height={150}
+                  maxHeight={150}
                 />
               </Center>
             </Box>
@@ -197,7 +197,8 @@ export const LogoWithPopup = (props: SponsorListingProps): JSX.Element => {
             <JssImage
               field={sponsor.fields.SponsorLogo}
               onClick={onOpen}
-              style={{ cursor: 'pointer' }}
+              as={Image}
+              maxHeight={70}
             />
             {/* Render modal for the sponsor */}
             {RenderModal(isOpen, onClose, sponsor)}
@@ -227,6 +228,9 @@ export const LogoOnly = (props: SponsorListingProps): JSX.Element => {
             {/* Render sponsor logo as a button */}
             <JssImage
               field={sponsor.fields.SponsorLogo}
+              as={Image}
+              maxHeight={70}
+              width={'auto'}
             />
           </React.Fragment>
         ))}
