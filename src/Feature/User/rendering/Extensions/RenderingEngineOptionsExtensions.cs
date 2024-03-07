@@ -5,7 +5,7 @@ namespace Mvp.Feature.User.Extensions
 {
     public static class RenderingEngineOptionsExtensions
     {
-        public static RenderingEngineOptions AddFoundationUser(this RenderingEngineOptions options)
+        public static RenderingEngineOptions AddFeatureUser(this RenderingEngineOptions options)
         {
             options.AddPartialView("~/Views/Shared/Components/SignIn.cshtml");
             return options;
