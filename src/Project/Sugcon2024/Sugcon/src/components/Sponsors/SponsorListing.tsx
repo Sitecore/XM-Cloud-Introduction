@@ -108,13 +108,13 @@ const SponsorListingWrapper = (props: SponsorListingWrapperProps): JSX.Element =
                   </Heading>
                 )}
               </CardHeader>
-              <CardBody as={Flex}>
+              <CardBody >
                 {/* Rendering children components */}
                 <Stack
                   direction={{ base: 'column', md: 'row' }}
                   gap={32}
                   w={'full'}
-                  verticalAlign={'middle'}
+                  alignItems={'center'}
                 >
                   {props.children}
                 </Stack>
@@ -154,7 +154,7 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
                   as={JssImage}
                   field={sponsor.fields.SponsorLogo}
                   src={sponsor.fields.SponsorLogo.value?.src}
-                  height={150}
+                  maxHeight={150}
                 />
               </Center>
             </Box>
@@ -197,7 +197,7 @@ export const LogoWithPopup = (props: SponsorListingProps): JSX.Element => {
             <JssImage
               field={sponsor.fields.SponsorLogo}
               onClick={onOpen}
-              style={{ cursor: 'pointer' }}
+              style={{ width: 'auto', height: '100%', cursor: 'pointer' }}
             />
             {/* Render modal for the sponsor */}
             {RenderModal(isOpen, onClose, sponsor)}
@@ -227,6 +227,7 @@ export const LogoOnly = (props: SponsorListingProps): JSX.Element => {
             {/* Render sponsor logo as a button */}
             <JssImage
               field={sponsor.fields.SponsorLogo}
+              style={{ width: 'auto', height: '100%' }}
             />
           </React.Fragment>
         ))}
