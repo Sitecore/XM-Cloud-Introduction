@@ -16,7 +16,15 @@ import {
   ModalFooter,
   useDisclosure,
 } from '@chakra-ui/react';
-import { Field, ImageField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  ImageField,
+  Image as JssImage,
+  LinkField,
+  Link as JssLink,
+  TextField,
+  Text as JssText,
+} from '@sitecore-jss/sitecore-jss-nextjs';
+import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 
 // Define the type of props that Hero will accept
 export interface PersonFields {
@@ -24,16 +32,16 @@ export interface PersonFields {
   Image: ImageField;
 
   /** Person's full name */
-  Name: Field<string>;
+  Name: TextField;
 
   /** Person's job role */
-  JobRole: Field<string>;
+  JobRole: TextField;
 
   /** Person's company */
-  Company: Field<string>;
+  Company: TextField;
 
   /** Person's Biography */
-  Biography: Field<string>;
+  Biography: TextField;
 
   /** Linkedin Link */
   Linkedin: LinkField;
@@ -52,57 +60,65 @@ export const Default = (props: PersonProps): JSX.Element => {
   return (
     <Box mb={30}>
       <Image
+        as={JssImage}
         src={props.fields.Image?.value?.src}
         w={200}
         borderRadius={15}
         mb={10}
         onClick={props.params?.LinkToBio == '1' ? onOpen : undefined}
+        field={props.fields.Image}
       />
 
       {props.params?.LinkToBio == '1' && (
         <Button onClick={onOpen} variant="link">
           <Heading as="h3" size="md" mt={2}>
-            {props.fields.Name?.value}
+            <JssText field={props.fields.Name} />
           </Heading>
         </Button>
       )}
       {!props.params?.LinkToBio && (
         <Heading as="h3" size="md" mt={2}>
-          {props.fields.Name?.value}
+          <JssText field={props.fields.Name} />
         </Heading>
       )}
       <Text fontSize="12px" mb={0}>
-        {props.fields.JobRole?.value}
+        <JssText field={props.fields.JobRole} />
       </Text>
       <Text fontSize="12px" mb={0}>
-        {props.fields.Company?.value}
+        <JssText field={props.fields.Company} />
       </Text>
-      {props.params?.DisplaySocialLinks == '1' && props.fields.Linkedin?.value?.href !== '' && (
+      {(isEditorActive() ||
+        (props.params?.DisplaySocialLinks == '1' && props.fields.Linkedin?.value?.href !== '')) && (
         <Link
-          href={props.fields.Linkedin?.value?.href}
+          as={JssLink}
           isExternal={props.fields.Linkedin?.value?.target == '_blank'}
           fontSize="12px"
           mt={3}
           textDecoration="underline"
           color="#28327D"
-        >
-          Linkedin
-        </Link>
+          field={props.fields.Linkedin}
+        />
       )}
-      {props.params?.DisplaySocialLinks == '1' &&
-        props.fields.Linkedin?.value?.href !== '' &&
-        props.fields.Twitter?.value?.href !== '' && <Box display="inline"> / </Box>}
-      {props.params?.DisplaySocialLinks == '1' && props.fields.Twitter?.value?.href !== '' && (
+      {(isEditorActive() ||
+        (props.params?.DisplaySocialLinks == '1' &&
+          props.fields.Linkedin?.value?.href !== '' &&
+          props.fields.Twitter?.value?.href !== '')) && <Box display="inline"> / </Box>}
+      {(isEditorActive() ||
+        (props.params?.DisplaySocialLinks == '1' && props.fields.Twitter?.value?.href !== '')) && (
         <Link
-          href={props.fields.Twitter?.value?.href}
+          as={JssLink}
           isExternal={props.fields.Twitter?.value?.target == '_blank'}
           fontSize="12px"
           mt={3}
           textDecoration="underline"
           color="#28327D"
-        >
-          Twitter
-        </Link>
+          field={props.fields.Twitter}
+        />
+      )}
+      {isEditorActive() && (
+        <Text fontSize="12px" mb={0}>
+          <JssText field={props.fields.Biography} />
+        </Text>
       )}
       {props.params?.LinkToBio == '1' && (
         <Modal isOpen={isOpen} onClose={onClose} isCentered={true}>

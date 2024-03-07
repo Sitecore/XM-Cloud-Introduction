@@ -1,20 +1,26 @@
 import React from 'react';
 import { Box, Heading, Text, Flex } from '@chakra-ui/react';
-import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  TextField,
+  Text as JssText,
+  RichTextField,
+  RichText as JssRichText,
+} from '@sitecore-jss/sitecore-jss-nextjs';
+import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 
 // Define the type of props that VideoText will accept
 interface Fields {
   /** Title of the VideoText */
-  Headline: Field<string>;
+  Headline: TextField;
 
   /** Youtube Video Id (not the full youtube.com url)*/
-  YoutubeVideoId: Field<string>;
+  YoutubeVideoId: TextField;
 
   /** Text headline of the VideoText */
-  TextHeadline: Field<string>;
+  TextHeadline: TextField;
 
   /** Richtext of the VideoText */
-  Text: Field<string>;
+  Text: RichTextField;
 }
 
 export type VideoTextProps = {
@@ -25,12 +31,11 @@ export type VideoTextProps = {
 export const Default = (props: VideoTextProps): JSX.Element => {
   return (
     <Box w={{ base: '100vw', md: '80vw' }} my="20" mx={{ base: '20px', md: 'auto' }}>
-      {props.fields.Headline?.value !== '' && (
+      {(isEditorActive() || props.fields.Headline?.value !== '') && (
         <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
-          {props.fields.Headline?.value}
+          <JssText field={props.fields.Headline} />
         </Heading>
       )}
-
       <Flex direction={{ base: 'column', md: 'row' }} flexGrow={1} columnGap="20" rowGap="10">
         <Box w={{ base: '100%', md: '50%' }} position="relative">
           <iframe
@@ -47,15 +52,17 @@ export const Default = (props: VideoTextProps): JSX.Element => {
           </Box>
         </Box>
         <Box w={{ base: '100%', md: '50%' }}>
-          {props.fields.TextHeadline?.value !== '' && (
+          {(isEditorActive() || props.fields.TextHeadline?.value !== '') && (
             <Heading as="h3" fontWeight="bold" mb={{ base: '10px', md: '20px' }}>
-              {props.fields.TextHeadline?.value}
+              <JssText field={props.fields.TextHeadline} />
             </Heading>
           )}
-          {props.fields.Text?.value !== '' && (
-            <Text mb={6} fontSize="18px">
-              {props.fields.Text?.value}
-            </Text>
+          <Text as={JssRichText} mb={6} fontSize="18px" field={props.fields.Text} />
+          {isEditorActive() && (
+            <Box>
+              {'Youtube Video Id: '}
+              <JssText field={props.fields.YoutubeVideoId} />
+            </Box>
           )}
         </Box>
       </Flex>

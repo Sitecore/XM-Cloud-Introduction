@@ -2,7 +2,7 @@
 ID: "99f2f5c7-a55f-4bfa-a4c7-5c1379cf2ecb"
 Parent: "3d84742a-d730-4f1c-9dd3-63d04ef397d6"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Project/Sugcon2024/Basic Components/Event Teaser/Content/Events
+Path: /sitecore/templates/Project/Sugcon2024/List Components/Event Teaser/Content/Events
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source

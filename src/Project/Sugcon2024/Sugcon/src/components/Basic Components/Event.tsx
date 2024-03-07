@@ -1,6 +1,15 @@
 import React from 'react';
 import { Box, Heading, Text, Image, Link } from '@chakra-ui/react';
-import { Field, ImageField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  Field,
+  ImageField,
+  Image as JssImage,
+  LinkField,
+  Link as JssLink,
+  TextField,
+  Text as JssText,
+} from '@sitecore-jss/sitecore-jss-nextjs';
+import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 
 // Define the type of props that Event will accept
 export interface Fields {
@@ -8,7 +17,7 @@ export interface Fields {
   Image: ImageField;
 
   /** Name of the event */
-  EventName: Field<string>;
+  EventName: TextField;
 
   /** Date of the event */
   EventDate: Field<string>;
@@ -42,27 +51,44 @@ export const Default = (props: Fields): JSX.Element => {
   return (
     <Box w={{ base: '100%', md: '300px' }} mr={{ base: '0', md: '10' }} mb={75}>
       <Box px={8} py={4} bg="#F2F2F2" borderRadius="lg" position="relative">
-        <Image src={props.Image?.value?.src} maxH={50} />
+        <Image as={JssImage} src={props.Image?.value?.src} maxH={50} field={props.Image} />
         <Heading as="h3" size="lg" mt={2}>
-          {props.EventName?.value}
+          <JssText field={props.EventName} />
         </Heading>
         <Text fontSize="12px" mb={0}>
           {dateString}
         </Text>
+        {isEditorActive() && (
+          <Box>
+            <JssText field={props.EventDate} />
+          </Box>
+        )}
         <Text fontSize="12px" mb={0}>
           {locationString}
         </Text>
-        {props.LinkToSite?.value?.href !== '' && (
+        {isEditorActive() && (
+          <Box>
+            <Box>
+              <JssText field={props.EventCity} />
+            </Box>
+            <Box>
+              <JssText field={props.EventState} />
+            </Box>
+            <Box>
+              <JssText field={props.EventCountry} />
+            </Box>
+          </Box>
+        )}
+        {(isEditorActive() || props.LinkToSite?.value?.href !== '') && (
           <Link
-            href={props.LinkToSite?.value?.href}
+            as={JssLink}
             isExternal={props.LinkToSite?.value?.target == '_blank'}
             fontSize="12px"
             mt={3}
             textDecoration="underline"
             color="#28327D"
-          >
-            {props.LinkToSite?.value?.text}
-          </Link>
+            field={props.LinkToSite}
+          />
         )}
         <Box
           position="absolute"
