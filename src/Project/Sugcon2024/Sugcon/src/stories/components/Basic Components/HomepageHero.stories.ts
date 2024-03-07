@@ -36,7 +36,7 @@ export const Homepage: Story = {
       },
       Image: {
         value: {
-          src: 'https://picsum.photos/1200/800',
+          src: 'https://picsum.photos/1000/566',
         },
       },
     },

@@ -34,10 +34,12 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
   return (
     <Flex
       direction={{ base: 'column', md: 'row' }}
-      alignItems="center"
+      alignItems="stretch"
       bg="#f0f0f0"
       maxHeight={{ base: 'auto', md: '400px' }}
       w="100%"
+      h={{ base: 'auto', md: '100vh' }}
+      overflow="hidden"
     >
       <Flex
         direction="column"
@@ -45,6 +47,7 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
         p={5}
         flexGrow={1}
         minWidth="50%"
+        justifyContent="center"
       >
         <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
           <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
@@ -67,14 +70,13 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
           )}
         </Box>
       </Flex>
-      <Box minWidth={{ base: '100%', md: '50%' }} maxHeight="400px" h="100%" overflow="hidden">
+      <Box flexShrink={0} minWidth={{ base: '100%', md: '50%' }} h="full" overflow="hidden">
         {' '}
         <Image
           src={props.fields.Image?.value?.src}
           //alt={props.fields.Image?.value?.alt}
           width="full"
-          height="100%"
-          maxHeight="400px"
+          height="full"
           objectFit="cover"
         />
       </Box>
