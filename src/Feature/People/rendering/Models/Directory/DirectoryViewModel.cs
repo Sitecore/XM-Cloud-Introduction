@@ -29,9 +29,9 @@ namespace Mvp.Feature.People.Models.Directory
 
         public TextField PagingResultsFormat { get; set; } = new("{0} - {1} of {2}");
 
-        public int FirstResult => 1 + (Page - 1) * PageSize;
+        public int FirstResult => (Page - 1) * PageSize + 1;
 
-        public int LastResult => PageSize * Page;
+        public int LastResult => Page * PageSize > TotalResults ? TotalResults : Page * PageSize;
 
         public int TotalResults { get; set; }
 

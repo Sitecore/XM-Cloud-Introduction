@@ -1,0 +1,97 @@
+﻿@import '../../_colors.scss';
+
+.mvp-fp-directory {
+    h1 {
+        line-height: 55px;
+        position: relative;
+
+        &::after {
+            content: " ";
+            background-image: url(../images/icon-hero.png);
+            position: absolute;
+            width: 76px;
+            height: 53px;
+            top: -9px;
+            left: -93px;
+        }
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 900;
+        letter-spacing: 2.8px;
+        color: $text-gray;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        font-weight: 600;
+        line-height: 1.5;
+        border-bottom: 1px solid $underline;
+        padding-bottom: 15px;
+    }
+
+    input[type=text] {
+        padding: 2em;
+        border-radius: 0;
+        background-color: $background;
+        font-size: 1.1em;
+        border: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+
+    button[type=submit] {
+        background-color: $sitecore-teal;
+        border-radius: 0;
+        border: 0;
+        width: 70px;
+
+        i {
+            font-size: 1.5em;
+        }
+    }
+
+    .mvp-facet {
+        .list-group-item {
+            border: 0;
+        }
+    }
+
+    .card {
+        border-radius: 0;
+
+        .card-body > div {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: $text-gray-light;
+            font-size: 0.8em;
+        }
+
+        .card-img-overlay {
+            padding: 0.5rem;
+        }
+
+        .badge-primary {
+            background-color: $sitecore-teal;
+            border-radius: 0;
+            padding: 0.5rem;
+        }
+    }
+
+    .pagination {
+        border-radius: 0;
+
+        .page-item {
+            .page-link {
+                color: $sitecore-teal;
+            }
+
+            &.active .page-link {
+                background-color: $sitecore-teal;
+                border-color: $sitecore-teal;
+                color: $contrast-text;
+            }
+        }
+    }
+}

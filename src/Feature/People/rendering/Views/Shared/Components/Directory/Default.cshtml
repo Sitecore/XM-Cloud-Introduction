@@ -4,14 +4,14 @@
 <section class="mvp-fp-directory bg-white">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mb-5">
                 <h2 asp-for="TopTitleLabel"></h2>
                 <h1 asp-for="TitleLabel"></h1>
             </div>
         </div>
         <form class="col-12">
             <div class="row">
-                <div class="input-group col-12">
+                <div class="input-group col-12 mb-5">
                     <input asp-for="Query" name="@DirectoryViewModel.QueryQueryStringKey" class="form-control" placeholder="@Model.SearchLabel?.Value" />
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-primary">
@@ -19,47 +19,51 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-12 col-md-3">
                     @foreach (FacetViewModel facet in Model.ViewFacets.OrderBy(f => f.SortOrder))
                     {
                         <partial name="~/Views/Shared/Components/Directory/_Facet.cshtml" model="facet" />
                     }
                 </div>
-                <div class="col-8">
+                <div class="col-sm-12 col-md-9">
                     <div>
                         <span asp-for="PagingResults"></span> @string.Format(Model.PagingResultsFormat.Value, Model.FirstResult, Model.LastResult, Model.TotalResults)
                     </div>
-                    <div class="row row-cols-1 row-cols-md-3">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                         @foreach (DirectoryResultViewModel result in Model.Results)
                         {
                             <partial name="~/Views/Shared/Components/Directory/_Result.cshtml" model="result" />
                         }
                     </div>
-                    <div class="btn-toolbar justify-content-center">
+                    <nav aria-label="Paging">
                         @{
-                            int startPage = Model.Page > 3 ? Model.Page - 2 : Model.Page;
-                            int totalPages = Model.TotalResults / Model.PageSize;
-                            int endPage = totalPages > Model.Page + 2 ? Model.Page + 2 : totalPages;
+                            int startPage = Model.Page >= 3 ? Model.Page - 2 : Model.Page >= 2 ? Model.Page - 1 : Model.Page;
+                            int totalPages = Model.TotalResults / Model.PageSize + 1;
+                            int endPage = startPage + 4 > totalPages ? totalPages : startPage + 4;
                         }
-                        @if (Model.Page > 1)
-                        {
-                            <div class="btn-group">
-                                <a href="?@DirectoryViewModel.PageQueryStringKey=@(Model.Page - 1)" class="btn btn-secondary">&lt;&lt;</a>
-                            </div>
-                        }
-                        <div class="btn-group">
+                        <ul class="pagination justify-content-center">
+                            @if (Model.Page > 1)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="?@DirectoryViewModel.PageQueryStringKey=@(Model.Page - 1)" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            }
                             @for (int i = startPage; i <= endPage; i++)
                             {
-                                <a href="?@DirectoryViewModel.PageQueryStringKey=@i" class="btn btn-secondary">@i</a>
+                                <li class="page-item@(Model.Page == i ? " active" : string.Empty)"><a class="page-link" href="?@DirectoryViewModel.PageQueryStringKey=@i">@i</a></li>
                             }
-                        </div>
-                        @if (totalPages >= endPage && Model.Page < totalPages)
-                        {
-                            <div class="btn-group">
-                                <a href="?@DirectoryViewModel.PageQueryStringKey=@(Model.Page + 1)" class="btn btn-secondary">&gt;&gt;</a>
-                            </div>
-                        }
-                    </div>
+                            @if (totalPages >= endPage && Model.Page < totalPages)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="?@DirectoryViewModel.PageQueryStringKey=@(Model.Page + 1)" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </form>
