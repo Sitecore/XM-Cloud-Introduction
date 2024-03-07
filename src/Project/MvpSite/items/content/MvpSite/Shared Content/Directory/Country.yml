@@ -1,0 +1,33 @@
+﻿---
+ID: "4da960c5-89fd-4532-bb70-23db25e1f34d"
+Parent: "cbf7a100-f126-4379-8175-f325b53d7516"
+Template: "979d80e0-68df-4d8c-b5f6-f5552e59908f"
+Path: /sitecore/content/MvpSite/Shared Content/Directory/Country
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240224T141742Z
+    - ID: "2a85879e-bfde-4aae-8481-d3844c22be37"
+      Hint: Name
+      Value: Country
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a77dd5bf-a721-4f92-a892-193fa4712f91"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240224T141749Z
+    - ID: "df2c9a26-a2d0-4529-9ee8-8ed346614b02"
+      Hint: Identifier
+      Value: country
