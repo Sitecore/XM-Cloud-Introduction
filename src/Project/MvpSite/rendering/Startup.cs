@@ -62,7 +62,7 @@ namespace Mvp.Project.MvpSite
               {
                   //Register your components here
                   options
-                    .AddFoundationUser()
+                    .AddFeatureUser()
                     .AddFeatureNavigation()
                     .AddFeatureBasicContent()
                     .AddFeatureSocial()

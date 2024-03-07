@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using Sitecore.AspNet.RenderingEngine.Binding.Attributes;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
@@ -20,15 +21,17 @@ namespace Mvp.Feature.People.Models.Directory
 
         public TextField SearchLabel { get; set; }
 
-        public List<FacetViewModel> Facets { get; set; } = [];
+        public ContentListField Facets { get; set; } = [];
+
+        public List<FacetViewModel> ViewFacets { get; set; } = [];
 
         public TextField PagingResults { get; set; }
 
         public TextField PagingResultsFormat { get; set; } = new("{0} - {1} of {2}");
 
-        public int FirstResult { get; set; }
+        public int FirstResult => 1 + (Page - 1) * PageSize;
 
-        public int LastResult { get; set; }
+        public int LastResult => PageSize * Page;
 
         public int TotalResults { get; set; }
 
@@ -42,6 +45,6 @@ namespace Mvp.Feature.People.Models.Directory
         [FromQuery(Name = PageQueryStringKey)]
         public int Page { get; set; } = 1;
 
-        public int PageSize { get; set; } = 21;
+        public short PageSize { get; set; } = 21;
     }
 }

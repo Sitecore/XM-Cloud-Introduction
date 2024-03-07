@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    @foreach (FacetViewModel facet in Model.Facets)
+                    @foreach (FacetViewModel facet in Model.ViewFacets.OrderBy(f => f.SortOrder))
                     {
                         <partial name="~/Views/Shared/Components/Directory/_Facet.cshtml" model="facet" />
                     }
