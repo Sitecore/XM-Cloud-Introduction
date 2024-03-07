@@ -5,9 +5,12 @@
 
 @if (Model.FacetOptions.Count > 0)
 {
-    <div>
-        <h3 asp-for="Name"></h3>
-        <ul class="list-group">
+    string id = "fcid_" + Model.Identifier;
+    <div class="mvp-facet mb-4">
+        <a data-toggle="collapse" href="#@id" role="button" aria-expanded="true" aria-controls="@id">
+            <h3 asp-for="Name"></h3>
+        </a>
+        <ul id="@id" class="list-group collapse show">
             @foreach (FacetOption option in Model.FacetOptions)
             {
                 <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -15,7 +18,7 @@
                         <input type="checkbox" class="form-check-input" id="@option.Identifier" name="@(DirectoryViewComponent.FacetQuerystringPrefix + Model.Identifier)" value="@option.Identifier" checked="@(option.IsActive ? "checked" : null)" />
                         <label for="@option.Identifier" class="form-check-label">@option.Display</label>
                     </div>
-                    <span class="badge badge-primary badge-pill">@option.Count</span>
+                    <span class="badge badge-secondary badge-pill">@option.Count</span>
                 </li>
             }
         </ul>
