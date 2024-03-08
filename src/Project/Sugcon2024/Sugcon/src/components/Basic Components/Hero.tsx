@@ -135,6 +135,7 @@ export const HeroJustificationLetter = (props: HeroProps): JSX.Element => {
       direction={{ base: 'column', md: 'row' }}
       justifyContent="center"
       color="white"
+      p={5}
       w="100vw"
       maxH="400px"
       mt={24}
@@ -145,7 +146,7 @@ export const HeroJustificationLetter = (props: HeroProps): JSX.Element => {
       {/* Content box that should take the left half of the screen */}
       <Box
         mb={14}
-        w={{ base: '50vw' }} // Take full width on base, and half viewport width on md and up
+        w={{ base: 'full', md: '50vw' }}
         maxWidth="620px" // Max width is 620px
         zIndex={2}
         mr={10}
@@ -167,6 +168,7 @@ export const HeroJustificationLetter = (props: HeroProps): JSX.Element => {
         )}
       </Box>
       <Box
+        display={{ base: 'none', md: 'block' }}
         w={{ base: '50vw' }} // Take full width on base, and half viewport width on md and up
         maxWidth="620px" // Max width is 620px
       >
@@ -186,6 +188,7 @@ export const HeroJustificationLetter = (props: HeroProps): JSX.Element => {
         backgroundPosition="right bottom"
         backgroundRepeat="no-repeat"
         zIndex={0}
+        display={{ base: 'none', md: 'block' }}
       />
     </Flex>
   );
