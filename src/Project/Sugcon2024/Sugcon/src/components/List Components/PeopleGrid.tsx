@@ -1,12 +1,13 @@
 import React from 'react';
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
-import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
+import { TextField, Text as JssText } from '@sitecore-jss/sitecore-jss-nextjs';
 import { PersonFields, PersonProps, Default as Person } from '../Basic Components/Person';
+import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 
 // Define the type of props that People Grid will accept
 interface Fields {
   /** Headline */
-  Headline: Field<string>;
+  Headline: TextField;
 
   /** Multilist of People */
   People: Array<Person>;
@@ -40,15 +41,17 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
   const cols = props.params && props.params.Columns ? parseInt(props.params.Columns) : 4;
 
   if (props.params && props.params.Alphabetize == '1') {
-    props.fields?.People.sort((a, b) => (a.fields.Name.value > b.fields.Name.value ? 1 : -1));
+    props.fields?.People.sort((a, b) =>
+      a.fields?.Name?.value + '' > b.fields?.Name?.value + '' ? 1 : -1
+    );
   }
 
   return (
     <Box w="100%" mt={20} className={styles}>
       <Box w="80%" pt={10} m="auto">
-        {props.fields?.Headline?.value !== '' && (
+        {(isEditorActive() || props.fields?.Headline?.value !== '') && (
           <Heading as="h2" size="lg">
-            {props.fields?.Headline?.value}
+            <JssText field={props.fields.Headline} />
           </Heading>
         )}
         <SimpleGrid columns={{ base: 1, md: cols }} mt={10}>

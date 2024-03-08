@@ -1,0 +1,29 @@
+﻿---
+ID: "824631a6-fd81-475a-a3fa-56471432aec2"
+Parent: "257a55ed-a2c1-4f5f-b369-23cdf02bde0b"
+Template: "257a55ed-a2c1-4f5f-b369-23cdf02bde0b"
+Path: /sitecore/templates/Project/Sugcon2024/List Components/Event Teaser Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {1A613502-1A07-4D6C-9AD8-350E0E692946}
+    {257A55ED-A2C1-4F5F-B369-23CDF02BDE0B}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240223T133021Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "00842952-855f-499a-8527-973f7c8a1b2f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\UOUBIWQRx7
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240307T171905Z

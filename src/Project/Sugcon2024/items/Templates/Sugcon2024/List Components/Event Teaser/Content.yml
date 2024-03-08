@@ -1,25 +1,12 @@
 ﻿---
-ID: "8e84def2-fad3-401b-844f-6efa81d09def"
-Parent: "386b9c07-16a9-4475-b1c1-6a18cb694635"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Project/Sugcon2024/Basic Components/Rendering Parameters/Event Teaser
+ID: "3d84742a-d730-4f1c-9dd3-63d04ef397d6"
+Parent: "1a613502-1a07-4d6c-9ad8-350e0e692946"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/Sugcon2024/List Components/Event Teaser/Content
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: office/32x32/star.png
-- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
-  Hint: __Base template
-  Value: |
-    {4247AAD4-EBDE-4994-998F-E067A51B1FE4}
-    {5C74E985-E055-43FF-B28C-DB6C6A6450A2}
-    {44A022DB-56D3-419A-B43B-E27E4D8E9C41}
-    {3DB3EB10-F8D0-4CC9-BE26-18CE7B139EC8}
-- ID: "9c6106ea-7a5a-48e2-8cad-f0f693b1e2d4"
-  Hint: __Read Only
-  Value: 0
-- ID: "f7d48a55-2158-4f02-9356-756654404f73"
-  Hint: __Standard values
-  Value: "{5280F5D0-5552-4113-B951-8C5213BCAAD3}"
+  Value: Office/32x32/window_dialog.png
 Languages:
 - Language: "de-DE"
   Fields:
@@ -56,21 +43,21 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20211012T120926Z
+      Value: 20111213T143500
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\JssImport
+        sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "96e0b13b-08e5-4a61-a2f5-6354cddf082c"
+      Value: "07b6fe53-3f0d-4b27-a9d8-10f4031b3596"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\UOUBIWQRx7
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240206T195300Z
+      Value: 20240206T203303Z
 - Language: "ja-JP"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
