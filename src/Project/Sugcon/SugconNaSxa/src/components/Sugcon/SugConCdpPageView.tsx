@@ -35,11 +35,14 @@ const SugConCdpPageView = (): JSX.Element => {
     const engage = await init({
       clientKey: process.env.NEXT_PUBLIC_CDP_CLIENT_KEY || '',
       targetURL: process.env.NEXT_PUBLIC_CDP_TARGET_URL || '',
+      pointOfSale,
       // Replace with the top level cookie domain of the website that is being integrated e.g ".example.com" and not "www.example.com"
       cookieDomain:
         process.env.NODE_ENV === 'development' ? '' : window.location.host.replace(/^www\./, ''),
       // Cookie may be created in personalize middleware (server), but if not we should create it here
       forceServerCookieMode: false,
+      // Enable Personalize Web Experiences
+      webPersonalization: true,
     });
 
     let additionalData = {};
