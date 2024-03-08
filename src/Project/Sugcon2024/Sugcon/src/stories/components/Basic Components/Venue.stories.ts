@@ -34,7 +34,8 @@ export const Default: Story = {
         value: 'Additional Info Title',
       },
       AdditionalInfoText: {
-        value: '<p>Feel free to imagine this luxurious retreat nestled by the turquoise waters, where guests can unwind in hammocks under swaying palm trees</p>',
+        value:
+          '<p>Feel free to imagine this luxurious retreat nestled by the turquoise waters, where guests can unwind in hammocks under swaying palm trees</p>',
       },
       ButtonLink: {
         value: {

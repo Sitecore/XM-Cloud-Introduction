@@ -72,7 +72,7 @@ export const Default = (props: VenueProps): JSX.Element => {
         className="component-content"
       >
         <Flex minWidth={{ base: '100%', md: '50%' }} alignSelf={'center'} px={{ base: '8', md: 0 }}>
-          <Stack width={{ base: '100%', md: '70%', xl: "50%" }} gap={8} alignSelf={'flex-end'}>
+          <Stack width={{ base: '100%', md: '70%', xl: '50%' }} gap={8} alignSelf={'flex-end'}>
             <Heading as={'h2'}>
               <JssText field={props.fields.Headline} />
             </Heading>
@@ -101,7 +101,11 @@ export const Default = (props: VenueProps): JSX.Element => {
 
         {/* Render carousel if there are images */}
         {props.fields.VenueImages != null && (
-          <Box minWidth={{ base: '100%', md: '50%' }} as={SliderWrapper} mt={{ base: '10', md: '0' }} >
+          <Box
+            minWidth={{ base: '100%', md: '50%' }}
+            as={SliderWrapper}
+            mt={{ base: '10', md: '0' }}
+          >
             <Slider {...settings} ref={() => setSlider(slider)}>
               {props.fields.VenueImages?.map((image, index) => (
                 <Image src={image.url} key={index} borderRadius={{ base: 'none', md: '2xl' }} />
