@@ -11,12 +11,12 @@ type ButtonLinkProps = {
 };
 
 export const ButtonLink = (props: ButtonLinkProps): JSX.Element => {
-  const { href, target = '', anchor } = props.field.value;
+  const { href, target = '', text } = props.field.value;
   const { variant = 'primary' } = props;
 
   return (
     <Link href={href} isExternal={target == '_blank'}>
-      <Button variant={variant}>{anchor}</Button>
+      <Button variant={variant}>{text}</Button>
     </Link>
   );
 };
