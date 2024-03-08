@@ -43,7 +43,6 @@ const settings = {
   speed: 500,
   autoplaySpeed: 5000,
   slidesToShow: 1,
-  adaptiveHeight: true,
   slidesToScroll: 1,
   appendDots: (dots: React.ReactNode) => (
     <div style={{ bottom: '10px' }}>
@@ -103,12 +102,21 @@ export const Default = (props: VenueProps): JSX.Element => {
         {props.fields.VenueImages != null && (
           <Box
             minWidth={{ base: '100%', md: '50%' }}
+            position={'relative'}
             as={SliderWrapper}
             mt={{ base: '10', md: '0' }}
           >
             <Slider {...settings} ref={() => setSlider(slider)}>
               {props.fields.VenueImages?.map((image, index) => (
-                <Image src={image.url} key={index} borderRadius={{ base: 'none', md: '2xl' }} />
+                <Image
+                  src={image.url}
+                  key={index}
+                  borderRadius={{ base: 'none', md: '2xl' }}
+                  width="full"
+                  height="100%"
+                  maxHeight="400px"
+                  objectFit="cover"
+                />
               ))}
             </Slider>
           </Box>

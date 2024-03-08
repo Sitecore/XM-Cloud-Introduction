@@ -46,17 +46,17 @@ export const Default: Story = {
       VenueImages: [
         {
           name: 'Mock Item',
-          url: 'https://placehold.co/450x300/000000/FFF/png?text=Image+1',
+          url: 'https://placehold.co/450x400/000000/FFF/png?text=Image+1',
           fields: {},
         },
         {
           name: 'Mock Item',
-          url: 'https://placehold.co/450x300/CC0000/FFF/png?text=Image+2',
+          url: 'https://placehold.co/450x400/CC0000/FFF/png?text=Image+2',
           fields: {},
         },
         {
           name: 'Mock Item',
-          url: 'https://placehold.co/450x300/0000FF/FFF/png?text=Image+3',
+          url: 'https://placehold.co/450x400/0000FF/FFF/png?text=Image+3',
           fields: {},
         },
       ],
