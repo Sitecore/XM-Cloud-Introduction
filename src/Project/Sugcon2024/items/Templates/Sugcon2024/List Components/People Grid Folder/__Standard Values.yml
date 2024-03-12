@@ -1,0 +1,35 @@
+﻿---
+ID: "6ef7a590-fd2c-4fdc-9e77-90b0b5cea42e"
+Parent: "3e6e0f40-9b1a-477e-8096-e949d8200a3f"
+Template: "3e6e0f40-9b1a-477e-8096-e949d8200a3f"
+Path: /sitecore/templates/Project/Sugcon2024/List Components/People Grid Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{908CE315-5C67-40F3-920E-9ACA6C348318}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240312T171527Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7146b9b2-41c2-41e5-b2d7-e59053106bb5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240312T171550Z
