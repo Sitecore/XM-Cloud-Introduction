@@ -1,0 +1,31 @@
+﻿---
+ID: "aca09071-0ed0-4c25-8d2b-ec3e47b82e6d"
+Parent: "0c5c8db1-5dc6-4a54-a232-750f004bfb84"
+Template: "257a55ed-a2c1-4f5f-b369-23cdf02bde0b"
+Path: /sitecore/content/Sugcon2024/Shared/Data/Event Teasers
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240312T172330Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "de0c711d-f191-4b9e-b57a-d51fbdeb3dd0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240312T172330Z

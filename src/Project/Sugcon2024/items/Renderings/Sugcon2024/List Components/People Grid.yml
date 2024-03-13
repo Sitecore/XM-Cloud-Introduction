@@ -27,7 +27,7 @@ SharedFields:
   Value: 
 - ID: "b5b27af1-25ef-405c-87ce-369b3a004016"
   Hint: Datasource Location
-  Value: "query:$site/*[@@name='Data']/*[@@templatename='Event Teaser Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='Event Teaser Folder']"
+  Value: "query:$site/*[@@name='Data']/*[@@templatename='People Grid Folder']|query:$sharedSites/*[@@name='Data']/*[@@templatename='People Grid Folder']"
 - ID: "c39a90ce-0035-41bb-90f6-3c8a6ea87797"
   Hint: AddFieldEditorButton
   Value: 1
@@ -77,14 +77,14 @@ Languages:
         sitecore\JssImport
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "17816824-6405-4f31-843d-a27ae3d8dece"
+      Value: "84490281-c42f-47d0-9805-5d75ae9afa16"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\UOUBIWQRx7
+        sitecore\x3rLvWVVyq
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240307T171024Z
+      Value: 20240312T171847Z
 - Language: "ja-JP"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
