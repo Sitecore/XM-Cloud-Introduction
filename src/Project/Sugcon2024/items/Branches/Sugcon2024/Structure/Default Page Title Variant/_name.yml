@@ -1,8 +1,8 @@
 ﻿---
-ID: "b0832bc7-b134-43f6-b3d4-9cb9194d49b7"
-Parent: "4de8c000-86e8-4dbd-a63a-f73b68896299"
+ID: "75c99d66-499b-4c7b-8529-c8b3b93c699c"
+Parent: "3be179bf-699e-4ae7-ba32-41cb6f14defd"
 Template: "49c111d0-6867-4798-a724-1f103166e6e9"
-Path: /sitecore/templates/Branches/Project/Sugcon2024/Default Logo Variant/$name
+Path: /sitecore/templates/Branches/Project/Sugcon2024/Structure/Default Page Title Variant/$name
 Languages:
 - Language: en
   Versions:
@@ -10,14 +10,14 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20211020T135037Z
+      Value: 20211020T135004Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6fc6d309-b9bf-45cc-a238-06e0df36e8e6"
+      Value: "0d9e94d5-c841-416b-a890-0b9ab729a132"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\cdJph8P5Hr
+        sitecore\UzWooIJE3y
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240226T165735Z
+      Value: 20240202T143239Z

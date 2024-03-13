@@ -1,8 +1,8 @@
 ﻿---
 ID: "f4b65d06-77ad-42af-a860-a3510a14cf0a"
-Parent: "d12c55c7-0846-43c4-9882-44f4ec5af362"
+Parent: "6c059548-d202-4fd6-886c-f3480a7be5a2"
 Template: "35e75c72-4985-4e09-88c3-0eac6cd1e64f"
-Path: /sitecore/templates/Branches/Project/Sugcon2024/Available Headless Sugcon2024 Renderings
+Path: /sitecore/templates/Branches/Project/Sugcon2024/Basic Components/Available Headless Sugcon2024 Renderings
 Languages:
 - Language: "de-DE"
   Fields:
