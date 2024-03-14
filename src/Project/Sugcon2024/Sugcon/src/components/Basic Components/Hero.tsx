@@ -1,7 +1,15 @@
 import React from 'react';
 import { Box, Heading, Text, Image, Flex, useBreakpointValue } from '@chakra-ui/react';
-import { Field, ImageField, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+
+import {
+  TextField,
+  ImageField,
+  LinkField,
+  Text as JssText,
+} from '@sitecore-jss/sitecore-jss-nextjs';
+
 import { ButtonLink } from '../../basics/ButtonLink';
+
 import {
   isSitecoreLinkFieldPopulated,
   isSitecoreTextFieldPopulated,
@@ -10,13 +18,13 @@ import {
 // Define the type of props that Hero will accept
 interface Fields {
   /** Title of the event banner */
-  Headline: Field<string>;
+  Headline: TextField;
 
   /** Date of the event */
-  EventDate: Field<string>;
+  EventDate: TextField;
 
   /** Description of the event */
-  Text: Field<string>;
+  Text: TextField;
 
   /** Link to trigger when the button is clicked */
   CallToAction: LinkField;
@@ -51,16 +59,16 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
       >
         <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
           <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
-            {props.fields.Headline?.value}
+            <JssText field={props.fields.Headline} />
           </Heading>
           {isSitecoreTextFieldPopulated(props.fields.EventDate) && (
             <Text fontSize="18px" mb={6}>
-              {props.fields.EventDate?.value}
+              <JssText field={props.fields.EventDate} />
             </Text>
           )}
           {isSitecoreTextFieldPopulated(props.fields.Text) && (
             <Text mb={6} fontSize="18px">
-              {props.fields.Text?.value}
+              <JssText field={props.fields.Text} />
             </Text>
           )}
           {isSitecoreLinkFieldPopulated(props.fields.CallToAction) && (
@@ -103,11 +111,11 @@ export const HeroEvent = (props: HeroProps): JSX.Element => {
       >
         <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
           <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
-            {props.fields.Headline?.value}
+            <JssText field={props.fields.Headline} />
           </Heading>
           {isSitecoreTextFieldPopulated(props.fields.Text) && (
             <Text mb={6} fontSize="18px">
-              {props.fields.Text?.value}
+              <JssText field={props.fields.Text} />
             </Text>
           )}
         </Box>
@@ -154,11 +162,11 @@ export const HeroJustificationLetter = (props: HeroProps): JSX.Element => {
         alignItems="flex-start"
       >
         <Heading as="h2" fontSize="30px" color="black" fontWeight="bold" mt={10} mb="33px">
-          {props.fields.Headline?.value}
+          <JssText field={props.fields.Headline} />
         </Heading>
         {isSitecoreTextFieldPopulated(props.fields.Text) && (
           <Text mb={6} fontSize="18px" color="black">
-            {props.fields.Text?.value}
+            <JssText field={props.fields.Text} />
           </Text>
         )}
         {isSitecoreLinkFieldPopulated(props.fields.CallToAction) && (
