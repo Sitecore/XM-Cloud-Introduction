@@ -3,7 +3,7 @@ import { Default as Navigation } from '../../../components/Navigation';
 import { SitecoreContext } from '@sitecore-jss/sitecore-jss-react';
 
 const meta = {
-  title: 'Components/Navigation',
+  title: 'Basic Components/Navigation',
   component: Navigation,
   parameters: {
     layout: 'fullscreen',

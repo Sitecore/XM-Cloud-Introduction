@@ -3,7 +3,7 @@ import { HeroJustificationLetter } from '../../../components/Basic Components/He
 import { SitecoreContext } from '@sitecore-jss/sitecore-jss-react';
 
 const meta = {
-  title: 'Components/Hero',
+  title: 'Basic Components/Hero',
   component: HeroJustificationLetter,
   parameters: {
     layout: 'centered',

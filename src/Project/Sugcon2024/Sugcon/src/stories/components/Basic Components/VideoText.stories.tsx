@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Default as VideoText } from '../../../components/Basic Components/VideoText';
 const meta = {
-  title: 'Components/VideoText',
+  title: 'Basic Components/VideoText',
   component: VideoText,
   parameters: {
     layout: 'centered',

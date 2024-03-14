@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Default as LogoComponent } from '../../../components/Basic Components/Logo';
 const meta = {
-  title: 'Components/Logo',
+  title: 'Basic Components/Logo',
   component: LogoComponent,
   parameters: {
     layout: 'centered',

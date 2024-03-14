@@ -3,7 +3,7 @@ import { HeroHomepage } from '../../../components/Basic Components/Hero';
 import { SitecoreContext } from '@sitecore-jss/sitecore-jss-react';
 
 const meta = {
-  title: 'Components/Hero',
+  title: 'Basic Components/Hero',
   component: HeroHomepage,
   parameters: {
     layout: 'centered',

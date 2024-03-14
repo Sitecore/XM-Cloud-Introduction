@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Default as Venue } from 'src/components/Basic Components/Venue';
 
 const meta = {
-  title: 'Components/Venue',
+  title: 'Basic Components/Venue',
   component: Venue,
   parameters: {
     layout: 'centered',

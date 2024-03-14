@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Default as EventTeaser } from '../../../components/Basic Components/EventTeaser';
 const meta = {
-  title: 'Components/EventTeaser',
+  title: 'Basic Components/EventTeaser',
   component: EventTeaser,
   parameters: {
     layout: 'centered',
