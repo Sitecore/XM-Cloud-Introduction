@@ -56,7 +56,7 @@ function getPeople(sessionTitle: string, body: string) {
       bio = bio.concat('<h4>' + sessionTitle + '</h4>');
       bio = bio.concat('<ul>');
 
-      sessions.each((i, el) => {
+      sessions.each((_i, el) => {
         bio = bio.concat('<li>' + $(el).text() + '</li>');
       });
 
