@@ -23,6 +23,7 @@ import {
   Link as JssLink,
   TextField,
   Text as JssText,
+  RichText as JssRichText,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 
@@ -131,7 +132,7 @@ export const Default = (props: PersonProps): JSX.Element => {
                 <Box w={{ base: '100%', md: 'inherit' }} px={10} mb={{ base: 10, md: 0 }}>
                   <Image src={props.fields.Image?.value?.src} w={200} borderRadius={15} />
                 </Box>
-                <Box>
+                <Box w={{ base: '100%', md: '55%', lg: '60%' }}>
                   <Heading as="h3" size="lg">
                     {props.fields.Name?.value}
                   </Heading>
@@ -141,9 +142,7 @@ export const Default = (props: PersonProps): JSX.Element => {
                   <Text fontSize="12px" mb={0}>
                     {props.fields.Company?.value}
                   </Text>
-                  <Text fontSize="12px" mb={0}>
-                    {props.fields.Biography?.value}
-                  </Text>
+                  <Text as={JssRichText} fontSize="12px" mb={0} field={props.fields.Biography} />
                 </Box>
               </Flex>
             </ModalBody>
