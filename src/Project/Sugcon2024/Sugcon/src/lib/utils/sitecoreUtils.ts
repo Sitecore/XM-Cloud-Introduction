@@ -1,13 +1,11 @@
+import { TextField } from '@sitecore-jss/sitecore-jss-nextjs';
+
 interface SitecoreLinkField {
   value?: {
     href?: string;
     text?: string;
     anchor?: string;
   };
-}
-
-interface SitecoreTextField {
-  value?: string;
 }
 
 interface SitecoreImageField {
@@ -20,7 +18,7 @@ export function isSitecoreLinkFieldPopulated(field?: SitecoreLinkField): boolean
   return Boolean(field?.value?.href && (field?.value?.text || field?.value?.anchor));
 }
 
-export function isSitecoreTextFieldPopulated(field: SitecoreTextField): boolean {
+export function isSitecoreTextFieldPopulated(field: TextField): boolean {
   return Boolean(field?.value);
 }
 
