@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { HeroEvent } from '../../../components/Basic Components/Hero';
 const meta = {
-  title: 'Components/Hero',
+  title: 'Basic Components/Hero',
   component: HeroEvent,
   parameters: {
     layout: 'centered',

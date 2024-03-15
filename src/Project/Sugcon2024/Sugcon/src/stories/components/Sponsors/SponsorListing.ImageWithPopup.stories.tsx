@@ -1,22 +1,22 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Story } from '@storybook/blocks';
-import { LogoOnly } from 'src/components/Sponsors/SponsorListing';
+import { LogoWithPopup } from 'src/components/Sponsors/SponsorListing';
 import { Default as DefaultSponsorListing } from './SponsorListing.Default.stories';
 
 const meta = {
-  title: 'Components/SponsorListing',
+  title: 'Sponsors/SponsorListing',
   
-  component: LogoOnly,
+  component: LogoWithPopup,
   parameters: {
     layout: 'padded',
   },
   argTypes: {},
-} satisfies Meta<typeof LogoOnly>;
+} satisfies Meta<typeof LogoWithPopup>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const SponsorListLogoOnly: Story = {
-  name: 'Logo Only',
+export const SponsorListLogoWithPopup: Story = {
+  name: 'Logo with pop-up',
   args: DefaultSponsorListing.args,
 };

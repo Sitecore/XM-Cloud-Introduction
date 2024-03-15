@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Default as SponsorListing } from 'src/components/Sponsors/SponsorListing';
 
 const meta = {
-  title: 'Components/SponsorListing',
+  title: 'Sponsors/SponsorListing',
   component: SponsorListing,
   parameters: {
     layout: 'padded',

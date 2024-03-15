@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Default as TextImage } from '../../../components/Basic Components/TextImage';
 const meta = {
-  title: 'Components/TextImage',
+  title: 'Basic Components/TextImage',
   component: TextImage,
   parameters: {
     layout: 'centered',

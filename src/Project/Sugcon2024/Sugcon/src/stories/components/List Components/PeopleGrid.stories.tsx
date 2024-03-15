@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Default as PeopleGrid } from '../../../components/List Components/PeopleGrid';
 import '../../../assets/sass/components/people-grid/index.scss';
 const meta = {
-  title: 'Components/PeopleGrid',
+  title: 'List Components/PeopleGrid',
   component: PeopleGrid,
   parameters: {
     layout: 'centered',
