@@ -266,7 +266,7 @@ services:
       args:
         PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xmcloud-cm:${SITECORE_VERSION}
         SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
-        TOOLS_IMAGE: ${TOOLS_IMAGE}
+        TOOLS_IMAGE: ${TOOLS_IMAGE}:${SITECORE_VERSION}
     depends_on:
       - solution
     volumes:
@@ -293,4 +293,4 @@ services:
       Sitecore_AppSettings_exmEnabled:define: "no" # remove to turn on EXM
       MVP_RENDERING_EDITING_HOST_URI: "http://mvp-rendering/"
       RENDERING_HOST_INTERNAL_URI: ${SUGCON_EU_HOST_INTERNAL_URI}
-    entrypoint: powershell -Command "& C:\\tools\\entrypoints\\iis\\Development.ps1"
+    entrypoint: powershell -Command "& C:/tools/entrypoints/iis/XmCloudDevelopment.ps1"
