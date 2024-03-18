@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Mvp.Feature.People.Configuration;
 using Mvp.Feature.People.Facets;
 using Mvp.Feature.People.Models;
 using Mvp.Feature.People.PeopleFinder;
@@ -12,6 +14,9 @@ namespace Mvp.Feature.People.Extensions
     {
         public static IServiceCollection AddFeaturePeopleServices(this IServiceCollection services)
         {
+            services.AddOptions<MvpPeopleOptions>().Configure<IConfiguration>((options, configuration) =>
+                configuration.GetSection(MvpPeopleOptions.MvpPeople).Bind(options));
+
             services.AddTransient<IPeopleFinder, MvpFinder>();
             services.AddTransient<IFacetBuilder, FacetBuilder>();
             return services;
@@ -21,6 +26,7 @@ namespace Mvp.Feature.People.Extensions
         {
             options.AddModelBoundView<SearchParams>("GraphQLPeopleList");
             options.AddViewComponent(DirectoryViewComponent.ViewComponentName);
+            options.AddViewComponent(ProfileViewComponent.ViewComponentName);
             return options;
         }
     }

@@ -36,28 +36,23 @@
                         }
                     </div>
                     <nav aria-label="Paging">
-                        @{
-                            int startPage = Model.Page >= 3 ? Model.Page - 2 : Model.Page >= 2 ? Model.Page - 1 : Model.Page;
-                            int totalPages = Model.TotalResults / Model.PageSize + 1;
-                            int endPage = startPage + 4 > totalPages ? totalPages : startPage + 4;
-                        }
                         <ul class="pagination justify-content-center">
                             @if (Model.Page > 1)
                             {
                                 <li class="page-item">
-                                    <a class="page-link" href="?@DirectoryViewModel.PageQueryStringKey=@(Model.Page - 1)" aria-label="Previous">
+                                    <a class="page-link" href="@Model.PreviousPageUri()" aria-label="Previous">
                                         <span aria-hidden="true">&laquo;</span>
                                     </a>
                                 </li>
                             }
-                            @for (int i = startPage; i <= endPage; i++)
+                            @for (int i = Model.StartPage; i <= Model.EndPage; i++)
                             {
-                                <li class="page-item@(Model.Page == i ? " active" : string.Empty)"><a class="page-link" href="?@DirectoryViewModel.PageQueryStringKey=@i">@i</a></li>
+                                <li class="page-item@(Model.Page == i ? " active" : string.Empty)"><a class="page-link" href="@Model.PageUri(i)">@i</a></li>
                             }
-                            @if (totalPages >= endPage && Model.Page < totalPages)
+                            @if (Model.TotalPages >= Model.EndPage && Model.Page < Model.TotalPages)
                             {
                                 <li class="page-item">
-                                    <a class="page-link" href="?@DirectoryViewModel.PageQueryStringKey=@(Model.Page + 1)" aria-label="Next">
+                                    <a class="page-link" href="@Model.NextPageUri()" aria-label="Next">
                                         <span aria-hidden="true">&raquo;</span>
                                     </a>
                                 </li>
