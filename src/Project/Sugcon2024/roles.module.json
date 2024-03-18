@@ -1,0 +1,10 @@
+{
+    "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+    "namespace": "Project.Sugcon2024.Roles",
+    "roles": [
+      {
+        "domain": "Sugcon2024",
+        "pattern": "Site*"
+      }
+    ]
+}

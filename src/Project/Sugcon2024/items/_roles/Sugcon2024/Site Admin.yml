@@ -1,0 +1,8 @@
+﻿---
+Role: |
+  Sugcon2024\Site Admin
+MemberOf:
+  Role: |
+    Sugcon2024\Site Designer
+  Role: |
+    SXA\Admin
