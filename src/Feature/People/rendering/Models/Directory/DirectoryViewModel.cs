@@ -1,19 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Reflection;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using Sitecore.AspNet.RenderingEngine.Binding.Attributes;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Feature.People.Models.Directory
 {
-    public class DirectoryViewModel
+    public class DirectoryViewModel : BaseModel
     {
         public const string QueryQueryStringKey = "q";
 
         public const string PageQueryStringKey = "pg";
-        
-        [SitecoreContextProperty]
-        public bool IsEditing { get; set; }
         
         public TextField TopTitleLabel { get; set; }
 
@@ -46,5 +43,30 @@ namespace Mvp.Feature.People.Models.Directory
         public int Page { get; set; } = 1;
 
         public short PageSize { get; set; } = 21;
+
+        public int StartPage => Page >= 3 ? Page - 2 : Page >= 2 ? Page - 1 : Page;
+
+        public int EndPage => StartPage + 4 > TotalPages ? TotalPages : StartPage + 4;
+
+        public int TotalPages => TotalResults / PageSize + 1;
+
+        public Uri PageUri(int page)
+        {
+            return new Uri(
+                $"?{PageQueryStringKey}={page}&{string.Join('&', ViewFacets.Select(vf => vf.ToQueryString()).Where(s => !string.IsNullOrWhiteSpace(s)))}",
+                UriKind.Relative);
+        }
+
+        public Uri NextPageUri()
+        {
+            int nextPage = Page + 1;
+            return nextPage <= TotalPages ? PageUri(nextPage) : new Uri("#", UriKind.Relative);
+        }
+
+        public Uri PreviousPageUri()
+        {
+            int previousPage = Page - 1;
+            return previousPage > 0 ? PageUri(previousPage) : new Uri("#", UriKind.Relative);
+        }
     }
 }

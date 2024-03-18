@@ -13,11 +13,14 @@ using Mvp.Selections.Api.Model;
 using Mvp.Selections.Client.Models;
 using Sitecore.LayoutService.Client.Response.Model;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
+using Mvp.Feature.People.Configuration;
 
 namespace Mvp.Feature.People.ViewComponents
 {
     [ViewComponent(Name = ViewComponentName)]
-    public class DirectoryViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
+    public class DirectoryViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client, IMemoryCache cache, IOptions<MvpPeopleOptions> options)
         : ViewComponent
     {
         public const string ViewComponentName = "Directory";
@@ -30,6 +33,10 @@ namespace Mvp.Feature.People.ViewComponents
 
         public const string CountryFacetIdentifier = "country";
 
+        private const string SearchCacheKeyPrefix = "SearchMvpProfileAsync_";
+
+        private readonly MvpPeopleOptions _options = options.Value;
+
         public async Task<IViewComponentResult> InvokeAsync()
         {
             DirectoryViewModel model = await modelBinder.Bind<DirectoryViewModel>(ViewContext);
@@ -37,7 +44,7 @@ namespace Mvp.Feature.People.ViewComponents
             await ExecuteSearch(model);
             MergeFacetsAndViewFacets(model);
 
-            return View(model);
+            return model.ErrorMessages.Count > 0 ? View("~/Views/Shared/Error.cshtml", model) : View(model);
         }
 
         private static void MergeFacetsAndViewFacets(DirectoryViewModel model)
@@ -66,9 +73,9 @@ namespace Mvp.Feature.People.ViewComponents
             model.ViewFacets.RemoveAll(f => removeIdentifiers.Contains(f.Identifier));
         }
 
-        private static IEnumerable<short> ExtractSearchIdentifiers(IEnumerable<FacetViewModel> facets, string identifier)
+        private static List<short> ExtractSearchIdentifiers(IEnumerable<FacetViewModel> facets, string identifier)
         {
-            IEnumerable<short> result = null;
+            List<short> result = null;
             FacetViewModel facet = facets.FirstOrDefault(f => f.Identifier == identifier);
             if (facet != null)
             {
@@ -76,7 +83,7 @@ namespace Mvp.Feature.People.ViewComponents
                     .Select(o => short.TryParse(o.Identifier, out short v) ? (short?)v : null).Where(s => s != null).ToList();
                 if (identifiers.Count > 0)
                 {
-                    result = identifiers.Cast<short>();
+                    result = identifiers.Cast<short>().ToList();
                 }
             }
 
@@ -113,24 +120,42 @@ namespace Mvp.Feature.People.ViewComponents
 
         private async Task ExecuteSearch(DirectoryViewModel model)
         {
-            Response<SearchResult<MvpProfile>> response = await client.SearchMvpProfileAsync(
-                model.Query,
-                ExtractSearchIdentifiers(model.ViewFacets, MvpTypeFacetIdentifier),
-                ExtractSearchIdentifiers(model.ViewFacets, YearFacetIdentifier),
-                ExtractSearchIdentifiers(model.ViewFacets, CountryFacetIdentifier),
-                model.Page,
-                model.PageSize);
-            if (response.StatusCode == HttpStatusCode.OK && response.Result != null)
+            List<short> mvpTypeFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, MvpTypeFacetIdentifier);
+            List<short> yearFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, YearFacetIdentifier);
+            List<short> countryFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, CountryFacetIdentifier);
+            string cacheKey =
+                $"{SearchCacheKeyPrefix}{model.Query}_{mvpTypeFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_{yearFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_{countryFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_p{model.Page}/{model.PageSize}";
+            if (!cache.TryGetValue(cacheKey, out SearchResult<MvpProfile> profiles))
             {
-                model.TotalResults = response.Result.TotalResults;
-                model.Page = response.Result.Page;
-                model.PageSize = response.Result.PageSize;
-                foreach (MvpProfile profile in response.Result.Results)
+                Response<SearchResult<MvpProfile>> response = await client.SearchMvpProfileAsync(
+                    model.Query,
+                    mvpTypeFacetIdentifiers,
+                    yearFacetIdentifiers,
+                    countryFacetIdentifiers,
+                    model.Page,
+                    model.PageSize);
+                if (response.StatusCode == HttpStatusCode.OK && response.Result != null)
+                {
+                    profiles = response.Result;
+                    cache.Set(cacheKey, response.Result, TimeSpan.FromSeconds(_options.SearchCachedSeconds));
+                }
+                else
+                {
+                    model.ErrorMessages.Add(response.Message);
+                }
+            }
+
+            if (profiles != null)
+            {
+                model.TotalResults = profiles.TotalResults;
+                model.Page = profiles.Page;
+                model.PageSize = profiles.PageSize;
+                foreach (MvpProfile profile in profiles.Results)
                 {
                     model.Results.Add(DirectoryResultViewModel.FromMvpProfile(profile, model.MvpProfileLink?.ToUri()));
                 }
 
-                foreach (SearchFacet facet in response.Result.Facets)
+                foreach (SearchFacet facet in profiles.Facets)
                 {
                     FacetViewModel viewFacet = model.ViewFacets.FirstOrDefault(f => f.Identifier == facet.Identifier);
                     if (viewFacet is null)
