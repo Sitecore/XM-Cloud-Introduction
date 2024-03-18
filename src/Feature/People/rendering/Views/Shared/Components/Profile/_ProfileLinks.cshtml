@@ -1,0 +1,37 @@
+﻿@using Mvp.Selections.Domain
+@model IList<Mvp.Selections.Domain.ProfileLink>
+
+<p class="profile-links col-12">
+@foreach (ProfileLink profileLink in Model)
+{
+    <a href="@profileLink.Uri" title="@profileLink.Name" target="_blank">
+        @switch (profileLink.Type)
+        {
+            case ProfileLinkType.Blog:
+                <i class="fa fa-rss-square" aria-hidden="true"></i>
+                break;
+            case ProfileLinkType.StackExchange:
+                <i class="fa fa-stack-exchange" aria-hidden="true"></i>
+                break;
+            case ProfileLinkType.Community:
+                <i class="fa fa-users" aria-hidden="true"></i>
+                break;
+            case ProfileLinkType.Twitter:
+                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                break;
+            case ProfileLinkType.Youtube:
+                <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                break;
+            case ProfileLinkType.Github:
+                <i class="fa fa-github-square" aria-hidden="true"></i>
+                break;
+            case ProfileLinkType.LinkedIn:
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                break;
+            default:
+                <i class="fa fa-external-link" aria-hidden="true"></i>
+                break;
+        }
+    </a>
+}
+</p>

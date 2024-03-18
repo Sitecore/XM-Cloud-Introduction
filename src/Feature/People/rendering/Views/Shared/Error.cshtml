@@ -1,0 +1,15 @@
+﻿@model Mvp.Feature.People.Models.BaseModel
+
+<section class="bg-white">
+    <div class="alert alert-danger" role="alert">
+        @if (Model.ErrorMessages.Count > 0)
+        {
+            <ul>
+                @foreach (string message in Model.ErrorMessages)
+                {
+                    <li>@message</li>
+                }
+            </ul>
+        }
+    </div>
+</section>
