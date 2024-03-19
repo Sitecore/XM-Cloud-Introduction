@@ -1,8 +1,8 @@
 ﻿---
-ID: "9fe175a4-b190-4485-afba-294bc890796c"
-Parent: "aac3024d-4b51-45cd-9f29-03bd2569e4ca"
+ID: "98d6c97a-e900-4863-abd6-9faac0c9ee4e"
+Parent: "aeb7b39d-711e-453d-a8da-3a897c69dc56"
 Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
-Path: /sitecore/content/MvpSite/Home/Directory/Page Components
+Path: /sitecore/content/MvpSite/Home/Directory/Profile/Page Components
 BranchID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
 SharedFields:
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
@@ -15,7 +15,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20240216T132652Z
+      Value: 20240312T125220Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -26,11 +26,11 @@ Languages:
         sitecore\ed7gR4aY22
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f67e4510-6795-4f23-b2ac-8edb62c4c53a"
+      Value: "22f4c3e0-ec58-4051-99bd-3246b0b05e56"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\ed7gR4aY22
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240216T132652Z
+      Value: 20240312T125220Z

@@ -1,13 +1,10 @@
 ﻿---
-ID: "aac3024d-4b51-45cd-9f29-03bd2569e4ca"
-Parent: "94de9ac3-a9f7-40ab-ae90-acda364b9c40"
+ID: "aeb7b39d-711e-453d-a8da-3a897c69dc56"
+Parent: "aac3024d-4b51-45cd-9f29-03bd2569e4ca"
 Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
-Path: /sitecore/content/MvpSite/Home/New Directory
+Path: /sitecore/content/MvpSite/Home/Directory/Profile
 BranchID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
 SharedFields:
-- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
-  Hint: __Sortorder
-  Value: 850
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{9AC6DDA3-8785-4C63-A2AB-457D8CC56D19}"
@@ -27,17 +24,17 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
-              uid="{40F7F473-5C1C-4006-A44C-F7ADA93E3072}"
+              uid="{B4250539-0A64-409F-A97A-40198912A435}"
               p:before="*"
-              s:ds="{CBF7A100-F126-4379-8175-F325B53D7516}"
-              s:id="{9D25A2E5-94E1-4B70-9DDB-D3419633B86A}"
+              s:ds="{2D22DC50-3C4B-4EC6-B0AA-F513749CA85D}"
+              s:id="{DF0A17C7-2EE1-4264-98B7-5E324048B220}"
               s:par="CacheClearingBehavior=Clear on publish&amp;CSSStyles"
               s:ph="main" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20240216T132652Z
+      Value: 20240312T125220Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -48,17 +45,17 @@ Languages:
         sitecore\ed7gR4aY22
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1c5b250f-00b6-4678-a28d-335f026e6a8a"
+      Value: "3598829e-41fd-4955-b9b0-d4f220bdcb43"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
-      Value: New Directory
+      Value: Profile
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\ed7gR4aY22
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240224T142110Z
+      Value: 20240313T140830Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
       Hint: IncludeInMenu
       Value: 
