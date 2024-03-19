@@ -1,0 +1,45 @@
+﻿@using Mvp.Feature.People.Models.Profile
+@model IEnumerable<TimelineEventViewModel>
+
+@{
+    bool even = false;
+}
+<div class="col-12">
+    @foreach (TimelineEventViewModel e in Model.OrderByDescending(e => e.Date))
+    {
+        <div class="t-event row">
+            <div class="line col-2 text-center @(even ? "order-1 offset-sm-5" : "order-1 order-sm-2")">
+                <partial name="Components/Profile/_TypeIcon" model="e.ContributionType" />
+            </div>
+            <div class="card col-10 col-sm-5 p-0 mb-3 @(even ? "order-2" : "order-2 order-sm-1")">
+                <div class="card-header">
+                    @e.Date.ToString("d")
+                    @if (e.Uri != null)
+                    {
+                        <a href="@e.Uri" target="_blank" class="float-right">
+                            <i class="fa fa-external-link" aria-hidden="true"></i>
+                        </a>
+                    }
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        @e.Title
+                    </h4>
+                    @if (!string.IsNullOrWhiteSpace(e.Description))
+                    {
+                        <p class="card-text">@Html.Raw(Markdig.Markdown.ToHtml(e.Description))</p>
+                    }
+                    @if (e.RelatedProducts.Count > 0)
+                    {
+                        @foreach (string product in e.RelatedProducts)
+                        {
+                            <span class="badge badge-secondary">@product</span>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        
+        even = !even;
+    }
+</div>

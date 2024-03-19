@@ -1,7 +1,4 @@
 ﻿@using Mvp.Feature.People.Extensions
-@using Mvp.Feature.People.Models.Profile
-@using Mvp.Selections.Domain
-@using Sitecore.AspNet.RenderingEngine.TagHelpers.Fields
 @model Mvp.Feature.People.Models.Profile.ProfileViewModel
 
 <section class="mvp-fp-profile bg-white">
@@ -25,24 +22,13 @@
             }
             <partial name="Components/Profile/_ProfileLinks" model="Model.Mvp.ProfileLinks" />
         </div>
-        <div class="row">
+        <div class="row mb-5">
             <h3 asp-for="TitlesLabel" class="col-12"></h3>
-            @foreach (Title title in Model.Mvp.Titles.OrderByDescending(t => t.Application.Selection.Year))
-            {
-                <div class="card col-xs-12 col-sm-9 col-md-6 col-lg-4">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col-4">
-                            <img src="@ProfileViewModel.GenerateImageUri(title)" class="card-img" />
-                        </div>
-                        <div class="col-8">
-                            <div class="card-body">
-                                <h4 class="card-title">@title.MvpType.Name @title.Application.Selection.Year</h4>
-                                <p class="card-text"><i class="fa fa-globe" aria-hidden="true"></i> @title.Application.Country.Name</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
+            <partial name="Components/Profile/_Titles" model="Model.Mvp.Titles" />
+        </div>
+        <div class="timeline row mb-5">
+            <h3 asp-for="TimelineLabel" class="col-12"></h3>
+            <partial name="Components/Profile/_Timeline" model="Model.GetTimelineEvents()" />
         </div>
     </div>
 </section>
