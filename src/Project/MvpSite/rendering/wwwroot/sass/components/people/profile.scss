@@ -31,4 +31,33 @@
             text-decoration: none;
         }
     }
+
+    .timeline {
+        img {
+            width: 100%;
+        }
+
+        .badge-primary {
+            background-color: $sitecore-teal;
+
+            & i.fa {
+                color: $contrast-text;
+                font-size: 2em;
+            }
+        }
+
+        .line {
+            position: relative;
+
+            &:after {
+                background-color: $sitecore-teal;
+                content: "";
+                display: block;
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                left: 50%;
+            }
+        }
+    }
 }
