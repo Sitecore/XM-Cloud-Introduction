@@ -64,6 +64,10 @@ if (-Not $SkipBuild) {
     Write-Host "Keeping XM Cloud base image up to date" -ForegroundColor Green
     docker pull "$($sitecoreDockerRegistry)sitecore-xmcloud-cm:$($sitecoreVersion)"
 
+    $xmcloudDockerToolsImage = ($envContent | Where-Object { $_ -imatch "^TOOLS_IMAGE=.+" }).Split("=")[1]
+    Write-Host "Keeping XM Cloud Tools image up to date" -ForegroundColor Green
+    docker pull "$($xmcloudDockerToolsImage):$($sitecoreVersion)"
+
     # Build all containers in the Sitecore instance, forcing a pull of latest base containers
     Write-Host "Building containers..." -ForegroundColor Green
     docker compose build
