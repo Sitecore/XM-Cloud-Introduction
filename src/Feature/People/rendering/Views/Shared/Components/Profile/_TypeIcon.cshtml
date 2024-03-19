@@ -1,0 +1,38 @@
+﻿@using Mvp.Selections.Domain
+@model Mvp.Selections.Domain.ContributionType?
+
+<span class="badge badge-primary text-white">
+    @switch (Model)
+    {
+        case ContributionType.BlogPost:
+            <i class="fa fa-rss-square" aria-hidden="true"></i>
+            break;
+        case ContributionType.Speaking:
+            <i class="fa fa-microphone" aria-hidden="true"></i>
+            break;
+        case ContributionType.Code:
+            <i class="fa fa-code" aria-hidden="true"></i>
+            break;
+        case ContributionType.Video:
+            <i class="fa fa-video-camera" aria-hidden="true"></i>
+            break;
+        case ContributionType.SocialMedia:
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            break;
+        case ContributionType.BugReport:
+            <i class="fa fa-bug" aria-hidden="true"></i>
+            break;
+        case ContributionType.Feedback:
+            <i class="fa fa-commenting" aria-hidden="true"></i>
+            break;
+        case ContributionType.Reference:
+            <i class="fa fa-link" aria-hidden="true"></i>
+            break;
+        case ContributionType.Community:
+            <i class="fa fa-users" aria-hidden="true"></i>
+            break;
+        default:
+            <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+            break;
+    }
+</span>

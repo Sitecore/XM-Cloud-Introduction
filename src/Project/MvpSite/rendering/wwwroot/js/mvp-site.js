@@ -1,4 +1,32 @@
-﻿$(document).ready(function () {
+﻿function timelineEventsHeightRecalculation($timeline, reset) {
+    $timeline.each(function (index, item) {
+        const $item = $(item);
+        let $prev;
+            
+        $item.find(".t-event").each(function (i, e) {
+            let $e = $(e);
+            if (reset) {
+                $e.css("height", "");
+            }
+            else {                
+                if (i % 3 === 0) {
+                    $e.height(50);
+                }
+                else if (i % 3 === 1) {
+                    let prevCard = $prev.children(".card").height();
+                    $e.height(prevCard);
+                }
+
+                $prev = $e;
+            }            
+        });            
+    });
+}
+
+$(document).ready(function () {
+    const $window = $(window);
+
+
     $("#search").keyup(function (event) {
         if (event.which === 13) {
             event.preventDefault();
@@ -48,9 +76,20 @@
         });
     }
 
+
     const $directory = $(".mvp-fp-directory");
     if ($directory.length > 0) {
         const $form = $directory.find("form");
         $form.on("change", "input:checkbox", () => { $form.submit(); });
+    }
+
+
+    const $timeline = $(".timeline");
+    if ($timeline.length > 0) {
+        timelineEventsHeightRecalculation($timeline, $window.width() < 576);
+        
+        $window.on("resize", function () {
+            timelineEventsHeightRecalculation($timeline, $window.width() < 576);
+        });
     }
 });
