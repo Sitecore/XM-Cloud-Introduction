@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Default as Accordion } from '../../../components/Basic Components/Accordion';
+import { Default as Accordion } from '../../../components/List Components/Accordion';
 
 const meta = {
-  title: 'Basic Components/Accordion',
+  title: 'List Components/Accordion',
   component: Accordion,
   tags: ['autodocs'],
   argTypes: {},
@@ -32,10 +32,10 @@ export const Event: Story = {
       styles: '',
     },
     fields: {
-      Title: {
+      Headline: {
         value: 'FAQs',
       },
-      AccordionElementList: new Array(4).fill(element),
+      Elements: new Array(4).fill(element),
     },
   },
 };

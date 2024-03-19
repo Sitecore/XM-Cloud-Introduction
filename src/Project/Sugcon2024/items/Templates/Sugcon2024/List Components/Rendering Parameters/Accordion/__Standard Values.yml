@@ -1,0 +1,23 @@
+﻿---
+ID: "ca362d10-13c2-4548-ad00-cde141916c37"
+Parent: "939915d6-4d3d-49ff-8068-e0c677f630ff"
+Template: "939915d6-4d3d-49ff-8068-e0c677f630ff"
+Path: /sitecore/templates/Project/Sugcon2024/List Components/Rendering Parameters/Accordion/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240223T133021Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a30759ff-73ea-4c7b-bdf3-3dd62204248c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\UOUBIWQRx7
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240318T185815Z

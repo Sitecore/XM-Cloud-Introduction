@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Default as SpeakersGrid } from '../../../components/List Components/SpeakersGrid';
 import '../../../assets/sass/components/people-grid/index.scss';
 const meta = {
-  title: 'Components/SpeakersGrid',
+  title: 'List Components/SpeakersGrid',
   component: SpeakersGrid,
   parameters: {
     layout: 'centered',
