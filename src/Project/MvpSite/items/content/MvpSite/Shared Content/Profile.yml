@@ -1,0 +1,23 @@
+﻿---
+ID: "2d22dc50-3c4b-4ec6-b0aa-f513749ca85d"
+Parent: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Template: "bc9559de-2a9e-45cc-956c-71da6656b8cd"
+Path: /sitecore/content/MvpSite/Shared Content/Profile
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240312T141426Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "50df84f1-4b7f-4a97-9d82-0fbe551abd80"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240312T141426Z

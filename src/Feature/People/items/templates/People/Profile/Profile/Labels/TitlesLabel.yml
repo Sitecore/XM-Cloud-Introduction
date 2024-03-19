@@ -1,36 +1,42 @@
 ﻿---
-ID: "9fe175a4-b190-4485-afba-294bc890796c"
-Parent: "aac3024d-4b51-45cd-9f29-03bd2569e4ca"
-Template: "6aec120a-7222-42c6-a8e8-53f9354aef53"
-Path: /sitecore/content/MvpSite/Home/Directory/Page Components
-BranchID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
+ID: "b25e24c0-e527-4b1e-9eda-b6fa19fde1da"
+Parent: "afdaa2c4-9e37-46e1-937a-f49bd5c95d0a"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/People/Profile/Profile/Labels/TitlesLabel
 SharedFields:
-- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
-  Hint: __Originator
-  Value: "{20A55515-D0DF-4AC4-960F-6EBC655A7514}"
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Single-Line Text"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
 Languages:
 - Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Titles
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20240216T132652Z
+      Value: 20240312T152709Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\Admin
+        sitecore\ed7gR4aY22
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\ed7gR4aY22
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f67e4510-6795-4f23-b2ac-8edb62c4c53a"
+      Value: "5fab6cb6-1013-4701-aa61-784bf21f5a19"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\ed7gR4aY22
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240216T132652Z
+      Value: 20240318T162012Z
