@@ -86,7 +86,10 @@ $(document).ready(function () {
 
     const $timeline = $(".timeline");
     if ($timeline.length > 0) {
-        timelineEventsHeightRecalculation($timeline, $window.width() < 576);
+        setTimeout(timelineEventsHeightRecalculation($timeline, $window.width() < 576), 1000);
+        setTimeout(timelineEventsHeightRecalculation($timeline, $window.width() < 576), 2000);
+        setTimeout(timelineEventsHeightRecalculation($timeline, $window.width() < 576), 3000);
+        setTimeout(timelineEventsHeightRecalculation($timeline, $window.width() < 576), 5000);
         
         $window.on("resize", function () {
             timelineEventsHeightRecalculation($timeline, $window.width() < 576);
