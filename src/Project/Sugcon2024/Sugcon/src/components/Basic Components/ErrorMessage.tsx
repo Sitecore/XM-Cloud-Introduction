@@ -33,16 +33,17 @@ export const Default = (props: ErrorMessageProps): JSX.Element => {
       columnGap={20}
     >
       <Box
-        borderColor="red"
-        borderWidth={3}
-        borderRadius="lg"
-        position="relative"
         fontSize="80px"
         fontWeight="bold"
         textColor="red"
         textAlign={'center'}
-        p="30px"
+        p="20px"
         mb={{ base: '20px', md: '0' }}
+        backgroundImage="url('/red-speech-bubble.svg')"
+        backgroundRepeat="no-repeat"
+        backgroundPosition="center"
+        minW={'216px'}
+        minH={'217px'}
       >
         <Text as={JssText} field={props.fields.StatusCode} />
       </Box>
