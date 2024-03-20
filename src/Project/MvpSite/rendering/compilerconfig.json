@@ -5,9 +5,12 @@
     "minify": {
       "enabled": true
     },
-    "includeInProject": true,
     "options": {
       "sourceMap": true
     }
+  },
+  {
+    "outputFile": "wwwroot/js/mvp-site.es5.js",
+    "inputFile": "wwwroot/js/mvp-site.js"
   }
 ]
