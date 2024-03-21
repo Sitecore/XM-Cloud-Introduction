@@ -48,7 +48,7 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
 
   return (
     <Box w="100%" mt={20} className={styles}>
-      <Box w="80%" pt={10} m="auto">
+      <Box maxW="1366px" m="auto" pt={10}>
         {(isEditorActive() || props.fields?.Headline?.value !== '') && (
           <Heading as="h2" size="lg">
             <JssText field={props.fields.Headline} />

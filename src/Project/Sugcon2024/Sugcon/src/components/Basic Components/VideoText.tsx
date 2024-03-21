@@ -27,10 +27,9 @@ export type VideoTextProps = {
   params: { [key: string]: string };
   fields: Fields;
 };
-
 export const Default = (props: VideoTextProps): JSX.Element => {
-  return (
-    <Box w={{ base: '100vw', md: '80vw' }} my="20" mx={{ base: '20px', md: 'auto' }}>
+  return (    
+    <Box w={{ base: '100vw', md: '80vw' }} my="20" maxW="1366px" mx={{ base: '20px', md: 'auto' }}>
       {(isEditorActive() || props.fields.Headline?.value !== '') && (
         <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
           <JssText field={props.fields.Headline} />
