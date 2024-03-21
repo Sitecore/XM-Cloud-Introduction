@@ -28,19 +28,14 @@ export type TextImageProps = {
 
 export const Default = (props: TextImageProps): JSX.Element => {
   return (
-    <Flex
-      direction={{ base: 'column', md: 'row' }}
-      w="100vw"
-      my="20"
-      mx={{ base: '20px', md: '0' }}
-    >
+    <Flex direction={{ base: 'column', md: 'row' }} w="100%" maxW="1366px" m="auto" pt={20}>
       <Flex
         direction="column"
         margin="0 auto" // Center the content box
         flexGrow={1}
         minWidth="50%"
       >
-        <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
+        <Box width="auto" alignSelf="end" maxWidth="683px" minWidth="360px">
           <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
             <JssText field={props.fields.Headline} />
           </Heading>

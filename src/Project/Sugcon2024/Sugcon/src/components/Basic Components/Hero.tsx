@@ -52,12 +52,11 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
       <Flex
         direction="column"
         margin="0 auto" // Center the content box
-        p={5}
         flexGrow={1}
         minWidth="50%"
         justifyContent="center"
       >
-        <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
+        <Box width="auto" alignSelf="end" maxWidth="683px" minWidth="360px">
           <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
             <JssText field={props.fields.Headline} />
           </Heading>
@@ -95,23 +94,24 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
 export const HeroEvent = (props: HeroProps): JSX.Element => {
   return (
     <Flex
-      direction={{ base: 'column', md: 'row' }}
+      direction={{ base: 'row', md: 'row' }}
       alignItems="center"
       bg="black"
       color="white"
       maxHeight={{ base: 'auto', md: '400px' }}
-      w="100%"
+      m="auto"
+      maxW="1240px"
+      pt={10}
     >
       <Flex
         direction="column"
         margin="0 auto" // Center the content box
         p={5}
         flexGrow={1}
-        minWidth="50%"
       >
         <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
           <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
-            <JssText field={props.fields.Headline} />
+            Testing <JssText field={props.fields.Headline} />
           </Heading>
           {isSitecoreTextFieldPopulated(props.fields.Text) && (
             <Text mb={6} fontSize="18px">
@@ -120,7 +120,13 @@ export const HeroEvent = (props: HeroProps): JSX.Element => {
           )}
         </Box>
       </Flex>
-      <Box minWidth={{ base: '100%', md: '50%' }} maxHeight="400px" h="100%" overflow="hidden">
+      <Box
+        minWidth={{ base: '100%', md: '50%' }}
+        maxHeight="400px"
+        h="100%"
+        maxWidth="620px"
+        overflow="hidden"
+      >
         <Image
           src={props.fields.Image?.value?.src}
           //alt={props.fields.Image?.value?.alt}

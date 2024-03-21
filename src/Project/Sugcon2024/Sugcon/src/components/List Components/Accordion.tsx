@@ -41,7 +41,7 @@ interface AccordionProps {
 
 export const Default = (props: AccordionProps): JSX.Element => {
   return (
-    <Box>
+    <Box w="100%" maxW="1366px" m="auto" pt={20}>
       {(isEditorActive() || props.fields?.Headline?.value !== '') && (
         <Heading size="lg" mb={4}>
           <JssText field={props.fields.Headline} />

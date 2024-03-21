@@ -63,6 +63,7 @@ export const Default = (props: VenueProps): JSX.Element => {
   return (
     <Box className={`component ${props.params.styles}`} id={id ? id : undefined}>
       <Flex
+        maxW="1366px"
         w={{ base: '100vw', md: '80vw' }}
         my={{ base: '0', md: '20' }}
         mx={{ base: '0', md: 'auto' }}
