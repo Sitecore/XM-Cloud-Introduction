@@ -5,9 +5,9 @@ namespace Mvp.Feature.People.Extensions
 {
     public static class HyperLinkFieldExtensions
     {
-        public static Uri ToUri(this HyperLinkField field)
+        public static Uri? ToUri(this HyperLinkField field)
         {
-            Uri result = null;
+            Uri? result = null;
             if (!string.IsNullOrWhiteSpace(field.Value.Href))
             {
                 result = new Uri(field.Value.Href, UriKind.RelativeOrAbsolute);

@@ -31,6 +31,5 @@ namespace Mvp.Project.MvpSite.Models
 
         [SitecoreRouteField]
         public TextField OgType { get; set; }
-        
     }
 }

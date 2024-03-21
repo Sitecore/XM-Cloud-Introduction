@@ -7,9 +7,9 @@ namespace Mvp.Feature.People.Models.Directory
 {
     public class FacetViewModel
     {
-        public string Identifier { get; set; }
+        public required string Identifier { get; set; }
         
-        public TextField Name { get; set; }
+        public TextField? Name { get; set; }
 
         public List<FacetOption> FacetOptions { get; set; } = [];
 

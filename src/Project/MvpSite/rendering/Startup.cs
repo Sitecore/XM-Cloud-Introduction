@@ -102,6 +102,10 @@ namespace Mvp.Project.MvpSite
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            else
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
             // ReSharper disable StringLiteralTypo - Uri segments
             //Add redirects for old mvp pages
@@ -145,14 +149,14 @@ namespace Mvp.Project.MvpSite
 
             // ReSharper disable StringLiteralTypo - Uri segments
             app.UseEndpoints(endpoints =>
-                {
-                    endpoints.MapControllerRoute(
+            {
+                endpoints.MapControllerRoute(
                   "error",
                   "error",
                   new { controller = "Default", action = "Error" }
                 );
 
-                    endpoints.MapControllerRoute(
+                endpoints.MapControllerRoute(
                   "healthz",
                   "healthz",
                   new { controller = "Default", action = "Healthz" }

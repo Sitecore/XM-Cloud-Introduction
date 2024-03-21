@@ -8,11 +8,11 @@ namespace Mvp.Feature.People.Models.Profile
     {
         public DateTime Date { get; set; }
 
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
-        public Uri Uri { get; set; }
+        public Uri? Uri { get; set; }
 
         public ContributionType? ContributionType { get; set; }
 

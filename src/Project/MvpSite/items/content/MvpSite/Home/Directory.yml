@@ -5,6 +5,9 @@ Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
 Path: /sitecore/content/MvpSite/Home/Directory
 BranchID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
 SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/users_crowd.png
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 850
@@ -48,7 +51,7 @@ Languages:
         sitecore\ed7gR4aY22
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3e19999d-5af2-480d-83bd-92cb0af2d06c"
+      Value: "84a36842-4799-4861-ac72-dc903a782f2c"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Directory
@@ -58,7 +61,7 @@ Languages:
         sitecore\ed7gR4aY22
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240313T140938Z
+      Value: 20240321T074502Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
       Hint: IncludeInMenu
       Value: 1

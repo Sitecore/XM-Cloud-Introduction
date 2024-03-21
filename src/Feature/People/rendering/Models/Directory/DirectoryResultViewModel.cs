@@ -8,19 +8,19 @@ namespace Mvp.Feature.People.Models.Directory
 {
     public class DirectoryResultViewModel
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
-        public string Country { get; set; }
+        public string? Country { get; set; }
 
-        public Uri Image { get; set; }
+        public Uri? Image { get; set; }
 
-        public string Year { get; set; }
+        public string? Year { get; set; }
 
-        public Uri ProfileUri { get; set; }
+        public Uri? ProfileUri { get; set; }
 
-        public static DirectoryResultViewModel FromMvpProfile(MvpProfile profile, Uri pageUri)
+        public static DirectoryResultViewModel FromMvpProfile(MvpProfile profile, Uri? pageUri)
         {
             DirectoryResultViewModel result = new ();
             Title last = profile.Titles.OrderByDescending(t => t.Application.Selection.Year).First();
