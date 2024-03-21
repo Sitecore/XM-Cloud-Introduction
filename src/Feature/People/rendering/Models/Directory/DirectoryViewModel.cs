@@ -6,23 +6,24 @@ using Sitecore.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Feature.People.Models.Directory
 {
-    public class DirectoryViewModel : BaseModel
+    public class DirectoryViewModel
+        : BaseViewModel
     {
         public const string QueryQueryStringKey = "q";
 
         public const string PageQueryStringKey = "pg";
         
-        public TextField TopTitleLabel { get; set; }
+        public TextField? TopTitleLabel { get; set; }
 
-        public TextField TitleLabel { get; set; }
+        public TextField? TitleLabel { get; set; }
 
-        public TextField SearchLabel { get; set; }
+        public TextField? SearchLabel { get; set; }
 
         public ContentListField Facets { get; set; } = [];
 
         public List<FacetViewModel> ViewFacets { get; set; } = [];
 
-        public TextField PagingResults { get; set; }
+        public TextField? PagingResults { get; set; }
 
         public TextField PagingResultsFormat { get; set; } = new("{0} - {1} of {2}");
 
@@ -34,10 +35,10 @@ namespace Mvp.Feature.People.Models.Directory
 
         public List<DirectoryResultViewModel> Results { get; set; } = [];
 
-        public HyperLinkField MvpProfileLink { get; set; }
+        public HyperLinkField? MvpProfileLink { get; set; }
 
         [FromQuery(Name = QueryQueryStringKey)]
-        public string Query { get; set; }
+        public string? Query { get; set; }
 
         [FromQuery(Name = PageQueryStringKey)]
         public int Page { get; set; } = 1;

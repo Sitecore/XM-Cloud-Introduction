@@ -5,6 +5,7 @@
     <AssemblyName>Mvp.Feature.People</AssemblyName>
     <RootNamespace>Mvp.Feature.People</RootNamespace>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

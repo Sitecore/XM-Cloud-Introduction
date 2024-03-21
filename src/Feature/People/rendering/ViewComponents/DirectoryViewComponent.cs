@@ -44,7 +44,7 @@ namespace Mvp.Feature.People.ViewComponents
             await ExecuteSearch(model);
             MergeFacetsAndViewFacets(model);
 
-            return model.ErrorMessages.Count > 0 ? View("~/Views/Shared/Error.cshtml", model) : View(model);
+            return model.ErrorMessages.Count > 0 ? View("~/Views/Shared/Components/Directory/Error.cshtml", model) : View(model);
         }
 
         private static void MergeFacetsAndViewFacets(DirectoryViewModel model)
@@ -52,13 +52,13 @@ namespace Mvp.Feature.People.ViewComponents
             List<string> removeIdentifiers = [];
             foreach (FacetViewModel facet in model.ViewFacets)
             {
-                ItemLinkField cmsFacet = model.Facets.FirstOrDefault(f =>
-                    f.Fields.TryGetValue(nameof(FacetViewModel.Identifier), out IFieldReader identifierReader)
+                ItemLinkField? cmsFacet = model.Facets.FirstOrDefault(f =>
+                    f.Fields.TryGetValue(nameof(FacetViewModel.Identifier), out IFieldReader? identifierReader)
                     && identifierReader.TryRead(out TextField identifierField)
                     && identifierField.Value == facet.Identifier);
 
                 if (cmsFacet != null
-                    && cmsFacet.Fields.TryGetValue(nameof(FacetViewModel.Name), out IFieldReader nameReader)
+                    && cmsFacet.Fields.TryGetValue(nameof(FacetViewModel.Name), out IFieldReader? nameReader)
                     && nameReader.TryRead(out TextField nameField))
                 {
                     facet.Name = nameField;
@@ -73,10 +73,10 @@ namespace Mvp.Feature.People.ViewComponents
             model.ViewFacets.RemoveAll(f => removeIdentifiers.Contains(f.Identifier));
         }
 
-        private static List<short> ExtractSearchIdentifiers(IEnumerable<FacetViewModel> facets, string identifier)
+        private static List<short>? ExtractSearchIdentifiers(IEnumerable<FacetViewModel> facets, string identifier)
         {
-            List<short> result = null;
-            FacetViewModel facet = facets.FirstOrDefault(f => f.Identifier == identifier);
+            List<short>? result = null;
+            FacetViewModel? facet = facets.FirstOrDefault(f => f.Identifier == identifier);
             if (facet != null)
             {
                 List<short?> identifiers = facet.FacetOptions
@@ -94,7 +94,7 @@ namespace Mvp.Feature.People.ViewComponents
         {
             foreach (SearchFacetOption option in options)
             {
-                FacetOption viewOption =
+                FacetOption? viewOption =
                     viewFacet.FacetOptions.FirstOrDefault(o => o.Identifier == option.Identifier);
                 if (viewOption != null)
                 {
@@ -107,25 +107,21 @@ namespace Mvp.Feature.People.ViewComponents
                 }
             }
 
-            switch (viewFacet.Identifier)
+            viewFacet.FacetOptions = viewFacet.Identifier switch
             {
-                case YearFacetIdentifier:
-                    viewFacet.FacetOptions = [..viewFacet.FacetOptions.OrderByDescending(o => o.Display)];
-                    break;
-                default:
-                    viewFacet.FacetOptions = [..viewFacet.FacetOptions.OrderBy(o => o.Display)];
-                    break;
-            }
+                YearFacetIdentifier => [..viewFacet.FacetOptions.OrderByDescending(o => o.Display)],
+                _ => [..viewFacet.FacetOptions.OrderBy(o => o.Display)]
+            };
         }
 
         private async Task ExecuteSearch(DirectoryViewModel model)
         {
-            List<short> mvpTypeFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, MvpTypeFacetIdentifier);
-            List<short> yearFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, YearFacetIdentifier);
-            List<short> countryFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, CountryFacetIdentifier);
+            List<short>? mvpTypeFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, MvpTypeFacetIdentifier);
+            List<short>? yearFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, YearFacetIdentifier);
+            List<short>? countryFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, CountryFacetIdentifier);
             string cacheKey =
                 $"{SearchCacheKeyPrefix}{model.Query}_{mvpTypeFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_{yearFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_{countryFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_p{model.Page}/{model.PageSize}";
-            if (!cache.TryGetValue(cacheKey, out SearchResult<MvpProfile> profiles))
+            if (!cache.TryGetValue(cacheKey, out SearchResult<MvpProfile>? profiles))
             {
                 Response<SearchResult<MvpProfile>> response = await client.SearchMvpProfileAsync(
                     model.Query,
@@ -134,7 +130,7 @@ namespace Mvp.Feature.People.ViewComponents
                     countryFacetIdentifiers,
                     model.Page,
                     model.PageSize);
-                if (response.StatusCode == HttpStatusCode.OK && response.Result != null)
+                if (response is { StatusCode: HttpStatusCode.OK, Result: not null })
                 {
                     profiles = response.Result;
                     cache.Set(cacheKey, response.Result, TimeSpan.FromSeconds(_options.SearchCachedSeconds));
@@ -157,7 +153,7 @@ namespace Mvp.Feature.People.ViewComponents
 
                 foreach (SearchFacet facet in profiles.Facets)
                 {
-                    FacetViewModel viewFacet = model.ViewFacets.FirstOrDefault(f => f.Identifier == facet.Identifier);
+                    FacetViewModel? viewFacet = model.ViewFacets.FirstOrDefault(f => f.Identifier == facet.Identifier);
                     if (viewFacet is null)
                     {
                         viewFacet = new FacetViewModel { Identifier = facet.Identifier };
@@ -173,19 +169,19 @@ namespace Mvp.Feature.People.ViewComponents
         {
             foreach (KeyValuePair<string, StringValues> qs in HttpContext.Request.Query.Where(q => q.Key.StartsWith(FacetQuerystringPrefix)))
             {
-                FacetViewModel facet = model.ViewFacets.FirstOrDefault(f =>
+                FacetViewModel? facet = model.ViewFacets.FirstOrDefault(f =>
                     qs.Key.Equals(FacetQuerystringPrefix + f.Identifier, StringComparison.InvariantCultureIgnoreCase));
                 if (facet != null)
                 {
-                    foreach (string value in qs.Value)
+                    foreach (string? value in qs.Value)
                     {
-                        FacetOption facetOption = facet.FacetOptions.FirstOrDefault(o =>
+                        FacetOption? facetOption = facet.FacetOptions.FirstOrDefault(o =>
                             o.Identifier.Equals(value, StringComparison.InvariantCultureIgnoreCase));
                         if (facetOption != null)
                         {
                             facetOption.IsActive = true;
                         }
-                        else
+                        else if (value != null)
                         {
                             facet.FacetOptions.Add(new FacetOption { IsActive = true, Identifier = value });
                         }
@@ -194,7 +190,7 @@ namespace Mvp.Feature.People.ViewComponents
                 else
                 {
                     facet = new FacetViewModel { Identifier = qs.Key[FacetQuerystringPrefix.Length..] };
-                    foreach (string value in qs.Value)
+                    foreach (string? value in qs.Value.OfType<string>())
                     {
                         facet.FacetOptions.Add(new FacetOption { IsActive = true, Identifier = value });
                     }

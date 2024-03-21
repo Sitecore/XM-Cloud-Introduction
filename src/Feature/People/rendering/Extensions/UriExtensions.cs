@@ -5,9 +5,9 @@ namespace Mvp.Feature.People.Extensions
 {
     public static class UriExtensions
     {
-        public static Uri AddQueryString(this Uri uri, string key, string value)
+        public static Uri? AddQueryString(this Uri? uri, string key, string value)
         {
-            Uri result = uri;
+            Uri? result = uri;
             if (uri != null)
             {
                 int queryIndex = uri.OriginalString.IndexOf('?');
@@ -19,10 +19,10 @@ namespace Mvp.Feature.People.Extensions
             return result;
         }
 
-        public static Uri AddGravatarSizing(this Uri uri, string size)
+        public static Uri? AddGravatarSizing(this Uri? uri, string size)
         {
-            Uri result = uri;
-            if (uri != null && uri.IsAbsoluteUri && uri.Host == "www.gravatar.com")
+            Uri? result = uri;
+            if (uri != null && uri is { IsAbsoluteUri: true, Host: "www.gravatar.com" })
             {
                 result = uri.AddQueryString("s", size).AddQueryString("d", "https://mvp.sitecore.net/images/mvp-base-user-grey.png");
             }

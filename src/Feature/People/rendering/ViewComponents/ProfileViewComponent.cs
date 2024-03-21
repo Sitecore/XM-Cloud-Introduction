@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Mvp.Feature.People.Models.Profile;
@@ -11,6 +13,7 @@ using Mvp.Selections.Domain;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using Mvp.Feature.People.Configuration;
+using Mvp.Feature.People.Extensions;
 
 namespace Mvp.Feature.People.ViewComponents
 {
@@ -35,8 +38,9 @@ namespace Mvp.Feature.People.ViewComponents
             {
                 await LoadProfile(model);
             }
-            
-            return model.ErrorMessages.Count > 0 ? View("~/Views/Shared/Error.cshtml", model) :  View(model);
+
+            return model.ErrorMessages.Count > 0 ? View("~/Views/Shared/Components/Profile/Error.cshtml", model) :
+                model.Mvp != null ? View(model) : View("~/Views/Shared/Components/Profile/NotFound.cshtml", model);
         }
 
         private static void GenerateFakeDataForEdit(ProfileViewModel model)
@@ -102,7 +106,7 @@ namespace Mvp.Feature.People.ViewComponents
                 PublicContributions = [
                     new Contribution(Guid.NewGuid())
                     {
-                        Name = "Blah Blah Blaah",
+                        Name = "Blah Blah Blah",
                         Type = ContributionType.BlogPost,
                         Date = DateTime.Today.AddDays(-14),
                         IsPublic = true,
@@ -138,29 +142,72 @@ namespace Mvp.Feature.People.ViewComponents
         {
             if (model.Id.HasValue)
             {
-                string cacheKey = $"{ProfileCacheKeyPrefix}{model.Id:N}";
-                if (cache.TryGetValue(cacheKey, out MvpProfile profile))
+                model.Mvp = await GetProfileById(model.Id.Value, model.ErrorMessages);
+            }
+            else if (HttpContext.Request.Path.HasValue)
+            {
+                string? lastSegment = HttpContext.Request.Path.Value.Split('/', StringSplitOptions.RemoveEmptyEntries)
+                    .LastOrDefault();
+                if (!string.IsNullOrWhiteSpace(lastSegment))
                 {
-                    model.Mvp = profile;
+                    model.Mvp = await GetProfileByName(lastSegment.DecodeSpaces(), model.ErrorMessages);
                 }
-                else
-                {
-                    Response<MvpProfile> response = await client.GetMvpProfileAsync(model.Id.Value);
-                    if (response.StatusCode == HttpStatusCode.OK && response.Result != null)
-                    {
-                        model.Mvp = response.Result;
-                        cache.Set(cacheKey, response.Result, TimeSpan.FromSeconds(_options.ProfileCachedSeconds));
-                    }
-                    else
-                    {
-                        model.ErrorMessages.Add(response.Message);
-                    }
-                }
+            }
+        }
+
+        private async Task<MvpProfile?> GetProfileByName(string name, List<string> errorMessages)
+        {
+            MvpProfile? result = null;
+            string cacheKey = $"{ProfileCacheKeyPrefix}{name}_id";
+            if (cache.TryGetValue(cacheKey, out Guid? id) && id.HasValue)
+            {
+                result = await GetProfileById(id.Value, errorMessages);
             }
             else
             {
-                model.ErrorMessages.Add("No Id passed in the Uri.");
+                Response<SearchResult<MvpProfile>> response = await client.SearchMvpProfileAsync(name);
+                if (response is { StatusCode: HttpStatusCode.OK, Result.Results.Count: 1 })
+                {
+                    id = response.Result.Results.Single().Id;
+                    result = await GetProfileById(id.Value, errorMessages);
+                    cache.Set(cacheKey, id, TimeSpan.FromSeconds(_options.ProfileCachedSeconds));
+                }
+                else if (response is { StatusCode: HttpStatusCode.OK, Result.Results.Count: > 1 })
+                {
+                    errorMessages.Add($"Found '{response.Result.Results.Count}' results for '{name}', unable to display. Please access by ID instead.");
+                }
+                else
+                {
+                    errorMessages.Add(response.Message);
+                }
             }
+
+            return result;
+        }
+
+        private async Task<MvpProfile?> GetProfileById(Guid id, List<string> errorMessages)
+        {
+            MvpProfile? result = null;
+            string cacheKey = $"{ProfileCacheKeyPrefix}{id:N}";
+            if (cache.TryGetValue(cacheKey, out MvpProfile? profile))
+            {
+                result = profile;
+            }
+            else
+            {
+                Response<MvpProfile> response = await client.GetMvpProfileAsync(id);
+                if (response is { StatusCode: HttpStatusCode.OK, Result: not null })
+                {
+                    result = response.Result;
+                    cache.Set(cacheKey, response.Result, TimeSpan.FromSeconds(_options.ProfileCachedSeconds));
+                }
+                else
+                {
+                    errorMessages.Add(response.Message);
+                }
+            }
+
+            return result;
         }
     }
 }
