@@ -6,6 +6,7 @@ This repository contains the codebase for a series of sites managed by the Techn
 - [SUGCON EU Site](https://europe.sugcon.events)
 - [SUGCON ANZ Site](https://anz.sugcon.events)
 - [SUGCON India Site](https://india.sugcon.events)
+- [SUGCON NA Site](https://na.sugcon.events)
 - [SUGCON Events Site](https://www.sugcon.events)
 
 # ✅ Build Status
