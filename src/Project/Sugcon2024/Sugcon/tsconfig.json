@@ -6,6 +6,7 @@
       "lib/*": ["src/lib/*"],
       "temp/*": ["src/temp/*"],
       "assets/*": ["src/assets/*"],
+      "template/*": ["src/components/Templates/*"],
       "graphql-types": ["node_modules/@types/graphql-let/__generated__/__types__"],
       "react": ["node_modules/@types/react"]
     },
@@ -35,3 +36,4 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
+

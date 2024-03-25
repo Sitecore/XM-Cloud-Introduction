@@ -1,152 +1,79 @@
-@import "@sass/abstracts/vars";
-@import "variables";
+//*************************************************************************************************
+// Hamburgler Animated Icon
+//*************************************************************************************************
+#mobile-hamburger-icon {
+  z-index: 10;
+  align-self: center;
+  width: 25px;
+  height: 20px;
+  position: relative;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 
-$hamburger-width: 28px;
-$hamburger-height: 18px;
-$border-size: 6px;
-$hamburger-margin: 18px;
-
-.navigation {
-  .menu-mobile-navigate-wrapper {
+  & span {
+    display: block;
+    position: absolute;
+    height: 2px;
     width: 100%;
+    background: #707070;
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+
+  & span:nth-child(1) {
+    top: 0px;
+  }
+
+  & span:nth-child(2),
+  & span:nth-child(3) {
+    top: 9px;
+  }
+
+  & span:nth-child(4) {
+    top: 18px;
+  }
+
+  &.open span:nth-child(1) {
+    top: 9px;
+    width: 0%;
+    left: 50%;
+  }
+
+  &.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  &.open span:nth-child(4) {
+    top: 9px;
+    width: 0%;
+    left: 50%;
   }
 }
 
-.navigation {
-  width: 100%;
-  padding-right: 70px;  
-
-  .menu-mobile-navigate {
-    display: none;
-  }
-  
-  @include respond-to(mobile-large) {
-    padding-right: 0;
-  }
-
-  .component-content {
-    display: inline-block;
-
-    @include respond-to(mobile-large) {
-      display: none;
-    }
-    
-    ul.clearfix {
-      list-style: none;
-    }
-    .level0 {
-      display: flex;
-    }
-  
-    .level0, .level1 {
-      float: left;
-      margin-left: 24px;
-      margin-top: 6px;
-      max-height: 70px;
-
-      >.navigation-title {
-        >a {
-          border-width: 0;
-          font-size: $text-size-18;
-          font-weight: bold;
-        }
-      }
-    }    
-  }
-
-  @include respond-to(mobile-large) {
-    .component-content {
-      display: none;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      background-color: $bg-basic-color;
-      z-index: 1;
-
-      * {
-        text-align: center !important;
-      }
-
-      nav {
-        padding-top: 110px;
-        
-        .level0 {
-          display: block;
-        }
-      }
-      
-      ul {
-        margin: 0;
-        padding: 0;
-      }
-
-      .level0, .level1 {
-        float: unset;
-        margin-left: 0;
-        >.navigation-title {
-          >a {
-            font-size: $text-size-30;
-            line-height: 90px;
-            margin: auto;
-            >span {
-              color: $text-black;
-            }
-          }
-        }
-      }
-    }
-
-    .menu-mobile-navigate-wrapper {
-      .menu-mobile-navigate {
-        display: inline-block;
-        z-index: 2;
-        position: absolute;
-        right: $hamburger-margin;
-        top: $hamburger-margin;
-        height: $hamburger-width;
-        width: $hamburger-width;
-        opacity: 0;
-
-        &:checked ~ {
-          .menu-humburger {
-            &::before {
-              content: "\00d7";
-              color: $text-basic-active;
-              font-size: $text-size-48;
-              position: fixed;
-              top: 0;
-              right: 0;
-              margin-top: calc($hamburger-margin + ($hamburger-margin / 2));
-              margin-right: $hamburger-margin;
-              line-height: 0;
-              border: 0;
-            }
-          }
-
-          .component-content {
-            position: fixed;
-            display: inline-block;
-          }
-        }
-      }
-
-      .menu-humburger {
-        &::before {
-          content: "";
-          width: $hamburger-width;
-          height: $hamburger-height;
-          margin-right: $hamburger-margin;
-          margin-top: calc($hamburger-margin + ($hamburger-margin / 2)) + 8px;
-          display: block;
-          border-top: 6px solid $bg-black;
-          border-bottom: 6px solid $bg-black;
-          float: right;
-          z-index: 99;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-}

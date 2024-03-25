@@ -1,5 +1,5 @@
-@import "@sass/abstracts/mixins";
-@import "variables";
+@import '@sass/abstracts/mixins';
+@import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
 
 body {
@@ -7,28 +7,11 @@ body {
   color: $main-color;
 }
 
-
 @media (min-width: 1400px) {
   .container {
     max-width: 1250px;
   }
 }
-
-/**** START STYLE MAX HEIGHT ****/
-.prod-mode {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-
-  main {
-    flex: 1 0 auto;
-  }
-
-  footer {
-    flex-shrink: 0;
-  }
-}
-/**** END STYLE MAX HEIGHT ****/
 
 main {
   .main-header {
@@ -56,9 +39,6 @@ main {
   }
 
   @include respond-to(mobile-large) {
-    padding-top: 0;
-    margin-bottom: 0;
-
     .main-header {
       margin-top: 10px;
 
@@ -67,7 +47,7 @@ main {
         line-height: 32px;
       }
     }
-    
+
     .main-news-header {
       padding-bottom: 35px;
 
@@ -79,3 +59,4 @@ main {
     }
   }
 }
+

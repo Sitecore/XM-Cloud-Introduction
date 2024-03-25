@@ -1,5 +1,5 @@
 html {
-  font-size: 62.5%;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-bottom: 0px;
@@ -87,7 +87,9 @@ ul li {
   display: none;
 }
 
-#header, #content, #footer, .sc-jss-empty-placeholder {
+#content,
+#footer,
+.sc-jss-empty-placeholder {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -97,6 +99,7 @@ ul li {
   background: #ff0000;
   outline: 5px solid #e36565;
   padding: 10px;
-  color:#fff;
+  color: #fff;
   max-width: 500px;
 }
+

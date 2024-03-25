@@ -1,12 +1,27 @@
-@import "@sass/abstracts/mixins";
-@import "variables";
+@import '@sass/abstracts/mixins';
+@import 'variables';
 
 footer {
   @include respond-to(mobile-large) {
     padding-top: 0;
   }
+
   .container-dark-background {
     background-color: #262626;
+  }
+
+  & > .component {
+    padding: 0;
+  }
+
+  & * a {
+    color: white !important; // Hate doing this, but unless the main partial footer can be edited..
+  }
+
+  .image {
+    &:not(.header-image) {
+      background-color: #fff;
+    }
   }
 
   .contacts {
@@ -16,7 +31,8 @@ footer {
       color: $text-white;
     }
 
-    p, span {
+    p,
+    span {
       color: $text-white;
     }
   }
@@ -29,3 +45,4 @@ footer {
     }
   }
 }
+

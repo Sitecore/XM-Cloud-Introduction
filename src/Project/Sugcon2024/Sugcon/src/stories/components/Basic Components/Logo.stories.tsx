@@ -20,7 +20,7 @@ export const Logo: Story = {
     fields: {
       Image: {
         value: {
-          src: 'https://img.logoipsum.com/300.svg',
+          src: 'https://edge.sitecorecloud.io/sitecoresaa94c3-xmcloudintr2ef7-production-9f57/media/Project/Sugcon2024/shared/Logos/SUGCON-Logo-2023-Europe-Horz-RGB.png?h=58&iar=0&w=200',
           alt: 'Logo',
           width: '200',
           height: '50',
@@ -34,7 +34,7 @@ export const Logo: Story = {
       },
       ImageCaption: {
         value: 'A circular logo with red, yellow and blue stripes',
-      }
+      },
     },
   },
 };
