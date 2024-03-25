@@ -9,7 +9,7 @@
                 $e.css("height", "");
             }
             else {                
-                if (i % 3 === 0) {
+                if (i % 3 === 0 && $e.next().length > 0) {
                     $e.height(50);
                 }
                 else if (i % 3 === 1) {
@@ -90,6 +90,7 @@ $(document).ready(function () {
         setTimeout(timelineEventsHeightRecalculation($timeline, $window.width() < 576), 2000);
         setTimeout(timelineEventsHeightRecalculation($timeline, $window.width() < 576), 3000);
         setTimeout(timelineEventsHeightRecalculation($timeline, $window.width() < 576), 5000);
+        setTimeout(timelineEventsHeightRecalculation($timeline, $window.width() < 576), 10000);
         
         $window.on("resize", function () {
             timelineEventsHeightRecalculation($timeline, $window.width() < 576);
