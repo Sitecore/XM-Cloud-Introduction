@@ -62,6 +62,10 @@ namespace Mvp.Project.MvpSite.Middleware
                     // [IVA] Bust the RenderingEngine execution cache
                     context.Items.Remove(nameof(RenderingEngineMiddleware));
                     context.Features.Set<ISitecoreRenderingContext>(null);
+                    if (context.Request.RouteValues.ContainsKey(RenderingEngineConstants.RouteValues.SitecoreRoute))
+                    {
+                        context.Request.RouteValues.Remove(RenderingEngineConstants.RouteValues.SitecoreRoute);
+                    }
                     
                     // [IVA] Finally we re-run the RenderingEngine
                     await _renderingEngine.Invoke(context, viewComponentHelper, htmlHelper);

@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Mvp.Feature.BasicContent.Extensions;
 using Mvp.Feature.Navigation.Extensions;
-using Mvp.Feature.People.Exntesions;
+using Mvp.Feature.People.Extensions;
 using Mvp.Feature.Selections.Extensions;
 using Mvp.Feature.Social.Extensions;
 using Mvp.Feature.User.Extensions;
@@ -22,24 +22,21 @@ using Sitecore.AspNet.RenderingEngine.Localization;
 using Sitecore.LayoutService.Client.Extensions;
 using Sitecore.LayoutService.Client.Newtonsoft.Extensions;
 
-namespace Mvp.Project.MvpSite.Rendering
+namespace Mvp.Project.MvpSite
 {
-    public class Startup
+    public class Startup(IConfiguration configuration)
     {
         private const string DefaultLanguage = "en";
 
-        public IConfiguration DotNetConfiguration { get; }
-        
-        private MvpSiteSettings Configuration { get; }
+        // ReSharper disable once CommentTypo - Well known name of the file
+        // Example of using ASP.NET Core configuration binding for various Sitecore Rendering Engine settings.
+        // Values can originate in appsettings.json, from environment variables, and more.
+        // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1
+        public IConfiguration DotNetConfiguration { get; } = configuration;
 
-        public Startup(IConfiguration configuration)
-        {
-            // Example of using ASP.NET Core configuration binding for various Sitecore Rendering Engine settings.
-            // Values can originate in appsettings.json, from environment variables, and more.
-            // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1
-            Configuration = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
-            DotNetConfiguration = configuration;
-        }
+        private MvpSiteSettings Configuration { get; } = configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
+
+        
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
@@ -65,7 +62,7 @@ namespace Mvp.Project.MvpSite.Rendering
               {
                   //Register your components here
                   options
-                    .AddFoundationUser()
+                    .AddFeatureUser()
                     .AddFeatureNavigation()
                     .AddFeatureBasicContent()
                     .AddFeatureSocial()
@@ -83,8 +80,7 @@ namespace Mvp.Project.MvpSite.Rendering
             // Register MVP Functionality specific services
             services.AddFeatureSocialServices()
                     .AddFeaturePeopleServices()
-                    .AddFeatureSelectionsServices()
-                    .AddFoundationDataFetchingServices();
+                    .AddFeatureSelectionsServices();
             
             services.AddSession();
 
@@ -106,7 +102,12 @@ namespace Mvp.Project.MvpSite.Rendering
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            else
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
+            // ReSharper disable StringLiteralTypo - Uri segments
             //Add redirects for old mvp pages
             RewriteOptions rewriteOptions = new RewriteOptions()
               .AddRedirect("mvps/(.*)", "Directory?fc_Year=$1")
@@ -114,6 +115,7 @@ namespace Mvp.Project.MvpSite.Rendering
               .AddRedirect("search(.*)", "Directory$1")
               .AddRedirect("Search(.*)", "Directory$1");
             app.UseRewriter(rewriteOptions);
+            // ReSharper restore StringLiteralTypo - Uri segments
 
             // The Experience Editor endpoint should not be enabled in production DMZ.
             // See the SDK documentation for details.
@@ -132,7 +134,7 @@ namespace Mvp.Project.MvpSite.Rendering
             app.UseRequestLocalization(options =>
             {
                 // If you add languages in Sitecore which this site / Rendering Host should support, add them here.
-                List<CultureInfo> supportedCultures = new () { new CultureInfo(DefaultLanguage) };
+                List<CultureInfo> supportedCultures = [new CultureInfo(DefaultLanguage)];
                 options.DefaultRequestCulture = new RequestCulture(DefaultLanguage, DefaultLanguage);
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
@@ -145,15 +147,16 @@ namespace Mvp.Project.MvpSite.Rendering
             app.UseAuthentication();
             app.UseAuthorization();
 
+            // ReSharper disable StringLiteralTypo - Uri segments
             app.UseEndpoints(endpoints =>
-                {
-                    endpoints.MapControllerRoute(
+            {
+                endpoints.MapControllerRoute(
                   "error",
                   "error",
                   new { controller = "Default", action = "Error" }
                 );
 
-                    endpoints.MapControllerRoute(
+                endpoints.MapControllerRoute(
                   "healthz",
                   "healthz",
                   new { controller = "Default", action = "Healthz" }
@@ -167,6 +170,7 @@ namespace Mvp.Project.MvpSite.Rendering
                 // Fall back to language-less routing as well, and use the default culture (en).
                 endpoints.MapFallbackToController("Index", "Default");
             });
+            // ReSharper restore StringLiteralTypo - Uri segments
         }
 
         private static ForwardedHeadersOptions ConfigureForwarding()
@@ -176,6 +180,7 @@ namespace Mvp.Project.MvpSite.Rendering
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             };
 
+            // ReSharper disable once CommentTypo - Actual product name
             // Allow forwarding of headers from Traefik in development & NGINX in k8s
             options.KnownNetworks.Clear();
             options.KnownProxies.Clear();

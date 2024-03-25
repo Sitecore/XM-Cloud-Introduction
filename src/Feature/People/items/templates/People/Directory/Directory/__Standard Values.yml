@@ -1,0 +1,50 @@
+﻿---
+ID: "608f4fea-6d9d-4c7a-920e-5597a9ee1814"
+Parent: "c8b1348a-21e6-40ac-b7a4-e4f826d9fec5"
+Template: "c8b1348a-21e6-40ac-b7a4-e4f826d9fec5"
+Path: /sitecore/templates/Feature/People/Directory/Directory/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: "{979D80E0-68DF-4D8C-B5F6-F5552E59908F}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240224T140200Z
+    - ID: "336697eb-9b04-4503-9a75-55b7f515b938"
+      Hint: PagingResultsFormat
+      Value: "{0} - {1} of {2}"
+    - ID: "41fccdbf-3bd2-4485-a701-9897ae7da8ea"
+      Hint: TopTitleLabel
+      Value: Directory of
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "5ab78168-cea7-4d12-93d1-53292bcbf1b7"
+      Hint: TitleLabel
+      Value: Sitecore MVPs
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "6ab274cf-c79d-4d8e-bb2f-bcab0b8d78ee"
+      Hint: PagingResults
+      Value: Results
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2662e25b-3a63-4011-b80e-e86141b501f3"
+    - ID: "98a6caa5-4cad-46c6-aeda-9b2cd31bb66a"
+      Hint: SearchLabel
+      Value: Search...
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240224T141701Z

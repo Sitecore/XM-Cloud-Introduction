@@ -7,7 +7,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PlatformVersion>1.*</PlatformVersion>
-    <SitecoreAspNetVersion>20.0.*</SitecoreAspNetVersion>
+    <SitecoreAspNetVersion>21.0.*</SitecoreAspNetVersion>
     <DotNetVersion>8.0.0</DotNetVersion>
   </PropertyGroup>
   <ItemGroup>
@@ -17,26 +17,27 @@
     <PackageReference Update="Sitecore.XmCloud.ContentSearch.Linq" Version="$(PlatformVersion)" />
     <PackageReference Update="Sitecore.XmCloud.LayoutService" Version="$(PlatformVersion)" />
     <PackageReference Update="Sitecore.XmCloud.Assemblies" Version="$(PlatformVersion)" />
-    <PackageReference Update="Sitecore.Assemblies.SitecoreHeadlessServicesServer" Version="19.*" />
 
     <!-- Rendering Host -->
-    <PackageReference Update="BuildWebCompiler" Version="1.12.405" />
-    <PackageReference Update="GraphQL.Client" Version="4.0.2" />
-    <PackageReference Update="GraphQL.Client.Serializer.Newtonsoft" Version="4.0.2" />
-    <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="$(DotNetVersion)" />
-    <PackageReference Update="Microsoft.AspNetCore.Session" Version="2.2.0" />
-    <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(DotNetVersion)" />
-    <PackageReference Update="Microsoft.Extensions.Http" Version="$(DotNetVersion)"/>
-    <PackageReference Update="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="$(DotNetVersion)" />
-    <PackageReference Update="System.IdentityModel.Tokens.Jwt" Version="6.17.0" />
-    <PackageReference Update="System.ServiceModel.Syndication" Version="$(DotNetVersion)" />
+    <PackageReference Update="Sitecore.Assemblies.SitecoreHeadlessServicesServer" Version="$(SitecoreAspNetVersion)" />
     <PackageReference Update="Sitecore.LayoutService.Client" Version="$(SitecoreAspNetVersion)" />
     <PackageReference Update="Sitecore.AspNet.RenderingEngine" Version="$(SitecoreAspNetVersion)" />
     <PackageReference Update="Sitecore.AspNet.ExperienceEditor" Version="$(SitecoreAspNetVersion)" />
-    <PackageReference Update="Okta.AspNetCore" Version="4.4.0" />
-    <PackageReference Update="Mvp.Selections.Client" Version="4.12.1" />
+
+    <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(DotNetVersion)" />
+    <PackageReference Update="Microsoft.Extensions.Http" Version="$(DotNetVersion)"/>
+    <PackageReference Update="System.ServiceModel.Syndication" Version="$(DotNetVersion)" />
+
+    <PackageReference Update="BuildWebCompiler" Version="1.12.405" />
+    <PackageReference Update="GraphQL.Client" Version="4.0.2" />
+    <PackageReference Update="GraphQL.Client.Serializer.Newtonsoft" Version="4.0.2" />
+    <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.2" />
+    <PackageReference Update="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Update="System.IdentityModel.Tokens.Jwt" Version="7.3.1" />
+    <PackageReference Update="Okta.AspNetCore" Version="4.5.0" />
+    <PackageReference Update="Mvp.Selections.Client" Version="4.13.1" />
     <PackageReference Update="StyleCop.Analyzers" Version="1.1.118" />
-    <PackageReference Update="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
-    <PackageReference Update="Markdig" Version="0.33.0" />
+    <PackageReference Update="Microsoft.ApplicationInsights.AspNetCore" Version="2.22.0" />
+    <PackageReference Update="Markdig" Version="0.34.0" />
   </ItemGroup>
 </Project>

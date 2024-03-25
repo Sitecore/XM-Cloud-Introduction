@@ -1,0 +1,63 @@
+﻿@import '../../_colors.scss';
+
+.mvp-fp-profile {
+    h1 {
+        position: relative;
+
+        &::after {
+            content: " ";
+            background-image: url(../images/icon-hero.png);
+            position: absolute;
+            width: 76px;
+            height: 53px;
+            top: -9px;
+            left: -93px;
+        }
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 900;
+        letter-spacing: 2.8px;
+        color: $text-gray;
+    }
+
+    .profile-links {
+        font-size: 2em;
+        word-spacing: 0.3em;
+
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+    .timeline {
+        img {
+            max-width: 100%;
+        }
+
+        .badge-primary {
+            background-color: $sitecore-teal;
+
+            & i.fa {
+                color: $contrast-text;
+                font-size: 2em;
+            }
+        }
+
+        .line {
+            position: relative;
+
+            &:after {
+                background-color: $sitecore-teal;
+                content: "";
+                display: block;
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                left: 50%;
+            }
+        }
+    }
+}

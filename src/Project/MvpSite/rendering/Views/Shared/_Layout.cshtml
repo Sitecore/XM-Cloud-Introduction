@@ -1,4 +1,4 @@
-﻿@model LayoutViewModel
+﻿@model Mvp.Project.MvpSite.Models.LayoutViewModel
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,37 +7,37 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     
-    @if(!String.IsNullOrEmpty(@Model?.MetaKeywords?.Value))
+    @if(!string.IsNullOrEmpty(Model?.MetaKeywords?.Value))
     {
         <meta name="keywords" content="@Model.MetaKeywords?.Value" />
     }
-    @if(!String.IsNullOrEmpty(@Model?.MetaDescription?.Value))
+    @if(!string.IsNullOrEmpty(Model?.MetaDescription?.Value))
     {
         <meta name="description" content="@Model.MetaDescription?.Value" />
     }
-    @if(!String.IsNullOrEmpty(@Model?.OgTitle?.Value))
+    @if(!string.IsNullOrEmpty(Model?.OgTitle?.Value))
     {
         <meta property="og:title" content="@Model.OgTitle?.Value" />
     }
-    @if(!String.IsNullOrEmpty(@Model?.OgDescription?.Value))
+    @if(!string.IsNullOrEmpty(Model?.OgDescription?.Value))
     {
         <meta property="og:description" content="@Model.OgDescription?.Value" />
     }
-    @if(!String.IsNullOrEmpty(@Model?.OgImage?.Value?.Src))
+    @if(!string.IsNullOrEmpty(Model?.OgImage?.Value?.Src))
     {
         <meta property="og:image" content="@Model.OgImage?.Value?.Src" />
     }
-    @if(!String.IsNullOrEmpty(@Model?.OgType?.Value))
+    @if(!string.IsNullOrEmpty(Model?.OgType?.Value))
     {
         <meta property="og:type" content="@Model.OgType?.Value" />
     }
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/style/main.min.css?v=2.4" />
+    <link rel="stylesheet" href="/style/main.min.css?v=2.7" />
     @if (this.SitecoreContext() != null && this.SitecoreContext()!.IsEditing)
     {
-	    <link rel="stylesheet" href="/style/ee.css?v=2" />
+	    <link rel="stylesheet" href="/style/ee.css?v=3" />
     }
     <link rel="shortcut icon" href="/images/Sitecore_MVP_logo_2020.jpg" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -66,6 +66,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/js/accordion.js"></script>
-    <script src="/js/mvp-site.js?v=1.7"></script>
+    <script src="/js/mvp-site.es5.min.js?v=1.10"></script>
 </body>
 </html>

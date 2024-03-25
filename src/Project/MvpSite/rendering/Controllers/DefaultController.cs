@@ -12,15 +12,9 @@ using Sitecore.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Project.MvpSite.Controllers
 {
-    public class DefaultController : Controller
+    public class DefaultController(ILogger<DefaultController> logger)
+        : Controller
     {
-        private readonly ILogger<DefaultController> _logger;
-
-        public DefaultController(ILogger<DefaultController> logger)
-        {
-            _logger = logger;
-        }
-
         // Inject Sitecore rendering middleware for this controller action
         // (enables model binding to Sitecore objects such as Route,
         // and causes requests to the Sitecore Layout Service for controller actions)
@@ -36,7 +30,7 @@ namespace Mvp.Project.MvpSite.Controllers
                     switch (error)
                     {
                         default:
-                            _logger.LogError(error, error.Message);
+                            logger.LogError(error, error.Message);
                             throw error;
                     }
                 }

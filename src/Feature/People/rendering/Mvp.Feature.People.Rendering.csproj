@@ -5,6 +5,7 @@
     <AssemblyName>Mvp.Feature.People</AssemblyName>
     <RootNamespace>Mvp.Feature.People</RootNamespace>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -14,17 +15,15 @@
 
 
   <ItemGroup>
+	  <PackageReference Include="Markdig" />
 	  <PackageReference Include="Mvp.Selections.Client" />
 	  <PackageReference Include="Sitecore.LayoutService.Client" />
 	  <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
-    <PackageReference Include="GraphQL.Client" />
-    <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" />
   </ItemGroup>
 
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Configuration\rendering\Mvp.Foundation.Configuration.Rendering.csproj" />
-    <ProjectReference Include="..\..\..\Foundation\DataFetching\rendering\Mvp.Foundation.DataFetching.Rendering.csproj" />
   </ItemGroup>
 
 </Project>

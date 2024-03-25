@@ -1,0 +1,43 @@
+﻿---
+ID: "4d315097-8c88-4552-9835-57922584802e"
+Parent: "bc9559de-2a9e-45cc-956c-71da6656b8cd"
+Template: "bc9559de-2a9e-45cc-956c-71da6656b8cd"
+Path: /sitecore/templates/Feature/People/Profile/Profile/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "07c32ed1-754d-4a83-8c56-97326d40da73"
+      Hint: TimelineLabel
+      Value: Timeline
+    - ID: "08246bde-1cf0-40f7-93f7-2c60ed776b48"
+      Hint: TitleLabel
+      Value: MVP Profile
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240312T130110Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b8e7f35f-9424-4023-89f2-01434ac9dd71"
+    - ID: "b25e24c0-e527-4b1e-9eda-b6fa19fde1da"
+      Hint: TitlesLabel
+      Value: Titles
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240320T170108Z
+    - ID: "f080f207-7019-482a-a784-564a75029474"
+      Hint: NotFoundText
+      Value: <p>This MVP profile could not be found.</p>

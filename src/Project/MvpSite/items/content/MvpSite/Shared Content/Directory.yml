@@ -1,0 +1,33 @@
+﻿---
+ID: "cbf7a100-f126-4379-8175-f325b53d7516"
+Parent: "d2f6ff70-28f6-416e-9882-182f96e4fa0c"
+Template: "c8b1348a-21e6-40ac-b7a4-e4f826d9fec5"
+Path: /sitecore/content/MvpSite/Shared Content/Directory
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "18a1ccac-94ef-4d8d-b338-214d450ee14f"
+      Hint: Facets
+      Value: |
+        {07CCCAAE-6E9C-4C6A-A6EE-7EDAD7C40185}
+        {AF3DC2D0-D8B8-43B1-9C6E-61F64CC3198C}
+        {4DA960C5-89FD-4532-BB70-23DB25E1F34D}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240224T140709Z
+    - ID: "67b4fea0-6066-42ae-bc77-883e79a7d23c"
+      Hint: MvpProfileLink
+      Value: |
+        <link class="" id="{AEB7B39D-711E-453D-A8DA-3A897C69DC56}" querystring="" anchor="" target="" title="" linktype="internal" text="" url="/MvpSite/Home/Directory/Profile" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ee6dfe68-c6a6-4011-8170-ff1b4eb96260"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ed7gR4aY22
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240313T140938Z
