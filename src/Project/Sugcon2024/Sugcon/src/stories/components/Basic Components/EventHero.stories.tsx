@@ -1,16 +1,19 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { HeroEvent } from '../../../components/Basic Components/Hero';
+import { HeroEvent } from 'components/Basic Components/Hero';
+
 const meta = {
   title: 'Basic Components/Hero',
   component: HeroEvent,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  argTypes: {},
 } satisfies Meta<typeof HeroEvent>;
+
 export default meta;
+
 type Story = StoryObj<typeof meta>;
+
 export const Event: Story = {
   name: 'Hero Event',
   args: {
@@ -31,7 +34,7 @@ export const Event: Story = {
       CallToAction: {
         value: {
           href: 'https://www.sitecore.com',
-          anchor: 'Register now',
+          text: 'Register now',
         },
       },
       Image: {

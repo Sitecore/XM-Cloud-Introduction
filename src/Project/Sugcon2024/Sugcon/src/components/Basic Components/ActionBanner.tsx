@@ -5,6 +5,9 @@ import {
   LinkField,
   Text as JssText,
 } from '@sitecore-jss/sitecore-jss-nextjs';
+import clsx from 'clsx';
+import { Button, Flex, Heading, Text } from '@chakra-ui/react';
+import { LayoutFlex } from 'components/Templates/LayoutFlex';
 
 interface Fields {
   Title: Field<string>;
@@ -18,7 +21,7 @@ type ActionBannerProps = {
 };
 
 const ActionBannerDefaultComponent = (props: ActionBannerProps): JSX.Element => (
-  <div className={`component promo ${props.params.styles}`}>
+  <div className={clsx('component', 'promo', props?.params?.styles)}>
     <div className="component-content">
       <span className="is-empty-hint">Agenda</span>
     </div>
@@ -26,25 +29,30 @@ const ActionBannerDefaultComponent = (props: ActionBannerProps): JSX.Element => 
 );
 
 export const Default = (props: ActionBannerProps): JSX.Element => {
-  const id = props.params.RenderingIdentifier;
+  const id = props?.params?.RenderingIdentifier || undefined;
 
   if (props?.fields) {
     return (
-      <div className={`component action-banner ${props.params.styles}`} id={id ? id : undefined}>
-        <div className="component-content">
-          <div className="col-1">
-            <h2>
-              <JssText field={props.fields.Title} />
-            </h2>
-          </div>
-          <div className="col-2">
-            <JssText field={props.fields.Text} />
-          </div>
-          <div className="col-1">
-            <JssLink field={props.fields.CallToAction} />
-          </div>
-        </div>
-      </div>
+      <Flex bgColor="sugcon.red.100" color="white" className={clsx(props?.params?.styles)} id={id}>
+        <LayoutFlex
+          justify="space-between"
+          flexDir={{ base: 'column', lg: 'row' }}
+          align={{ base: 'flex-start', lg: 'center' }}
+          gap={{ lg: '75px' }}
+        >
+          <Heading as="h2" size="lg" mb="0">
+            <JssText field={props?.fields?.Title} />
+          </Heading>
+
+          <Text fontSize="lg" mb={{ base: '10px', lg: '0' }}>
+            <JssText field={props?.fields?.Text} />
+          </Text>
+
+          <Button as={JssLink} variant="secondary" field={props?.fields?.CallToAction}>
+            {props?.fields?.CallToAction?.value?.text}
+          </Button>
+        </LayoutFlex>
+      </Flex>
     );
   }
 

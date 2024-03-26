@@ -15,6 +15,7 @@ import {
   Heading,
 } from '@chakra-ui/react';
 import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
+import { LayoutFlex } from 'components/Templates/LayoutFlex';
 
 interface AccordionElement {
   fields: {
@@ -41,7 +42,7 @@ interface AccordionProps {
 
 export const Default = (props: AccordionProps): JSX.Element => {
   return (
-    <Box w="100%" maxW="1366px" m="auto" pt={20}>
+    <LayoutFlex direction="column">
       {(isEditorActive() || props.fields?.Headline?.value !== '') && (
         <Heading size="lg" mb={4}>
           <JssText field={props.fields.Headline} />
@@ -66,13 +67,13 @@ export const Default = (props: AccordionProps): JSX.Element => {
                   </Box>
                   <AccordionIcon fontSize="2em" ml={4} />
                 </AccordionButton>
-                <AccordionPanel color="sugcon.gray.4">
+                <AccordionPanel color="sugcon.gray.500">
                   <JssRichText field={element.fields.Text} />
                 </AccordionPanel>
               </AccordionItem>
             ))
           : null}
       </Accordion>
-    </Box>
+    </LayoutFlex>
   );
 };

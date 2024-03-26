@@ -3,10 +3,10 @@ import { Box, Heading, Text, Image, Link } from '@chakra-ui/react';
 import {
   Field,
   ImageField,
-  Image as JssImage,
   LinkField,
-  Link as JssLink,
   TextField,
+  Image as JssImage,
+  Link as JssLink,
   Text as JssText,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
@@ -41,68 +41,62 @@ export const Default = (props: Fields): JSX.Element => {
       ? new Date(props.EventDate?.value).toDateString()
       : '';
 
-  const location: string[] = [];
-  props.EventCity?.value != '' ? location.push(props.EventCity?.value) : '';
-  props.EventState?.value != '' ? location.push(props.EventState?.value) : '';
-  props.EventCountry?.value != '' ? location.push(props.EventCountry?.value) : '';
-
-  const locationString = location.join(', ');
-
   return (
-    <Box w={{ base: '100%', md: '300px' }} mr={{ base: '0', md: '10' }} mb={75}>
-      <Box px={8} py={4} bg="#F2F2F2" borderRadius="lg" position="relative">
-        <Image as={JssImage} src={props.Image?.value?.src} maxH={50} field={props.Image} />
-        <Heading as="h3" size="lg" mt={2}>
-          <JssText field={props.EventName} />
-        </Heading>
-        <Text fontSize="12px" mb={0}>
-          {dateString}
-        </Text>
-        {isEditorActive() && (
-          <Box>
-            <JssText field={props.EventDate} />
-          </Box>
-        )}
-        <Text fontSize="12px" mb={0}>
-          {locationString}
-        </Text>
-        {isEditorActive() && (
-          <Box>
-            <Box>
-              <JssText field={props.EventCity} />
-            </Box>
-            <Box>
-              <JssText field={props.EventState} />
-            </Box>
-            <Box>
-              <JssText field={props.EventCountry} />
-            </Box>
-          </Box>
-        )}
-        {(isEditorActive() || props.LinkToSite?.value?.href !== '') && (
-          <Link
-            as={JssLink}
-            isExternal={props.LinkToSite?.value?.target == '_blank'}
-            fontSize="12px"
-            mt={3}
-            textDecoration="underline"
-            color="#28327D"
-            field={props.LinkToSite}
-          />
-        )}
-        <Box
-          position="absolute"
-          bottom="-38px"
-          right="-40px"
-          w={0}
-          h={0}
-          borderStyle="solid"
-          borderWidth="40px"
-          borderColor="transparent transparent #F2F2F2 transparent"
-          transform="rotate(45deg)"
-          display={{ base: 'none', md: 'block' }}
-        />
-      </Box>
+    <Box
+      w="full"
+      minW={{ base: '100%', md: 'calc(50% - 30px)', lg: 'calc(25% - 30px)' }}
+      px={8}
+      py={4}
+      mb={{ lg: '55px' }}
+      bg="sugcon.gray.200"
+      borderRadius={{ base: 'lg', lg: '8px 8px 0 8px' }}
+      position="relative"
+    >
+      <Image
+        as={JssImage}
+        src={props.Image?.value?.src}
+        maxW="190px"
+        h="auto"
+        field={props?.Image}
+        mb="20px"
+      />
+
+      <Heading as="h3" fontSize="25px" mb="12px">
+        <JssText field={props?.EventName} />
+      </Heading>
+
+      <Text color="sugcon.gray.500" mb={0}>
+        {isEditorActive() ? <JssText field={props?.EventDate} /> : <>{dateString}</>}
+      </Text>
+
+      <Text color="sugcon.gray.500" mb="12px">
+        <JssText field={props?.EventCity} />, <JssText field={props?.EventState} />{' '}
+        <JssText field={props?.EventCountry} />
+      </Text>
+
+      <Link
+        as={JssLink}
+        size="sm"
+        isExternal={props.LinkToSite?.value?.target == '_blank'}
+        field={props?.LinkToSite}
+      />
+
+      {/* Triangle Corner */}
+      <Box
+        position="absolute"
+        bottom="-38px"
+        right="-40px"
+        w={0}
+        h={0}
+        borderStyle="solid"
+        borderWidth="40px"
+        borderTopColor="transparent"
+        borderRightColor="transparent"
+        borderBottomColor="sugcon.gray.200"
+        borderLeftColor="transparent"
+        transform="rotate(45deg)"
+        display={{ base: 'none', lg: 'block' }}
+      />
     </Box>
   );
 };

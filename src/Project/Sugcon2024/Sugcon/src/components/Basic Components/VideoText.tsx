@@ -7,6 +7,7 @@ import {
   RichText as JssRichText,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
+import { LayoutFlex } from 'components/Templates/LayoutFlex';
 
 // Define the type of props that VideoText will accept
 interface Fields {
@@ -28,43 +29,45 @@ export type VideoTextProps = {
   fields: Fields;
 };
 export const Default = (props: VideoTextProps): JSX.Element => {
-  return (    
-    <Box w={{ base: '100vw', md: '80vw' }} my="20" maxW="1366px" mx={{ base: '20px', md: 'auto' }}>
-      {(isEditorActive() || props.fields.Headline?.value !== '') && (
-        <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
-          <JssText field={props.fields.Headline} />
-        </Heading>
-      )}
-      <Flex direction={{ base: 'column', md: 'row' }} flexGrow={1} columnGap="20" rowGap="10">
-        <Box w={{ base: '100%', md: '50%' }} position="relative">
-          <iframe
-            width="100%"
-            height="100%"
-            src={`https://www.youtube.com/embed/${props.fields.YoutubeVideoId?.value}`}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            style={{ borderRadius: '15px', position: 'absolute' }}
-          ></iframe>
-          <Box pt="56.25%" display="block">
-            {' '}
-          </Box>
-        </Box>
-        <Box w={{ base: '100%', md: '50%' }}>
-          {(isEditorActive() || props.fields.TextHeadline?.value !== '') && (
-            <Heading as="h3" fontWeight="bold" mb={{ base: '10px', md: '20px' }}>
-              <JssText field={props.fields.TextHeadline} />
-            </Heading>
-          )}
-          <Text as={JssRichText} mb={6} fontSize="18px" field={props.fields.Text} />
-          {isEditorActive() && (
-            <Box>
-              {'Youtube Video Id: '}
-              <JssText field={props.fields.YoutubeVideoId} />
+  return (
+    <Box w="100%">
+      <LayoutFlex direction="column">
+        {(isEditorActive() || props.fields.Headline?.value !== '') && (
+          <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
+            <JssText field={props.fields.Headline} />
+          </Heading>
+        )}
+        <Flex direction={{ base: 'column', md: 'row' }} flexGrow={1} columnGap="20" rowGap="10">
+          <Box w={{ base: '100%', md: '50%' }} position="relative">
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${props.fields.YoutubeVideoId?.value}`}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              style={{ borderRadius: '15px', position: 'absolute' }}
+            ></iframe>
+            <Box pt="56.25%" display="block">
+              {' '}
             </Box>
-          )}
-        </Box>
-      </Flex>
+          </Box>
+          <Box w={{ base: '100%', md: '50%' }}>
+            {(isEditorActive() || props.fields.TextHeadline?.value !== '') && (
+              <Heading as="h3" fontWeight="bold" mb={{ base: '10px', md: '20px' }}>
+                <JssText field={props.fields.TextHeadline} />
+              </Heading>
+            )}
+            <Text as={JssRichText} mb={6} fontSize="18px" field={props.fields.Text} />
+            {isEditorActive() && (
+              <Box>
+                {'Youtube Video Id: '}
+                <JssText field={props.fields.YoutubeVideoId} />
+              </Box>
+            )}
+          </Box>
+        </Flex>
+      </LayoutFlex>
     </Box>
   );
 };

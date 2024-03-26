@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Default as EventTeaser } from '../../../components/Basic Components/EventTeaser';
+import { Default as EventTeaser } from 'components/Basic Components/EventTeaser';
+
 const meta = {
   title: 'Basic Components/EventTeaser',
   component: EventTeaser,
@@ -7,10 +8,12 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {},
 } satisfies Meta<typeof EventTeaser>;
+
 export default meta;
+
 type Story = StoryObj<typeof meta>;
+
 export const Teaser: Story = {
   name: 'Event Teaser',
   args: {

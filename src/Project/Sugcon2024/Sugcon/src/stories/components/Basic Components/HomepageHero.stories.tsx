@@ -1,26 +1,19 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { HeroHomepage } from '../../../components/Basic Components/Hero';
-import { SitecoreContext } from '@sitecore-jss/sitecore-jss-react';
+import { HeroHomepage } from 'components/Basic Components/Hero';
 
 const meta = {
   title: 'Basic Components/Hero',
   component: HeroHomepage,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  decorators: [
-    (Story) => (
-      // Assuming you might need to provide a mock context value
-      <SitecoreContext componentFactory={() => null}>
-        <Story />
-      </SitecoreContext>
-    ),
-  ],
-  argTypes: {},
 } satisfies Meta<typeof HeroHomepage>;
+
 export default meta;
+
 type Story = StoryObj<typeof meta>;
+
 export const Homepage: Story = {
   name: 'Hero Homepage',
   args: {
@@ -41,7 +34,7 @@ export const Homepage: Story = {
       CallToAction: {
         value: {
           href: 'https://www.sitecore.com',
-          anchor: 'Register now',
+          text: 'Register now',
         },
       },
       Image: {

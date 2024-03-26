@@ -2,7 +2,6 @@
 @import '@sass/abstracts/mixins';
 
 .icon-link-list.list-horizontal {
-
   a {
     border: none;
 
@@ -10,8 +9,9 @@
       display: inline-block;
     }
   }
+
   li {
     display: inline-block;
-    margin-left: $middle-margin;
+    // margin-left: $middle-margin;
   }
 }

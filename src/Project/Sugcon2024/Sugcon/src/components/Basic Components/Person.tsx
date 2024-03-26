@@ -63,7 +63,7 @@ export const Default = (props: PersonProps): JSX.Element => {
       <Image
         as={JssImage}
         src={props.fields.Image?.value?.src}
-        w={200}
+        w={300}
         borderRadius={15}
         mb={10}
         onClick={props.params?.LinkToBio == '1' ? onOpen : undefined}

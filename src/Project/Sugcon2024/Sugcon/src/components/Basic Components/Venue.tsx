@@ -8,10 +8,12 @@ import {
   Item,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { Box, Flex, Heading, Icon, Image, Stack } from '@chakra-ui/react';
-import { isSitecoreLinkFieldPopulated } from 'lib/utils/sitecoreUtils';
 import { ButtonLink } from 'src/basics/ButtonLink';
 import Slider from 'react-slick';
 import styled from '@emotion/styled';
+import { LayoutFlex } from 'components/Templates/LayoutFlex';
+import { PaddingX } from 'components/Templates/LayoutConstants';
+import clsx from 'clsx';
 
 // Define the fields that the Venue component will accept
 interface Fields {
@@ -58,61 +60,52 @@ const settings = {
 
 export const Default = (props: VenueProps): JSX.Element => {
   const [slider, setSlider] = React.useState<Slider | null>(null);
-  const id = props.params.RenderingIdentifier;
+  const id = props?.params?.RenderingIdentifier || undefined;
 
   return (
-    <Box className={`component ${props.params.styles}`} id={id ? id : undefined}>
+    <LayoutFlex
+      id={id}
+      className={clsx('component', props?.params?.styles)}
+      flexDirection={{ base: 'column', lg: 'row' }}
+      px={{ base: '0px', lg: PaddingX.Desktop }}
+    >
       <Flex
-        maxW="1366px"
-        w={{ base: '100vw', md: '80vw' }}
-        my={{ base: '0', md: '20' }}
-        mx={{ base: '0', md: 'auto' }}
-        flexFlow={'center'}
-        direction={{ base: 'column', md: 'row' }}
-        className="component-content"
+        direction="column"
+        minW={{ base: '100%', lg: '50%' }}
+        pr={{ base: PaddingX.Mobile, lg: PaddingX.Desktop }}
+        pl={{ base: PaddingX.Mobile, lg: '0px' }}
       >
-        <Flex minWidth={{ base: '100%', md: '50%' }} alignSelf={'center'} px={{ base: '8', md: 0 }}>
-          <Stack width={{ base: '100%', md: '70%', xl: '50%' }} gap={8} alignSelf={'flex-end'}>
-            <Heading as={'h2'}>
-              <JssText field={props.fields.Headline} />
-            </Heading>
+        <Heading as="h2" fontSize="3xl" mb="21px">
+          <JssText field={props?.fields?.Headline} />
+        </Heading>
 
-            <Stack>
-              <Heading as={'h3'}>
-                <JssText field={props.fields.HotelName} />
-              </Heading>
-              <JssRichText field={props.fields.HotelAddress} />
-            </Stack>
+        <VenueInformationBlock
+          FieldTitle={props?.fields?.HotelName}
+          FieldText={props?.fields?.HotelAddress}
+        />
 
-            <Stack>
-              <Heading as={'h3'}>
-                <JssText field={props.fields.AdditionalInfoTitle} />
-              </Heading>
-              <JssRichText field={props.fields.AdditionalInfoText} />
-            </Stack>
+        <VenueInformationBlock
+          FieldTitle={props?.fields?.AdditionalInfoTitle}
+          FieldText={props?.fields?.AdditionalInfoText}
+        />
 
-            {isSitecoreLinkFieldPopulated(props.fields.ButtonLink) && (
-              <Box width="auto" alignSelf="start">
-                <ButtonLink field={props.fields.ButtonLink} />
-              </Box>
-            )}
-          </Stack>
-        </Flex>
+        <ButtonLink field={props?.fields?.ButtonLink} />
+      </Flex>
 
-        {/* Render carousel if there are images */}
-        {props.fields.VenueImages != null && (
+      <Flex minW={{ base: '100%', lg: '50%' }}>
+        {props?.fields?.VenueImages != null && (
           <Box
-            minWidth={{ base: '100%', md: '50%' }}
+            minWidth={{ base: '100%', lg: '50%' }}
             position={'relative'}
             as={SliderWrapper}
-            mt={{ base: '10', md: '0' }}
+            mt={{ base: '10', lg: '0' }}
           >
             <Slider {...settings} ref={() => setSlider(slider)}>
-              {props.fields.VenueImages?.map((image, index) => (
+              {props?.fields?.VenueImages?.map((image, index) => (
                 <Image
-                  src={image.url}
+                  src={image?.url}
                   key={index}
-                  borderRadius={{ base: 'none', md: '2xl' }}
+                  borderRadius={{ base: 'none', lg: '2xl' }}
                   width="full"
                   height="100%"
                   maxHeight="400px"
@@ -123,7 +116,26 @@ export const Default = (props: VenueProps): JSX.Element => {
           </Box>
         )}
       </Flex>
-    </Box>
+    </LayoutFlex>
+  );
+};
+
+interface VenueInformationBlockProps {
+  FieldTitle: TextField;
+  FieldText: RichTextField;
+}
+
+const VenueInformationBlock = ({
+  FieldTitle,
+  FieldText,
+}: VenueInformationBlockProps): JSX.Element => {
+  return (
+    <Stack mb="36px">
+      <Heading as="h3" fontSize="20px" mb="0">
+        <JssText field={FieldTitle} />
+      </Heading>
+      <JssRichText field={FieldText} />
+    </Stack>
   );
 };
 
@@ -149,6 +161,7 @@ const SliderWrapper = styled('div')`
     -ms-touch-action: pan-y;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
   }
 
   .slick-list {

@@ -5,7 +5,7 @@ const meta = {
   title: 'List Components/PeopleGrid',
   component: PeopleGrid,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
   argTypes: {},
@@ -190,6 +190,20 @@ export const Teaser: Story = {
       Headline: {
         value: 'Featured Speakers',
       },
+    },
+  },
+};
+
+export const ThreePeople: Story = {
+  args: {
+    ...Teaser.args,
+    params: {
+      ...Teaser.args.params,
+      Columns: '3',
+    },
+    fields: {
+      ...Teaser.args.fields,
+      People: Teaser.args.fields.People.slice(0, -1),
     },
   },
 };

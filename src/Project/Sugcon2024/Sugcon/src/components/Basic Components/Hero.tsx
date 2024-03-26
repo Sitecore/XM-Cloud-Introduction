@@ -1,11 +1,12 @@
 import React from 'react';
-import { Box, Heading, Text, Image, Flex, useBreakpointValue } from '@chakra-ui/react';
+import { Box, Heading, Text, Image, Flex, Button } from '@chakra-ui/react';
 
 import {
   TextField,
   ImageField,
   LinkField,
   Text as JssText,
+  Link as JssLink,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
 import { ButtonLink } from '../../basics/ButtonLink';
@@ -14,6 +15,8 @@ import {
   isSitecoreLinkFieldPopulated,
   isSitecoreTextFieldPopulated,
 } from 'lib/utils/sitecoreUtils';
+import { PaddingX, Template } from 'components/Templates/LayoutConstants';
+import { LayoutFlex } from 'components/Templates/LayoutFlex';
 
 // Define the type of props that Hero will accept
 interface Fields {
@@ -40,53 +43,47 @@ export type HeroProps = {
 
 export const HeroHomepage = (props: HeroProps): JSX.Element => {
   return (
-    <Flex
-      direction={{ base: 'column', md: 'row' }}
-      alignItems="stretch"
-      bg="#f0f0f0"
-      maxHeight={{ base: 'auto', md: '400px' }}
-      w="100%"
-      h={{ base: 'auto', md: '100vh' }}
-      overflow="hidden"
-    >
-      <Flex
-        direction="column"
-        margin="0 auto" // Center the content box
-        flexGrow={1}
-        minWidth="50%"
-        justifyContent="center"
+    <Flex flexDir={{ base: 'column', md: 'row' }}>
+      <Box
+        ml="auto"
+        maxW={{ base: '100%', md: `calc((${Template.MaxWidth}) / 2)` }}
+        px={{ base: PaddingX.Mobile, md: PaddingX.Desktop }}
+        py={{ base: '30px', md: '60px' }}
       >
-        <Box width="auto" alignSelf="end" maxWidth="683px" minWidth="360px">
-          <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
-            <JssText field={props.fields.Headline} />
-          </Heading>
-          {isSitecoreTextFieldPopulated(props.fields.EventDate) && (
-            <Text fontSize="18px" mb={6}>
-              <JssText field={props.fields.EventDate} />
-            </Text>
-          )}
-          {isSitecoreTextFieldPopulated(props.fields.Text) && (
-            <Text mb={6} fontSize="18px">
-              <JssText field={props.fields.Text} />
-            </Text>
-          )}
-          {isSitecoreLinkFieldPopulated(props.fields.CallToAction) && (
-            <Box width="auto" alignSelf="start">
-              <ButtonLink field={props.fields.CallToAction} />
-            </Box>
-          )}
-        </Box>
-      </Flex>
-      <Box flexShrink={0} minWidth={{ base: '100%', md: '50%' }} h="full" overflow="hidden">
-        {' '}
-        <Image
-          src={props.fields.Image?.value?.src}
-          //alt={props.fields.Image?.value?.alt}
-          width="full"
-          height="full"
-          objectFit="cover"
-        />
+        <Heading as="h1" fontSize="3xl" fontWeight="bold" mb="33px">
+          <JssText field={props.fields.Headline} />
+        </Heading>
+
+        {isSitecoreTextFieldPopulated(props.fields.EventDate) && (
+          <Text fontSize="18px" mb={6}>
+            <JssText field={props.fields.EventDate} />
+          </Text>
+        )}
+
+        {isSitecoreTextFieldPopulated(props.fields.Text) && (
+          <Text mb={6} fontSize="18px">
+            <JssText field={props.fields.Text} />
+          </Text>
+        )}
+
+        {isSitecoreLinkFieldPopulated(props.fields.CallToAction) && (
+          <Box width="auto" alignSelf="start">
+            <ButtonLink field={props.fields.CallToAction} />
+          </Box>
+        )}
       </Box>
+      <Flex flexGrow={{ md: 'grow' }} maxW={{ base: '100%', md: '50%' }}>
+        <Image
+          alt="Event Image"
+          w="full"
+          h="auto"
+          objectFit="cover"
+          objectPosition="center"
+          aspectRatio="1440/500"
+          src={props.fields.Image?.value?.src}
+          minH="220px"
+        />
+      </Flex>
     </Flex>
   );
 };
@@ -105,16 +102,18 @@ export const HeroEvent = (props: HeroProps): JSX.Element => {
     >
       <Flex
         direction="column"
-        margin="0 auto" // Center the content box
-        p={5}
-        flexGrow={1}
+        ml="auto"
+        maxW={{ base: '100%', md: `calc((${Template.MaxWidth}) / 2)` }}
+        px={{ base: PaddingX.Mobile, md: PaddingX.Desktop }}
+        py={{ base: '30px', md: '60px' }}
       >
-        <Box width="auto" alignSelf="end" maxWidth="620px" minWidth="360px">
-          <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
-            Testing <JssText field={props.fields.Headline} />
+        <Box width="auto" alignSelf="end">
+          <Heading as="h1" fontSize="3xl" fontWeight="bold" mb="33px">
+            <JssText field={props.fields.Headline} />
           </Heading>
+
           {isSitecoreTextFieldPopulated(props.fields.Text) && (
-            <Text mb={6} fontSize="18px">
+            <Text fontSize="18px">
               <JssText field={props.fields.Text} />
             </Text>
           )}
@@ -141,68 +140,56 @@ export const HeroEvent = (props: HeroProps): JSX.Element => {
 };
 
 export const HeroJustificationLetter = (props: HeroProps): JSX.Element => {
-  // Responsive background gradient direction
-  const bgGradientDirection = useBreakpointValue({ base: '180deg' });
-
   return (
-    <Flex
-      direction={{ base: 'column', md: 'row' }}
-      justifyContent="center"
-      color="white"
-      p={5}
-      w="100vw"
-      maxH="400px"
-      mt={24}
-      position="relative"
-      bgGradient={`linear(${bgGradientDirection}, #F2F2F2, #F2F2F2 50%, #374086)`}
-      zIndex={1}
-    >
-      {/* Content box that should take the left half of the screen */}
-      <Box
-        mb={14}
-        w={{ base: 'full', md: '50vw' }}
-        maxWidth="620px" // Max width is 620px
+    <Flex position="relative" width="full" alignItems="center" mt="30px">
+      {/* Content */}
+      <LayoutFlex
+        position="relative"
         zIndex={2}
-        mr={10}
-        justifyContent="flex-start"
+        flexDirection="column"
         alignItems="flex-start"
+        my={{ base: '20px', lg: '30px' }}
       >
-        <Heading as="h2" fontSize="30px" color="black" fontWeight="bold" mt={10} mb="33px">
+        <Heading as="h2" fontSize="3xl" color="black" fontWeight="bold" mb="33px">
           <JssText field={props.fields.Headline} />
         </Heading>
+
         {isSitecoreTextFieldPopulated(props.fields.Text) && (
           <Text mb={6} fontSize="18px" color="black">
             <JssText field={props.fields.Text} />
           </Text>
         )}
-        {isSitecoreLinkFieldPopulated(props.fields.CallToAction) && (
-          <Box width="auto" alignSelf="start">
-            <ButtonLink field={props.fields.CallToAction} variant="secondary" />
-          </Box>
-        )}
-      </Box>
-      <Box
-        display={{ base: 'none', md: 'block' }}
-        w={{ base: '50vw' }} // Take full width on base, and half viewport width on md and up
-        maxWidth="620px" // Max width is 620px
-      >
-        &nbsp;
-      </Box>
+
+        <Button as={JssLink} field={props?.fields?.CallToAction} variant="secondary" size="md">
+          {props?.fields?.CallToAction?.value?.text}
+        </Button>
+      </LayoutFlex>
 
       {/* Background Image */}
       <Box
+        display={{ base: 'none', lg: 'block' }}
         position="absolute"
+        top="-30px"
         right={0}
-        top={-14}
         bottom={0}
-        left="50%" // Start from the middle of the screen
-        width="50vw" // Take up the right half of the screen
-        backgroundImage="url('/images/SUGCON-justification-letter-chatbox-artwork.svg')"
-        backgroundSize="contain"
-        backgroundPosition="right bottom"
-        backgroundRepeat="no-repeat"
+        bgImage="url('/images/SUGCON-justification-letter-chatbox-artwork.svg')"
+        bgRepeat="no-repeat"
+        bgPos="top right"
+        bgSize="contain"
+        w="full"
+        h="calc(100% + 30px)"
+        zIndex={1}
+      />
+
+      {/* Gradient Overlay */}
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        right={0}
+        bottom={0}
+        bgGradient="linear(180deg, #F2F2F2, #F2F2F2 50%, #374086)"
         zIndex={0}
-        display={{ base: 'none', md: 'block' }}
       />
     </Flex>
   );

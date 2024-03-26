@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { Flex, UnorderedList } from '@chakra-ui/react';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { library } = require('@fortawesome/fontawesome-svg-core');
 
@@ -48,16 +50,14 @@ const IconLinkListItem = (props: IconLinkListItemProps) => {
     className += ' last';
   }
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  const iconprop: IconProp = props?.icon?.value?.toString() ?? '';
+  const iconprop = props?.icon?.value?.toString() ?? '';
 
   if (props?.icon?.value) {
     return (
       <li className={className}>
         <div className="field-link">
           <JssLink field={props.field} className="icon-list-link">
-            <FontAwesomeIcon icon={iconprop} />
+            <FontAwesomeIcon icon={iconprop as IconProp} />
           </JssLink>
         </div>
       </li>
@@ -94,7 +94,11 @@ export const Default = (props: IconLinkListProps): JSX.Element => {
       <div className={styles} id={id ? id : undefined}>
         <div className="component-content">
           <Text tag="h3" field={props?.fields?.Title} />
-          <ul>{list}</ul>
+          <Flex>
+            <UnorderedList m="0" variant="reset">
+              {list}
+            </UnorderedList>
+          </Flex>
         </div>
       </div>
     );
