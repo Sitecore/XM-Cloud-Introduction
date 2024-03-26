@@ -100,6 +100,7 @@ export const Default = (props: Fields): JSX.Element => {
           borderWidth="40px"
           borderColor="transparent transparent #F2F2F2 transparent"
           transform="rotate(45deg)"
+          display={{ base: 'none', md: 'block' }}
         />
       </Box>
     </Box>
