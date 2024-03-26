@@ -1,25 +1,19 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { HeroJustificationLetter } from '../../../components/Basic Components/Hero';
-import { SitecoreContext } from '@sitecore-jss/sitecore-jss-react';
+import { HeroJustificationLetter } from 'components/Basic Components/Hero';
 
 const meta = {
   title: 'Basic Components/Hero',
   component: HeroJustificationLetter,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
-  decorators: [
-    (Story) => (
-      <SitecoreContext componentFactory={() => null}>
-        <Story />
-      </SitecoreContext>
-    ),
-  ],
-  argTypes: {},
 } satisfies Meta<typeof HeroJustificationLetter>;
+
 export default meta;
+
 type Story = StoryObj<typeof meta>;
+
 export const JustificationLetter: Story = {
   name: 'Hero Justification Letter',
   args: {
@@ -40,7 +34,7 @@ export const JustificationLetter: Story = {
       CallToAction: {
         value: {
           href: 'https://www.sitecore.com',
-          anchor: 'Download letter',
+          text: 'Download letter',
         },
       },
       Image: {

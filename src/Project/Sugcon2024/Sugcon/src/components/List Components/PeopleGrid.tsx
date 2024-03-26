@@ -3,6 +3,8 @@ import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
 import { TextField, Text as JssText } from '@sitecore-jss/sitecore-jss-nextjs';
 import { PersonFields, PersonProps, Default as Person } from '../Basic Components/Person';
 import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
+import clsx from 'clsx';
+import { LayoutFlex } from 'components/Templates/LayoutFlex';
 
 // Define the type of props that People Grid will accept
 interface Fields {
@@ -37,7 +39,6 @@ export type PeopleGridProps = {
 };
 
 export const Default = (props: PeopleGridProps): JSX.Element => {
-  const styles = props.params && props.params.Styles ? props.params.Styles : '';
   const cols = props.params && props.params.Columns ? parseInt(props.params.Columns) : 4;
 
   if (props.params && props.params.Alphabetize == '1') {
@@ -47,14 +48,20 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
   }
 
   return (
-    <Box w="100%" mt={20} className={styles}>
-      <Box maxW="1366px" m="auto" pt={10}>
+    <Box w="100%" mt={20} className={clsx(props?.params?.Styles)}>
+      <LayoutFlex flexGrow="1" flexDirection="column" align="start">
         {(isEditorActive() || props.fields?.Headline?.value !== '') && (
           <Heading as="h2" size="lg">
             <JssText field={props.fields.Headline} />
           </Heading>
         )}
-        <SimpleGrid columns={{ base: 1, md: cols }} mt={10}>
+        <SimpleGrid
+          w="full"
+          columns={{ base: 1, md: Math.ceil(cols / 2), xl: cols }} // Using Math.ceil so odd numbers round up.
+          mt={10}
+          gap="10px"
+          justifyItems="center"
+        >
           {props.fields?.People.map((person, idx) => {
             const pp: PersonProps = {
               params: props.params,
@@ -63,7 +70,7 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
             return <Person key={idx} {...pp}></Person>;
           })}
         </SimpleGrid>
-      </Box>
+      </LayoutFlex>
     </Box>
   );
 };
