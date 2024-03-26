@@ -8,6 +8,8 @@ import {
   Text,
   useSitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
+import clsx from 'clsx';
+import { Box } from '@chakra-ui/react';
 
 interface Fields {
   Image: ImageField;
@@ -21,7 +23,7 @@ type LogoProps = {
 };
 
 const LogoDefault = (props: LogoProps): JSX.Element => (
-  <div className={`component image ${props.params.styles}`.trimEnd()}>
+  <div className={clsx('component', 'image', props.params.styles)}>
     <div className="component-content">
       <span className="is-empty-hint">Logo</span>
     </div>
@@ -42,12 +44,12 @@ export const Banner = (props: LogoProps): JSX.Element => {
       ?.replace(`width="${props?.fields?.Image?.value?.width}"`, 'width="100%"')
       .replace(`height="${props?.fields?.Image?.value?.height}"`, 'height="100%"'),
   };
-  const id = props.params.RenderingIdentifier;
+  const id = props?.params?.RenderingIdentifier || undefined;
 
   return (
     <div
-      className={`component hero-banner ${props.params.styles} ${classHeroBannerEmpty}`}
-      id={id ? id : undefined}
+      className={clsx('component', 'hero-banner', props?.params?.styles, classHeroBannerEmpty)}
+      id={id}
     >
       <div className="component-content sc-sxa-image-hero-banner" style={backgroundStyle}>
         {sitecoreContext.pageEditing ? <JssImage field={modifyImageProps} /> : ''}
@@ -61,25 +63,30 @@ export const Default = (props: LogoProps): JSX.Element => {
 
   if (props.fields) {
     const Image = () => <JssImage field={props.fields.Image} />;
-    const id = props.params.RenderingIdentifier;
+    const id = props?.params?.RenderingIdentifier || undefined;
 
     return (
-      <div className={`component image ${props.params.styles}`} id={id ? id : undefined}>
-        <div className="component-content">
-          {sitecoreContext?.pageState === 'edit' || !props.fields.TargetUrl?.value?.href ? (
+      <Box
+        className={clsx('component', 'image', 'header-image', props?.params?.styles)}
+        id={id}
+        px="0"
+        mr="15px"
+      >
+        <Box w={{ base: 155, lg: 190 }}>
+          {sitecoreContext?.pageState === 'edit' || !props?.fields?.TargetUrl?.value?.href ? (
             <Image />
           ) : (
-            <JssLink field={props.fields.TargetUrl}>
+            <JssLink field={props?.fields?.TargetUrl}>
               <Image />
             </JssLink>
           )}
-          <Text
-            tag="span"
-            className="image-caption field-imagecaption"
-            field={props.fields.ImageCaption}
-          />
-        </div>
-      </div>
+        </Box>
+        <Text
+          tag="span"
+          className="image-caption field-imagecaption"
+          field={props?.fields?.ImageCaption}
+        />
+      </Box>
     );
   }
 
