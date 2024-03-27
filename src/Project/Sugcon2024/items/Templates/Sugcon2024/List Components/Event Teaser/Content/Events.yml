@@ -7,7 +7,7 @@ SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
   Value: |
-    query:/sitecore/content//*[@@tid="{A4BB7FA4-095D-4353-89D0-394C54D2F518}"]
+    query:$site/Data//*[@@tid="{A4BB7FA4-095D-4353-89D0-394C54D2F518}"]|$sharedSites/Data//*[@@tid="{A4BB7FA4-095D-4353-89D0-394C54D2F518}"]
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
   Value: Multilist
@@ -32,11 +32,11 @@ Languages:
         sitecore\UOUBIWQRx7
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "cf385d7f-3b0a-4c8b-b398-3d1f416b25e2"
+      Value: "74254aa3-fe59-4097-bd40-13444810ade7"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\UOUBIWQRx7
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240206T203303Z
+      Value: 20240326T132501Z
