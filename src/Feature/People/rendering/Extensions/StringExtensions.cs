@@ -9,5 +9,10 @@
                 .Replace("-", " ")
                 .Replace("%20", " ");
         }
+
+        public static string EncodeSpaces(this string s)
+        {
+            return s.Replace(' ', '-');
+        }
     }
 }
