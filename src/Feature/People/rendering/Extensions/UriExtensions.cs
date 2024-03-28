@@ -19,6 +19,19 @@ namespace Mvp.Feature.People.Extensions
             return result;
         }
 
+        public static Uri? AddSegment(this Uri? uri, string segment)
+        {
+            Uri? result = uri;
+            if (uri != null)
+            {
+                result = uri.IsAbsoluteUri
+                    ? new Uri(uri, segment)
+                    : new Uri(uri.OriginalString.TrimEnd('/') + "/" + segment.TrimStart('/'), UriKind.Relative);
+            }
+
+            return result;
+        }
+
         public static Uri? AddGravatarSizing(this Uri? uri, string size)
         {
             Uri? result = uri;

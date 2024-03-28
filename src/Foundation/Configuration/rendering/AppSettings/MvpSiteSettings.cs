@@ -12,19 +12,13 @@
 
         public string? NotFoundPage { get; set; }
 
-        public Uri? RenderingHostUri { get; set; }
+        public string MvpProfilePageItemPath { get; set; } = "/Directory/Profile/*";
 
         public bool EnableExperienceEditor { get; set; }
 
         public string JssEditingSecret { get; set; } = string.Empty;
 
         public string? ExperienceEdgeToken { get; set; }
-
-        public int MvpDirectoryGraphQLQueryPageSize { get; set; }
-
-        public int MvpDirectoryGraphQLQueryCacheTimeout { get; set; }
-
-        public int MvpApplicationListsDataGraphQLQueryCacheTimeout { get; set; }
 
         public Uri? LayoutServiceUri
         {
