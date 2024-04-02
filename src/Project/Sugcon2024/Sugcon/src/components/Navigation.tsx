@@ -175,7 +175,11 @@ const ResponsiveNavigation = ({
             );
           })}
         <ListItem>
-          <Button as={Link} href="/register" size={responsiveButtonSizeConfig}>
+          <Button
+            as={Link}
+            href="https://siteco.re/SUGCONEurope2024Registration"
+            size={responsiveButtonSizeConfig}
+          >
             Register now
           </Button>
         </ListItem>
