@@ -6,7 +6,7 @@ Path: /sitecore/templates/Project/Sugcon2024/Base Templates/_OG Tags/Open Graph 
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
-  Value: "Single-Line Text"
+  Value: Image
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 400
@@ -32,11 +32,11 @@ Languages:
         sitecore\UOUBIWQRx7
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "50613168-53cb-474b-a8c5-ec33574012ef"
+      Value: "7e3501f6-925c-4378-be9b-898db272ac17"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\UOUBIWQRx7
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240328T172337Z
+      Value: 20240402T133757Z
