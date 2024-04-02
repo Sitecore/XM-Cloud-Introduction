@@ -82,10 +82,10 @@ export const Default = (props: PersonProps): JSX.Element => {
           <JssText field={props.fields.Name} />
         </Heading>
       )}
-      <Text fontSize="12px" mb={0}>
+      <Text fontSize="18px" mb={0}>
         <JssText field={props.fields.JobRole} />
       </Text>
-      <Text fontSize="12px" mb={0}>
+      <Text fontSize="18px" mb={0}>
         <JssText field={props.fields.Company} />
       </Text>
       {(isEditorActive() ||
@@ -93,7 +93,7 @@ export const Default = (props: PersonProps): JSX.Element => {
         <Link
           as={JssLink}
           isExternal={props.fields.Linkedin?.value?.target == '_blank'}
-          fontSize="12px"
+          fontSize="18px"
           mt={3}
           textDecoration="underline"
           color="#28327D"
@@ -103,13 +103,18 @@ export const Default = (props: PersonProps): JSX.Element => {
       {(isEditorActive() ||
         (props.params?.DisplaySocialLinks == '1' &&
           props.fields.Linkedin?.value?.href !== '' &&
-          props.fields.Twitter?.value?.href !== '')) && <Box display="inline"> / </Box>}
+          props.fields.Twitter?.value?.href !== '')) && (
+        <Box display="inline" fontSize="18px">
+          {' '}
+          /{' '}
+        </Box>
+      )}
       {(isEditorActive() ||
         (props.params?.DisplaySocialLinks == '1' && props.fields.Twitter?.value?.href !== '')) && (
         <Link
           as={JssLink}
           isExternal={props.fields.Twitter?.value?.target == '_blank'}
-          fontSize="12px"
+          fontSize="18px"
           mt={3}
           textDecoration="underline"
           color="#28327D"
@@ -136,13 +141,13 @@ export const Default = (props: PersonProps): JSX.Element => {
                   <Heading as="h3" size="lg">
                     {props.fields.Name?.value}
                   </Heading>
-                  <Text fontSize="12px" mb={0}>
+                  <Text fontSize="18px" mb={0}>
                     {props.fields.JobRole?.value}
                   </Text>
-                  <Text fontSize="12px" mb={0}>
+                  <Text fontSize="18px" mb={0}>
                     {props.fields.Company?.value}
                   </Text>
-                  <Text as={JssRichText} fontSize="12px" mb={0} field={props.fields.Biography} />
+                  <Text as={JssRichText} fontSize="18px" mb={0} field={props.fields.Biography} />
                 </Box>
               </Flex>
             </ModalBody>
