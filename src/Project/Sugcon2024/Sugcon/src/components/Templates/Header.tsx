@@ -21,7 +21,7 @@ export const Default = ({ route }: HeaderDefaultProps): JSX.Element => {
       shadow="xl"
       minH={{ base: HeaderHeights.Mobile, lg: HeaderHeights.Desktop }}
     >
-      <LayoutFlex align="center" flexGrow="1">
+      <LayoutFlex my="0" align="center" flexGrow="1">
         {route && <Placeholder name="headless-header" rendering={route} />}
       </LayoutFlex>
     </Flex>

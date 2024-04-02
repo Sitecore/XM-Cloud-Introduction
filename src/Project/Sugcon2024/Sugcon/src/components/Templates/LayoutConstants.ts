@@ -22,8 +22,8 @@ type SizeConfig = {
 };
 
 export const responsiveButtonSizeConfig: SizeConfig = {
-  base: 'sm',
-  md: 'sm',
+  base: 'lg',
+  md: 'lg',
   lg: 'sm',
   xl: 'lg',
 };
