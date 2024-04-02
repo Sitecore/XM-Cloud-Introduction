@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { Placeholder, LayoutServiceData, Field, HTMLLink } from '@sitecore-jss/sitecore-jss-nextjs';
 import { Default as Header } from 'template/Header';
 import { Default as Footer } from 'template/Footer';
@@ -21,17 +22,26 @@ interface RouteFields {
   Title?: Field;
   MetaDescription?: Field;
   MetaKeywords?: Field;
+  OGTitle?: Field;
+  OGDescription?: Field;
+  OGType?: Field;
+  OGImage?: Field;
 }
 
 const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
   const { route } = layoutData.sitecore;
   const fields = route?.fields as RouteFields;
+  const origin =
+    typeof window !== 'undefined' && window.location.origin ? window.location.origin : '';
+  const router = useRouter();
+  const canonicalUrl = (origin + (router.asPath === '/' ? '' : router.asPath)).split('?')[0];
 
   return (
     <>
       <Scripts />
       <Head>
         <title>{fields?.Title?.value?.toString() || 'Page'}</title>
+
         <meta
           key="metadesc"
           name="description"
@@ -47,6 +57,12 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
           name="viewport"
           content="width=device-width, height=device-height"
         />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={fields?.OGTitle?.value?.toString()} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={fields?.OGTitle?.value?.toString()} />
+        <meta property="og:type" content={fields?.OGType?.value?.toString()} />
+        <meta property="og:description" content={fields?.OGDescription?.value?.toString()} />
 
         <link rel="icon" href={`/favicon.ico`} />
 
