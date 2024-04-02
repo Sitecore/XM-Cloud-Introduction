@@ -4,7 +4,13 @@
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Placeholder, LayoutServiceData, Field, HTMLLink } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  Placeholder,
+  LayoutServiceData,
+  Field,
+  HTMLLink,
+  ImageField,
+} from '@sitecore-jss/sitecore-jss-nextjs';
 import { Default as Header } from 'template/Header';
 import { Default as Footer } from 'template/Footer';
 
@@ -25,7 +31,7 @@ interface RouteFields {
   OGTitle?: Field;
   OGDescription?: Field;
   OGType?: Field;
-  OGImage?: Field;
+  OGImage?: ImageField;
 }
 
 const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
@@ -60,7 +66,7 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={fields?.OGTitle?.value?.toString()} />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content={fields?.OGTitle?.value?.toString()} />
+        <meta property="og:image" content={fields?.OGImage?.value?.src?.toString()} />
         <meta property="og:type" content={fields?.OGType?.value?.toString()} />
         <meta property="og:description" content={fields?.OGDescription?.value?.toString()} />
 
