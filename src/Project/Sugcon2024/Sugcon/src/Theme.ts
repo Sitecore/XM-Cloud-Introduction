@@ -27,6 +27,12 @@ const Button = defineStyleConfig({
       px: '42px',
       py: '24px',
     },
+    navButtonLinkSm: {
+      fontSize: '22px',
+    },
+    navButtonLinkLg: {
+      fontSize: '18px',
+    },
   },
   // Two variants: outline and solid
   variants: {
@@ -81,6 +87,9 @@ const Link = defineStyleConfig({
   },
   sizes: {
     sm: {
+      fontSize: '22px',
+    },
+    md: {
       fontSize: '16px',
     },
     lg: {
@@ -97,7 +106,6 @@ const Link = defineStyleConfig({
       fontSize: '16px',
     },
     navLink: {
-      fontSize: '18px',
       fontWeight: 'bold',
       color: 'sugcon.800',
       textDecoration: 'none',

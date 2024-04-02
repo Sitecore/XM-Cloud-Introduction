@@ -40,6 +40,10 @@ const route = {
               componentName: 'Logo',
               dataSource: '{20C73871-7E77-4F6E-9D35-C518AB120F44}',
               ...Logo.args,
+              fields: {
+                ...Logo.args.fields,
+                ImageCaption: null,
+              },
             },
             {
               ...PrimaryNavigation.args.rendering,

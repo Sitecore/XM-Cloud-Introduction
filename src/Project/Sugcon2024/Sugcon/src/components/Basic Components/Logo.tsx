@@ -9,7 +9,7 @@ import {
   useSitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import clsx from 'clsx';
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 
 interface Fields {
   Image: ImageField;
@@ -72,7 +72,7 @@ export const Default = (props: LogoProps): JSX.Element => {
         px="0"
         mr="15px"
       >
-        <Box w={{ base: 155, lg: 190 }}>
+        <Flex w={{ base: 155, lg: 190 }}>
           {sitecoreContext?.pageState === 'edit' || !props?.fields?.TargetUrl?.value?.href ? (
             <Image />
           ) : (
@@ -80,7 +80,7 @@ export const Default = (props: LogoProps): JSX.Element => {
               <Image />
             </JssLink>
           )}
-        </Box>
+        </Flex>
         <Text
           tag="span"
           className="image-caption field-imagecaption"

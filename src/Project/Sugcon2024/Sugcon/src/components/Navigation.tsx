@@ -194,6 +194,7 @@ const NavigationItemWithChildren = ({ element, pageEditing }: NavigationItemProp
       <Button
         {...buttonProps}
         variant="navButtonLink"
+        size={{ base: 'navButtonLinkSm', lg: 'navButtonLinkLg' }}
         mr={{ base: '-23px', lg: '0' }}
         rightIcon={isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
         className={clsx(element?.Styles)}
@@ -231,6 +232,7 @@ const NavigationItem = ({ element, pageEditing }: NavigationItemProps): JSX.Elem
       field={getLinkField(element)}
       editable={pageEditing}
       variant="navLink"
+      size={{ base: 'sm', lg: 'lg' }}
     >
       {getNavigationText(element)}
     </Link>
@@ -247,6 +249,7 @@ const renderChildNavigationItem = ({
     <Link
       as={SitecoreLink}
       variant="navLink"
+      size={{ base: 'sm', lg: 'lg' }}
       className={clsx(element?.Styles)}
       field={getLinkField(element)}
       editable={pageEditing}
