@@ -50,24 +50,18 @@ export const Default = (props: AccordionProps): JSX.Element => {
       )}
       <Accordion
         allowMultiple
-        borderColor="sugcon.500"
         defaultIndex={isEditorActive() ? Array.from(props.fields.Elements.keys()) : []}
       >
         {props.fields.Elements?.length
           ? props.fields.Elements.map((element, index) => (
               <AccordionItem key={index}>
-                <AccordionButton
-                  _expanded={{ bg: 'sugcon.blue', color: 'white' }}
-                  px={2}
-                  py={4}
-                  color="sugcon.blue"
-                >
+                <AccordionButton>
                   <Box flex="1" textAlign="left" fontWeight="semibold">
                     <JssText field={element.fields.Title} />
                   </Box>
-                  <AccordionIcon fontSize="2em" ml={4} />
+                  <AccordionIcon />
                 </AccordionButton>
-                <AccordionPanel color="sugcon.gray.500">
+                <AccordionPanel>
                   <JssRichText field={element.fields.Text} />
                 </AccordionPanel>
               </AccordionItem>
