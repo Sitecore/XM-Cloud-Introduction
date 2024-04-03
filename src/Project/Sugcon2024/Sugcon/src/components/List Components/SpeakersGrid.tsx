@@ -128,9 +128,7 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
 
   return (
     <Box w="100%" pr="0" pl="0" className={clsx(props?.params?.Styles)}>
-      <Heading as="h2" size="lg">
-        <JssText field={props.fields.Headline} />
-      </Heading>
+      <Heading as={JssText} field={props.fields.Headline} tag="h2" size="lg" />
 
       <SimpleGrid
         w="full"
