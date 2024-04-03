@@ -54,6 +54,11 @@ const Button = defineStyleConfig({
         color: 'white',
       },
     },
+    link: {
+      fontSize: '18px',
+      fontWeight: 'bold',
+      color: 'black',
+    },
     // Variant for Primary Navigation to make a Button look like a Link
     navButtonLink: {
       fontWeight: 'bold',
