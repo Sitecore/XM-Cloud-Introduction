@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Heading } from '@chakra-ui/react';
 import { LinkField, Text, TextField, useSitecoreContext } from '@sitecore-jss/sitecore-jss-nextjs';
 import bg from '../../assets/images/SUGCON-hero-artwork.jpg';
+import { LayoutFlex } from 'components/Templates/LayoutFlex';
 
 interface Fields {
   data: {
@@ -72,13 +73,11 @@ export const Default = (props: PageTitleProps): JSX.Element => {
       backgroundRepeat="no-repeat"
       color="white"
     >
-      <Box w="80%" pt={10} m="auto">
-        <>
-          <Heading as="h1" size="lg" fontSize="30px" fontWeight="normal" mb="33px">
-            <Text field={text} />
-          </Heading>
-        </>
-      </Box>
+      <LayoutFlex>
+        <Heading as="h1" fontSize="44px" fontWeight="normal">
+          <Text field={text} />
+        </Heading>
+      </LayoutFlex>
     </Box>
   );
 };

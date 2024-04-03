@@ -22,13 +22,15 @@ const AgendaDefaultComponent = (props: AgendaProps): JSX.Element => (
 export const Default = (props: AgendaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
 
+  const fetcher = (url: string) => fetch(url).then((res) => res.text());
+  const { data, error } = useSWR(
+    props.fields.SessionizeUrl.value ? props.fields.SessionizeUrl.value : null,
+    fetcher
+  );
+
   if (!props?.fields?.SessionizeUrl?.value) {
     return <AgendaDefaultComponent {...props} />;
   }
-
-  //Question: linter is saying the hook shouldn't be called conditionally, but that's correct in this case?
-  //eslint-disable-next-line
-  const { data, error } = useSWR(props.fields.SessionizeUrl.value, () => fetch(props.fields.SessionizeUrl.value).then((response) => response.text()));
 
   //TODO: design error
   if (error) {

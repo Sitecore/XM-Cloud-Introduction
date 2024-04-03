@@ -5,6 +5,8 @@ import {
   Placeholder,
   useSitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Box } from '@chakra-ui/react';
+import { LayoutFlex } from './Templates/LayoutFlex';
 
 const BACKGROUND_REG_EXP = new RegExp(
   /[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}/gi
@@ -35,9 +37,9 @@ const DefaultContainer = (props: ComponentProps): JSX.Element => {
   return (
     <div className={`component container-default ${styles}`} id={id ? id : undefined}>
       <div className="component-content" style={backgroundStyle}>
-        <div className="row">
+        <Box mr="0" ml="0" className="row">
           <Placeholder name={phKey} rendering={props.rendering} />
-        </div>
+        </Box>
       </div>
     </div>
   );
@@ -48,9 +50,11 @@ export const Default = (props: ComponentProps): JSX.Element => {
 
   if (splitStyles && splitStyles.includes('container')) {
     return (
-      <div className="container-wrapper">
-        <DefaultContainer {...props} />
-      </div>
+      <LayoutFlex>
+        <div className="container-wrapper">
+          <DefaultContainer {...props} />
+        </div>
+      </LayoutFlex>
     );
   }
 
