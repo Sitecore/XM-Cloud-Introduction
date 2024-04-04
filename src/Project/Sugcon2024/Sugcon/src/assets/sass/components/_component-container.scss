@@ -16,6 +16,7 @@ $size-padding: 8px;
 
 .container {
   padding: 0;
+  max-width: 1440px;
 
   &.fullwidth-container {
     max-width: unset;
@@ -24,5 +25,5 @@ $size-padding: 8px;
   .component-content {
     @include clearfix();
   }
-
 }
+

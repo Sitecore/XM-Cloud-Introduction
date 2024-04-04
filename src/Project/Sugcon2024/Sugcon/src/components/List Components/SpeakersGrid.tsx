@@ -127,12 +127,12 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
   }
 
   return (
-    <Box w="100%" pr="0" pl="0" className={clsx(props?.params?.Styles)}>
+    <Box w="100%" pr="0" pl="0" className={clsx('speakers-grid-container', props?.params?.Styles)}>
       <Heading as={JssText} field={props.fields.Headline} tag="h2" size="lg" />
 
       <SimpleGrid
         w="full"
-        columns={{ base: 1, md: 2, lg: Math.ceil(cols / 2), xl: cols }} // Using Math.ceil so odd numbers round up.
+        columns={{ base: 1, md: 2, lg: 3, xl: 4, '2xl': cols }}
         mt={10}
         gap="18px"
         justifyItems="center"
