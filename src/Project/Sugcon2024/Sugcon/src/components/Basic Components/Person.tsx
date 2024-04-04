@@ -63,10 +63,11 @@ export const Default = (props: PersonProps): JSX.Element => {
       <Image
         as={JssImage}
         src={props.fields.Image?.value?.src}
-        w={300}
+        w={260}
         borderRadius={15}
         mb={10}
         onClick={props.params?.LinkToBio == '1' ? onOpen : undefined}
+        cursor="pointer"
         field={props.fields.Image}
       />
 
@@ -82,10 +83,10 @@ export const Default = (props: PersonProps): JSX.Element => {
           <JssText field={props.fields.Name} />
         </Heading>
       )}
-      <Text fontSize="18px" mb={0}>
+      <Text fontSize="16px" color="sugcon.gray.500" mb={0}>
         <JssText field={props.fields.JobRole} />
       </Text>
-      <Text fontSize="18px" mb={0}>
+      <Text fontSize="16px" color="sugcon.gray.500" mb={0}>
         <JssText field={props.fields.Company} />
       </Text>
       {(isEditorActive() ||
@@ -138,16 +139,16 @@ export const Default = (props: PersonProps): JSX.Element => {
                   <Image src={props.fields.Image?.value?.src} w={200} borderRadius={15} />
                 </Box>
                 <Box w={{ base: '100%', md: '55%', lg: '60%' }}>
-                  <Heading as="h3" size="lg">
+                  <Heading as="h2" fontSize="25px">
                     {props.fields.Name?.value}
                   </Heading>
-                  <Text fontSize="18px" mb={0}>
+                  <Text fontSize="18px" mb="15px" color="#4D4D4D">
                     {props.fields.JobRole?.value}
                   </Text>
                   <Text fontSize="18px" mb={0}>
                     {props.fields.Company?.value}
                   </Text>
-                  <Text as={JssRichText} fontSize="18px" mb={0} field={props.fields.Biography} />
+                  <Text as={JssRichText} fontSize="18px" mb="15px" field={props.fields.Biography} />
                 </Box>
               </Flex>
             </ModalBody>

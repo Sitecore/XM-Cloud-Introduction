@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
 import { Field, TextField, Text as JssText } from '@sitecore-jss/sitecore-jss-nextjs';
 import { PersonFields, PersonProps, Default as Person } from '../Basic Components/Person';
-import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 import * as cheerio from 'cheerio';
+import clsx from 'clsx';
 
 // Define the type of props that People Grid will accept
 interface Fields {
@@ -101,8 +101,7 @@ function getPeople(sessionTitle: string, body: string) {
 }
 
 export const Default = (props: PeopleGridProps): JSX.Element => {
-  const styles = props.params && props.params.Styles ? props.params.Styles : '';
-  const cols = props.params && props.params.Columns ? parseInt(props.params.Columns) : 4;
+  const cols = props.params && props.params.Columns ? parseInt(props.params.Columns) : 5;
 
   const [people, setPeople] = useState(Array<PersonItem>);
 
@@ -128,23 +127,24 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
   }
 
   return (
-    <Box w="100%" mt={20} className={styles}>
-      <Box w="80%" pt={10} m="auto">
-        {(isEditorActive() || props.fields?.Headline?.value !== '') && (
-          <Heading as="h2" size="lg">
-            <JssText field={props.fields.Headline} />
-          </Heading>
-        )}
-        <SimpleGrid columns={{ base: 1, md: cols }} mt={10}>
-          {people.map((person, idx) => {
-            const pp: PersonProps = {
-              params: props.params,
-              fields: person.fields,
-            };
-            return <Person key={idx} {...pp}></Person>;
-          })}
-        </SimpleGrid>
-      </Box>
+    <Box w="100%" pr="0" pl="0" className={clsx(props?.params?.Styles)}>
+      <Heading as={JssText} field={props.fields.Headline} tag="h2" size="lg" />
+
+      <SimpleGrid
+        w="full"
+        columns={{ base: 1, md: 2, lg: Math.ceil(cols / 2), xl: cols }} // Using Math.ceil so odd numbers round up.
+        mt={10}
+        gap="18px"
+        justifyItems="center"
+      >
+        {people.map((person, idx) => {
+          const pp: PersonProps = {
+            params: props.params,
+            fields: person.fields,
+          };
+          return <Person key={idx} {...pp}></Person>;
+        })}
+      </SimpleGrid>
     </Box>
   );
 };
