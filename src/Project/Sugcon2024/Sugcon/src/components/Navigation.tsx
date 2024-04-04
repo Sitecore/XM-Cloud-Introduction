@@ -54,6 +54,7 @@ export type NavigationProps = {
 interface NavigationItemProps {
   element: Fields;
   key?: number;
+  onToggle?: () => void;
   pageEditing: boolean | undefined;
 }
 
@@ -93,8 +94,20 @@ export const Default = (props: NavigationProps): JSX.Element => {
 
   const navigationMenuItems = [homeFields, ...Object.values(props.fields)];
 
-  const renderNavigation = (): JSX.Element => (
-    <ResponsiveNavigation navigationMenuItems={navigationMenuItems} pageEditing={pageEditing} />
+  interface RenderNavigationProps {
+    onToggle?: () => void;
+  }
+
+  const renderNavigation = ({
+    onToggle = () => {
+      /* intentionally left blank */
+    },
+  }: RenderNavigationProps = {}): JSX.Element => (
+    <ResponsiveNavigation
+      navigationMenuItems={navigationMenuItems}
+      onToggle={onToggle}
+      pageEditing={pageEditing}
+    />
   );
 
   return (
@@ -124,7 +137,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
             borderBlockEnd="1px"
             borderBlockEndColor="sugcon.gray.300"
           >
-            {renderNavigation()}
+            {renderNavigation({ onToggle })}
           </Box>
         </Collapse>
       </Show>
@@ -134,11 +147,13 @@ export const Default = (props: NavigationProps): JSX.Element => {
 
 interface ResponsiveNavigationProps {
   navigationMenuItems: Fields[];
+  onToggle?: () => void;
   pageEditing: boolean | undefined;
 }
 
 const ResponsiveNavigation = ({
   navigationMenuItems,
+  onToggle,
   pageEditing,
 }: ResponsiveNavigationProps): JSX.Element => {
   return (
@@ -167,9 +182,13 @@ const ResponsiveNavigation = ({
                 mb={{ base: PaddingY.Desktop, lg: '0' }}
               >
                 {hasChildren ? (
-                  <NavigationItemWithChildren element={element} pageEditing={pageEditing} />
+                  <NavigationItemWithChildren
+                    element={element}
+                    onToggle={onToggle}
+                    pageEditing={pageEditing}
+                  />
                 ) : (
-                  <NavigationItem element={element} pageEditing={pageEditing} />
+                  <NavigationItem element={element} onToggle={onToggle} pageEditing={pageEditing} />
                 )}
               </ListItem>
             );
@@ -188,7 +207,11 @@ const ResponsiveNavigation = ({
   );
 };
 
-const NavigationItemWithChildren = ({ element, pageEditing }: NavigationItemProps): JSX.Element => {
+const NavigationItemWithChildren = ({
+  element,
+  onToggle,
+  pageEditing,
+}: NavigationItemProps): JSX.Element => {
   const { isOpen, getDisclosureProps, getButtonProps } = useDisclosure();
 
   const buttonProps = getButtonProps();
@@ -219,7 +242,7 @@ const NavigationItemWithChildren = ({ element, pageEditing }: NavigationItemProp
           >
             {!!element?.Children?.length &&
               element.Children.map((child, key) =>
-                renderChildNavigationItem({ element: child, key, pageEditing })
+                renderChildNavigationItem({ element: child, key, onToggle, pageEditing })
               )}
           </UnorderedList>
         </Collapse>
@@ -228,7 +251,7 @@ const NavigationItemWithChildren = ({ element, pageEditing }: NavigationItemProp
   );
 };
 
-const NavigationItem = ({ element, pageEditing }: NavigationItemProps): JSX.Element => {
+const NavigationItem = ({ element, onToggle, pageEditing }: NavigationItemProps): JSX.Element => {
   return (
     <Link
       as={SitecoreLink}
@@ -237,6 +260,7 @@ const NavigationItem = ({ element, pageEditing }: NavigationItemProps): JSX.Elem
       editable={pageEditing}
       variant="navLink"
       size={{ base: 'sm', lg: 'lg' }}
+      onClick={onToggle}
     >
       {getNavigationText(element)}
     </Link>
@@ -247,6 +271,7 @@ const NavigationItem = ({ element, pageEditing }: NavigationItemProps): JSX.Elem
 const renderChildNavigationItem = ({
   element,
   key,
+  onToggle,
   pageEditing,
 }: NavigationItemProps): JSX.Element => (
   <ListItem key={key} width="100%">
@@ -265,6 +290,7 @@ const renderChildNavigationItem = ({
         base: { backgroundColor: 'unset' },
         lg: { backgroundColor: 'sugcon.gray.100' },
       }}
+      onClick={onToggle}
     >
       {getNavigationText(element)}
     </Link>
