@@ -62,6 +62,7 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
             const pp: PersonProps = {
               params: props.params,
               fields: person.fields,
+              isPeopleGrid: true,
             };
             return <Person key={idx} {...pp}></Person>;
           })}

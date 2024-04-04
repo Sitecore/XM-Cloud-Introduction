@@ -105,6 +105,9 @@ const Link = defineStyleConfig({
     white: {
       color: 'white',
       fontSize: '18px',
+      _hover: {
+        color: 'white',
+      },
     },
     smallWhite: {
       color: 'white',

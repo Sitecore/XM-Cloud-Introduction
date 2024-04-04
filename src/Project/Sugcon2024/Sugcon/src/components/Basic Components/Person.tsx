@@ -54,23 +54,23 @@ export interface PersonFields {
 export type PersonProps = {
   params: { [key: string]: string };
   fields: PersonFields;
+  isPeopleGrid?: boolean;
 };
 
 export const Default = (props: PersonProps): JSX.Element => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box mb={30}>
+    <Box mb={30} w={props.isPeopleGrid ? 300 : 260}>
       <Image
         as={JssImage}
         src={props.fields.Image?.value?.src}
-        w={260}
+        w={props.isPeopleGrid ? 300 : 260}
         borderRadius={15}
         mb={10}
         onClick={props.params?.LinkToBio == '1' ? onOpen : undefined}
         cursor="pointer"
         field={props.fields.Image}
       />
-
       {props.params?.LinkToBio == '1' && (
         <Button onClick={onOpen} variant="link">
           <Heading as="h3" size="md" mt={2}>
@@ -83,10 +83,18 @@ export const Default = (props: PersonProps): JSX.Element => {
           <JssText field={props.fields.Name} />
         </Heading>
       )}
-      <Text fontSize="16px" color="sugcon.gray.500" mb={0}>
+      <Text
+        fontSize={props.isPeopleGrid ? '18px' : '16px'}
+        color={props.isPeopleGrid ? 'inherit' : 'sugcon.gray.500'}
+        mb={0}
+      >
         <JssText field={props.fields.JobRole} />
       </Text>
-      <Text fontSize="16px" color="sugcon.gray.500" mb={0}>
+      <Text
+        fontSize={props.isPeopleGrid ? '18px' : '16px'}
+        color={props.isPeopleGrid ? 'inherit' : 'sugcon.gray.500'}
+        mb="13px"
+      >
         <JssText field={props.fields.Company} />
       </Text>
       {(isEditorActive() ||
@@ -94,10 +102,7 @@ export const Default = (props: PersonProps): JSX.Element => {
         <Link
           as={JssLink}
           isExternal={props.fields.Linkedin?.value?.target == '_blank'}
-          fontSize="18px"
-          mt={3}
-          textDecoration="underline"
-          color="#28327D"
+          _hover={{ color: 'inherit', textDecoration: 'none' }}
           field={props.fields.Linkedin}
         />
       )}
@@ -115,10 +120,7 @@ export const Default = (props: PersonProps): JSX.Element => {
         <Link
           as={JssLink}
           isExternal={props.fields.Twitter?.value?.target == '_blank'}
-          fontSize="18px"
-          mt={3}
-          textDecoration="underline"
-          color="#28327D"
+          _hover={{ color: 'inherit', textDecoration: 'none' }}
           field={props.fields.Twitter}
         />
       )}

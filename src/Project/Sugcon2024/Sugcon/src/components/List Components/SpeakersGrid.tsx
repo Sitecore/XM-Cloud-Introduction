@@ -132,7 +132,7 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
 
       <SimpleGrid
         w="full"
-        columns={{ base: 1, md: 2, lg: Math.ceil(cols / 2), xl: cols }} // Using Math.ceil so odd numbers round up.
+        columns={{ base: 1, md: 2, lg: 3, xl: 4, '2xl': cols }}
         mt={10}
         gap="18px"
         justifyItems="center"
