@@ -47,7 +47,7 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
   }
 
   return (
-    <Box w="100%" mt={20} className={clsx(props?.params?.Styles)}>
+    <Box w="100%" mt={20} className={clsx('people-grid-container', props?.params?.Styles)}>
       <LayoutFlex flexGrow="1" flexDirection="column" align="start">
         <Heading as={JssText} field={props.fields.Headline} tag="h2" size="lg" />
 

@@ -1,0 +1,11 @@
+.people-grid-container {
+  &:not(.red-linear-gradient) {
+    color: #000;
+
+    & .person-job-role,
+    & .person-company {
+      color: #707070;
+    }
+  }
+}
+

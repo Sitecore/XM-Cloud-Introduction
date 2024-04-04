@@ -83,18 +83,10 @@ export const Default = (props: PersonProps): JSX.Element => {
           <JssText field={props.fields.Name} />
         </Heading>
       )}
-      <Text
-        fontSize={props.isPeopleGrid ? '18px' : '16px'}
-        color={props.isPeopleGrid ? 'inherit' : 'sugcon.gray.500'}
-        mb={0}
-      >
+      <Text className="person-job-role" mb={0}>
         <JssText field={props.fields.JobRole} />
       </Text>
-      <Text
-        fontSize={props.isPeopleGrid ? '18px' : '16px'}
-        color={props.isPeopleGrid ? 'inherit' : 'sugcon.gray.500'}
-        mb="13px"
-      >
+      <Text className="person-company" mb="13px">
         <JssText field={props.fields.Company} />
       </Text>
       {(isEditorActive() ||
