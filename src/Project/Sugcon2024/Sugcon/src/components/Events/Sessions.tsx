@@ -21,7 +21,7 @@ const SessionsDefaultComponent = (props: SessionsProps): JSX.Element => (
   </div>
 );
 
-export const SessionsComponent = (props: SessionsProps): JSX.Element => {
+const SessionsComponent = (props: SessionsProps): JSX.Element => {
   const id = props.params.RenderingIdentifier || undefined;
 
   const fetcher = (url: string) => fetch(url).then((res) => res.text());
