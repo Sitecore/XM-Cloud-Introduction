@@ -7,6 +7,7 @@ import {
   LinkField,
   Text as JssText,
   Link as JssLink,
+  withDatasourceCheck,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 
 import { ButtonLink } from '../../basics/ButtonLink';
@@ -17,6 +18,7 @@ import {
 } from 'lib/utils/sitecoreUtils';
 import { PaddingX, Template } from 'components/Templates/LayoutConstants';
 import { LayoutFlex } from 'components/Templates/LayoutFlex';
+import { ComponentProps } from 'lib/component-props';
 
 // Define the type of props that Hero will accept
 interface Fields {
@@ -36,12 +38,11 @@ interface Fields {
   Image: ImageField;
 }
 
-export type HeroProps = {
-  params: { [key: string]: string };
+export type HeroProps = ComponentProps & {
   fields: Fields;
 };
 
-export const HeroHomepage = (props: HeroProps): JSX.Element => {
+const HeroHomepageComponent = (props: HeroProps): JSX.Element => {
   return (
     <Flex flexDir={{ base: 'column', md: 'row' }}>
       <Box
@@ -88,7 +89,9 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
   );
 };
 
-export const HeroEvent = (props: HeroProps): JSX.Element => {
+export const HeroHomepage = withDatasourceCheck()<HeroProps>(HeroHomepageComponent);
+
+const HeroEventComponent = (props: HeroProps): JSX.Element => {
   return (
     <Flex
       direction={{ base: 'row', md: 'row' }}
@@ -139,7 +142,9 @@ export const HeroEvent = (props: HeroProps): JSX.Element => {
   );
 };
 
-export const HeroJustificationLetter = (props: HeroProps): JSX.Element => {
+export const HeroEvent = withDatasourceCheck()<HeroProps>(HeroEventComponent);
+
+const HeroJustificationLetterComponent = (props: HeroProps): JSX.Element => {
   return (
     <Flex position="relative" width="full" alignItems="center" mt="30px">
       {/* Content */}
@@ -194,3 +199,7 @@ export const HeroJustificationLetter = (props: HeroProps): JSX.Element => {
     </Flex>
   );
 };
+
+export const HeroJustificationLetter = withDatasourceCheck()<HeroProps>(
+  HeroJustificationLetterComponent
+);

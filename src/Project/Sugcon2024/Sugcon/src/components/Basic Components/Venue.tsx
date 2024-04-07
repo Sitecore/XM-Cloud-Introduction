@@ -6,6 +6,7 @@ import {
   RichText as JssRichText,
   Text as JssText,
   Item,
+  withDatasourceCheck,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { Box, Flex, Heading, Icon, Image, Stack } from '@chakra-ui/react';
 import { ButtonLink } from 'src/basics/ButtonLink';
@@ -14,6 +15,7 @@ import styled from '@emotion/styled';
 import { LayoutFlex } from 'components/Templates/LayoutFlex';
 import { PaddingX } from 'components/Templates/LayoutConstants';
 import clsx from 'clsx';
+import { ComponentProps } from 'lib/component-props';
 
 // Define the fields that the Venue component will accept
 interface Fields {
@@ -26,8 +28,7 @@ interface Fields {
   VenueImages: Item[];
 }
 
-export type VenueProps = {
-  params: { [key: string]: string };
+export type VenueProps = ComponentProps & {
   fields: Fields;
 };
 
@@ -58,7 +59,7 @@ const settings = {
   ),
 };
 
-export const Default = (props: VenueProps): JSX.Element => {
+const VenueComponent = (props: VenueProps): JSX.Element => {
   const [slider, setSlider] = React.useState<Slider | null>(null);
   const id = props?.params?.RenderingIdentifier || undefined;
 
@@ -119,6 +120,8 @@ export const Default = (props: VenueProps): JSX.Element => {
     </LayoutFlex>
   );
 };
+
+export const Default = withDatasourceCheck()<VenueProps>(VenueComponent);
 
 interface VenueInformationBlockProps {
   FieldTitle: TextField;
