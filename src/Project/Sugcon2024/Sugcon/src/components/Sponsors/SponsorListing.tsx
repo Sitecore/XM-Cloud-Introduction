@@ -146,7 +146,7 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
       <SponsorListingWrapper {...props}>
         {/* Map through each sponsor and render their details */}
         {props.fields.Sponsors.map((sponsor, index) => (
-          <Stack gap={8} key={index} maxW="50%">
+          <Stack gap={8} key={index} maxW={{ base: '100%', md: '50%' }}>
             {/* Render sponsor logo */}
 
             <Box height={'100%'} maxHeight={170} w={'full'} verticalAlign={'bottom'}>
