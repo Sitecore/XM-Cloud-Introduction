@@ -11,6 +11,7 @@ const meta = {
 } satisfies Meta<typeof LinkComponent>;
 export default meta;
 type Story = StoryObj<typeof meta>;
+
 export const Link: Story = {
   name: 'Link',
   args: {
