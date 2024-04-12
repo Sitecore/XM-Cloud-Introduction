@@ -2,6 +2,7 @@ import {
   ComponentParams,
   ComponentRendering,
   LinkField,
+  Placeholder,
   Link as SitecoreLink,
   Text,
   TextField,
@@ -26,7 +27,6 @@ import {
   HeaderHeights,
   PaddingX,
   PaddingY,
-  responsiveButtonSizeConfig,
 } from 'template/LayoutConstants';
 
 export interface Fields {
@@ -40,14 +40,11 @@ export interface Fields {
   Styles: string[];
 }
 
-export type CustomComponentRendering = Omit<ComponentRendering, 'fields'> & {
-  fields: Fields[];
-};
 
 export type NavigationProps = {
   params?: ComponentParams;
   fields: Fields;
-  rendering: CustomComponentRendering;
+  rendering: ComponentRendering;
   className?: string;
 };
 
@@ -107,6 +104,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
       navigationMenuItems={navigationMenuItems}
       onToggle={onToggle}
       pageEditing={pageEditing}
+      rendering={props.rendering}
     />
   );
 
@@ -149,15 +147,17 @@ interface ResponsiveNavigationProps {
   navigationMenuItems: Fields[];
   onToggle?: () => void;
   pageEditing: boolean | undefined;
+  rendering: ComponentRendering;
 }
 
 const ResponsiveNavigation = ({
   navigationMenuItems,
   onToggle,
   pageEditing,
+  rendering
 }: ResponsiveNavigationProps): JSX.Element => {
   return (
-    <Box as="nav" role="navigation" aria-label="SUGCON Europe 2024" ml={{ base: 0, lg: 'auto' }}>
+    <Box as="nav" role="navigation" aria-label="SUGCON" ml={{ base: 0, lg: 'auto' }}>
       <UnorderedList
         display={{ base: 'block', lg: 'flex' }}
         flexWrap="wrap"
@@ -194,13 +194,7 @@ const ResponsiveNavigation = ({
             );
           })}
         <ListItem>
-          <Button
-            as={Link}
-            href="https://siteco.re/SUGCONEurope2024Registration"
-            size={responsiveButtonSizeConfig}
-          >
-            Register now
-          </Button>
+          <Placeholder name="button-link" rendering={rendering} />
         </ListItem>
       </UnorderedList>
     </Box>
