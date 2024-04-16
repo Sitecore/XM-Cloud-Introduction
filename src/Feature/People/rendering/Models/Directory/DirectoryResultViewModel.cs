@@ -32,7 +32,7 @@ namespace Mvp.Feature.People.Models.Directory
             result.Year = last.Application.Selection.Year.ToString();
             if (pageUri != null && !string.IsNullOrWhiteSpace(result.Name))
             {
-                result.ProfileUri = pageUri.AddSegment(result.Name.EncodeSpaces());
+                result.ProfileUri = pageUri.AddQueryString("id", profile.Id.ToString("N"));
             }
 
             return result;
