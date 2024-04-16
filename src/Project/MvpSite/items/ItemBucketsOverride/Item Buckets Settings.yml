@@ -30,18 +30,8 @@ Languages:
         <ruleset>
           <rule
             uid="{3454F77A-B82E-4C1E-8C2C-553254BF3805}">
-            <conditions>
-              <condition
-                id="{E5B43654-4D96-41F3-83D6-4F04CC7ADF69}"
-                uid="176AAE7007764206A09E75C900D0C2FC"
-                templateid="{2EBA0721-DF1E-4D69-A963-2755BAA7D726}" />
-            </conditions>
-            <actions>
-              <action
-                id="{F091DB35-8784-44D7-A7FA-0729984188DF}"
-                uid="D3FB24EB5C9F467EA0B30285ED953977"
-                levels="1" />
-            </actions>
+            <conditions />
+            <actions />
           </rule>
         </ruleset>
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
@@ -54,11 +44,11 @@ Languages:
         sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ffefdc81-c6a1-487f-9f55-aefa5282a8c3"
+      Value: "3fc07594-6446-41c8-814d-c779a6d3e99d"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\ed7gR4aY22
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220929T124014Z
+      Value: 20240326T085922Z
