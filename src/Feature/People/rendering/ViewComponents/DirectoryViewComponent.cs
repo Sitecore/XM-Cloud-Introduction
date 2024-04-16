@@ -44,7 +44,9 @@ namespace Mvp.Feature.People.ViewComponents
             await ExecuteSearch(model);
             MergeFacetsAndViewFacets(model);
 
-            return model.ErrorMessages.Count > 0 ? View("~/Views/Shared/Components/Directory/Error.cshtml", model) : View(model);
+            return model.ErrorMessages.Count > 0 ? View("~/Views/Shared/Components/Directory/Error.cshtml", model) :
+                model.TotalResults == 0 ? View("~/Views/Shared/Components/Directory/NoResults.cshtml", model) :
+                View(model);
         }
 
         private static void MergeFacetsAndViewFacets(DirectoryViewModel model)
