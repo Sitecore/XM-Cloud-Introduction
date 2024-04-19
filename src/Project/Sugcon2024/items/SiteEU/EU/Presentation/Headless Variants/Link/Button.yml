@@ -1,8 +1,8 @@
 ﻿---
-ID: "0d01471a-af9c-4ec3-a302-53ee36bd7a78"
-Parent: "aa7ea3cd-0f71-4031-8afa-8cb36cf60d96"
-Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
-Path: /sitecore/templates/Project/Sugcon2024/Rendering Parameters
+ID: "775a5ce6-c126-4466-894c-4cdab71d3fa9"
+Parent: "2b067f30-56f6-435f-b6d5-21745715c717"
+Template: "4d50cdae-c2d9-4de8-b080-8f992bfb1b55"
+Path: /sitecore/content/Sugcon2024/EU/Presentation/Headless Variants/Link/Button
 Languages:
 - Language: en
   Versions:
@@ -10,7 +10,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20240226T165733Z
+      Value: 20240402T145301Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -21,11 +21,11 @@ Languages:
         sitecore\cdJph8P5Hr
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "59c18503-da92-4104-8022-6b5f3d72485b"
+      Value: "addc525b-bba0-4e65-963b-50e5ab71cd85"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\cdJph8P5Hr
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240226T165733Z
+      Value: 20240402T215358Z
