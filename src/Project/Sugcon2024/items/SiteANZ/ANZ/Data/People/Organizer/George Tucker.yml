@@ -1,0 +1,46 @@
+﻿---
+ID: "27d0f913-a5e6-45b3-a305-a071fe2a6807"
+Parent: "72e1273e-5482-4486-a1f2-747cb8c6e61f"
+Template: "cf5cf584-6f21-436c-be31-d5823d25a420"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/People/Organizer/George Tucker
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240424T103602Z
+    - ID: "4c0f1cce-f29a-4d56-99b4-210fbe7d0865"
+      Hint: Twitter
+      Value: |
+        <link text="Twitter" linktype="external" url="https://twitter.com/gwdt" anchor="" target="_blank" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "569d41b7-a9f7-4fe6-b1e8-d272d5f84d4c"
+      Hint: Linkedin
+      Value: |
+        <link text="LinkedIn" linktype="external" url="https://www.linkedin.com/in/georgewdtucker" anchor="" target="_blank" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9b55c742-2ead-46a0-a1af-088635f7afbc"
+    - ID: "9d82ec0c-ca9e-41e1-aa5d-1af75877cffb"
+      Hint: Name
+      Value: George Tucker
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240424T103839Z
+    - ID: "f39a9f75-c302-4aa4-94cd-48ef7432fda1"
+      Hint: Image
+      Value: |
+        <image mediaid="{F5042203-0B68-4FB0-89CA-7CF8D0CFB49F}" />

@@ -9,12 +9,14 @@ SharedFields:
   Value: |
     {F5D59B30-223D-4E5A-967D-19DAF7934DB6}
     {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
-    {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20240105T121329Z
@@ -28,14 +30,14 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "c326e49c-9671-457d-b9da-c5cca13231c7"
+      Value: "d74a1b4b-edea-4a0c-8648-082acef8eb55"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\UOUBIWQRx7
+        sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240206T160446Z
+      Value: 20240402T172114Z
     - ID: "ecefdd88-c772-4eab-9faf-24b23e769f27"
       Hint: Title
       Value: $name

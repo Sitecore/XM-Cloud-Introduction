@@ -1,0 +1,45 @@
+﻿---
+ID: "fecf2ca1-8644-46c7-8435-f3c3dba436b0"
+Parent: "af043b8b-deec-4bc1-9b77-6dd152f27657"
+Template: "8406eace-ca58-4190-9269-a04b1c9504da"
+Path: /sitecore/content/Sugcon2024/NA/Data/Text and Image/Homepage
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "20a182aa-b8a0-41b7-a750-ffbf670ba441"
+      Hint: Text
+      Value: |
+        <p><span style="background-color: rgb(246, 246, 246); color: rgb(33, 37, 41);">The Sitecore User Group Conference (SUGCON) - North America 2023, brings the user community together and provides the perfect platform to gain knowledge and get inspired by the potential of the Sitecore platforms and services. Following many highly successful events, we are anticipating over 300 attendees to join us for the event in Minneapolis, USA.</span><br /></p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240308T140526Z
+    - ID: "2c041b92-d32b-4b33-ba73-adf80b01698e"
+      Hint: Image
+      Value: |
+        <image mediaid="F910DACA-D087-49EC-91D5-4725AC8A3A8D" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5ba4d61a-1895-40b7-9bea-da5d6abd71ac"
+      Hint: Headline
+      Value: An event from the community for the community
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dddc94c7-0d4a-4a20-8f1c-c57669547b2f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T135854Z

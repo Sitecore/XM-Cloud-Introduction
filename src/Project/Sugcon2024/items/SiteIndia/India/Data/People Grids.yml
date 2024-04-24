@@ -1,0 +1,23 @@
+﻿---
+ID: "95fab5a5-99c3-43da-9466-b26fe167b858"
+Parent: "74102f28-8605-4ca3-82e8-62affed181a5"
+Template: "3e6e0f40-9b1a-477e-8096-e949d8200a3f"
+Path: /sitecore/content/Sugcon2024/India/Data/People Grids
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240312T171746Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b829875c-7b37-48b2-97e3-c7b488656e3c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240402T124703Z

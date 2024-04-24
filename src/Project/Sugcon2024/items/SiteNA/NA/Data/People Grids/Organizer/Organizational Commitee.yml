@@ -1,0 +1,44 @@
+﻿---
+ID: "42c6fe05-0ba4-410f-a757-7e8f59a6deb5"
+Parent: "16bfb9b5-a405-4057-95b5-5747f43e14c8"
+Template: "908ce315-5c67-40f3-920e-9aca6c348318"
+Path: /sitecore/content/Sugcon2024/NA/Data/People Grids/Organizer/Organizational Commitee
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240313T135751Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "68fc3baf-c3d9-4b1f-a360-3f285e756807"
+      Hint: Headline
+      Value: Organizational Commitee
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c42ef806-55e7-4145-b285-7bb8a15aa969"
+    - ID: "b81d53dd-bb9f-4c68-ba6c-a774e2c47532"
+      Hint: People
+      Value: |
+        {D5796A66-0C7D-4D50-A8EE-47587F73DDFB}
+        {0C229D3F-119E-4B9B-95C1-FF59505A03CE}
+        {F8FC03DB-86B9-453F-AF01-8DCE525BE103}
+        {D91F3878-AE04-4191-B389-29F4D849901B}
+        {4E714E82-7EBD-4DE7-B2EE-44C1538A64F4}
+        {2DB591CB-10C2-4BCC-B0AE-69296FB4B2D8}
+        {7FCC7A95-BF82-4746-A302-0BB9C6774EC6}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T145537Z

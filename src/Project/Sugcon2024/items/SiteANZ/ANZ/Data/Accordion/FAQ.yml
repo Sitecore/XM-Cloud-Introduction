@@ -1,0 +1,42 @@
+﻿---
+ID: "7188ba27-7401-4408-9521-33d5b93ac468"
+Parent: "5c0c1d26-83dc-4d45-9fa7-ef5c2feeb82b"
+Template: "89f532d4-c6a3-4648-94bd-71d169e6c5c7"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/Accordion/FAQ
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "228d69ec-1aee-47ad-bb49-920fc6f5eb56"
+      Hint: Elements
+      Value: |
+        {51BF1645-4EB3-4522-9569-88070CD97E7F}
+        {73A0B8E3-81FE-46A9-A899-98F4A419D92E}
+        {6E8C3DF9-4778-425A-85C8-E578D3756802}
+        {40143B68-83A1-42C7-8C5A-E2C540B43FF0}
+        {2561E35E-2AD8-4503-AB74-83526446A9E6}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240320T110015Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "859a98fd-b339-419e-a0a8-3226d27a3d54"
+      Hint: Headline
+      Value: FAQ
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5a1d94d4-deba-4587-ab75-a131d60ac320"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T134128Z

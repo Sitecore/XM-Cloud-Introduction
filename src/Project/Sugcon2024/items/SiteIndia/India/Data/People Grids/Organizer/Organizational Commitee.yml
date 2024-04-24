@@ -1,0 +1,46 @@
+﻿---
+ID: "ce7756b6-8347-4a09-8c6a-e637c529a224"
+Parent: "141425c5-de66-4d9d-9196-6c7031b6259d"
+Template: "908ce315-5c67-40f3-920e-9aca6c348318"
+Path: /sitecore/content/Sugcon2024/India/Data/People Grids/Organizer/Organizational Commitee
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240313T135751Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "68fc3baf-c3d9-4b1f-a360-3f285e756807"
+      Hint: Headline
+      Value: Organizational Commitee
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f9fab640-17e9-4899-93fb-df01e3936a7a"
+    - ID: "b81d53dd-bb9f-4c68-ba6c-a774e2c47532"
+      Hint: People
+      Value: |
+        {8E4D6161-8C25-4269-BB54-E7175EA32794}
+        {E6265DCA-44BB-4ECB-B3A8-36A3599B7B29}
+        {CE6F61BD-0536-4DEA-9D04-776B29C8A829}
+        {30BED761-CC7C-4F44-B1B7-01755168CBCD}
+        {D602CD32-3FEF-4BAB-AD60-0D6744824335}
+        {D0CFBB20-A680-48F2-AC33-EECDAB9B5E65}
+        {5BE006C4-A5E8-46C0-80E1-11C499D10EF9}
+        {F1289BF0-BCA6-4304-85E8-17EE95328D1E}
+        {0A68CF67-E054-4AC3-A93E-C0BA5437075A}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T112207Z

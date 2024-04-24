@@ -1,0 +1,40 @@
+﻿---
+ID: "96c73333-de88-468b-84b8-34d73c0cf7f4"
+Parent: "8fc97efe-9bb2-44ad-9b62-e01b37f62df5"
+Template: "b15b6056-c271-490b-972e-405750d7a9e7"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/SponsorListing/Lanyard Sponsor
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240424T105201Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "7be32799-02e1-4132-914e-61796a028072"
+      Hint: Title
+      Value: Lanyard sponsor
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5286722f-b86a-408f-b5a1-d5adaa957c6c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "c001629a-00c8-4016-9c80-3f757ac3522a"
+      Hint: Sponsors
+      Value: "{3035BB78-DB5E-41C0-A039-9ABC0787FDC6}"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240424T110131Z

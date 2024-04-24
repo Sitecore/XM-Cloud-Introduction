@@ -1,0 +1,40 @@
+﻿---
+ID: "a486a77f-6da2-4e12-a087-0920ce6a28d2"
+Parent: "7025d00d-feca-479b-8458-e28b3e7e5943"
+Template: "7a6070f0-4093-45c9-87ba-53bf9fbba4bb"
+Path: /sitecore/content/Sugcon2024/EU/Data/Speakers Grid/Speakers 2024
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240321T124158Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "56d483bf-2ed4-4b98-b924-1e2811130d8a"
+      Hint: Headline
+      Value: SUGCON Europe 2024 Speakers
+    - ID: "58cd7909-c4a0-4aa1-8ebc-b1dcb0184e78"
+      Hint: SessionsListTitle
+      Value: Sessions List Title
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "372c8343-55b7-4aee-b183-b9bfad557f0e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240321T124329Z
+    - ID: "f42c569e-47f1-4035-98b1-33077b15eae6"
+      Hint: SessionizeSpeakerUrl
+      Value: "https://sessionize.com/api/v2/di9e6tfk/view/Speakers"

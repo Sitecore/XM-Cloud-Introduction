@@ -1,0 +1,42 @@
+﻿---
+ID: "a2c1198c-1f45-4fec-a543-ea49ee5bd540"
+Parent: "ab0a76ee-d6e9-45ed-8195-3c267e3b84e9"
+Template: "3caa9812-e5cf-488e-9546-ecaa263c8a14"
+Path: /sitecore/content/Sugcon2024/NA/Data/Sponsors/Nishtech
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240423T151105Z
+    - ID: "3d19f996-77c2-4fdd-a4ca-390fc5a12e56"
+      Hint: SponsorName
+      Value: Nishtech
+    - ID: "4a651df3-8c05-42d7-8060-a33e21174dbb"
+      Hint: SponsorLogo
+      Value: |
+        <image mediaid="{D1E17C8D-D49A-41D5-8531-FAF2BD612271}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "791f97df-f096-479a-b1d1-e1e3634a2a4b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T152106Z
+    - ID: "dca7fd07-27d3-4089-8845-2862f3ef1638"
+      Hint: SponsorURL
+      Value: |
+        <link linktype="external" url="https://www.nishtech.com" anchor="" target="_blank" />

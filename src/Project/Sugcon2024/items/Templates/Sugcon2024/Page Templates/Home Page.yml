@@ -6,7 +6,7 @@ Path: /sitecore/templates/Project/Sugcon2024/Page Templates/Home Page
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: Office/32x32/home.png
+  Value: office/32x32/home.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Value: "{6A1B5FE6-5F3D-49FB-AC10-1F925C67E105}"
@@ -31,11 +31,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "19aeecba-49f0-4eed-bc20-ce46864cb8a7"
+      Value: "6f1e396b-d125-4f63-b275-4dc4c3d00581"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\x3rLvWVVyq
+        sitecore\UOUBIWQRx7
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240313T050331Z
+      Value: 20240402T171622Z

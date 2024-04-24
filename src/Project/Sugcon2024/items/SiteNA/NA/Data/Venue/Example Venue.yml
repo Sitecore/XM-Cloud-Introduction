@@ -1,0 +1,59 @@
+﻿---
+ID: "302f5d5f-f785-470e-b3ac-ea038520c74f"
+Parent: "4125ecf0-d221-4d93-8e5d-476804329d5c"
+Template: "84d400f6-0729-457b-a9b3-171829883242"
+Path: /sitecore/content/Sugcon2024/NA/Data/Venue/Example Venue
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "160ef76f-a69b-4cd3-8824-d892c505db10"
+      Hint: VenueImages
+      Value: |
+        {2ED89265-064F-4062-AA3E-76DE4631C352}
+        {A738E39E-2ED7-400D-B359-ADD58BA81EDA}
+        {8E881F5C-8745-4913-8DC4-1EF2951D5136}
+        {4782B38B-4C54-467A-8868-3AB18668695F}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240311T075532Z
+    - ID: "26cc0988-b30d-4b85-9a6a-6873fa20c2d5"
+      Hint: ButtonLink
+      Value: |
+        <link text="Visit website" linktype="external" url="https://www.sitecore.com" anchor="" target="" />
+    - ID: "2e11cbec-5e4a-49b0-963d-21e0f95b027e"
+      Hint: AdditionalInfoTitle
+      Value: A landmark of Irish heritage
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "86927eb8-fcc2-455b-a7c7-1df3d47d5668"
+      Hint: AdditionalInfoText
+      Value: <p>One of the world’s most unique, sustainable, and flexible meeting and event venues for bringing people together for live, hybrid and virtual events that inspire and entertain.</p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "512c5bcd-84c6-4e8f-8466-7eb4322c1c6e"
+    - ID: "997dc62b-1e07-4512-9b55-2fb80a571660"
+      Hint: HotelName
+      Value: Azure Breeze Resort
+    - ID: "ad7a76a0-e6e3-407b-b70b-914cf2bdf599"
+      Hint: HotelAddress
+      Value: |
+        123 Seaside Avenue<br />
+        Azure Breeze, CA 90210
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T133844Z
+    - ID: "e35f7217-4251-4292-bdca-e3dc0f951f98"
+      Hint: Headline
+      Value: Venue Headline

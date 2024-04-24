@@ -1,0 +1,34 @@
+﻿---
+ID: "f0df6a26-fa68-4e55-9d96-8a7a43af9096"
+Parent: "57f93dd0-0862-4e1a-b55d-4242bd81db40"
+Template: "9fef9c18-3ab5-48e4-99d6-f50a933c8f94"
+Path: /sitecore/content/Sugcon2024/EU/Home/Agenda/Data/Agenda EU
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240308T145509Z
+    - ID: "32a8c629-0460-4070-a9f4-99f792bbbb92"
+      Hint: SessionizeUrl
+      Value: "https://sessionize.com/api/v2/ekimnhe4/view/GridSmart"
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "96bb5158-f500-4b3c-8b3a-8cccaeab8e1d"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240308T145631Z

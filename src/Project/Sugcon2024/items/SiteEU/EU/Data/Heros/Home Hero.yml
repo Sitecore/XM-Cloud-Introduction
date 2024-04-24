@@ -1,0 +1,53 @@
+﻿---
+ID: "f54987a7-dcea-40a6-9fc6-bd53241d8284"
+Parent: "b62b47e2-99a2-4fca-bb62-a78503b67776"
+Template: "92ad7a66-1b2c-4b15-844b-accc4219323d"
+Path: /sitecore/content/Sugcon2024/EU/Data/Heros/Home Hero
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: |
+        <r owner="sitecore\a.vershalovich@brimit.com" date="20240416T203855Z" />
+    - ID: "0a923f53-535b-4702-a81d-8d9e04d3b30d"
+      Hint: CallToAction
+      Value: 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240223T115032Z
+    - ID: "4035681d-0841-416f-86f6-fae8c16c7f7a"
+      Hint: Text
+      Value: |
+        As we close the curtains on the 10th SUGCON Europe in Dublin, we would like to extend our deepest gratitude to everyone who attended and to our generous sponsors who made this event possible!
+        
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "58cc68dd-3b8e-4617-b2c9-2db863cac546"
+      Hint: Image
+      Value: |
+        <image mediaid="{9BDCB75D-CB34-4BBD-9A49-6F7321F66545}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "64d6a6e8-02e9-4ba7-9207-6b489cacf853"
+      Hint: EventDate
+      Value: SUGCON Europe 2024
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "285ea343-3605-4d68-ba2e-ce24fa4dd20a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T114906Z
+    - ID: "e527b987-6b82-4719-bd74-45a2641f0dbb"
+      Hint: Headline
+      Value: A Heartfelt Thank You to Our SUGCON Europe Community

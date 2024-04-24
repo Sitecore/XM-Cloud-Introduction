@@ -1,0 +1,60 @@
+﻿---
+ID: "827ebf43-c21c-43d9-87fb-0438f7466113"
+Parent: "71e660a6-70e7-4e2a-ae93-153640094e45"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: /sitecore/media library/Project/Sugcon2024/India/Images/Sponsors/Logoipsum_02
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/02C6EEF175C54C97B55B92C997159C27.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 202
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "ca0b4f1d-b93c-493c-95e3-29c820cf6957"
+  Value: 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
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 2671
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/png
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: png
+- ID: "cb09946f-3218-4823-87d2-d5007c199a96"
+  Hint: Dimensions
+  Value: 202 x 40
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 40
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240228T215232Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: Logo
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "49385b87-6d39-4601-b578-d9e0e43586e4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240229T111640Z
