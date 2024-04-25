@@ -70,6 +70,9 @@ export const Default = (props: PersonProps): JSX.Element => {
         onClick={props.params?.LinkToBio == '1' ? onOpen : undefined}
         cursor="pointer"
         field={props.fields.Image}
+        objectFit="cover"
+        boxSize="300px"
+        alt={props.fields.Image?.value?.alt}
       />
       {props.params?.LinkToBio == '1' && (
         <Button onClick={onOpen} variant="link">

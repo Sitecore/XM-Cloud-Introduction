@@ -110,6 +110,7 @@ export const Default = (props: VenueProps): JSX.Element => {
                   height="100%"
                   maxHeight="400px"
                   objectFit="cover"
+                  alt={image?.fields?.alt}
                 />
               ))}
             </Slider>
