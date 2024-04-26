@@ -1,0 +1,23 @@
+﻿---
+ID: "12364190-c7cc-46c0-ba3e-2d0484accfa8"
+Parent: "74102f28-8605-4ca3-82e8-62affed181a5"
+Template: "2155153a-b5ec-4eac-b1d9-2b5cd6ad2fc6"
+Path: /sitecore/content/Sugcon2024/India/Data/Sponsors
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240228T141636Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2ba80eb9-68f7-4d60-8ca8-044c7b68ae9a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240402T124703Z

@@ -1,0 +1,54 @@
+﻿---
+ID: "bb57f5f5-a432-4211-a4fb-3ef9305f0818"
+Parent: "c36c5684-770f-4959-ab4b-b8691699ffcb"
+Template: "a4bb7fa4-095d-4353-89d0-394c54d2f518"
+Path: /sitecore/content/Sugcon2024/Shared/Data/Events/SUGCON North America
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240313T133715Z
+    - ID: "3948897b-4639-4f0b-aa50-d6dcf1915b9e"
+      Hint: EventCity
+      Value: See you in 2025
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "62021e27-9c59-4ff7-abce-ed67822289a8"
+      Hint: EventCountry
+      Value: 
+    - ID: "869c07b4-d5be-4a25-8c27-cc20a19e8260"
+      Hint: EventDate
+      Value: 
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4613ae8d-78d5-4fca-b63d-de74f86d03ed"
+    - ID: "abe48d09-f3d3-481b-ad7f-2ba5eadfc22e"
+      Hint: LinkToSite
+      Value: |
+        <link linktype="external" url="https://na.sugcon.events/" target="_blank" text="Visit site" anchor=""/>
+    - ID: "b8648f4e-1adc-4ad2-951a-06af23e434b1"
+      Hint: Image
+      Value: |
+        <image mediaid="{5EA91D94-B2EA-4B59-AA26-784C6D236C60}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240404T205924Z
+    - ID: "de965ec8-6648-4bb3-aad9-6b7f97b8e935"
+      Hint: EventName
+      Value: SUGCON North America

@@ -1,0 +1,87 @@
+﻿---
+ID: "9dcf7c44-06f6-4bbc-a016-52e16ef57811"
+Parent: "104aab05-98db-4152-a2fe-95e7fc9a3c87"
+Template: "f5d59b30-223d-4e5a-967d-19daf7934db6"
+Path: /sitecore/content/Sugcon2024/ANZ/Home/Organizers
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 600
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{5E6BE2E8-CC1A-428F-9524-080F7EF6D794}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{DE8135F3-5199-4676-BC4C-49F71F9BD689}"
+              p:before="*"
+              s:ds="F7EA281E-E2C2-4AF1-9D3E-1D5680DD0CA6"
+              s:id="{53331DB4-9E80-4727-B7A6-2617BEA59142}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Columns&amp;Alphabetize&amp;LinkToBio&amp;DisplaySocialLinks=1&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="/headless-main/sxa-generic-page/container-2" />
+            <r
+              uid="{BE203791-3E02-4915-B5E4-0ED0E31D1100}"
+              p:after="*[1=2]"
+              s:ds="5EADBE5E-E426-45CF-BBA2-7A997D68B97F"
+              s:id="{53331DB4-9E80-4727-B7A6-2617BEA59142}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Columns&amp;Alphabetize&amp;LinkToBio&amp;DisplaySocialLinks&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="/headless-main/sxa-generic-page/container-2" />
+          </d>
+        </r>
+    - ID: "1c75d8e4-860f-4a6f-86f5-e0868d0114f1"
+      Hint: OGImage
+      Value: |
+        <image mediaid="{0BE1CD1C-6448-4156-B8A5-548C81507908}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240125T170401Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Organizers
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\anna.bruendel@gmail.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\anna.bruendel@gmail.com
+    - ID: "600a8e16-3dc3-4075-9edc-8a63d7a20216"
+      Hint: OGType
+      Value: website
+    - ID: "7d817b40-bd80-41e3-8562-5ec5f3fb95fd"
+      Hint: MetaDescription
+      Value: Meet the dedicated and experienced team behind SUGCON ANZ 2023. Learn about their passion for Sitecore and commitment to delivering a successful conference.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f307154a-bff6-4aee-a801-814dd165e570"
+    - ID: "b03cdc17-d7b5-4c87-97a9-b57352fe54a3"
+      Hint: OGTitle
+      Value: SUGCON ANZ 2023 Organisation Team | The ANZ Sitecore User Group Conference
+    - ID: "b0c01040-9941-4a8f-8400-b274c377885e"
+      Hint: Title
+      Value: Organization Team
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "cbb2a914-81e3-4fe6-8aed-deab8ed8b98e"
+      Hint: OGDescription
+      Value: Meet the dedicated and experienced team behind SUGCON ANZ 2023 Learn about their passion for Sitecore and commitment to delivering a successful conference.
+    - ID: "d71d9097-062c-4781-bae9-d6658ab01ade"
+      Hint: MetaKeywords
+      Value: SUGCON, ANZ, Sitecore, User Group, Conference, Organization Team, Dedicated, Experienced, Passion, Commitment, Successful
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240424T130824Z

@@ -3,6 +3,11 @@ ID: "01ce548b-0827-4934-a781-3bfbd421addf"
 Parent: "90ae357f-6171-4ea9-808c-5600b678f726"
 Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
 Path: /sitecore/media library/Project/Sugcon2024
+SharedFields:
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    ar|Sugcon2024\Site Collection Admin|pe|+item:create|+item:read|+item:rename|+item:delete|+item:write|+item:admin|pd|+item:create|+item:read|+item:rename|+item:delete|+item:write|+item:admin|
 Languages:
 - Language: en
   Versions:
@@ -21,11 +26,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "302f3577-e02c-4055-81b8-9e44de3c4f3d"
+      Value: "f15e302e-f10f-45b3-bd1d-4e747f449790"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240105T121331Z
+      Value: 20240315T102710Z

@@ -10,7 +10,7 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{5F950686-5AFD-44E0-86FE-A9BC37B4F1BC}" />
+    <image mediaid="{E8925FF7-87A3-4FCC-859D-8DAADE59CDE7}" />
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings
   Value: |
@@ -60,11 +60,11 @@ Languages:
         sitecore\UOUBIWQRx7
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "95adc50f-de14-4201-b4c4-08988514d454"
+      Value: "129b17e2-bea1-46b1-92b3-3aca19c0f1bd"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\cdJph8P5Hr
+        sitecore\chet.potvin@merkle.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240412T163127Z
+      Value: 20240419T192017Z

@@ -1,0 +1,87 @@
+﻿---
+ID: "09f61b6b-0ba3-4d94-9c5e-c2e51b7a3951"
+Parent: "08762520-fa2d-410a-ba44-f02a0f4b40f9"
+Template: "f5d59b30-223d-4e5a-967d-19daf7934db6"
+Path: /sitecore/content/Sugcon2024/EU/Home/Venue
+SharedFields:
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{4AF24445-D7DE-4DEB-A11F-BF0443376F47}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{A7250C08-16B5-48D3-A9F0-0048D87D75CA}"
+              p:before="*"
+              s:ds="479388bc-f010-47c2-a790-06851c38390d"
+              s:id="{4718D9E1-E2BC-4FDD-8305-4CBA3DF7466B}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BF3D99B14-F990-4238-A6B2-6429FCED6515%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="/headless-main/sxa-generic-page/container-2" />
+            <r
+              uid="{24E3B759-DD7B-4D45-AA8E-45A3D4D97731}"
+              p:after="*[1=2]"
+              s:ds="e39a2c4a-7cde-4f0a-aa5b-aee28ea1e23f"
+              s:id="{AB87F73E-6532-41CD-8234-D0E40DE84D90}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=4"
+              s:ph="/headless-main/sxa-generic-page/container-2" />
+          </d>
+        </r>
+    - ID: "1c75d8e4-860f-4a6f-86f5-e0868d0114f1"
+      Hint: OGImage
+      Value: |
+        <image mediaid="{B83A6684-B680-4001-AA6C-72661A01888D}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240403T063659Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Venue
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "600a8e16-3dc3-4075-9edc-8a63d7a20216"
+      Hint: OGType
+      Value: website
+    - ID: "7d817b40-bd80-41e3-8562-5ec5f3fb95fd"
+      Hint: MetaDescription
+      Value: Discover the stunning venue for SUGCON Europe 2024. Explore the city, connect with attendees, and get ready for an unforgettable experience.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c1b25119-10b4-48e6-b407-bf9ad0944e7a"
+    - ID: "b03cdc17-d7b5-4c87-97a9-b57352fe54a3"
+      Hint: OGTitle
+      Value: Europe 2024 Venue | The European Sitecore User Group Conference
+    - ID: "b0c01040-9941-4a8f-8400-b274c377885e"
+      Hint: Title
+      Value: Venue
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "cbb2a914-81e3-4fe6-8aed-deab8ed8b98e"
+      Hint: OGDescription
+      Value: Discover the stunning venue for SUGCON Europe 2024. Explore the city, connect with attendees, and get ready for an unforgettable experience.
+    - ID: "d71d9097-062c-4781-bae9-d6658ab01ade"
+      Hint: MetaKeywords
+      Value: SUGCON, Europe, Sitecore, User Group, Conference, Venue, City, Experience, Networking
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240404T163956Z

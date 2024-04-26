@@ -1,0 +1,49 @@
+﻿---
+ID: "4cf02074-3d5f-4337-bdc3-31cfaa8d9b26"
+Parent: "86cec6d6-aefa-4318-baf7-028d178b0a8d"
+Template: "b15b6056-c271-490b-972e-405750d7a9e7"
+Path: /sitecore/content/Sugcon2024/EU/Data/SponsorListing/Community
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: |
+        <r owner="sitecore\a.vershalovich@brimit.com" date="20240405T150046Z" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240228T215500Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "7be32799-02e1-4132-914e-61796a028072"
+      Hint: Title
+      Value: Community
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a001a171-c74d-44c9-8833-f7bf97bc42e6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "c001629a-00c8-4016-9c80-3f757ac3522a"
+      Hint: Sponsors
+      Value: |
+        {587F0532-159D-4D6B-84E1-75FBE2C9671B}
+        {4FDCAD1B-BF0E-436A-AA43-C3A0314CD6A6}
+        {C8AAC0B9-64CB-4D41-B0EF-FEC532270F23}
+        {954B4C1E-BDCE-409F-9C40-103038E92C5A}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240405T150110Z

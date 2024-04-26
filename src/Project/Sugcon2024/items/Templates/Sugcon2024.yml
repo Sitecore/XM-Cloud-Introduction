@@ -1,8 +1,13 @@
 ﻿---
 ID: "aa7ea3cd-0f71-4031-8afa-8cb36cf60d96"
 Parent: "825b30b4-b40b-422e-9920-23a1b6bda89c"
-Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
+Template: "77157d54-90c8-4014-9b9e-540d24e71d03"
 Path: /sitecore/templates/Project/Sugcon2024
+SharedFields:
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    ar|sitecore\Sitecore Client Site Managing|pd|+item:delete|+item:write|+item:rename|+item:create|pe|+item:delete|+item:write|+item:rename|+item:create|ar|Sugcon2024\Site Collection Designer|pe|+item:read|+item:create|pd|+item:rename|+item:create|+item:delete|+item:read|+item:write|ar|Sugcon2024\Site Collection Admin|pe|+item:create|+item:read|+item:rename|+item:delete|+item:write|+item:admin|pd|+item:create|+item:read|+item:rename|+item:delete|+item:write|+item:admin|
 Languages:
 - Language: en
   Versions:
@@ -21,11 +26,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ac012d93-b016-4027-b7cc-5a1ad92890a3"
+      Value: "9dabb7cf-0c4e-4224-8dee-14a822ee9b75"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\UOUBIWQRx7
+        sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240206T160227Z
+      Value: 20240315T102710Z

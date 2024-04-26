@@ -1,0 +1,50 @@
+﻿---
+ID: "9a1e5a4d-5e9e-41c0-8cba-d1aeff7f775a"
+Parent: "1619126d-0734-4db5-869a-11ddae268b3f"
+Template: "92ad7a66-1b2c-4b15-844b-accc4219323d"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/Heros/Sponsors Hero
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0a923f53-535b-4702-a81d-8d9e04d3b30d"
+      Hint: CallToAction
+      Value: 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240319T223444Z
+    - ID: "4035681d-0841-416f-86f6-fae8c16c7f7a"
+      Hint: Text
+      Value: The Organisation Committee invites Sitecore Partners, Technology Vendors and Individuals to become a sponsor. We offer various packages to present and promote yourself. Your support is crucial for the success of the event. If you are interested in being a sponsor, please contact us on community@sitecore.com.
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "58cc68dd-3b8e-4617-b2c9-2db863cac546"
+      Hint: Image
+      Value: |
+        <image mediaid="{37FD9159-D8F7-4C11-A6FC-0D4B7A08B2F9}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "64d6a6e8-02e9-4ba7-9207-6b489cacf853"
+      Hint: EventDate
+      Value: 
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "193a9124-e266-4201-a6b2-820cab00864c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240424T104429Z
+    - ID: "e527b987-6b82-4719-bd74-45a2641f0dbb"
+      Hint: Headline
+      Value: "Become a proud SUGCON ANZ sponsor!"

@@ -1,0 +1,49 @@
+﻿---
+ID: "f0d5c69b-47d4-465d-ac83-2dd65b59b29e"
+Parent: "ab0a76ee-d6e9-45ed-8195-3c267e3b84e9"
+Template: "3caa9812-e5cf-488e-9546-ecaa263c8a14"
+Path: /sitecore/content/Sugcon2024/NA/Data/Sponsors/Dataweavers
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240403T071025Z
+    - ID: "3d19f996-77c2-4fdd-a4ca-390fc5a12e56"
+      Hint: SponsorName
+      Value: Dataweavers
+    - ID: "4a651df3-8c05-42d7-8060-a33e21174dbb"
+      Hint: SponsorLogo
+      Value: |
+        <image mediaid="{2A68BBCF-C77C-4409-B636-7518CF675AED}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2bbc4d9c-c71b-4bfa-9e8c-be3a0a24aaa2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "cd71d194-bcb3-46c8-8f71-a2bf1f929f1d"
+      Hint: SponsorBio
+      Value: |
+        <p><span style="color: rgb(33, 37, 41);">Dataweavers WebOps Platform is a subscription-based Cloud Automation Platform that orchestrates the delivery, security, and ongoing optimization of Sitecore digital experience ecosystems, enabling digital teams to focus on creating innovative customer experiences rather than managing infrastructure.</span></p>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T151255Z
+    - ID: "dca7fd07-27d3-4089-8845-2862f3ef1638"
+      Hint: SponsorURL
+      Value: |
+        <link linktype="external" url="https://www.dataweavers.com" target="_blank" anchor=""/>

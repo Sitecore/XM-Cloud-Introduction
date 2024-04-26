@@ -1,0 +1,40 @@
+﻿---
+ID: "cb6a03f2-82c5-4936-b041-2f3cda4e4d78"
+Parent: "4869d9d5-7627-4550-8c32-b248381e7efe"
+Template: "9813d24f-4506-43ed-b5c9-4f8033fca9e2"
+Path: "/sitecore/content/Sugcon2024/NA/Data/Accordion/Thursday Trainings 4-6pm/Accordion Element 2"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "077242f3-20e7-4fec-9309-9337edd815f5"
+      Hint: Title
+      Value: "XM Cloud Developer Basics - Thursday 4:00-6:00"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240423T144259Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7126d767-5fa5-4727-a7a9-e111ba7bcdf3"
+    - ID: "a9b746ad-dbed-41c5-8db8-715c2106999f"
+      Hint: Text
+      Value: "<p>In this session, we will take a look at what development is like with XM Cloud. We'll show how to work both online and offline to provision a new environment, build custom components, and synchronize changes with a team.</p><p>Price: complimentary</p>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T144546Z

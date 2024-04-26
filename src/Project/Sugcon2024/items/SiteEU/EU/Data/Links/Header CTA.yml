@@ -22,14 +22,14 @@ Languages:
     - ID: "88fe928d-5136-45fd-8889-9ea13398a015"
       Hint: Link
       Value: |
-        <link text="Register Now" linktype="external" url="" anchor="" target="_blank" />
+        <link text="Share Feedback" linktype="external" url="http://forms.office.com/e/8YWMx49Nyn" anchor="" title="Share Feedback" target="_blank" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2d32260c-1655-4db0-a6b8-6804b89fcb8c"
+      Value: "fd8385b3-a153-41e5-8a3b-d3332a805665"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\cdJph8P5Hr
+        sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240415T195402Z
+      Value: 20240419T133000Z

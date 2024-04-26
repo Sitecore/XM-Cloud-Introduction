@@ -1,0 +1,43 @@
+﻿---
+ID: "7dbaf3e2-a2e3-4201-87e8-21668b487c8a"
+Parent: "a988fe1a-cf7d-473f-ad66-69cc610dac3b"
+Template: "7cc37fce-33bd-464a-8b32-0a65b4bc502e"
+Path: /sitecore/content/Sugcon2024/EU/Data/Action Banners/Become a Sponsor
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240304T155032Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "454a4063-69d0-4732-a952-9f2ac2d678d9"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "cb50acd9-94fb-47cf-b39d-dd44c88748d1"
+      Hint: Text
+      Value: "Elevate your brand by sponsoring SUGCON and reach a specialized audience!"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240319T231657Z
+    - ID: "efb8df35-ae2a-40d8-bca2-299f1de1f7cb"
+      Hint: Title
+      Value: Become a Sponsor
+    - ID: "f3ec91f5-b7bb-4c55-85aa-f34238fb5177"
+      Hint: CallToAction
+      Value: "<link text='Contact us' linktype='mailto' style='' url='mailto:community@sitecore.com?subject=Sugcon sponsorship'  title='' />"

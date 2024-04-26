@@ -1,0 +1,45 @@
+﻿---
+ID: "71e6f710-024f-4709-97b9-8cccc9bd20a5"
+Parent: "169e346a-0774-4619-8014-1a3b4388b177"
+Template: "0a7aa373-5ed1-4e9b-9678-22d3c5faf6df"
+Path: /sitecore/content/Sugcon2024/EU/Home/Sponsors/Data/Text 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240308T145821Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "729034fc-24f3-40b7-8fa4-fb49d7de20dd"
+      Hint: Text
+      Value: |
+        <h2>Why sponsor SUGCON Europe 2024?</h2>
+        <ul>
+            <li>Position your brand as a thought leader by staying updated on the latest Sitecore trends</li>
+            <li>Engage with a dynamic audience actively shaping the future of digital experiences</li>
+            <li>Be recognized as a supporter of shared learning and innovation</li>
+            <li>Exclusive sponsorship packages include workshops and training to certify your team</li>
+            <li>Connect with Sitecore enthusiasts, industry leaders, customers, MVPs, and leave a lasting impact</li>
+        </ul>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e22ba60b-84d7-40b2-991c-b4f321d06eec"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240319T231659Z

@@ -1,0 +1,45 @@
+﻿---
+ID: "a962cd00-96b0-4582-bd18-b270588afe26"
+Parent: "fb2f5c1a-6cc0-4793-867d-a75560e68ef7"
+Template: "908ce315-5c67-40f3-920e-9aca6c348318"
+Path: /sitecore/content/Sugcon2024/India/Data/People Grids/Speaker/Featured Speakers
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240313T130936Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "68fc3baf-c3d9-4b1f-a360-3f285e756807"
+      Hint: Headline
+      Value: Featured Speakers
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fb9cc2a5-5dc2-4c9b-b8fe-b971cbdecb20"
+    - ID: "b81d53dd-bb9f-4c68-ba6c-a774e2c47532"
+      Hint: People
+      Value: |
+        {562063B7-9FFF-40AD-828F-6FE4D4DBBA61}
+        {949E5B8C-15E7-4EC6-A652-8E5844A5C5CA}
+        {AE6391BD-3193-4A5F-8AD1-0EFB758DAB00}
+        {0BC7E069-E065-4D3D-8EC9-24ECCCA4851B}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240402T124717Z
