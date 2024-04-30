@@ -1,6 +1,5 @@
 import React from 'react';
 import InnerHTML from 'dangerously-set-html-content';
-import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
 import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import useSWR from 'swr';
 import { ComponentProps } from 'lib/component-props';
