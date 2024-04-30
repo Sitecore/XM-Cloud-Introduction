@@ -1,0 +1,31 @@
+﻿---
+ID: "24b15ab7-2728-45ba-99ab-95662a5beaba"
+Parent: "23d6cd7c-652d-4291-b1af-6ae7fd3e5ce5"
+Template: "23d6cd7c-652d-4291-b1af-6ae7fd3e5ce5"
+Path: /sitecore/templates/Project/Sugcon2024/Basic Components/Rendering Parameters/Logo/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240226T171328Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\cdJph8P5Hr
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\cdJph8P5Hr
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5cfe8d01-0fe7-4e54-b122-a10eb6d8a7aa"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\cdJph8P5Hr
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240226T171328Z

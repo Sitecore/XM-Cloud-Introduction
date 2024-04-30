@@ -1,0 +1,60 @@
+﻿---
+ID: "1045140f-f026-4eaf-9927-557453ca3aab"
+Parent: "71e660a6-70e7-4e2a-ae93-153640094e45"
+Template: "f1828a2c-7e5d-4bbd-98ca-320474871548"
+Path: /sitecore/media library/Project/Sugcon2024/India/Images/Sponsors/Logoipsum_03
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: "-/media/31FB747592794436B7E0FB0BC724C308.ashx?h=16&thn=1&w=16"
+- ID: "22eac599-f13b-4607-a89d-c091763a467d"
+  Hint: Width
+  Value: 116
+- ID: "40e50ed9-ba07-4702-992e-a912738d32dc"
+  Hint: Blob
+  BlobID: "a8cf0594-74e1-4974-b03f-b0f360d2e161"
+  Value: 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
+- ID: "6954b7c7-2487-423f-8600-436cb3b6dc0e"
+  Hint: Size
+  Value: 1578
+- ID: "6f47a0a5-9c94-4b48-abeb-42d38def6054"
+  Hint: Mime Type
+  Value: image/png
+- ID: "c06867fe-9a43-4c7d-b739-48780492d06f"
+  Hint: Extension
+  Value: png
+- ID: "cb09946f-3218-4823-87d2-d5007c199a96"
+  Hint: Dimensions
+  Value: 116 x 57
+- ID: "de2ca9e4-c117-4c8a-a139-1ff4b199d15a"
+  Hint: Height
+  Value: 57
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240228T215231Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: Logo
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8ecf8846-5c0f-4433-b147-b153527b9f68"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240229T111655Z

@@ -8,6 +8,10 @@ SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 1400
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
+  Value: |
+    ar|Sugcon2024\Site Author|pe|+item:read|+item:create|pd|+item:rename|+item:create|+item:write|+item:delete|+item:read|
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{8EF3BF41-390E-49EE-A8D1-BB139DAF63CB}"
@@ -29,11 +33,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "02e44b35-fc7b-4f7c-8934-63e3a39504eb"
+      Value: "30206f13-e51d-4ad2-84ac-e836b49f77ac"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240105T121449Z
+      Value: 20240320T105500Z

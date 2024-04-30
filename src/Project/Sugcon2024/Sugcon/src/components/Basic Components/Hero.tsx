@@ -43,7 +43,7 @@ export type HeroProps = {
 
 export const HeroHomepage = (props: HeroProps): JSX.Element => {
   return (
-    <Flex flexDir={{ base: 'column', md: 'row' }}>
+    <Flex flexDir={{ base: 'column', md: 'row' }} width="100%" paddingRight="0px" paddingLeft="0px">
       <Box
         ml="auto"
         maxW={{ base: '100%', md: `calc((${Template.MaxWidth}) / 2)` }}
@@ -85,6 +85,7 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
         />
       </Flex>
     </Flex>
+    
   );
 };
 

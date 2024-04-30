@@ -31,6 +31,7 @@ import {
   HStack,
   Center,
 } from '@chakra-ui/react';
+import { LayoutFlex } from 'components/Templates/LayoutFlex';
 
 export interface SponsorListingProps {
   params: ComponentParams;
@@ -97,7 +98,7 @@ const SponsorListingWrapper = (props: SponsorListingWrapperProps): JSX.Element =
     return (
       <div className={`component ${props.params.styles}`} id={id ? id : undefined}>
         <div className="component-content">
-          <Box w={{ base: '100vw', md: '80vw' }} my="20" mx={{ base: '20px', md: 'auto' }}>
+          <LayoutFlex>
             <Card variant={'unstyled'}>
               <CardHeader my={8}>
                 {/* Rendering Title if it exists */}
@@ -120,7 +121,7 @@ const SponsorListingWrapper = (props: SponsorListingWrapperProps): JSX.Element =
                 </Stack>
               </CardBody>
             </Card>
-          </Box>
+          </LayoutFlex>
         </div>
       </div>
     );
@@ -145,7 +146,7 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
       <SponsorListingWrapper {...props}>
         {/* Map through each sponsor and render their details */}
         {props.fields.Sponsors.map((sponsor, index) => (
-          <Stack gap={8} key={index}>
+          <Stack gap={8} key={index} maxW={{ base: '100%', md: '50%' }}>
             {/* Render sponsor logo */}
 
             <Box height={'100%'} maxHeight={170} w={'full'} verticalAlign={'bottom'}>
@@ -226,12 +227,7 @@ export const LogoOnly = (props: SponsorListingProps): JSX.Element => {
         {props.fields.Sponsors.map((sponsor, index) => (
           <React.Fragment key={index}>
             {/* Render sponsor logo as a button */}
-            <JssImage
-              field={sponsor.fields.SponsorLogo}
-              as={Image}
-              maxHeight={70}
-              width={'auto'}
-            />
+            <JssImage field={sponsor.fields.SponsorLogo} as={Image} maxHeight={70} width={'auto'} />
           </React.Fragment>
         ))}
       </SponsorListingWrapper>

@@ -54,22 +54,25 @@ export interface PersonFields {
 export type PersonProps = {
   params: { [key: string]: string };
   fields: PersonFields;
+  isPeopleGrid?: boolean;
 };
 
 export const Default = (props: PersonProps): JSX.Element => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box mb={30}>
+    <Box mb={30} w={props.isPeopleGrid ? 300 : 260}>
       <Image
         as={JssImage}
         src={props.fields.Image?.value?.src}
-        w={300}
+        w={props.isPeopleGrid ? 300 : 260}
         borderRadius={15}
         mb={10}
         onClick={props.params?.LinkToBio == '1' ? onOpen : undefined}
+        cursor="pointer"
         field={props.fields.Image}
+        objectFit="cover"
+        boxSize="300px"
       />
-
       {props.params?.LinkToBio == '1' && (
         <Button onClick={onOpen} variant="link">
           <Heading as="h3" size="md" mt={2}>
@@ -82,10 +85,10 @@ export const Default = (props: PersonProps): JSX.Element => {
           <JssText field={props.fields.Name} />
         </Heading>
       )}
-      <Text fontSize="18px" mb={0}>
+      <Text className="person-job-role" mb={0}>
         <JssText field={props.fields.JobRole} />
       </Text>
-      <Text fontSize="18px" mb={0}>
+      <Text className="person-company" mb="13px">
         <JssText field={props.fields.Company} />
       </Text>
       {(isEditorActive() ||
@@ -93,10 +96,7 @@ export const Default = (props: PersonProps): JSX.Element => {
         <Link
           as={JssLink}
           isExternal={props.fields.Linkedin?.value?.target == '_blank'}
-          fontSize="18px"
-          mt={3}
-          textDecoration="underline"
-          color="#28327D"
+          _hover={{ color: 'inherit', textDecoration: 'none' }}
           field={props.fields.Linkedin}
         />
       )}
@@ -114,10 +114,7 @@ export const Default = (props: PersonProps): JSX.Element => {
         <Link
           as={JssLink}
           isExternal={props.fields.Twitter?.value?.target == '_blank'}
-          fontSize="18px"
-          mt={3}
-          textDecoration="underline"
-          color="#28327D"
+          _hover={{ color: 'inherit', textDecoration: 'none' }}
           field={props.fields.Twitter}
         />
       )}
@@ -138,16 +135,16 @@ export const Default = (props: PersonProps): JSX.Element => {
                   <Image src={props.fields.Image?.value?.src} w={200} borderRadius={15} />
                 </Box>
                 <Box w={{ base: '100%', md: '55%', lg: '60%' }}>
-                  <Heading as="h3" size="lg">
+                  <Heading as="h2" fontSize="25px">
                     {props.fields.Name?.value}
                   </Heading>
-                  <Text fontSize="18px" mb={0}>
+                  <Text fontSize="18px" mb="15px" color="#4D4D4D">
                     {props.fields.JobRole?.value}
                   </Text>
                   <Text fontSize="18px" mb={0}>
                     {props.fields.Company?.value}
                   </Text>
-                  <Text as={JssRichText} fontSize="18px" mb={0} field={props.fields.Biography} />
+                  <Text as={JssRichText} fontSize="18px" mb="15px" field={props.fields.Biography} />
                 </Box>
               </Flex>
             </ModalBody>

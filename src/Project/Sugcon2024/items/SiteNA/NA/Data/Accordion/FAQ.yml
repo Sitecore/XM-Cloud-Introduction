@@ -1,0 +1,42 @@
+﻿---
+ID: "ae8da4d5-5e65-45f5-a4a1-ee47b0e2e038"
+Parent: "27d62193-715c-4f81-918b-ee2ebf527d6e"
+Template: "89f532d4-c6a3-4648-94bd-71d169e6c5c7"
+Path: /sitecore/content/Sugcon2024/NA/Data/Accordion/FAQ
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "228d69ec-1aee-47ad-bb49-920fc6f5eb56"
+      Hint: Elements
+      Value: |
+        {9EA36136-7FE9-4C07-B195-A54932A0DB6E}
+        {5B000526-7EAC-4EBF-8F10-0E192CD8D2D3}
+        {77642571-3E62-4AD1-BDDC-1616F96C1C2D}
+        {3B6C7ED4-6241-4AF0-B656-9056CDE4B536}
+        {02CEE2B2-C08E-4EFF-8D40-C2DABBC6412A}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240320T110015Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "859a98fd-b339-419e-a0a8-3226d27a3d54"
+      Hint: Headline
+      Value: FAQ
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c387e0e4-26fe-4f7d-b38f-30da49381dc8"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T133819Z

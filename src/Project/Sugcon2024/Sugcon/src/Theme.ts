@@ -54,6 +54,11 @@ const Button = defineStyleConfig({
         color: 'white',
       },
     },
+    link: {
+      fontSize: '18px',
+      fontWeight: 'bold',
+      color: 'black',
+    },
     // Variant for Primary Navigation to make a Button look like a Link
     navButtonLink: {
       fontWeight: 'bold',
@@ -100,6 +105,9 @@ const Link = defineStyleConfig({
     white: {
       color: 'white',
       fontSize: '18px',
+      _hover: {
+        color: 'white',
+      },
     },
     smallWhite: {
       color: 'white',
@@ -130,9 +138,9 @@ const LayoutFlex = defineStyleConfig({
   defaultProps: {},
 });
 
-const helpers = createMultiStyleConfigHelpers(['container', 'item']);
+const list = createMultiStyleConfigHelpers(['container', 'item']);
 
-const List = helpers.defineMultiStyleConfig({
+const List = list.defineMultiStyleConfig({
   baseStyle: {},
   sizes: {},
   variants: {
@@ -149,6 +157,41 @@ const List = helpers.defineMultiStyleConfig({
       },
     },
   },
+  defaultProps: {},
+});
+
+const accordion = createMultiStyleConfigHelpers(['root', 'container', 'button', 'panel', 'icon']);
+
+const Accordion = accordion.defineMultiStyleConfig({
+  baseStyle: {
+    root: {},
+    container: {
+      borderColor: 'sugcon.gray.550',
+      borderTop: '2px solid',
+      _last: {
+        borderBottom: '2px solid',
+      },
+    },
+    button: {
+      px: '25px',
+      py: '25px',
+      pr: { base: '0', lg: '25px' },
+      fontSize: '20px',
+      color: 'sugcon.blue',
+      _expanded: { bg: 'sugcon.blue', color: 'white' },
+    },
+    panel: {
+      color: 'sugcon.gray.500',
+      px: '25px',
+      py: '25px',
+    },
+    icon: {
+      fontSize: '2rem',
+      ml: 4,
+    },
+  },
+  sizes: {},
+  variants: {},
   defaultProps: {},
 });
 
@@ -179,6 +222,7 @@ const colors = {
       300: '#cccccc',
       400: '#999999',
       500: '#707070',
+      550: '#545454',
       600: '#333333',
     },
   },
@@ -201,6 +245,7 @@ const theme = extendTheme({
   config,
   colors,
   components: {
+    Accordion,
     Button,
     Link,
     LayoutFlex,

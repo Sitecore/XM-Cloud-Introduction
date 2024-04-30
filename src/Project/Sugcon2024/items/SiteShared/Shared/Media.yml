@@ -7,9 +7,11 @@ BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "de8257d9-43aa-4eff-a2f4-2e9fbbd20e79"
   Hint: AdditionalChildren
+  Value: "{7826F6AE-C188-4F22-97DC-4F80F4EA8BDA}"
+- ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
+  Hint: __Security
   Value: |
-    {7826F6AE-C188-4F22-97DC-4F80F4EA8BDA}
-    {7826F6AE-C188-4F22-97DC-4F80F4EA8BDA}
+    ar|Sugcon2024\Site Author|pe|+item:read|pd|+item:rename|+item:create|+item:write|+item:delete|+item:read|
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{A7F39EA2-9018-4622-891D-CB65627E5AF2}"
@@ -31,11 +33,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2348025c-0be7-4a3f-b6bf-fce870d365b1"
+      Value: "fccea3cf-b5c0-4b7f-8f3f-b210921ba241"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240105T121450Z
+      Value: 20240320T105500Z

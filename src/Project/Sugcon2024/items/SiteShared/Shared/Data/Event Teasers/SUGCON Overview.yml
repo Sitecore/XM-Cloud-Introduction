@@ -1,0 +1,44 @@
+﻿---
+ID: "8b889454-b88f-49f1-854b-ef2cfb58ee5b"
+Parent: "aca09071-0ed0-4c25-8d2b-ec3e47b82e6d"
+Template: "1a613502-1a07-4d6c-9ad8-350e0e692946"
+Path: /sitecore/content/Sugcon2024/Shared/Data/Event Teasers/SUGCON Overview
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240313T133625Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "91c47a4c-7d21-44b0-9505-b32b9c1927f6"
+    - ID: "99f2f5c7-a55f-4bfa-a4c7-5c1379cf2ecb"
+      Hint: Events
+      Value: |
+        {EAFE4AC2-5967-42D5-BF5A-29F37F52B18A}
+        {184FA1BD-F2A4-48CA-9CA5-8F55DF58C78A}
+        {BB57F5F5-A432-4211-A4FB-3EF9305F0818}
+        {3C2F4B38-58DD-46E0-8CB0-9548629B27A2}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240313T134825Z
+    - ID: "ea4b74e0-9088-471a-ac19-ec99d5d4c9a9"
+      Hint: Headline
+      Value: Other Events

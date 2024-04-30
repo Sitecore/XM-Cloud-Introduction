@@ -1,0 +1,58 @@
+﻿---
+ID: "0bc7e069-e065-4d3d-8ec9-24eccca4851b"
+Parent: "f42dabcd-e75a-4349-be2f-7a0e2887970c"
+Template: "cf5cf584-6f21-436c-be31-d5823d25a420"
+Path: /sitecore/content/Sugcon2024/India/Data/People/Featured Speaker/Andy Cohen
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "12299e7a-8383-4738-972d-31947709f363"
+      Hint: JobRole
+      Value: Principal Architect of XM Cloud 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240313T131232Z
+    - ID: "4c0f1cce-f29a-4d56-99b4-210fbe7d0865"
+      Hint: Twitter
+      Value: |
+        <link linktype="external" url="" text="Twitter" anchor=""/>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "569d41b7-a9f7-4fe6-b1e8-d272d5f84d4c"
+      Hint: Linkedin
+      Value: |
+        <link linktype="external" url="https://www.linkedin.com/in/iamandycohen/" text="LinkedIn" anchor=""/>
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "620d41cc-5159-4202-8e75-d6077bb04b80"
+      Hint: Company
+      Value: Sitecore 
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b9555776-de2a-4c46-af6d-9ef0a5a8c0bf"
+    - ID: "9d82ec0c-ca9e-41e1-aa5d-1af75877cffb"
+      Hint: Name
+      Value: Andy Cohen 
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d2853b97-da85-4526-b844-b36ad0c5ba32"
+      Hint: Biography
+      Value: He hailed from the planet Kashyyyk where he was born during the High Republic Era and became a Wookiee military leader. During the Clone Wars, he was captured by Trandoshan slavers and held captive on Wasskah, but he worked with a fellow captive, Jedi Commander Ahsoka Tano, to escape.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T113514Z
+    - ID: "f39a9f75-c302-4aa4-94cd-48ef7432fda1"
+      Hint: Image
+      Value: |
+        <image mediaid="63096ab8-627f-44cc-960b-3d3881e2b6da" />

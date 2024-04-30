@@ -1,0 +1,31 @@
+﻿---
+ID: "91534425-d86d-435e-82b8-92eddda45870"
+Parent: "cbb4616a-47b2-482e-b164-d1691e51610b"
+Template: "40fc70c3-d08c-4490-99ba-925d317c5ab5"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/Venue
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240307T134800Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\U0zm6N0Wat
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\U0zm6N0Wat
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f5fdcabe-a69c-4019-aa19-0f706db50b1e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T133804Z

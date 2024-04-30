@@ -19,6 +19,10 @@ namespace Mvp.Feature.People.Models.Directory
 
         public TextField? SearchLabel { get; set; }
 
+        public RichTextField? NoResultsText { get; set; }
+
+        public HyperLinkField? DirectoryLink { get; set; }
+
         public ContentListField Facets { get; set; } = [];
 
         public List<FacetViewModel> ViewFacets { get; set; } = [];

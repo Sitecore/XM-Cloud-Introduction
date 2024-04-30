@@ -1,0 +1,43 @@
+﻿---
+ID: "c9568386-648d-4ad4-93f8-a2b0f68a130e"
+Parent: "16bfb9b5-a405-4057-95b5-5747f43e14c8"
+Template: "908ce315-5c67-40f3-920e-9aca6c348318"
+Path: /sitecore/content/Sugcon2024/NA/Data/People Grids/Organizer/Volunteers
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 400
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240313T135835Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "68fc3baf-c3d9-4b1f-a360-3f285e756807"
+      Hint: Headline
+      Value: Volunteers
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d11f313c-54ae-4d28-82e7-d5a0689bc2d0"
+    - ID: "b81d53dd-bb9f-4c68-ba6c-a774e2c47532"
+      Hint: People
+      Value: |
+        {19ECF64F-2104-44C3-8FBD-70CFAAC4FA12}
+        {5C70AE0E-CEF8-41FA-89C7-A2E5CA1187A1}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T145919Z

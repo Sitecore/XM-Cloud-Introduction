@@ -1,0 +1,58 @@
+﻿---
+ID: "8141b6c7-b0b5-4f8c-89e6-51fb1163b05f"
+Parent: "41c975df-79f0-4850-b5f7-cdd1dbab71da"
+Template: "84d400f6-0729-457b-a9b3-171829883242"
+Path: /sitecore/content/Sugcon2024/India/Data/Venue/Sheraton
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "160ef76f-a69b-4cd3-8824-d892c505db10"
+      Hint: VenueImages
+      Value: |
+        {C6ACBA91-166A-4834-A64A-9D3ABA21108E}
+        {F233F154-804A-40B5-897E-79DDD3D555AB}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240423T111738Z
+    - ID: "26cc0988-b30d-4b85-9a6a-6873fa20c2d5"
+      Hint: ButtonLink
+      Value: |
+        <link linktype="external" url="https://www.marriott.com/en-us/hotels/blrsw-sheraton-grand-bengaluru-whitefield-hotel-and-convention-center/overview/" text="Book your stay"/>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "86927eb8-fcc2-455b-a7c7-1df3d47d5668"
+      Hint: AdditionalInfoText
+      Value: |
+        <p><span style="color: rgb(112, 112, 112);">The Sheraton Grand Bengaluru Whitefield Hotel &amp; Convention Center is Located in Whitefield, Bangalore. The family-friendly, luxury hotel sits near many major corporations, IT parks and tourist attractions like Bangalore Palace and Phoenix Mall.</span></p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "1faaefab-c0b9-4442-87d9-bb59f3241bb6"
+    - ID: "997dc62b-1e07-4512-9b55-2fb80a571660"
+      Hint: HotelName
+      Value: Sheraton Grand Bengaluru Whitefield Hotel & Convention Center 
+    - ID: "ad7a76a0-e6e3-407b-b70b-914cf2bdf599"
+      Hint: HotelAddress
+      Value: |
+        <p>XPQJ+P24 Bengaluru<br />
+        Karnataka,&nbsp; India</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T121624Z
+    - ID: "e35f7217-4251-4292-bdca-e3dc0f951f98"
+      Hint: Headline
+      Value: Venue

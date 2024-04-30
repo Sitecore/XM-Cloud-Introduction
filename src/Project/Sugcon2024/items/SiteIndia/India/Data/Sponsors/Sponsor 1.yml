@@ -1,0 +1,48 @@
+﻿---
+ID: "e85e5235-c5de-4ef2-bdb3-409ce273a090"
+Parent: "12364190-c7cc-46c0-ba3e-2d0484accfa8"
+Template: "3caa9812-e5cf-488e-9546-ecaa263c8a14"
+Path: /sitecore/content/Sugcon2024/India/Data/Sponsors/Sponsor 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240228T215204Z
+    - ID: "3d19f996-77c2-4fdd-a4ca-390fc5a12e56"
+      Hint: SponsorName
+      Value: Horizontal Digital 
+    - ID: "4a651df3-8c05-42d7-8060-a33e21174dbb"
+      Hint: SponsorLogo
+      Value: |
+        <image mediaid="{827EBF43-C21C-43D9-87FB-0438F7466113}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "22240ec4-845f-4b14-a1f2-e209ebc762a7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\U0vbO5OyVm
+    - ID: "cd71d194-bcb3-46c8-8f71-a2bf1f929f1d"
+      Hint: SponsorBio
+      Value: Donec dictum ligula eu nisl vulputate, nec semper lectus mollis. Sed scelerisque porta enim et porttitor. Vestibulum ligula libero, convallis a imperdiet vitae, vehicula eget leo. Nullam magna lorem, venenatis ac nulla vitae, blandit pulvinar diam. Cras ornare nibh quam, eget congue odio rutrum sit amet. Pellentesque varius massa non tortor placerat, nec blandit sapien ultricies. Proin iaculis, lacus nec euismod lobortis, leo augue interdum urna, vitae mollis orci arcu sit amet es
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240422T143424Z
+    - ID: "dca7fd07-27d3-4089-8845-2862f3ef1638"
+      Hint: SponsorURL
+      Value: |
+        <link linktype="external" url="https://www.sitecore.com" text="Visit Sponsor Site" anchor=""/>

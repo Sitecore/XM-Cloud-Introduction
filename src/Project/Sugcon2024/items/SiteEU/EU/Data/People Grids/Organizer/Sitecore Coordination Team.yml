@@ -1,0 +1,47 @@
+﻿---
+ID: "0301805b-6d80-47bb-b37f-d407fbda3bbf"
+Parent: "44d60f64-f788-49b1-8e90-ff514eb7d712"
+Template: "908ce315-5c67-40f3-920e-9aca6c348318"
+Path: /sitecore/content/Sugcon2024/EU/Data/People Grids/Organizer/Sitecore Coordination Team
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 150
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240313T135816Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "68fc3baf-c3d9-4b1f-a360-3f285e756807"
+      Hint: Headline
+      Value: Sitecore Coordination Team
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "e038865e-81c0-4381-adfe-ed57ef2fad91"
+    - ID: "b81d53dd-bb9f-4c68-ba6c-a774e2c47532"
+      Hint: People
+      Value: |
+        {769E8DEC-9452-4853-AA50-06342B827ED6}
+        {E243BC63-02DB-4A49-B065-BB3E090EB261}
+        {767A5E5E-3037-43EA-85D3-E27529DBB498}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240319T231701Z

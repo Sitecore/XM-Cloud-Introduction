@@ -1,0 +1,36 @@
+﻿---
+ID: "76cb0a23-2ab6-41fd-ba0b-6f329716b4c6"
+Parent: "d2efddec-0154-49e3-8034-c0cbf7b0514e"
+Template: "fbc802e5-4b9e-480f-93da-3f2a80cae5cb"
+Path: /sitecore/content/Sugcon2024/ANZ/Presentation/Page Branches
+BranchID: "aa6c7b9e-a399-47ae-82b8-0d88c695249b"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{63D0F6B2-D72F-4C31-BBA2-1709C4B68B7B}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240105T121429Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "75a21742-7afb-485d-bfef-762a56aad2db"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240105T121429Z

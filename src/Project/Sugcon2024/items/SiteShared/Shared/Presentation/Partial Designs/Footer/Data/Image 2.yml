@@ -1,0 +1,38 @@
+﻿---
+ID: "1ad1d982-4071-42be-b645-45c581fb31e0"
+Parent: "acd66276-d7b7-4ca9-bc24-fe6e276ff6c7"
+Template: "d885df8c-b2d6-4007-b34b-2bbafb527304"
+Path: /sitecore/content/Sugcon2024/Shared/Presentation/Partial Designs/Footer/Data/Image 2
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240308T144409Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "57caf172-ce57-4e48-b3a1-46f8aea71c08"
+      Hint: Image
+      Value: |
+        <image mediaid="{7C8AF620-4DFD-4AA6-B436-420A87619D68}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7820584b-7d33-4b09-89d2-74cd5eed9b3f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240308T144428Z

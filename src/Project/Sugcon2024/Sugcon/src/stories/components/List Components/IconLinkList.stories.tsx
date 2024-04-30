@@ -26,16 +26,16 @@ export const Default: Story = {
       },
       items: [
         {
-            fields: {
-                Link: { value: { src:"https://www.sitecore.com"} },
-                Icon: { 
-                  fields: {
-                    CssClass: { value: "" }
-                  }
-                 }
-            }
-        }
-      ]
+          fields: {
+            Link: { value: { src: 'https://www.sitecore.com' } },
+            Icon: {
+              fields: {
+                CssClass: { value: '' },
+              },
+            },
+          },
+        },
+      ],
     },
   },
 };

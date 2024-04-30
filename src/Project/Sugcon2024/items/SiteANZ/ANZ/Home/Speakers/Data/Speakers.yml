@@ -1,0 +1,40 @@
+﻿---
+ID: "806fee47-ff8e-4f37-9c2b-93054ad3fda8"
+Parent: "5668ba80-1255-427c-bffd-27faaec2db63"
+Template: "7a6070f0-4093-45c9-87ba-53bf9fbba4bb"
+Path: /sitecore/content/Sugcon2024/ANZ/Home/Speakers/Data/Speakers
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240328T191846Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\UOUBIWQRx7
+    - ID: "56d483bf-2ed4-4b98-b924-1e2811130d8a"
+      Hint: Headline
+      Value: 
+    - ID: "58cd7909-c4a0-4aa1-8ebc-b1dcb0184e78"
+      Hint: SessionsListTitle
+      Value: Sessions
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\UOUBIWQRx7
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6ca0dc99-6549-4530-9a8e-6b76fe61f5d5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240424T102305Z
+    - ID: "f42c569e-47f1-4035-98b1-33077b15eae6"
+      Hint: SessionizeSpeakerUrl
+      Value: "https://sessionize.com/api/v2/zoqj049r/view/Speakers"

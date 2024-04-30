@@ -1,0 +1,39 @@
+﻿---
+ID: "de1057c0-edfc-45d2-b2a6-78467b3b38b4"
+Parent: "5c0c1d26-83dc-4d45-9fa7-ef5c2feeb82b"
+Template: "89f532d4-c6a3-4648-94bd-71d169e6c5c7"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/Accordion/Worshops and certifications
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "228d69ec-1aee-47ad-bb49-920fc6f5eb56"
+      Hint: Elements
+      Value: |
+        {97D4DE3B-BC4D-4303-B767-83B4EF4CB6FE}
+        {1234F70F-FB48-4678-8C54-7A63B15B95A8}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240320T132458Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "859a98fd-b339-419e-a0a8-3226d27a3d54"
+      Hint: Headline
+      Value: "Schedule - Thursday, April 11th"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "59a6aaf8-305b-44a4-af38-bff42ff0e0a6"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T134129Z

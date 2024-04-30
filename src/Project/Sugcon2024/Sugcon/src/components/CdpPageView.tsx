@@ -55,7 +55,12 @@ const CdpPageView = (): JSX.Element => {
    * By default it is disabled in development mode
    */
   const disabled = () => {
-    return process.env.NODE_ENV === 'development';
+    return (
+      !process.env.NEXT_PUBLIC_CDP_CLIENT_KEY ||
+      !process.env.NEXT_PUBLIC_CDP_TARGET_URL ||
+      !process.env.NEXT_PUBLIC_PERSONALIZE_SCOPE ||
+      process.env.NODE_ENV === 'development'
+    );
   };
 
   useEffect(() => {

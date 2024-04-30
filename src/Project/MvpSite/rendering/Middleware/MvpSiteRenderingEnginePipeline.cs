@@ -5,7 +5,8 @@ using Sitecore.AspNet.RenderingEngine.Middleware;
 
 namespace Mvp.Project.MvpSite.Middleware
 {
-    public class MvpSiteRenderingEnginePipeline : RenderingEnginePipeline
+    public class MvpSiteRenderingEnginePipeline
+        : RenderingEnginePipeline
     {
         public override void Configure(IApplicationBuilder app)
         {

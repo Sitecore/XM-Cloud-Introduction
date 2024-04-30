@@ -1,6 +1,8 @@
 import React from 'react';
 import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
 import useSWR from 'swr';
+import clsx from 'clsx';
+import { Flex } from '@chakra-ui/react';
 
 interface Fields {
   SessionizeUrl: Field<string>;
@@ -20,15 +22,17 @@ const SessionsDefaultComponent = (props: SessionsProps): JSX.Element => (
 );
 
 export const Default = (props: SessionsProps): JSX.Element => {
-  const id = props.params.RenderingIdentifier;
+  const id = props.params.RenderingIdentifier || undefined;
+
+  const fetcher = (url: string) => fetch(url).then((res) => res.text());
+  const { data, error } = useSWR(
+    props.fields.SessionizeUrl.value ? props.fields.SessionizeUrl.value : null,
+    fetcher
+  );
 
   if (!props?.fields?.SessionizeUrl?.value) {
     return <SessionsDefaultComponent {...props} />;
   }
-
-  //Question: linter is saying the hook shouldn't be called conditionally, but that's correct in this case?
-  //eslint-disable-next-line
-  const { data, error } = useSWR(props.fields.SessionizeUrl.value, () => fetch(props.fields.SessionizeUrl.value).then((response) => response.text()));
 
   //TODO: design error
   if (error) {
@@ -41,10 +45,12 @@ export const Default = (props: SessionsProps): JSX.Element => {
   }
 
   return (
-    <div className={`component sessions ${props.params.styles}`} id={id ? id : undefined}>
-      <div className="component-content">
-        <div dangerouslySetInnerHTML={{ __html: data as string }} />
+    <Flex>
+      <div className={clsx('component', 'sessions', props.params.styles)} id={id}>
+        <div className="component-content">
+          <div dangerouslySetInnerHTML={{ __html: data as string }} />
+        </div>
       </div>
-    </div>
+    </Flex>
   );
 };

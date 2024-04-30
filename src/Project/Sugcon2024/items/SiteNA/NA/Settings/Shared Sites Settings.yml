@@ -1,0 +1,36 @@
+﻿---
+ID: "c51594c4-1edb-4ddc-ba5f-1f71dfb643bc"
+Parent: "edb54e2d-3810-4ab7-b371-27eeb169e2d9"
+Template: "c14bf746-030f-4e59-8594-395f6d299e61"
+Path: /sitecore/content/Sugcon2024/NA/Settings/Shared Sites Settings
+BranchID: "55330bb7-6095-414a-b29b-0042ce8d9331"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{4CAE3F14-39ED-448F-A48C-F7A985A6EB77}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240105T121413Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "976acb4b-d9f0-4166-b17f-48620b356e11"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240105T121413Z

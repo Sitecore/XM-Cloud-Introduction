@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
 import { TextField, Text as JssText } from '@sitecore-jss/sitecore-jss-nextjs';
 import { PersonFields, PersonProps, Default as Person } from '../Basic Components/Person';
-import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 import clsx from 'clsx';
 import { LayoutFlex } from 'components/Templates/LayoutFlex';
 
@@ -48,13 +47,10 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
   }
 
   return (
-    <Box w="100%" mt={20} className={clsx(props?.params?.Styles)}>
+    <Box w="100%" mt={20} className={clsx('people-grid-container', props?.params?.Styles)}>
       <LayoutFlex flexGrow="1" flexDirection="column" align="start">
-        {(isEditorActive() || props.fields?.Headline?.value !== '') && (
-          <Heading as="h2" size="lg">
-            <JssText field={props.fields.Headline} />
-          </Heading>
-        )}
+        <Heading as={JssText} field={props.fields.Headline} tag="h2" size="lg" />
+
         <SimpleGrid
           w="full"
           columns={{ base: 1, md: Math.ceil(cols / 2), xl: cols }} // Using Math.ceil so odd numbers round up.
@@ -66,6 +62,7 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
             const pp: PersonProps = {
               params: props.params,
               fields: person.fields,
+              isPeopleGrid: true,
             };
             return <Person key={idx} {...pp}></Person>;
           })}

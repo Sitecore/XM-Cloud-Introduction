@@ -12,6 +12,12 @@ footer {
 
   & > .component {
     padding: 0;
+
+    //Target the first image in the footer (ie footer-bg svg) to go full screen width)
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   & * a {

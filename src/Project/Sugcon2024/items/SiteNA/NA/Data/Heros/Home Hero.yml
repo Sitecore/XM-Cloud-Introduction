@@ -1,0 +1,54 @@
+﻿---
+ID: "6b121e38-5aee-4251-8573-c72aef0d4c48"
+Parent: "e8442bc4-5a70-46bf-98a0-1f3bcd56577b"
+Template: "92ad7a66-1b2c-4b15-844b-accc4219323d"
+Path: /sitecore/content/Sugcon2024/NA/Data/Heros/Home Hero
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "0a923f53-535b-4702-a81d-8d9e04d3b30d"
+      Hint: CallToAction
+      Value: 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240223T115032Z
+    - ID: "4035681d-0841-416f-86f6-fae8c16c7f7a"
+      Hint: Text
+      Value: |
+        Get ready to experience the ultimate Sitecore conference of the year at SUGCON North America in Minneapolis, Minnesota.
+        
+        Don't miss your chance to level up your Sitecore expertise and network with some of the brightest minds in the Sitecore community.
+        
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "58cc68dd-3b8e-4617-b2c9-2db863cac546"
+      Hint: Image
+      Value: |
+        <image mediaid="{25895EE4-4EE0-4A78-844B-31EDBF25F2A0}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "64d6a6e8-02e9-4ba7-9207-6b489cacf853"
+      Hint: EventDate
+      Value: SUGCON North America 2023
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fa7b89ca-83e5-4f7a-9420-aa9e563971a5"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T135754Z
+    - ID: "e527b987-6b82-4719-bd74-45a2641f0dbb"
+      Hint: Headline
+      Value: "October 5th-6th"

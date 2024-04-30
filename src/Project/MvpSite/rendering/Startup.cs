@@ -164,6 +164,17 @@ namespace Mvp.Project.MvpSite
 
                 endpoints.MapOktaSigninRoute();
 
+                endpoints.MapControllerRoute(
+                    "MvpProfileWithCulture",
+                    "{culture?}/directory/profile/{name}",
+                    new { controller = "MvpProfile", action = "Index" }
+                );
+                endpoints.MapControllerRoute(
+                    "MvpProfileCulturelessFallback",
+                    "directory/profile/{name}",
+                    new { controller = "MvpProfile", action = "Index" }
+                );
+
                 // Enables the default Sitecore URL pattern with a language prefix.
                 endpoints.MapSitecoreLocalizedRoute("sitecore", "Index", "Default");
 

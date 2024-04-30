@@ -1,4 +1,5 @@
 import React from 'react';
+import InnerHTML from 'dangerously-set-html-content';
 import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
 import useSWR from 'swr';
 
@@ -22,13 +23,15 @@ const AgendaDefaultComponent = (props: AgendaProps): JSX.Element => (
 export const Default = (props: AgendaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
 
+  const fetcher = (url: string) => fetch(url).then((res) => res.text());
+  const { data, error } = useSWR(
+    props.fields.SessionizeUrl.value ? props.fields.SessionizeUrl.value : null,
+    fetcher
+  );
+
   if (!props?.fields?.SessionizeUrl?.value) {
     return <AgendaDefaultComponent {...props} />;
   }
-
-  //Question: linter is saying the hook shouldn't be called conditionally, but that's correct in this case?
-  //eslint-disable-next-line
-  const { data, error } = useSWR(props.fields.SessionizeUrl.value, () => fetch(props.fields.SessionizeUrl.value).then((response) => response.text()));
 
   //TODO: design error
   if (error) {
@@ -43,7 +46,7 @@ export const Default = (props: AgendaProps): JSX.Element => {
   return (
     <div className={`component agenda ${props.params.styles}`} id={id ? id : undefined}>
       <div className="component-content">
-        <div dangerouslySetInnerHTML={{ __html: data as string }} />
+        <InnerHTML html={data} />
       </div>
     </div>
   );

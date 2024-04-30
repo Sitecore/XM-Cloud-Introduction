@@ -61,18 +61,18 @@
         "rules": [
           {
             "path": "/home",
-            "scope": "singleItem",
+            "scope": "itemAndDescendants",
             "allowedPushOperations": "createOnly"
           },
           {
             "path": "/Media",
-            "scope": "singleItem",
-            "allowedPushOperations": "createAndUpdate"
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
           },
           {
             "path": "/Data",
-            "scope": "itemAndChildren",
-            "allowedPushOperations": "createAndUpdate"
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
           },
           {
             "path": "/Dictionary",
@@ -111,13 +111,13 @@
           },
           {
             "path": "/Media",
-            "scope": "singleItem",
-            "allowedPushOperations": "createAndUpdate"
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
           },
           {
             "path": "/Data",
-            "scope": "itemAndChildren",
-            "allowedPushOperations": "createAndUpdate"
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
           },
           {
             "path": "/Dictionary",
@@ -139,6 +139,141 @@
             "scope": "itemAndChildren",
             "allowedPushOperations": "createAndUpdate"
 
+          },
+          {
+            "path": "*",
+            "scope": "ignored"
+          }
+        ]
+      },
+      {
+        "name": "SiteIndia",
+        "path": "/sitecore/content/Sugcon2024/India",
+        "rules": [
+          {
+            "path": "/home",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Media",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Data",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Dictionary",
+            "scope": "itemAndChildren",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Presentation",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createAndUpdate"
+          },
+          {
+            "path": "/Settings/Site Grouping",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Settings",
+            "scope": "itemAndChildren",
+            "allowedPushOperations": "createAndUpdate"
+          },
+          {
+            "path": "*",
+            "scope": "ignored"
+          }
+        ]
+      },
+      {
+        "name": "SiteANZ",
+        "path": "/sitecore/content/Sugcon2024/ANZ",
+        "rules": [
+          {
+            "path": "/home",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Media",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Data",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Dictionary",
+            "scope": "itemAndChildren",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Presentation",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createAndUpdate"
+          },
+          {
+            "path": "/Settings/Site Grouping",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Settings",
+            "scope": "itemAndChildren",
+            "allowedPushOperations": "createAndUpdate"
+          },
+          {
+            "path": "*",
+            "scope": "ignored"
+          }
+        ]
+      },
+      {
+        "name": "SiteNA",
+        "path": "/sitecore/content/Sugcon2024/NA",
+        "rules": [
+          {
+            "path": "/home",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Media",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Data",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Dictionary",
+            "scope": "itemAndChildren",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Presentation",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createAndUpdate"
+          },
+          {
+            "path": "/Settings/Site Grouping",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Settings",
+            "scope": "itemAndChildren",
+            "allowedPushOperations": "createAndUpdate"
           },
           {
             "path": "*",

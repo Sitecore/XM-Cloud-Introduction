@@ -1,0 +1,55 @@
+﻿---
+ID: "2162e5e8-43ed-4d00-80d4-ab3f94c86ce7"
+Parent: "c6eba1ed-9707-4338-b1be-9cf0e364f4e0"
+Template: "cf5cf584-6f21-436c-be31-d5823d25a420"
+Path: /sitecore/content/Sugcon2024/NA/Data/People/Organizer/Thomas Desmond
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "12299e7a-8383-4738-972d-31947709f363"
+      Hint: JobRole
+      Value: Developer Advocate
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240319T205655Z
+    - ID: "4c0f1cce-f29a-4d56-99b4-210fbe7d0865"
+      Hint: Twitter
+      Value: |
+        <link text="Twitter" linktype="external" url="https://twitter.com/ThomasJDesmond" anchor="" title="Twitter" target="_blank" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "569d41b7-a9f7-4fe6-b1e8-d272d5f84d4c"
+      Hint: Linkedin
+      Value: |
+        <link text="LinkedIn" linktype="external" url="https://www.linkedin.com/in/thomas-desmond-9074475b/" anchor="" title="LinkedIn" target="_blank" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "620d41cc-5159-4202-8e75-d6077bb04b80"
+      Hint: Company
+      Value: Sitecore
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "0e627465-8998-4877-b3cb-177112aae5ba"
+    - ID: "9d82ec0c-ca9e-41e1-aa5d-1af75877cffb"
+      Hint: Name
+      Value: Thomas Desmond
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d2853b97-da85-4526-b844-b36ad0c5ba32"
+      Hint: Biography
+      Value: 
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T145656Z
+    - ID: "f39a9f75-c302-4aa4-94cd-48ef7432fda1"
+      Hint: Image
+      Value: |
+        <image mediaid="{44E9176D-F617-47A9-A522-D8FAD882F07F}" />
