@@ -1,0 +1,47 @@
+﻿---
+ID: "8679b074-7f79-4fdf-bb6b-e92fa8c1e4a1"
+Parent: "06c77211-eb0b-49b3-8160-efff1774d9e4"
+Template: "cf5cf584-6f21-436c-be31-d5823d25a420"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/People/Featured Speaker/Greg Baxter
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "12299e7a-8383-4738-972d-31947709f363"
+      Hint: JobRole
+      Value: Head of Growth and Marketing
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240424T102802Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d57e9b1d-996a-4681-b2d4-a83d39495fb8"
+    - ID: "9d82ec0c-ca9e-41e1-aa5d-1af75877cffb"
+      Hint: Name
+      Value: Greg Baxter
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d2853b97-da85-4526-b844-b36ad0c5ba32"
+      Hint: Biography
+      Value: |
+        Greg is a 17-year Sitecore enthusiast and has been awarded Sitecore Strategy MVP accreditation for the last 6 years. Before working back in agency-land, Greg spent 8 years working at Sitecore, helping establish the brand across Greater Asia. He spent many years working as the Director of Business Optimisation Strategy for businesses from Brisbane to Beijing.
+        
+        Today Greg works at Codehouse, helping customers realise the potential of Sitecore and increasingly, how composable technology is the key to digital 0065perience success.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240424T103158Z
+    - ID: "f39a9f75-c302-4aa4-94cd-48ef7432fda1"
+      Hint: Image
+      Value: |
+        <image mediaid="{D799A60E-9401-41FC-A6BE-B5BB3C015B33}" />

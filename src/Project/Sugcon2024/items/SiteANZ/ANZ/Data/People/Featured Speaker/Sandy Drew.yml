@@ -1,0 +1,50 @@
+﻿---
+ID: "3d7fdbef-8ef2-4bce-a8af-6f59f37351c0"
+Parent: "06c77211-eb0b-49b3-8160-efff1774d9e4"
+Template: "cf5cf584-6f21-436c-be31-d5823d25a420"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/People/Featured Speaker/Sandy Drew
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "12299e7a-8383-4738-972d-31947709f363"
+      Hint: JobRole
+      Value: Senior Manager
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240424T102828Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "620d41cc-5159-4202-8e75-d6077bb04b80"
+      Hint: Company
+      Value: Deloitte Digital
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9dc2adfc-4a9e-4d6c-b1d7-f947eb1a32fe"
+    - ID: "9d82ec0c-ca9e-41e1-aa5d-1af75877cffb"
+      Hint: Name
+      Value: Sandy Drew
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d2853b97-da85-4526-b844-b36ad0c5ba32"
+      Hint: Biography
+      Value: |
+        Sandy Drew is a Sitecore Technical Lead at Deloitte Digital, with over 20 years of experience delivering engaging websites and commerce solutions.
+        
+        With a keen eye for visual design and a focus on achieving an outstanding user experience in both public and intranet sites, he has delivered and contributed to solutions for some of Deloitte's largest clients.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240424T103148Z
+    - ID: "f39a9f75-c302-4aa4-94cd-48ef7432fda1"
+      Hint: Image
+      Value: |
+        <image mediaid="{F002DC28-F1B7-4A52-9524-53B26A954345}" />

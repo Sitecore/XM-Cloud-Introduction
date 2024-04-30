@@ -1,0 +1,43 @@
+﻿---
+ID: "8d11d8a0-0b61-45f0-ae5d-105b0aacde8c"
+Parent: "af043b8b-deec-4bc1-9b77-6dd152f27657"
+Template: "8406eace-ca58-4190-9269-a04b1c9504da"
+Path: /sitecore/content/Sugcon2024/NA/Data/Text and Image/Venue
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "20a182aa-b8a0-41b7-a750-ffbf670ba441"
+      Hint: Text
+      Value: |
+        <p>Nestled in the heart of Dublin, Croke Park Meetings &amp; Events stands as a premier destination, offering unparalleled connectivity. This venue is located just a brief 15-minute journey from Dublin Airport, recognized as a leading transatlantic hub, and a mere 5 minutes from the vibrant city centre. Renowned for its rich history and dynamic culture, Dublin serves as an ideal backdrop for events of all scales.&nbsp;</p>
+        <p>Croke Park itself, a landmark of Irish heritage, is not just a sporting arena but a symbol of national pride and a beacon for international gatherings. At Croke Park Meetings &amp; Events, guests are treated to 600 complimentary parking spaces, a unique offering unmatched by any other venue in Dublin. This facility blends state-of-the-art amenities with the historic charm of Ireland's capital, ensuring every event is an unforgettable experience.</p>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240319T230030Z
+    - ID: "2c041b92-d32b-4b33-ba73-adf80b01698e"
+      Hint: Image
+      Value: |
+        <image mediaid="{DCDCFF07-1D13-4029-B1D7-971A4BD909C0}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "5ba4d61a-1895-40b7-9bea-da5d6abd71ac"
+      Hint: Headline
+      Value: A premier destination, offering unparalleled connectivity
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "51e1e658-6279-4b2a-9a12-a9a0de1a4552"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T133843Z

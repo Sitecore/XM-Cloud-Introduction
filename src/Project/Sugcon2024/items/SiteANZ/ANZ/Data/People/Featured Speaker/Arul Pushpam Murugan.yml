@@ -1,0 +1,51 @@
+﻿---
+ID: "5db97bd8-d6ae-4972-a83c-e46ddb462e45"
+Parent: "06c77211-eb0b-49b3-8160-efff1774d9e4"
+Template: "cf5cf584-6f21-436c-be31-d5823d25a420"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/People/Featured Speaker/Arul Pushpam Murugan
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "12299e7a-8383-4738-972d-31947709f363"
+      Hint: JobRole
+      Value: Senior Sitecore Developer
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240424T102813Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "97eb2a46-f737-47b6-9fd7-b87884fb3dc3"
+    - ID: "9d82ec0c-ca9e-41e1-aa5d-1af75877cffb"
+      Hint: Name
+      Value: Arul Pushpam Murugan
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d2853b97-da85-4526-b844-b36ad0c5ba32"
+      Hint: Biography
+      Value: |
+        I'm Arul Pushpam, and my journey in the professional world began in 2017. As a woman in this field, I've encountered numerous obstacles along the way. When I first embarked on my journey, I was far from being a proficient programmer. Comparing myself to others led me to believe I was lacking in various aspects. However, this perspective didn't serve me well.
+        
+        It was at this point that I was fortunate to find a mentor who illuminated the world of technology for me. Concurrently, I discovered Sitecore, a platform that intrigued me with its myriad features. Rather than comparing myself to others, I channeled my energy into learning and growing. Sitecore's capabilities captivated me, motivating me to delve deeper, learn more, and achieve more.
+        
+        As a result of my dedication, I proudly received my second MVP award this year. This journey has transformed me into a proficient programmer, a YouTuber, a blogger, and an enthusiastic knowledge sharer. I have a genuine passion for learning new features and, equally importantly, for disseminating my technical knowledge to the wider community.
+        
+        In my spare time, you'll find me eagerly exploring new technologies, refining my skills, and sharing my insights with fellow enthusiasts. I firmly believe that the tech community thrives on collaboration and shared learning. Every day presents new opportunities for growth, and I'm excited to embrace each one with enthusiasm.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240424T103207Z
+    - ID: "f39a9f75-c302-4aa4-94cd-48ef7432fda1"
+      Hint: Image
+      Value: |
+        <image mediaid="{1BBA3E29-A94B-4A5C-8654-25DB49E7FBF2}" />

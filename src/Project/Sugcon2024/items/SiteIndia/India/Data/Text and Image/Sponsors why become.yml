@@ -1,0 +1,44 @@
+﻿---
+ID: "e5f8d648-1585-409b-a5a1-e334f85ea240"
+Parent: "f38fb035-0f89-466c-b1f8-5271283b2735"
+Template: "8406eace-ca58-4190-9269-a04b1c9504da"
+Path: /sitecore/content/Sugcon2024/India/Data/Text and Image/Sponsors why become
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "20a182aa-b8a0-41b7-a750-ffbf670ba441"
+      Hint: Text
+      Value: <ol><li>Position your brand as a thought leader by staying updated on the latest Sitecore trends</li><li>Engage with a dynamic audience actively shaping the future of digital experiences</li><li>Be recognized as a supporter of shared learning and innovation</li><li>Exclusive sponsorship packages include workshops and training to certify your team</li><li>Connect with Sitecore enthusiasts, industry leaders, customers, MVPs, and leave a lasting impact</li></ol>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240319T224226Z
+    - ID: "2c041b92-d32b-4b33-ba73-adf80b01698e"
+      Hint: Image
+      Value: |
+        <image mediaid="126BEC46-1CDF-4CE9-8787-70833FF8BBE6" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "5ba4d61a-1895-40b7-9bea-da5d6abd71ac"
+      Hint: Headline
+      Value: "Why sponsor SUGCON India 2024?"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d8d52476-375c-4a52-9966-c7b77d8f4537"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\U0vbO5OyVm
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240422T143029Z

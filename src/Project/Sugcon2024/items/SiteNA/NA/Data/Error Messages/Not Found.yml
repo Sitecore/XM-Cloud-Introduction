@@ -1,0 +1,40 @@
+﻿---
+ID: "209facf8-12c1-4ba6-bde8-06fcbd2f786a"
+Parent: "053a4a03-304c-495a-b2ce-965850970ce3"
+Template: "d172461a-fe1e-4b3c-98d5-2fc05bfdc4c9"
+Path: /sitecore/content/Sugcon2024/NA/Data/Error Messages/Not Found
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1e79254a-ca4f-45d2-9370-57839d1915cd"
+      Hint: StatusCode
+      Value: 404
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240321T123022Z
+    - ID: "287bf931-9338-4b3a-adb0-684ebcc3947a"
+      Hint: Text
+      Value: <p>The page you've requested could not be found, please check the URL and try again</p>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5e500e4b-743c-46d3-9839-c5a11fe6972c"
+      Hint: Headline
+      Value: Page not found
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "23eff4b1-0906-46e9-ad9e-eead4917c0fc"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240321T123143Z

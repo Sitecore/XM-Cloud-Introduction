@@ -1,0 +1,42 @@
+﻿---
+ID: "4869d9d5-7627-4550-8c32-b248381e7efe"
+Parent: "27d62193-715c-4f81-918b-ee2ebf527d6e"
+Template: "89f532d4-c6a3-4648-94bd-71d169e6c5c7"
+Path: "/sitecore/content/Sugcon2024/NA/Data/Accordion/Thursday Trainings 4-6pm"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "228d69ec-1aee-47ad-bb49-920fc6f5eb56"
+      Hint: Elements
+      Value: |
+        {415BC9E5-5503-4AB9-A22F-0D3FEBDC2EE2}
+        {CB6A03F2-82C5-4936-B041-2F3CDA4E4D78}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240423T144044Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "859a98fd-b339-419e-a0a8-3226d27a3d54"
+      Hint: Headline
+      Value: "Schedule - Thursday, October 5th - 4:00-6:00PM"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "df967aac-6b9b-49c2-91ce-4c05e37f1646"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T144504Z

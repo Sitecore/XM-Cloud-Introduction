@@ -9,8 +9,7 @@ function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element
   const { dictionary, ...rest } = pageProps;
 
   // Vercel Speed Insights - Turned on and off through env variable.
-  const isSpeedInsightsEnabled =
-    process.env.NEXT_PUBLIC_ENABLE_SPEED_INSIGHTS === 'true';
+  const isSpeedInsightsEnabled = process.env.NEXT_PUBLIC_ENABLE_SPEED_INSIGHTS === 'true';
 
   return (
     <>

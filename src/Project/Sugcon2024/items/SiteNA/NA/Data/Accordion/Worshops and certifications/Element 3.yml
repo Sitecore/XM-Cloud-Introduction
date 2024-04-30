@@ -1,0 +1,40 @@
+﻿---
+ID: "7a49c108-782e-4831-a66b-4067f1e41437"
+Parent: "39a71c9d-4d55-462d-af17-b9ffdbcb746c"
+Template: "9813d24f-4506-43ed-b5c9-4f8033fca9e2"
+Path: /sitecore/content/Sugcon2024/NA/Data/Accordion/Worshops and certifications/Element 3
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "077242f3-20e7-4fec-9309-9337edd815f5"
+      Hint: Title
+      Value: "XM Cloud Developer - Exam Prep Workshop + Exam Voucher - Thursday 10:30-12:30"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240423T144206Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b228b562-75be-4cd7-a9e7-69482d70c32a"
+    - ID: "a9b746ad-dbed-41c5-8db8-715c2106999f"
+      Hint: Text
+      Value: "<p>This Workshop reviews topics and competencies that are covered on the XM Cloud Developer Certification Exam, which is scheduled to be released October 2023.</p><p>Note: This workshop includes a voucher which can be used for the XM Cloud Developer Certification Exam once its released. After the completion of the workshop, you can expect to receive a voucher code and instructions via email for the exam within 3-5 business days from the session. The voucher will remain valid until December 31, 2023.</p><p>By the end of this workshop, attendees will be able to prepare for the XM Cloud Developer Certification Exam using information provided for the following competencies:</p><ol><li>XM Cloud Architecture and Developer Workflow-Competency</li><li>Deployment of XM Cloud Projects - Competency</li><li>Renderings and Layout- Competency</li><li>Sitecore Content Serialization-Competency</li><li>Sitecore APIs &amp; Webhooks - Competency</li><li>XM Cloud Pages - Competency</li><li>Security for Developers - Competency</li><li>Data Modeling</li></ol><p>Price:$200</p>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T144336Z

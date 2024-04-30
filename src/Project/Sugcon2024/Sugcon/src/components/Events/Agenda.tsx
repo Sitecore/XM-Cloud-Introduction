@@ -1,4 +1,6 @@
 import React from 'react';
+import InnerHTML from 'dangerously-set-html-content';
+import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
 import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import useSWR from 'swr';
 import { ComponentProps } from 'lib/component-props';
@@ -45,7 +47,7 @@ const AgendaComponent = (props: AgendaProps): JSX.Element => {
   return (
     <div className={`component agenda ${props.params.styles}`} id={id ? id : undefined}>
       <div className="component-content">
-        <div dangerouslySetInnerHTML={{ __html: data as string }} />
+        <InnerHTML html={data} />
       </div>
     </div>
   );

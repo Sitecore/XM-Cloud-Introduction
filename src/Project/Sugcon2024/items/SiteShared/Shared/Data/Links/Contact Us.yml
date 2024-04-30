@@ -1,0 +1,34 @@
+﻿---
+ID: "f396a204-2241-4219-9cc2-eebe6007e2a8"
+Parent: "b7d9f196-002a-498a-bf5f-1f529f23d587"
+Template: "5cc6967e-43d7-4e02-96b9-6357acd406f2"
+Path: /sitecore/content/Sugcon2024/Shared/Data/Links/Contact Us
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240223T143123Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "88fe928d-5136-45fd-8889-9ea13398a015"
+      Hint: Link
+      Value: "<link text='Contact us' linktype='mailto' style='' url='mailto:community@sitecore.com?subject=Email from SUGCON site'  title='' />"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "258d7725-ac79-45eb-b13e-94b23c843cd0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240223T143227Z

@@ -2,6 +2,7 @@ import {
   ComponentParams,
   ComponentRendering,
   LinkField,
+  Placeholder,
   Link as SitecoreLink,
   Text,
   TextField,
@@ -22,12 +23,7 @@ import {
 } from '@chakra-ui/react';
 import clsx from 'clsx';
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
-import {
-  HeaderHeights,
-  PaddingX,
-  PaddingY,
-  responsiveButtonSizeConfig,
-} from 'template/LayoutConstants';
+import { HeaderHeights, PaddingX, PaddingY } from 'template/LayoutConstants';
 
 export interface Fields {
   Id: string;
@@ -40,20 +36,17 @@ export interface Fields {
   Styles: string[];
 }
 
-export type CustomComponentRendering = Omit<ComponentRendering, 'fields'> & {
-  fields: Fields[];
-};
-
 export type NavigationProps = {
   params?: ComponentParams;
   fields: Fields;
-  rendering: CustomComponentRendering;
+  rendering: ComponentRendering;
   className?: string;
 };
 
 interface NavigationItemProps {
   element: Fields;
   key?: number;
+  onToggle?: () => void;
   pageEditing: boolean | undefined;
 }
 
@@ -93,8 +86,21 @@ export const Default = (props: NavigationProps): JSX.Element => {
 
   const navigationMenuItems = [homeFields, ...Object.values(props.fields)];
 
-  const renderNavigation = (): JSX.Element => (
-    <ResponsiveNavigation navigationMenuItems={navigationMenuItems} pageEditing={pageEditing} />
+  interface RenderNavigationProps {
+    onToggle?: () => void;
+  }
+
+  const renderNavigation = ({
+    onToggle = () => {
+      /* intentionally left blank */
+    },
+  }: RenderNavigationProps = {}): JSX.Element => (
+    <ResponsiveNavigation
+      navigationMenuItems={navigationMenuItems}
+      onToggle={onToggle}
+      pageEditing={pageEditing}
+      rendering={props.rendering}
+    />
   );
 
   return (
@@ -124,7 +130,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
             borderBlockEnd="1px"
             borderBlockEndColor="sugcon.gray.300"
           >
-            {renderNavigation()}
+            {renderNavigation({ onToggle })}
           </Box>
         </Collapse>
       </Show>
@@ -134,15 +140,19 @@ export const Default = (props: NavigationProps): JSX.Element => {
 
 interface ResponsiveNavigationProps {
   navigationMenuItems: Fields[];
+  onToggle?: () => void;
   pageEditing: boolean | undefined;
+  rendering: ComponentRendering;
 }
 
 const ResponsiveNavigation = ({
   navigationMenuItems,
+  onToggle,
   pageEditing,
+  rendering,
 }: ResponsiveNavigationProps): JSX.Element => {
   return (
-    <Box as="nav" role="navigation" aria-label="SUGCON Europe 2024" ml={{ base: 0, lg: 'auto' }}>
+    <Box as="nav" role="navigation" aria-label="SUGCON" ml={{ base: 0, lg: 'auto' }}>
       <UnorderedList
         display={{ base: 'block', lg: 'flex' }}
         flexWrap="wrap"
@@ -167,28 +177,30 @@ const ResponsiveNavigation = ({
                 mb={{ base: PaddingY.Desktop, lg: '0' }}
               >
                 {hasChildren ? (
-                  <NavigationItemWithChildren element={element} pageEditing={pageEditing} />
+                  <NavigationItemWithChildren
+                    element={element}
+                    onToggle={onToggle}
+                    pageEditing={pageEditing}
+                  />
                 ) : (
-                  <NavigationItem element={element} pageEditing={pageEditing} />
+                  <NavigationItem element={element} onToggle={onToggle} pageEditing={pageEditing} />
                 )}
               </ListItem>
             );
           })}
         <ListItem>
-          <Button
-            as={Link}
-            href="https://siteco.re/SUGCONEurope2024Registration"
-            size={responsiveButtonSizeConfig}
-          >
-            Register now
-          </Button>
+          <Placeholder name="button-link" rendering={rendering} />
         </ListItem>
       </UnorderedList>
     </Box>
   );
 };
 
-const NavigationItemWithChildren = ({ element, pageEditing }: NavigationItemProps): JSX.Element => {
+const NavigationItemWithChildren = ({
+  element,
+  onToggle,
+  pageEditing,
+}: NavigationItemProps): JSX.Element => {
   const { isOpen, getDisclosureProps, getButtonProps } = useDisclosure();
 
   const buttonProps = getButtonProps();
@@ -219,7 +231,7 @@ const NavigationItemWithChildren = ({ element, pageEditing }: NavigationItemProp
           >
             {!!element?.Children?.length &&
               element.Children.map((child, key) =>
-                renderChildNavigationItem({ element: child, key, pageEditing })
+                renderChildNavigationItem({ element: child, key, onToggle, pageEditing })
               )}
           </UnorderedList>
         </Collapse>
@@ -228,7 +240,7 @@ const NavigationItemWithChildren = ({ element, pageEditing }: NavigationItemProp
   );
 };
 
-const NavigationItem = ({ element, pageEditing }: NavigationItemProps): JSX.Element => {
+const NavigationItem = ({ element, onToggle, pageEditing }: NavigationItemProps): JSX.Element => {
   return (
     <Link
       as={SitecoreLink}
@@ -237,6 +249,7 @@ const NavigationItem = ({ element, pageEditing }: NavigationItemProps): JSX.Elem
       editable={pageEditing}
       variant="navLink"
       size={{ base: 'sm', lg: 'lg' }}
+      onClick={onToggle}
     >
       {getNavigationText(element)}
     </Link>
@@ -247,6 +260,7 @@ const NavigationItem = ({ element, pageEditing }: NavigationItemProps): JSX.Elem
 const renderChildNavigationItem = ({
   element,
   key,
+  onToggle,
   pageEditing,
 }: NavigationItemProps): JSX.Element => (
   <ListItem key={key} width="100%">
@@ -265,6 +279,7 @@ const renderChildNavigationItem = ({
         base: { backgroundColor: 'unset' },
         lg: { backgroundColor: 'sugcon.gray.100' },
       }}
+      onClick={onToggle}
     >
       {getNavigationText(element)}
     </Link>

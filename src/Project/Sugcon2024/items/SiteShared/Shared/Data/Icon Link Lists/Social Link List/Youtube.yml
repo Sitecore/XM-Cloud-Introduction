@@ -1,0 +1,42 @@
+﻿---
+ID: "7e67d356-87c8-4eec-ae2c-4c35dd2d8f01"
+Parent: "c215113e-54bd-4e71-b0af-d27fbd066202"
+Template: "b1c7330c-7b3d-4587-88d6-f0ef242323c8"
+Path: /sitecore/content/Sugcon2024/Shared/Data/Icon Link Lists/Social Link List/Youtube
+SharedFields:
+- ID: "87782bbe-a521-4354-80c0-435930decb77"
+  Hint: Icon
+  Value: "{240A86FA-1069-4443-8A1A-2436B6403F5F}"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{FB9BB6B1-F2FF-4511-A7BB-FF69E42B9AC1}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240215T160652Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "87dab228-8a33-4f2d-9f3e-5125c029de1f"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://www.youtube.com/sugcon" anchor="" target="_blank" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fda7c25e-fa83-4d7e-9216-4bcbcb2e14f0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240215T162308Z

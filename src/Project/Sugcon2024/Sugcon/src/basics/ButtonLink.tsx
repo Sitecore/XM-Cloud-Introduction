@@ -21,7 +21,7 @@ export const ButtonLink = (props: ButtonLinkProps): JSX.Element => {
       <Button variant={variant}>
         <JssLink field={props.field} />
       </Button>
-    )
+    );
   }
 
   return (

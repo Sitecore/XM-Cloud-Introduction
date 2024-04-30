@@ -1,0 +1,42 @@
+﻿---
+ID: "2f64f648-90ed-40f4-891a-0bd9da88ecf7"
+Parent: "7b12df26-18bd-4139-b67c-9300f8753da7"
+Template: "8406eace-ca58-4190-9269-a04b1c9504da"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/Text and Image/Venue Accomodation
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "20a182aa-b8a0-41b7-a750-ffbf670ba441"
+      Hint: Text
+      Value: |
+        <p>Use this<strong> </strong><a href="https://www.doylecollection.com/hotels/the-croke-park-hotel/group-bookings" rel="noopener noreferrer" target="_blank"><strong>'group booking' link</strong></a><strong> </strong>for your reservation:</p><ol><li>Once you access the link, click on 'Book Your Stay' in the top right-hand corner.</li><li>Choose your check-in and check-out dates, the number of rooms needed, and the number of adults per room. Please note that the default setting is for 2 guests per room, so adjust this to 1 if booking for a single guest.</li><li>Click on ‘Have a Code’.</li><li>Enter the group code 'SUGC090424' in the Group Code field.</li><li>Click on 'Find a Room' to proceed with your booking.</li></ol>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240319T231010Z
+    - ID: "2c041b92-d32b-4b33-ba73-adf80b01698e"
+      Hint: Image
+      Value: |
+        <image mediaid="{7CD2D11E-130B-4AE7-AEF1-F166226C9AE5}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "5ba4d61a-1895-40b7-9bea-da5d6abd71ac"
+      Hint: Headline
+      Value: Accommodation booking
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8a28b4ea-3a0a-4b9f-819a-2f167f241150"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T134150Z

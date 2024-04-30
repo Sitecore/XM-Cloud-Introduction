@@ -1,0 +1,49 @@
+﻿---
+ID: "4fdcad1b-bf0e-436a-aa43-c3a0314cd6a6"
+Parent: "f80ea5c1-284c-4075-bb35-288305dad4e8"
+Template: "3caa9812-e5cf-488e-9546-ecaa263c8a14"
+Path: /sitecore/content/Sugcon2024/EU/Data/Sponsors/ROIUp
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: |
+        <r owner="sitecore\a.vershalovich@brimit.com" date="20240405T145435Z" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240403T071025Z
+    - ID: "3d19f996-77c2-4fdd-a4ca-390fc5a12e56"
+      Hint: SponsorName
+      Value: ROI UP Group
+    - ID: "4a651df3-8c05-42d7-8060-a33e21174dbb"
+      Hint: SponsorLogo
+      Value: |
+        <image mediaid="{2C958EC3-2E9D-4CEE-92F0-3B3A281FBB08}" alt="" height="122" width="105" hspace="" vspace="" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "79129cd7-bda5-4de0-ae69-795096843a06"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "cd71d194-bcb3-46c8-8f71-a2bf1f929f1d"
+      Hint: SponsorBio
+      Value: 
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240405T145740Z
+    - ID: "dca7fd07-27d3-4089-8845-2862f3ef1638"
+      Hint: SponsorURL
+      Value: |
+        <link linktype="external" url="https://roi-up.co.uk/" anchor="" target="_blank" />
