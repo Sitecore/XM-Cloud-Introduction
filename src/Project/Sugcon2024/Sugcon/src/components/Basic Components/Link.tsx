@@ -1,5 +1,7 @@
 import React from 'react';
 import { Box, Link } from '@chakra-ui/react';
+import { ButtonLink } from 'src/basics/ButtonLink';
+import { LinkField, Link as JssLink } from '@sitecore-jss/sitecore-jss-nextjs';
 import { LinkField, Link as JssLink, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
@@ -26,3 +28,7 @@ const LinkComponent = (props: LinkProps): JSX.Element => {
 };
 
 export const Default = withDatasourceCheck()<LinkProps>(LinkComponent);
+
+export const Button = (props: LinkProps): JSX.Element => {
+  return <ButtonLink field={props.fields.Link} />;
+};

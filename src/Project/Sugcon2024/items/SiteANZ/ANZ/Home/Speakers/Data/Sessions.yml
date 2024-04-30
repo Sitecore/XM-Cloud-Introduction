@@ -1,0 +1,34 @@
+﻿---
+ID: "aca8a45b-7c97-4479-9f6a-d103ac50482b"
+Parent: "5668ba80-1255-427c-bffd-27faaec2db63"
+Template: "c4c677b6-212b-44a4-aab4-67fcd082e5d8"
+Path: /sitecore/content/Sugcon2024/ANZ/Home/Speakers/Data/Sessions
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1939738b-99b1-473d-9827-f0f321dc8980"
+      Hint: SessionizeUrl
+      Value: "https://sessionize.com/api/v2/ekimnhe4/view/Sessions"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240327T191919Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "12987044-4d72-4051-a88e-8caa5e6a881e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240404T211329Z

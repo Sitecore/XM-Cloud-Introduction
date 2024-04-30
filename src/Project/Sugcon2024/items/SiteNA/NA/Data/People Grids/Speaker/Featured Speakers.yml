@@ -1,0 +1,45 @@
+﻿---
+ID: "1807a393-e80a-474a-9b7f-07bdb1cc69b8"
+Parent: "8dc07534-2710-48d0-9d21-0b170aac4eff"
+Template: "908ce315-5c67-40f3-920e-9aca6c348318"
+Path: /sitecore/content/Sugcon2024/NA/Data/People Grids/Speaker/Featured Speakers
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240313T130936Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "68fc3baf-c3d9-4b1f-a360-3f285e756807"
+      Hint: Headline
+      Value: Featured Speakers
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "041fb39b-da38-4011-a5dd-0ede7fd429de"
+    - ID: "b81d53dd-bb9f-4c68-ba6c-a774e2c47532"
+      Hint: People
+      Value: |
+        {ABDCCA61-424B-44B6-BCE9-674D477EA7AD}
+        {96DB2DE6-4059-4079-9C78-FEB98A0B5218}
+        {8FB1DFA3-27EF-46C6-9D72-3ECB4A21FBA8}
+        {F54C2B09-A156-47E5-86FE-990B841AC439}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T133822Z

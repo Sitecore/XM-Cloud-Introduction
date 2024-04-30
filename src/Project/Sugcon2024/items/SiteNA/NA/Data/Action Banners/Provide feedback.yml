@@ -1,0 +1,41 @@
+﻿---
+ID: "5a4a113f-8d99-4488-9bd7-e0c6900ffac7"
+Parent: "fba0f7f4-fe89-4a05-9840-56f12646bac9"
+Template: "7cc37fce-33bd-464a-8b32-0a65b4bc502e"
+Path: /sitecore/content/Sugcon2024/NA/Data/Action Banners/Provide feedback
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240304T155032Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "6e915af3-dcf3-48b2-82a2-959320d31002"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "cb50acd9-94fb-47cf-b39d-dd44c88748d1"
+      Hint: Text
+      Value: "We invite all attendees to share their experiences and suggestions!"
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240416T202808Z
+    - ID: "efb8df35-ae2a-40d8-bca2-299f1de1f7cb"
+      Hint: Title
+      Value: Provide feedback
+    - ID: "f3ec91f5-b7bb-4c55-85aa-f34238fb5177"
+      Hint: CallToAction
+      Value: |
+        <link text="Feedback form" linktype="external" url="https://forms.office.com/e/8YWMx49Nyn" anchor="" target="_blank" />

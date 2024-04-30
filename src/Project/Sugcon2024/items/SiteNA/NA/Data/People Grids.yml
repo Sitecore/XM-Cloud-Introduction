@@ -1,0 +1,23 @@
+﻿---
+ID: "971d2ff1-023e-46af-92aa-e4cf561780b1"
+Parent: "556def14-3e7e-4b6a-95cd-9643ecc13ebe"
+Template: "3e6e0f40-9b1a-477e-8096-e949d8200a3f"
+Path: /sitecore/content/Sugcon2024/NA/Data/People Grids
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240312T171746Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "de6a5b84-7d4b-4843-918c-b4b0d4ffbb16"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T133803Z

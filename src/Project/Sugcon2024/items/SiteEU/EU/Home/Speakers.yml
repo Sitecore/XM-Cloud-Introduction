@@ -1,0 +1,89 @@
+﻿---
+ID: "6a37d3a8-8f7e-4464-9f3f-219521adf6e1"
+Parent: "08762520-fa2d-410a-ba44-f02a0f4b40f9"
+Template: "f5d59b30-223d-4e5a-967d-19daf7934db6"
+Path: /sitecore/content/Sugcon2024/EU/Home/Speakers
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 550
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{9A08E182-438E-4002-96B7-BCFAB83806D8}" />
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{DF46D99F-B742-4FFE-BF0D-B99894D3BDBB}"
+              p:before="*"
+              s:id="{7A1D9A21-B8D7-42F9-9B0B-92ABF8D1974F}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;BackgroundImage&amp;Styles=%7C%7BEB888EB1-DF66-41BD-9DE2-5DB9291F1213%7D&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+              s:ph="/headless-main/sxa-generic-page/container-2" />
+            <r
+              uid="{D3D85633-312D-41E4-8098-3BA676782238}"
+              p:after="*[1=2]"
+              s:ds="local:/Data/Speakers"
+              s:id="{4D019254-304D-497C-81C1-F2106903B570}"
+              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Columns&amp;Alphabetize&amp;LinkToBio=1&amp;DisplaySocialLinks&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=2"
+              s:ph="/headless-main/sxa-generic-page/container-2/container-1" />
+          </d>
+        </r>
+    - ID: "1c75d8e4-860f-4a6f-86f5-e0868d0114f1"
+      Hint: OGImage
+      Value: |
+        <image mediaid="{B83A6684-B680-4001-AA6C-72661A01888D}" />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240125T170322Z
+    - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
+      Hint: NavigationTitle
+      Value: Speakers
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\anna.bruendel@gmail.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\anna.bruendel@gmail.com
+    - ID: "600a8e16-3dc3-4075-9edc-8a63d7a20216"
+      Hint: OGType
+      Value: website
+    - ID: "7d817b40-bd80-41e3-8562-5ec5f3fb95fd"
+      Hint: MetaDescription
+      Value: Meet the dynamic and knowledgeable speakers of SUGCON Europe 2024. Learn from the experts and get inspired for your Sitecore journey.
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8f356368-1744-4bc3-a5d2-c08cef217689"
+    - ID: "b03cdc17-d7b5-4c87-97a9-b57352fe54a3"
+      Hint: OGTitle
+      Value: SUGCON Europe 2024 Speakers | The European Sitecore User Group Conference
+    - ID: "b0c01040-9941-4a8f-8400-b274c377885e"
+      Hint: Title
+      Value: Speakers
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "cbb2a914-81e3-4fe6-8aed-deab8ed8b98e"
+      Hint: OGDescription
+      Value: Meet the dynamic and knowledgeable speakers of SUGCON Europe 2024. Learn from the experts and get inspired for your Sitecore journey.
+    - ID: "d71d9097-062c-4781-bae9-d6658ab01ade"
+      Hint: MetaKeywords
+      Value: SUGCON, Europe, Sitecore, User Group, Conference, Speakers, Experts, Inspiration, Journey
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240404T211328Z

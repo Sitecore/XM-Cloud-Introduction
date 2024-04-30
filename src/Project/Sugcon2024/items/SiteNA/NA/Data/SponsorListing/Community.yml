@@ -1,0 +1,46 @@
+﻿---
+ID: "ed17f9e7-41ac-4280-a053-fa2b034139b8"
+Parent: "5bedd2fc-8853-4293-93c7-d3f712170050"
+Template: "b15b6056-c271-490b-972e-405750d7a9e7"
+Path: /sitecore/content/Sugcon2024/NA/Data/SponsorListing/Community
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 275
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240228T215500Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "7be32799-02e1-4132-914e-61796a028072"
+      Hint: Title
+      Value: Community
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b0b7e297-9009-416e-aa0e-06f618d8c498"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "c001629a-00c8-4016-9c80-3f757ac3522a"
+      Hint: Sponsors
+      Value: |
+        {95039E3A-0981-49D9-BD4A-185834E88D88}
+        {4205E76F-CD04-42B2-AA61-90A1155CCAF8}
+        {CD8E78DD-58A0-42D9-8F47-6ABB4A67FA7F}
+        {093BE001-B363-4A0B-9945-0C1FE73182CE}
+        {716B5F49-A6D0-4BDF-9940-7CD6A5A2C4F4}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T152310Z

@@ -1,0 +1,42 @@
+﻿---
+ID: "2eed8135-e7f3-4259-a2b6-5a5d68fddef5"
+Parent: "faaeb285-ce16-4ce2-bf4b-eeb057fe2caa"
+Template: "89f532d4-c6a3-4648-94bd-71d169e6c5c7"
+Path: /sitecore/content/Sugcon2024/EU/Data/Accordion/Worshops and certifications
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "228d69ec-1aee-47ad-bb49-920fc6f5eb56"
+      Hint: Elements
+      Value: |
+        {A83C57F2-A00B-41F6-80A6-8887B5B63C97}
+        {324E471C-15AE-4518-BA5A-55C5FF166244}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240320T132458Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "859a98fd-b339-419e-a0a8-3226d27a3d54"
+      Hint: Headline
+      Value: "Schedule - Thursday, April 11th"
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7a65c458-b16b-4891-80d8-251540759fbf"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240403T192606Z

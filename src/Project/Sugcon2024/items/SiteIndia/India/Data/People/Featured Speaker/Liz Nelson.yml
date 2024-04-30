@@ -1,0 +1,58 @@
+﻿---
+ID: "ae6391bd-3193-4a5f-8ad1-0efb758dab00"
+Parent: "f42dabcd-e75a-4349-be2f-7a0e2887970c"
+Template: "cf5cf584-6f21-436c-be31-d5823d25a420"
+Path: /sitecore/content/Sugcon2024/India/Data/People/Featured Speaker/Liz Nelson
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "12299e7a-8383-4738-972d-31947709f363"
+      Hint: JobRole
+      Value: Product Lead of XM Cloud 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240319T210937Z
+    - ID: "4c0f1cce-f29a-4d56-99b4-210fbe7d0865"
+      Hint: Twitter
+      Value: |
+        <link linktype="external" url="" target="" text="Twitter" title="" class=""/>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "569d41b7-a9f7-4fe6-b1e8-d272d5f84d4c"
+      Hint: Linkedin
+      Value: |
+        <link text="LinkedIn" linktype="external" url="https://www.linkedin.com/in/liznelsondev/" anchor="" title="LinkedIn" target="_blank" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "620d41cc-5159-4202-8e75-d6077bb04b80"
+      Hint: Company
+      Value: Sitecore
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c1245f42-5594-4cfc-9cae-235c45e53471"
+    - ID: "9d82ec0c-ca9e-41e1-aa5d-1af75877cffb"
+      Hint: Name
+      Value: Liz Nelson
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\U0vbO5OyVm
+    - ID: "d2853b97-da85-4526-b844-b36ad0c5ba32"
+      Hint: Biography
+      Value: Liz held a number of Management roles including Solution Architecture, Consulting, Marketing Strategy, Customer Engagement and now Product Lead of XM Cloud. Liz is a JS ecosystem explorer who likes to dive deeply into architecture, tooling and performance optimization.
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240422T173611Z
+    - ID: "f39a9f75-c302-4aa4-94cd-48ef7432fda1"
+      Hint: Image
+      Value: |
+        <image mediaid="{B8316588-8274-4431-BCE3-9F37BAE75E07}" />

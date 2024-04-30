@@ -1,0 +1,43 @@
+﻿---
+ID: "23cdf32e-11f0-4aca-ad68-20ad06b170e2"
+Parent: "3fffbc21-1c0c-4d32-8588-49c8195ac32e"
+Template: "99e9efec-2eee-4972-a998-48252adc9e79"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/Video and Text/Homepage
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240223T142225Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cd1f7569-1b15-4cbb-b254-b41803cc4bc4"
+    - ID: "a94f3de0-e385-4796-8705-95e9dce392ef"
+      Hint: Text
+      Value: "<p>We asked SUGCON attendees to share their overall experiences, thoughts, and top takeaways from SUGCON Europe 2022. Find out what they had to say!</p>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "bf80faee-482d-4e05-be9f-f0dfca4e7232"
+      Hint: YoutubeVideoId
+      Value: "-vvRMbWmqns"
+    - ID: "c98d99b2-f832-4a9d-87cc-be7861da5faf"
+      Hint: TextHeadline
+      Value: Attendee Testimonials
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240424T131753Z
+    - ID: "e8f34402-00dc-4c16-af38-9dc1d23e5cac"
+      Hint: Headline
+      Value: Why attend SUGCON ANZ 2023

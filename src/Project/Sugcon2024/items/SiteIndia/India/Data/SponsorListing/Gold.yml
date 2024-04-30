@@ -1,0 +1,45 @@
+﻿---
+ID: "508721b1-a72d-4a29-badc-4bf4cb6d547a"
+Parent: "6337d98b-3300-460f-b03a-0f179551baa7"
+Template: "b15b6056-c271-490b-972e-405750d7a9e7"
+Path: /sitecore/content/Sugcon2024/India/Data/SponsorListing/Gold
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240228T215500Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Mark van Aalst
+    - ID: "7be32799-02e1-4132-914e-61796a028072"
+      Hint: Title
+      Value: Gold
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "77d56f13-b911-4fce-a71f-b9a345af9d5f"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "c001629a-00c8-4016-9c80-3f757ac3522a"
+      Hint: Sponsors
+      Value: |
+        {75ED7F55-066E-41AE-88DD-E2FB1C3E4A97}
+        {5E314DCE-AA8D-4B18-B815-EE6AD1D18526}
+        {873BA1B3-051C-47B8-A822-C9221FC71073}
+        {E85E5235-C5DE-4EF2-BDB3-409CE273A090}
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240402T124718Z

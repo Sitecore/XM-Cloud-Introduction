@@ -1,0 +1,40 @@
+﻿---
+ID: "bb8b6d91-1160-4384-b8e5-27b3a5895a62"
+Parent: "eaf56f96-905a-480d-8b72-1fd542931d9a"
+Template: "89f532d4-c6a3-4648-94bd-71d169e6c5c7"
+Path: /sitecore/content/Sugcon2024/India/Data/Accordion/FAQ
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "228d69ec-1aee-47ad-bb49-920fc6f5eb56"
+      Hint: Elements
+      Value: |
+        {B988BE0A-20C6-4D24-B52F-448852879F92}
+        {7C512977-A1E3-440A-9477-4106EBB84F6C}
+        {E712B1B2-3DD6-417D-9A3F-CBA91BCD86E2}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240320T110015Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "859a98fd-b339-419e-a0a8-3226d27a3d54"
+      Hint: Headline
+      Value: FAQ
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "312e0c46-fa4b-4359-b312-d66cad321e97"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240402T124714Z

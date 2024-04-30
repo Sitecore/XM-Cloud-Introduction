@@ -1,0 +1,41 @@
+﻿---
+ID: "812344ee-98bb-410d-8d2d-17dddbe62863"
+Parent: "39a71c9d-4d55-462d-af17-b9ffdbcb746c"
+Template: "9813d24f-4506-43ed-b5c9-4f8033fca9e2"
+Path: /sitecore/content/Sugcon2024/NA/Data/Accordion/Worshops and certifications/XM Cloud
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "077242f3-20e7-4fec-9309-9337edd815f5"
+      Hint: Title
+      Value: "Introduction to XM Cloud Pages - Thursday 10:30-12:30"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240320T132616Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9348e5f5-0f30-4ffd-a285-ffd44e5442fa"
+    - ID: "a9b746ad-dbed-41c5-8db8-715c2106999f"
+      Hint: Text
+      Value: |
+        <p>"In this session, we will be focusing on creating, editing, and managing polished web pages and content using Sitecore latest XM Cloud Pages editing features.</p><p>Agenda:</p><ol><li>Introduction and overview of Pages</li><li>Managing content and design in the Pages editor</li><li>Managing content and design in the Content Manager"</li></ol><p>Price: complimentary</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T143908Z

@@ -1,0 +1,40 @@
+﻿---
+ID: "5ad1384a-73e0-4afc-9224-8f0731d199c9"
+Parent: "877f5c7f-e96d-4978-b9d7-08cd7a8e54f9"
+Template: "9813d24f-4506-43ed-b5c9-4f8033fca9e2"
+Path: /sitecore/content/Sugcon2024/India/Data/Accordion/Wednesday Trainings/Accordion Element Wednesday 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "077242f3-20e7-4fec-9309-9337edd815f5"
+      Hint: Title
+      Value: XM Cloud Exam Prep Workshop 
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240320T132616Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "52ed6067-6813-4904-b380-4e0ffe48d845"
+    - ID: "a9b746ad-dbed-41c5-8db8-715c2106999f"
+      Hint: Text
+      Value: "<p>This workshop reviews topics and competencies that are covered on the XM Cloud Developer Certification Exam. This workshop also includes a voucher for the XM Cloud Developer Certification Exam. By the end of this workshop, attendees will be able to prepare for the XM Cloud Developer Certification Exam using information provided for the following competencies: 1. XM Cloud Architecture and Developer Workflow 2. Deployment of XM Cloud Projects 3. Renderings and Layout 4. Sitecore Content Serialization 5. Sitecore APIs &amp; Webhooks 6. XM Cloud Pages 7. Security for Developers 8. Data Modeling Please buy the voucher during registration.</p><p><strong>Room: TBD</strong></p><p>*Includes an XM Cloud Developer Certification voucher upon attendance. Can be redeemed to take at SUGCON.*</p>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\U0vbO5OyVm
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T124137Z

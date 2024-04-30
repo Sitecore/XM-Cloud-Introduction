@@ -1,0 +1,50 @@
+﻿---
+ID: "4f2fb8a5-c16e-448d-b960-84fd66012b1f"
+Parent: "44d60f64-f788-49b1-8e90-ff514eb7d712"
+Template: "908ce315-5c67-40f3-920e-9aca6c348318"
+Path: /sitecore/content/Sugcon2024/EU/Data/People Grids/Organizer/Organizational Commitee
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240313T135751Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "68fc3baf-c3d9-4b1f-a360-3f285e756807"
+      Hint: Headline
+      Value: Organizational Commitee
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5359035d-ed84-45ea-a26f-e2e394a217e7"
+    - ID: "b81d53dd-bb9f-4c68-ba6c-a774e2c47532"
+      Hint: People
+      Value: |
+        {78A973E7-234E-4DA1-94CD-FE5BEE4EE6F3}
+        {AF048CF1-1EF1-410C-80D1-2D2C932D7EBF}
+        {81171B0E-32B3-4BA1-8ADE-CF16A90EEE89}
+        {B7931779-1189-4238-A7BD-3AAF1EC05374}
+        {3F7E6CF8-ED0E-4C28-A9C2-C220CFA75BA8}
+        {7A5B85C7-01FB-4146-BA30-6DDE0A7C9102}
+        {15D882C2-B503-4FBF-AD19-8E5069ECFA23}
+        {1FE3920E-473B-46F7-82BC-316CF352A2B5}
+        {D14125CC-DC30-40AB-89FC-EED323FED1DF}
+        {7F079B85-AE1A-452D-B802-B79C3EF721D3}
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240319T231658Z

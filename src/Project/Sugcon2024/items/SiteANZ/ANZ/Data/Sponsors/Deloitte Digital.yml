@@ -1,0 +1,47 @@
+﻿---
+ID: "3798ad2b-8178-476b-aefe-3d4080a92a63"
+Parent: "0fe2f930-8b6e-42fb-9329-b9f145d5f0ff"
+Template: "3caa9812-e5cf-488e-9546-ecaa263c8a14"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/Sponsors/Deloitte Digital
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240424T105120Z
+    - ID: "3d19f996-77c2-4fdd-a4ca-390fc5a12e56"
+      Hint: SponsorName
+      Value: Deloitte Digital
+    - ID: "4a651df3-8c05-42d7-8060-a33e21174dbb"
+      Hint: SponsorLogo
+      Value: |
+        <image mediaid="{CB38AA54-E3FC-4AA3-B0E3-1858844A6C12}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "dc64f767-a4f4-4f3f-9121-2bebcac99be4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "cd71d194-bcb3-46c8-8f71-a2bf1f929f1d"
+      Hint: SponsorBio
+      Value: |
+        <p style="color: #707070; background: white; margin-bottom: 1rem;"><span style="color: #242424;">Deloitte Digital provide clients with a full suite of digital services, covering digital strategy, UX, content, creative, engineering and omni-channel implementation.</span></p>
+        <p style="color: #707070; background: white; margin-top: 0px; margin-bottom: 1rem;"><span style="color: #242424;">We build new business capability by creating the right balance of creativity, communications, and technology. Our difference comes from our diversity, with the business acumen of a strategic advisor; the design capability of a creative agency and the engineering depth of a technology firm, all backed by the largest professional services firm in the world</span></p>
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240424T105457Z
+    - ID: "dca7fd07-27d3-4089-8845-2862f3ef1638"
+      Hint: SponsorURL
+      Value: |
+        <link linktype="external" url="https://www.deloittedigital.com.au/" anchor="" target="_blank" />

@@ -1,0 +1,23 @@
+﻿---
+ID: "ab0a76ee-d6e9-45ed-8195-3c267e3b84e9"
+Parent: "556def14-3e7e-4b6a-95cd-9643ecc13ebe"
+Template: "2155153a-b5ec-4eac-b1d9-2b5cd6ad2fc6"
+Path: /sitecore/content/Sugcon2024/NA/Data/Sponsors
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240228T141636Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "01ff0550-dc11-4ab5-ba5c-7fb4aac5a9c4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T133803Z

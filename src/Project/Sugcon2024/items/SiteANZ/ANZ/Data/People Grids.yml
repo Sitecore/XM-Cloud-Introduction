@@ -1,0 +1,23 @@
+﻿---
+ID: "74cdc057-3329-4d78-8da7-1134ec367294"
+Parent: "cbb4616a-47b2-482e-b164-d1691e51610b"
+Template: "3e6e0f40-9b1a-477e-8096-e949d8200a3f"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/People Grids
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240312T171746Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "de6a5b84-7d4b-4843-918c-b4b0d4ffbb16"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T133803Z

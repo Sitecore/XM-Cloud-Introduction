@@ -1,0 +1,57 @@
+﻿---
+ID: "c1c1b59a-28fb-4255-afc0-332ba474690e"
+Parent: "91534425-d86d-435e-82b8-92eddda45870"
+Template: "84d400f6-0729-457b-a9b3-171829883242"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/Venue/Voco Brisbane
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "160ef76f-a69b-4cd3-8824-d892c505db10"
+      Hint: VenueImages
+      Value: "{498DF07D-84D5-4D99-A944-5E9FAF488E88}"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240424T101915Z
+    - ID: "26cc0988-b30d-4b85-9a6a-6873fa20c2d5"
+      Hint: ButtonLink
+      Value: |
+        <link linktype="external" url="https://www.ihg.com/voco/hotels/us/en/brisbane/bnecr/hoteldetail" target="_blank" text="Explore the event venue" title="" class=""/>
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "86927eb8-fcc2-455b-a7c7-1df3d47d5668"
+      Hint: AdditionalInfoText
+      Value: |
+        <p><span style="color: rgb(112, 112, 112);">Brisbane isn't lovingly called BrisVegas for nothing and with its authentic local hospitality and modern design, voco Brisbane City Centre is right at home in the sun-drenched Queensland capital.</span></p>
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "2d783b4b-b32c-422a-95c6-b91c0665762b"
+    - ID: "997dc62b-1e07-4512-9b55-2fb80a571660"
+      Hint: HotelName
+      Value: Voco, Brisbane
+    - ID: "ad7a76a0-e6e3-407b-b70b-914cf2bdf599"
+      Hint: HotelAddress
+      Value: |
+        <p>85/87 N Quay<br />
+        Brisbane City QLD 4000<br />
+        Australia</p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240424T102146Z
+    - ID: "e35f7217-4251-4292-bdca-e3dc0f951f98"
+      Hint: Headline
+      Value: Venue

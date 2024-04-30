@@ -1,0 +1,31 @@
+﻿---
+ID: "6ff3c4da-c9f9-4e96-bde3-043022136737"
+Parent: "556def14-3e7e-4b6a-95cd-9643ecc13ebe"
+Template: "cf026914-b7e1-46cf-9ec1-f5de0fc3dde1"
+Path: /sitecore/content/Sugcon2024/NA/Data/Links
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240402T193310Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\cdJph8P5Hr
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\cdJph8P5Hr
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "01dba158-542e-4941-8138-6309ccfee740"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T133802Z

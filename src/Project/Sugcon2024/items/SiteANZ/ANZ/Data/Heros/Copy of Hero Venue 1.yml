@@ -1,0 +1,48 @@
+﻿---
+ID: "50d1d122-878a-4837-af8e-b39c61487878"
+Parent: "1619126d-0734-4db5-869a-11ddae268b3f"
+Template: "92ad7a66-1b2c-4b15-844b-accc4219323d"
+Path: /sitecore/content/Sugcon2024/ANZ/Data/Heros/Copy of Hero Venue 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0a923f53-535b-4702-a81d-8d9e04d3b30d"
+      Hint: CallToAction
+      Value: |
+        <link linktype="external" url="https://maps.app.goo.gl/aDYKugpNqJcVjUiq7" text="Venue Location"/>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240319T225353Z
+    - ID: "4035681d-0841-416f-86f6-fae8c16c7f7a"
+      Hint: Text
+      Value: "A landmark of Irish heritage - one of the world’s most unique, sustainable, and flexible meeting and event venues for bringing people together for live, hybrid and virtual events that inspire and entertain."
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "58cc68dd-3b8e-4617-b2c9-2db863cac546"
+      Hint: Image
+      Value: |
+        <image mediaid="{7982B961-56AE-4994-ACE8-06EB31A071AE}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "64d6a6e8-02e9-4ba7-9207-6b489cacf853"
+      Hint: EventDate
+      Value: Venue
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "10555eb1-7b78-41ca-8d08-620c02270cb4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240423T134146Z
+    - ID: "e527b987-6b82-4719-bd74-45a2641f0dbb"
+      Hint: Headline
+      Value: Croke Park Meetings & Events
