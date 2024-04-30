@@ -11,14 +11,10 @@ import {
   RichTextField,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import {
-  Flex,
   Heading,
   Image,
   Stack,
   Link as ChakraLink,
-  Card,
-  CardHeader,
-  CardBody,
   Alert,
   AlertIcon,
   Box,
@@ -29,7 +25,7 @@ import {
   ModalCloseButton,
   ModalBody,
   HStack,
-  Center,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import { LayoutFlex } from 'components/Templates/LayoutFlex';
 
@@ -42,10 +38,6 @@ interface Fields {
   Title: TextField;
   Sponsors: Sponsor[];
 }
-
-type SponsorListingWrapperProps = SponsorListingProps & {
-  children: React.ReactNode | React.ReactNode[];
-};
 
 type Sponsor = {
   fields: {
@@ -85,49 +77,6 @@ export const Default = (props: SponsorListingProps): JSX.Element => {
     </div>
   );
 };
-/**
- * Wrapper component for the SponsorListing component.
- * The inner content of the wrapper depends on the variant.
- * @param {SponsorListingWrapperProps} props - Props for the SponsorListingWrapper component.
- * @returns {JSX.Element} The rendered SponsorListingWrapper component.
- */
-const SponsorListingWrapper = (props: SponsorListingWrapperProps): JSX.Element => {
-  const id = props.params.RenderingIdentifier;
-
-  if (props.fields) {
-    return (
-      <div className={`component ${props.params.styles}`} id={id ? id : undefined}>
-        <div className="component-content">
-          <LayoutFlex>
-            <Card variant={'unstyled'}>
-              <CardHeader my={8}>
-                {/* Rendering Title if it exists */}
-                {props.fields.Title && (
-                  <Heading as={'h1'} size={'xl'}>
-                    {/* Rendering Title with JssText component */}
-                    <JssText field={props.fields.Title} />
-                  </Heading>
-                )}
-              </CardHeader>
-              <CardBody as={Flex}>
-                {/* Rendering children components */}
-                <Stack
-                  direction={{ base: 'column', md: 'row' }}
-                  gap={32}
-                  w={'full'}
-                  verticalAlign={'middle'}
-                >
-                  {props.children}
-                </Stack>
-              </CardBody>
-            </Card>
-          </LayoutFlex>
-        </div>
-      </div>
-    );
-  }
-  return <ErrorMessage />;
-};
 
 /**
  * FullDetails Variant
@@ -142,36 +91,40 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
   // Check if sponsor fields are provided
   if (props.fields) {
     return (
-      // Render sponsor listing wrapper with provided props
-      <SponsorListingWrapper {...props}>
-        {/* Map through each sponsor and render their details */}
-        {props.fields.Sponsors.map((sponsor, index) => (
-          <Stack gap={8} key={index} maxW={{ base: '100%', md: '50%' }}>
-            {/* Render sponsor logo */}
-
-            <Box height={'100%'} maxHeight={170} w={'full'} verticalAlign={'bottom'}>
-              <Center>
-                <Image
-                  as={JssImage}
-                  field={sponsor.fields.SponsorLogo}
-                  src={sponsor.fields.SponsorLogo.value?.src}
-                  maxHeight={150}
-                />
-              </Center>
-            </Box>
-            {/* Render sponsor name */}
-            <Heading as={'h2'} size={'lg'}>
-              <JssText field={sponsor.fields.SponsorName} />
+      <>
+        <LayoutFlex direction="column">
+          {props.fields.Title && (
+            <Heading as={'h2'} size={'xl'} marginBottom={10}>
+              {/* Rendering Title with JssText component */}
+              <JssText field={props.fields.Title} />
             </Heading>
-
-            {/* Render sponsor bio */}
-            <JssRichText field={sponsor.fields.SponsorBio} />
-
-            {/* Render sponsor URL as a link */}
-            <ChakraLink as={JssLink} field={sponsor.fields.SponsorURL} />
-          </Stack>
-        ))}
-      </SponsorListingWrapper>
+          )}
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 2, xl: 2, '2xl': 2 }} spacing={20} w="full">
+            {props.fields.Sponsors.map((sponsor) => (
+              <>
+                <Box>
+                  <Box
+                    justifyContent="center"
+                    alignItems="center"
+                    height="150px"
+                    className="fullWidthSponsorImage"
+                  >
+                    <JssImage field={sponsor.fields.SponsorLogo} as={Image} width="auto" />
+                  </Box>
+                  {/* Render sponsor name */}
+                  <Heading as={'h3'} size={'lg'}>
+                    <JssText field={sponsor.fields.SponsorName} />
+                  </Heading>
+                  {/* Render sponsor bio */}
+                  <JssRichText field={sponsor.fields.SponsorBio} />
+                  {/* Render sponsor URL as a link */}
+                  <ChakraLink as={JssLink} field={sponsor.fields.SponsorURL} />
+                </Box>
+              </>
+            ))}
+          </SimpleGrid>
+        </LayoutFlex>
+      </>
     );
   }
 
@@ -191,21 +144,31 @@ export const LogoWithPopup = (props: SponsorListingProps): JSX.Element => {
   // If props contain fields data, render sponsor logos
   if (props.fields) {
     return (
-      <SponsorListingWrapper {...props}>
-        {props.fields.Sponsors.map((sponsor, index) => (
-          <React.Fragment key={index}>
-            {/* Render sponsor logo as a button */}
-            <JssImage
-              field={sponsor.fields.SponsorLogo}
-              onClick={onOpen}
-              as={Image}
-              maxHeight={70}
-            />
-            {/* Render modal for the sponsor */}
-            {RenderModal(isOpen, onClose, sponsor)}
-          </React.Fragment>
-        ))}
-      </SponsorListingWrapper>
+      <>
+        <LayoutFlex direction="column">
+          {props.fields.Title && (
+            <Heading as={'h2'} size={'xl'} marginBottom={10}>
+              {/* Rendering Title with JssText component */}
+              <JssText field={props.fields.Title} />
+            </Heading>
+          )}
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 4, xl: 4, '2xl': 4 }} spacing={20} w="full">
+            {props.fields.Sponsors.map((sponsor, index) => (
+              <Box key={index} display="flex" justifyContent="center" alignItems="center">
+                <JssImage
+                  field={sponsor.fields.SponsorLogo}
+                  as={Image}
+                  maxHeight={70}
+                  width={'auto'}
+                  onClick={onOpen}
+                />
+                {/* Render modal for the sponsor */}
+                {RenderModal(isOpen, onClose, sponsor)}
+              </Box>
+            ))}
+          </SimpleGrid>
+        </LayoutFlex>
+      </>
     );
   }
 
@@ -223,14 +186,28 @@ export const LogoOnly = (props: SponsorListingProps): JSX.Element => {
   // If props contain fields data, render sponsor logos
   if (props.fields) {
     return (
-      <SponsorListingWrapper {...props}>
-        {props.fields.Sponsors.map((sponsor, index) => (
-          <React.Fragment key={index}>
-            {/* Render sponsor logo as a button */}
-            <JssImage field={sponsor.fields.SponsorLogo} as={Image} maxHeight={70} width={'auto'} />
-          </React.Fragment>
-        ))}
-      </SponsorListingWrapper>
+      <>
+        <LayoutFlex direction="column">
+          {props.fields.Title && (
+            <Heading as={'h2'} size={'xl'} marginBottom={10}>
+              {/* Rendering Title with JssText component */}
+              <JssText field={props.fields.Title} />
+            </Heading>
+          )}
+          <SimpleGrid columns={{ base: 1, md: 3, lg: 6, xl: 6, '2xl': 6 }} spacing={20} w="full">
+            {props.fields.Sponsors.map((sponsor, index) => (
+              <Box key={index} display="flex" justifyContent="center" alignItems="center">
+                <JssImage
+                  field={sponsor.fields.SponsorLogo}
+                  as={Image}
+                  maxHeight={70}
+                  width={'auto'}
+                />
+              </Box>
+            ))}
+          </SimpleGrid>
+        </LayoutFlex>
+      </>
     );
   }
 
