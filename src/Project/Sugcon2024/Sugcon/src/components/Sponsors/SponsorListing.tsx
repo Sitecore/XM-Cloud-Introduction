@@ -99,27 +99,18 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
               <JssText field={props.fields.Title} />
             </Heading>
           )}
-          <SimpleGrid 
-            columns={{ base: 1, md: 2, lg: 2, xl: 2, '2xl': 2 }}
-            spacing={20}
-            w="full"
-            >
-            {props.fields.Sponsors.map((sponsor) => (  
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 2, xl: 2, '2xl': 2 }} spacing={20} w="full">
+            {props.fields.Sponsors.map((sponsor) => (
               <>
                 <Box>
                   <Box
-                    justifyContent='center'
-                    alignItems='center'
-                    height='150px'
-                    className='fullWidthSponsorImage'
+                    justifyContent="center"
+                    alignItems="center"
+                    height="150px"
+                    className="fullWidthSponsorImage"
                   >
-                    <JssImage 
-                      field={sponsor.fields.SponsorLogo} 
-                      as={Image} 
-                      width='auto'
-                    />
+                    <JssImage field={sponsor.fields.SponsorLogo} as={Image} width="auto" />
                   </Box>
-                  
                   {/* Render sponsor name */}
                   <Heading as={'h3'} size={'lg'}>
                     <JssText field={sponsor.fields.SponsorName} />
@@ -132,7 +123,7 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
               </>
             ))}
           </SimpleGrid>
-        </LayoutFlex>  
+        </LayoutFlex>
       </>
     );
   }
@@ -161,22 +152,14 @@ export const LogoWithPopup = (props: SponsorListingProps): JSX.Element => {
               <JssText field={props.fields.Title} />
             </Heading>
           )}
-          <SimpleGrid 
-            columns={{ base: 1, md: 2, lg: 4, xl: 4, '2xl': 4 }}
-            spacing={20}
-            w="full"
-            >
-            {props.fields.Sponsors.map((sponsor) => (  
-              <Box 
-                display= 'flex'
-                justifyContent='center'
-                alignItems='center'
-              >
-                <JssImage 
-                  field={sponsor.fields.SponsorLogo} 
-                  as={Image} 
-                  maxHeight={70} 
-                  width={'auto'} 
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 4, xl: 4, '2xl': 4 }} spacing={20} w="full">
+            {props.fields.Sponsors.map((sponsor, index) => (
+              <Box key={index} display="flex" justifyContent="center" alignItems="center">
+                <JssImage
+                  field={sponsor.fields.SponsorLogo}
+                  as={Image}
+                  maxHeight={70}
+                  width={'auto'}
                   onClick={onOpen}
                 />
                 {/* Render modal for the sponsor */}
@@ -184,7 +167,7 @@ export const LogoWithPopup = (props: SponsorListingProps): JSX.Element => {
               </Box>
             ))}
           </SimpleGrid>
-        </LayoutFlex>  
+        </LayoutFlex>
       </>
     );
   }
@@ -211,22 +194,19 @@ export const LogoOnly = (props: SponsorListingProps): JSX.Element => {
               <JssText field={props.fields.Title} />
             </Heading>
           )}
-          <SimpleGrid 
-            columns={{ base: 1, md: 3, lg: 6, xl: 6, '2xl': 6 }}
-            spacing={20}
-            w="full"
-            >
-            {props.fields.Sponsors.map((sponsor) => (  
-              <Box 
-                display= 'flex'
-                justifyContent='center'
-                alignItems='center'
-              >
-                <JssImage field={sponsor.fields.SponsorLogo} as={Image} maxHeight={70} width={'auto'} />
+          <SimpleGrid columns={{ base: 1, md: 3, lg: 6, xl: 6, '2xl': 6 }} spacing={20} w="full">
+            {props.fields.Sponsors.map((sponsor, index) => (
+              <Box key={index} display="flex" justifyContent="center" alignItems="center">
+                <JssImage
+                  field={sponsor.fields.SponsorLogo}
+                  as={Image}
+                  maxHeight={70}
+                  width={'auto'}
+                />
               </Box>
             ))}
           </SimpleGrid>
-        </LayoutFlex>  
+        </LayoutFlex>
       </>
     );
   }
