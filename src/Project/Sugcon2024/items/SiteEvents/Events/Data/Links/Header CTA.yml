@@ -1,0 +1,35 @@
+﻿---
+ID: "b96e318f-f0de-4f37-b04b-62b8d2aaeeb1"
+Parent: "6104edf6-bbc7-4d04-87c2-fdf9c2e734fe"
+Template: "5cc6967e-43d7-4e02-96b9-6357acd406f2"
+Path: /sitecore/content/Sugcon2024/Events/Data/Links/Header CTA
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240412T172537Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\cdJph8P5Hr
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\cdJph8P5Hr
+    - ID: "88fe928d-5136-45fd-8889-9ea13398a015"
+      Hint: Link
+      Value: |
+        <link text="Share Feedback" linktype="external" url="http://forms.office.com/e/8YWMx49Nyn" anchor="" title="Share Feedback" target="_blank" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fd8385b3-a153-41e5-8a3b-d3332a805665"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240419T133000Z

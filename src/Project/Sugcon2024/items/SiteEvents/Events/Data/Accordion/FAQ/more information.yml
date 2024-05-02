@@ -1,0 +1,38 @@
+﻿---
+ID: "b14a941b-b468-4e21-80bd-2e8e7e5cc957"
+Parent: "21ff2065-d9d2-4dcf-9d2d-3f9a4ae6cddf"
+Template: "9813d24f-4506-43ed-b5c9-4f8033fca9e2"
+Path: /sitecore/content/Sugcon2024/Events/Data/Accordion/FAQ/more information
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "077242f3-20e7-4fec-9309-9337edd815f5"
+      Hint: Title
+      Value: Who do I contact if I have more information about SUGCON.
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240320T110423Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "84fb358f-7ede-4af3-b599-01fcc348fc27"
+    - ID: "a9b746ad-dbed-41c5-8db8-715c2106999f"
+      Hint: Text
+      Value: |
+        <p><span style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">Please reach out to the SUGCON organizing committee at </span><a href="mailto:community@sitecore.com" rel="noopener noreferrer">community</a><a href="mailto:community@sitecore.com" rel="noopener noreferrer">@</a><a href="mailto:community@sitecore.com" rel="noopener noreferrer">sitecore</a><a href="mailto:community@sitecore.com" rel="noopener noreferrer">.com</a></p>
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240404T211856Z

@@ -282,6 +282,51 @@
         ]
       },
       {
+        "name": "SiteEvents",
+        "path": "/sitecore/content/Sugcon2024/Events",
+        "rules": [
+          {
+            "path": "/home",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Media",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Data",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Dictionary",
+            "scope": "itemAndChildren",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Presentation",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createAndUpdate"
+          },
+          {
+            "path": "/Settings/Site Grouping",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Settings",
+            "scope": "itemAndChildren",
+            "allowedPushOperations": "createAndUpdate"
+          },
+          {
+            "path": "*",
+            "scope": "ignored"
+          }
+        ]
+      },
+      {
         "name": "APIKey",
         "path": "/sitecore/System/Settings/Services/API Keys/sugcon2024",
         "allowedPushOperations": "createUpdateAndDelete",

@@ -1,0 +1,37 @@
+﻿---
+ID: "929ae225-b81f-4086-99e9-b1715197d613"
+Parent: "21ff2065-d9d2-4dcf-9d2d-3f9a4ae6cddf"
+Template: "9813d24f-4506-43ed-b5c9-4f8033fca9e2"
+Path: /sitecore/content/Sugcon2024/Events/Data/Accordion/FAQ/stay updated
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "077242f3-20e7-4fec-9309-9337edd815f5"
+      Hint: Title
+      Value: "How can I stay updated on news and announcements about SUGCON?"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240320T110423Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "49fcc552-b941-454d-b487-87927b9f4af3"
+    - ID: "a9b746ad-dbed-41c5-8db8-715c2106999f"
+      Hint: Text
+      Value: "<p>To stay updated on the latest news, announcements, and updates about SUGCON, be sure to follow us on social media platforms: @SUGCONF on Twitter and @SUGCON on LinkedIn. You can also stay informed by regularly checking the official website for updates.</p>"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\a.vershalovich@brimit.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240404T211329Z
