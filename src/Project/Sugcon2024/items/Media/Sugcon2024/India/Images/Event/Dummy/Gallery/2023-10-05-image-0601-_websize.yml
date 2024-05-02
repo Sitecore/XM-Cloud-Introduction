@@ -63,13 +63,16 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\sebastian.winter@sitecore.com
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: audience in conference hall
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "bc402351-755b-49b7-96f9-21ef532ba19b"
+      Value: "5547fdd6-68b5-44c5-b8df-d90915a122d3"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240223T123156Z
+      Value: 20240425T130426Z

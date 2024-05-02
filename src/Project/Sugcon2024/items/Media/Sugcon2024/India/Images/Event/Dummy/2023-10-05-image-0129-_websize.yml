@@ -63,13 +63,16 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\sebastian.winter@sitecore.com
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: Presenter on stage in front of audience
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "933f8133-e669-485f-a28b-b4c863a22ff7"
+      Value: "0bfdd0c8-0e6f-46df-918b-a9d4990ac364"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240223T123049Z
+      Value: 20240425T130220Z
