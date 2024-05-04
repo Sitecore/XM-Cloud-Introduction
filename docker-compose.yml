@@ -55,7 +55,7 @@ services:
         condition: service_healthy
   solr:
     isolation: ${ISOLATION}
-    image: ${SITECORE_NONPRODUCTION_DOCKER_REGISTRY}nonproduction/solr:8.8.2-${EXTERNAL_IMAGE_TAG_SUFFIX}
+    image: ${SITECORE_NONPRODUCTION_DOCKER_REGISTRY}nonproduction/solr:8.11.2-${EXTERNAL_IMAGE_TAG_SUFFIX}
     ports:
       - "8984:8983"
     volumes:
