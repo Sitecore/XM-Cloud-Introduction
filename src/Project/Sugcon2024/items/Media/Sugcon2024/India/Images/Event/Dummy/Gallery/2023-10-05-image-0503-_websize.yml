@@ -63,13 +63,16 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\sebastian.winter@sitecore.com
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: people at a booth at the confernece
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f6b06620-7dc4-4832-bc16-ad7354f10c55"
+      Value: "aa981312-70a8-4917-93c6-0b6955045d68"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240223T123154Z
+      Value: 20240425T130412Z

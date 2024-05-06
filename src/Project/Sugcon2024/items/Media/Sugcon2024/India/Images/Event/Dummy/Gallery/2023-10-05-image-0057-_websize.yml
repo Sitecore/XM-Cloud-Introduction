@@ -63,13 +63,16 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\sebastian.winter@sitecore.com
+    - ID: "65885c44-8fcd-4a7f-94f1-ee63703fe193"
+      Hint: Alt
+      Value: people interacting at SUGCON conference
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "7dc85723-ba28-4a44-9249-8fd4d38d39e9"
+      Value: "f15d8754-12d8-479c-854b-93f8fdd924a3"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\sebastian.winter@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240223T123150Z
+      Value: 20240425T130304Z

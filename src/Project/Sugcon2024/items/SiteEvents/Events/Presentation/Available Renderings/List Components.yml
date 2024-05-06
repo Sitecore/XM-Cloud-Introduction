@@ -1,0 +1,40 @@
+﻿---
+ID: "f985a089-9867-4398-b356-041e428966f5"
+Parent: "e624446d-968f-4380-a436-1d2f1b6554fb"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: /sitecore/content/Sugcon2024/Events/Presentation/Available Renderings/List Components
+SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Value: |
+    {66DF59E9-F066-42F2-8F67-3E3F50B6E585}
+    {3F73A97B-BFA5-4F66-B99C-D27A7A36832B}
+    {E25BC007-09D8-4521-B74B-BCD93F9C8991}
+    {53331DB4-9E80-4727-B7A6-2617BEA59142}
+    {4D019254-304D-497C-81C1-F2106903B570}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240329T014420Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\cdJph8P5Hr
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\cdJph8P5Hr
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fd4b5e4e-6572-4ef7-818a-eeb2571265e0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240502T074116Z
