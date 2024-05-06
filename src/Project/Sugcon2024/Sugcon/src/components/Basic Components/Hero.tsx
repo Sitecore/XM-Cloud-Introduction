@@ -91,52 +91,57 @@ export const HeroHomepage = (props: HeroProps): JSX.Element => {
 
 export const HeroEvent = (props: HeroProps): JSX.Element => {
   return (
-    <Flex
-      direction={{ base: 'row', md: 'row' }}
-      alignItems="center"
+    <>
+    <Flex 
+      flexDir={{ base: 'column', md: 'row' }} 
+      width="100%" 
+      paddingRight="0px" 
+      paddingLeft="0px"
       bg="black"
       color="white"
-      maxHeight={{ base: 'auto', md: '400px' }}
-      m="auto"
-      maxW="1240px"
-      pt={10}
-    >
-      <Flex
-        direction="column"
+      >
+      <Box
         ml="auto"
         maxW={{ base: '100%', md: `calc((${Template.MaxWidth}) / 2)` }}
         px={{ base: PaddingX.Mobile, md: PaddingX.Desktop }}
         py={{ base: '30px', md: '60px' }}
       >
-        <Box width="auto" alignSelf="end">
-          <Heading as="h1" fontSize="3xl" fontWeight="bold" mb="33px">
-            <JssText field={props.fields.Headline} />
-          </Heading>
+        <Heading as="h1" fontSize="3xl" fontWeight="bold" mb="33px">
+          <JssText field={props.fields.Headline} />
+        </Heading>
 
-          {isSitecoreTextFieldPopulated(props.fields.Text) && (
-            <Text fontSize="18px">
-              <JssText field={props.fields.Text} />
-            </Text>
-          )}
-        </Box>
-      </Flex>
-      <Box
-        minWidth={{ base: '100%', md: '50%' }}
-        maxHeight="400px"
-        h="100%"
-        maxWidth="620px"
-        overflow="hidden"
-      >
-        <Image
-          src={props.fields.Image?.value?.src}
-          //alt={props.fields.Image?.value?.alt}
-          width="full"
-          height="100%"
-          maxHeight="400px"
-          objectFit="cover"
-        />
+        {isSitecoreTextFieldPopulated(props.fields.EventDate) && (
+          <Text fontSize="18px" mb={6}>
+            <JssText field={props.fields.EventDate} />
+          </Text>
+        )}
+
+        {isSitecoreTextFieldPopulated(props.fields.Text) && (
+          <Text mb={6} fontSize="18px">
+            <JssText field={props.fields.Text} />
+          </Text>
+        )}
+
+        {isSitecoreLinkFieldPopulated(props.fields.CallToAction) && (
+          <Box width="auto" alignSelf="start">
+            <ButtonLink field={props.fields.CallToAction} />
+          </Box>
+        )}
       </Box>
+      <Flex flexGrow={{ md: 'grow' }} maxW={{ base: '100%', md: '50%' }}>
+        <Image
+          alt="Event Image"
+          w="full"
+          h="auto"
+          objectFit="cover"
+          objectPosition="center"
+          aspectRatio="1440/500"
+          src={props.fields.Image?.value?.src}
+          minH="220px"
+        />
+      </Flex>
     </Flex>
+    </>
   );
 };
 
