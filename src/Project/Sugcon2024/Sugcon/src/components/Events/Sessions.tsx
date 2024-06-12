@@ -1,15 +1,15 @@
 import React from 'react';
-import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import useSWR from 'swr';
 import clsx from 'clsx';
 import { Flex } from '@chakra-ui/react';
+import { ComponentProps } from 'lib/component-props';
 
 interface Fields {
   SessionizeUrl: Field<string>;
 }
 
-type SessionsProps = {
-  params: { [key: string]: string };
+type SessionsProps = ComponentProps & {
   fields: Fields;
 };
 
@@ -21,7 +21,7 @@ const SessionsDefaultComponent = (props: SessionsProps): JSX.Element => (
   </div>
 );
 
-export const Default = (props: SessionsProps): JSX.Element => {
+const SessionsComponent = (props: SessionsProps): JSX.Element => {
   const id = props.params.RenderingIdentifier || undefined;
 
   const fetcher = (url: string) => fetch(url).then((res) => res.text());
@@ -54,3 +54,5 @@ export const Default = (props: SessionsProps): JSX.Element => {
     </Flex>
   );
 };
+
+export const Default = withDatasourceCheck()<SessionsProps>(SessionsComponent);
