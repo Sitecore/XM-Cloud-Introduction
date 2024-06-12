@@ -4,6 +4,7 @@ import {
   Text as JssText,
   RichTextField,
   RichText as JssRichText,
+  withDatasourceCheck,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import {
   Accordion,
@@ -16,6 +17,7 @@ import {
 } from '@chakra-ui/react';
 import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 import { LayoutFlex } from 'components/Templates/LayoutFlex';
+import { ComponentProps } from 'lib/component-props';
 
 interface AccordionElement {
   fields: {
@@ -35,12 +37,11 @@ interface Fields {
   Elements: Array<AccordionElement>;
 }
 
-interface AccordionProps {
-  params: { [key: string]: string };
+type AccordionProps = ComponentProps & {
   fields: Fields;
-}
+};
 
-export const Default = (props: AccordionProps): JSX.Element => {
+const AccordionComponent = (props: AccordionProps): JSX.Element => {
   return (
     <LayoutFlex direction="column">
       {(isEditorActive() || props.fields?.Headline?.value !== '') && (
@@ -71,3 +72,5 @@ export const Default = (props: AccordionProps): JSX.Element => {
     </LayoutFlex>
   );
 };
+
+export const Default = withDatasourceCheck()<AccordionProps>(AccordionComponent);
