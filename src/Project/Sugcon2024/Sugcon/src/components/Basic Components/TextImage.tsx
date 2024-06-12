@@ -7,8 +7,10 @@ import {
   RichText as JssRichText,
   ImageField,
   Image as JssImage,
+  withDatasourceCheck,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { LayoutFlex } from 'components/Templates/LayoutFlex';
+import { ComponentProps } from 'lib/component-props';
 
 // Define the type of props that TextImage will accept
 interface Fields {
@@ -22,12 +24,11 @@ interface Fields {
   Image: ImageField;
 }
 
-export type TextImageProps = {
-  params: { [key: string]: string };
+export type TextImageProps = ComponentProps & {
   fields: Fields;
 };
 
-export const Default = (props: TextImageProps): JSX.Element => {
+const TextImageComponent = (props: TextImageProps): JSX.Element => {
   return (
     <LayoutFlex flexWrap="wrap">
       <Container minW={{ base: '100%', lg: '50%' }} flex="1" pr={{ base: '0', lg: '120' }} pl="0">
@@ -54,3 +55,5 @@ export const Default = (props: TextImageProps): JSX.Element => {
     </LayoutFlex>
   );
 };
+
+export const Default = withDatasourceCheck()<TextImageProps>(TextImageComponent);

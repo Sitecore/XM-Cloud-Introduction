@@ -5,7 +5,9 @@ import {
   Text as JssText,
   RichTextField,
   RichText as JssRichText,
+  withDatasourceCheck,
 } from '@sitecore-jss/sitecore-jss-nextjs';
+import { ComponentProps } from 'lib/component-props';
 
 // Define the type of props that ErrorMessage will accept
 interface Fields {
@@ -19,12 +21,11 @@ interface Fields {
   StatusCode: TextField;
 }
 
-export type ErrorMessageProps = {
-  params: { [key: string]: string };
+export type ErrorMessageProps = ComponentProps & {
   fields: Fields;
 };
 
-export const Default = (props: ErrorMessageProps): JSX.Element => {
+const ErrorMessageComponent = (props: ErrorMessageProps): JSX.Element => {
   return (
     <Flex
       direction={{ base: 'column', md: 'row' }}
@@ -56,3 +57,5 @@ export const Default = (props: ErrorMessageProps): JSX.Element => {
     </Flex>
   );
 };
+
+export const Default = withDatasourceCheck()<ErrorMessageProps>(ErrorMessageComponent);
