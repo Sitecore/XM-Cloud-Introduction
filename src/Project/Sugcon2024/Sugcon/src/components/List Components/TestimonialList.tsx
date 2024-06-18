@@ -1,9 +1,7 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
-// import { Text as JssText } from '@sitecore-jss/sitecore-jss-nextjs';
-import { Person } from './PeopleGrid';
+import { Box, Flex, Text, Image, Heading } from '@chakra-ui/react';
 import clsx from 'clsx';
-// import { LayoutFlex } from 'components/Templates/LayoutFlex';
+import { LayoutFlex } from 'components/Templates/LayoutFlex';
 
 // Define the type of props that Testimonial List will accept
 interface Fields {
@@ -11,14 +9,24 @@ interface Fields {
   Testimonials: Array<Testimonial>;
 }
 
-// Define the type of props for an Person
+// Define the type of props for a Person
 interface Testimonial {
   displayName: string;
 
   fields: {
-    Person: Person;
     Testimonial: {
       value: string;
+    };
+    Name: {
+      value: string;
+    };
+    Role: {
+      value: string;
+    };
+    Image: {
+      value: {
+        src: string;
+      };
     };
   };
 
@@ -38,36 +46,50 @@ export type TestimonialListProps = {
 };
 
 export const Default = (props: TestimonialListProps): JSX.Element => {
-  // const cols = props.params && props.params.Columns ? parseInt(props.params.Columns) : 4;
-
-  console.log(props);
-
   return (
-    <Box w="100%" mt={20} className={clsx('testimonial-list-container', props?.params?.Styles)}>
-      {props.fields.Testimonials.map((testimonial) => (
-        <Box
-          key={testimonial.id}
-          p={6}
-          bg="white"
-          boxShadow="md"
-          borderRadius="md"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-        >
-          <img
-            src={testimonial.fields.Person.fields.Image.value?.src}
-            alt=""
-            width={80}
-            height={80}
-          />
-          <p>{testimonial.fields.Testimonial.value}</p>
-          <Box mt={2} textAlign="center">
-            <p>{testimonial.fields.Person.fields.Name.value}</p>
-            <p>{testimonial.fields.Person.fields.JobRole.value}</p>
+    <LayoutFlex
+      direction="column"
+      className={clsx('testimonial-list-container', props?.params?.Styles)}
+    >
+      <Heading as="h2" size="lg" mb={8}>
+        What people say
+      </Heading>
+      <Flex direction={['column', 'column', 'row']} wrap="wrap" justify="space-between" gap={6}>
+        {props.fields.Testimonials.map((testimonial) => (
+          <Box
+            key={testimonial.id}
+            p={6}
+            bg="#F2F2F2"
+            borderRadius="20px"
+            display="flex"
+            flexDirection="column"
+            alignItems="flex-start"
+            maxW="sm"
+            mx="auto"
+          >
+            <Flex alignItems="center" mb={4}>
+              <Image
+                src={testimonial.fields.Image.value?.src}
+                alt={testimonial.fields.Name.value}
+                borderRadius="full"
+                boxSize="75px"
+                mr={4}
+              />
+              <Flex direction="column" alignContent="center">
+                <Text fontWeight="bold" fontSize="lg" mb={0}>
+                  {testimonial.fields.Name.value},
+                </Text>
+                <Text fontWeight="bold" fontSize="lg" mb={0}>
+                  {testimonial.fields.Role.value}
+                </Text>
+              </Flex>
+            </Flex>
+            <Text fontSize="lg" color="#4D4D4D" mt={2}>
+              “{testimonial.fields.Testimonial.value}”
+            </Text>
           </Box>
-        </Box>
-      ))}
-    </Box>
+        ))}
+      </Flex>
+    </LayoutFlex>
   );
 };
