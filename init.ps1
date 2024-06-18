@@ -41,12 +41,6 @@ Param (
     [string]$SUCGON_NA_CDP_TARGET_URL,
     [Parameter(HelpMessage = "SUGCON NA CPD Point of Sale.")]
     [string]$SUCGON_NA_CDP_POINTOFSALE,
-    [Parameter(HelpMessage = "SUGCON2024 EU CPD Client Key.")]
-    [string]$SUCGON2024_EU_CDP_CLIENT_KEY,
-    [Parameter(HelpMessage = "SUGCON2024 EU CPD Target URL.")]
-    [string]$SUCGON2024_EU_CDP_TARGET_URL,
-    [Parameter(HelpMessage = "SUGCON2024 EU CPD Point of Sale.")]
-    [string]$SUCGON2024_EU_CDP_POINTOFSALE,
     [Parameter(HelpMessage = "Switch to setup the heads to run against edge without docker.")]
     [switch]$Edge_NoDocker
 )
@@ -82,22 +76,6 @@ Write-SitecoreDockerWelcome
 ##################
 Write-Host "Creating .env file." -ForegroundColor Green
 Copy-Item ".\.env.template" ".\.env" -Force
-
-###############################
-# Generate scjssconfig
-###############################
-$xmCloudBuild = Get-Content "xmcloud.build.json" | ConvertFrom-Json
-$scjssconfig = @{
-    sitecore= @{
-        deploySecret = $xmCloudBuild.renderingHosts.'sugconanz'.jssDeploymentSecret
-        deployUrl = "https://xmcloudcm.localhost/sitecore/api/jss/import"
-      }
-    }
-
-ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconAnzSxa\scjssconfig.json"
-ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconEuSxa\scjssconfig.json"
-ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconIndiaSxa\scjssconfig.json"
-ConvertTo-Json -InputObject $scjssconfig | Out-File -FilePath "src\project\Sugcon\SugconNaSxa\scjssconfig.json"
 
 ################################
 # Generate JSS_EDITING_SECRET
@@ -135,9 +113,6 @@ if ($InitEnv) {
     Set-EnvFileVariable "SUCGON_NA_CDP_CLIENT_KEY" -Value $SUCGON_NA_CDP_CLIENT_KEY
     Set-EnvFileVariable "SUCGON_NA_CDP_TARGET_URL" -Value $SUCGON_NA_CDP_TARGET_URL
     Set-EnvFileVariable "SUCGON_NA_CDP_POINTOFSALE" -Value $SUCGON_NA_CDP_POINTOFSALE
-    Set-EnvFileVariable "SUCGON2024_EU_CDP_CLIENT_KEY" -Value $SUCGON2024_EU_CDP_CLIENT_KEY
-    Set-EnvFileVariable "SUCGON2024_EU_CDP_TARGET_URL" -Value $SUCGON2024_EU_CDP_TARGET_URL
-    Set-EnvFileVariable "SUCGON2024_EU_CDP_POINTOFSALE" -Value $SUCGON2024_EU_CDP_POINTOFSALE
 }
 Write-Host "Finished populating .env file." -ForegroundColor Green
 
@@ -189,10 +164,7 @@ FETCH_WITH="GraphQL"
 "@ -f $envVars.EXPERIENCE_EDGE_URL, $envVars.EXPERIENCE_EDGE_TOKEN, $envVars.GRAPH_QL_ENDPOINT
 
     Write-Host "Writing .env files for SUGCON Heads"
-    $sugconEnvContents | Out-File "src/Project/Sugcon/SugconAnzSxa/.env"
-    $sugconEnvContents | Out-File "src/Project/Sugcon/SugconEuSxa/.env"
-    $sugconEnvContents | Out-File "src/Project/Sugcon/SugconIndiaSxa/.env"
-    $sugconEnvContents | Out-File "src/Project/Sugcon/SugconNaSxa/.env"
+    $sugconEnvContents | Out-File "src/Project/Sugcon2024/Sugcon/.env"
 
     Write-Host
     Write-Host ("#"*75) -ForegroundColor Cyan
@@ -204,10 +176,7 @@ FETCH_WITH="GraphQL"
 else {
     Write-Host "Cleaning any files used to run Edge Mode without Docker" -ForegroundColor Green
     git restore 'src/Project/MvpSite/rendering/appsettings.Development.json'
-    if(Test-Path './src/Project/Sugcon/SugconAnzSxa/.env') { Remove-Item -Path './src/Project/Sugcon/SugconAnzSxa/.env' -Force }
-    if(Test-Path './src/Project/Sugcon/SugconEuSxa/.env') { Remove-Item -Path './src/Project/Sugcon/SugconEuSxa/.env' -Force }
-    if(Test-Path './src/Project/Sugcon/SugconIndiaSxa/.env') { Remove-Item -Path './src/Project/Sugcon/SugconIndiaSxa/.env' -Force }
-    if(Test-Path './src/Project/Sugcon/SugconNaSxa/.env') { Remove-Item -Path './src/Project/Sugcon/SugconNaSxa/.env' -Force }
+    if(Test-Path './src/Project/Sugcon2024/Sugcon/.env') { Remove-Item -Path './src/Project/Sugcon2024/Sugcon/.env' -Force }
 }
 
 ###############
@@ -235,7 +204,6 @@ $SUGCON_EU_HOST = "sugconeu.$Host_Suffix"
 $SUGCON_ANZ_HOST = "sugconanz.$Host_Suffix"
 $SUGCON_INDIA_HOST = "sugconindia.$Host_Suffix"
 $SUGCON_NA_HOST = "sugconna.$Host_Suffix"
-$SUGCON2024_EU_HOST = "sugconeu2024.$Host_Suffix"
 
 ##################################
 # Configure TLS/HTTPS certificates
@@ -279,7 +247,6 @@ Add-HostsEntry $SUGCON_EU_HOST
 Add-HostsEntry $SUGCON_ANZ_HOST
 Add-HostsEntry $SUGCON_INDIA_HOST
 Add-HostsEntry $SUGCON_NA_HOST
-Add-HostsEntry $SUGCON2024_EU_HOST
 
 ##########################
 # Show Certificate Details

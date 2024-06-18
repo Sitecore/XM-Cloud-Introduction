@@ -13,7 +13,7 @@ SharedFields:
   Value: /sitecore/media library/Project/Sugcon2024/EU
 - ID: "8e0dd914-9afb-4d45-bf8b-7ff5d6e5337e"
   Hint: HostName
-  Value: "sugcon24eu.vercel.app|sugcon24.vercel.app|sugcon24-*-sitecoretechnicalmarketing.vercel.app|eu.sugcon.events|europe.sugcon.events"
+  Value: "sugcon24eu.vercel.app|sugcon24.vercel.app|sugcon24-*-sitecoretechnicalmarketing.vercel.app|eu.sugcon.events|europe.sugcon.events|sugconeu.xmcloudcm.localhost"
 - ID: "9eaf6dc9-b811-4cda-9edd-9697faba628a"
   Hint: POS
   Value: en=Sugcon2024EU
@@ -53,11 +53,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "a022bf0a-1a22-44f5-8d23-c0ad12e893a0"
+      Value: "8dea60cc-62e8-49cc-a023-4ed5b944dcba"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\1ISa5gYrpM
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240423T130540Z
+      Value: 20240618T005513Z
