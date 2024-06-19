@@ -7,31 +7,7 @@ services:
       Sitecore__LayoutServicePath: "/api/graphql/v1"
       Sitecore__ExperienceEdgeToken: ${EXPERIENCE_EDGE_TOKEN}
 
-  sugconeu:
-    environment:
-      SITECORE_API_HOST: ${EXPERIENCE_EDGE_URL}
-      SITECORE_API_KEY: ${EXPERIENCE_EDGE_TOKEN}
-      GRAPH_QL_ENDPOINT: ${GRAPH_QL_ENDPOINT}
-
-  sugconanz:
-    environment:
-      SITECORE_API_HOST: ${EXPERIENCE_EDGE_URL}
-      SITECORE_API_KEY: ${EXPERIENCE_EDGE_TOKEN}
-      GRAPH_QL_ENDPOINT: ${GRAPH_QL_ENDPOINT}
-
-  sugconindia:
-    environment:
-      SITECORE_API_HOST: ${EXPERIENCE_EDGE_URL}
-      SITECORE_API_KEY: ${EXPERIENCE_EDGE_TOKEN}
-      GRAPH_QL_ENDPOINT: ${GRAPH_QL_ENDPOINT}
-
-  sugconna:
-    environment:
-      SITECORE_API_HOST: ${EXPERIENCE_EDGE_URL}
-      SITECORE_API_KEY: ${EXPERIENCE_EDGE_TOKEN}
-      GRAPH_QL_ENDPOINT: ${GRAPH_QL_ENDPOINT}
-
-  sugcon2024eu:
+  sugcon2024:
     environment:
       SITECORE_API_HOST: ${EXPERIENCE_EDGE_URL}
       SITECORE_API_KEY: ${EXPERIENCE_EDGE_TOKEN}
