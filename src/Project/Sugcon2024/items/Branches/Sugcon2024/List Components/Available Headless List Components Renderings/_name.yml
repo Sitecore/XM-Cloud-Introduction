@@ -6,7 +6,9 @@ Path: /sitecore/templates/Branches/Project/Sugcon2024/List Components/Available 
 SharedFields:
 - ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
   Hint: Renderings
-  Value: "{53331DB4-9E80-4727-B7A6-2617BEA59142}"
+  Value: |
+    {53331DB4-9E80-4727-B7A6-2617BEA59142}
+    {B1BA2D1B-00EC-4A50-B317-45021D92F192}
 Languages:
 - Language: en
   Versions:
@@ -21,11 +23,11 @@ Languages:
         sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6d01552e-a731-4168-9675-8c0f7c0e5419"
+      Value: "7a92c2f3-a17e-4423-bd64-585915060941"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\UOUBIWQRx7
+        sitecore\B8tFS9iKgv
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240213T195425Z
+      Value: 20240514T014533Z

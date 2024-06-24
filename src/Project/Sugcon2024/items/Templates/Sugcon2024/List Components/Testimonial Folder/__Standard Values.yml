@@ -1,0 +1,37 @@
+﻿---
+ID: "1ee92fb2-ac0e-4c72-8c32-8a328663621e"
+Parent: "8dba1d0e-00bf-4bfc-8b6c-1d54c9b26469"
+Template: "8dba1d0e-00bf-4bfc-8b6c-1d54c9b26469"
+Path: /sitecore/templates/Project/Sugcon2024/List Components/Testimonial Folder/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {8DBA1D0E-00BF-4BFC-8B6C-1D54C9B26469}
+    {F502DE24-D44E-426C-8382-7F9D4D7218EA}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240312T171527Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a4922faf-b915-4204-8073-c9feaa14ae1c"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\B8tFS9iKgv
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240514T020418Z
