@@ -54,7 +54,12 @@ export const Default = (props: TestimonialListProps): JSX.Element => {
       <Heading as="h2" size="lg" mb={8}>
         What people say
       </Heading>
-      <Flex direction={['column', 'column', 'row']} wrap="wrap" justify="space-between" gap={6}>
+      <Flex
+        direction={['column', 'column', 'row']}
+        wrap="wrap"
+        justifyContent="space-between"
+        gap={6}
+      >
         {props.fields.Testimonials.map((testimonial) => (
           <Box
             key={testimonial.id}
@@ -65,7 +70,6 @@ export const Default = (props: TestimonialListProps): JSX.Element => {
             flexDirection="column"
             alignItems="flex-start"
             maxW="sm"
-            mx="auto"
           >
             <Flex alignItems="center" mb={4}>
               <Image
