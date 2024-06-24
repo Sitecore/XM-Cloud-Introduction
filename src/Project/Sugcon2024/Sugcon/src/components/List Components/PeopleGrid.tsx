@@ -15,7 +15,7 @@ interface Fields {
 }
 
 // Define the type of props for an Person
-interface Person {
+export interface Person {
   /** Display name of the person item */
   displayName: string;
 
