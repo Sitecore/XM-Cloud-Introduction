@@ -42,12 +42,13 @@ jobs:
       XM_CLOUD_CLIENT_SECRET: ${{ secrets.XM_CLOUD_CLIENT_SECRET }}
       XM_CLOUD_ENVIRONMENT_ID: ${{ secrets.STAGING_XM_CLOUD_ENVIRONMENT_ID }}
 
-  deploy-prod:
+  promote-to-prod:
     if: github.ref == 'refs/heads/main'
     needs: deploy-staging 
-    uses: ./.github/workflows/deploy_xmCloud.yml
+    uses: ./.github/workflows/promote_xmCloud.yml
     with:
       environmentName: Production
+      deploymentId: ${{ needs.deploy-staging.outputs.completedDeploymentId }}
     secrets:
       XM_CLOUD_CLIENT_ID: ${{ secrets.XM_CLOUD_CLIENT_ID }}
       XM_CLOUD_CLIENT_SECRET: ${{ secrets.XM_CLOUD_CLIENT_SECRET }}
