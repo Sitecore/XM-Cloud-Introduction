@@ -5,38 +5,9 @@
   "buildTargets": 
   [
     "./src/Environment/platform/Mvp.Environment.Platform.csproj",
-    "./src/Project/MvpSite/platform/Mvp.Project.MvpSite.Platform.csproj",
-    "./src/Project/Sugcon/platform/Project.Sugcon.Platform.csproj"
+    "./src/Project/MvpSite/platform/Mvp.Project.MvpSite.Platform.csproj"
   ],
   "renderingHosts": {
-    "sugconanz": {
-      "path": "./src/Project/Sugcon/SugconAnzSxa",
-      "nodeVersion": "20.10.0",
-      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-      "enabled": true,
-      "type": "sxa"
-    },
-    "sugconeu": {
-      "path": "./src/Project/Sugcon/SugconEuSxa",
-      "nodeVersion": "20.10.0",
-      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-      "enabled": true,
-      "type": "sxa"
-    },
-    "sugconindia": {
-      "path": "./src/Project/Sugcon/SugconIndiaSxa",
-      "nodeVersion": "20.10.0",
-      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-      "enabled": true,
-      "type": "sxa"
-    },
-    "sugconna": {
-      "path": "./src/Project/Sugcon/SugconNaSxa",
-      "nodeVersion": "20.10.0",
-      "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
-      "enabled": true,
-      "type": "sxa"
-    },
     "sugcon2024eu": {
       "path": "./src/Project/Sugcon2024/Sugcon",
       "nodeVersion": "20.10.0",

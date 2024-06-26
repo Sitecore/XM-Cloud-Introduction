@@ -16,7 +16,7 @@ SharedFields:
   Value: India
 - ID: "8e0dd914-9afb-4d45-bf8b-7ff5d6e5337e"
   Hint: HostName
-  Value: sugcon24india.vercel.app|india.sugcon.events
+  Value: sugcon24india.vercel.app|india.sugcon.events|sugconindia.xmcloudcm.localhost
 - ID: "9eaf6dc9-b811-4cda-9edd-9697faba628a"
   Hint: POS
   Value: 
@@ -56,11 +56,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b70c335e-7dd9-4299-8e82-cc4fd90379a1"
+      Value: "e6f431d5-5080-40fa-ab84-c5a241bba5c1"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\1ISa5gYrpM
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240423T124815Z
+      Value: 20240618T005424Z
