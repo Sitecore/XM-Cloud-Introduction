@@ -40,6 +40,7 @@ jobs:
         echo $result
         isTimedOut=$(echo $result | jq ' .IsTimedOut')
         isCompleted=$(echo $result | jq ' .IsCompleted')
+        deploymentId=$(echo $result | jq ' .DeploymentId')
         if [ $isTimedOut = true ]
         then
             echo "Operation Timed Out."
@@ -50,5 +51,5 @@ jobs:
             echo "Operation Failed."
             exit -1
         fi
-        echo "Deployment Completed"
+        echo "Deployment $deploymentId Completed"
         echo "completedDeploymentId=$deploymentId" >> "$GITHUB_OUTPUT"
