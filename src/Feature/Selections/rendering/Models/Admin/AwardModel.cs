@@ -40,9 +40,9 @@ namespace Mvp.Feature.Selections.Models.Admin
 
         public Application Application { get; set; }
 
-        public List<ApplicationComment> Comments { get; set; } = new ();
+        public List<ApplicationComment> Comments { get; set; } = [];
 
-        public List<MvpType> MvpTypes { get; set; } = new ();
+        public List<MvpType> MvpTypes { get; set; } = [];
 
         public short MvpTypeId { get; set; }
 

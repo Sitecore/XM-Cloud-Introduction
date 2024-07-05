@@ -35,7 +35,7 @@ namespace Mvp.Feature.Selections.Models.Admin
 
         public TextField AddReviewerUserEmailLabel { get; set; }
 
-        public List<string> AddReviewerUserEmails { get; set; } = new ();
+        public List<string> AddReviewerUserEmails { get; set; } = [];
 
         public Guid? RemoveReviewerUserId { get; set; }
 
@@ -45,6 +45,6 @@ namespace Mvp.Feature.Selections.Models.Admin
 
         public Application Application { get; set; }
 
-        public List<User> Reviewers { get; set; } = new ();
+        public List<User> Reviewers { get; set; } = [];
     }
 }

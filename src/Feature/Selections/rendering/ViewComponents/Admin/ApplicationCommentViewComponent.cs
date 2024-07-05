@@ -39,7 +39,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             Response<User> getUserResponse = await Client.GetCurrentUserAsync();
             if (getUserResponse.StatusCode == HttpStatusCode.OK && getUserResponse.Result != null)
             {
-                ApplicationComment newComment = new (Guid.Empty)
+                ApplicationComment newComment = new(Guid.Empty)
                 {
                     Application = new Application(model.ApplicationId),
                     User = getUserResponse.Result,

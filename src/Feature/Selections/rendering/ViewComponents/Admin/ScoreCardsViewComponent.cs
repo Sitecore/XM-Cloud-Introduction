@@ -54,10 +54,10 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         private static void GenerateFakeDataForEdit(ScoreCardsModel model)
         {
-            Random rnd = new ();
-            MvpType loremMvpType = new (1) { Name = "Lorem" };
-            Country dolorCountry = new (1) { Name = "Dolor" };
-            Selection conseceturSelection = new (Guid.NewGuid()) { Year = (short)(DateTime.Now.Year + rnd.Next(10, 20)) };
+            Random rnd = new();
+            MvpType loremMvpType = new(1) { Name = "Lorem" };
+            Country dolorCountry = new(1) { Name = "Dolor" };
+            Selection conseceturSelection = new(Guid.NewGuid()) { Year = (short)(DateTime.Now.Year + rnd.Next(10, 20)) };
 
             model.SelectedSelectionId = conseceturSelection.Id;
             model.SelectedMvpTypeId = 1;

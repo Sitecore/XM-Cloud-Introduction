@@ -12,7 +12,7 @@ namespace Mvp.Feature.Selections.Models
         [FromQuery(Name = "ps")]
         public short PageSize { get; set; } = 50;
 
-        public List<T> List { get; } = new ();
+        public List<T> List { get; } = [];
 
         public BaseFilter Filter { get; set; } = new BaseFilter.None();
     }

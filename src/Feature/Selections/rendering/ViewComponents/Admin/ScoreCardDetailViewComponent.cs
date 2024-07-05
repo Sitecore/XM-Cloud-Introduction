@@ -52,8 +52,8 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         private static void GenerateFakeDataForEdit(ScoreCardDetailModel model)
         {
-            Random rnd = new ();
-            Application application = new (Guid.NewGuid())
+            Random rnd = new();
+            Application application = new(Guid.NewGuid())
             {
                 Applicant = new User(Guid.NewGuid())
                 {
@@ -69,49 +69,49 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 }
             };
 
-            Score goodScore = new (Guid.NewGuid())
+            Score goodScore = new(Guid.NewGuid())
             {
                 Name = "Good",
                 Value = 10
             };
-            Score badScore = new (Guid.NewGuid())
+            Score badScore = new(Guid.NewGuid())
             {
                 Name = "Bad",
                 Value = -10
             };
 
-            ScoreCategory topCategory1 = new (Guid.NewGuid())
+            ScoreCategory topCategory1 = new(Guid.NewGuid())
             {
                 Name = "Pulvinar",
                 Weight = (decimal)rnd.NextDouble()
             };
-            ScoreCategory topCategory2 = new (Guid.NewGuid())
+            ScoreCategory topCategory2 = new(Guid.NewGuid())
             {
                 Name = "Aliquam",
                 Weight = (decimal)rnd.NextDouble()
             };
-            ScoreCategory subCategory1 = new (Guid.NewGuid())
+            ScoreCategory subCategory1 = new(Guid.NewGuid())
             {
                 Name = "Imper",
                 Weight = (decimal)rnd.NextDouble(),
                 ParentCategory = topCategory1,
                 ScoreOptions = new List<Score> { goodScore, badScore }
             };
-            ScoreCategory subCategory2 = new (Guid.NewGuid())
+            ScoreCategory subCategory2 = new(Guid.NewGuid())
             {
                 Name = "Proin",
                 Weight = (decimal)rnd.NextDouble(),
                 ParentCategory = topCategory1,
                 ScoreOptions = new List<Score> { goodScore, badScore }
             };
-            ScoreCategory subCategory3 = new (Guid.NewGuid())
+            ScoreCategory subCategory3 = new(Guid.NewGuid())
             {
                 Name = "Turpis",
                 Weight = (decimal)rnd.NextDouble(),
                 ParentCategory = topCategory1,
                 ScoreOptions = new List<Score> { goodScore, badScore }
             };
-            ScoreCategory subCategory4 = new (Guid.NewGuid())
+            ScoreCategory subCategory4 = new(Guid.NewGuid())
             {
                 Name = "Congue",
                 Weight = (decimal)rnd.NextDouble(),
@@ -145,22 +145,22 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 },
                 CategoryScores = new List<ReviewCategoryScore>
                 {
-                    new ()
+                    new()
                     {
                         ScoreCategoryId = subCategory1.Id,
                         ScoreId = goodScore.Id
                     },
-                    new ()
+                    new()
                     {
                         ScoreCategoryId = subCategory2.Id,
                         ScoreId = goodScore.Id
                     },
-                    new ()
+                    new()
                     {
                         ScoreCategoryId = subCategory3.Id,
                         ScoreId = goodScore.Id
                     },
-                    new ()
+                    new()
                     {
                         ScoreCategoryId = subCategory4.Id,
                         ScoreId = badScore.Id
@@ -177,22 +177,22 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 },
                 CategoryScores = new List<ReviewCategoryScore>
                 {
-                    new ()
+                    new()
                     {
                         ScoreCategoryId = subCategory1.Id,
                         ScoreId = goodScore.Id
                     },
-                    new ()
+                    new()
                     {
                         ScoreCategoryId = subCategory2.Id,
                         ScoreId = badScore.Id
                     },
-                    new ()
+                    new()
                     {
                         ScoreCategoryId = subCategory3.Id,
                         ScoreId = badScore.Id
                     },
-                    new ()
+                    new()
                     {
                         ScoreCategoryId = subCategory4.Id,
                         ScoreId = badScore.Id

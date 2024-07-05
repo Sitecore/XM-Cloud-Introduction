@@ -8,17 +8,17 @@ namespace Mvp.Feature.Selections.Models.Admin
 {
     public class ScoreCardsModel : BaseModel
     {
-        public List<Selection> Selections { get; set; } = new ();
+        public List<Selection> Selections { get; set; } = [];
 
         public Guid SelectedSelectionId { get; set; } = Guid.Empty;
 
-        public List<MvpType> MvpTypes { get; set; } = new ();
+        public List<MvpType> MvpTypes { get; set; } = [];
 
         public short SelectedMvpTypeId { get; set; } = 0;
 
-        public List<ScoreCard> ScoreCards { get; set; } = new ();
+        public List<ScoreCard> ScoreCards { get; set; } = [];
 
-        public List<Title> Titles { get; set; } = new ();
+        public List<Title> Titles { get; set; } = [];
 
         public TextField TitleLabel { get; set; }
 
