@@ -87,10 +87,10 @@ The different parameters on the `up.ps1` script control which mode you want to s
 Running in Local Mode will run all of the application elements required on your local machine using Docker
 
 ### Initialize your repository for Local Mode
-First initialize your repo using the `.init/ps1` script, you can see an example of how to init for 'Local Mode' below
+First initialize your repo using the `.\init.ps1` script, you can see an example of how to init for 'Local Mode' below
 
 ```ps1
-.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword"
+.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml"
 ```
 
 ### Bring up all the application elements for Local Mode
@@ -123,10 +123,10 @@ You can follow these steps to create a new XM Cloud Project & Environment, then 
 If you want more information about the Cloud plugin for the CLI then you access it on the [documentation site](https://doc.sitecore.com/xmc/en/developers/xm-cloud/the-cloud-deployment-command.html).
 
 ### Initialize your repository for Edge Development Mode with Docker
-First initialize your repo using the `.init/ps1` script, you will need to pass in the `-Edge_Token` parameter set to the value you generated in the previous step.
+First initialize your repo using the `.\init.ps1` script, you will need to pass in the `-Edge_Token` parameter set to the value you generated in the previous step.
 
 ```ps1
-.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -AdminPassword "DesiredAdminPassword" -Edge_Token "<<YOUR_EDGE_TOKEN>>"
+.\init.ps1 -InitEnv -LicenseXmlPath "C:\path\to\license.xml" -Edge_Token "<<YOUR_EDGE_TOKEN>>"
 ```
 
 ### Bring up all the application elements for Edge Mode with Docker
