@@ -17,6 +17,9 @@ type Story = StoryObj<typeof meta>;
 export const Event: Story = {
   name: 'Hero Event',
   args: {
+    rendering: {
+      componentName: 'Event',
+    },
     params: {
       styles: '',
     },

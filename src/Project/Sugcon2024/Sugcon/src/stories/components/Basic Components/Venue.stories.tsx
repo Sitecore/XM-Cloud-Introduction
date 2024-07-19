@@ -17,6 +17,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   name: 'Default',
   args: {
+    rendering: {
+      componentName: 'Default',
+    },
     params: {
       styles: '',
     },

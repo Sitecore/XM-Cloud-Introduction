@@ -14,6 +14,9 @@ type Story = StoryObj<typeof meta>;
 export const TextAndImage: Story = {
   name: 'Text and Image',
   args: {
+    rendering: {
+      componentName: 'TextAndImage',
+    },
     params: {
       styles: '',
     },

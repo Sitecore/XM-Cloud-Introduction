@@ -15,6 +15,9 @@ type Story = StoryObj<typeof meta>;
 export const Link: Story = {
   name: 'Link',
   args: {
+    rendering: {
+      componentName: 'Link',
+    },
     params: {
       styles: '',
     },

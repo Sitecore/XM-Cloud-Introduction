@@ -12,6 +12,9 @@ type Story = StoryObj<typeof meta>;
 export const ErrorMsg: Story = {
   name: 'Error Message',
   args: {
+    rendering: {
+      componentName: 'ErrorMsg',
+    },
     params: {},
     fields: {
       Text: {

@@ -15,6 +15,9 @@ type Story = StoryObj<typeof meta>;
 export const Button: Story = {
   name: 'Button',
   args: {
+    rendering: {
+      componentName: 'Button',
+    },
     params: {
       styles: '',
     },

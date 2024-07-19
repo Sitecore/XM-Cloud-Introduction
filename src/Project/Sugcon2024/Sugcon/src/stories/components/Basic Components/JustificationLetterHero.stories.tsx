@@ -17,6 +17,9 @@ type Story = StoryObj<typeof meta>;
 export const JustificationLetter: Story = {
   name: 'Hero Justification Letter',
   args: {
+    rendering: {
+      componentName: 'JustificationLetter',
+    },
     params: {
       styles: '',
     },

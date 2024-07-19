@@ -14,6 +14,9 @@ type Story = StoryObj<typeof meta>;
 export const VideoAndText: Story = {
   name: 'Video and Text',
   args: {
+    rendering: {
+      componentName: 'VideoAndText',
+    },
     params: {
       styles: '',
     },
