@@ -5,9 +5,11 @@ import {
   Text as JssText,
   RichTextField,
   RichText as JssRichText,
+  withDatasourceCheck,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { isEditorActive } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 import { LayoutFlex } from 'components/Templates/LayoutFlex';
+import { ComponentProps } from 'lib/component-props';
 
 // Define the type of props that VideoText will accept
 interface Fields {
@@ -24,11 +26,10 @@ interface Fields {
   Text: RichTextField;
 }
 
-export type VideoTextProps = {
-  params: { [key: string]: string };
+export type VideoTextProps = ComponentProps & {
   fields: Fields;
 };
-export const Default = (props: VideoTextProps): JSX.Element => {
+const VideoTextComponent = (props: VideoTextProps): JSX.Element => {
   return (
     <Box w="100%">
       <LayoutFlex direction="column">
@@ -71,3 +72,5 @@ export const Default = (props: VideoTextProps): JSX.Element => {
     </Box>
   );
 };
+
+export const Default = withDatasourceCheck()<VideoTextProps>(VideoTextComponent);

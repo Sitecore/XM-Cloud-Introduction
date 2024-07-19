@@ -1,7 +1,8 @@
 import React from 'react';
 import { Box, Link } from '@chakra-ui/react';
 import { ButtonLink } from 'src/basics/ButtonLink';
-import { LinkField, Link as JssLink } from '@sitecore-jss/sitecore-jss-nextjs';
+import { LinkField, Link as JssLink, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import { ComponentProps } from 'lib/component-props';
 
 // Define the type of props that Link will accept
 interface Fields {
@@ -9,12 +10,11 @@ interface Fields {
   Link: LinkField;
 }
 
-export type LinkProps = {
-  params: { [key: string]: string };
+export type LinkProps = ComponentProps & {
   fields: Fields;
 };
 
-export const Default = (props: LinkProps): JSX.Element => {
+const LinkComponent = (props: LinkProps): JSX.Element => {
   return (
     <Box>
       <Link
@@ -26,6 +26,10 @@ export const Default = (props: LinkProps): JSX.Element => {
   );
 };
 
-export const Button = (props: LinkProps): JSX.Element => {
+export const Default = withDatasourceCheck()<LinkProps>(LinkComponent);
+
+const LinkButton = (props: LinkProps): JSX.Element => {
   return <ButtonLink field={props.fields.Link} />;
 };
+
+export const Button = withDatasourceCheck()<LinkProps>(LinkButton);
