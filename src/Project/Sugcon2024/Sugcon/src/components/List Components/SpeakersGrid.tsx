@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
-import { Field, TextField, Text as JssText } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  Field,
+  TextField,
+  Text as JssText,
+  withDatasourceCheck,
+} from '@sitecore-jss/sitecore-jss-nextjs';
 import { PersonFields, PersonProps, Default as Person } from '../Basic Components/Person';
 import * as cheerio from 'cheerio';
 import clsx from 'clsx';
+import { ComponentProps } from 'lib/component-props';
 
 // Define the type of props that People Grid will accept
 interface Fields {
@@ -35,8 +41,7 @@ interface PersonItem {
   url: string;
 }
 
-export type PeopleGridProps = {
-  params: { [key: string]: string };
+export type PeopleGridProps = ComponentProps & {
   fields: Fields;
 };
 
@@ -100,7 +105,7 @@ function getPeople(sessionTitle: string, body: string) {
   return people;
 }
 
-export const Default = (props: PeopleGridProps): JSX.Element => {
+const PeopleGridComponent = (props: PeopleGridProps): JSX.Element => {
   const cols = props.params && props.params.Columns ? parseInt(props.params.Columns) : 5;
 
   const [people, setPeople] = useState(Array<PersonItem>);
@@ -148,3 +153,5 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
     </Box>
   );
 };
+
+export const Default = withDatasourceCheck()<PeopleGridProps>(PeopleGridComponent);

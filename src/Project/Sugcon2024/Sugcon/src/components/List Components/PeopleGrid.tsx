@@ -1,9 +1,10 @@
 import React from 'react';
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
-import { TextField, Text as JssText } from '@sitecore-jss/sitecore-jss-nextjs';
+import { TextField, Text as JssText, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import { PersonFields, PersonProps, Default as Person } from '../Basic Components/Person';
 import clsx from 'clsx';
 import { LayoutFlex } from 'components/Templates/LayoutFlex';
+import { ComponentProps } from 'lib/component-props';
 
 // Define the type of props that People Grid will accept
 interface Fields {
@@ -32,12 +33,11 @@ export interface Person {
   url: string;
 }
 
-export type PeopleGridProps = {
-  params: { [key: string]: string };
+export type PeopleGridProps = ComponentProps & {
   fields: Fields;
 };
 
-export const Default = (props: PeopleGridProps): JSX.Element => {
+const PeopleGridComponent = (props: PeopleGridProps): JSX.Element => {
   const cols = props.params && props.params.Columns ? parseInt(props.params.Columns) : 4;
 
   if (props.params && props.params.Alphabetize == '1') {
@@ -71,3 +71,5 @@ export const Default = (props: PeopleGridProps): JSX.Element => {
     </Box>
   );
 };
+
+export const Default = withDatasourceCheck()<PeopleGridProps>(PeopleGridComponent);
