@@ -28,6 +28,9 @@ const element = {
 export const Event: Story = {
   name: 'Accordion',
   args: {
+    rendering: {
+      componentName: 'Event',
+    },
     params: {
       styles: '',
     },

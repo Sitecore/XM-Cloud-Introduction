@@ -15,6 +15,9 @@ type Story = StoryObj<typeof meta>;
 export const Teaser: Story = {
   name: 'Speakers Grid',
   args: {
+    rendering: {
+      componentName: 'Teaser',
+    },
     params: {
       Columns: '4',
       Alphabetize: '1',
