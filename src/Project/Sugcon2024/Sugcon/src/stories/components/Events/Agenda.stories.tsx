@@ -15,6 +15,9 @@ type Story = StoryObj<typeof meta>;
 export const AgendaStory: Story = {
   name: 'Agenda',
   args: {
+    rendering: {
+      componentName: 'Agenda',
+    },
     params: {
       styles: '',
     },
