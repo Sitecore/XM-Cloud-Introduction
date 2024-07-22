@@ -1,14 +1,14 @@
 import React from 'react';
 import InnerHTML from 'dangerously-set-html-content';
-import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import useSWR from 'swr';
+import { ComponentProps } from 'lib/component-props';
 
 interface Fields {
   SessionizeUrl: Field<string>;
 }
 
-type AgendaProps = {
-  params: { [key: string]: string };
+type AgendaProps = ComponentProps & {
   fields: Fields;
 };
 
@@ -20,7 +20,7 @@ const AgendaDefaultComponent = (props: AgendaProps): JSX.Element => (
   </div>
 );
 
-export const Default = (props: AgendaProps): JSX.Element => {
+const AgendaComponent = (props: AgendaProps): JSX.Element => {
   const id = props.params.RenderingIdentifier;
 
   const fetcher = (url: string) => fetch(url).then((res) => res.text());
@@ -51,3 +51,5 @@ export const Default = (props: AgendaProps): JSX.Element => {
     </div>
   );
 };
+
+export const Default = withDatasourceCheck()<AgendaProps>(AgendaComponent);

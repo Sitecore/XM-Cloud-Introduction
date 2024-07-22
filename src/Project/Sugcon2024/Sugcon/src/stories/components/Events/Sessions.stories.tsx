@@ -15,6 +15,9 @@ type Story = StoryObj<typeof meta>;
 export const SessionsStory: Story = {
   name: 'Sessions',
   args: {
+    rendering: {
+      componentName: 'Sessions',
+    },
     params: {
       styles: '',
     },
