@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
+using Mvp.Feature.Selections.Attributes;
 using Mvp.Selections.Domain;
 using Sitecore.LayoutService.Client.Response.Model.Fields;
 
@@ -23,6 +24,7 @@ namespace Mvp.Feature.Selections.Models.Any
         public TextField LinkLabel { get; set; }
 
         [Required]
+        [HttpsUrl]
         [FromForm(Name = $"{nameof(MyProfilesFormModel)}.{nameof(Link)}")]
         public Uri Link { get; set; }
 
@@ -34,7 +36,7 @@ namespace Mvp.Feature.Selections.Models.Any
 
         public TextField SubmitLabel { get; set; }
 
-        public List<ProfileLink> Links { get; init; } = new ();
+        public List<ProfileLink> Links { get; init; } = [];
 
         public Guid? RemoveProfileLinkId { get; set; }
 

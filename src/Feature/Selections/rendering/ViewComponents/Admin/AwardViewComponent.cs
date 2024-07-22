@@ -64,17 +64,17 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         private static void GenerateFakeDataForEdit(AwardModel model)
         {
-            MvpType loremMvp = new (1)
+            MvpType loremMvp = new(1)
             {
                 Name = "Lorem"
             };
 
-            MvpType ipsumMvp = new (2)
+            MvpType ipsumMvp = new(2)
             {
                 Name = "Ipsum"
             };
 
-            Application dolorApplication = new (Guid.NewGuid())
+            Application dolorApplication = new(Guid.NewGuid())
             {
                 Applicant = new User(Guid.NewGuid())
                 {
@@ -92,7 +92,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 Status = ApplicationStatus.Submitted
             };
 
-            model.Title = new (Guid.NewGuid())
+            model.Title = new(Guid.NewGuid())
             {
                 Warning = "Donec varius, leo eget iaculis placerat, sapien orci iaculis nulla, ut facilisis eros arcu a ex.",
                 MvpType = loremMvp,
@@ -138,7 +138,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         private async Task AwardTitle(AwardModel model)
         {
-            Title newTitle = new (Guid.Empty)
+            Title newTitle = new(Guid.Empty)
             {
                 MvpType = model.MvpTypes.Single(t => t.Id == model.MvpTypeId),
                 Application = model.Application,

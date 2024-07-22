@@ -12,14 +12,10 @@ using Sitecore.AspNet.RenderingEngine.Binding;
 namespace Mvp.Feature.Selections.ViewComponents.Admin
 {
     [ViewComponent(Name = ViewComponentName)]
-    public class ApplicationOverviewViewComponent : BaseViewComponent
+    public class ApplicationOverviewViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
+        : BaseViewComponent(modelBinder, client)
     {
         public const string ViewComponentName = "AdminApplicationsOverview";
-
-        public ApplicationOverviewViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
-            : base(modelBinder, client)
-        {
-        }
 
         public override async Task<IViewComponentResult> InvokeAsync()
         {
@@ -118,7 +114,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
         {
             Task<Response<IList<Country>>> countriesResponseTask = Client.GetCountriesAsync(1, short.MaxValue);
             Task<Response<IList<Selection>>> selectionResponseTask = Client.GetSelectionsAsync(1, short.MaxValue);
-            List<Task> tasks = new () { countriesResponseTask, selectionResponseTask };
+            List<Task> tasks = [countriesResponseTask, selectionResponseTask];
             while (tasks.Count > 0)
             {
                 Task finished = await Task.WhenAny(tasks);

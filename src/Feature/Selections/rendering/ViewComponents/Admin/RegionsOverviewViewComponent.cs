@@ -11,14 +11,10 @@ using Sitecore.AspNet.RenderingEngine.Binding;
 namespace Mvp.Feature.Selections.ViewComponents.Admin
 {
     [ViewComponent(Name = ViewComponentName)]
-    public class RegionsOverviewViewComponent : BaseViewComponent
+    public class RegionsOverviewViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
+        : BaseViewComponent(modelBinder, client)
     {
         public const string ViewComponentName = "AdminRegionsOverview";
-
-        public RegionsOverviewViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
-            : base(modelBinder, client)
-        {
-        }
 
         public override async Task<IViewComponentResult> InvokeAsync()
         {
@@ -41,7 +37,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         private static void GenerateFakeDataForEdit(RegionsOverviewModel model)
         {
-            Region region = new (1)
+            Region region = new(1)
             {
                 Name = "Lorem"
             };

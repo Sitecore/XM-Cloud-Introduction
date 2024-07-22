@@ -33,7 +33,7 @@ namespace Mvp.Feature.Selections.Models.Admin
         [Required]
         public short CountryId { get; set; }
 
-        public List<Country> Countries { get; } = new ();
+        public List<Country> Countries { get; } = [];
 
         public TextField SubmitLabel { get; set; }
 

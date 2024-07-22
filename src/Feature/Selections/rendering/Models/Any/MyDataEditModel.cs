@@ -33,7 +33,7 @@ namespace Mvp.Feature.Selections.Models.Any
         [FromForm(Name = $"{nameof(MyDataEditModel)}.{nameof(CountryId)}")]
         public short CountryId { get; set; }
 
-        public List<Country> Countries { get; init; } = new ();
+        public List<Country> Countries { get; init; } = [];
 
         public TextField ImageTypeLabel { get; set; }
 
@@ -43,7 +43,7 @@ namespace Mvp.Feature.Selections.Models.Any
 
         public Uri ImageUri { get; set; }
 
-        public List<Consent> Consents { get; init; } = new ();
+        public List<Consent> Consents { get; init; } = [];
 
         public TextField SubmitLabel { get; set; }
 

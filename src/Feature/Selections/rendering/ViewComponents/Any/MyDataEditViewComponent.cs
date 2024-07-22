@@ -26,7 +26,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Any
                 Response<User> userResponse = null;
                 if (model.IsEdit && ModelState.IsValid)
                 {
-                    User updatedUser = new (Guid.Empty)
+                    User updatedUser = new(Guid.Empty)
                     {
                         Name = model.Name,
                         Email = model.Email,

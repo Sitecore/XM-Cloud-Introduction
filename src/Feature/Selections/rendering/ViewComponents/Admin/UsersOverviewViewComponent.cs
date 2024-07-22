@@ -33,7 +33,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             else if (model.RemoveUserId != null && model.RemoveConfirmed)
             {
                 // TODO [ILs] Implement remove user
-                Response<bool> removeUserResponse = new () { Result = false }; ////await Client.RemoveUserAsync(model.RemoveUserId.Value);
+                Response<bool> removeUserResponse = new() { Result = false }; ////await Client.RemoveUserAsync(model.RemoveUserId.Value);
                 if (removeUserResponse.Result)
                 {
                     await LoadUsers(model);
