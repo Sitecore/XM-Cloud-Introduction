@@ -87,7 +87,7 @@ services:
       ENTRYPOINT_ASSEMBLY: Mvp.Project.MvpSite.dll
       ASPNETCORE_ENVIRONMENT: "Development"
       ASPNETCORE_URLS: "http://*:80"
-      MVP_RENDERING_EDITING_HOST_URI: "http://mvp-rendering"
+      MVP_RENDERING_EDITING_HOST_URI: "${RENDERING_HOST_INTERNAL_URI}"
       Sitecore__InstanceUri: "http://cm"
       Sitecore__RenderingHostUri: "https://${MVP_RENDERING_HOST}"
       Sitecore__EnableExperienceEditor: "true" 
@@ -158,17 +158,10 @@ services:
       SITECORE_Pages_Client_Host: ${SITECORE_Pages_Client_Host}
       SITECORE_Pages_CORS_Allowed_Origins: ${SITECORE_Pages_CORS_Allowed_Origins}
       SITECORE_GraphQL_CORS: ${SITECORE_GRAPHQL_CORS}
-      ## SugconEu Rendering Host
-      SUGCONEU_RENDERING_HOST_ENDPOINT_URI: "${SUGCON_EU_HOST_INTERNAL_URI}/api/editing/render"
-      SUGCONEU_RENDERING_HOST_PUBLIC_URI: "https://${SUGCON_EU_HOST}"
-      ## SugconAnzsugcon/ Rendering Host
-      SUGCONANZ_RENDERING_HOST_ENDPOINT_URI: "${SUGCON_ANZ_HOST_INTERNAL_URI}/api/editing/render"
-      SUGCONANZ_RENDERING_HOST_PUBLIC_URI: "https://${SUGCON_ANZ_HOST}"
       ## MVP Rendering Host
       MVP_RENDERING_HOST_PUBLIC_URI: "https://${MVP_RENDERING_HOST}"
       ## Development Environment Optimizations
       SITECORE_DEVELOPMENT_PATCHES: DevEnvOn,CustomErrorsOff,DebugOn,DiagnosticsOff,InitMessagesOff
       Sitecore_AppSettings_exmEnabled:define: "no" # remove to turn on EXM
-      MVP_RENDERING_EDITING_HOST_URI: "http://mvp-rendering/"
-      RENDERING_HOST_INTERNAL_URI: ${SUGCON_EU_HOST_INTERNAL_URI}
+      MVP_RENDERING_EDITING_HOST_URI: "${RENDERING_HOST_INTERNAL_URI}/"
     entrypoint: powershell -Command "& C:/tools/entrypoints/iis/XmCloudDevelopment.ps1"
