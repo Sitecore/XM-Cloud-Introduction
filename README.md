@@ -160,5 +160,20 @@ After completing the init setup above you will be able to run the MVP Site eithe
 
 After completing the init setup above you will be able to run the SUGCON Sites directly using the NPM CLI, they are all built using SXA Headless so the process is the same for each of them.
 
-- Open a new terminal window and navigate to the `src\Project\Sugcon\<<SUGCON_SITE>>` folder, then run `npm i && npm run start:connected`
-  - You can then access the site at `http://localhost:3000`
+1. **Start the Default Site**:
+   - Open a new terminal window and navigate to the `src\Project\Sugcon2024\Sugcon` folder.
+   - Run the following command to install dependencies and start the site:
+     ```bash
+     npm i && npm run start:connected
+     ```
+   - You can then access the default site at [http://localhost:3000](http://localhost:3000).
+
+2. **Switching Between SUGCON Sites**:
+   - The default site is set to the EU version. To switch to another SUGCON site, update the `JSS_APP_NAME` variable in the `.env` file.
+   - Available site options include:
+     - `ANZ`
+     - `EU`
+     - `India`
+     - `NA`
+
+Simply change the `JSS_APP_NAME` in the `.env` file to your desired site, save the changes, and restart the site using the steps above.
