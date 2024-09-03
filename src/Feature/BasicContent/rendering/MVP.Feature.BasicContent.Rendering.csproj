@@ -5,11 +5,13 @@
     <AssemblyName>Mvp.Feature.BasicContent</AssemblyName>
     <RootNamespace>Mvp.Feature.BasicContent</RootNamespace>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Sitecore.LayoutService.Client" />
-    <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
+
+    <PackageReference Include="Sitecore.AspNetCore.SDK.LayoutService.Client" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.RenderingEngine" />
   </ItemGroup>
 
 </Project>

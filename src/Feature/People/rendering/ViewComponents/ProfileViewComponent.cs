@@ -5,7 +5,7 @@ using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Mvp.Feature.People.Models.Profile;
 using Mvp.Selections.Client;
-using Sitecore.AspNet.RenderingEngine.Binding;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Binding;
 using System.Threading.Tasks;
 using Mvp.Selections.Api.Model;
 using Mvp.Selections.Client.Models;

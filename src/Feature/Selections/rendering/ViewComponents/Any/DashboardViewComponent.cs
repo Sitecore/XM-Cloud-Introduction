@@ -7,19 +7,15 @@ using Mvp.Feature.Selections.Models.Any;
 using Mvp.Selections.Client;
 using Mvp.Selections.Client.Models;
 using Mvp.Selections.Domain;
-using Sitecore.AspNet.RenderingEngine.Binding;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Binding;
 
 namespace Mvp.Feature.Selections.ViewComponents.Any
 {
     [ViewComponent(Name = ViewComponentName)]
-    public class DashboardViewComponent : BaseViewComponent
+    public class DashboardViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
+        : BaseViewComponent(modelBinder, client)
     {
         public const string ViewComponentName = "AnyDashboard";
-
-        public DashboardViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
-            : base(modelBinder, client)
-        {
-        }
 
         public override async Task<IViewComponentResult> InvokeAsync()
         {

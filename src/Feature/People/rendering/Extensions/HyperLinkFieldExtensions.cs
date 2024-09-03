@@ -1,5 +1,5 @@
 ﻿using System;
-using Sitecore.LayoutService.Client.Response.Model.Fields;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Feature.People.Extensions
 {

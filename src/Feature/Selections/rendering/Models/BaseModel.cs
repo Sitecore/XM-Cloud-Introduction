@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Sitecore.AspNet.RenderingEngine.Binding.Attributes;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Binding.Attributes;
 
 namespace Mvp.Feature.Selections.Models
 {

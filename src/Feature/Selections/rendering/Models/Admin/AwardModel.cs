@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Mvp.Selections.Domain;
 using Mvp.Selections.Domain.Comments;
-using Sitecore.LayoutService.Client.Response.Model.Fields;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Feature.Selections.Models.Admin
 {

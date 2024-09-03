@@ -1,6 +1,4 @@
 ﻿namespace Mvp.Feature.BasicContent.Models
 {
-    public class HeroBig : HeroBase
-    {
-    }
+    public class HeroBig : HeroBase;
 }

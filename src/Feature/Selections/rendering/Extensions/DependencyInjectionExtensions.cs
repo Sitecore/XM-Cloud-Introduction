@@ -7,8 +7,8 @@ using Mvp.Feature.Selections.ViewComponents.Any;
 using Mvp.Feature.Selections.ViewComponents.Apply;
 using Mvp.Selections.Client.Extensions;
 using Mvp.Selections.Client.Interfaces;
-using Sitecore.AspNet.RenderingEngine.Configuration;
-using Sitecore.AspNet.RenderingEngine.Extensions;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Configuration;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
 
 namespace Mvp.Feature.Selections.Extensions
 {

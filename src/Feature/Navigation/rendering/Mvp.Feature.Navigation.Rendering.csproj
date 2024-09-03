@@ -5,12 +5,13 @@
     <AssemblyName>Mvp.Feature.Navigation</AssemblyName>
     <RootNamespace>Mvp.Feature.Navigation</RootNamespace>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
 
   <ItemGroup>
-	  <PackageReference Include="Sitecore.LayoutService.Client" />
-	  <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.LayoutService.Client" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.RenderingEngine" />
   </ItemGroup>
 
 </Project>

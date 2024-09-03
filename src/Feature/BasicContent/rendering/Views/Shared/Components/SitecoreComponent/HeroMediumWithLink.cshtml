@@ -8,7 +8,7 @@
                 <p class="top" asp-for="HeroSubtitle"></p>
                 <h1 class="static" asp-for="HeroTitle"></h1>
                 <p asp-for="HeroDescription"></p>
-                @if (!string.IsNullOrWhiteSpace(Model.HeroLink.Value.Href))
+                @if (!string.IsNullOrWhiteSpace(Model.HeroLink?.Value.Href))
                 {
                     <a asp-for="HeroLink" href="@Model.HeroLink.Value.Href" data-module="cta-button" data-goals="" class="cta primary" aria-label="@Model.HeroLink.Value.Title">
                         @Model.HeroLink.Value.Text
@@ -20,9 +20,9 @@
                 <div class="outer">
                     <div class="wrapper">
                         <picture>
-                            <source media="(min-width:  1199.98px)" srcset="@Model.HeroImage?.Value?.Src">
-                            <source media="(min-width: 767.98px)" srcset="@Model.HeroImage?.Value?.Src">
-                            <img src="@Model.HeroImage?.Value?.Src">
+                            <source media="(min-width:  1199.98px)" srcset="@Model.HeroImage?.Value.Src">
+                            <source media="(min-width: 767.98px)" srcset="@Model.HeroImage?.Value.Src">
+                            <img src="@Model.HeroImage?.Value.Src">
                         </picture>
                     </div>
                 </div>

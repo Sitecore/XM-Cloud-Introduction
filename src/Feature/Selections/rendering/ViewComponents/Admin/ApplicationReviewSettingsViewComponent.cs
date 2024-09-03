@@ -10,7 +10,7 @@ using Mvp.Selections.Client.Models;
 using Mvp.Selections.Client.Models.Request;
 using Mvp.Selections.Domain;
 using Mvp.Selections.Domain.Roles;
-using Sitecore.AspNet.RenderingEngine.Binding;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Binding;
 
 namespace Mvp.Feature.Selections.ViewComponents.Admin
 {

@@ -1,5 +1,5 @@
-﻿using Sitecore.AspNet.RenderingEngine.Binding.Attributes;
-using Sitecore.LayoutService.Client.Response.Model.Fields;
+﻿using Sitecore.AspNetCore.SDK.RenderingEngine.Binding.Attributes;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Project.MvpSite.Models
 {

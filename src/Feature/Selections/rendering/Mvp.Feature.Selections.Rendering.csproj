@@ -15,12 +15,13 @@
   <ItemGroup>
     <PackageReference Include="Markdig" />
     <PackageReference Include="Mvp.Selections.Client" />
-    <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
-    <PackageReference Include="Sitecore.LayoutService.Client" />
     <PackageReference Include="StyleCop.Analyzers">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+
+    <PackageReference Include="Sitecore.AspNetCore.SDK.LayoutService.Client" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.RenderingEngine" />
   </ItemGroup>
 
 </Project>

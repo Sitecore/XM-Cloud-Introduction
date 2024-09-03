@@ -41,14 +41,15 @@
 		<PackageReference Include="Microsoft.AspNetCore.Session" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
 		<PackageReference Include="Microsoft.Extensions.Http" />
-		<PackageReference Include="Sitecore.LayoutService.Client" />
-		<PackageReference Include="Sitecore.AspNet.RenderingEngine" />
-		<PackageReference Include="Sitecore.AspNet.ExperienceEditor" />
 		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" />
+
+    <PackageReference Include="Sitecore.AspNetCore.SDK.LayoutService.Client" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.RenderingEngine" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.ExperienceEditor" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\Feature\BasicContent\rendering\MVP.Feature.BasicContent.Rendering.csproj" />
+	  <ProjectReference Include="..\..\..\Feature\BasicContent\rendering\Mvp.Feature.BasicContent.Rendering.csproj" />
 	  <ProjectReference Include="..\..\..\Feature\Navigation\rendering\Mvp.Feature.Navigation.Rendering.csproj" />
 	  <ProjectReference Include="..\..\..\Feature\People\rendering\Mvp.Feature.People.Rendering.csproj" />
 	  <ProjectReference Include="..\..\..\Feature\Selections\rendering\Mvp.Feature.Selections.Rendering.csproj" />

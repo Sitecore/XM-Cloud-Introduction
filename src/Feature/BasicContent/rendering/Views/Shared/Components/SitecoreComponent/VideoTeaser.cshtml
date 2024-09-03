@@ -8,7 +8,7 @@
                     <h2><sc-text asp-for="@Model.TeaserTitle" /></h2>
                     <p><sc-text asp-for="@Model.TeaserText" /></p>
 
-                    @if (!string.IsNullOrEmpty(Model.TeaserLink.Value.Href))
+                    @if (!string.IsNullOrEmpty(Model.TeaserLink?.Value.Href))
                     {
                         <sc-link asp-for="@Model.TeaserLink" data-module="cta-button" class="link-arrow" aria-label="@Model.TeaserLink.Value.Title">
                             <img alt="Learn more" src="images/icon-arrow.png">
@@ -16,7 +16,7 @@
                     }
                 </div>
                 <div class="col-12 col-lg-6 video  order-md-1 order-lg-2 ">
-                    @Html.Raw(Model.TeaserEmbed.Value)
+                    @Html.Raw(Model.TeaserEmbed?.Value)
                 </div>
 
             </div>
