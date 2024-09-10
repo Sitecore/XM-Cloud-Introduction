@@ -1,6 +1,6 @@
 ﻿using System;
 using Mvp.Selections.Domain;
-using Sitecore.LayoutService.Client.Response.Model.Fields;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Feature.Selections.Models.Admin
 {

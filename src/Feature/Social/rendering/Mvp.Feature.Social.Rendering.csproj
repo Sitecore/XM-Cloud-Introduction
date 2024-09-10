@@ -8,9 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Sitecore.LayoutService.Client" />
-    <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
     <PackageReference Include="System.ServiceModel.Syndication" />
+
+    <PackageReference Include="Sitecore.AspNetCore.SDK.LayoutService.Client" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.RenderingEngine" />
   </ItemGroup>
 
 </Project>

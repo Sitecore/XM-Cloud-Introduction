@@ -4,18 +4,18 @@ using System.Linq;
 using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Mvp.Selections.Client;
-using Sitecore.AspNet.RenderingEngine.Binding;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Primitives;
 using Mvp.Feature.People.Extensions;
 using Mvp.Feature.People.Models.Directory;
 using Mvp.Selections.Api.Model;
 using Mvp.Selections.Client.Models;
-using Sitecore.LayoutService.Client.Response.Model;
-using Sitecore.LayoutService.Client.Response.Model.Fields;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using Mvp.Feature.People.Configuration;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Binding;
 
 namespace Mvp.Feature.People.ViewComponents
 {
@@ -56,12 +56,12 @@ namespace Mvp.Feature.People.ViewComponents
             {
                 ItemLinkField? cmsFacet = model.Facets.FirstOrDefault(f =>
                     f.Fields.TryGetValue(nameof(FacetViewModel.Identifier), out IFieldReader? identifierReader)
-                    && identifierReader.TryRead(out TextField identifierField)
-                    && identifierField.Value == facet.Identifier);
+                    && identifierReader.TryRead(out TextField? identifierField)
+                    && identifierField?.Value == facet.Identifier);
 
                 if (cmsFacet != null
                     && cmsFacet.Fields.TryGetValue(nameof(FacetViewModel.Name), out IFieldReader? nameReader)
-                    && nameReader.TryRead(out TextField nameField))
+                    && nameReader.TryRead(out TextField? nameField))
                 {
                     facet.Name = nameField;
                     facet.SortOrder = model.Facets.IndexOf(cmsFacet);

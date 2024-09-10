@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Mvp.Selections.Client;
-using Sitecore.AspNet.RenderingEngine.Binding;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Binding;
 
 namespace Mvp.Feature.Selections.ViewComponents
 {

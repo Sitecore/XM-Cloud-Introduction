@@ -1,6 +1,6 @@
 ﻿using Mvp.Feature.Navigation.Models;
-using Sitecore.AspNet.RenderingEngine.Configuration;
-using Sitecore.AspNet.RenderingEngine.Extensions;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Configuration;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
 
 namespace Mvp.Feature.Navigation.Extensions
 {

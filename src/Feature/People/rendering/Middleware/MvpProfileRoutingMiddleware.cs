@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
 using System.Threading.Tasks;
-using Sitecore.AspNet.RenderingEngine;
+using Sitecore.AspNetCore.SDK.RenderingEngine;
 
 namespace Mvp.Feature.People.Middleware
 {

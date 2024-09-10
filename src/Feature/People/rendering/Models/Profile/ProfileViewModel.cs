@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Mvp.Selections.Api.Model;
 using Mvp.Selections.Domain;
-using Sitecore.LayoutService.Client.Response.Model.Fields;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Feature.People.Models.Profile
 {

@@ -40,7 +40,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicContent", "BasicConten
 		Feature\BasicContent\BasicContent.module.json = Feature\BasicContent\BasicContent.module.json
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVP.Feature.BasicContent.Rendering", "Feature\BasicContent\rendering\MVP.Feature.BasicContent.Rendering.csproj", "{18086145-57F9-46EB-9213-6764DA298779}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp.Feature.BasicContent.Rendering", "Feature\BasicContent\rendering\Mvp.Feature.BasicContent.Rendering.csproj", "{18086145-57F9-46EB-9213-6764DA298779}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Social", "Social", "{06A25A5C-4B35-4091-81D6-5DE97C6E1744}"
 	ProjectSection(SolutionItems) = preProject

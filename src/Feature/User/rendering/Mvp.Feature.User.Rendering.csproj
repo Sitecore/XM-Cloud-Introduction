@@ -10,8 +10,9 @@
   <ItemGroup>
     <PackageReference Include="Okta.AspNetCore" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
-    <PackageReference Include="Sitecore.LayoutService.Client" />
-    <PackageReference Include="Sitecore.AspNet.RenderingEngine" />
+    
+    <PackageReference Include="Sitecore.AspNetCore.SDK.LayoutService.Client" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.RenderingEngine" />
   </ItemGroup>
 
 </Project>

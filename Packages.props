@@ -9,6 +9,7 @@
     <PlatformVersion>1.*</PlatformVersion>
     <SitecoreAspNetVersion>21.0.*</SitecoreAspNetVersion>
     <DotNetVersion>8.0.0</DotNetVersion>
+    <AspNetCoreSdkVersion>0.0.7</AspNetCoreSdkVersion>
   </PropertyGroup>
   <ItemGroup>
     <!-- Platform -->
@@ -20,9 +21,10 @@
 
     <!-- Rendering Host -->
     <PackageReference Update="Sitecore.Assemblies.SitecoreHeadlessServicesServer" Version="$(SitecoreAspNetVersion)" />
-    <PackageReference Update="Sitecore.LayoutService.Client" Version="$(SitecoreAspNetVersion)" />
-    <PackageReference Update="Sitecore.AspNet.RenderingEngine" Version="$(SitecoreAspNetVersion)" />
-    <PackageReference Update="Sitecore.AspNet.ExperienceEditor" Version="$(SitecoreAspNetVersion)" />
+
+    <PackageReference Update="Sitecore.AspNetCore.SDK.LayoutService.Client" Version="$(AspNetCoreSdkVersion)" />
+    <PackageReference Update="Sitecore.AspNetCore.SDK.RenderingEngine" Version="$(AspNetCoreSdkVersion)" />
+    <PackageReference Update="Sitecore.AspNetCore.SDK.ExperienceEditor" Version="$(AspNetCoreSdkVersion)" />
 
     <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(DotNetVersion)" />
     <PackageReference Update="Microsoft.Extensions.Http" Version="$(DotNetVersion)"/>

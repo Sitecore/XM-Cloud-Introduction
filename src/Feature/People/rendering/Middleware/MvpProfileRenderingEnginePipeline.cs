@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Mvp.Feature.People.Extensions;
-using Sitecore.AspNet.RenderingEngine.Extensions;
-using Sitecore.AspNet.RenderingEngine.Middleware;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Middleware;
 
 namespace Mvp.Feature.People.Middleware
 {

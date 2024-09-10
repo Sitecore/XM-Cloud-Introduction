@@ -16,11 +16,9 @@ using Mvp.Feature.Social.Extensions;
 using Mvp.Feature.User.Extensions;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
 using Mvp.Project.MvpSite.Extensions;
-using Sitecore.AspNet.ExperienceEditor;
-using Sitecore.AspNet.RenderingEngine.Extensions;
-using Sitecore.AspNet.RenderingEngine.Localization;
-using Sitecore.LayoutService.Client.Extensions;
-using Sitecore.LayoutService.Client.Newtonsoft.Extensions;
+using Sitecore.AspNetCore.SDK.ExperienceEditor.Extensions;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Extensions;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
 
 namespace Mvp.Project.MvpSite
 {
@@ -46,9 +44,7 @@ namespace Mvp.Project.MvpSite
               .AddRouting()
               // You must enable ASP.NET Core localization to utilize localized Sitecore content.
               .AddLocalization()
-              .AddMvc()
-              // At this time the Layout Service Client requires Json.NET due to limitations in System.Text.Json.
-              .AddNewtonsoftJson(o => o.SerializerSettings.SetDefaults());
+              .AddMvc();
 
             // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge & local edge endpoint
             services.AddSitecoreLayoutService()

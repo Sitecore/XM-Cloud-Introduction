@@ -3,16 +3,19 @@ using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
-using Sitecore.AspNet.RenderingEngine;
-using Sitecore.LayoutService.Client.Exceptions;
+
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Exceptions;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Mvp.Foundation.Configuration.Rendering.AppSettings;
-using Sitecore.AspNet.RenderingEngine.Configuration;
-using Sitecore.AspNet.RenderingEngine.Middleware;
-using Sitecore.LayoutService.Client;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Configuration;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Middleware;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Interfaces;
+using Sitecore.AspNetCore.SDK.RenderingEngine;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Interfaces;
 
 namespace Mvp.Project.MvpSite.Middleware
 {

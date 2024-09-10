@@ -1,6 +1,6 @@
 ﻿using Mvp.Feature.Social.Models;
-using Sitecore.AspNet.RenderingEngine.Configuration;
-using Sitecore.AspNet.RenderingEngine.Extensions;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Configuration;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Mvp.Feature.Social.FeedReader;
 

@@ -2,8 +2,9 @@
 using Microsoft.Extensions.Logging;
 using Mvp.Feature.People.Middleware;
 using Mvp.Project.MvpSite.Models;
-using Sitecore.AspNet.RenderingEngine;
-using Sitecore.LayoutService.Client.Exceptions;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Exceptions;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Interfaces;
 
 namespace Mvp.Project.MvpSite.Controllers
 {
@@ -15,14 +16,14 @@ namespace Mvp.Project.MvpSite.Controllers
         {
             IActionResult result = null;
             ISitecoreRenderingContext request = HttpContext.GetSitecoreRenderingContext();
-            if (request.Response?.HasErrors ?? false)
+            if (request?.Response?.HasErrors ?? false)
             {
                 foreach (SitecoreLayoutServiceClientException error in request.Response.Errors)
                 {
                     switch (error)
                     {
                         default:
-                            logger.LogError(error, error.Message);
+                            logger.LogError(error, "{Message}", error.Message);
                             throw error;
                     }
                 }

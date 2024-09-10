@@ -1,12 +1,9 @@
-﻿using Sitecore.LayoutService.Client.Response.Model.Fields;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
 
 namespace Mvp.Feature.BasicContent.Models
 {
     public class RichTextContent
     {
-        public RichTextField Content { get; set; }
+        public RichTextField? Content { get; set; }
     }
 }

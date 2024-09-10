@@ -5,10 +5,11 @@ using Microsoft.Extensions.Logging;
 using Mvp.Project.MvpSite.Middleware;
 using Mvp.Project.MvpSite.Models;
 using Okta.AspNetCore;
-using Sitecore.AspNet.RenderingEngine;
-using Sitecore.LayoutService.Client.Exceptions;
-using Sitecore.LayoutService.Client.Response.Model;
-using Sitecore.LayoutService.Client.Response.Model.Fields;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Exceptions;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Interfaces;
 
 namespace Mvp.Project.MvpSite.Controllers
 {
@@ -23,19 +24,19 @@ namespace Mvp.Project.MvpSite.Controllers
         {
             IActionResult result = null;
             ISitecoreRenderingContext request = HttpContext.GetSitecoreRenderingContext();
-            if (request.Response?.HasErrors ?? false)
+            if (request?.Response?.HasErrors ?? false)
             {
                 foreach (SitecoreLayoutServiceClientException error in request.Response.Errors)
                 {
                     switch (error)
                     {
                         default:
-                            logger.LogError(error, error.Message);
+                            logger.LogError(error, "{Message}", error.Message);
                             throw error;
                     }
                 }
             }
-            else if (!(HttpContext.User.Identity?.IsAuthenticated ?? false) && IsSecurePage(request) && !(request.Response?.Content?.Sitecore?.Context?.IsEditing ?? false))
+            else if (!(HttpContext.User.Identity?.IsAuthenticated ?? false) && IsSecurePage(request) && !(request?.Response?.Content?.Sitecore?.Context?.IsEditing ?? false))
             {
                 AuthenticationProperties properties = new()
                 {

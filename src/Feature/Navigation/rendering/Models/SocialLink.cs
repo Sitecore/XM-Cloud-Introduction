@@ -2,6 +2,6 @@
 {
     public class SocialLink //: Link
     {
-        public string Icon { get; set; }
+        public string? Icon { get; set; }
     }
 }
