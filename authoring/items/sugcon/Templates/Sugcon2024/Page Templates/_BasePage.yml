@@ -1,0 +1,42 @@
+﻿---
+ID: "6a1b5fe6-5f3d-49fb-ac10-1f925c67e105"
+Parent: "146849cf-b4c7-4b24-b4f3-1d2483710f56"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Sugcon2024/Page Templates/_BasePage
+SharedFields:
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Value: |
+    {47151711-26CA-434E-8132-D3E0B7D26683}
+    {371D5FBB-5498-4D94-AB2B-E3B70EEBE78C}
+    {4414A1F9-826A-4647-8DF4-ED6A95E64C43}
+    {F39A594A-7BC9-4DB0-BAA1-88543409C1F9}
+    {6650FB34-7EA1-4245-A919-5CC0F002A6D7}
+    {69F3677A-105C-41D6-9D7C-0F85A172A827}
+    {CB7020B6-B576-4B0D-AEE2-B81E9B69507A}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240313T045728Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\x3rLvWVVyq
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f5536e5a-6dbd-464c-a9f2-008fc615263b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\UOUBIWQRx7
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240328T170258Z
