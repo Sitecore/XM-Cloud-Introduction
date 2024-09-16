@@ -40,9 +40,9 @@ namespace Mvp.Feature.Selections.Models.Admin
 
         public TextField ReviewLinkFormat { get; set; }
 
-        public List<Country> Countries { get; set; } = new ();
+        public List<Country> Countries { get; set; } = [];
 
-        public List<Selection> Selections { get; set; } = new ();
+        public List<Selection> Selections { get; set; } = [];
 
         public HyperLinkField ReviewSettingsLink { get; set; }
 

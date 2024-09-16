@@ -13,11 +13,11 @@ namespace Mvp.Feature.Selections.Models.Admin
 
         public Application Application { get; set; }
 
-        public List<Review> Reviews { get; set; } = new ();
+        public List<Review> Reviews { get; set; } = [];
 
-        public List<ScoreCategory> ScoreCategories { get; set; } = new ();
+        public List<ScoreCategory> ScoreCategories { get; set; } = [];
 
-        public List<Comment> Comments { get; set; } = new ();
+        public List<Comment> Comments { get; set; } = [];
 
         public TextField TitleLabel { get; set; }
 

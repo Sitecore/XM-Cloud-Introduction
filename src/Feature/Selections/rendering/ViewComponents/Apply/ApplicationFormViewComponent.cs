@@ -15,17 +15,15 @@ using Sitecore.AspNetCore.SDK.RenderingEngine.Binding;
 namespace Mvp.Feature.Selections.ViewComponents.Apply
 {
     [ViewComponent(Name = ViewComponentName)]
-    public class ApplicationFormViewComponent : BaseViewComponent
+    public class ApplicationFormViewComponent(
+        IViewModelBinder modelBinder,
+        MvpSelectionsApiClient client,
+        IOptions<MvpSelectionsOptions> options)
+        : BaseViewComponent(modelBinder, client)
     {
         public const string ViewComponentName = "ApplyApplicationForm";
 
-        private readonly MvpSelectionsOptions _options;
-
-        public ApplicationFormViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client, IOptions<MvpSelectionsOptions> options)
-            : base(modelBinder, client)
-        {
-            _options = options.Value;
-        }
+        private readonly MvpSelectionsOptions _options = options.Value;
 
         public override async Task<IViewComponentResult> InvokeAsync()
         {
@@ -116,38 +114,38 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 }
             };
 
-            Product product1 = new (1)
+            Product product1 = new(1)
             {
                 Name = "Lorem Product"
             };
-            Product product2 = new (2)
+            Product product2 = new(2)
             {
                 Name = "Ipsum Product"
             };
 
-            MvpType mvpType1 = new (1)
+            MvpType mvpType1 = new(1)
             {
                 Name = "Lorem MVP"
             };
 
             model.CurrentApplication = new Application(Guid.NewGuid())
             {
-                Contributions = new List<Contribution>
-                {
-                    new (Guid.NewGuid())
+                Contributions =
+                [
+                    new Contribution(Guid.NewGuid())
                     {
                         Date = DateTime.UtcNow,
                         Name = "Lorem Link",
                         Description = "This would be a description of the link submitted as a contribution.",
                         Uri = new Uri("https://www.google.com"),
                         Type = ContributionType.Other,
-                        RelatedProducts = new List<Product>
-                        {
+                        RelatedProducts =
+                        [
                             product1,
                             product2
-                        }
+                        ]
                     }
-                },
+                ],
                 ModifiedOn = DateTime.UtcNow,
                 MvpType = mvpType1
             };
@@ -158,14 +156,14 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             model.CurrentSelection = new Selection(Guid.NewGuid())
             {
                 Year = (short)DateTime.UtcNow.Year,
-                MvpTypes = new List<MvpType>
-                {
+                MvpTypes =
+                [
                     mvpType1,
-                    new (2)
+                    new MvpType(2)
                     {
                         Name = "Ipsum MVP"
                     }
-                }
+                ]
             };
         }
 
@@ -258,7 +256,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 if (consentsResponse.StatusCode == HttpStatusCode.OK &&
                     (consentsResponse.Result?.All(c => c.Type != ConsentType.PersonalInformation) ?? false))
                 {
-                    Consent consent = new (Guid.Empty)
+                    Consent consent = new(Guid.Empty)
                     {
                         Type = ConsentType.PersonalInformation
                     };
@@ -317,7 +315,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             {
                 if (model.CurrentApplication != null)
                 {
-                    Application updateApplication = new (model.CurrentApplication.Id)
+                    Application updateApplication = new(model.CurrentApplication.Id)
                     {
                         MvpType = new MvpType(model.MvpTypeId)
                     };
@@ -336,7 +334,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 }
                 else
                 {
-                    Application newApplication = new (Guid.Empty)
+                    Application newApplication = new(Guid.Empty)
                     {
                         Country = model.CurrentUser.Country!,
                         Selection = model.CurrentSelection,
@@ -373,7 +371,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
         {
             if (model.IsNavigation.HasValue && !model.IsNavigation.Value && !string.IsNullOrWhiteSpace(model.Eligibility) && !string.IsNullOrWhiteSpace(model.Objectives))
             {
-                Application updateApplication = new (model.CurrentApplication.Id)
+                Application updateApplication = new(model.CurrentApplication.Id)
                 {
                     Eligibility = model.Eligibility,
                     Objectives = model.Objectives,
@@ -445,7 +443,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                 && model.ContributionDate.Value >= model.CurrentSelection.ApplicationsEnd.AddMonths(-_options.TimeFrameMonths)
                 && model.ContributionDate.Value <= model.CurrentSelection.ApplicationsEnd)
             {
-                Contribution contribution = new (model.UpdateContributionId ?? Guid.Empty)
+                Contribution contribution = new(model.UpdateContributionId ?? Guid.Empty)
                 {
                     Date = model.ContributionDate.Value,
                     Name = model.ContributionName,
@@ -482,7 +480,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
                     model.ContributionDescription = null;
                     model.ContributionLink = null;
                     model.ContributionType = ContributionType.Other;
-                    model.ContributionProductIds = new List<int>();
+                    model.ContributionProductIds = [];
                     model.ContributionIsPublic = false;
                     ModelState.Clear();
                 }
@@ -553,7 +551,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
             }
             else if (model.IsNavigation.HasValue && !model.IsNavigation.Value && model.UnderstandsReviewConsent && model.UnderstandsProgramAgreement && model.IsComplete)
             {
-                Application updateApplication = new (model.CurrentApplication.Id)
+                Application updateApplication = new(model.CurrentApplication.Id)
                 {
                     Status = ApplicationStatus.Submitted
                 };
@@ -580,7 +578,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Apply
         {
             if (model.IsNavigation.HasValue && !model.IsNavigation.Value)
             {
-                Application updateApplication = new (model.CurrentApplication.Id)
+                Application updateApplication = new(model.CurrentApplication.Id)
                 {
                     Status = ApplicationStatus.Open
                 };

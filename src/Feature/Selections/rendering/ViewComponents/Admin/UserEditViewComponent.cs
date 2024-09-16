@@ -30,7 +30,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
                 Response<User> userResponse = null;
                 if (model.IsEdit && ModelState.IsValid)
                 {
-                    User updatedUser = new (model.Id)
+                    User updatedUser = new(model.Id)
                     {
                         Identifier = model.Identifier,
                         Name = model.Name,

@@ -15,14 +15,10 @@ using Sitecore.AspNetCore.SDK.RenderingEngine.Binding;
 namespace Mvp.Feature.Selections.ViewComponents.Admin
 {
     [ViewComponent(Name = ViewComponentName)]
-    public class ApplicationReviewSettingsViewComponent : BaseViewComponent
+    public class ApplicationReviewSettingsViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
+        : BaseViewComponent(modelBinder, client)
     {
         public const string ViewComponentName = "AdminApplicationReviewSettings";
-
-        public ApplicationReviewSettingsViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
-            : base(modelBinder, client)
-        {
-        }
 
         public override async Task<IViewComponentResult> InvokeAsync()
         {
@@ -75,7 +71,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
         {
             Task<Response<IList<User>>> usersResponseTask = Client.GetUsersForApplicationReview(model.Id);
             Task<Response<Application>> applicationResponseTask = Client.GetApplicationAsync(model.Id);
-            List<Task> tasks = new () { usersResponseTask, applicationResponseTask };
+            List<Task> tasks = [usersResponseTask, applicationResponseTask];
             while (tasks.Count > 0)
             {
                 Task finished = await Task.WhenAny(tasks);
@@ -114,7 +110,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
 
         private async Task AddReviewers(ApplicationReviewSettingsModel model)
         {
-            Dictionary<Task<Response<IList<User>>>, string> tasks = new (model.AddReviewerUserEmails.Count);
+            Dictionary<Task<Response<IList<User>>>, string> tasks = new(model.AddReviewerUserEmails.Count);
             foreach (string email in model.AddReviewerUserEmails)
             {
                 tasks.Add(Client.GetUsersAsync(email: email), email);
@@ -187,7 +183,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Admin
             Response<IList<SelectionRole>> selectionRolesResponse = await Client.GetSelectionRolesAsync(applicationId: model.Id);
             if (selectionRolesResponse.StatusCode == HttpStatusCode.OK && selectionRolesResponse.Result != null)
             {
-                List<Task> removeTasks = new (selectionRolesResponse.Result.Count);
+                List<Task> removeTasks = new(selectionRolesResponse.Result.Count);
                 foreach (SelectionRole role in selectionRolesResponse.Result)
                 {
                     removeTasks.Add(Client.RemoveUserFromRoleAsync(role.Id, model.RemoveReviewerUserId!.Value));

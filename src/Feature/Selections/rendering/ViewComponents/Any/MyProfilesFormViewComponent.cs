@@ -12,14 +12,10 @@ using Sitecore.AspNetCore.SDK.RenderingEngine.Binding;
 namespace Mvp.Feature.Selections.ViewComponents.Any
 {
     [ViewComponent(Name = ViewComponentName)]
-    public class MyProfilesFormViewComponent : BaseViewComponent
+    public class MyProfilesFormViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
+        : BaseViewComponent(modelBinder, client)
     {
         public const string ViewComponentName = "AnyMyProfilesForm";
-
-        public MyProfilesFormViewComponent(IViewModelBinder modelBinder, MvpSelectionsApiClient client)
-            : base(modelBinder, client)
-        {
-        }
 
         public override async Task<IViewComponentResult> InvokeAsync()
         {
@@ -59,7 +55,7 @@ namespace Mvp.Feature.Selections.ViewComponents.Any
                     }
                     else if (model.IsEdit && ModelState.IsValid)
                     {
-                        ProfileLink newProfileLink = new (Guid.Empty)
+                        ProfileLink newProfileLink = new(Guid.Empty)
                         {
                             Name = model.Name,
                             Uri = model.Link,
