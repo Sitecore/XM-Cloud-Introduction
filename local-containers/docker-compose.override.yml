@@ -13,12 +13,13 @@ services:
   sugcon2024:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-sugcon2024:${VERSION:-latest}
     build:
-      context: ./docker/build/sugcon
+      context: ../
+      dockerfile: ./local-containers/docker/build/sugcon/Dockerfile
       target: ${BUILD_CONFIGURATION}
       args:
         PARENT_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-nodejs:${VERSION:-latest}
     volumes:
-      - .\src\Project\Sugcon2024\Sugcon:C:\app
+      - ..\headapps\Sugcon2024:C:\app
     environment:
       SITECORE_API_HOST: "http://cm"
       NEXTJS_DIST_DIR: ".next-container"
@@ -53,36 +54,16 @@ services:
       interval: 60s
       timeout: 30s
 
-  # The solution build image is added here so it can be referenced as a build dependency
-  # for the images which use its output. Setting "deploy.replicas: 0" means docker-compose will not
-  # include it in the running environment. See Dockerfile for more details.
-  solution:
-    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
-    build:
-      context: .
-      dockerfile: ./docker/build/solution/Dockerfile
-      args:
-        BUILD_CONFIGURATION: ${BUILD_CONFIGURATION}
-        BUILD_IMAGE: ${SOLUTION_BUILD_IMAGE}
-        BASE_IMAGE: ${SOLUTION_BASE_IMAGE}
-    deploy:
-      replicas: 0
-
   # Container used to run the MVP Rendering host.
   mvp-rendering:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-mvp-rendering:${VERSION:-latest}
     restart: ${DOCKER_RESTART}
     build:
-      context: ./docker/build/rendering
-      target: ${BUILD_CONFIGURATION}
+      context: ../
+      dockerfile: ./local-containers/docker/build/mvp/Dockerfile
       args:
-        DEBUG_BASE_IMAGE: ${NETCORE_BUILD_IMAGE}
-        RELEASE_BASE_IMAGE: ${NETCORE_RELEASE_IMAGE}
-        SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
-        ENTRYPOINT_ASSEMBLY: Mvp.Project.MvpSite.dll
-        ARTIFACTS_FOLDER: /artifacts/mvp-rendering
-    volumes:
-      - ${LOCAL_DEPLOY_PATH}\mvp-rendering:C:\deploy
+        BASE_IMAGE: ${NETCORE_BUILD_IMAGE}
+        PROJECT_FILE: ./headapps/MvpSite/Mvp.Project.MvpSite.Rendering/Mvp.Project.MvpSite.Rendering.csproj
     environment:
       ENTRYPOINT_ASSEMBLY: Mvp.Project.MvpSite.dll
       ASPNETCORE_ENVIRONMENT: "Development"
@@ -98,7 +79,6 @@ services:
       Okta__AuthorizationServerId: ${OKTA_AUTH_SERVER_ID}
       MvpSelectionsApiClient__BaseAddress: ${MVP_SELECTIONS_API}
     depends_on:
-      - solution
       - cm
     labels:
       - "traefik.enable=true"
@@ -140,13 +120,11 @@ services:
   cm:
     image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xmcloud-cm:${VERSION:-latest}
     build:
-      context: ./docker/build/cm
+      context: ../
+      dockerfile: ./local-containers/docker/build/cm/Dockerfile
       args:
         PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xmcloud-cm:${SITECORE_VERSION}
-        SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
         TOOLS_IMAGE: ${TOOLS_IMAGE}:${SITECORE_VERSION}
-    depends_on:
-      - solution
     volumes:
       - ${LOCAL_DEPLOY_PATH}\platform:C:\deploy
       - ${LOCAL_DATA_PATH}\cm:C:\inetpub\wwwroot\App_Data\logs

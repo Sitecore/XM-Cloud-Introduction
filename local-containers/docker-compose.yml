@@ -104,6 +104,8 @@ services:
       MEDIA_REQUEST_PROTECTION_SHARED_SECRET: ${MEDIA_REQUEST_PROTECTION_SHARED_SECRET}
       LOG_LEVEL_VALUE: ${LOG_LEVEL_VALUE}
       SITECORE_FedAuth_dot_Auth0_dot_IsLocal: ${SITECORE_FedAuth_dot_Auth0_dot_IsLocal}
+      SITECORE_XmCloud_dot_OrganizationId: ${SITECORE_XmCloud_dot_OrganizationId}
+      SITECORE_XmCloud_dot_TenantId: ${SITECORE_XmCloud_dot_TenantId}
       SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl: ${SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl}
       SITECORE_FedAuth_dot_Auth0_dot_ClientId: ${SITECORE_FedAuth_dot_Auth0_dot_ClientId}
       SITECORE_FedAuth_dot_Auth0_dot_ClientSecret: ${SITECORE_FedAuth_dot_Auth0_dot_ClientSecret}
