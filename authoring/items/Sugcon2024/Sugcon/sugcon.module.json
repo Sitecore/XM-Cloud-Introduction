@@ -2,6 +2,7 @@
   "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
   "namespace": "Project.Sugcon2024.Sugcon",
   "items": {
+    "path": "Sugcon",
     "includes": [
       {
         "name": "Templates",
