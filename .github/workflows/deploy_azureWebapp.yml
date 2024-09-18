@@ -34,7 +34,7 @@ jobs:
           cd ${{ inputs.projectLocation }}
           dotnet restore
           dotnet build --configuration ${{ inputs.buildConfiguration }}
-          dotnet publish -c ${{ inputs.buildConfiguration }} -o '../../../../publish/${{ inputs.assetName }}' 
+          dotnet publish -c ${{ inputs.buildConfiguration }} -o '../../../publish/${{ inputs.assetName }}' 
       - name: 'Run Azure webapp deploy action using publish profile credentials'
         uses: azure/webapps-deploy@v2
         with: 
