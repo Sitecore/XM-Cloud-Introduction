@@ -164,12 +164,6 @@ Add-HostsEntry "xmcloudcm.localhost"
 Add-HostsEntry "www.nextjs-starter.localhost"
 
 ################################
-# Generate Sitecore Api Key
-################################
-$sitecoreApiKey = (New-Guid).Guid
-Set-EnvFileVariable "SITECORE_API_KEY" -Value $sitecoreApiKey -Path $envFileLocation
-
-################################
 # Generate JSS_EDITING_SECRET
 ################################
 $jssEditingSecret = Get-SitecoreRandomString 64 -DisallowSpecial
