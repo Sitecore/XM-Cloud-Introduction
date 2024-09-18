@@ -10,4 +10,5 @@ COPY ./nuget.config ./../
 
 COPY ./headapps/MvpSite ./
 
+WORKDIR /app/Mvp.Project.MvpSite.Rendering
 CMD ["dotnet", "watch", "run", -v, "--urls", "http://*:80"]

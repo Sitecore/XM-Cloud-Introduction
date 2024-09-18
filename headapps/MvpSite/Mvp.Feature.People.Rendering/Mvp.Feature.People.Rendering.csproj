@@ -24,7 +24,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\Configuration\rendering\Mvp.Foundation.Configuration.Rendering.csproj" />
+    <ProjectReference Include="..\Mvp.Foundation.Configuration.Rendering\Mvp.Foundation.Configuration.Rendering.csproj" />
   </ItemGroup>
 
 </Project>

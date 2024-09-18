@@ -65,7 +65,6 @@ services:
         BASE_IMAGE: ${NETCORE_BUILD_IMAGE}
         PROJECT_FILE: ./headapps/MvpSite/Mvp.Project.MvpSite.Rendering/Mvp.Project.MvpSite.Rendering.csproj
     environment:
-      ENTRYPOINT_ASSEMBLY: Mvp.Project.MvpSite.dll
       ASPNETCORE_ENVIRONMENT: "Development"
       ASPNETCORE_URLS: "http://*:80"
       MVP_RENDERING_EDITING_HOST_URI: "http://mvp-rendering"
@@ -78,6 +77,13 @@ services:
       Okta__ClientSecret: ${OKTA_CLIENT_SECRET}
       Okta__AuthorizationServerId: ${OKTA_AUTH_SERVER_ID}
       MvpSelectionsApiClient__BaseAddress: ${MVP_SELECTIONS_API}
+    ports:
+      - "80:80"
+    command: ["dotnet", "watch", "run", -v, "--urls", "http://*:80"]
+    volumes:
+      - .\..\headapps\MvpSite:c:\app
+      - c:\app\obj
+      - c:\app\bin
     depends_on:
       - cm
     labels:
