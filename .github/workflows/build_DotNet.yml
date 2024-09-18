@@ -6,6 +6,9 @@ on:
       buildConfiguration:
         required: true
         type: string
+      solution:
+        required: true
+        type: string
     
 jobs:
   build-dotnet:
@@ -20,6 +23,6 @@ jobs:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.6
     - name: Restore NuGet packages
-      run: nuget restore src\XmCloudIntroduction.sln
+      run: nuget restore ${{ inputs.solution }}
     - name: Build
-      run: msbuild src\XmCloudIntroduction.sln /p:Configuration=${{ inputs.buildConfiguration }}
+      run: msbuild ${{ inputs.solution }} /p:Configuration=${{ inputs.buildConfiguration }}

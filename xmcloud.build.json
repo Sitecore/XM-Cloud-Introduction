@@ -4,12 +4,12 @@
   },
   "buildTargets": 
   [
-    "./src/Environment/platform/Mvp.Environment.Platform.csproj",
-    "./src/Project/MvpSite/platform/Mvp.Project.MvpSite.Platform.csproj"
+    "./authoring/platform/Mvp.Environment.Platform.csproj",
+    "./authoring/platform/Mvp.Project.MvpSite.Platform.csproj"
   ],
   "renderingHosts": {
     "sugcon2024eu": {
-      "path": "./src/Project/Sugcon2024/Sugcon",
+      "path": "./headapps/Sugcon2024",
       "nodeVersion": "20.10.0",
       "jssDeploymentSecret": "110F1C44A496B45478640DD36F80C18C9",
       "enabled": true,
