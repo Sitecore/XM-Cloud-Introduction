@@ -4,8 +4,8 @@
   },
   "buildTargets": 
   [
-    "./authoring/platform/Mvp.Environment.Platform.csproj",
-    "./authoring/platform/Mvp.Project.MvpSite.Platform.csproj"
+    "./authoring/platform/Mvp.Environment.Platform/Mvp.Environment.Platform.csproj",
+    "./authoring/platform/Mvp.Project.MvpSite.Platform/Mvp.Project.MvpSite.Platform.csproj"
   ],
   "renderingHosts": {
     "sugcon2024eu": {
