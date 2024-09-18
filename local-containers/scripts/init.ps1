@@ -45,10 +45,7 @@ Param (
     [Parameter(HelpMessage = "SUGCON NA CPD Target URL.")]
     [string]$SUCGON_NA_CDP_TARGET_URL,
     [Parameter(HelpMessage = "SUGCON NA CPD Point of Sale.")]
-    [string]$SUCGON_NA_CDP_POINTOFSALE,
-    [Parameter(Mandatory = $false, HelpMessage = "Specifies os version of the base image.")]
-    [ValidateSet("ltsc2019", "ltsc2022")]
-    [string]$baseOs = "ltsc2022"
+    [string]$SUCGON_NA_CDP_POINTOFSALE
 )
 
 $ErrorActionPreference = "Stop";
