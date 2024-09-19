@@ -1,6 +1,7 @@
-# 📝 Introduction
-**This repository is not a Starter Kit or Template Solution**, you should not clone this repository for the purposes of starting a new Sitecore project. This is intended as a reference example of a Sitecore XM Cloud implementation.
+# 🚫 Not a Starter Kit or Template Solution
+**This repository is not a Starter Kit or Template Solution**, you should not clone this repository for the purposes of starting a new Sitecore project. This is intended as a reference example of a Sitecore XM Cloud implementation. If you want to learn XM Cloud, this repository is not a good place to start. You should begin by reading the [XM CLoud Getting Started Guide](https://doc.sitecore.com/xmc/en/developers/xm-cloud/getting-started-with-xm-cloud.html).
 
+# 📝 Introduction
 This repository contains the codebase for a series of sites managed by Sitecore. You will find the following sites in this repository:
 - [Sitecore MVP Site](https://mvp.sitecore.com)
 - [SUGCON EU Site](https://europe.sugcon.events)
@@ -21,10 +22,10 @@ This repository contains the codebase for a series of sites managed by Sitecore.
 ## Okta Account
 If you wish to run the MVP Site you will need to provide Okta configuration details. You can generate these values for yourself by [Signing up for an Okta Developer Account](https://developer.okta.com/signup/)
 
-## 🏃‍♀️‍➡️ Running the repository
+# 🏃‍♀️‍➡️ Running the repository
 To run this you will need to deploy this project to an XM Cloud environment. 
 
-### Setting up an XM Cloud Environment
+## Setting up an XM Cloud Environment
 This can be achieved using the CLI by following the steps below from within PowerShell:
 - Install the Sitecore CLI
   - `dotnet tool install`
@@ -42,18 +43,25 @@ This can be achieved using the CLI by following the steps below from within Powe
 
 If you want more information about the Cloud plugin for the CLI then you access it on the [documentation site](https://doc.sitecore.com/xmc/en/developers/xm-cloud/the-cloud-deployment-command.html).
 
-### Running the MVP Site
-
-#### Populating the Application Settings
-To run the MVP site you will need to populate the `./headapps/MvpSite/Mvp.Project.MvpSite.Rendering/appsettings.json`. You will need to provide the following values:
+## Running the MVP Site
+To run the MVP site you will need to populate the `./headapps/MvpSite/Mvp.Project.MvpSite.Rendering/appsettings.Development.json`. You will need to provide the Sitecore instance, and Okta sections, it's completed it look something like:
 
 ```json
-"Sitecore": {
-    "InstanceUri": "<<The domain for the CM instance you deployed earlier>>",
-    "ExperienceEdgeToken": "B2F8A9B9-7203-4DCF-9314-8B28B043347E"
+  "Sitecore": {
+    "InstanceUri": "https://xmc-XXX-XXX-XXX.sitecorecloud.io/",
+    "LayoutServicePath": "/sitecore/api/graph/edge",
+    "DefaultSiteName": "mvp-site",
+    "NotFoundPage": "/404",
+    "ExperienceEdgeToken": "{B2F8A9B9-7203-4DCF-9314-8B28B043347E}"
+  },
+  ...
+  "Okta" : {
+    "OktaDomain": "https://your-okta-domain.com",
+    "ClientId": "YOUR_OKTA_CLIENT_ID",
+    "ClientSecret": "YOUR_OKTA_CLIENT_ID",
+    "AuthorizationServerId": "YOUR_OKTA_CLIENT_ID"
   },
 ```
-
 After completing the populate the `appsettings.json` above you will be able to run the MVP Site either directly from within Visual Studio, or by using the DotNet CLI.
 
 - To run from within Visual Studio, open the `./headapps/MvpSite/XMC-Introduction-MVP.sln`, ensure that the `Mvp.Project.MvpSite.Rendering` project is set as your StartUp Project, then hit F5.
@@ -61,25 +69,33 @@ After completing the populate the `appsettings.json` above you will be able to r
 - To run from the DotNet CLI, open a new terminal window and navigate to the `./headapps/MvpSite/Mvp.Project.MvpSite.Rendering` folder, then run `dotnet restore && dotnet run`
   - You can then access the site at `https://localhost:5001` or `http://localhost:5000`
 
-### Running the SUGCON Sites
+## Running the SUGCON Sites
 
 After completing the init setup above you will be able to run the SUGCON Sites directly using the NPM CLI, they are all built using SXA Headless so the process is the same for each of them.
 
 - Log into the [XM Cloud Deploy Application](https://deploy.sitecorecloud.io/)
 - Locate the Project and Environment you created earlier
+- Open the `Developer settings` tab
 - Choose the Site you wish to load from the dropdown, e.g. EU for the SUGCON Europe Site.
-- Copy the Environment variables that are displayed there
 - Create a new `.env` file in the root of the `./headapps/Sugcon2024` folder
-- Paste the Environment variables into the `.env` file you just created.
-- Start the Default Site
-   - Open a new terminal window and navigate to the `./headapps/Sugcon2024` folder.
-   - Run the following command to install dependencies and start the site:
-     ```bash
-     npm i && npm run start:connected
-     ```
-   - You can then access the default site at [http://localhost:3000](http://localhost:3000).
+- Populate the newly created `.env` file with the values from the `Developer settings` tab, it should look something like:
 
-- Switching Between SUGCON Sites
+  ```env
+  JSS_EDITING_SECRET=XXXX
+  JSS_APP_NAME=ANZ
+  SITECORE_API_HOST=https://xmc-XXX-XXX-XXX.sitecorecloud.io/
+  GRAPH_QL_ENDPOINT=https://xmc-XXX-XXX-XXX.sitecorecloud.io/sitecore/api/graph/edge
+  SITECORE_API_KEY=B2F8A9B9-7203-4DCF-9314-8B28B043347E
+  FETCH_WITH=GraphQL
+  ```
+- Open a new terminal window and navigate to the `./headapps/Sugcon2024` folder.
+- Run the following command to install dependencies and start the site:
+  ```bash
+  npm i && npm run start:connected
+  ```
+- You can then access the default site at [http://localhost:3000](http://localhost:3000).
+
+### Switching Between SUGCON Sites
    - To switch to another SUGCON site, update the `JSS_APP_NAME` variable in the `.env` file.
    - Available site options include:
      - `ANZ`
@@ -87,8 +103,6 @@ After completing the init setup above you will be able to run the SUGCON Sites d
      - `India`
      - `NA`
      - `Events`
-
-Simply change the `JSS_APP_NAME` in the `.env` file to your desired site, save the changes, and restart the site using the steps above.
 
 ## Disconnected offline development
 It is possible to mock a small subset of the XM Cloud Application elements to enable offline development. This can allow for a disconnected development experience, however it is recommend to work in the default connected mode.
