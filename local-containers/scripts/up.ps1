@@ -64,50 +64,56 @@ if (-not $envCheck) {
     throw "$envCheckVariable does not have a value. Did you run 'init.ps1 -InitEnv'?"
 }
 
-if (-Not $SkipBuild) {
-    Write-Host "Keeping XM Cloud base image up to date" -ForegroundColor Green
-    docker pull "$($sitecoreDockerRegistry)sitecore-xmcloud-cm:$($sitecoreVersion)"
+try {  
+    if (-Not $SkipBuild) {
+        Write-Host "Keeping XM Cloud base image up to date" -ForegroundColor Green
+        docker pull "$($sitecoreDockerRegistry)sitecore-xmcloud-cm:$($sitecoreVersion)"
 
-    Write-Host "Keeping XM Cloud Tools image up to date" -ForegroundColor Green
-    docker pull "$($xmcloudDockerToolsImage):$($sitecoreVersion)"
+        Write-Host "Keeping XM Cloud Tools image up to date" -ForegroundColor Green
+        docker pull "$($xmcloudDockerToolsImage):$($sitecoreVersion)"
 
-    # Moving into the Local Containers Folder
-    Write-Host "Moving location into Local Containers folder..." -ForegroundColor Green
-    Push-Location $RepoRoot\local-containers
+        # Moving into the Local Containers Folder
+        Write-Host "Moving location into Local Containers folder..." -ForegroundColor Green
+        Push-Location $RepoRoot\local-containers
 
-    # Build all containers in the Sitecore instance, forcing a pull of latest base containers
-    Write-Host "Building containers..." -ForegroundColor Green
-    docker compose build
-    if ($LASTEXITCODE -ne 0) {
-        Write-Error "Container build failed, see errors above."
-    }
-}
-
-# Start the Sitecore instance
-Write-Host "Starting Sitecore environment, all roles running locally..." -ForegroundColor Green
-docker compose up -d
-
-# Wait for Traefik to expose CM route
-Write-Host "Waiting for CM to become available..." -ForegroundColor Green
-$startTime = Get-Date
-do {
-    Start-Sleep -Milliseconds 100
-    try {
-        $status = Invoke-RestMethod "http://localhost:8079/api/http/routers/cm-secure@docker" -TimeoutSec 600
-    }
-    catch {
-        if ($_.Exception.Response.StatusCode.value__ -ne "404") {
-            throw
+        # Build all containers in the Sitecore instance, forcing a pull of latest base containers
+        Write-Host "Building containers..." -ForegroundColor Green
+        docker compose build
+        if ($LASTEXITCODE -ne 0) {
+            Write-Error "Container build failed, see errors above."
         }
     }
-} while ($status.status -ne "enabled" -and $startTime.AddSeconds(600) -gt (Get-Date))
-if (-not $status.status -eq "enabled") {
-    $status
-    Write-Error "Timeout waiting for Sitecore CM to become available via Traefik proxy. Check CM container logs."
-}
 
-# Return to the original directory
-Pop-Location
+    # Start the Sitecore instance
+    Write-Host "Starting Sitecore environment, all roles running locally..." -ForegroundColor Green
+    docker compose up -d
+
+    # Wait for Traefik to expose CM route
+    Write-Host "Waiting for CM to become available..." -ForegroundColor Green
+    $startTime = Get-Date
+    do {
+        Start-Sleep -Milliseconds 100
+        try {
+            $status = Invoke-RestMethod "http://localhost:8079/api/http/routers/cm-secure@docker" -TimeoutSec 600
+        }
+        catch {
+            if ($_.Exception.Response.StatusCode.value__ -ne "404") {
+                throw
+            }
+        }
+    } while ($status.status -ne "enabled" -and $startTime.AddSeconds(600) -gt (Get-Date))
+    if (-not $status.status -eq "enabled") {
+        $status
+        Write-Error "Timeout waiting for Sitecore CM to become available via Traefik proxy. Check CM container logs."
+    }
+}
+catch {
+    Write-Error "An error occurred while attempting to build and run the docker containers, please see the log messages above."
+}
+finally {
+    # Return to the original directory
+    Pop-Location
+}
 
 Write-Host "Restoring Sitecore CLI..." -ForegroundColor Green
 dotnet tool restore
