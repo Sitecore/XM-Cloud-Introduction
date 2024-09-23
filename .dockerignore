@@ -6,6 +6,7 @@
 .sitecore
 build
 docker
+local-containers
 packages
 **/bin/
 **/obj/
@@ -24,4 +25,7 @@ docker-compose*
 scjssconfig.json
 **/*.yml
 **/*.module.json
+**/*.user
+**/*.suo
+**/*.scindex
 sitecore.json

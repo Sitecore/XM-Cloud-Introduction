@@ -19,6 +19,8 @@ Thumbs.db
 *.exe
 *.pdb
 *.user
+# Make exception for Feature.User folder
+!authoring/items/Mvp/Feature.User
 *.aps
 *.pch
 *.vspscc
@@ -45,20 +47,6 @@ _ReSharper*/
 
 # Nuget packages folder
 packages/
-
-# Docker folders
-/docker/data/cm/*
-!/docker/data/cm/.gitkeep
-/docker/data/sql/*
-!/docker/data/sql/.gitkeep
-/docker/data/solr/*
-!/docker/data/solr/.gitkeep
-/docker/deploy/platform/*
-!/docker/deploy/platform/.gitkeep
-/docker/deploy/mvp-rendering/*
-!/docker/deploy/mvp-rendering/.gitkeep
-/docker/traefik/certs/*.pem
-/docker/build/*
 
 .vercel
 xmcloud.plugin.pre-release.json
