@@ -7,14 +7,14 @@ on:
       - .github/workflows/CI-CD_MVP.yml
       - .github/workflows/build_DotNet.yml
       - .github/workflows/deploy_azureWebapp.yml
-      - 'src/**/rendering/**'
+      - 'headapps/MvpSite/**'
   pull_request:
     branches: [ main ]
     paths:
       - .github/workflows/CI-CD_MVP.yml
       - .github/workflows/build_DotNet.yml
       - .github/workflows/deploy_azureWebapp.yml
-      - 'src/**/rendering/**'
+      - 'headapps/MvpSite/**'
 
 jobs:
 
@@ -22,6 +22,7 @@ jobs:
     uses: ./.github/workflows/build_DotNet.yml
     with:
       buildConfiguration: Release
+      solution: headapps/MvpSite/XMC-Introduction-MVP.sln
 
   deploy-mvp-staging:
     uses: ./.github/workflows/deploy_azureWebapp.yml
@@ -29,7 +30,7 @@ jobs:
     if: github.repository_owner == 'Sitecore' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push') || (github.event_name == 'workflow_dispatch')) 
     with:
       buildConfiguration: Debug
-      projectLocation: src/Project/MvpSite/rendering
+      projectLocation: headapps/MvpSite/Mvp.Project.MvpSite.Rendering
       assetName: Mvp-Staging
       webAppName: Mvp-Staging
     secrets:
@@ -41,7 +42,7 @@ jobs:
     uses: ./.github/workflows/deploy_azureWebapp.yml
     with:
       buildConfiguration: Release
-      projectLocation: src/Project/MvpSite/rendering
+      projectLocation: headapps/MvpSite/Mvp.Project.MvpSite.Rendering
       assetName: Mvp-prod
       webAppName: Mvp-Production
     secrets:

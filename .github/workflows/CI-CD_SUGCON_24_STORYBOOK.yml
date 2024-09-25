@@ -7,14 +7,14 @@ on:
       - .github/workflows/CI-CD_SUGCON_24_STORYBOOK.yml
       - .github/workflows/build_NextJs.yml
       - .github/workflows/deploy_vercel.yml
-      - 'src/Project/Sugcon2024/Sugcon/**'
+      - 'headapps/Sugcon2024/**'
   pull_request:
     branches: [ main ]
     paths:
       - .github/workflows/CI-CD_SUGCON_24_STORYBOOK.yml
       - .github/workflows/build_NextJs.yml
       - .github/workflows/deploy_vercel.yml
-      - 'src/Project/Sugcon2024/Sugcon/**'
+      - 'headapps/Sugcon2024/**'
 
 jobs:
 
@@ -22,7 +22,7 @@ jobs:
     if: github.ref != 'refs/heads/main'
     uses: ./.github/workflows/build_NextJs_Storybook.yml
     with:
-      workingDirectory: ./src/Project/Sugcon2024/Sugcon
+      workingDirectory: ./headapps/Sugcon2024
 
   deploy-sugcon24-storybook:
     uses: ./.github/workflows/deploy_vercel.yml

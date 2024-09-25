@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp8.0</TargetFramework>
+		<UserSecretsId>{BB638E63-026A-4E83-A108-6DACB910C4B0}</UserSecretsId>
+		<SitecoreRoleType>rendering</SitecoreRoleType>
+		<IsDeploymentModule>true</IsDeploymentModule>
+		<OutputFolderName>mvp-rendering</OutputFolderName>
+		<DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+		<DockerfileContext>..\..\..\..\..</DockerfileContext>
+		<AssemblyName>Mvp.Project.MvpSite</AssemblyName>
+		<RootNamespace>Mvp.Project.MvpSite</RootNamespace>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+	</PropertyGroup>
+
+	<Target Name="FixDotnetWatch" AfterTargets="_CoreCollectWatchItems">
+		<ItemGroup>
+			<_WatchRelativePath Include="@(Watch)" Condition="'%(Identity)' != '%(Watch.FullPath)'" />
+			<Watch Remove="@(_WatchRelativePath)" />
+			<Watch Include="%(_WatchRelativePath.FullPath)" />
+		</ItemGroup>
+	</Target>
+
+	<ItemGroup>
+	  <Content Remove="compilerconfig.json" />
+	  <Content Remove="wwwroot\sass\**\*.scss" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <_WebToolingArtifacts Remove="Properties\PublishProfiles\Local.pubxml" />
+	</ItemGroup> 
+
+	<ItemGroup>
+	  <None Include="compilerconfig.json" />
+	  <None Include="wwwroot\sass\**\*.scss" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="BuildWebCompiler" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+		<PackageReference Include="Microsoft.AspNetCore.Session" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+		<PackageReference Include="Microsoft.Extensions.Http" />
+		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" />
+
+    <PackageReference Include="Sitecore.AspNetCore.SDK.LayoutService.Client" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.RenderingEngine" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.ExperienceEditor" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Mvp.Feature.BasicContent.Rendering\Mvp.Feature.BasicContent.Rendering.csproj" />
+	  <ProjectReference Include="..\Mvp.Feature.Navigation.Rendering\Mvp.Feature.Navigation.Rendering.csproj" />
+	  <ProjectReference Include="..\Mvp.Feature.People.Rendering\Mvp.Feature.People.Rendering.csproj" />
+	  <ProjectReference Include="..\Mvp.Feature.Selections.Rendering\Mvp.Feature.Selections.Rendering.csproj" />
+	  <ProjectReference Include="..\Mvp.Feature.Social.Rendering\Mvp.Feature.Social.Rendering.csproj" />
+	  <ProjectReference Include="..\Mvp.Feature.User.Rendering\Mvp.Feature.User.Rendering.csproj" />
+	  <ProjectReference Include="..\Mvp.Foundation.Configuration.Rendering\Mvp.Foundation.Configuration.Rendering.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,40 @@
+﻿---
+ID: "5a09be2d-9655-4af9-8073-d452e5b168cf"
+Parent: "2155153a-b5ec-4eac-b1d9-2b5cd6ad2fc6"
+Template: "2155153a-b5ec-4eac-b1d9-2b5cd6ad2fc6"
+Path: /sitecore/templates/Project/Sugcon2024/Sponsors/Sponsor Folder/__Standard Values
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/16x16/folder.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {3CAA9812-E5CF-488E-9546-ECAA263C8A14}
+    {2155153A-B5EC-4EAC-B1D9-2B5CD6AD2FC6}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240228T141422Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\U0zm6N0Wat
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\U0zm6N0Wat
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b8f86aa0-8c90-4c3d-9508-d3df01752d06"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\U0zm6N0Wat
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240228T141506Z

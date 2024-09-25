@@ -1,0 +1,44 @@
+﻿---
+ID: "9200ff7c-b5ca-4787-91c4-55ec0cd90532"
+Parent: "27731bab-41d9-4b88-b2d3-bd904a627573"
+Template: "76da0a8d-fc7e-42b2-af1e-205b49e43f98"
+Path: /sitecore/content/Sugcon2024/EU/Presentation/Available Renderings/Basic Components
+SharedFields:
+- ID: "715ae6c0-71c8-4744-ab4f-65362d20ad65"
+  Hint: Renderings
+  Value: |
+    {4718D9E1-E2BC-4FDD-8305-4CBA3DF7466B}
+    {3F73A97B-BFA5-4F66-B99C-D27A7A36832B}
+    {53331DB4-9E80-4727-B7A6-2617BEA59142}
+    {53238441-0A66-46B8-BAE6-34A771BFF798}
+    {AB87F73E-6532-41CD-8234-D0E40DE84D90}
+    {B2ABBD0A-B9C5-4DA2-A0F4-40C24E2EBE39}
+    {CD6AD0C7-2D3E-4815-93B4-E6F4B88580AA}
+    {66DF59E9-F066-42F2-8F67-3E3F50B6E585}
+    {0704F498-1FF6-43A1-8B6A-CDD2BEA7A7CF}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240220T125437Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\UzWooIJE3y
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\UzWooIJE3y
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ddbdcd09-bc5d-4c73-a9da-008f396b8de3"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sebastian.winter@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240321T122947Z

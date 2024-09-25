@@ -1,0 +1,70 @@
+﻿---
+ID: "2f04937c-9094-4872-b5c5-157b2815bdf3"
+Parent: "9f4ab54a-195d-4c88-9bc0-10d0a1885b3a"
+Template: "fd2059fd-6043-4dfe-8c04-e2437ce87634"
+Path: /sitecore/content/Sugcon2024/Shared/Presentation/Partial Designs/Header
+SharedFields:
+- ID: "55faae90-3bba-4f7f-96fe-13c3f40055ff"
+  Hint: Signature
+  Value: header
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{E8925FF7-87A3-4FCC-859D-8DAADE59CDE7}" />
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{C123A7F7-7187-464C-82AB-BC343CD151F2}"
+          p:before="*"
+          s:ds="query:$site/Data/Images/Logos/Header"
+          s:id="{83D0E443-F5BB-4140-8152-BE180E05A225}"
+          s:par="GridParameters&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=1"
+          s:ph="headless-header"
+          s:ccb="Clear on publish" />
+        <r
+          uid="{C121B676-B3D6-4DFE-86CB-D98B939A2189}"
+          p:after="r[@uid='{C123A7F7-7187-464C-82AB-BC343CD151F2}']"
+          s:ds=""
+          s:id="{B1D977D1-85B6-489B-8AD5-24F32FF63F97}"
+          s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames=%7BC6BA2BCB-25E4-4F9E-B98D-65FB74F28335%7D&amp;Styles=%7B73830EF3-2D6D-449C-A174-EBA98EB7DC81%7D&amp;NavigationRoot&amp;LevelFrom=%7B1BB88840-5FB3-4353-AD8D-81136F6FF75A%7D&amp;LevelTo=%7BA59325BB-5A27-46F9-8110-9D499715F3BE%7D&amp;Filter=%7BD063E9D1-C7B5-4B1E-B31E-69886C9C59F5%7D&amp;Flattened&amp;AddRoot&amp;SerializerFieldNames&amp;RenderingIdentifier&amp;CSSStyles"
+          s:ph="headless-header" />
+        <r
+          uid="{4AC045CD-1F9D-4DB7-9711-76096ACA6E80}"
+          p:after="*[1=2]"
+          s:ds="query:$site/Data/Links/Header CTA"
+          s:id="{55493A56-C60D-44D2-8E5D-BAEFC399938E}"
+          s:par="GridParameters&amp;FieldNames=%7B338D9B47-AC81-404A-A470-752675BDE609%7D&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
+          s:ph="/headless-header/button-link-{C121B676-B3D6-4DFE-86CB-D98B939A2189}-0" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240123T184027Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\UOUBIWQRx7
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\UOUBIWQRx7
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "129b17e2-bea1-46b1-92b3-3aca19c0f1bd"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\chet.potvin@merkle.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240419T192017Z
