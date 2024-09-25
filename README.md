@@ -44,7 +44,8 @@ This can be achieved using the CLI by following the steps below from within Powe
 If you want more information about the Cloud plugin for the CLI then you access it on the [documentation site](https://doc.sitecore.com/xmc/en/developers/xm-cloud/the-cloud-deployment-command.html).
 
 ## Running the MVP Site
-To run the MVP site you will need to populate the `./headapps/MvpSite/Mvp.Project.MvpSite.Rendering/appsettings.Development.json`. You will need to provide the Sitecore instance, and Okta sections, it's completed it look something like:
+To run the MVP site you will need to create a Development instance of your settings.
+To this duplicate the `./headapps/MvpSite/Mvp.Project.MvpSite.Rendering/appsettings.json` and name it `appsettings.Development.json`. Then provide the Sitecore instance, and Okta sections, it's completed it look something like:
 
 ```json
   "Sitecore": {
@@ -62,7 +63,7 @@ To run the MVP site you will need to populate the `./headapps/MvpSite/Mvp.Projec
     "AuthorizationServerId": "YOUR_OKTA_CLIENT_ID"
   },
 ```
-After completing the populate the `appsettings.json` above you will be able to run the MVP Site either directly from within Visual Studio, or by using the DotNet CLI.
+You will be able to run the MVP Site either directly from within Visual Studio, or by using the DotNet CLI.
 
 - To run from within Visual Studio, open the `./headapps/MvpSite/XMC-Introduction-MVP.sln`, ensure that the `Mvp.Project.MvpSite.Rendering` project is set as your StartUp Project, then hit F5.
   - The site should then be started loaded in the browser automatically
