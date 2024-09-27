@@ -52,4 +52,4 @@ packages/
 xmcloud.plugin.pre-release.json
 
 # developer configs
-headapps/MvpSite/Mvp.Project.MvpSite.Rendering/appsettings.Development.json
+appsettings.Development.json

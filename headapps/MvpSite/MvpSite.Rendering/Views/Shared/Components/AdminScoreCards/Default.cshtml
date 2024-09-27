@@ -1,0 +1,98 @@
+﻿@using Mvp.Selections.Api.Model
+@using Mvp.Selections.Domain
+@using MvpSite.Rendering.Models.Admin
+@model MvpSite.Rendering.Models.Admin.ScoreCardsModel
+
+<div class="mvp-fs-adminscorecards col-12 bg-white">
+    <h2 asp-for="TitleLabel"></h2>
+    <form>
+        <div class="form-group">
+            <label asp-for="SelectedSelectionId">
+                @(Model.IsEditing ? Html.Raw(Model.SelectionLabel?.EditableMarkup) : Model.SelectionLabel?.Value)
+            </label>
+            <span class="text-danger">*</span>
+            <select asp-for="SelectedSelectionId" class="form-control">
+                @foreach (Selection selection in Model.Selections.OrderByDescending(s => s.Year))
+                {
+                    <option value="@selection.Id">@selection.Year</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="SelectedMvpTypeId">
+                @(Model.IsEditing ? Html.Raw(Model.MvpTypeLabel?.EditableMarkup) : Model.MvpTypeLabel?.Value)
+            </label>
+            <span class="text-danger">*</span>
+            <select asp-for="SelectedMvpTypeId" class="form-control">
+                @foreach (MvpType mvpType in Model.MvpTypes)
+                {
+                    <option value="@mvpType.Id">@mvpType.Name</option>
+                }
+            </select>
+        </div>
+        <button asp-for="SubmitLabel" type="submit" class="btn btn-primary"></button>
+    </form>
+    <br />
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th asp-for="NameTableHeader"></th>
+            <th asp-for="CountryTableHeader"></th>
+            <th asp-for="ReviewCountTableHeader"></th>
+            <th asp-for="AverageTableHeader"></th>
+            <th asp-for="MedianTableHeader"></th>
+            <th asp-for="MinTableHeader"></th>
+            <th asp-for="MaxTableHeader"></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.ScoreCards.Count; i++)
+            {
+                ScoreCard card = Model.ScoreCards[i];
+                Title? title = Model.Titles.FirstOrDefault(t => t.Application.Id == card.Applicant?.ApplicationId);
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>
+                        @if (!string.IsNullOrWhiteSpace(card.Applicant?.ImageUri?.ToString()))
+                        {
+                            <img src="@card.Applicant.ImageUri" alt="@card.Applicant.Name" />
+                        }
+                        else
+                        {
+                            <i class="fa fa-user"></i>
+                        }
+                    </td>
+                    <td>
+                        @card.Applicant?.Name
+                        @if (title != null)
+                        {
+                            <span class="badge badge-success">
+                                @(Model.IsEditing ? Html.Raw(Model.AwardedLabel?.EditableMarkup) : Model.AwardedLabel?.Value)
+                            </span>
+                        }
+                    </td>
+                    <td>@card.Applicant?.Country?.Name</td>
+                    <td>@card.ReviewCount</td>
+                    <td style="color: @ScoreCardsModel.Color(card.Average);">@card.Average%</td>
+                    <td style="color: @ScoreCardsModel.Color(card.Median);">@card.Median%</td>
+                    <td style="color: @ScoreCardsModel.Color(card.Min);">@card.Min%</td>
+                    <td style="color: @ScoreCardsModel.Color(card.Max);">@card.Max%</td>
+                    <td>
+                        <a asp-for="DetailLink" href="@Model.DetailLink?.Value.Href?applicationid=@card.Applicant?.ApplicationId" class="btn btn-secondary"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        @if (title != null)
+                        {
+                            <a asp-for="AwardLink" href="@Model.AwardLink?.Value.Href?titleid=@title.Id&isremove=true" class="btn btn-danger"><i class="fa fa-trophy" aria-hidden="true"></i></a>
+                        }
+                        else
+                        {
+                            <a asp-for="AwardLink" href="@Model.AwardLink?.Value.Href?applicationid=@card.Applicant?.ApplicationId&mvptypeid=@card.Applicant?.MvpType?.Id" class="btn btn-success"><i class="fa fa-trophy" aria-hidden="true"></i></a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

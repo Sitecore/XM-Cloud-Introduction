@@ -1,0 +1,12 @@
+﻿@model MvpSite.Rendering.Models.BaseModel
+
+<div class="col-12 bg-white">
+    <div class="alert alert-danger" role="alert">
+        <ul>
+            @foreach (string errorMessage in Model.ErrorMessages)
+            {
+                <li>@errorMessage</li>
+            }
+        </ul>
+    </div>
+</div>

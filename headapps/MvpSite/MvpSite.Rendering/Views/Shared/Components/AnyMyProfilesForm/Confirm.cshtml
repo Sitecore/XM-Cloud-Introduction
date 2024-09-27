@@ -1,0 +1,20 @@
+﻿@model MvpSite.Rendering.Models.Any.MyProfilesFormModel
+
+<div class="mvp-fs-anymyprofilesedit col-sm-12 col-md-6 bg-white">
+	<h2 asp-for="TitleLabel"></h2>
+    <p>
+        @if (Model.IsEditing)
+        {
+            @Html.Raw(Model.ConfirmMessageLabelFormat?.EditableMarkup)
+        }
+        else if (Model.ConfirmMessageLabelFormat != null)
+        {
+            @string.Format(Model.ConfirmMessageLabelFormat.Value, Model.RemoveProfileLink?.Name, Model.RemoveProfileLink?.Uri)
+        }
+    </p>
+    <form method="post">
+        <input asp-for="RemoveProfileLinkId" type="hidden"/>
+        <input asp-for="RemoveConfirmed" type="hidden" value="true"/>
+        <button asp-for="ConfirmLabel" type="submit" class="btn btn-danger"></button>
+    </form>
+</div>

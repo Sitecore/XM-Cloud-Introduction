@@ -1,0 +1,79 @@
+﻿@using Mvp.Selections.Domain
+@model MvpSite.Rendering.Models.Admin.ApplicationsOverviewModel
+
+<div class="mvp-fs-adminapplicationsoverview col-12 bg-white">
+    <h2 asp-for="TitleLabel"></h2>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th asp-for="SelectionTableHeader" scope="col"></th>
+                <th asp-for="CountryTableHeader" scope="col"></th>
+                <th asp-for="ApplicantTableHeader" scope="col"></th>
+                <th asp-for="StatusTableHeader" scope="col"></th>
+                <th asp-for="ContributionsTableHeader" scope="col"></th>
+                <th asp-for="LastModifiedTableHeader" scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <form id="filterForm">
+            <tr>
+                <td>
+                    <select asp-for="Filter!.SelectionId" class="w-100">
+                        <option value=""></option>
+                            @foreach (Selection selection in Model.Selections)
+                            {
+                            <option value="@selection.Id">@selection.Year</option>
+                            }
+                    </select>
+                </td>
+                <td>
+                    <select asp-for="Filter!.CountryId" class="w-100">
+                        <option value=""></option>
+                        @foreach (Country country in Model.Countries)
+                        {
+                            <option value="@country.Id">@country.Name</option>
+                        }
+                    </select>
+                </td>
+                <td><input asp-for="Filter!.ApplicantName" class="w-100" /></td>
+                <td>
+                    <select asp-for="Filter!.Status" class="w-100">
+                        <option value=""></option>
+                        @foreach (ApplicationStatus status in Enum.GetValues<ApplicationStatus>())
+                        {
+                            <option value="@status">@status</option>
+                        }
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+                <td><button type="submit" class="btn btn-primary"><i class="fa fa-filter"></i></button></td>
+            </tr>
+            </form>
+            @foreach (Application application in Model.List)
+            {
+                <tr>
+                    <td>@application.Selection.Year</td>
+                    <td>@application.Country.Name</td>
+                    <td>@application.Applicant.Name</td>
+                    <td>@application.Status</td>
+                    <td>@application.Contributions.Count</td>
+                    <td>@application.ModifiedOn?.ToString("u")</td>
+                    <td>
+                        <a asp-for="ReviewSettingsLink" href="@Model.ReviewSettingsLink?.Value.Href?id=@application.Id" class="btn btn-primary"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                        @if (application.Status == ApplicationStatus.Submitted)
+                        {
+                            <a href="@string.Format(Model.ReviewLinkFormat?.Value ?? string.Empty, application.Id.ToString("D"))" class="btn btn-primary" target="_blank"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        }
+                        <form id="remove@(application.Id)Form" method="post">
+                            <input asp-for="RemoveApplicationId" type="hidden" value="@application.Id"/>
+                        </form>
+                        <button type="submit" class="btn btn-danger" form="remove@(application.Id)Form"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <partial name="_Paging" />
+</div>
