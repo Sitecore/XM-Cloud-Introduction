@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Files", ".Solution Files", "{196B5D43-B228-4632-9BC3-EAAF79B4EDA5}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Packages.props = Directory.Packages.props
+		..\..\nuget.config = ..\..\nuget.config
 		..\..\README.md = ..\..\README.md
 		..\..\sitecore.json = ..\..\sitecore.json
 	EndProjectSection
