@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp8.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>Mvp.Feature.Selections</AssemblyName>
     <RootNamespace>Mvp.Feature.Selections</RootNamespace>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
