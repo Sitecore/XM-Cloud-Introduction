@@ -1,0 +1,13 @@
+{
+    "namespace": "Feature.User",
+    "items": {
+      "includes": [
+          {
+              "name": "layouts",
+              "path": "/sitecore/layout/Renderings/Feature/User",
+              "allowedPushOperations": "createUpdateAndDelete",
+              "scope": "itemAndDescendants"
+          }
+      ]
+    }
+  }

@@ -1,0 +1,125 @@
+services:
+  traefik:
+    isolation: ${TRAEFIK_ISOLATION}
+    image: ${TRAEFIK_IMAGE}
+    command:
+      - "--ping"
+      - "--api.insecure=true"
+      - "--providers.docker.endpoint=npipe:////./pipe/docker_engine"
+      - "--providers.docker.exposedByDefault=false"
+      - "--providers.file.directory=C:/etc/traefik/config/dynamic"
+      - "--entryPoints.websecure.address=:443"
+      - "--entryPoints.websecure.forwardedHeaders.insecure"
+    ports:
+      - "443:443"
+      - "8079:8080"
+    healthcheck:
+      test: ["CMD", "traefik", "healthcheck", "--ping"]
+    volumes:
+      - source: \\.\pipe\docker_engine\
+        target: \\.\pipe\docker_engine\
+        type: npipe
+      - ./traefik:C:/etc/traefik
+    depends_on:
+      cm:
+        condition: service_healthy
+  mssql:
+    isolation: ${ISOLATION}
+    image: ${SITECORE_NONPRODUCTION_DOCKER_REGISTRY}nonproduction/mssql-developer:2017-${EXTERNAL_IMAGE_TAG_SUFFIX}
+    environment:
+      SA_PASSWORD: ${SQL_SA_PASSWORD}
+      SITECORE_ADMIN_PASSWORD: ${SITECORE_ADMIN_PASSWORD}
+      ACCEPT_EULA: "Y"
+    ports:
+      - "14330:1433"
+    volumes:
+      - type: bind
+        source: .\mssql-data
+        target: c:\data
+  mssql-init:
+    isolation: ${ISOLATION}
+    image: ${SITECORE_DOCKER_REGISTRY}sitecore-xmcloud-mssql-init:${SITECORE_VERSION}
+    environment:
+      SQL_SERVER: ${SQL_SERVER}
+      SQL_ADMIN_LOGIN: ${SQL_SA_LOGIN}
+      SQL_ADMIN_PASSWORD: ${SQL_SA_PASSWORD}
+      SQL_DATABASE_PREFIX: ${SQL_DATABASE_PREFIX}
+      SITECORE_ADMIN_PASSWORD: ${SITECORE_ADMIN_PASSWORD}
+      POST_DEPLOYMENT_WAIT_PERIOD: 300
+    healthcheck:
+      test: ["CMD", "powershell", "-command", "if ([System.Environment]::GetEnvironmentVariable('DatabasesDeploymentStatus', 'Machine') -eq 'Complete') { exit 0 } else { exit 1}"]
+      start_period: 300s
+      interval: 5s
+    depends_on:
+      mssql:
+        condition: service_healthy
+  solr:
+    isolation: ${ISOLATION}
+    image: ${SITECORE_NONPRODUCTION_DOCKER_REGISTRY}nonproduction/solr:8.11.2-${EXTERNAL_IMAGE_TAG_SUFFIX}
+    ports:
+      - "8984:8983"
+    volumes:
+      - type: bind
+        source: .\solr-data
+        target: c:\data
+    environment:
+      SOLR_MODE: solrcloud
+    healthcheck:
+      test: ["CMD", "powershell", "-command", "try { $$statusCode = (iwr http://solr:8983/solr/admin/cores?action=STATUS -UseBasicParsing).StatusCode; if ($$statusCode -eq 200) { exit 0 } else { exit 1} } catch { exit 1 }"]
+  solr-init:
+    isolation: ${ISOLATION}
+    image: ${SITECORE_DOCKER_REGISTRY}sitecore-xmcloud-solr-init:${SITECORE_VERSION}
+    environment:
+      SITECORE_SOLR_CONNECTION_STRING: http://solr:8983/solr
+      SOLR_CORE_PREFIX_NAME: ${SOLR_CORE_PREFIX_NAME}
+    depends_on:
+      solr:
+        condition: service_healthy
+  cm:
+    isolation: ${ISOLATION}
+    image: ${SITECORE_DOCKER_REGISTRY}sitecore-xmcloud-cm:${SITECORE_VERSION}
+    depends_on:
+      mssql:
+        condition: service_healthy
+      solr-init:
+        condition: service_started
+    environment:
+      host: ${CM_HOST}
+      RENDERING_HOST_INTERNAL_URI: ${RENDERING_HOST_INTERNAL_URI}
+      Sitecore_AppSettings_instanceNameMode:define: default
+      Sitecore_ConnectionStrings_Core: Data Source=${SQL_SERVER};Initial Catalog=${SQL_DATABASE_PREFIX}.Core;User ID=${SQL_SA_LOGIN};Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Security: Data Source=${SQL_SERVER};Initial Catalog=${SQL_DATABASE_PREFIX}.Core;User ID=${SQL_SA_LOGIN};Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Master: Data Source=${SQL_SERVER};Initial Catalog=${SQL_DATABASE_PREFIX}.Master;User ID=${SQL_SA_LOGIN};Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Web: Data Source=${SQL_SERVER};Initial Catalog=${SQL_DATABASE_PREFIX}.Web;User ID=${SQL_SA_LOGIN};Password=${SQL_SA_PASSWORD}
+      Sitecore_ConnectionStrings_Solr.Search: http://solr:8983/solr;solrCloud=true
+      Sitecore_ConnectionStrings_AzureBlob: ${AZUREBLOB_SAS}
+      AzureStorageContainerName: ${AZUREBLOB_CONTAINER}
+      AzureStorageDefaultProvider: ${AZUREBLOB_DEFAULT_PROVIDER}
+      Sitecore_ConnectionStrings_ExperienceEdge: ${EXPEDGE_CONNECTION}
+      Sitecore_AppSettings_Telerik.AsyncUpload.ConfigurationEncryptionKey: ${TELERIK_ENCRYPTION_KEY}
+      Sitecore_AppSettings_Telerik.Upload.ConfigurationHashKey: ${TELERIK_ENCRYPTION_KEY}
+      Sitecore_AppSettings_Telerik.Web.UI.DialogParametersEncryptionKey: ${TELERIK_ENCRYPTION_KEY}
+      # Sitecore_License: ${SITECORE_LICENSE}
+      SOLR_CORE_PREFIX_NAME: ${SOLR_CORE_PREFIX_NAME}
+      MEDIA_REQUEST_PROTECTION_SHARED_SECRET: ${MEDIA_REQUEST_PROTECTION_SHARED_SECRET}
+      LOG_LEVEL_VALUE: ${LOG_LEVEL_VALUE}
+      SITECORE_FedAuth_dot_Auth0_dot_IsLocal: ${SITECORE_FedAuth_dot_Auth0_dot_IsLocal}
+      SITECORE_XmCloud_dot_OrganizationId: ${SITECORE_XmCloud_dot_OrganizationId}
+      SITECORE_XmCloud_dot_TenantId: ${SITECORE_XmCloud_dot_TenantId}
+      SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl: ${SITECORE_FedAuth_dot_Auth0_dot_RedirectBaseUrl}
+      SITECORE_FedAuth_dot_Auth0_dot_ClientId: ${SITECORE_FedAuth_dot_Auth0_dot_ClientId}
+      SITECORE_FedAuth_dot_Auth0_dot_ClientSecret: ${SITECORE_FedAuth_dot_Auth0_dot_ClientSecret}
+      SITECORE_FedAuth_dot_Auth0_dot_Domain: ${SITECORE_FedAuth_dot_Auth0_dot_Domain}
+      SITECORE_FedAuth_dot_Auth0_dot_Audience: ${SITECORE_FedAuth_dot_Auth0_dot_Audience}
+      SITECORE_FedAuth_dot_Auth0_dot_LogoutRedirect: ${SITECORE_FedAuth_dot_Auth0_dot_LogoutRedirect}
+    healthcheck:
+      test: ["CMD", "powershell", "-command", "C:/Healthchecks/Healthcheck.ps1"]
+      timeout: 300s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.middlewares.force-STS-Header.headers.forceSTSHeader=true"
+      - "traefik.http.middlewares.force-STS-Header.headers.stsSeconds=31536000"
+      - "traefik.http.routers.cm-secure.entrypoints=websecure"
+      - "traefik.http.routers.cm-secure.rule=Host(`${CM_HOST}`)"
+      - "traefik.http.routers.cm-secure.tls=true"
+      - "traefik.http.routers.cm-secure.middlewares=force-STS-Header"

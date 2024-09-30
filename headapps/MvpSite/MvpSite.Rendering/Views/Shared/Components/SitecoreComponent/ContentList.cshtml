@@ -1,0 +1,32 @@
+﻿@using MvpSite.Rendering.Models
+@model MvpSite.Rendering.Models.ContentList
+
+
+@if (!string.IsNullOrEmpty(Model.Title?.Value))
+{
+    <div class="col-12 col-lg-12 text-center">
+        <h2 asp-for="@Model.Title"></h2>
+    </div>
+}
+
+@{
+    string fileName = string.Empty;
+
+    switch (Model.ContentListType?.Id)
+    {
+        case var id when id == new Guid("E58A021E-74D2-471E-9EBA-B09616350605"): // White blocks
+            fileName = "_clFeatureBlock.cshtml";
+            break;
+        case var id when id == new Guid("92DD658A-76BE-437A-86E4-589DF627FBCC"): // MVP 3 columns
+            fileName = "_clMvpYearBlockThreeColumn.cshtml";
+            break;
+        case var id when id == new Guid("F0027CB2-8725-48EA-B85D-EB83E5216E5A"): // MVP 4 columns
+            fileName = "_clMvpYearBlockFourColumn.cshtml";
+            break;
+    }
+}
+
+@foreach (ContentListItem item in Model.Items ?? [])
+{
+    @await Html.PartialAsync(fileName, item)
+}

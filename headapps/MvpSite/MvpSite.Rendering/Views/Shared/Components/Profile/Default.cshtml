@@ -1,0 +1,37 @@
+﻿@using MvpSite.Rendering.Extensions
+@model MvpSite.Rendering.Models.Profile.ProfileViewModel
+
+@if (Model.Mvp != null)
+{
+    <section class="mvp-fp-profile bg-white">
+        <div class="container">
+            @if (Model.Mvp.ImageUri != null)
+            {
+                <img src="@Model.Mvp.ImageUri.AddGravatarSizing("250")" class="float-right w-25 ml-5" alt="@Model.Mvp.Name Avatar">
+            }
+            else
+            {
+                <img src="/images/mvp-base-user-grey.png" class="float-right w-25 ml-5" alt="@Model.Mvp.Name Avatar">
+            }
+            <div class="row">
+                <h2 asp-for="TitleLabel" class="col-12"></h2>
+                <h1 class="col-12 mb-xl-5">@Model.Mvp.Name</h1>
+            </div>
+            <div class="row mb-lg-5">
+                @if (Model.Mvp.Country != null)
+                {
+                    <p class="col-12"><i class="fa fa-globe" aria-hidden="true"></i> @Model.Mvp.Country?.Name</p>
+                }
+                <partial name="Components/Profile/_ProfileLinks" model="Model.Mvp.ProfileLinks" />
+            </div>
+            <div class="row mb-5">
+                <h3 asp-for="TitlesLabel" class="col-12"></h3>
+                <partial name="Components/Profile/_Titles" model="Model.Mvp.Titles" />
+            </div>
+            <div class="timeline row mb-5">
+                <h3 asp-for="TimelineLabel" class="col-12"></h3>
+                <partial name="Components/Profile/_Timeline" model="Model.GetTimelineEvents()" />
+            </div>
+        </div>
+    </section>
+}

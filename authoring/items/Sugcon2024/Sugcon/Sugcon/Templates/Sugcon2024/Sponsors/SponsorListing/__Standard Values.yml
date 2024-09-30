@@ -1,0 +1,34 @@
+﻿---
+ID: "7062a619-5c6a-4949-abc0-953f17b87f78"
+Parent: "b15b6056-c271-490b-972e-405750d7a9e7"
+Template: "b15b6056-c271-490b-972e-405750d7a9e7"
+Path: /sitecore/templates/Project/Sugcon2024/Sponsors/SponsorListing/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240228T142100Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\U0zm6N0Wat
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\U0zm6N0Wat
+    - ID: "7be32799-02e1-4132-914e-61796a028072"
+      Hint: Title
+      Value: $name
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d19532d7-36ee-40dc-83ed-0d09b4e6a651"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\U0zm6N0Wat
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240228T142103Z

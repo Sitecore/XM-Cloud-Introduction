@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MvpSite.Rendering</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Remove="compilerconfig.json" />
+	  <Content Remove="wwwroot\sass\**\*.scss" />
+	</ItemGroup> 
+
+	<ItemGroup>
+	  <None Include="compilerconfig.json" />
+	  <None Include="wwwroot\sass\**\*.scss" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="BuildWebCompiler" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+		<PackageReference Include="Microsoft.AspNetCore.Session" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+		<PackageReference Include="Microsoft.Extensions.Http" />
+		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" />
+
+    <PackageReference Include="Sitecore.AspNetCore.SDK.LayoutService.Client" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.RenderingEngine" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.ExperienceEditor" />
+
+    <PackageReference Include="System.ServiceModel.Syndication" />
+
+    <PackageReference Include="Markdig" />
+    <PackageReference Include="Mvp.Selections.Client" />
+
+    <PackageReference Include="Okta.AspNetCore" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+	</ItemGroup>
+
+</Project>

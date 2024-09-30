@@ -8,10 +8,8 @@ on:
     - .github/workflows/deploy_xmCloud.yml
     - .github/workflows/build_DotNet.yml
     - 'xmcloud.build.json'
-    - 'src/**/platform/**'
-    - 'src/**/items/**'
-    - 'src/Project/Sugcon2024/**'
-    - 'src/Project/Sugcon/**'
+    - 'authoring/**'
+    - 'headapps/Sugcon2024/**'
   pull_request:
     branches: [ main ]
     paths:
@@ -19,10 +17,8 @@ on:
     - .github/workflows/deploy_xmCloud.yml
     - .github/workflows/build_DotNet.yml
     - 'xmcloud.build.json'
-    - 'src/**/platform/**'
-    - 'src/**/items/**'
-    - 'src/Project/Sugcon2024/**'
-    - 'src/Project/Sugcon/**'
+    - 'authoring/**'
+    - 'headapps/Sugcon2024/**'
 
 jobs:
 
@@ -30,6 +26,7 @@ jobs:
     uses: ./.github/workflows/build_DotNet.yml
     with:
       buildConfiguration: Release
+      solution: authoring/platform/XMC-Introduction-Authoring.sln
 
   deploy-staging:
     uses: ./.github/workflows/deploy_xmCloud.yml

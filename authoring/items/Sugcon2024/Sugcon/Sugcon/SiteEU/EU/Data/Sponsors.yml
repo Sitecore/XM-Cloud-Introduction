@@ -1,0 +1,23 @@
+﻿---
+ID: "f80ea5c1-284c-4075-bb35-288305dad4e8"
+Parent: "968dab46-6eda-4775-8a0f-85037e2d92f2"
+Template: "2155153a-b5ec-4eac-b1d9-2b5cd6ad2fc6"
+Path: /sitecore/content/Sugcon2024/EU/Data/Sponsors
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240228T141636Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "af6ffe6b-b2dd-415f-a050-4fd047516bd9"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\U0zm6N0Wat
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240228T141636Z
