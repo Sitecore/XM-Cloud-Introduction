@@ -1,0 +1,29 @@
+﻿@using MvpSite.Rendering.Models
+@model MvpSite.Rendering.Models.MainNav
+
+<div class="main-nav">
+    <div class="container" id="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a href="/">
+                <img src="/images/sitecore.svg" class="logo d-inline-block align-top" alt="" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    @foreach (MainNavItems link in Model.Items ?? [])
+                    {
+                        if ((link.Fields?.IncludeInMenu?.Value ?? false) && 
+                            (!(link.Fields.RequiresAuthentication?.Value ?? false) || (link.Fields.RequiresAuthentication.Value && (User.Identity?.IsAuthenticated ?? false))))
+                        {
+                            <li class="nav-item mx-2">
+                                 <a class="nav-link" href="@link.Url" asp-for="@link">@link.Fields.MenuTitle?.Value</a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>

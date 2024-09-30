@@ -1,0 +1,24 @@
+﻿@using Mvp.Selections.Domain
+@model MvpSite.Rendering.Models.Admin.CountriesOverviewModel
+
+<div class="mvp-fs-admincountriesoverview col-12 bg-white">
+	<h2 asp-for="TitleLabel"></h2>
+	<table class="table table-striped table-hover">
+		<thead>
+		<tr>
+			<th asp-for="NameTableHeader"></th>
+			<th></th>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach (Country country in Model.List)
+		{
+			<tr>
+				<td>@country.Name</td>
+				<td></td>
+			</tr>
+		}
+		</tbody>
+	</table>
+	<partial name="_Paging" />
+</div>
