@@ -36,9 +36,12 @@ services:
       - nodejs
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.sugoneu-secure.entrypoints=websecure"
-      - "traefik.http.routers.sugoneu-secure.tls=true"
-      - "traefik.http.routers.sugoneu-secure.rule=Host(`${SUGCON_EU_HOST}`)"
+      - "traefik.http.routers.sugconevents-secure.entrypoints=websecure"
+      - "traefik.http.routers.sugconevents-secure.tls=true"
+      - "traefik.http.routers.sugconevents-secure.rule=Host(`${SUGCON_EVENTS_HOST}`)"
+      - "traefik.http.routers.sugconeu-secure.entrypoints=websecure"
+      - "traefik.http.routers.sugconeu-secure.tls=true"
+      - "traefik.http.routers.sugconeu-secure.rule=Host(`${SUGCON_EU_HOST}`)"
       - "traefik.http.routers.sugconanz-secure.entrypoints=websecure"
       - "traefik.http.routers.sugconanz-secure.tls=true"  
       - "traefik.http.routers.sugconanz-secure.rule=Host(`${SUGCON_ANZ_HOST}`)"
@@ -69,7 +72,7 @@ services:
       ASPNETCORE_URLS: "http://*:80"
       DOTNET_WATCH_RESTART_ON_RUDE_EDIT: true
       DOTNET_WATCH_SUPPRESS_LAUNCH_BROWSER: true
-      MVP_RENDERING_EDITING_HOST_URI: "http://mvp-rendering"
+      MVP_RENDERING_EDITING_HOST_URI: "${RENDERING_HOST_INTERNAL_URI}"
       Sitecore__InstanceUri: "http://cm"
       Sitecore__LayoutServicePath: "/sitecore/api/graph/edge"
       Sitecore__ExperienceEdgeToken: "{E2F3D43E-B1FD-495E-B4B1-84579892422A}"
@@ -146,17 +149,10 @@ services:
       SITECORE_Pages_Client_Host: ${SITECORE_Pages_Client_Host}
       SITECORE_Pages_CORS_Allowed_Origins: ${SITECORE_Pages_CORS_Allowed_Origins}
       SITECORE_GraphQL_CORS: ${SITECORE_GRAPHQL_CORS}
-      ## SugconEu Rendering Host
-      SUGCONEU_RENDERING_HOST_ENDPOINT_URI: "${SUGCON_EU_HOST_INTERNAL_URI}/api/editing/render"
-      SUGCONEU_RENDERING_HOST_PUBLIC_URI: "https://${SUGCON_EU_HOST}"
-      ## SugconAnzsugcon/ Rendering Host
-      SUGCONANZ_RENDERING_HOST_ENDPOINT_URI: "${SUGCON_ANZ_HOST_INTERNAL_URI}/api/editing/render"
-      SUGCONANZ_RENDERING_HOST_PUBLIC_URI: "https://${SUGCON_ANZ_HOST}"
       ## MVP Rendering Host
       MVP_RENDERING_HOST_PUBLIC_URI: "https://${MVP_RENDERING_HOST}"
       ## Development Environment Optimizations
       SITECORE_DEVELOPMENT_PATCHES: DevEnvOn,CustomErrorsOff,DebugOn,DiagnosticsOff,InitMessagesOff
       Sitecore_AppSettings_exmEnabled:define: "no" # remove to turn on EXM
-      MVP_RENDERING_EDITING_HOST_URI: "http://mvp-rendering/"
-      RENDERING_HOST_INTERNAL_URI: ${SUGCON_EU_HOST_INTERNAL_URI}
+      MVP_RENDERING_EDITING_HOST_URI: "${RENDERING_HOST_INTERNAL_URI}/"
     entrypoint: powershell -Command "& C:/tools/entrypoints/iis/XmCloudDevelopment.ps1"
