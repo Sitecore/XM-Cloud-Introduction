@@ -4,15 +4,7 @@
     h1 {
         position: relative;
 
-        &::after {
-            content: " ";
-            background-image: url(../images/icon-hero.png);
-            position: absolute;
-            width: 76px;
-            height: 53px;
-            top: -9px;
-            left: -93px;
-        }
+
     }
 
     h2 {
