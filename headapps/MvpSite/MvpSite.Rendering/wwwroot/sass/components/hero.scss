@@ -109,16 +109,15 @@
   
     p {
       font-size: 18px;
-      color: #707070;
+ 
       line-height: 39px;
       width: 58%;
   
       &.top {
-        font-weight: 900;
-        font-size: 14px;
-        color: #666;
-        letter-spacing: 2.8px;
-        text-transform: uppercase;
+        font-size: var(--sc-body-m);
+        line-height: var(--sc-body-m-lh);
+        letter-spacing: var(--sc-body-m-ls);
+        font-weight: 600;
       }
   
       &.author, &.past-reading {
@@ -208,8 +207,10 @@
       }
   
       h1 {
-        // font-size: 48px;
-        // line-height: 55px;
+        font-size: var(--sc-h3);
+        line-height: var(--sc-h3-lh);
+        letter-spacing: var(--sc-h3-ls);
+        font-weight: 500;
         width: 100%;
   
         &:after {

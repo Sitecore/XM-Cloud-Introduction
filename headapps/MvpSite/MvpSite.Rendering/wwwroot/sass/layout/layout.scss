@@ -12,7 +12,7 @@ $sc-gray5: #333333;
 /* Site Colors */
 $sc-topbar-bg: #666;
 $sc-content-bg: #F6F6F6;
-$sc-font-color: #212529;
+$sc-font-color: var(--sc-black);;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
@@ -40,8 +40,10 @@ body {
 
 
 p {
-    color: $sc-gray4;
-    font-size: 18px;
+    font-size: var(--sc-body-m);
+    line-height: var(--sc-body-m-lh);
+    letter-spacing: var(--sc-body-m-ls);
+    font-weight: 400;
 }
 
 select {
@@ -49,34 +51,50 @@ select {
     font-size: 18px;
 }
 
-i {
-    color: $sc-gray4;
-}
+
 
 h1 {
-    color: $sc-charcoal;
+    font-size: var(--sc-h2);
+    line-height: var(--sc-h2-lh);
+    letter-spacing: var(--sc-h2-ls);
+    font-weight: 500;
+    // font-size: var(--sc-h1);
+    // line-height: var(--sc-h1-lh);
+    // letter-spacing: var(--sc-h1-ls);
+    // font-weight: 500;
+}
+
+h2 {
+
+    // font-size: var(--sc-h2);
+    // line-height: var(--sc-h2-lh);
+    // letter-spacing: var(--sc-h2-ls);
+    // font-weight: 500;
     font-size: var(--sc-h3);
     line-height: var(--sc-h3-lh);
     letter-spacing: var(--sc-h3-ls);
     font-weight: 500;
 }
 
-h2 {
-    color: $sc-charcoal;
-    font-weight: 500;
-    font-size: 36px;
-}
 
 h3 {
-    color: $sc-charcoal;
+
+    // font-size: var(--sc-h3);
+    // line-height: var(--sc-h3-lh);
+    // letter-spacing: var(--sc-h3-ls);
+    // font-weight: 500;
+    font-size: var(--sc-h4);
+    line-height: var(--sc-h4-lh);
+    letter-spacing: var(--sc-h4-ls);
     font-weight: 500;
-    font-size: 24px;
 }
 
 h4 {
-    color: $sc-charcoal;
-    font-weight: 900;
-    font-size: 18px;
+
+    font-size: var(--sc-h4);
+    line-height: var(--sc-h4-lh);
+    letter-spacing: var(--sc-h4-ls);
+    font-weight: 500;
 }
 
 .bg-teal {
