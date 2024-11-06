@@ -14,18 +14,50 @@ a.cta, button.cta {
     text-align: center;
     padding: 16px 30px 17px;
 }
+a.cta,.cta,button.cta{
+  &-base {
+    font-size:var(--sc-body-m);
+    position: relative;
+  justify-content: space-between;
+  border-radius: 9999px;
+  padding: .5rem 1.25rem;
+  line-height: 1.5rem;
+  transition: all .15s;
 
-a.cta.primary, button.cta.primary {
-    border: 1px solid #19a5a2;
-    background-color: #19a5a2;
-    color: #fff;
-    opacity: 1;
-    transition: opacity 0.5s;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+    transition: all 0.15s;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -4px;
+      border: 1px solid var(--sc-neutral-500);
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.15s;
   }
+&:hover{
+  background-color: var(--sc-black);
+  text-decoration: none;
+}
+  &:hover::before {
+      opacity: 1;
+  }
+}
+&.primary{
+  @extend .cta-base;
+  background-color: var(--sc-red-700);
+  color: #fff;
+
+}
+}
+
   
-  a.cta.primary:hover, button.cta.primary:hover {
-    opacity: 0.5;
-  }
+
   
   a.cta.primary i.icn-spinner:before, button.cta.primary i.icn-spinner:before {
     content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='rgba(255, 255, 255, 0.99)' d='M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z'/></svg>");
@@ -384,15 +416,31 @@ a.cta.primary, button.cta.primary {
   }
   
   a.link-arrow, span.link-arrow {
-    color: #000;
-    font-weight: 700;
-    font-size: 17px;
-    display: block;
-    float: left;
-    clear: left;
-    position: relative;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    border-bottom: none !important;
-    line-height: 26px;
+@extend a.cta.primary;
+display: flex;
+width: fit-content;
+background: inherit;
+color: var(--sc-black);
+border: solid 1px var(--sc-black);
+&:active,
+&:hover {
+  background: var(--sc-black);
+    color: white;
+}
+img{display: none;}
+
+  &::after {
+      content: "";
+      display: block;
+      position: relative;
+      width: 22px;
+      height: 22px;
+      margin-left: 10px;
+      color: var(--sc-red-700);
+      background-color: currentColor;
+      mask-position: center;
+      mask-size: 22px;
+      mask-repeat: no-repeat;
+      mask-image: url("/images/cta-arrow.svg");
+  }
   }
