@@ -5,9 +5,8 @@
   }
   
   .page-overview-panel {
-    background-color: #f6f6f6;
-    padding-top: 143px;
-    padding-bottom: 70px;
+
+
   
     .image {
       padding-top: 80px;
@@ -40,13 +39,12 @@
   
     ul {
       padding-left: 25px;
-  
+      margin-left: 2rem;
       li {
         list-style-type: none;
         position: relative;
         margin-bottom: 1rem;
-        color: #707070;
-        font-size: 18px;
+        font-size: var(--sc-body-m);
   
         &:before {
           content: " ";
@@ -55,7 +53,7 @@
           top: 9px;
           width: 7px;
           height: 7px;
-          background-color: #19a5a2;
+          background-color: var( --sc-violet-500);
           border-radius: 150px;
           background-repeat: no-repeat;
         }

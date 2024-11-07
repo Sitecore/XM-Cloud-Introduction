@@ -176,12 +176,10 @@
     }
   
     &.medium {
-      padding-top: 40px;
-      background-image: url(../images/hero-plus-pattern.png);
-      background-repeat: no-repeat;
-      background-position: right 12px;
-      background-size: 530px;
-      padding-bottom: 20px;
+
+padding-bottom: 0;
+padding-top: 0;
+
   
       .container {
         min-height: 400px;
@@ -197,7 +195,11 @@
         max-width: 50%;
         min-height: 300px;
       }
-  
+  .side-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
       h1 {
         font-size: var(--sc-h3);
         line-height: var(--sc-h3-lh);
@@ -226,13 +228,13 @@
         .outer {
           position: relative;
           width: 100%;
+          display: flex;
+          justify-content: flex-end;
+      
         }
   
         .wrapper {
-          display: inline-block;
-          -ms-transform: translateX(-50%);
-          transform: translateX(0);
-          margin-bottom: -90px;
+      
   
           img {
             max-width: 504px;
@@ -246,18 +248,7 @@
               filter: drop-shadow(5px 5px 3px #000);
             }
           }
-  
-          &:after {
-            display: block;
-            content: " ";
-            position: absolute;
-            width: 87px;
-            height: 87px;
-            top: -10px;
-            right: -10px;
-            border-top: 10px solid #fe2911;
-            border-right: 10px solid #fe2911;
-          }
+
         }
       }
     }

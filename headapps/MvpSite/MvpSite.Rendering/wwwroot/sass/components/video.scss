@@ -1,6 +1,5 @@
 .autoplay-video {
-    padding-top: 100px;
-    padding-bottom: 50px;
+
   
     &.has-personalization .personalized-content {
       div.panel-header {
@@ -18,8 +17,7 @@
   
     .text {
       top: 0;
-      opacity: 0;
-      width: 53%;
+
       background-color: #fff;
       z-index: 3;
       padding: 60px 60px 60px 75px;
@@ -48,6 +46,7 @@
   
     .video {
       z-index: 4;
+      display: flex;
     }
   
     .thumbnail {
@@ -82,8 +81,7 @@
   
   @media (max-width: 991.98px) {
     .autoplay-video {
-      padding-top: 50px;
-      padding-bottom: 50px;
+ 
   
       &.has-personalization .personalized-content div.panel-header {
         top: -60px;

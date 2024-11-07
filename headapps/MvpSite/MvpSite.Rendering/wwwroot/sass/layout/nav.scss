@@ -19,6 +19,9 @@ $sc-font-color: #212529;
     padding-top: 25px;
     padding-bottom: 35px;
 background-color: white;
+border-style: solid;
+border-color: var(--sc-neutral-300);
+border-bottom-width: 1px;
     #main-menu {
         padding: 0px;
 
