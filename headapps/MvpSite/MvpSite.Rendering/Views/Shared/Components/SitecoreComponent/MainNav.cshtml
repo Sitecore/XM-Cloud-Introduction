@@ -3,14 +3,14 @@
 
 <div class="main-nav">
     <div class="container" id="main-menu">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a href="/">
+        <nav class="navbar navbar-expand-lg navbar-light inner">
+            <a class="mr-5" href="/">
                 <img src="/images/sitecore.svg" class="logo d-inline-block align-top" alt="" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse " id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     @foreach (MainNavItems link in Model.Items ?? [])
                     {

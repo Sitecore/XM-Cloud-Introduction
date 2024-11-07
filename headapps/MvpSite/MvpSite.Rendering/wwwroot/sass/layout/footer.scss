@@ -20,6 +20,11 @@ $sc-font-color: #212529;
     flex-shrink: 0;
     width: 100%;
     height: 56px; /* Set the fixed height of the footer here */
+    color:white;
+    .inner{
+        border: none;
+        color: white;
+    }
     .footer-copyright {
         font-size: 0.9em;
 
@@ -34,5 +39,11 @@ $sc-font-color: #212529;
             color: $sc-white;
             margin: 0px 5px;
         }
+    }
+    .footer-gradient{
+        position: fixed;
+        bottom: 0;
+        z-index: -20;
+
     }
 }

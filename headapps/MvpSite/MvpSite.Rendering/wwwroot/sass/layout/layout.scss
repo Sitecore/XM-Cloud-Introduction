@@ -36,7 +36,31 @@ body {
     display: flex;
     flex-direction: column;
 }
+.container{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    max-width: 1920px;
+}
 
+
+
+
+.inner{
+    margin-left: var(--sc-grid-margin-x);
+    margin-right: var(--sc-grid-margin-x);
+    border-top-width: 0px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-style: solid;
+    border-color: var(--sc-neutral-300);
+    padding-left: var(--sc-grid-padding-x);
+    padding-right: var(--sc-grid-padding-x);
+}
 
 
 p {
@@ -106,7 +130,19 @@ h4 {
     background: $sc-gray4;
     color: $sc-white;
 }
-
+section{
+    background-color: white;
+}
+.sc-gradient-light-bg {
+    background-color: #dedbff;
+    background: linear-gradient(51deg, #dedbff -10%, #f9f9f9 40%, #f9f9f9 70%, #ffcfcf 120%);
+}
+.extended-background {
+    margin-left: calc(-1* var(--sc-grid-padding-x));
+    margin-right: calc(-1* var(--sc-grid-padding-x));
+    padding-left: var(--sc-grid-padding-x);
+    padding-right: var(--sc-grid-padding-x);
+}
 .background-white {
     background-color: $sc-white;
 }
@@ -123,12 +159,36 @@ section.background-grey {
     background-color: $sc-content-bg;
 }
 
+.sc-power-gradient-bg{
+    position: relative;
+    z-index: 1;
+    &::before{
+        content:"";
+        inset: 0;
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        background-attachment: fixed;
+        z-index: -2;
+        background-image: url(https://www.sitecore.com/static/sc_power-gradient-desktop.svg);;
+    }
+    &:after{
+        content: "";
+        inset: 0;
+        position: absolute;
+        z-index: -1;
+        background-attachment: fixed;
+        background-image: url(https://www.sitecore.com/static/grain.png);
+    }
+    &>*{
+        isolation: isolate;
+    }
+}
 main {
     flex: 1 0 auto;
 
-    #content {
-        background-color: $sc-content-bg;
-    }
+
 
     @media (max-width: 767.98px) {
         h2 {

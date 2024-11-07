@@ -18,12 +18,16 @@ $sc-font-color: #212529;
 .main-nav {
     padding-top: 25px;
     padding-bottom: 35px;
-
+background-color: white;
     #main-menu {
         padding: 0px;
 
         nav.navbar {
             padding: 0px;
+            
+        border: none;
+        padding-left: calc(var(--sc-content-padding-x)* -1) !important;
+        padding-right: calc(var(--sc-content-padding-x)* -1) !important;
 
             .logo {
                 min-height: 3.5em;
@@ -54,7 +58,9 @@ $sc-font-color: #212529;
 #topbar {
     background: $sc-topbar-bg;
     font-size: 0.9em;
-
+.navbar-nav{
+    border:0;
+}
     a:link, a:visited {
         color: $sc-white;
     }
