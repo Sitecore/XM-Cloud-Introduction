@@ -570,16 +570,7 @@ padding-top: 0;
     }
   }
   
-  @media (min-width: 768px) {
-    .hero.medium .image .wrapper:after {
-      width: 250px;
-      height: 250px;
-      top: -15px;
-      right: -15px;
-      border-top: 15px solid #fe2911;
-      border-right: 15px solid #fe2911;
-    }
-  }
+
   
   @media (max-width: 767.98px) {
     .hero.small {

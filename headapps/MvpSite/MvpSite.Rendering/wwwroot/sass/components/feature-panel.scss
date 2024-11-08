@@ -675,17 +675,7 @@ background-color: white;
         padding-left: 100px;
     }
 
-    .order-1.order-lg-2 .thumbnail:after, .order-2.order-lg-2 .thumbnail:after {
-        display: block;
-        content: " ";
-        width: 250px;
-        height: 250px;
-        position: absolute;
-        top: -15px;
-        left: -15px;
-        border-top: 15px solid #fe2911;
-        border-left: 15px solid #fe2911;
-    }
+
 
     .order-1.order-lg-2 .thumbnail .play-button-wrapper, .order-2.order-lg-2 .thumbnail .play-button-wrapper, .order-1.order-lg-2 .thumbnail img, .order-2.order-lg-2 .thumbnail img {
         margin-right: -20%;
@@ -796,31 +786,6 @@ background-color: white;
         }
     }
 
-    .order-1.order-lg-1 .thumbnail:after {
-        display: block;
-        content: " ";
-        width: 250px;
-        height: 250px;
-        position: absolute;
-        top: -15px;
-        right: -15px;
-        border-top: 15px solid #fe2911;
-        border-right: 15px solid #fe2911;
-    }
-
-    .order-2 {
-        &.order-lg-1 .thumbnail:after, &.order-lg-2 .thumbnail:after {
-            display: block;
-            content: " ";
-            width: 250px;
-            height: 250px;
-            position: absolute;
-            top: -15px;
-            right: -15px;
-            border-top: 15px solid #fe2911;
-            border-right: 15px solid #fe2911;
-        }
-    }
 
     .order-1.order-lg-1 .thumbnail .play-button-wrapper {
         margin-left: -20%;
@@ -940,14 +905,7 @@ background-color: white;
             padding-left: 0;
         }
 
-        .order-1.order-lg-2 .thumbnail:after, .order-2.order-lg-2 .thumbnail:after {
-            width: 115px;
-            height: 115px;
-            top: -8px;
-            left: -8px;
-            border-top: 8px solid #fe2911;
-            border-left: 8px solid #fe2911;
-        }
+
     }
 }
 
@@ -1052,25 +1010,9 @@ background-color: white;
             }
         }
 
-        .order-1.order-lg-1 .thumbnail:after {
-            width: 115px;
-            height: 115px;
-            top: -8px;
-            right: -8px;
-            border-top: 8px solid #fe2911;
-            border-right: 8px solid #fe2911;
-        }
+   
 
-        .order-2 {
-            &.order-lg-1 .thumbnail:after, &.order-lg-2 .thumbnail:after {
-                width: 115px;
-                height: 115px;
-                top: -8px;
-                right: -8px;
-                border-top: 8px solid #fe2911;
-                border-right: 8px solid #fe2911;
-            }
-        }
+   
     }
 }
 

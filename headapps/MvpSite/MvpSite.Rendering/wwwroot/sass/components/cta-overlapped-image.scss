@@ -14,8 +14,7 @@
   }
   
   .cta-overlapped-image {
-    padding-top: 50px;
-    padding-bottom: 50px;
+
   
     &.background-white .text {
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -38,30 +37,20 @@
     }
   
     .col-lg-7 {
-      padding-top: 140px;
       z-index: 5;
   
       .text {
         position: relative;
   
-        &:after {
-          display: block;
-          content: " ";
-          width: 175px;
-          height: 175px;
-          position: absolute;
-          top: -15px;
-          left: -15px;
-          border-top: 15px solid #fe2911;
-          border-left: 15px solid #fe2911;
-        }
+
       }
     }
   
     .text {
-      padding: 50px 50px 66px;
-      background-color: #fff;
-  
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 100%;  
       p {
         font-size: 18px;
         font-weight: 400;
@@ -82,8 +71,7 @@
     }
   
     &.reverse {
-      padding-top: 50px;
-      padding-bottom: 50px;
+
       
       background-repeat: no-repeat;
       background-position: right 20% top 167px;
@@ -94,7 +82,7 @@
       }
   
       .col-lg-7.div-left {
-        padding-top: 50px;
+
         z-index: 3;
         opacity: 0;
   
@@ -171,14 +159,7 @@
   
   @media (max-width: 991.98px) {
     .cta-overlapped-image {
-      .col-lg-7 .text:after {
-        width: 70px;
-        height: 70px;
-        top: -8px;
-        left: -8px;
-        border-top: 8px solid #fe2911;
-        border-left: 8px solid #fe2911;
-      }
+
   
       .text {
         padding: 20px 15px 50px;
