@@ -26,7 +26,7 @@ public class DirectoryResultViewModel
         result.Name = profile.Name;
         result.Type = last.MvpType.Name;
         result.Country = profile.Country?.Name;
-        result.Image = profile.ImageUri.AddGravatarSizing("250") ?? new Uri("/images/mvp-base-user-grey.png", UriKind.Relative);
+        result.Image = profile.ImageUri.AddGravatarSizing("250") ?? new Uri("/images/sc_power-gradient-desktop.svg", UriKind.Relative);
         result.Year = last.Application.Selection.Year.ToString();
         if (pageUri != null && !string.IsNullOrWhiteSpace(result.Name))
         {
