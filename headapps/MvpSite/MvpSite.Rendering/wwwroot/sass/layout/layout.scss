@@ -120,6 +120,20 @@ h4 {
     letter-spacing: var(--sc-h4-ls);
     font-weight: 500;
 }
+h5 {
+
+    font-size: var(--sc-h5);
+    line-height: var(--sc-h5-lh);
+    letter-spacing: var(--sc-h5-ls);
+    font-weight: 500;
+}
+h6 {
+
+    font-size: var(--sc-h6);
+    line-height: var(--sc-h6-lh);
+    letter-spacing: var(--sc-h6-ls);
+    font-weight: 500;
+}
 
 .bg-teal {
     background: $sc-teal;

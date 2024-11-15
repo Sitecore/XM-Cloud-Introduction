@@ -4,15 +4,17 @@
 
 @foreach (Title title in Model.OrderByDescending(t => t.Application.Selection.Year))
 {
-    <div class="card border-0 mb-2 col-xs-12 col-sm-9 col-md-6 col-lg-4">
-        <div class="row no-gutters align-items-center">
-            <div class="col-4">
+
+    <div class=" border-0  p-1  col-xs-12 col-sm-9 col-md-4 col-lg-3">
+        <div class="row card no-gutters align-items-center">
+            <!-- <div class="col-4">
                 <img src="@ProfileViewModel.GenerateImageUri(title)" class="card-img" />
-            </div>
-            <div class="col-8">
+            </div> -->
+            <div class="col-12">
                 <div class="card-body">
-                    <h4 class="card-title">@title.MvpType.Name @title.Application.Selection.Year</h4>
-                    <p class="card-text"><i class="fa fa-globe" aria-hidden="true"></i> @title.Application.Country.Name</p>
+                <h6> MVP @title.Application.Selection.Year</h6>
+                    <p class="card-title">@title.MvpType.Name </p>
+                    <div class="card-text"><i class="fa fa-globe" aria-hidden="true"></i> <span> @title.Application.Country.Name</span></div>
                 </div>
             </div>
         </div>
