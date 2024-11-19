@@ -1,0 +1,38 @@
+﻿@model Mvp2025.Site.Models.Image
+
+@if(Model.FieldNames == Image.VARIANT_BANNER)
+{
+    string classHeroBannerEmpty = Model.IsEditing && string.IsNullOrWhiteSpace(Model.ImageField?.Value.Src) ? "hero-banner-empty" : string.Empty;
+    string backgroundStyle = !string.IsNullOrWhiteSpace(Model?.ImageField?.Value.Src) ? $"background-image: url('{@Model.ImageField?.Value.Src}')" : string.Empty;
+
+    <div class="component hero-banner @Model?.Styles @Model?.GridParameters @classHeroBannerEmpty" id="@Model?.Id">
+        <div class="component-content sc-sxa-image-hero-banner" style="@backgroundStyle">
+            @if (Model?.IsEditing ?? false)
+            {
+                <sc-img asp-for="@Model.ImageField" />
+            }
+        </div>
+    </div>
+}
+else
+{
+    <div class="component image @Model.Styles @Model.GridParameters" id="@Model.Id">
+        <div class="component-content">
+            <span class="sc-image-wrapper">
+                @if (Model.IsEditing || string.IsNullOrWhiteSpace(Model.TargetUrl?.Value.Href))
+                {
+                    <sc-img asp-for="@Model.ImageField" />
+                }
+                else
+                {
+                    <sc-link asp-for="@Model.TargetUrl">
+                        <sc-img asp-for="@Model.ImageField" />
+                    </sc-link>
+                }
+            </span>
+            <span class="image-caption field-imagecaption">
+                <span asp-for="@Model.ImageCaption"></span>
+            </span>
+        </div>
+    </div>
+}

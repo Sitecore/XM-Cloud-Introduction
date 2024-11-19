@@ -1,0 +1,15 @@
+﻿@using Mvp2025.Site.Models.Navigation
+@model Mvp2025.Site.Models.Navigation.Navigation
+
+<div class="component navigation @Model.Styles @Model.GridParameters" id="@Model.Id">
+    <label class="menu-mobile-navigate-wrapper">
+        <input type="checkbox"
+               class="menu-mobile-navigate" />
+        <div class="menu-humburger" />
+        <div class="component-content">
+            <nav>
+                @await Html.PartialAsync("./_NavigationMenu.cshtml", @Model)
+            </nav>
+        </div>
+    </label>
+</div>

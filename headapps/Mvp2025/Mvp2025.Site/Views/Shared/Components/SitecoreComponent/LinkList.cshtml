@@ -1,0 +1,30 @@
+﻿@model Mvp2025.Site.Models.LinkList.LinkList
+
+<div class="component link-list @Model.Styles @Model.GridParameters" id="@Model.Id">
+    <div class="component-content">
+        <h3 asp-for="@Model.Title"></h3>
+         @if (Model.Data?.Datasource?.Children?.Results?.Count > 0)
+         {
+            <ul>
+                @if (Model.Children.Count > 0)
+                {
+                    @foreach ((LinkListItem item, int index) in Model.Children.Select((item, index) => (item, index)))
+                    {
+                        if (item.Field == null)
+                        {
+                            continue;
+                        }
+
+                        var className = $"item{index} {((index + 1) % 2 == 0 ? "even" : "odd")} {((index == 0) ? "first" : index == Model.Data.Datasource.Children.Results?.Count - 1 ? "last" : "")}";
+
+                        <li class="@className">
+                            <div class="field-link">
+                                <sc-link asp-for="@item.Field.Link"></sc-link>
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+         }
+    </div>
+</div>

@@ -1,0 +1,17 @@
+﻿@model Mvp2025.Site.Models.RowSplitter
+
+<div class="component row-splitter @Model.Styles @Model.GridParameters" id="@Model.Id">
+    @foreach (int enabledParameterId in Model.EnabledPlaceholderIds)
+    {
+        string key = $"row-{enabledParameterId}-{{*}}";
+        string styles = $"{Model.ColumnStyles[enabledParameterId - 1]}";
+
+        <div class="container-fluid @styles">
+            <div>
+                <div class="row">
+                    <sc-placeholder name="@key"></sc-placeholder>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,13 @@
+<Project>
+    <PropertyGroup>
+        <AspNetCoreSdkVersion>0.0.11</AspNetCoreSdkVersion>
+    </PropertyGroup>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageVersion Include="Sitecore.AspNetCore.SDK.LayoutService.Client" Version="$(AspNetCoreSdkVersion)" />
+        <PackageVersion Include="Sitecore.AspNetCore.SDK.RenderingEngine" Version="$(AspNetCoreSdkVersion)" />
+        <PackageVersion Include="Sitecore.AspNetCore.SDK.ExperienceEditor" Version="$(AspNetCoreSdkVersion)" />
+    </ItemGroup>
+</Project>
