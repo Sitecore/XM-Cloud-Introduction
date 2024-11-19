@@ -35,7 +35,7 @@ public class Startup(IConfiguration configuration)
 
         // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge & local edge endpoint
         services.AddSitecoreLayoutService()
-            .AddGraphQlHandler("default", Configuration.DefaultSiteName!, Configuration.ExperienceEdgeToken!, Configuration.LayoutServiceUri!)
+            .AddGraphQlWithContextHandler("default", Configuration.EdgeContextId!, siteName: Configuration.DefaultSiteName!)
             .AsDefaultHandler();
 
         services.AddFeatureUser(DotNetConfiguration);
@@ -59,7 +59,7 @@ public class Startup(IConfiguration configuration)
             .ForwardHeaders()
 
             // Enable support for the Experience Editor.
-            .WithExperienceEditor(options => { options.JssEditingSecret = Configuration.JssEditingSecret; });
+            .WithExperienceEditor(options => { options.JssEditingSecret = Configuration.EditingSecret; });
 
         // Register MVP Functionality specific services
         services.AddFeatureSocialServices()
@@ -104,7 +104,7 @@ public class Startup(IConfiguration configuration)
         // ReSharper restore StringLiteralTypo - Uri segments
         // The Experience Editor endpoint should not be enabled in production DMZ.
         // See the SDK documentation for details.
-        if (Configuration.EnableExperienceEditor)
+        if (Configuration.EnableEditingMode)
         {
             // Enable the Sitecore Experience Editor POST endpoint.
             app.UseSitecoreExperienceEditor();
