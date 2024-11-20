@@ -1,0 +1,18 @@
+﻿@using Mvp2025.Site.Models.Navigation
+@model Mvp2025.Site.Models.Navigation.Navigation
+
+<ul class="clearfix">
+    @foreach (NavigationItem navItem in @Model.NavigationItems ?? [])
+    {
+        string classNames = $"{string.Join(" ", navItem.Styles ?? [])} rel-level{Model.MenuLevel}";
+
+        <li class="@classNames">
+            <div class="navigation-title @(navItem.Children?.Count > 0 ? "child" : "")">
+                <a href="@navItem.Href">
+                    <sc-text asp-for="@navItem.NavigationTitle"></sc-text>
+                </a>
+            </div>
+            @await Html.PartialAsync("./_NavigationMenu.cshtml", new Navigation(navItem.Children, Model.MenuLevel + 1))
+        </li>
+    }
+</ul>

@@ -1,0 +1,19 @@
+﻿@model Mvp2025.Site.Models.Container
+
+@if (Model.OutputContainerWrapper)
+{
+    @Html.Raw("<div class=\"container-wrapper\">")
+}
+
+<div class="component container-default @Model.GridParameters @Model.Styles" style="@Model.BackgroundStyle" id="@Model.Id">
+    <div class="component-content">
+        <div class="row">
+            <sc-placeholder name="container-{*}" ></sc-placeholder>
+        </div>
+    </div>
+</div>
+
+@if (Model.OutputContainerWrapper)
+{
+    @Html.Raw("</div>")
+}

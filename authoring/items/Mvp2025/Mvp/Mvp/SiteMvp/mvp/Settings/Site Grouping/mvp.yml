@@ -1,0 +1,69 @@
+﻿---
+ID: "fc060b21-8ff6-4a86-a1fc-a3aa5333c55a"
+Parent: "7abc6b2b-5cff-41bf-be2c-1cb6135698c2"
+Template: "e46f3af2-39fa-4866-a157-7017c4b2a40c"
+Path: /sitecore/content/mvp2025/mvp/Settings/Site Grouping/mvp
+BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
+SharedFields:
+- ID: "1ee576af-ba8e-4312-9fbd-2ccf8395baa1"
+  Hint: StartItem
+  Value: "{D4FD60EC-36AA-460E-961D-A33A4BB796F7}"
+- ID: "301e719a-6f65-4874-b565-a953a7b5ac83"
+  Hint: OtherProperties
+  Value: isSiteThumbnailSource=true
+- ID: "475031d8-724d-463c-80b2-90839dd1ad98"
+  Hint: VirtualFolder
+  Value: 
+- ID: "6dd8a774-2ce5-4c9e-be7f-1eaf65789956"
+  Hint: ThumbnailsRootPath
+  Value: "{3C999926-1B88-4821-BA42-69892DE90D15}"
+- ID: "85a7501a-86d9-4243-9075-0b727c3a6db4"
+  Hint: Name
+  Value: Mvp
+- ID: "89cecf4f-e545-44f2-813d-272c08661d14"
+  Hint: Description
+  Value: The Sitecore MVP Website
+- ID: "8e0dd914-9afb-4d45-bf8b-7ff5d6e5337e"
+  Hint: HostName
+  Value: *
+- ID: "9eaf6dc9-b811-4cda-9edd-9697faba628a"
+  Hint: POS
+  Value: en=mvp_1
+- ID: "cb4e9e2e-2b66-43dc-ad3f-9caf363d28d3"
+  Hint: SiteName
+  Value: mvp
+- ID: "da06d09e-02b6-464a-80fc-9d8d7fc875e3"
+  Hint: Environment
+  Value: *
+- ID: "f57099a3-526a-49f2-aebd-635453e48875"
+  Hint: RenderingHost
+  Value: Default
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{23E42340-77BE-49FC-A7C4-77D3CB545223}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20241119T021030Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\rob.earlam@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\rob.earlam@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "666bec43-46ee-4536-987d-605a200b079b"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\rob.earlam@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20241119T021101Z

@@ -1,0 +1,22 @@
+﻿@model Mvp2025.Site.Models.Promo
+
+<div class="component promo @Model.Styles @Model.GridParameters" id="@Model.Id">
+    <div class="component-content">
+        <div class="field-promoicon">
+            <sc-img asp-for="@Model.PromoIcon" />
+        </div>
+        <div class="promo-text">
+            @{
+                string variantClass = Model.FieldNames == Promo.VARIANT_WITH_TEXT ? "promo-text" : string.Empty;
+            }
+            <div>
+                <div class="field-promotext">
+                    <sc-text class="@variantClass" asp-for="@Model.PromoText"></sc-text>
+                </div>
+            </div>
+            <div class="field-promolink">
+                <sc-link class="@variantClass" asp-for="@Model.PromoLink"></sc-link>
+            </div>
+        </div>
+    </div>
+</div>

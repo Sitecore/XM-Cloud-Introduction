@@ -1,0 +1,14 @@
+﻿@model Mvp2025.Site.Models.RichText
+
+<div class="component rich-text @Model.Styles @Model.GridParameters" id="@Model.Id">
+    <div class="component-content">
+        @if(string.IsNullOrEmpty(Model.Text?.ToString()))
+        {
+            <span class="is-empty-hint">Rich text</span>
+        }
+        else
+        {
+            <sc-text asp-for="@Model.Text"></sc-text>
+        }
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿@model Mvp2025.Site.Models.PageContent
+
+<div class="component content @Model.Styles @Model.GridParameters" id="@Model.Id">
+    <div class="component-content">
+        @if (Model.Content != null)
+        {
+            <div class="field-content" asp-for="@Model.Content"></div>
+        }
+        else
+        {
+            <div class="field-content">[Content]</div>
+        }
+    </div>
+</div>

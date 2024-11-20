@@ -1,0 +1,16 @@
+﻿@model Mvp2025.Site.Models.Title.Title
+
+<div class="component title @Model.Styles @Model.GridParameters" id="@Model.Id">
+    <div class="component-content">
+        <div class="field-title">
+            @if (Model.IsEditing)
+            {
+                <span asp-for="@Model.Text"></span>
+            }
+            else
+            {
+                <a href="@Model.Link">@Model.Text.Value</a>
+            }
+        </div>
+    </div>
+</div>

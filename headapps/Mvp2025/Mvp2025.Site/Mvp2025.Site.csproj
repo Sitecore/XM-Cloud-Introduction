@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Mvp2025.Site</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="Sitecore.AspNetCore.SDK.LayoutService.Client.Extensions" />
+    <Using Include="Sitecore.AspNetCore.SDK.RenderingEngine.Extensions" />
+    <Using Include="Sitecore.AspNetCore.SDK.ExperienceEditor.Extensions" />
+    <Using Include="Mvp2025.Site.Models" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sitecore.AspNetCore.SDK.LayoutService.Client" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.RenderingEngine" />
+    <PackageReference Include="Sitecore.AspNetCore.SDK.ExperienceEditor" />
+  </ItemGroup>
+
+</Project>
