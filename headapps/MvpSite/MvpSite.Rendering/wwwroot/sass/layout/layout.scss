@@ -233,4 +233,10 @@ main {
       mask-image: url("/images/chevron-down.svg");
     }
   }
+  &-external{
+    @extend .icon;
+    &::after {
+            mask-image: url("/images/external.svg");
+        }
+  }
 }
