@@ -10,47 +10,47 @@ $sc-gray3: #999999;
 $sc-gray4: #707070;
 $sc-gray5: #333333; /* Site Colors */
 $sc-topbar-bg: #666;
-$sc-content-bg: #F6F6F6;
-$sc-font-color: #212529; 
+$sc-content-bg: #f6f6f6;
+$sc-font-color: #212529;
 
-//Import Layout & Components 
-@import 'layout/layout.scss';
-@import 'layout/header.scss';
-@import 'layout/footer.scss';
-@import 'layout/nav.scss';
+//Import Layout & Components
+@import "layout/layout.scss";
+@import "layout/header.scss";
+@import "layout/footer.scss";
+@import "layout/nav.scss";
 
 //Component Layouts
-@import 'components/hero.scss';
-@import 'components/cta.scss';
-@import 'components/application.scss';
-@import 'components/announcement-bar.scss';
-@import 'components/thee-column-info.scss';
-@import 'components/half-width-banner.scss';
-@import 'components/cta-overlapped-image.scss';
-@import 'components/column-container.scss';
-@import 'components/feature-panel.scss';
-@import 'components/page-overview-panel.scss';
-@import 'components/video.scss';
-@import 'components/search-results.scss';
-@import 'components/login.scss';
+@import "components/hero.scss";
+@import "components/cta.scss";
+@import "components/application.scss";
+@import "components/announcement-bar.scss";
+@import "components/thee-column-info.scss";
+@import "components/half-width-banner.scss";
+@import "components/cta-overlapped-image.scss";
+@import "components/column-container.scss";
+@import "components/feature-panel.scss";
+@import "components/page-overview-panel.scss";
+@import "components/video.scss";
+@import "components/search-results.scss";
+@import "components/login.scss";
 
 //Selections Feature Components
-@import 'components/selections/admin/applications.scss';
-@import 'components/selections/admin/countries.scss';
-@import 'components/selections/admin/regions.scss';
-@import 'components/selections/admin/systemroles.scss';
-@import 'components/selections/admin/users.scss';
-@import 'components/selections/admin/scorecards.scss';
-@import 'components/selections/admin/award.scss';
-@import 'components/selections/admin/applicationcomment.scss';
-@import 'components/selections/admin/applicationreviewsettings.scss';
-@import 'components/selections/admin/selections.scss';
-@import 'components/selections/apply/applicationform.scss';
-@import 'components/selections/apply/contributionoverview.scss';
-@import 'components/selections/any/mydata.scss';
-@import 'components/selections/any/myprofiles.scss';
-@import 'components/selections/any/dashboard.scss';
+@import "components/selections/admin/applications.scss";
+@import "components/selections/admin/countries.scss";
+@import "components/selections/admin/regions.scss";
+@import "components/selections/admin/systemroles.scss";
+@import "components/selections/admin/users.scss";
+@import "components/selections/admin/scorecards.scss";
+@import "components/selections/admin/award.scss";
+@import "components/selections/admin/applicationcomment.scss";
+@import "components/selections/admin/applicationreviewsettings.scss";
+@import "components/selections/admin/selections.scss";
+@import "components/selections/apply/applicationform.scss";
+@import "components/selections/apply/contributionoverview.scss";
+@import "components/selections/any/mydata.scss";
+@import "components/selections/any/myprofiles.scss";
+@import "components/selections/any/dashboard.scss";
 
 //People Feature Components
-@import 'components/people/directory.scss';
-@import 'components/people/profile.scss';
+@import "components/people/directory.scss";
+@import "components/people/profile.scss";

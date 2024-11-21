@@ -1,17 +1,17 @@
-﻿@import '../../../_colors.scss';
+﻿@import "../../../_colors.scss";
 
 .mvp-fs-dashboard {
-    padding: 2em;
+  padding: 2em;
 
-    ul {
-        list-style: none;
+  ul {
+    list-style: none;
 
-        li::before {
-            content: "•";
-            color: $sitecore-red;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em
-        }
+    li::before {
+      content: "•";
+      color: $sitecore-red;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
     }
+  }
 }

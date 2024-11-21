@@ -1,83 +1,83 @@
-﻿@import '../../../_colors.scss';
-@import '../_form.scss';
+﻿@import "../../../_colors.scss";
+@import "../_form.scss";
 
 .mvp-fs-applyapplicationform {
-    z-index: 0;
+  z-index: 0;
 
-    h2 {
-        padding-top: 0.5em;
-    }
+  h2 {
+    padding-top: 0.5em;
+  }
 
-    p {
-        word-wrap: break-word;
-    }
+  p {
+    word-wrap: break-word;
+  }
 
-    .progressbar {
-        margin-bottom: 2em;
-        overflow: hidden;
-        padding: 0;
-        display: flex;
+  .progressbar {
+    margin-bottom: 2em;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
 
-        li {
-            list-style-type: none;
-            flex: 1 1 auto;
-            position: relative;
-            text-align: center;
-            color: $unfocussed-bg;
+    li {
+      list-style-type: none;
+      flex: 1 1 auto;
+      position: relative;
+      text-align: center;
+      color: $unfocussed-bg;
 
-            &:before {
-                width: 50px;
-                height: 50px;
-                line-height: 45px;
-                display: block;
-                font-size: 1.2em;
-                color: $sitecore-teal;
-                border-radius: 50%;
-                margin: 0 auto 10px auto;
-                padding: 2px;
-                border: 2px solid $unfocussed-bg;
-                font-family: FontAwesome;
-                background-color: $background;
-            }
+      &:before {
+        width: 50px;
+        height: 50px;
+        line-height: 45px;
+        display: block;
+        font-size: 1.2em;
+        color: $sitecore-teal;
+        border-radius: 50%;
+        margin: 0 auto 10px auto;
+        padding: 2px;
+        border: 2px solid $unfocussed-bg;
+        font-family: FontAwesome;
+        background-color: $background;
+      }
 
-            &:after {
-                content: '';
-                width: 100%;
-                height: 2px;
-                background-color: $unfocussed-bg;
-                position: absolute;
-                left: 0;
-                top: 25px;
-                z-index: -1;
-            }
+      &:after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $unfocussed-bg;
+        position: absolute;
+        left: 0;
+        top: 25px;
+        z-index: -1;
+      }
 
-            &.active {
-                color: $sitecore-teal;
+      &.active {
+        color: $sitecore-teal;
 
-                &:before {
-                    color: $contrast-text;
-                    border: none;
-                    background-color: $sitecore-teal;
-                }
-
-                &:after {
-                    background-color: $sitecore-teal;
-                }
-            }
+        &:before {
+          color: $contrast-text;
+          border: none;
+          background-color: $sitecore-teal;
         }
-    }
 
-    .step {
-        padding: 2em;
+        &:after {
+          background-color: $sitecore-teal;
+        }
+      }
     }
+  }
 
-    .navigation {
-        margin-top: 2em;
-    }
+  .step {
+    padding: 2em;
+  }
 
-    span.currentstep {
-        color: $sitecore-red;
-    }
+  .navigation {
+    margin-top: 2em;
+  }
 
-    @include form;
+  span.currentstep {
+    color: $sitecore-red;
+  }
+
+  @include form;
 }
