@@ -70,12 +70,11 @@ services:
       DOTNET_WATCH_RESTART_ON_RUDE_EDIT: true
       DOTNET_WATCH_SUPPRESS_LAUNCH_BROWSER: true
       MVP_RENDERING_EDITING_HOST_URI: "http://mvp-rendering"
-      Sitecore__InstanceUri: "http://cm"
-      Sitecore__LayoutServicePath: "/sitecore/api/graph/edge"
-      Sitecore__ExperienceEdgeToken: "{E2F3D43E-B1FD-495E-B4B1-84579892422A}"
-      Sitecore__RenderingHostUri: "https://${MVP_RENDERING_HOST}"
-      Sitecore__EnableExperienceEditor: "true" 
-      Sitecore__JssEditingSecret: ${JSS_EDITING_SECRET}
+      Sitecore__EnableLocalContainer: "true"
+      Sitecore__LocalContainerLayoutUri: "http://cm/sitecore/api/graph/edge"
+      Sitecore__EdgeContextId: "{E2F3D43E-B1FD-495E-B4B1-84579892422A}"
+      Sitecore__EnableEditingMode: "true" 
+      Sitecore__EditingSecret: ${JSS_EDITING_SECRET}
       Okta__OktaDomain: ${OKTA_DOMAIN}
       Okta__ClientId: ${OKTA_CLIENT_ID}
       Okta__ClientSecret: ${OKTA_CLIENT_SECRET}
