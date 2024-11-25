@@ -2,9 +2,9 @@
 
     <section class="autoplay-video">
         <div class="container">
-            <div class="row justify-content-end">
-                <div class="text col-lg-6 col-md-12 order-md-2 order-lg-1  order-1" style="opacity: 1; top: -70px;">
-                    <div class="col-md-6 overlap"></div>
+            <div class="row justify-content-center inner">
+                <div class="text col-lg-6 col-md-12 order-md-2 order-lg-1  order-1 flex justify-content-center " >
+              
                     <h2><sc-text asp-for="@Model.TeaserTitle" /></h2>
                     <p><sc-text asp-for="@Model.TeaserText" /></p>
 
@@ -15,7 +15,7 @@
                         </sc-link>
                     }
                 </div>
-                <div class="col-12 col-lg-6 video  order-md-1 order-lg-2 ">
+                <div class="col-12 col-lg-6 video  order-md-1 order-lg-2 justify-content-end flex ">
                     @Html.Raw(Model.TeaserEmbed?.Value)
                 </div>
 

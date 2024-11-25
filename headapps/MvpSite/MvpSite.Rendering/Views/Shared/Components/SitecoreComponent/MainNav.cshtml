@@ -3,14 +3,14 @@
 
 <div class="main-nav">
     <div class="container" id="main-menu">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a href="/">
+        <nav class="navbar navbar-expand-lg navbar-light inner">
+            <a class="mr-5" href="/">
                 <img src="/images/sitecore.svg" class="logo d-inline-block align-top" alt="" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse " id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     @foreach (MainNavItems link in Model.Items ?? [])
                     {
@@ -18,10 +18,21 @@
                             (!(link.Fields.RequiresAuthentication?.Value ?? false) || (link.Fields.RequiresAuthentication.Value && (User.Identity?.IsAuthenticated ?? false))))
                         {
                             <li class="nav-item mx-2">
-                                 <a class="nav-link" href="@link.Url" asp-for="@link">@link.Fields.MenuTitle?.Value</a>
+                                 <a class="nav-link" href="@link.Url" asp-for="@link">@link.Fields.MenuTitle?.Value </a>
                             </li>
                         }
                     }
+              <li class="nav-item mx-2">
+                                 <a href="#otherSites" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="otherSites" class="nav-link" >our sites <span class="icon icon-chevron-down "></span></a>
+                                 <ul class="sub-menu collapse" id="otherSites">
+                                 <li>   <a class="nav-item nav-link" target="_blank" href="https://developers.sitecore.com/">For Downloads <span class="icon icon-external"></span></a> </li>
+                <li><a class="nav-item nav-link" target="_blank" href="https://sitecore.stackexchange.com/">Stack Exchange <span class="icon icon-external"></span></a></li>
+               <li> <a class="nav-item nav-link" target="_blank" href="#https://community.sitecore.net/">Sitecore Community <span class="icon icon-external"></span></a></li>
+                <li><a class="nav-item nav-link" target="_blank" href="https://www.youtube.com/c/discoversitecore">Discover Sitecore <span class="icon icon-external"></span></a></li>
+                <li><a class="nav-item nav-link" target="_blank" href="#https://doc.sitecore.com/">Documentation <span class="icon icon-external"></span></a></li>
+              <li>  <a class="nav-item nav-link" target="_blank" href="https://sitecore.chat/">Sitecore Chat/Slack <span class="icon icon-external"></span></a></li>
+                                 </ul>
+                            </li>
                 </ul>
             </div>
         </nav>

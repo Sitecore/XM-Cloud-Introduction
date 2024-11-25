@@ -1,11 +1,367 @@
-﻿$sitecore-red: #FE2911;
-$sitecore-teal: #1CA6A3;
+﻿$sitecore-red: #fe2911;
+$sitecore-teal: #1ca6a3;
 
-$background: #F6F6F6;
-$unfocussed-bg: #CCC;
-$underline: #E1E1E1;
+$background: #f6f6f6;
+$unfocussed-bg: #ccc;
+$underline: #e1e1e1;
 
-$text: #3C3C3C;
-$contrast-text: #FFF;
+$text: #3c3c3c;
+$contrast-text: #fff;
 $text-gray: #666;
 $text-gray-light: #707070;
+:root {
+  //// Colors
+
+  // Red
+  --sc-red-500: #ff1f38; // Primary color red
+  --sc-red-700: #eb001a; // Primary color deep red + Sysrem negative red
+  --sc-red-800: #cc0017; // Tint Red 01
+  --sc-red-900: #630008;
+  // Violet
+  --sc-violet-300: #4e06c2;
+  --sc-violet-500: #4300ad; // Secondary color violet
+  --sc-violet-700: #380883;
+  //Purple
+  --sc-purple-500: #8629ff; // Secondary color purple
+  //Pink
+  --sc-pink-500: #fe7dff; // Secondary color pink
+  // Blue
+  --sc-blue-400: #1d08bd;
+  --sc-blue-500: #001070; // Tertiary color blue
+  // Sky
+  --sc-sky-500: #00aeff; // Teritary color sky
+  // Black
+  --sc-black: #1e1c22; // Black
+  // Neutral
+  --sc-neutral-100: #f9f9fa; // Grey Background 2
+  --sc-neutral-200: #f1f0f3; // Grey Background 1
+  --sc-neutral-300: #e4e2e8; // Grey Line 2
+  --sc-neutral-400: #d6d3da; // Grey Line 1
+  --sc-neutral-500: #c1bdc7; // Grey Inactive
+  --sc-neutral-600: #746f7b; // Grey Text
+  // System
+  --sc-green-500: #038a00; // Sysrem positive green
+
+  //// POWER GRADIENT
+  --sc-power-gradient-bg: url("/static/sc_power-gradient-mobile.svg");
+
+  //// Main Navigation
+  --sc-main-nav-height: 64px; // in tailwind this is 16 (ie. pt-16)
+
+  //// Progress Bar
+  --sc-progress-bar: 54px; // in tailwind this is 16 (ie. pt-16)
+
+  //// Grid Spacing
+
+  --sc-grid-footer-top-spacing: 200px;
+  --sc-grid-col-gap: 8px;
+  --sc-grid-padding-x: 19px;
+  --sc-grid-margin-x: 0;
+
+  //// Headings / No clamp(): / font size=H&C mobile value
+
+  --sc-display-1: 56px;
+  --sc-display-1-lh: 122%;
+  --sc-display-1-ls: -1.12px;
+
+  --sc-display-2: 42px;
+  --sc-display-2-lh: 134%;
+  --sc-display-2-ls: -0.735px;
+
+  --sc-h1: 40px;
+  --sc-h1-lh: 130%;
+  --sc-h1-ls: -0.6px;
+
+  --sc-h2: 36px;
+  --sc-h2-lh: 134%;
+  --sc-h2-ls: -0.45px;
+
+  --sc-h3: 34px;
+  --sc-h3-lh: 142%;
+  --sc-h3-ls: -0.34px;
+
+  --sc-h4: 26px;
+  --sc-h4-lh: 139%;
+  --sc-h4-ls: -0.195px;
+
+  --sc-h5: 24px;
+  --sc-h5-lh: 150%;
+  --sc-h5-ls: -0.12px;
+
+  --sc-h6: 20px;
+  --sc-h6-lh: 140%;
+  --sc-h6-ls: -0.05px;
+
+  --sc-h7: 18px;
+  --sc-h7-lh: 156%;
+  --sc-h7-ls: 0;
+
+  --sc-h8: 17px;
+  --sc-h8-lh: 142%;
+  --sc-h8-ls: 0.085px;
+
+  // Eyebrows
+
+  --sc-eyebrow-l: 18px;
+  --sc-eyebrow-l-lh: 112%;
+  --sc-eyebrow-l-ls: 0;
+
+  --sc-eyebrow-m: 14px;
+  --sc-eyebrow-m-lh: 115%;
+  --sc-eyebrow-m-ls: 0.28px;
+
+  --sc-eyebrow-s: 12px;
+  --sc-eyebrow-s-lh: 100%;
+  --sc-eyebrow-s-ls: 0.48px;
+
+  // Body
+
+  --sc-body-l: 18px;
+  --sc-body-l-lh: 156%;
+  --sc-body-l-ls: 0;
+
+  --sc-body-m: 16px;
+  --sc-body-m-lh: 150%;
+  --sc-body-m-ls: 0.16px;
+
+  --sc-body-s: 14px;
+  --sc-body-s-lh: 172%;
+  --sc-body-s-ls: 0.28px;
+
+  --sc-body-xs: 12px; // Type Scale - Small
+  --sc-body-xs-lh: 167%;
+  --sc-body-xs-ls: 0.48px;
+
+  // Buttons, tabs and stats
+
+  --sc-button: 16px;
+  --sc-button-lh: 100%;
+  --sc-button-ls: 0.16px;
+
+  --sc-tab: 18px;
+  --sc-tab-lh: 112%;
+  --sc-tab-ls: 0;
+
+  --sc-stat: 80px;
+  --sc-stat-lh: 100%;
+  --sc-stat-ls: -3.2px;
+}
+
+////// Large Mobiles (sm) to Small Desktop (lg)
+
+@media (min-width: 640px) {
+  :root {
+    //// POWER GRADIENT
+    --sc-power-gradient-bg: url("/images/sc_power-gradient-desktop.svg");
+    --sc-grain-bg: url("/static/grain.png");
+
+    //// Main Navigation
+    --sc-main-nav-height: 64px; // in tailwind this is 16 (ie. pt-16)
+
+    //// Progress Bar
+    --sc-progress-bar: 54px; // in tailwind this is 16 (ie. pt-16)
+
+    //// Grid Spacing
+
+    --sc-grid-col-gap: clamp(1.1875rem, calc(-0.1667rem + 3.3854vw), 2rem);
+    --sc-grid-padding-x: var(--sc-grid-col-gap); // Same as --sc-grid-col-gap
+    --sc-grid-margin-x: clamp(0rem, calc(-3.3335rem + 8.3338vw), 2rem);
+
+    //// Headings / Calculation for clamp(): / Minimum viewport width=641px / Maximum viewport width=1279.98px / Minimum font size=H&C mobile value / Maximum font size=H&C tablet value
+
+    --sc-display-1: clamp(3.5rem, calc(0.9921rem + 6.26vw), 6rem);
+    --sc-display-1-lh: 109%;
+    --sc-display-1-ls: -2.88px;
+
+    --sc-display-2: clamp(2.625rem, calc(0.2425rem + 5.947vw), 5rem);
+    --sc-display-2-lh: 115%;
+    --sc-display-2-ls: -2px;
+
+    --sc-h1: clamp(2.5rem, calc(0.7445rem + 4.382vw), 4.25rem);
+    --sc-h1-lh: 118%;
+    --sc-h1-ls: -1.53px;
+
+    --sc-h2: clamp(2.25rem, calc(0.996rem + 3.13vw), 3.5rem);
+    --sc-h2-lh: 122%;
+    --sc-h2-ls: -1.12px;
+
+    --sc-h3: clamp(2.125rem, calc(1.2472rem + 2.191vw), 3rem);
+    --sc-h3-lh: 134%;
+    --sc-h3-ls: -0.84px;
+
+    --sc-h4: clamp(1.625rem, calc(0.998rem + 1.565vw), 2.25rem);
+    --sc-h4-lh: 134%;
+    --sc-h4-ls: -0.45px;
+
+    --sc-h5: clamp(1.5rem, calc(0.9984rem + 1.252vw), 2rem);
+    --sc-h5-lh: 138%;
+    --sc-h5-ls: -0.32px;
+
+    --sc-h6: clamp(1.25rem, calc(0.8738rem + 0.939vw), 1.625rem);
+    --sc-h6-lh: 139%;
+    --sc-h6-ls: -0.195px;
+
+    --sc-h7: 22px;
+    --sc-h7-lh: 146%;
+    --sc-h7-ls: -0.055px;
+
+    --sc-h8: 19px;
+    --sc-h8-lh: 148%;
+    --sc-h8-ls: 0;
+
+    // Eyebrows
+
+    --sc-eyebrow-l: 21px;
+    --sc-eyebrow-l-lh: 115%;
+    --sc-eyebrow-l-ls: -0.052px;
+
+    --sc-eyebrow-m: 15px;
+    --sc-eyebrow-m-lh: 107%;
+    --sc-eyebrow-m-ls: 0.225px;
+
+    --sc-eyebrow-s: 13px;
+    --sc-eyebrow-s-lh: 124%;
+    --sc-eyebrow-s-ls: 0.39px;
+
+    // Body
+
+    --sc-body-l: 21px;
+    --sc-body-l-lh: 153%;
+    --sc-body-l-ls: -0.052px;
+
+    --sc-body-m: 17px;
+    --sc-body-m-lh: 142%;
+    --sc-body-m-ls: 0.085px;
+
+    --sc-body-s: 15px;
+    --sc-body-s-lh: 160%;
+    --sc-body-s-ls: 0.225px;
+
+    --sc-body-xs: 13px; // Type Scale - Small
+    --sc-body-xs-lh: 154%;
+    --sc-body-xs-ls: 0.39px;
+
+    // Buttons, tabs and stats
+
+    --sc-button: 17px;
+    --sc-button-lh: 118%;
+    --sc-button-ls: 0.085px;
+
+    --sc-tab: 19px;
+    --sc-tab-lh: 106%;
+
+    --sc-stat: clamp(5rem, calc(4.4984rem + 1.252vw), 5.5rem);
+    --sc-tab-lh: 100%;
+    --sc-stat-ls: -3.96px;
+  }
+}
+
+////// Small Desktop (lg) to Largest Desktop (3xl)
+
+@media (min-width: 1024px) {
+  :root {
+    //// Main Navigation
+    --sc-main-nav-height: 64px; // in tailwind this is 16 (ie. pt-16)
+
+    //// Grid Spacing
+
+    --sc-grid-col-gap: clamp(2rem, calc(0.8571rem + 1.7857vw), 3rem);
+    --sc-grid-padding-x: var(--sc-grid-col-gap); // Same as --sc-grid-col-gap
+    --sc-grid-margin-x: clamp(2rem, calc(-0.8571rem + 4.4643vw), 4.5rem);
+
+    //// Headings / Calculation for clamp(): / Minimum viewport width=1280px / Maximum viewport width=1920px / Minimum font size=H&C tablet value / Maximum font size=H&C desktop value
+
+    --sc-display-1: clamp(6rem, calc(-1rem + 8.75vw), 9.5rem);
+    --sc-display-1-lh: 100%;
+    --sc-display-1-ls: -6.08px;
+
+    --sc-display-2: clamp(5rem, calc(-1rem + 7.5vw), 8rem);
+    --sc-display-2-lh: 107%;
+    --sc-display-2-ls: -4.48px;
+
+    --sc-h1: clamp(4.25rem, calc(-0.25rem + 5.625vw), 6.5rem);
+    --sc-h1-lh: 112%;
+    --sc-h1-ls: -3.12px;
+
+    --sc-h2: clamp(5rem, calc(8rem + -3.75vw), 3.5rem);
+    --sc-h2-lh: 115%;
+    --sc-h2-ls: -2px;
+
+    --sc-h3: clamp(3rem, calc(1rem + 2.5vw), 4rem);
+    --sc-h3-lh: 119%;
+    --sc-h3-ls: -1.44px;
+
+    --sc-h4: clamp(2.25rem, calc(0.75rem + 1.875vw), 3rem);
+    --sc-h4-lh: 134%;
+    --sc-h4-ls: -0.84px;
+
+    --sc-h5: clamp(2rem, calc(1rem + 1.25vw), 2.5rem);
+    --sc-h5-lh: 130%;
+    --sc-h5-ls: -0.6px;
+
+    --sc-h6: clamp(1.625rem, calc(0.875rem + 0.9375vw), 2rem);
+    --sc-h6-lh: 138%;
+    --sc-h6-ls: -0.32px;
+
+    --sc-h7: 26px;
+    --sc-h7-lh: 139%;
+    --sc-h7-ls: -0.195px;
+
+    --sc-h8: 22px;
+    --sc-h8-lh: 146%;
+    --sc-h8-ls: -0.055px;
+
+    // Eyebrows
+
+    --sc-eyebrow-l: 24px;
+    --sc-eyebrow-l-lh: 100%;
+    --sc-eyebrow-l-ls: -0.12px;
+
+    --sc-eyebrow-m: 16px;
+    --sc-eyebrow-m-lh: 100%;
+    --sc-eyebrow-m-ls: 0.16px;
+
+    --sc-eyebrow-s: 14px;
+    --sc-eyebrow-s-lh: 115%;
+    --sc-eyebrow-s-ls: 0.28px;
+
+    // Body
+
+    --sc-body-l: 24px;
+    --sc-body-l-lh: 150%;
+    --sc-body-l-ls: -0.12px;
+
+    --sc-body-m: 18px;
+    --sc-body-m-lh: 156%;
+    --sc-body-m-ls: 0;
+
+    --sc-body-s: 16px;
+    --sc-body-s-lh: 150%;
+    --sc-body-s-ls: 0.16px;
+
+    --sc-body-xs: 14px; // Type Scale - Small
+    --sc-body-xs-lh: 172%;
+    --sc-body-xs-ls: 0.28px;
+
+    // Buttons, tabs and stats
+
+    --sc-button: 18px;
+    --sc-button-lh: 111%;
+    --sc-button-ls: 0;
+
+    --sc-tab: 20px;
+    --sc-tab-lh: 100%;
+    --sc-tab-ls: -0.05px;
+
+    --sc-stat: clamp(5.5rem, calc(3.5rem + 2.5vw), 6.5rem);
+    --sc-tab-lh: 100%;
+    --sc-stat-ls: -5.2px;
+  }
+}
+
+@media (min-width: 1278.99px) {
+  :root {
+    //// Main Navigation
+    --sc-main-nav-height: 96px; // in tailwind this is 24 (ie. pt-24)
+  }
+}

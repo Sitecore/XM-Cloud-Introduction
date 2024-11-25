@@ -1,4 +1,3 @@
-
 /* Brand Colors */
 $sc-red: #fe2911;
 $sc-teal: #1ca6a3;
@@ -12,27 +11,39 @@ $sc-gray4: #707070;
 $sc-gray5: #333333;
 /* Site Colors */
 $sc-topbar-bg: #666;
-$sc-content-bg: #F6F6F6;
+$sc-content-bg: #f6f6f6;
 $sc-font-color: #212529;
 
-
 .fixed-footer {
-    flex-shrink: 0;
-    width: 100%;
-    height: 56px; /* Set the fixed height of the footer here */
-    .footer-copyright {
-        font-size: 0.9em;
+  flex-shrink: 0;
+  width: 100%;
+  height: 56px; /* Set the fixed height of the footer here */
+  color: white;
+  .inner {
+    border: none;
+    color: white;
+  }
+  .footer-copyright {
+    font-size: 0.9em;
 
-        a:link, a:visited {
-            color: $sc-white;
-            margin: 3px;
-        }
+    a:link,
+    a:visited {
+      color: $sc-white;
+      margin: 3px;
     }
+  }
 
-    .footer-social-link {
-        &:link, &:visited, i {
-            color: $sc-white;
-            margin: 0px 5px;
-        }
+  .footer-social-link {
+    &:link,
+    &:visited,
+    i {
+      color: $sc-white;
+      margin: 0px 5px;
     }
+  }
+  .footer-gradient {
+    position: fixed;
+    bottom: 0;
+    z-index: -20;
+  }
 }
