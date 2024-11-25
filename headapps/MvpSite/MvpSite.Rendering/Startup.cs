@@ -33,10 +33,20 @@ public class Startup(IConfiguration configuration)
             .AddLocalization()
             .AddMvc();
 
-        // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge & local edge endpoint
-        services.AddSitecoreLayoutService()
-            .AddGraphQlWithContextHandler("default", Configuration.EdgeContextId!, siteName: Configuration.DefaultSiteName!)
-            .AsDefaultHandler();
+        if (Configuration.EnableLocalContainer)
+        {
+            // Register the GraphQL version of the Sitecore Layout Service Client for use against local container endpoint
+            services.AddSitecoreLayoutService()
+                .AddGraphQlHandler("default", Configuration.DefaultSiteName!, Configuration.EdgeContextId!, Configuration.LocalContainerLayoutUri!)
+                .AsDefaultHandler();
+        }
+        else
+        {
+            // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge
+            services.AddSitecoreLayoutService()
+                .AddGraphQlWithContextHandler("default", Configuration.EdgeContextId!, siteName: Configuration.DefaultSiteName!)
+                .AsDefaultHandler();
+        }
 
         services.AddFeatureUser(DotNetConfiguration);
 
@@ -95,7 +105,7 @@ public class Startup(IConfiguration configuration)
         // ReSharper disable StringLiteralTypo - Uri segments
         // Add redirects for old mvp pages
         RewriteOptions rewriteOptions = new RewriteOptions()
-            .AddRedirect("mvps/(.*)", "Directory?fc_Year=$1")
+            .AddRedirect("mvps/(.*)", "Directory?fc_year=$1")
             .AddRedirect("mvps$", "Directory")
             .AddRedirect("search(.*)", "Directory$1")
             .AddRedirect("Search(.*)", "Directory$1");

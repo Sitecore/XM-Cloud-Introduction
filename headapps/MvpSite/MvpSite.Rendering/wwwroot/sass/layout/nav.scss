@@ -117,3 +117,18 @@ $sc-font-color: #212529;
     padding-left: 10px;
   }
 }
+@media (max-width: 992px){
+  .main-nav{
+    .navbar-nav{
+      padding: 1rem;
+    }
+    .nav-item{
+      .sub-menu{
+        position: relative !important;
+        width: 100%;
+        top:0 !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}

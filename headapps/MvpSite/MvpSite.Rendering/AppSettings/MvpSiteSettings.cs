@@ -17,4 +17,8 @@ public class MvpSiteSettings
     public string? EdgeContextId { get; set; }
 
     public string? EditingPath { get; set; }
+
+    public bool EnableLocalContainer { get; set; }
+
+    public Uri? LocalContainerLayoutUri { get; set; }
 }

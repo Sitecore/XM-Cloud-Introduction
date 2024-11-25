@@ -501,7 +501,7 @@ button.cta i {
 
 a.link-arrow,
 span.link-arrow {
-  @extend a.cta.primary;
+  @extend .cta,.primary;
   display: flex;
   width: fit-content;
   background: inherit;
