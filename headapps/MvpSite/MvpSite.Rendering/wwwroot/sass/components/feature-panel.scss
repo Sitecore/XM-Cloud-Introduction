@@ -26,11 +26,14 @@
   }
 }
 .column-container {
-  .sc-power-gradient-bg {
-    padding-right: 1rem;
-    padding-left: 1rem;
-    .row {
+  .row {
+   
+    .row:has(.feature-panel-card) {
+      @extend .sc-power-gradient-bg;
       gap: 1rem;
+      padding-right: 1rem;
+        padding-left: 1rem;
+        width: 100%;
       row-gap: 0;
     }
   }
@@ -50,6 +53,18 @@
     transform: translateX(100%);
     top: 0;
   }
+ 
+    &:before{
+        position: absolute;
+          width: 1rem;
+          background-color: white;
+          content: "";
+          height: 100%;
+          left: -2rem;
+          transform: translateX(100%);
+          top: 0;
+    }
+  
   .feature-panel-text {
     background: none;
     padding: 3px;
