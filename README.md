@@ -4,7 +4,7 @@
 # 📝 Introduction
 This repository contains the codebase for a series of sites managed by Sitecore. You will find the following sites in this repository:
 - [Sitecore MVP Site](https://mvp.sitecore.com)
-- [SUGCON EU Site](https://europe.sugcon.events)
+- [SUGCON Europe Site](https://europe.sugcon.events)
 - [SUGCON ANZ Site](https://anz.sugcon.events)
 - [SUGCON India Site](https://india.sugcon.events)
 - [SUGCON NA Site](https://na.sugcon.events)
