@@ -2,6 +2,7 @@
 
 @mixin form() {
   .btn {
+    @extend .cta;
     border: none;
     border-radius: 0;
 
@@ -11,11 +12,12 @@
   }
 
   .btn-primary {
-    background-color: $sitecore-teal;
+
+@extend .primary;
   }
 
   .btn-secondary {
-    background-color: $unfocussed-bg;
+   @extend .secondary;
   }
 
   input,

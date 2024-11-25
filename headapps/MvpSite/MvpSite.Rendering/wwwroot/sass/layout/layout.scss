@@ -180,8 +180,7 @@ section.background-white {
 section.background-grey {
   background-color: $sc-content-bg;
 }
-
-.sc-power-gradient-bg {
+%sc-power-gradient-bg {
   position: relative;
   z-index: 1;
   &::before {
@@ -206,6 +205,9 @@ section.background-grey {
   & > * {
     isolation: isolate;
   }
+}
+.sc-power-gradient-bg{
+  @extend %sc-power-gradient-bg;
 }
 main {
   flex: 1 0 auto;

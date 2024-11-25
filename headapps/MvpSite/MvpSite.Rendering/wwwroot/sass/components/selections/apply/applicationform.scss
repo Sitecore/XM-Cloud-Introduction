@@ -31,7 +31,7 @@
         line-height: 45px;
         display: block;
         font-size: 1.2em;
-        color: $sitecore-teal;
+        color: var(--sc-violet-500);
         border-radius: 50%;
         margin: 0 auto 10px auto;
         padding: 2px;
@@ -52,16 +52,16 @@
       }
 
       &.active {
-        color: $sitecore-teal;
+        color: var(--sc-violet-500);
 
         &:before {
           color: $contrast-text;
           border: none;
-          background-color: $sitecore-teal;
+          background-color: var(--sc-violet-500);
         }
 
         &:after {
-          background-color: $sitecore-teal;
+          background-color: var(--sc-violet-500);
         }
       }
     }
