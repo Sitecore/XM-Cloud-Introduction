@@ -544,13 +544,10 @@ public class ApplicationFormViewComponent(
         {
             model.NextStep = ApplicationStep.Confirmation;
         }
-        else if (model.IsNavigation.HasValue && !model.IsNavigation.Value && model.UnderstandsReviewConsent && model is { UnderstandsProgramAgreement: true, IsComplete: true })
+        else if (model.IsNavigation.HasValue && !model.IsNavigation.Value && model.UnderstandsReviewConsent && model is { UnderstandsProgramAgreement: true, IsComplete: true, CurrentApplication: not null })
         {
-            Application updateApplication = new(model.CurrentApplication!.Id)
-            {
-                Status = ApplicationStatus.Submitted
-            };
-            Response<Application> applicationResponse = await Client.UpdateApplicationAsync(updateApplication);
+            model.CurrentApplication.Status = ApplicationStatus.Submitted;
+            Response<Application> applicationResponse = await Client.UpdateApplicationAsync(model.CurrentApplication);
             if (applicationResponse is { StatusCode: HttpStatusCode.OK, Result: not null })
             {
                 model.CurrentApplication = applicationResponse.Result;
