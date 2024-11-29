@@ -40,7 +40,14 @@
                 </div>
             </div>
             <div class="card-footer">
-                Final score: @totalScore (@((int)Math.Round(totalScore / percentageCalculationTotal * 100, 0))%)
+                @{ int percentScore = (int)Math.Round(totalScore / percentageCalculationTotal * 100, 0); }
+                Review score: <span style="color: @ScoreCardsModel.Color(percentScore)">@totalScore (@percentScore%)</span><br />
+                @if (review.Sentiment.HasValue)
+                {
+                    <text>
+                        Sentiment: <span class="badge @(review.Sentiment == ReviewSentiment.Yes ? "badge-success" : review.Sentiment == ReviewSentiment.Maybe ? "badge-warning" : review.Sentiment == ReviewSentiment.No ? "badge-danger" : "badge-dark")">@review.Sentiment</span>
+                    </text>
+                }
             </div>
         </div>
         <br/>

@@ -1,10 +1,13 @@
-﻿using Mvp.Selections.Domain;
+﻿using System.ComponentModel.DataAnnotations;
+using Mvp.Selections.Domain;
 using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
 
 namespace MvpSite.Rendering.Models.Apply;
 
 public class ApplicationFormModel : BaseModel
 {
+    public const int LargeTextFieldLength = 2000;
+
     public Application? CurrentApplication { get; set; }
 
     public Selection? CurrentSelection { get; set; }
@@ -63,10 +66,12 @@ public class ApplicationFormModel : BaseModel
 
     public TextField? EligibilityLabel { get; set; }
 
+    [StringLength(LargeTextFieldLength)]
     public string? Eligibility { get; set; }
 
     public TextField? ObjectivesLabel { get; set; }
 
+    [StringLength(LargeTextFieldLength)]
     public string? Objectives { get; set; }
 
     public TextField? MentorsLabel { get; set; }
@@ -83,6 +88,7 @@ public class ApplicationFormModel : BaseModel
 
     public TextField? ContributionDescriptionLabel { get; set; }
 
+    [StringLength(LargeTextFieldLength)]
     public string? ContributionDescription { get; set; }
 
     public TextField? ContributionLinkLabel { get; set; }

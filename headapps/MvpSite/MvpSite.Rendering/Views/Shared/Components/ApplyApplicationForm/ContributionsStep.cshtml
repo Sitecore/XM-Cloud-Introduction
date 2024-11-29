@@ -1,4 +1,5 @@
 ﻿@using Mvp.Selections.Domain
+@using MvpSite.Rendering.Models.Apply
 @model MvpSite.Rendering.Models.Apply.ApplicationFormModel
 
 <div class="mvp-fs-applyapplicationform col-12">
@@ -56,6 +57,7 @@
                         @(Model.IsEditing ? Html.Raw(Model.ContributionDescriptionLabel?.EditableMarkup) : Model.ContributionDescriptionLabel?.Value)
                     </label>
                     <textarea asp-for="ContributionDescription" rows="3" class="form-control"></textarea>
+                    <small class="form-text text-muted text-right textareacounter">@(Model.ContributionDescription?.Length.ToString() ?? "0") / @ApplicationFormModel.LargeTextFieldLength</small>
                 </div>
 
                 <div class="form-group col-sm-12 col-md-6">

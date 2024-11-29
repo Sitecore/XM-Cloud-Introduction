@@ -97,5 +97,18 @@ $(document).ready(function () {
             timelineEventsHeightRecalculation($timeline, $window.width() < 576);
         });
     }
+
+    var $textareacounters = $(".textareacounter");
+    if ($textareacounters.length > 0) {
+        $textareacounters.each(function (index, item) {
+            var $counter = $(item);
+            var $textarea = $counter.siblings("textarea");
+            var maxLength = $textarea.attr("maxlength");
+
+            $textarea.on("input", function () {
+                $counter.text($textarea.val().length + " / " + maxLength);
+            });
+        });
+    }
 });
 
