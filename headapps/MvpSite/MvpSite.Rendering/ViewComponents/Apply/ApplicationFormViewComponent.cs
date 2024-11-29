@@ -310,12 +310,9 @@ public class ApplicationFormViewComponent(
         {
             if (model.CurrentApplication != null)
             {
-                Application updateApplication = new(model.CurrentApplication.Id)
-                {
-                    MvpType = new MvpType(model.MvpTypeId)
-                };
+                model.CurrentApplication.MvpType = new MvpType(model.MvpTypeId);
                 Response<Application> applicationResponse =
-                    await Client.UpdateApplicationAsync(updateApplication);
+                    await Client.UpdateApplicationAsync(model.CurrentApplication);
                 if (applicationResponse is { StatusCode: HttpStatusCode.OK, Result: not null })
                 {
                     model.CurrentApplication = applicationResponse.Result;
@@ -364,16 +361,13 @@ public class ApplicationFormViewComponent(
 
     private async Task ExecuteObjectivesStep(ApplicationFormModel model)
     {
-        if (model.IsNavigation.HasValue && !model.IsNavigation.Value && !string.IsNullOrWhiteSpace(model.Eligibility) && !string.IsNullOrWhiteSpace(model.Objectives))
+        if (model.IsNavigation.HasValue && !model.IsNavigation.Value && !string.IsNullOrWhiteSpace(model.Eligibility) && !string.IsNullOrWhiteSpace(model.Objectives) && model.CurrentApplication != null)
         {
-            Application updateApplication = new(model.CurrentApplication!.Id)
-            {
-                Eligibility = model.Eligibility,
-                Objectives = model.Objectives,
-                Mentor = model.Mentors
-            };
+            model.CurrentApplication.Eligibility = model.Eligibility;
+            model.CurrentApplication.Objectives = model.Objectives;
+            model.CurrentApplication.Mentor = model.Mentors;
             Response<Application> applicationResponse =
-                await Client.UpdateApplicationAsync(updateApplication);
+                await Client.UpdateApplicationAsync(model.CurrentApplication);
             if (applicationResponse is { StatusCode: HttpStatusCode.OK, Result: not null })
             {
                 model.CurrentApplication = applicationResponse.Result;
@@ -568,13 +562,10 @@ public class ApplicationFormViewComponent(
 
     private async Task ExecuteSubmittedStep(ApplicationFormModel model)
     {
-        if (model.IsNavigation.HasValue && !model.IsNavigation.Value)
+        if (model.IsNavigation.HasValue && !model.IsNavigation.Value && model.CurrentApplication != null)
         {
-            Application updateApplication = new(model.CurrentApplication!.Id)
-            {
-                Status = ApplicationStatus.Open
-            };
-            Response<Application> applicationResponse = await Client.UpdateApplicationAsync(updateApplication);
+            model.CurrentApplication.Status = ApplicationStatus.Open;
+            Response<Application> applicationResponse = await Client.UpdateApplicationAsync(model.CurrentApplication);
             if (applicationResponse is { StatusCode: HttpStatusCode.OK, Result: not null })
             {
                 model.CurrentApplication = applicationResponse.Result;
