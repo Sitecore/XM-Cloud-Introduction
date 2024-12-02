@@ -16,7 +16,7 @@ SharedFields:
   Value: Events
 - ID: "8e0dd914-9afb-4d45-bf8b-7ff5d6e5337e"
   Hint: HostName
-  Value: sugcon24events.vercel.app
+  Value: sugcon24events.vercel.app|sugconevents.xmcloudcm.localhost
 - ID: "9eaf6dc9-b811-4cda-9edd-9697faba628a"
   Hint: POS
   Value: 
@@ -56,11 +56,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1cb3429c-ba89-41c4-b849-305efdf6c60f"
+      Value: "93f01196-f868-4237-a784-fc5be52a0fc9"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\LsPuHOnvmf
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240502T074259Z
+      Value: 20240723T084834Z
