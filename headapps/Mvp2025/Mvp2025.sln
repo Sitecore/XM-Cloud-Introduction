@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35017.193
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvp2025", "Mvp2025.Site\Mvp2025.Site.csproj", "{0DB0688C-564B-4ED7-8221-420BE98394C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E460EB99-1258-412C-BA2F-8B91C131E454}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Packages.props = Directory.Packages.props
+		..\nuget.config = ..\nuget.config
+		..\README.md = ..\README.md
+		..\xmcloud.build.json = ..\xmcloud.build.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DB0688C-564B-4ED7-8221-420BE98394C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DB0688C-564B-4ED7-8221-420BE98394C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DB0688C-564B-4ED7-8221-420BE98394C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DB0688C-564B-4ED7-8221-420BE98394C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D5F1FFD-318E-44D7-9877-AA069AC8BE05}
+	EndGlobalSection
+EndGlobal

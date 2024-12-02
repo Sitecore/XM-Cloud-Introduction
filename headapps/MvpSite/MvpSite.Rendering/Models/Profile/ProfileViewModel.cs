@@ -1,4 +1,5 @@
-﻿using Mvp.Selections.Api.Model;
+﻿using System.Net;
+using Mvp.Selections.Api.Model;
 using Mvp.Selections.Domain;
 using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
 
@@ -21,7 +22,7 @@ public class ProfileViewModel
 
     public static Uri GenerateImageUri(Title title)
     {
-        return new Uri($"/images/mvp-logos/{title.Application.Selection.Year}-{title.MvpType.Name}.png", UriKind.Relative);
+        return new Uri($"/images/mvp-logos/{title.Application.Selection.Year}-{WebUtility.UrlEncode(title.MvpType.Name)}.png", UriKind.Relative);
     }
 
     public List<TimelineEventViewModel> GetTimelineEvents()

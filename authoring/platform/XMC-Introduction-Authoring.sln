@@ -5,8 +5,9 @@ VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Files", ".Solution Files", "{196B5D43-B228-4632-9BC3-EAAF79B4EDA5}"
 	ProjectSection(SolutionItems) = preProject
+		Directory.Build.targets = Directory.Build.targets
 		..\nuget.config = ..\nuget.config
-		..\Packages.props = ..\Packages.props
+		Packages.props = Packages.props
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvp.Environment.Platform", "Mvp.Environment.Platform\Mvp.Environment.Platform.csproj", "{89A72153-4995-4607-98B1-B8C75679926E}"

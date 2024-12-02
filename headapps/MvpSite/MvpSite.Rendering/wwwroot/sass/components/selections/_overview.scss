@@ -1,23 +1,23 @@
 ﻿@mixin overviewtable() {
-    tr>*:last-child {
-        i {
-            color: #fff;
-        }
-
-        form {
-            display: none;
-        }
-
-        .btn {
-            margin-bottom: 0.25rem;
-        }
+  tr > *:last-child {
+    i {
+      color: #fff;
     }
 
-    td {
-        vertical-align: middle;
-
-        i.fa.fa-user {
-            font-size: 80px;
-        }
+    form {
+      display: none;
     }
+
+    .btn {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  td {
+    vertical-align: middle;
+
+    i.fa.fa-user {
+      font-size: 80px;
+    }
+  }
 }

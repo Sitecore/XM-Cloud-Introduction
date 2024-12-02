@@ -5,16 +5,8 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <CentralPackageFloatingVersionsEnabled>true</CentralPackageFloatingVersionsEnabled>
     <PlatformVersion>1.*</PlatformVersion>
-    <AspNetCoreSdkVersion>0.0.7</AspNetCoreSdkVersion>
+    <AspNetCoreSdkVersion>0.0.11</AspNetCoreSdkVersion>
   </PropertyGroup>
-
-  <ItemGroup Label="Platform Package References">
-    <PackageVersion Include="Sitecore.XmCloud.Kernel" Version="$(PlatformVersion)" />
-    <PackageVersion Include="Sitecore.XmCloud.ContentSearch" Version="$(PlatformVersion)" />
-    <PackageVersion Include="Sitecore.XmCloud.ContentSearch.Linq" Version="$(PlatformVersion)" />
-    <PackageVersion Include="Sitecore.XmCloud.LayoutService" Version="$(PlatformVersion)" />
-    <PackageVersion Include="Sitecore.XmCloud.Assemblies" Version="$(PlatformVersion)" />
-  </ItemGroup>
 
   <ItemGroup Label="Rendering Host Package References">
     <PackageVersion Include="Sitecore.AspNetCore.SDK.LayoutService.Client" Version="$(AspNetCoreSdkVersion)" />
@@ -32,7 +24,7 @@
     <PackageVersion Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
     <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="7.3.1" />
     <PackageVersion Include="Okta.AspNetCore" Version="4.5.0" />
-    <PackageVersion Include="Mvp.Selections.Client" Version="4.14.0" />
+    <PackageVersion Include="Mvp.Selections.Client" Version="4.16.0" />
     <PackageVersion Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.22.0" />
     <PackageVersion Include="Markdig" Version="0.37.0" />
   </ItemGroup>

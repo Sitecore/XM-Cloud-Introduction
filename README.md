@@ -4,7 +4,7 @@
 # 📝 Introduction
 This repository contains the codebase for a series of sites managed by Sitecore. You will find the following sites in this repository:
 - [Sitecore MVP Site](https://mvp.sitecore.com)
-- [SUGCON EU Site](https://europe.sugcon.events)
+- [SUGCON Europe Site](https://europe.sugcon.events)
 - [SUGCON ANZ Site](https://anz.sugcon.events)
 - [SUGCON India Site](https://india.sugcon.events)
 - [SUGCON NA Site](https://na.sugcon.events)
@@ -45,15 +45,18 @@ If you want more information about the Cloud plugin for the CLI then you access 
 
 ## Running the MVP Site
 To run the MVP site you will need to create a Development instance of your settings.
-To this duplicate the `./headapps/MvpSite/Mvp.Project.MvpSite.Rendering/appsettings.json` and name it `appsettings.Development.json`. Then provide the Sitecore instance, and Okta sections, it's completed it look something like:
+
+Duplicate the `./headapps/MvpSite/Mvp.Project.MvpSite.Rendering/appsettings.json` and name it `appsettings.Development.json`. 
+
+Populate the Sitecore, and Okta sections. You can find the `EdgeContextId` & `EditingSecret` in the XMC Deploy application, in the Developer Settings section for your environment. The Okta settings are available after completing the Okta Developer sign-up linked above. 
+
+When completed it will look something like:
 
 ```json
   "Sitecore": {
-    "InstanceUri": "https://xmc-XXX-XXX-XXX.sitecorecloud.io/",
-    "LayoutServicePath": "/sitecore/api/graph/edge",
-    "DefaultSiteName": "mvp-site",
-    "NotFoundPage": "/404",
-    "ExperienceEdgeToken": "{B2F8A9B9-7203-4DCF-9314-8B28B043347E}"
+    "EdgeContextId": "XXX",
+    "EditingSecret": "XXX",
+    ...
   },
   ...
   "Okta" : {

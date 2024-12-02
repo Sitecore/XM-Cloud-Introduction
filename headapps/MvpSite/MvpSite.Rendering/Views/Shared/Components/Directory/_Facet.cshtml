@@ -7,7 +7,8 @@
     string id = "fcid_" + Model.Identifier;
     <div class="mvp-facet mb-4">
         <a data-toggle="collapse" href="#@id" role="button" aria-expanded="true" aria-controls="@id">
-            <h3 asp-for="Name"></h3>
+            <h3 asp-for="Name"> </h3>
+            <span class="icon-chevron-down "></span>
         </a>
         <ul id="@id" class="list-group collapse show">
             @foreach (FacetOption option in Model.FacetOptions)

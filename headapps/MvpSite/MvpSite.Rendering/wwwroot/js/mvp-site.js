@@ -96,4 +96,18 @@ $(document).ready(function () {
             timelineEventsHeightRecalculation($timeline, $window.width() < 576);
         });
     }
+
+
+    const $textareacounters = $(".textareacounter");
+    if ($textareacounters.length > 0) {
+        $textareacounters.each(function (index, item) {
+            const $counter = $(item);
+            const $textarea = $counter.siblings("textarea");
+            const maxLength = $textarea.attr("maxlength");
+            
+            $textarea.on("input", function () {
+                $counter.text($textarea.val().length + " / " + maxLength);
+            });
+        });
+    }
 });

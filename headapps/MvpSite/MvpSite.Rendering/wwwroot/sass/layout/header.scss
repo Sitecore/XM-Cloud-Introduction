@@ -1,4 +1,3 @@
-
 /* Brand Colors */
 $sc-red: #fe2911;
 $sc-teal: #1ca6a3;
@@ -12,11 +11,10 @@ $sc-gray4: #707070;
 $sc-gray5: #333333;
 /* Site Colors */
 $sc-topbar-bg: #666;
-$sc-content-bg: #F6F6F6;
+$sc-content-bg: #f6f6f6;
 $sc-font-color: #212529;
 
 header {
-    position: relative;
-    z-index: 10000;
+  position: relative;
+  z-index: 10000;
 }
-

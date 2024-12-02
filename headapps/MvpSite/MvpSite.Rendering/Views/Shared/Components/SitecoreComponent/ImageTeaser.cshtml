@@ -1,9 +1,12 @@
 ﻿@model MvpSite.Rendering.Models.ImageTeaser
 
-<section class="cta-overlapped-image  background-grey" id="overlap54630191">
+<section class="cta-overlapped-image " id="overlap54630191">
     <div class="container">
-        <div class="row justify-content-end">
-            <div class="col-12 col-lg-7">
+        <div class="row justify-content-end inner">
+         <div class="col-lg-6" style="opacity: 1; top: 0px;">
+                <sc-img asp-for="@Model.TeaserImage" loading="lazy" />
+            </div>
+            <div class="col-12 col-lg-6">
                 <div class="text ">
                     <h3><sc-text asp-for="@Model.TeaserTitle" /></h3>
                     <sc-text asp-for="@Model.TeaserText" />
@@ -14,9 +17,7 @@
 
                 </div>
             </div>
-            <div class="floated" style="opacity: 1; top: 0px;">
-                <sc-img asp-for="@Model.TeaserImage" loading="lazy" />
-            </div>
+           
         </div>
     </div>
 </section>

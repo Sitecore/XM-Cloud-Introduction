@@ -1,63 +1,88 @@
-﻿@import '../../_colors.scss';
+﻿@import "../../_colors.scss";
 
 .mvp-fp-profile {
-    h1 {
-        position: relative;
+  h1 {
+    position: relative;
+  }
 
-        &::after {
-            content: " ";
-            background-image: url(../images/icon-hero.png);
-            position: absolute;
-            width: 76px;
-            height: 53px;
-            top: -9px;
-            left: -93px;
-        }
+  h2 {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 900;
+    letter-spacing: 2.8px;
+    color: $text-gray;
+  }
+  .title-label {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+  }
+  .profile-image {
+    display: flex;
+    align-items: flex-start;
+    img {
+      max-width: 80%;
+    }
+  }
+  .card-title {
+    background: var(--sc-neutral-200);
+    padding: 0.25rem;
+    display: inline-block;
+    border-radius: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-weight: 600;
+    font-size: var(--sc-body-s);
+    line-height: var(--sc-body-s-lh);
+    letter-spacing: var(--sc-body-s-ls);
+    margin-bottom: 0.5rem;
+  }
+  .profile-links {
+    font-size: 2em;
+    word-spacing: 0.3em;
+    a {
+      color: var(--sc-violet-500);
+    }
+    a:hover {
+      text-decoration: none;
+      color: var(--sc-violet-700);
+    }
+  }
+
+  .timeline {
+    img {
+      max-width: 100%;
     }
 
-    h2 {
-        text-transform: uppercase;
-        font-size: 1em;
-        font-weight: 900;
-        letter-spacing: 2.8px;
-        color: $text-gray;
-    }
+    .badge-primary {
+      background-color: var(--sc-violet-500);
 
-    .profile-links {
+      & i.fa {
+        color: $contrast-text;
         font-size: 2em;
-        word-spacing: 0.3em;
-
-        a:hover {
-            text-decoration: none;
-        }
+      }
     }
-
-    .timeline {
-        img {
-            max-width: 100%;
-        }
-
-        .badge-primary {
-            background-color: $sitecore-teal;
-
-            & i.fa {
-                color: $contrast-text;
-                font-size: 2em;
-            }
-        }
-
-        .line {
-            position: relative;
-
-            &:after {
-                background-color: $sitecore-teal;
-                content: "";
-                display: block;
-                width: 1px;
-                height: 100%;
-                position: absolute;
-                left: 50%;
-            }
-        }
+.card{
+    display: flex;
+    flex-direction: row;
+    .card-header{
+        background-color: white;
     }
+}
+    .line {
+      position: relative;
+
+      &:after {
+        background-color: var(--sc-violet-500);
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+      }
+    }
+  }
 }

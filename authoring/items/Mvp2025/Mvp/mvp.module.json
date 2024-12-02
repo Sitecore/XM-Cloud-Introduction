@@ -1,0 +1,107 @@
+{
+  "$schema": "../../../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "Project.Mvp2025.Mvp",
+  "items": {
+    "path": "Mvp",
+    "includes": [
+      {
+        "name": "Templates",
+        "path": "/sitecore/templates/Project/mvp2025",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "Branches",
+        "path": "/sitecore/templates/Branches/Project/mvp2025",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "Modules",
+        "path": "/sitecore/system/Settings/Project/mvp2025",
+        "allowedPushOperations": "createAndUpdate"
+      },
+      {
+        "name": "Media",
+        "path": "/sitecore/Media Library/Project/mvp2025",
+        "rules": [
+          {
+            "path": "/shared",
+            "scope": "singleItem",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/mvp",
+            "scope": "singleItem",
+            "allowedPushOperations": "createOnly"
+          }
+        ]
+      },
+      {
+        "name": "Renderings",
+        "path": "/sitecore/Layout/Renderings/Project/mvp2025",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "PlaceholderSettings",
+        "path": "/sitecore/Layout/Placeholder Settings/Project/mvp2025",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "SiteCollection",
+        "path": "/sitecore/content/mvp2025",
+        "scope": "singleItem",
+        "allowedPushOperations": "createAndUpdate"
+      },
+      {
+        "name": "SiteMvp",
+        "path": "/sitecore/content/mvp2025/mvp",
+        "rules": [
+          {
+            "path": "/home",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Media",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Data",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Dictionary",
+            "scope": "itemAndChildren",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Presentation",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createAndUpdate"
+          },
+          {
+            "path": "/Settings/Site Grouping",
+            "scope": "itemAndDescendants",
+            "allowedPushOperations": "createOnly"
+          },
+          {
+            "path": "/Settings",
+            "scope": "itemAndChildren",
+            "allowedPushOperations": "createAndUpdate"
+          },
+          {
+            "path": "*",
+            "scope": "ignored"
+          }
+        ]
+      },
+      {
+        "name": "APIKey",
+        "path": "/sitecore/System/Settings/Services/API Keys/mvp2025",
+        "allowedPushOperations": "createUpdateAndDelete",
+        "scope": "singleItem"
+      }
+    ]
+  }
+}

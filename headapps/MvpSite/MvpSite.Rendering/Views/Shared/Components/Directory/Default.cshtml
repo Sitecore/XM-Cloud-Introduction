@@ -3,15 +3,15 @@
 
 <section class="mvp-fp-directory bg-white">
     <div class="container">
-        <div class="row">
+        <div class="row inner">
             <div class="col-12 mb-5">
-                <h2 asp-for="TopTitleLabel"></h2>
+                <h2 class="mb-4" asp-for="TopTitleLabel"></h2>
                 <h1 asp-for="TitleLabel"></h1>
             </div>
         </div>
         <form>
-            <div class="row">
-                <div class="input-group col-12 mb-5">
+            <div class="row inner ">
+                <div class="input-group col-12 mb-5 bg-white">
                     <input asp-for="Query" name="@DirectoryViewModel.QueryQueryStringKey" class="form-control" placeholder="@Model.SearchLabel?.Value" />
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-primary">
@@ -19,24 +19,26 @@
                         </button>
                     </div>
                 </div>
+                <div class="results sc-gradient-light-bg extended-background">
+                <div class="row">
                 <div class="col-sm-12 col-md-3">
                     @foreach (FacetViewModel facet in Model.ViewFacets.OrderBy(f => f.SortOrder))
                     {
                         <partial name="~/Views/Shared/Components/Directory/_Facet.cshtml" model="facet" />
                     }
                 </div>
-                <div class="col-sm-12 col-md-9">
-                    <div>
+                <div class="col-sm-12 col-md-9 mb-3 ">
+                    <div class="mb-3">
                         <span asp-for="PagingResults"></span> @string.Format(Model.PagingResultsFormat.Value, Model.FirstResult, Model.LastResult, Model.TotalResults)
                     </div>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                    <div class="grid mb-3">
                         @foreach (DirectoryResultViewModel result in Model.Results)
                         {
                             <partial name="~/Views/Shared/Components/Directory/_Result.cshtml" model="result" />
                         }
                     </div>
                     <nav aria-label="Paging">
-                        <ul class="pagination justify-content-center">
+                        <ul class="pagination justify-content-center border">
                             @if (Model.Page > 1)
                             {
                                 <li class="page-item">
@@ -59,6 +61,8 @@
                             }
                         </ul>
                     </nav>
+                </div>
+                </div>
                 </div>
             </div>
         </form>

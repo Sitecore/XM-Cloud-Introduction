@@ -58,7 +58,7 @@
                     <td>
                         @if (!string.IsNullOrWhiteSpace(card.Applicant?.ImageUri?.ToString()))
                         {
-                            <img src="@card.Applicant.ImageUri" alt="@card.Applicant.Name" />
+                            <img src="@card.Applicant.ImageUri" alt="@card.Applicant.Name" width="80" />
                         }
                         else
                         {

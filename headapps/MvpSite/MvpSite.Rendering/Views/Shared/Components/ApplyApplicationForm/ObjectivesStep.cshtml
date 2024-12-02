@@ -1,4 +1,5 @@
-﻿@model MvpSite.Rendering.Models.Apply.ApplicationFormModel
+﻿@using MvpSite.Rendering.Models.Apply
+@model MvpSite.Rendering.Models.Apply.ApplicationFormModel
 
 <div class="mvp-fs-applyapplicationform col-12">
     <partial name="~/Views/Shared/Components/ApplyApplicationForm/_Progress.cshtml" />
@@ -22,6 +23,7 @@
                 </label>
                 <span class="text-danger">*</span>
                 <textarea asp-for="Eligibility" rows="3" class="form-control" required></textarea>
+                <small class="form-text text-muted text-right textareacounter">@(Model.Eligibility?.Length.ToString() ?? "0") / @ApplicationFormModel.LargeTextFieldLength</small>
             </div>
             <div class="form-group">
                 <label asp-for="Objectives">
@@ -29,6 +31,7 @@
                 </label>
                 <span class="text-danger">*</span>
                 <textarea asp-for="Objectives" rows="3" class="form-control" required></textarea>
+                <small class="form-text text-muted text-right textareacounter">@(Model.Objectives?.Length.ToString() ?? "0") / @ApplicationFormModel.LargeTextFieldLength</small>
             </div>
             <div class="form-group">
                 <label asp-for="Mentors">
