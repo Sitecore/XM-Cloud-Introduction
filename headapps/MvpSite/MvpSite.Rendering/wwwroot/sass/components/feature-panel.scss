@@ -28,6 +28,7 @@
 .column-container {
   .row {
     .row:has(.feature-panel-card) {
+      @extend %sc-power-gradient-bg;
       gap: 1rem;
       padding-right: 1rem;
       padding-left: 1rem;
