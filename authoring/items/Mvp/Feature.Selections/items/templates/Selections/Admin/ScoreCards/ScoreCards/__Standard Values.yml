@@ -42,7 +42,7 @@ Languages:
       Value: Average
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "dd7b8f06-73e4-421c-82b8-e65cfcb4d30b"
+      Value: "6b87a581-bd5f-4cb5-b827-8a7a2a999e5e"
     - ID: "90cc1848-ea0f-467d-bc9b-eb09d1b29d17"
       Hint: MedianTableHeader
       Value: Median
@@ -55,10 +55,13 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "d2119d68-ccc0-45bc-b730-f4a97fcaeaf7"
+      Hint: SentimentsTableHeader
+      Value: Sentiments
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230114T200405Z
+      Value: 20250102T141839Z
     - ID: "da68863c-2e37-46d7-b798-6e988824a349"
       Hint: NameTableHeader
       Value: Name
