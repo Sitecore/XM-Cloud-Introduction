@@ -45,7 +45,7 @@
                 @if (review.Sentiment.HasValue)
                 {
                     <text>
-                        Sentiment: <span class="badge @(review.Sentiment == ReviewSentiment.Yes ? "badge-success" : review.Sentiment == ReviewSentiment.Maybe ? "badge-warning" : review.Sentiment == ReviewSentiment.No ? "badge-danger" : "badge-dark")">@review.Sentiment</span>
+                        Sentiment: <span class="badge @ScoreCardsModel.BadgeClass(review.Sentiment.Value)">@review.Sentiment</span>
                     </text>
                 }
             </div>

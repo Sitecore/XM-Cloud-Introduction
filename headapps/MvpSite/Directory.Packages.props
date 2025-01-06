@@ -7,16 +7,13 @@
     <PlatformVersion>1.*</PlatformVersion>
     <AspNetCoreSdkVersion>0.0.11</AspNetCoreSdkVersion>
   </PropertyGroup>
-
   <ItemGroup Label="Rendering Host Package References">
     <PackageVersion Include="Sitecore.AspNetCore.SDK.LayoutService.Client" Version="$(AspNetCoreSdkVersion)" />
     <PackageVersion Include="Sitecore.AspNetCore.SDK.RenderingEngine" Version="$(AspNetCoreSdkVersion)" />
     <PackageVersion Include="Sitecore.AspNetCore.SDK.ExperienceEditor" Version="$(AspNetCoreSdkVersion)" />
-
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.0"/>
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.0" />
     <PackageVersion Include="System.ServiceModel.Syndication" Version="8.0.0" />
-
     <PackageVersion Include="BuildWebCompiler" Version="1.12.405" />
     <PackageVersion Include="GraphQL.Client" Version="4.0.2" />
     <PackageVersion Include="GraphQL.Client.Serializer.Newtonsoft" Version="4.0.2" />
@@ -24,11 +21,10 @@
     <PackageVersion Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
     <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="7.3.1" />
     <PackageVersion Include="Okta.AspNetCore" Version="4.5.0" />
-    <PackageVersion Include="Mvp.Selections.Client" Version="4.17.0" />
+    <PackageVersion Include="Mvp.Selections.Client" Version="4.18.0" />
     <PackageVersion Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.22.0" />
     <PackageVersion Include="Markdig" Version="0.37.0" />
   </ItemGroup>
-
   <ItemGroup Label="Global Project Tooling">
     <GlobalPackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556">
       <PrivateAssets>all</PrivateAssets>
