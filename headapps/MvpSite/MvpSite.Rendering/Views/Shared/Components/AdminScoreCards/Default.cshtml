@@ -45,6 +45,7 @@
             <th asp-for="MedianTableHeader"></th>
             <th asp-for="MinTableHeader"></th>
             <th asp-for="MaxTableHeader"></th>
+            <th asp-for="SentimentsTableHeader"></th>
             <th></th>
         </tr>
         </thead>
@@ -80,6 +81,12 @@
                     <td style="color: @ScoreCardsModel.Color(card.Median);">@card.Median%</td>
                     <td style="color: @ScoreCardsModel.Color(card.Min);">@card.Min%</td>
                     <td style="color: @ScoreCardsModel.Color(card.Max);">@card.Max%</td>
+                    <td>
+                        @foreach (KeyValuePair<ReviewSentiment, int> sentimentCount in Model.ScoreCards[i].Sentiments)
+                        {
+                            <span class="badge @ScoreCardsModel.BadgeClass(sentimentCount.Key)">@sentimentCount.Value</span><br/>
+                        }
+                    </td>
                     <td>
                         <a asp-for="DetailLink" href="@Model.DetailLink?.Value.Href?applicationid=@card.Applicant?.ApplicationId" class="btn btn-secondary"><i class="fa fa-eye" aria-hidden="true"></i></a>
                         @if (title != null)

@@ -42,6 +42,8 @@ public class ScoreCardsModel : BaseModel
 
     public TextField? MaxTableHeader { get; set; }
 
+    public TextField? SentimentsTableHeader { get; set; }
+
     public HyperLinkField? DetailLink { get; set; }
 
     public HyperLinkField? AwardLink { get; set; }
@@ -54,6 +56,17 @@ public class ScoreCardsModel : BaseModel
             > 30 => "#FC0",
             > 0 => "#8B0001",
             _ => "red"
+        };
+    }
+
+    public static string BadgeClass(ReviewSentiment sentiment)
+    {
+        return sentiment switch
+        {
+            ReviewSentiment.Yes => "badge-success",
+            ReviewSentiment.Maybe => "badge-warning",
+            ReviewSentiment.No => "badge-danger",
+            _ => "badge-dark"
         };
     }
 }
