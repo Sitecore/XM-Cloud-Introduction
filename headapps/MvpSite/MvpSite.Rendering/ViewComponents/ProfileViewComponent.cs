@@ -8,6 +8,7 @@ using Mvp.Selections.Client.Models;
 using Mvp.Selections.Domain;
 using MvpSite.Rendering.Configuration;
 using MvpSite.Rendering.Extensions;
+using MvpSite.Rendering.Helpers;
 using MvpSite.Rendering.Models.Profile;
 using Sitecore.AspNetCore.SDK.RenderingEngine.Binding;
 
@@ -185,7 +186,8 @@ public class ProfileViewComponent(IViewModelBinder modelBinder, MvpSelectionsApi
     {
         MvpProfile? result = null;
         string cacheKey = $"{ProfileCacheKeyPrefix}{id:N}";
-        if (cache.TryGetValue(cacheKey, out MvpProfile? profile))
+        bool isAdmin = await new MvpSelectionsApiHelper(client).IsCurrentUserAnAdmin();
+        if (!isAdmin && cache.TryGetValue(cacheKey, out MvpProfile? profile))
         {
             result = profile;
         }
@@ -195,7 +197,10 @@ public class ProfileViewComponent(IViewModelBinder modelBinder, MvpSelectionsApi
             if (response is { StatusCode: HttpStatusCode.OK, Result: not null })
             {
                 result = response.Result;
-                cache.Set(cacheKey, response.Result, TimeSpan.FromSeconds(_options.ProfileCachedSeconds));
+                if (!isAdmin)
+                {
+                    cache.Set(cacheKey, response.Result, TimeSpan.FromSeconds(_options.ProfileCachedSeconds));
+                }
             }
             else
             {
