@@ -6,8 +6,10 @@ using Microsoft.Extensions.Primitives;
 using Mvp.Selections.Api.Model;
 using Mvp.Selections.Client;
 using Mvp.Selections.Client.Models;
+using Mvp.Selections.Domain;
 using MvpSite.Rendering.Configuration;
 using MvpSite.Rendering.Extensions;
+using MvpSite.Rendering.Helpers;
 using MvpSite.Rendering.Models.Directory;
 using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model;
 using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
@@ -119,7 +121,8 @@ public class DirectoryViewComponent(IViewModelBinder modelBinder, MvpSelectionsA
         List<short>? countryFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, CountryFacetIdentifier);
         string cacheKey =
             $"{SearchCacheKeyPrefix}{model.Query}_{mvpTypeFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_{yearFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_{countryFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_p{model.Page}/{model.PageSize}";
-        if (!cache.TryGetValue(cacheKey, out SearchResult<MvpProfile>? profiles))
+        bool isAdmin = await new MvpSelectionsApiHelper(client).IsCurrentUserAnAdmin();
+        if (isAdmin || !cache.TryGetValue(cacheKey, out SearchResult<MvpProfile>? profiles))
         {
             Response<SearchResult<MvpProfile>> response = await client.SearchMvpProfileAsync(
                 model.Query,
@@ -131,10 +134,14 @@ public class DirectoryViewComponent(IViewModelBinder modelBinder, MvpSelectionsA
             if (response is { StatusCode: HttpStatusCode.OK, Result: not null })
             {
                 profiles = response.Result;
-                cache.Set(cacheKey, response.Result, TimeSpan.FromSeconds(_options.SearchCachedSeconds));
+                if (!isAdmin)
+                {
+                    cache.Set(cacheKey, response.Result, TimeSpan.FromSeconds(_options.SearchCachedSeconds));
+                }
             }
             else
             {
+                profiles = null;
                 model.ErrorMessages.Add(response.Message);
             }
         }
