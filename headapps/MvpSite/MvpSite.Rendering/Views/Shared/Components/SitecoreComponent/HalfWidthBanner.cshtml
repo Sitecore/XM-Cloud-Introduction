@@ -5,10 +5,11 @@
         <div class="row inner">
             <div class="col-12 col-md-8 offset-md-1 order-2 order-md-2 text">
                 <p class="eyebrow"></p>
-                <h2><sc-text asp-for="@Model.CtaTitle" /></h2>
+                <h2><sc-text asp-for="@Model.CtaTitle" /> Test</h2>
                 @Html.Raw(Model.CtaText?.Value)
                 
                 <sc-link asp-for="@Model.CtaLink" data-module="cta-button" class="link-arrow" aria-label="@Model.CtaLink?.Value.Title">
+                    @Model.CtaLink?.Value.Text
                     <img alt="Learn more" src="images/icon-arrow.png">
                 </sc-link>
             </div>
