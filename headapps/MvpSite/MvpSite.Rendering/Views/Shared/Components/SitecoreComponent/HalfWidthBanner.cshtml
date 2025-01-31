@@ -9,6 +9,7 @@
                 @Html.Raw(Model.CtaText?.Value)
                 
                 <sc-link asp-for="@Model.CtaLink" data-module="cta-button" class="link-arrow" aria-label="@Model.CtaLink?.Value.Title">
+                    @Model.CtaLink?.Value.Text
                     <img alt="Learn more" src="images/icon-arrow.png">
                 </sc-link>
             </div>

@@ -11,7 +11,8 @@
                     <h3><sc-text asp-for="@Model.TeaserTitle" /></h3>
                     <sc-text asp-for="@Model.TeaserText" />
 
-                    <sc-link asp-for="@Model.TeaserLink" data-module="cta-button" class="link-arrow" aria-label="@Model.TeaserLink?.Value.Title">
+                    <sc-link asp-for="@Model.TeaserLink" data-module="cta-button" class="link-arrow" aria-label="@Model.TeaserLink?.Value.Title" >
+                        @Model.TeaserLink?.Value.Text
                         <img alt="Learn more" src="images/icon-arrow.png">
                     </sc-link>
 
