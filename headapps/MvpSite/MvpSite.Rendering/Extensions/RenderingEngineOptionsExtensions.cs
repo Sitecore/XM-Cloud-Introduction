@@ -75,6 +75,7 @@ public static class RenderingEngineOptionsExtensions
         options.AddViewComponent(ApplicationReviewSettingsViewComponent.ViewComponentName);
         options.AddViewComponent(ContributionOverviewViewComponent.ViewComponentName);
         options.AddViewComponent(SelectionOverviewViewComponent.ViewComponentName);
+        options.AddViewComponent(MergeUsersViewComponent.ViewComponentName);
         return options;
     }
 }
