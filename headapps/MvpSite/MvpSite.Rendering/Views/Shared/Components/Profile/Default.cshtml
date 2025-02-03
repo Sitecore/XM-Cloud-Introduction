@@ -32,9 +32,8 @@
             </div>
        </div>
        <section class="sc-power-gradient-bg">
-            <div class="row inner">
-                <h4 asp-for="TitlesLabel" class="title-label col-2 mr-2 card border-0"></h4>
-                <div class="col-10 row">
+            <div class="row inner no-gutters">
+                <div class="col-12 row">
                 <partial name="Components/Profile/_Titles" model="Model.Mvp.Titles" />
                 </div>
             </div>
@@ -43,7 +42,5 @@
                 <h3 asp-for="TimelineLabel" class="col-12"></h3>
                 <partial name="Components/Profile/_Timeline" model="Model.GetTimelineEvents()" />
             </div>
-          
-  
     </section>
 }
