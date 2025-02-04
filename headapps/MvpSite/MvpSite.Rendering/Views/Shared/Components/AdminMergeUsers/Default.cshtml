@@ -1,0 +1,159 @@
+﻿@using Mvp.Selections.Domain
+@using Mvp.Selections.Domain.Roles
+@model MvpSite.Rendering.Models.Admin.MergeUsersModel
+
+<div class="mvp-fs-adminmergeusers col-12 bg-white">
+    <form method="post">
+        <div class="row">
+            <div class="col-6">
+                <h2>Old User</h2>
+                <div class="form-row">
+                    <div class="col">
+                        <input asp-for="OldUserNameSearch" class="form-control" placeholder="Name" />
+                    </div>
+                    <div class="col">
+                        <input asp-for="OldUserEmailSearch" class="form-control" placeholder="Email" />
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-secondary">Search</button>
+                    </div>
+                </div>
+                @if (Model.OldUserOptions.Count > 0)
+                {
+                    <div class="form-row">
+                        <div class="col">
+                            <select asp-for="SelectedOldUserId" class="form-control">
+                                @foreach (User oldUser in Model.OldUserOptions)
+                                {
+                                    <option value="@oldUser.Id">@oldUser.Name (@oldUser.Email)</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-secondary">Select</button>
+                        </div>
+                    </div>
+                }
+                @if (Model.OldUser != null)
+                {
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">@Model.OldUser.Name</h3>
+                            <h4 class="card-subtitle">@Model.OldUser.Email</h4>
+                            <p class="card-text">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        Roles:
+                                        @foreach (Role role in Model.OldUser.Roles)
+                                        {
+                                            <span class="badge-primary badge-info">@role.Name</span>
+                                        }
+                                    </li>
+                                    <li class="list-group-item">
+                                        Applications:
+                                        @foreach (Application application in Model.OldUser.Applications)
+                                        {
+                                            <span class="badge-primary badge-info">@application.Selection.Year</span>
+                                        }
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-6">
+                <h2>Target User</h2>
+                <div class="form-row">
+                    <div class="col">
+                        <input asp-for="TargetUserNameSearch" class="form-control" placeholder="Name" />
+                    </div>
+                    <div class="col">
+                        <input asp-for="TargetUserEmailSearch" class="form-control" placeholder="Email" />
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-secondary">Search</button>
+                    </div>
+                </div>
+                @if (Model.TargetUserOptions.Count > 0)
+                {
+                    <div class="form-row">
+                        <div class="col">
+                            <select asp-for="SelectedTargetUserId" class="form-control">
+                                @foreach (User targetUser in Model.TargetUserOptions)
+                                {
+                                    <option value="@targetUser.Id">@targetUser.Name (@targetUser.Email)</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-secondary">Select</button>
+                        </div>
+                    </div>
+                }
+                @if (Model.TargetUser != null)
+                {
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">@Model.TargetUser.Name</h3>
+                            <h4 class="card-subtitle">@Model.TargetUser.Email</h4>
+                            <p class="card-text">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        Roles:
+                                        @foreach (Role role in Model.TargetUser.Roles)
+                                        {
+                                            <span class="badge-primary badge-info">@role.Name</span>
+                                        }
+                                    </li>
+                                    <li class="list-group-item">
+                                        Applications:
+                                        @foreach (Application application in Model.TargetUser.Applications)
+                                        {
+                                            <span class="badge-primary badge-info">@application.Selection.Year</span>
+                                        }
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        @if (Model is { OldUser: not null, TargetUser: not null, MergedUser: null })
+        {
+            <input asp-for="IsMerging" type="hidden" value="True"/>
+            <button type="submit" class="btn btn-primary w-100">Merge</button>
+        }
+        else if (Model.MergedUser != null)
+        {
+            <div class="alert alert-success" role="alert">
+                Merged!
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">@Model.MergedUser.Name</h3>
+                    <h4 class="card-subtitle">@Model.MergedUser.Email</h4>
+                    <p class="card-text">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                Roles:
+                                @foreach (Role role in Model.MergedUser.Roles)
+                                {
+                                    <span class="badge-primary badge-info">@role.Name</span>
+                                }
+                            </li>
+                            <li class="list-group-item">
+                                Applications:
+                                @foreach (Application application in Model.MergedUser.Applications)
+                                {
+                                    <span class="badge-primary badge-info">@application.Selection.Year</span>
+                                }
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        }
+    </form>
+</div>
