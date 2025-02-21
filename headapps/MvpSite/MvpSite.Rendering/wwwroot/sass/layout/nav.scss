@@ -126,6 +126,64 @@ $sc-neutral-300: #e4e2e8
                     }
                 }
             }
+
+            ul.signin {
+                list-style: none;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                margin: 0;
+
+                &.authenticated {
+                    span {
+                        display: flex;
+                        align-content: center;
+                        align-items: center;
+
+                        a {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+                
+                a {
+                    font-size: 18px;
+                    line-height: 156%;
+                    letter-spacing: 0;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    display: flex;
+                    min-width: 140px;
+                }
+
+                a::before {
+                    content: "";
+                    position: absolute;
+                    top: -4px;
+                    left: -4px;
+                    right: -4px;
+                    bottom: -4px;
+                    border: 1px solid var(--sc-neutral-500);
+                    border-radius: inherit;
+                    opacity: 0;
+                    transition: opacity .15s;
+                }
+
+                a::after {
+                    content: "";
+                    display: block;
+                    position: relative;
+                    width: 22px;
+                    height: 22px;
+                    margin-left: 10px;
+                    color: inherit;
+                    background-color: currentColor;
+                    mask-position: center;
+                    mask-size: 21px;
+                    mask-repeat: no-repeat;
+                    mask-image: url("/images/cta-arrow.svg");
+                }
+            }
         }
     }
 }

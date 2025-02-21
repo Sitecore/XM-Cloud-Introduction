@@ -1,18 +1,17 @@
 ﻿@if (User.Identity?.IsAuthenticated ?? false)
 {
-    <ul class="nav navbar-nav col-md-3">
+    <ul class="signin authenticated">
         <li>
-            <span class="nav-item nav-link">
+            <span class="flex">
                 Hello, @User.Identity.Name
-                <a asp-controller="User" asp-action="SignOut">Sign Out</a>
+                <a asp-controller="User" class="cta primary flex" asp-action="SignOut">Sign Out</a>
             </span>
-
         </li>
     </ul>
 }
 else
 {
-    <ul class="nav navbar-nav col-md-3">
-        <li><a class="nav-item nav-link" asp-controller="User" asp-action="SignIn" id="login-button">Sign In</a></li>
+    <ul class="signin unauthenticated">
+        <li><a class="cta primary flex" asp-controller="User" asp-action="SignIn" id="login-button">Sign In</a></li>
     </ul>
 }
