@@ -60,11 +60,12 @@ div.main-nav {
                 outline: 0;
             }
 
-            .navbar-toggler-icon {
+
+            &[aria-expanded="true"] .navbar-toggler-icon {
                 background-image: url("/images/close-red.svg");
             }
 
-            &.collapsed .navbar-toggler-icon {
+            &[aria-expanded="false"] .navbar-toggler-icon {
                 background-image: url("/images/hamburger.svg");
             }
         }
@@ -255,7 +256,10 @@ div.main-nav {
                             span {
                                 margin-right: 1rem;
                                 position: relative;
-                                &::after {vertical-align: top;}
+
+                                &::after {
+                                    vertical-align: top;
+                                }
                             }
                         }
 
