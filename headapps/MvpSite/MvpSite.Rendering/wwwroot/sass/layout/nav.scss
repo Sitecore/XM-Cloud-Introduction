@@ -349,8 +349,9 @@ div.main-nav {
             }
 
             li {
-                .cta.primary {
+                a.btn.primary {
                     min-width: 100px;
+                    font-size: 1rem;
                 }
 
                 @media (min-width: 1200px) and (max-width: 1300px) {
