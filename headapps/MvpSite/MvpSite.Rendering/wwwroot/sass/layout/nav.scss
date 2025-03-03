@@ -172,6 +172,10 @@ div.main-nav {
                         justify-content: center;
                         border-bottom: solid 1px var(--sc-neutral-300);
                     }
+
+                    &.profile {
+                        background: $sc-white;
+                    }
                 }
 
                 @media (min-width: 1200px) {
@@ -222,7 +226,7 @@ div.main-nav {
                                 mask-position: center;
                                 mask-size: 24px;
                                 mask-repeat: no-repeat;
-                                mask-image: url("/images/profile2.svg");
+                                mask-image: url("/images/profile.svg");
                                 margin-right: 0.5rem;
                             }
                         }
@@ -412,7 +416,7 @@ div.main-nav {
                         font-size: 0.8rem;
                     }
 
-                    &.nav-item.profile a, 
+                    &.nav-item.profile a,
                     &.nav-item.other-sites a {
 
                         span.top-level {
