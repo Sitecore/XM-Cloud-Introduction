@@ -194,6 +194,39 @@ div.main-nav {
                         }
                     }
 
+                    &.profile {
+                        border-right: solid 1px #e4e2e8;
+                        padding-right: 10px;
+
+                        a {
+                            span.top-level {
+                                display: flex;
+                                align-content: center;
+                                font-size: 0;
+                            }
+
+                            span.top-level::before {
+                                content: "";
+                                display: block;
+                                position: relative;
+                                right: 0;
+                                top: 0;
+                                width: 54px;
+                                height: 54px;
+                                color: inherit;
+                                background-color: currentColor;
+                                mask-position: center;
+                                mask-size: 54px;
+                                mask-repeat: no-repeat;
+                                mask-image: url("/images/profile.svg");
+                            }
+                        }
+
+                        span.icon {
+                            display: none;
+                        }
+                    }
+
                     &.other-sites {
                         margin-left: auto;
                         border-left: solid 1px $sc-neutral-300;

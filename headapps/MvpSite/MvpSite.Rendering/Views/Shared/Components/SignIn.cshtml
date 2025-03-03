@@ -1,7 +1,25 @@
 ﻿@if (User.Identity?.IsAuthenticated ?? false)
 {
+    <li class="nav-item profile has-sub-items">
+        <a href="#profileLinks" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="profileLinks" class="nav-link">
+            <span class="top-level">Profile</span>
+            <span class="icon icon-chevron-right"></span>
+        </a>
+
+        <div class="sub-menu collapse" id="profileLinks">
+            <ul class="sub-menu">
+                <li class="back">
+                    <a href="#profileLinks" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="profileLinks" class="nav-item nav-link">
+                        <span class="icon icon-chevron-left"></span>Go back
+                    </a>
+                </li>
+                <li><a class="nav-item nav-link" target="_blank" href="/Application/My-Data">My Profile <span class="icon icon-external"></span></a></li>
+                <li><a class="nav-item nav-link" target="_blank" href="/Application/My-Data/Contributions">My Contributions <span class="icon icon-external"></span></a></li>
+                <li><a class="nav-item nav-link" target="_blank" href="/Application">My Application <span class="icon icon-external"></span></a></li>
+            </ul>
+        </div>
+    </li>
     <li class="nav-item signin">
-        @* <span>Hello, @User.Identity.Name</span> *@
         <a asp-controller="User" class="btn btn-sm cta primary" asp-action="SignOut">Sign Out</a>
     </li>
 }
