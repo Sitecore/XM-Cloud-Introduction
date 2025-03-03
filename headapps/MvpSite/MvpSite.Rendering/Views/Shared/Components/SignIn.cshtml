@@ -16,12 +16,11 @@
                 <li><a class="nav-item nav-link" target="_blank" href="/Application/My-Data">My Profile <span class="icon icon-external"></span></a></li>
                 <li><a class="nav-item nav-link" target="_blank" href="/Application/My-Data/Contributions">My Contributions <span class="icon icon-external"></span></a></li>
                 <li><a class="nav-item nav-link" target="_blank" href="/Application">My Application <span class="icon icon-external"></span></a></li>
+                <li><a asp-controller="User" class="nav-item nav-link" asp-action="SignOut">Sign Out</a></li>
             </ul>
         </div>
     </li>
-    <li class="nav-item signin">
-        <a asp-controller="User" class="btn btn-sm cta primary" asp-action="SignOut">Sign Out</a>
-    </li>
+
 }
 else
 {
