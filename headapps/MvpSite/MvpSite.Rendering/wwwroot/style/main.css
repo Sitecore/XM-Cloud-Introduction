@@ -580,7 +580,7 @@ div.main-nav nav.navbar ul.navbar-nav li a.btn.primary, div.main-nav nav.navbar 
   min-width: 100px;
   font-size: 1rem;
 }
-@media (min-width: 1200px) and (max-width: 1330px) {
+@media (min-width: 1200px) and (max-width: 1500px) {
   div.main-nav nav.navbar ul.navbar-nav li.nav-item.signin {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
