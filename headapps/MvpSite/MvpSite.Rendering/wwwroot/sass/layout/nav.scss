@@ -140,6 +140,10 @@ div.main-nav {
                     color: var(--sc-black);
                 }
 
+                a:hover {
+                    color: var(--sc-red-700);
+                }
+
                 a.active {
                     color: var(--sc-red-700);
                     margin-bottom: -8px;
@@ -168,6 +172,10 @@ div.main-nav {
                         justify-content: center;
                         border-bottom: solid 1px var(--sc-neutral-300);
                     }
+
+                    &.profile {
+                        background: $sc-white;
+                    }
                 }
 
                 @media (min-width: 1200px) {
@@ -195,14 +203,14 @@ div.main-nav {
                     }
 
                     &.profile {
-                        border-right: solid 1px #e4e2e8;
                         padding-right: 10px;
+
 
                         a {
                             span.top-level {
                                 display: flex;
                                 align-content: center;
-                                font-size: 0;
+                                font-size: var(--sc-body-m);
                             }
 
                             span.top-level::before {
@@ -211,14 +219,15 @@ div.main-nav {
                                 position: relative;
                                 right: 0;
                                 top: 0;
-                                width: 54px;
-                                height: 54px;
+                                width: 24px;
+                                height: 24px;
                                 color: inherit;
                                 background-color: currentColor;
                                 mask-position: center;
-                                mask-size: 54px;
+                                mask-size: 24px;
                                 mask-repeat: no-repeat;
                                 mask-image: url("/images/profile.svg");
+                                margin-right: 0.5rem;
                             }
                         }
 
@@ -238,7 +247,7 @@ div.main-nav {
                             span.top-level {
                                 display: flex;
                                 align-content: center;
-                                font-size: 0;
+                                font-size: var(--sc-body-m);
                             }
 
                             span.top-level::before {
@@ -255,6 +264,7 @@ div.main-nav {
                                 mask-size: 24px;
                                 mask-repeat: no-repeat;
                                 mask-image: url("/images/multi-site.svg");
+                                margin-right: 0.5rem;
                             }
                         }
 
@@ -306,6 +316,10 @@ div.main-nav {
 
                         a.nav-item {
                             align-items: center;
+
+                            &:hover {
+                                color: var(--sc-red-700);
+                            }
 
                             span.icon {
                                 width: 18px;
@@ -387,7 +401,7 @@ div.main-nav {
                     font-size: 1rem;
                 }
 
-                @media (min-width: 1200px) and (max-width: 1300px) {
+                @media (min-width: 1200px) and (max-width: 1330px) {
                     &.nav-item.signin {
                         margin-left: 0.25rem;
                         margin-right: 0.25rem;
@@ -401,9 +415,22 @@ div.main-nav {
                         min-width: 50px;
                         font-size: 0.8rem;
                     }
+
+                    &.nav-item.profile a,
+                    &.nav-item.other-sites a {
+
+                        span.top-level {
+                            font-size: 0;
+
+                            &::before {
+                                margin-right: 0;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 }
+    
         
