@@ -1,0 +1,31 @@
+﻿---
+ID: "90fa25c4-c97f-4f0d-a59b-3e36a898cb97"
+Parent: "6dde0166-c97f-4e74-b2d6-19592af6b6a9"
+Template: "508db6be-52a6-4d1c-8bf5-e55b69f06bc7"
+Path: /sitecore/content/MvpSite/Shared Content/Selections/Mvp
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250309T191034Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f5402f3d-6e88-47f9-a4ff-eac3b975c0d2"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250309T191034Z

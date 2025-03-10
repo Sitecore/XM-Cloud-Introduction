@@ -1,0 +1,27 @@
+﻿---
+ID: "fdd6ed19-d770-4dc0-9e1d-fb2110c06a93"
+Parent: "90fa25c4-c97f-4f0d-a59b-3e36a898cb97"
+Template: "b2be9b2b-5108-40f6-9250-8309c735b75e"
+Path: /sitecore/content/MvpSite/Shared Content/Selections/Mvp/MentorData
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250309T191527Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "adb773b0-534d-4b20-9f7f-c04832a4aac5"
+    - ID: "956e717a-d99d-40d5-a5e6-0e95c09d2dfc"
+      Hint: SuccessLink
+      Value: |
+        <link text="Return to My Data" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{CA03E6DC-BBF0-45B9-B5F1-758A174BD328}" />
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250309T195758Z

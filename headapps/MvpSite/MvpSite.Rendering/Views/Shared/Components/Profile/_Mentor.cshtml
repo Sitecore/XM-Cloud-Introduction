@@ -1,0 +1,67 @@
+﻿@using MvpSite.Rendering.Models.Profile
+@model MvpSite.Rendering.Models.Profile.ProfileViewModel
+
+<div class="row inner col-12">
+    <h3 asp-for="MentorLabel" class="col-12"></h3>
+    @if (Model.IsSent)
+    {
+        <div asp-for="ContactSuccessText" class="col-12"></div>
+    }
+    else
+    {
+        <div class="col-10">@Html.Raw(Markdig.Markdown.ToHtml(Model.Mvp?.MentorDescription ?? string.Empty))</div>
+        @if (Model.CurrentUser != null && (Model.Mvp?.IsOpenToNewMentees ?? false))
+        {
+            <div class="col-2">
+                <button type="button" asp-for="BecomeMenteeLabel" data-toggle="modal" data-target="#mentorContact"></button>
+            </div>
+        }
+        @if (!ViewContext.ModelState.IsValid)
+        {
+            <div asp-validation-summary="All" class="col-12 alert alert-danger"></div>            
+        }
+    }
+</div>
+
+@if (Model.CurrentUser != null)
+{
+    <form method="post">
+        <div id="mentorContact" class="modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 asp-for="ContactLabel" class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input asp-for="IsSending" type="hidden" value="True" />
+                        <div asp-for="ContactHelpText"></div>
+                        <p><span asp-for="ContactNameLabel"></span>: @Model.CurrentUser.Name</p>
+                        <p><span asp-for="ContactEmailLabel"></span>: @Model.CurrentUser.Email</p>
+                        <p>@Html.Raw(string.Format(Model.ContactWrongDataLabelFormat?.Value ?? string.Empty, $"<a href='{Model.ContactMyDataLink?.Value.Href}'>{Model.ContactMyDataLink?.Value.Text}</a>"))</p>
+                        <div class="form-group">
+                            <label asp-for="ContactMessage">
+                                @(Model.IsEditing ? Html.Raw(Model.ContactMessageLabel?.EditableMarkup) : Model.ContactMessageLabel?.Value)
+                            </label>
+                            <textarea asp-for="ContactMessage" rows="3" class="form-control"></textarea>
+                            <small class="form-text text-muted text-right textareacounter">@(Model.ContactMessage?.Length.ToString() ?? "0") / @ProfileViewModel.LargeTextFieldLength</small>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                @Html.CheckBoxFor(m => m.ContactEmailConsent, new { @class = "align-middle" })
+                                <label asp-for="ContactEmailConsent" class="w-75 align-middle">
+                                    @(Model.IsEditing ? Html.Raw(Model.ContactEmailConsentLabel?.EditableMarkup) : Model.ContactEmailConsentLabel?.Value)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button asp-for="ContactSendLabel" type="submit" class="btn btn-primary"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+}

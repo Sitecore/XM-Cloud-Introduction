@@ -34,6 +34,43 @@ public class ProfileViewComponent(IViewModelBinder modelBinder, MvpSelectionsApi
         else
         {
             await LoadProfile(model);
+            if (HttpContext.User.Identity?.IsAuthenticated ?? false)
+            {
+                if (model is { Id: not null, IsSending: true } && ModelState.IsValid)
+                {
+                    if (model.ContactEmailConsent && !string.IsNullOrWhiteSpace(model.ContactMessage))
+                    {
+                        Response<string?> contactResponse = await client.ContactMentorAsync(model.Id.Value, model.ContactMessage ?? string.Empty);
+                        if (contactResponse is { StatusCode: HttpStatusCode.Created })
+                        {
+                            ModelState.Clear();
+                            model.IsSent = true;
+                        }
+                        else
+                        {
+                            model.ErrorMessages.Add(contactResponse.Message);
+                        }
+                    }
+                    else
+                    {
+                        if (!model.ContactEmailConsent)
+                        {
+                            ModelState.TryAddModelError(
+                                nameof(ProfileViewModel.ContactEmailConsent),
+                                model.ContactEmailConsentMandatoryLabel?.Value ?? "Must consent to sending your name and email to the Mentor to proceed.");
+                        }
+
+                        if (string.IsNullOrWhiteSpace(model.ContactMessage))
+                        {
+                            ModelState.TryAddModelError(
+                                nameof(ProfileViewModel.ContactMessage),
+                                model.ContactMessageMandatoryLabel?.Value ?? "Must provide a message for the Mentor to contact them.");
+                        }
+                    }
+                }
+
+                await LoadCurrentUserInfo(model);
+            }
         }
 
         return model.ErrorMessages.Count > 0 ? View("~/Views/Shared/Components/Profile/Error.cshtml", model) :
@@ -133,6 +170,15 @@ public class ProfileViewComponent(IViewModelBinder modelBinder, MvpSelectionsApi
                 }
             ]
         };
+    }
+
+    private async Task LoadCurrentUserInfo(ProfileViewModel model)
+    {
+        Response<User> userResponse = await client.GetCurrentUserAsync();
+        if (userResponse is { StatusCode: HttpStatusCode.OK, Result: not null })
+        {
+            model.CurrentUser = userResponse.Result;
+        }
     }
 
     private async Task LoadProfile(ProfileViewModel model)
