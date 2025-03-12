@@ -60,6 +60,7 @@
     }
 
     .timeline {
+
         img {
             max-width: 100%;
         }
@@ -79,6 +80,15 @@
 
             .card-header {
                 background-color: white;
+            }
+
+            .card-body {
+                overflow-wrap: anywhere;
+
+                pre {
+                    white-space: pre-wrap;
+                    word-wrap: break-word;
+                }
             }
         }
 
@@ -124,7 +134,6 @@
 
                 input, label {
                     margin-bottom: 0;
-                    
                 }
             }
         }
