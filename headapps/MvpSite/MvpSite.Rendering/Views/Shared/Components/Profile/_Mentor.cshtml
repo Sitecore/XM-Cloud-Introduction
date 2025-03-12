@@ -1,7 +1,7 @@
 ﻿@using MvpSite.Rendering.Models.Profile
 @model MvpSite.Rendering.Models.Profile.ProfileViewModel
 
-<div class="row inner col-12">
+<div class="row inner">
     <h3 asp-for="MentorLabel" class="col-12"></h3>
     @if (Model.IsSent)
     {
@@ -9,7 +9,7 @@
     }
     else
     {
-        <div class="col-10">@Html.Raw(Markdig.Markdown.ToHtml(Model.Mvp?.MentorDescription ?? string.Empty))</div>
+        <div class="col-12">@Html.Raw(Markdig.Markdown.ToHtml(Model.Mvp?.MentorDescription ?? string.Empty))</div>
         @if (Model.CurrentUser != null && (Model.Mvp?.IsOpenToNewMentees ?? false))
         {
             <div class="col-2">
@@ -45,7 +45,9 @@
                         </div>
 
                         <div class="alert alert-warning" role="alert">
-                            @Html.Raw(string.Format(Model.ContactWrongDataLabelFormat?.Value ?? string.Empty, $"<a href='{Model.ContactMyDataLink?.Value.Href}'>{Model.ContactMyDataLink?.Value.Text}</a>"))</div>
+                            @Html.Raw(string.Format(Model.ContactWrongDataLabelFormat?.Value ?? string.Empty, $"<a href='{Model.ContactMyDataLink?.Value.Href}'>{Model.ContactMyDataLink?.Value.Text}</a>"))
+                        </div>
+
                         <div class="form-group">
                             <label asp-for="ContactMessage">
                                 @(Model.IsEditing ? Html.Raw(Model.ContactMessageLabel?.EditableMarkup) : Model.ContactMessageLabel?.Value)

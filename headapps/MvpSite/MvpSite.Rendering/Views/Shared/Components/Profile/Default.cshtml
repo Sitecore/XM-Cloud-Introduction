@@ -5,7 +5,7 @@
 {
     <section class="mvp-fp-profile bg-white">
         <div class="container">
-            <div class="row inner col-12">
+            <div class="row inner">
                 <div class="profile-image">
                     @if (Model.Mvp.ImageUri != null)
                     {
@@ -30,10 +30,12 @@
             </div>
         </div>
         <section class="sc-power-gradient-bg">
+            <div class="container">
             <div class="row inner no-gutters">
                 <div class="col-12 row">
                     <partial name="Components/Profile/_Titles" model="Model.Mvp.Titles" />
                 </div>
+            </div>
             </div>
         </section>
         @if (Model.Mvp.IsMentor)
@@ -42,9 +44,11 @@
                 <partial name="Components/Profile/_Mentor" model="Model" />
             </div>
         }
-        <div class=" timeline row inner mb-5">
+        <div class="container timeline ">
+            <div class="row inner mb-5">
             <h3 asp-for="TimelineLabel" class="col-12"></h3>
             <partial name="Components/Profile/_Timeline" model="Model.GetTimelineEvents()" />
+        </div>
         </div>
     </section>
 }
