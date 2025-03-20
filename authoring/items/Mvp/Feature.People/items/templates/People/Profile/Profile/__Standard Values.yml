@@ -14,9 +14,33 @@ Languages:
     - ID: "08246bde-1cf0-40f7-93f7-2c60ed776b48"
       Hint: TitleLabel
       Value: MVP Profile
+    - ID: "0dc2666f-d1ff-4ed0-9acc-0005fa1903cb"
+      Hint: MentorLabel
+      Value: I'm a Mentor
+    - ID: "12f1cffd-d5fc-4ab5-94d8-09b84c0c3f47"
+      Hint: ContactSuccessText
+      Value: <p>You have successfully applied for mentorship. The Mentor will get in contact with you.</p>
+    - ID: "1abb841a-6328-4f9a-b9bf-4fa10eeb8567"
+      Hint: ContactLabel
+      Value: Contact your Mentor
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20240312T130110Z
+    - ID: "27001f41-1a96-47fc-80ac-6e1fc4bc1eb2"
+      Hint: ContactNameLabel
+      Value: Your name
+    - ID: "2a0fdcd7-d0d9-458a-a058-056f7fb70b74"
+      Hint: ContactHelpText
+      Value: <p>Thank you for your interest in the Mentor program. Be courteous when contacting our MVPs to ask for mentorship.</p>
+    - ID: "3abf0663-89e6-4bd1-b78a-4e4ab1c2e195"
+      Hint: ContactEmailConsentLabel
+      Value: I agree to send my name and email address to the Mentor
+    - ID: "4730c9ae-653e-448e-b440-34c20cfa296a"
+      Hint: ContactMessageMandatoryLabel
+      Value: Must consent to sending your name and email to the Mentor to proceed.
+    - ID: "51a181fe-8122-45cd-a7b1-a270744b0f6e"
+      Hint: ContactMessageLabel
+      Value: Your message to the Mentor
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -25,19 +49,34 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\ed7gR4aY22
+    - ID: "86aea563-d999-42ea-8593-defe820ec005"
+      Hint: ContactSendLabel
+      Value: Send
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b8e7f35f-9424-4023-89f2-01434ac9dd71"
+      Value: "2e7c7dfa-d2ef-4344-9305-f70cc6868c94"
+    - ID: "960cf76f-d1b1-4ed7-abaf-a8f8914314e7"
+      Hint: BecomeMenteeLabel
+      Value: Become my mentee
     - ID: "b25e24c0-e527-4b1e-9eda-b6fa19fde1da"
       Hint: TitlesLabel
       Value: Titles
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\ed7gR4aY22
+        sitecore\ivan.lieckens@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240320T170108Z
+      Value: 20250309T234859Z
+    - ID: "e3c64967-1949-48a2-9039-04b79259af80"
+      Hint: ContactEmailConsentMandatoryLabel
+      Value: Must provide a message for the Mentor to contact them.
     - ID: "f080f207-7019-482a-a784-564a75029474"
       Hint: NotFoundText
       Value: <p>This MVP profile could not be found.</p>
+    - ID: "f6119882-dfbb-4472-9bea-817ad9cfa5a3"
+      Hint: ContactEmailLabel
+      Value: Your email
+    - ID: "fe84483c-0e18-499e-9077-f949759f4fb0"
+      Hint: ContactWrongDataLabelFormat
+      Value: "Not the right data? Change it in the {0} section"

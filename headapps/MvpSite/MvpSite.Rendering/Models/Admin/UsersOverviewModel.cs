@@ -1,8 +1,9 @@
-﻿using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
+﻿using Mvp.Selections.Domain;
+using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
 
 namespace MvpSite.Rendering.Models.Admin;
 
-public class UsersOverviewModel : ListModel<Mvp.Selections.Domain.User>
+public class UsersOverviewModel : ListModel<User>
 {
     public TextField? TitleLabel { get; set; }
 
@@ -18,7 +19,7 @@ public class UsersOverviewModel : ListModel<Mvp.Selections.Domain.User>
 
     public Guid? RemoveUserId { get; set; }
 
-    public Mvp.Selections.Domain.User? RemoveUser { get; set; }
+    public User? RemoveUser { get; set; }
 
     public TextField? ConfirmMessageLabelFormat { get; set; }
 

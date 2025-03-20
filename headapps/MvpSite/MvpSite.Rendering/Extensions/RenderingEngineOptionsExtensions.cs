@@ -3,6 +3,7 @@ using MvpSite.Rendering.ViewComponents;
 using MvpSite.Rendering.ViewComponents.Admin;
 using MvpSite.Rendering.ViewComponents.Any;
 using MvpSite.Rendering.ViewComponents.Apply;
+using MvpSite.Rendering.ViewComponents.Mvp;
 using Sitecore.AspNetCore.SDK.RenderingEngine.Configuration;
 using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
 
@@ -76,6 +77,7 @@ public static class RenderingEngineOptionsExtensions
         options.AddViewComponent(ContributionOverviewViewComponent.ViewComponentName);
         options.AddViewComponent(SelectionOverviewViewComponent.ViewComponentName);
         options.AddViewComponent(MergeUsersViewComponent.ViewComponentName);
+        options.AddViewComponent(MvpMentorDataViewComponent.ViewComponentName);
         return options;
     }
 }

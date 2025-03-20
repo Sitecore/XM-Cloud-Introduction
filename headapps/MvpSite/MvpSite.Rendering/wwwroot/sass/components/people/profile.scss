@@ -1,88 +1,144 @@
 ﻿@import "../../_colors.scss";
+@import "../selections/_form.scss";
 
 .mvp-fp-profile {
-  h1 {
-    position: relative;
-  }
-
-  h2 {
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: 900;
-    letter-spacing: 2.8px;
-    color: $text-gray;
-  }
-  .title-label {
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    letter-spacing: 2px;
-  }
-  .profile-image {
-    display: flex;
-    align-items: flex-start;
-    img {
-      max-width: 80%;
-    }
-  }
-  .card-title {
-    background: var(--sc-neutral-200);
-    padding: 0.25rem;
-    display: inline-block;
-    border-radius: 0.25rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    font-weight: 600;
-    font-size: var(--sc-body-s);
-    line-height: var(--sc-body-s-lh);
-    letter-spacing: var(--sc-body-s-ls);
-    margin-bottom: 0.5rem;
-  }
-  .profile-links {
-    font-size: 2em;
-    word-spacing: 0.3em;
-    a {
-      color: var(--sc-violet-500);
-    }
-    a:hover {
-      text-decoration: none;
-      color: var(--sc-violet-700);
-    }
-  }
-
-  .timeline {
-    img {
-      max-width: 100%;
+    h1 {
+        position: relative;
     }
 
-    .badge-primary {
-      background-color: var(--sc-violet-500);
+    h2 {
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 900;
+        letter-spacing: 2.8px;
+        color: $text-gray;
+    }
 
-      & i.fa {
-        color: $contrast-text;
+    .title-label {
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 2px;
+    }
+
+    .profile-image {
+        display: flex;
+        align-items: flex-start;
+
+        img {
+            max-width: 80%;
+        }
+    }
+
+    .card-title {
+        background: var(--sc-neutral-200);
+        padding: 0.25rem;
+        display: inline-block;
+        border-radius: 0.25rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        font-weight: 600;
+        font-size: var(--sc-body-s);
+        line-height: var(--sc-body-s-lh);
+        letter-spacing: var(--sc-body-s-ls);
+        margin-bottom: 0.5rem;
+    }
+
+    .profile-links {
         font-size: 2em;
-      }
-    }
-.card{
-    display: flex;
-    flex-direction: row;
-    .card-header{
-        background-color: white;
-    }
-}
-    .line {
-      position: relative;
+        word-spacing: 0.3em;
 
-      &:after {
-        background-color: var(--sc-violet-500);
-        content: "";
-        display: block;
-        width: 1px;
-        height: 100%;
-        position: absolute;
-        left: 50%;
-      }
+        a {
+            color: var(--sc-violet-500);
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: var(--sc-violet-700);
+        }
     }
-  }
+
+    .timeline {
+
+        img {
+            max-width: 100%;
+        }
+
+        .badge-primary {
+            background-color: var(--sc-violet-500);
+
+            & i.fa {
+                color: $contrast-text;
+                font-size: 2em;
+            }
+        }
+
+        .card {
+            display: flex;
+            flex-direction: row;
+
+            .card-header {
+                background-color: white;
+            }
+
+            .card-body {
+                overflow-wrap: anywhere;
+
+                pre {
+                    white-space: pre-wrap;
+                    word-wrap: break-word;
+                }
+            }
+        }
+
+        .line {
+            position: relative;
+
+            &:after {
+                background-color: var(--sc-violet-500);
+                content: "";
+                display: block;
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                left: 50%;
+            }
+        }
+    }
+
+    #mentorContact.modal {
+
+        .modal-dialog {
+            max-width: 800px;
+        }
+
+        .modal-content {
+            padding: 24px;
+
+            .your-details {
+                margin: 24px auto;
+            }
+
+            .modal-header {
+                border-bottom: none;
+            }
+
+            .modal-footer {
+                border-top: none;
+            }
+
+            .consent-check {
+                display: flex;
+                align-items: center;
+
+                input, label {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @include form
+    }
 }
+

@@ -1,0 +1,19 @@
+@import "../_form.scss";
+
+.mvp-fs-mvpmentordata {
+    padding: 2em;
+
+    @include form;
+
+    .form-check {
+        padding-left: 0;
+        display: flex;
+        align-content: center;
+        margin-bottom: 24px;
+
+        label, input {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}

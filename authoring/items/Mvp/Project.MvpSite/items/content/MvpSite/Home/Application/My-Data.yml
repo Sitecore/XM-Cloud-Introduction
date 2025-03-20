@@ -28,8 +28,15 @@ SharedFields:
           s:ph="/main/column-container-{61F4DE13-A3CD-4B73-97FE-4A47A53150D2}-0"
           s:ccb="Clear on publish" />
         <r
-          uid="{61F4DE13-A3CD-4B73-97FE-4A47A53150D2}"
+          uid="{89B0112F-5A54-444A-9920-01C00B2B135E}"
           p:after="r[@uid='{6410A71D-466B-4BFD-9603-8292FEBF2E7A}']"
+          s:ds="{FDD6ED19-D770-4DC0-9E1D-FB2110C06A93}"
+          s:id="{3EF3E614-DB18-43E9-BFA1-E81BBB373FEA}"
+          s:par="CSSStyles"
+          s:ph="/main/column-container-{61F4DE13-A3CD-4B73-97FE-4A47A53150D2}-0" />
+        <r
+          uid="{61F4DE13-A3CD-4B73-97FE-4A47A53150D2}"
+          p:after="r[@uid='{89B0112F-5A54-444A-9920-01C00B2B135E}']"
           s:id="{57805937-D345-4A28-8DDF-C62EE43D8EBA}"
           s:par="CacheClearingBehavior=Clear on publish"
           s:ph="main" />
@@ -59,17 +66,17 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "9866abc5-4445-47ff-914f-7b76514d0ed1"
+      Value: "68d0c2df-9648-447f-891d-ffb9ab3b99bb"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: "My-Data"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\ivan.lieckens@sitecore.com
     - ID: "c58ed264-1f55-4aa3-a30e-da12ce43cb38"
       Hint: RequiresAuthentication
       Value: 1
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221006T172840Z
+      Value: 20250309T191545Z

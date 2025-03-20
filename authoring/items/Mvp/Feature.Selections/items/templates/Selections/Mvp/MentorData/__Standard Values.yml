@@ -1,0 +1,49 @@
+﻿---
+ID: "a2566569-46ca-4aa0-ba10-550b30f25375"
+Parent: "b2be9b2b-5108-40f6-9250-8309c735b75e"
+Template: "b2be9b2b-5108-40f6-9250-8309c735b75e"
+Path: /sitecore/templates/Feature/Selections/Mvp/MentorData/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "1177f1a1-b462-42df-9d3e-2120167aa0b1"
+      Hint: SuccessLabel
+      Value: "Mentor profile data successfully updated!"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250309T191351Z
+    - ID: "4e278ad0-afdd-4da3-a89a-3e32e9611f35"
+      Hint: TitleLabel
+      Value: Mentorship
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ec2401a1-1cc0-4604-8e9b-81590bed8e8e"
+    - ID: "952b5521-30f0-4520-8409-0f5d5221e606"
+      Hint: SubmitLabel
+      Value: Save
+    - ID: "99e85376-f2b1-4752-af28-bf1467cc69a3"
+      Hint: IsOpenToNewMenteesLabel
+      Value: I am open for a new mentee
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "d3c15f19-797e-4540-92b7-21a86c17174c"
+      Hint: MentorDescriptionLabel
+      Value: What I offer as a mentor
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250309T191436Z
+    - ID: "f4ee496c-0e14-4c69-854f-a6e3ee8a1c57"
+      Hint: IsMentorLabel
+      Value: I am / want to be a mentor
