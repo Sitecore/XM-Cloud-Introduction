@@ -1,154 +1,181 @@
 ﻿@import "../../_colors.scss";
 
+
 .mvp-fp-directory {
-  h1 {
-    line-height: 55px;
-    position: relative;
-  }
 
-  h2 {
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: 900;
-    letter-spacing: 2.8px;
-    color: $text-gray;
-  }
-
-  h3 {
-    font-size: 1.2em;
-    font-weight: 600;
-    line-height: 1.5;
-
-    padding-bottom: 15px;
-  }
-  h5 {
-    font-size: 1.25rem;
-  }
-  input[type="text"] {
-    padding: 2em;
-    border-radius: 0;
-    background-color: $background;
-    font-size: 1.1em;
-    border: 0;
-  }
-
-  button[type="submit"] {
-    background-color: var(--sc-violet-500);
-    border-radius: 0;
-    border: 0;
-    width: 70px;
-
-    i {
-      font-size: 1.3em;
-    }
-  }
-  .results {
-    padding: 3rem;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    width: 100%;
-    gap: 1rem;
-    .col {
-      padding: 0;
-    }
-  }
-  .mvp-facet {
-    .list-group-item {
-      border: 0;
-    }
-    a {
-      color: var(--sc-black);
-      text-decoration: none;
-      justify-content: space-between;
-      display: flex;
-      border-bottom: 1px solid $underline;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 0.5s;
-      &[aria-expanded="true"] {
-        .icon-chevron-down {
-          transform: rotate(180deg);
-        }
-      }
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
-  .card {
-    border-radius: 0;
-    display: flex;
-    flex-direction: row;
-
-    color: var(--sc-black);
-    text-decoration: none;
-    &:hover {
-      text-decoration: none;
-    }
-    .card-body {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      align-items: flex-start;
-    }
-
-    .card-body > div {
-      background: var(--sc-neutral-200);
-      padding: 0.25rem;
-      display: inline-block;
-      border-radius: 0.25rem;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      font-weight: 600;
-      font-size: var(--sc-body-s);
-      line-height: var(--sc-body-s-lh);
-      letter-spacing: var(--sc-body-s-ls);
-      margin-bottom: 0.25rem;
-    }
-
-    .card-img-overlay {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      border-right: 1px solid var(--sc-neutral-300);
-      position: relative;
-      align-items: center;
-    }
-
-    .badge-primary {
-      background-color: $sitecore-teal;
-      border-radius: 0;
-      padding: 0.5rem;
-    }
-    .card-img-top {
-      object-fit: cover;
-      border-radius: 100%;
-      width: 4rem;
-      height: 4rem;
-    }
-  }
-
-  .pagination {
-    border-radius: 1.5rem;
-    margin: auto;
-    width: fit-content;
-    padding: 0.25rem;
-    .page-item {
-      .page-link {
-        color: var(--sc-black);
-        border-radius: 100%;
+    .btn {
         border: none;
-        padding: 0.5rem 1rem;
-        margin: 0 0.25rem;
-        background-color: transparent;
-      }
+        border-radius: 0;
 
-      &.active .page-link {
-        background-color: var(--sc-red-500);
-        color: $contrast-text;
-      }
+        i.fa {
+            color: $contrast-text;
+        }
     }
-  }
+
+    .btn-primary {
+        background-color: $sitecore-teal;
+    }
+
+
+    h1 {
+        line-height: 55px;
+        position: relative;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 900;
+        letter-spacing: 2.8px;
+        color: $text-gray;
+    }
+
+    h3 {
+        font-size: 1.2em;
+        font-weight: 600;
+        line-height: 1.5;
+        padding-bottom: 15px;
+    }
+
+    h5 {
+        font-size: 1.25rem;
+    }
+
+    input[type="text"] {
+        padding: 2em;
+        border-radius: 0;
+        background-color: $background;
+        font-size: 1.1em;
+        border: 0;
+    }
+
+    button[type="submit"] {
+        background-color: $sitecore-teal;
+        border-radius: 0;
+        border: 0;
+        width: 70px;
+
+        i {
+            font-size: 1.3em;
+        }
+    }
+
+    .results {
+        padding: 3rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        width: 100%;
+        gap: 1rem;
+
+        .col {
+            padding: 0;
+        }
+    }
+
+    .mvp-facet {
+        .list-group-item {
+            border: 0;
+        }
+
+        a {
+            color: var(--sc-black);
+            text-decoration: none;
+            justify-content: space-between;
+            display: flex;
+            border-bottom: 1px solid $underline;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.5s;
+
+            &[aria-expanded="true"] {
+                .icon-chevron-down {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .card {
+        border-radius: 0;
+        display: flex;
+        flex-direction: row;
+        color: var(--sc-black);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: flex-start;
+        }
+
+        .card-body > div {
+            background: var(--sc-neutral-200);
+            padding: 0.25rem;
+            display: inline-block;
+            border-radius: 0.25rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            font-weight: 600;
+            font-size: var(--sc-body-s);
+            line-height: var(--sc-body-s-lh);
+            letter-spacing: var(--sc-body-s-ls);
+            margin-bottom: 0.25rem;
+        }
+
+        .card-img-overlay {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border-right: 1px solid var(--sc-neutral-300);
+            position: relative;
+            align-items: center;
+        }
+
+        .badge-primary {
+            background-color: $sitecore-teal;
+            border-radius: 0;
+            padding: 0.5rem;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            border-radius: 100%;
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+    .pagination {
+        border-radius: 1.5rem;
+        margin: auto;
+        width: fit-content;
+        padding: 0.25rem;
+
+        .page-item {
+            .page-link {
+                color: var(--sc-black);
+                border-radius: 100%;
+                border: none;
+                padding: 0.5rem 1rem;
+                margin: 0 0.25rem;
+                background-color: transparent;
+            }
+
+            &.active .page-link {
+                background-color: var(--sc-red-500);
+                color: $contrast-text;
+            }
+        }
+    }
 }

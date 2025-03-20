@@ -13,7 +13,7 @@
         @if (Model.CurrentUser != null && (Model.Mvp?.IsOpenToNewMentees ?? false))
         {
             <div class="col-2">
-                <button type="button" asp-for="BecomeMenteeLabel" data-toggle="modal" data-target="#mentorContact" class="cta primary"></button>
+                <a asp-for="BecomeMenteeLabel" data-toggle="modal" data-target="#mentorContact" class="cta primary"></a>
             </div>
         }
         @if (!ViewContext.ModelState.IsValid)
