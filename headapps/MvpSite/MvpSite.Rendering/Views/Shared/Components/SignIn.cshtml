@@ -1,18 +1,30 @@
 ﻿@if (User.Identity?.IsAuthenticated ?? false)
 {
-    <ul class="nav navbar-nav col-md-3">
-        <li>
-            <span class="nav-item nav-link">
-                Hello, @User.Identity.Name
-                <a asp-controller="User" asp-action="SignOut">Sign Out</a>
-            </span>
+    <li class="nav-item profile has-sub-items">
+        <a href="#profileLinks" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="profileLinks" class="nav-link">
+            <span class="top-level">Profile</span>
+            <span class="icon icon-chevron-right"></span>
+        </a>
 
-        </li>
-    </ul>
+        <div class="sub-menu collapse" id="profileLinks">
+            <ul class="sub-menu">
+                <li class="back">
+                    <a href="#profileLinks" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="profileLinks" class="nav-item nav-link">
+                        <span class="icon icon-chevron-left"></span>Go back
+                    </a>
+                </li>
+                <li><a class="nav-item nav-link" href="/Application/My-Data">My Profile <span class="icon icon-external"></span></a></li>
+                <li><a class="nav-item nav-link" href="/Application/My-Data/Contributions">My Contributions <span class="icon icon-external"></span></a></li>
+                <li><a class="nav-item nav-link" href="/Application/Apply">My Application <span class="icon icon-external"></span></a></li>
+                <li><a asp-controller="User" class="nav-item nav-link" asp-action="SignOut">Sign Out</a></li>
+            </ul>
+        </div>
+    </li>
+
 }
 else
 {
-    <ul class="nav navbar-nav col-md-3">
-        <li><a class="nav-item nav-link" asp-controller="User" asp-action="SignIn" id="login-button">Sign In</a></li>
-    </ul>
+    <li class="nav-item signin">
+        <a class="btn btn-sm cta primary" asp-controller="User" asp-action="SignIn" id="login-button">Sign In</a>
+    </li>
 }

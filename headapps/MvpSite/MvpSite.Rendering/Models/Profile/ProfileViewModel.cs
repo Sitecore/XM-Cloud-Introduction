@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Net;
 using Mvp.Selections.Api.Model;
 using Mvp.Selections.Domain;
 using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
@@ -8,6 +9,8 @@ namespace MvpSite.Rendering.Models.Profile;
 public class ProfileViewModel
     : BaseViewModel
 {
+    public const int LargeTextFieldLength = 2000;
+
     public Guid? Id { get; set; }
 
     public MvpProfile? Mvp { get; set; }
@@ -19,6 +22,45 @@ public class ProfileViewModel
     public TextField? TimelineLabel { get; set; }
 
     public RichTextField? NotFoundText { get; set; }
+
+    public TextField? MentorLabel { get; set; }
+
+    public TextField? BecomeMenteeLabel { get; set; }
+
+    public TextField? ContactLabel { get; set; }
+
+    public RichTextField? ContactHelpText { get; set; }
+
+    public TextField? ContactNameLabel { get; set; }
+
+    public TextField? ContactEmailLabel { get; set; }
+
+    public TextField? ContactWrongDataLabelFormat { get; set; }
+
+    public HyperLinkField? ContactMyDataLink { get; set; }
+
+    public TextField? ContactMessageLabel { get; set; }
+
+    public TextField? ContactEmailConsentLabel { get; set; }
+
+    [StringLength(LargeTextFieldLength)]
+    public string? ContactMessage { get; set; }
+
+    public bool ContactEmailConsent { get; set; }
+
+    public TextField? ContactSendLabel { get; set; }
+
+    public bool IsSending { get; set; }
+
+    public bool IsSent { get; set; }
+
+    public RichTextField? ContactSuccessText { get; set; }
+
+    public User? CurrentUser { get; set; }
+
+    public TextField? ContactMessageMandatoryLabel { get; set; }
+
+    public TextField? ContactEmailConsentMandatoryLabel { get; set; }
 
     public static Uri GenerateImageUri(Title title)
     {

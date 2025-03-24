@@ -1,0 +1,40 @@
+﻿@using MvpSite.Rendering.Extensions
+@using MvpSite.Rendering.Models.Mvp
+@model MvpSite.Rendering.Models.Mvp.MentorDataModel
+
+@if (Model.IsMvp)
+{
+    <div class="mvp-fs-mvpmentordata col-sm-12 col-md-6 bg-white">
+        <h2 asp-for="TitleLabel"></h2>
+        @using (this.SwitchHtmlPrefix(nameof(MentorDataModel)))
+        {
+            <form method="post">
+                <input asp-for="IsEdit" type="hidden" value="true" />
+                <input asp-for="MentorId" type="hidden"/>
+                <div class="form-group">
+                    <div class="form-check">
+                        @Html.CheckBoxFor(m => m.IsMentor, new { @class = "align-middle" })
+                        <label asp-for="IsMentor" class="w-75 align-middle">
+                            @(Model.IsEditing ? Html.Raw(Model.IsMentorLabel?.EditableMarkup) : Model.IsMentorLabel?.Value)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        @Html.CheckBoxFor(m => m.IsOpenToNewMentees, new { @class = "align-middle" })
+                        <label asp-for="IsOpenToNewMentees" class="w-75 align-middle">
+                            @(Model.IsEditing ? Html.Raw(Model.IsOpenToNewMenteesLabel?.EditableMarkup) : Model.IsOpenToNewMenteesLabel?.Value)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MentorDescription">
+                        @(Model.IsEditing ? Html.Raw(Model.MentorDescriptionLabel?.EditableMarkup) : Model.MentorDescriptionLabel?.Value)
+                    </label>
+                    <textarea asp-for="MentorDescription" rows="3" class="form-control" maxlength="@MentorDataModel.LargeTextFieldLength"></textarea>
+                    <small class="form-text text-muted text-right textareacounter">@(Model.MentorDescription?.Length.ToString() ?? "0") / @MentorDataModel.LargeTextFieldLength</small>
+                </div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <button asp-for="SubmitLabel" type="submit" class="btn btn-primary"></button>
+            </form>
+        }
+    </div>
+}

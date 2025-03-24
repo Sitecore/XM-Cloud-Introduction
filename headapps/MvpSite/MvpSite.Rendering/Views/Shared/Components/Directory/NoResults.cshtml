@@ -2,16 +2,18 @@
 
 <section class="mvp-fp-directory bg-white">
     <div class="container">
-        <div class="row">
+        <div class="row inner">
             <div class="col-12 mb-5">
                 <h2 asp-for="TopTitleLabel"></h2>
                 <h1 asp-for="TitleLabel"></h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12" asp-for="NoResultsText">
+        <div class="row inner">
+            <div class="col-12">
+            <div asp-for="NoResultsText">
             </div>
             <a asp-for="DirectoryLink" class="btn btn-primary"></a>
+            </div>
         </div>
     </div>
 </section>

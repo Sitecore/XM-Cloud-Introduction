@@ -211,32 +211,52 @@ main {
   flex: 1 0 auto;
 }
 .icon {
-  width: 24px;
-  display: inline-block;
-  height: 24px;
-  &::after {
-    content: "";
-    position: relative;
-    width: 100%;
-    height: 100%;
-    color: inherit;
-    background-color: currentColor;
-    mask-position: center;
-    mask-size: 100%;
-    mask-repeat: no-repeat;
+    width: 24px;
     display: inline-block;
-  }
-  &-chevron-down {
-    @extend .icon;
+    height: 24px;
 
     &::after {
-      mask-image: url("/images/chevron-down.svg");
+        content: "";
+        position: relative;
+        width: 100%;
+        height: 100%;
+        color: inherit;
+        background-color: currentColor;
+        mask-position: center;
+        mask-size: 100%;
+        mask-repeat: no-repeat;
+        display: inline-block;
     }
-  }
-  &-external{
-    @extend .icon;
-    &::after {
+
+    &-chevron-down {
+        @extend .icon;
+
+        &::after {
+            mask-image: url("/images/chevron-down.svg");
+        }
+    }
+
+    &-chevron-left {
+        @extend .icon;
+
+        &::after {
+            mask-image: url("/images/chevron-left.svg");
+        }
+    }
+
+    &-chevron-right {
+        @extend .icon;
+
+        &::after {
+            mask-image: url("/images/chevron-right.svg");
+        }
+    }
+
+    &-external {
+        @extend .icon;
+
+        &::after {
             mask-image: url("/images/external.svg");
         }
-  }
+    }
 }
