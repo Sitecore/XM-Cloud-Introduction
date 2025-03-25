@@ -93,8 +93,10 @@ SharedFields:
         <r
           uid="{7A931726-B26B-44A0-BCE2-7A1023245601}"
           p:after="*[1=2]"
+          s:ds=""
           s:id="{00147A0F-476B-4C99-8A10-E6B4FCFCECE0}"
-          s:ph="header-signin" />
+          s:par="CSSStyles"
+          s:ph="nav-signin" />
       </d>
     </r>
 Languages:
@@ -113,9 +115,21 @@ Languages:
           <d
             id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
             <r
+              uid="{7A160402-8C9A-4882-95C5-2596B9DCD261}">
+              <p:d />
+            </r>
+            <r
+              uid="{5B5FFD19-552C-4A6D-BB5F-0D2A24DD1839}">
+              <p:da
+                name="ccb" />
+            </r>
+            <r
               uid="{AD5E24E0-631B-423E-A835-B62F51AF661B}">
               <p:d />
             </r>
+            <r
+              uid="{D2DE8BE0-C911-46EB-9A32-DB8B4863AB2B}"
+              s:par="" />
             <r
               uid="{CAB9C343-0F22-4C4A-B9FD-983D952391C3}">
               <p:d />
@@ -126,13 +140,21 @@ Languages:
               s:ds="{5E3A3F5B-CBF7-4D13-8A39-2BC9D5FD3F22}"
               s:id="{A921AEC7-5DF7-4F8E-835A-6A5111CF94CF}"
               s:par="ContentListType=%7BE58A021E-74D2-471E-9EBA-B09616350605%7D&amp;ContentListLimit"
-              s:ph="/main/column-container-{D2DE8BE0-C911-46EB-9A32-DB8B4863AB2B}-0"
-              s:ccb="Clear on publish" />
+              s:ph="/main/column-container-{D2DE8BE0-C911-46EB-9A32-DB8B4863AB2B}-0" />
             <r
-              uid="{7A931726-B26B-44A0-BCE2-7A1023245601}"
-              s:ccb="Clear on publish"
-              s:ds=""
-              s:par="" />
+              uid="{79F96B2D-698D-4B48-AC4C-1F1B71157C5F}">
+              <p:da
+                name="ccb" />
+            </r>
+            <r
+              uid="{7A931726-B26B-44A0-BCE2-7A1023245601}">
+              <p:d />
+            </r>
+            <r
+              uid="{AF0DF056-7C32-41FD-99FA-1CA50CD8D6E2}"
+              p:after="*[1=2]"
+              s:id="{00147A0F-476B-4C99-8A10-E6B4FCFCECE0}"
+              s:ph="nav-signin" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
@@ -140,33 +162,33 @@ Languages:
       Value: 20200513T045800Z
     - ID: "49f3c8e4-225a-40b6-9894-4f409477de62"
       Hint: MetaKeywords
-      Value: MVP, Most Valuable Professional
+      Value: Sitecore MVP, Most Valuable Professional, Sitecore Community
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "198fd8d5-7f00-4749-9c29-b7e4bd29ff1f"
+      Value: "f105410f-b18a-461f-9b03-6fa6017ae822"
     - ID: "986ff3ab-18cd-47d7-b294-9a091f0e8cea"
       Hint: OgType
       Value: article
     - ID: "a5dfda7a-ee58-43ae-9783-de102d9ea93c"
       Hint: OgImage
       Value: |
-        <image mediaid="{1023987B-1EAD-49A0-BF57-9A1C90A0F88A}" />
+        <image mediaid="{86CA78B1-B4AF-440A-AFB1-DEE4D5B88067}" />
     - ID: "ae1320f3-9221-4417-a3aa-969227038016"
       Hint: OgTitle
-      Value: Home
+      Value: Sitecore MVP Program
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Home
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebw@sitecore.net
+        sitecore\Mark van Aalst
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221004T072522Z
+      Value: 20250324T191004Z
     - ID: "e08359cc-7bf5-4866-81a6-1e1d07226667"
       Hint: MetaDescription
-      Value: MVP Home Description
+      Value: The Sitecore MVP Program is created to celebrate the most active Sitecore Community members from around the world who provide valuable expertise to the Sitecore ecosystem.
     - ID: "eeb29922-a760-44a8-a5ab-f28efbdc641c"
       Hint: OgDescription
-      Value: MVP Home Description
+      Value: The Sitecore MVP Program is created to celebrate the most active Sitecore Community members from around the world who provide valuable expertise to the Sitecore ecosystem.
