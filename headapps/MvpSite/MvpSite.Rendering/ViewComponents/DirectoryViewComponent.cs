@@ -6,7 +6,6 @@ using Microsoft.Extensions.Primitives;
 using Mvp.Selections.Api.Model;
 using Mvp.Selections.Client;
 using Mvp.Selections.Client.Models;
-using Mvp.Selections.Domain;
 using MvpSite.Rendering.Configuration;
 using MvpSite.Rendering.Extensions;
 using MvpSite.Rendering.Helpers;
@@ -30,6 +29,12 @@ public class DirectoryViewComponent(IViewModelBinder modelBinder, MvpSelectionsA
     public const string YearFacetIdentifier = "year";
 
     public const string CountryFacetIdentifier = "country";
+
+    public const string MentorFacetIdentifier = "mentor";
+
+    public const string MentorFacetOptionIdentifier = "mentor";
+
+    public const string OpenToMenteesOptionIdentifier = "openToMentees";
 
     private const string SearchCacheKeyPrefix = "SearchMvpProfileAsync_";
 
@@ -90,6 +95,21 @@ public class DirectoryViewComponent(IViewModelBinder modelBinder, MvpSelectionsA
         return result;
     }
 
+    // NOTE [IVA] We only want null or true for facets otherwise we accidentally use negative filtering which creates unexpected results
+    private static bool? ExtractFacetBoolean(IEnumerable<FacetViewModel> facets, string facetIdentifier, string optionIdentifier)
+    {
+        bool? result = null;
+        FacetViewModel? facet = facets.FirstOrDefault(f => f.Identifier == facetIdentifier);
+        if (
+            facet != null &&
+            (facet.FacetOptions.FirstOrDefault(o => o.Identifier == optionIdentifier)?.IsActive ?? false))
+        {
+            result = true;
+        }
+
+        return result;
+    }
+
     private static void MergeFacetOptions(FacetViewModel viewFacet, IEnumerable<SearchFacetOption> options)
     {
         foreach (SearchFacetOption option in options)
@@ -119,8 +139,10 @@ public class DirectoryViewComponent(IViewModelBinder modelBinder, MvpSelectionsA
         List<short>? mvpTypeFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, MvpTypeFacetIdentifier);
         List<short>? yearFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, YearFacetIdentifier);
         List<short>? countryFacetIdentifiers = ExtractSearchIdentifiers(model.ViewFacets, CountryFacetIdentifier);
+        bool? mentor = ExtractFacetBoolean(model.ViewFacets, MentorFacetIdentifier, MentorFacetOptionIdentifier);
+        bool? openToMentees = ExtractFacetBoolean(model.ViewFacets, MentorFacetIdentifier, OpenToMenteesOptionIdentifier);
         string cacheKey =
-            $"{SearchCacheKeyPrefix}{model.Query}_{mvpTypeFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_{yearFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_{countryFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_p{model.Page}/{model.PageSize}";
+            $"{SearchCacheKeyPrefix}{model.Query}_{mvpTypeFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_{yearFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_{countryFacetIdentifiers.ToCommaSeparatedStringOrNullLiteral()}_{mentor.ToStringOrNullLiteral()}_{openToMentees.ToStringOrNullLiteral()}_p{model.Page}/{model.PageSize}";
         bool isAdmin = await new MvpSelectionsApiHelper(client).IsCurrentUserAnAdmin();
         if (isAdmin || !cache.TryGetValue(cacheKey, out SearchResult<MvpProfile>? profiles))
         {
@@ -129,6 +151,8 @@ public class DirectoryViewComponent(IViewModelBinder modelBinder, MvpSelectionsA
                 mvpTypeFacetIdentifiers,
                 yearFacetIdentifiers,
                 countryFacetIdentifiers,
+                mentor,
+                openToMentees,
                 model.Page,
                 model.PageSize);
             if (response is { StatusCode: HttpStatusCode.OK, Result: not null })
