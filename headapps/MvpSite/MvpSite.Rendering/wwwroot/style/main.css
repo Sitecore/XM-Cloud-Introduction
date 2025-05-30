@@ -3547,9 +3547,15 @@ form#confirmationForm [type=checkbox]:checked {
   display: block;
   width: 85%;
 }
+
+@media (max-width: 991.98px) {
+    .page-overview-panel h2 {
+        max-width: 720px;
+    }
+}
+
 .page-overview-panel h2 {
   margin-bottom: 30px;
-  max-width: 720px;
   font-size: var(--sc-h4);
   line-height: var(--sc-h4-lh);
   letter-spacing: var(--sc-h4-ls);
