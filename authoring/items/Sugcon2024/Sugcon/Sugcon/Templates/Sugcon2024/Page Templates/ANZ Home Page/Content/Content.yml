@@ -1,19 +1,26 @@
 ﻿---
-ID: "a04cecd0-b9f7-4a68-997e-192fb9e818ff"
-Parent: "0a2349dc-7fb8-4c30-84c6-4fe50433782f"
-Template: "c4c677b6-212b-44a4-aab4-67fcd082e5d8"
-Path: /sitecore/content/Sugcon2024/ANZ/Home/Sessions/Data/Sessions
+ID: "70b21b93-e3b7-4302-a091-43bd1ef43a5e"
+Parent: "75cf1a0c-4868-4c1d-b7bd-14a3b4febe27"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/Sugcon2024/Page Templates/ANZ Home Page/Content/Content
+SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "query:$xaRichTextProfile"
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Rich Text
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 2
 Languages:
 - Language: en
   Versions:
   - Version: 1
     Fields:
-    - ID: "1939738b-99b1-473d-9827-f0f321dc8980"
-      Hint: SessionizeUrl
-      Value: "https://sessionize.com/api/v2/tm102qb2/view/Sessions"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20240313T143147Z
+      Value: 20240105T121334Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -24,11 +31,11 @@ Languages:
         sitecore\sebastian.winter@sitecore.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ab772456-bc15-4620-a299-d2a03f5c0b37"
+      Value: "399f832e-92ba-40c9-a636-653fb5f9a4d6"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Rob Earlam
+        sitecore\UOUBIWQRx7
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250604T235238Z
+      Value: 20240402T171626Z

@@ -27,14 +27,14 @@ Languages:
         sitecore\UOUBIWQRx7
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6ca0dc99-6549-4530-9a8e-6b76fe61f5d5"
+      Value: "e29bc171-1aa5-4a4a-8232-0ab7d2e61400"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\Rob Earlam
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240424T102305Z
+      Value: 20250604T235257Z
     - ID: "f42c569e-47f1-4035-98b1-33077b15eae6"
       Hint: SessionizeSpeakerUrl
-      Value: "https://sessionize.com/api/v2/zoqj049r/view/Speakers"
+      Value: "https://sessionize.com/api/v2/tm102qb2/view/Speakers"

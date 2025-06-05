@@ -1,16 +1,25 @@
 ﻿---
 ID: "7c9f3ed5-e12a-4ff9-a0b8-ff9bd68ce9e0"
 Parent: "104aab05-98db-4152-a2fe-95e7fc9a3c87"
-Template: "f5d59b30-223d-4e5a-967d-19daf7934db6"
+Template: "a094d215-ec24-4a11-a9c3-ef44c7cb7826"
 Path: /sitecore/content/Sugcon2024/ANZ/Home/Agenda
 SharedFields:
+- ID: "1fbc6a49-6281-48ee-87e9-a3970b145adb"
+  Hint: NavigationFilter
+  Value: "{D063E9D1-C7B5-4B1E-B31E-69886C9C59F5}"
+- ID: "9135200a-5626-4dd8-ab9d-d665b8c11748"
+  Hint: __Never publish
+  Value: 1
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 200
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{647E5005-A2F5-48AF-899D-CE918D3BCF15}" />
+    <image mediaid="{4F433829-D21B-4DAA-9DFA-4CE239B1921B}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "dab8a4c9-84b0-47a8-adf7-c7f0bf9a4e9b"
 Languages:
 - Language: en
   Versions:
@@ -41,10 +50,13 @@ Languages:
     - ID: "1c75d8e4-860f-4a6f-86f5-e0868d0114f1"
       Hint: OGImage
       Value: |
-        <image mediaid="{0BE1CD1C-6448-4156-B8A5-548C81507908}" />
+        <image mediaid="{6DD6D8B3-0233-4D50-ABF9-115C6267F80C}" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20240125T170104Z
+    - ID: "425fc397-e978-435c-a532-439543cdd653"
+      Hint: Title
+      Value: Agenda
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Agenda
@@ -61,26 +73,23 @@ Languages:
       Value: website
     - ID: "7d817b40-bd80-41e3-8562-5ec5f3fb95fd"
       Hint: MetaDescription
-      Value: Join us at SUGCON ANZ 2023, the premier ANZ conference for Sitecore professionals. Learn from experts, network with peers, and explore the latest in Sitecore technology.
+      Value: Join us at SUGCON ANZ 2025, the premier ANZ conference for Sitecore professionals. Learn from experts, network with peers, and explore the latest in Sitecore technology.
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1556112c-1754-4832-9107-49e92f9ba6fc"
+      Value: "650c231e-d16f-4ab3-a751-02e6d2c4dbb9"
     - ID: "b03cdc17-d7b5-4c87-97a9-b57352fe54a3"
       Hint: OGTitle
-      Value: SUGCON ANZ 2023 Agenda | The ANZ Sitecore User Group Conference
-    - ID: "b0c01040-9941-4a8f-8400-b274c377885e"
-      Hint: Title
-      Value: Agenda
+      Value: SUGCON ANZ 2025 Agenda | The ANZ Sitecore User Group Conference
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\Rob Earlam
     - ID: "cbb2a914-81e3-4fe6-8aed-deab8ed8b98e"
       Hint: OGDescription
-      Value: Explore the exciting lineup of speakers and sessions at SUGCON ANZ 2023. Discover the latest in Sitecore technology and connect with other professionals in the industry.
+      Value: Explore the exciting lineup of speakers and sessions at SUGCON ANZ 2025. Discover the latest in Sitecore technology and connect with other professionals in the industry.
     - ID: "d71d9097-062c-4781-bae9-d6658ab01ade"
       Hint: MetaKeywords
       Value: SUGCON, ANZ, Sitecore, User Group, Conference, Technology, Web Development, Digital Experience, CMS
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240424T130519Z
+      Value: 20250605T004222Z

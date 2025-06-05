@@ -1,7 +1,7 @@
 ﻿---
 ID: "104aab05-98db-4152-a2fe-95e7fc9a3c87"
 Parent: "fc8898e5-4db0-4825-bb88-745478f0e376"
-Template: "28f60da7-21f8-4791-9ecf-f65a93e105a4"
+Template: "f73d4c6d-f7e5-4e9f-838b-f60abb54a4c2"
 Path: /sitecore/content/Sugcon2024/ANZ/Home
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
@@ -14,7 +14,7 @@ SharedFields:
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{D1C8DA27-9335-4FF6-89AC-4C3786E053C2}" />
+    <image mediaid="{76DD9088-47BC-47F5-9A1C-5555701A2946}" />
 - ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
   Hint: __Security
   Value: |
@@ -60,29 +60,15 @@ Languages:
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=5"
               s:ph="headless-main" />
             <r
-              uid="{DDAB2826-BDFB-423D-B9E6-2F818B967BF5}"
-              p:after="r[@uid='{5D83486D-6577-4FB5-B5FF-FEE88A5E6338}']"
-              s:ds="131AAB36-7E52-48E9-9999-9E506117586E"
-              s:id="{53331DB4-9E80-4727-B7A6-2617BEA59142}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;Columns&amp;Alphabetize&amp;LinkToBio&amp;DisplaySocialLinks=1&amp;FieldNames&amp;Styles=%7C%7B9D3C0CCC-2FEB-4351-BC34-970E0941E835%7D&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=7"
-              s:ph="headless-main" />
-            <r
               uid="{6F7DCBAA-608B-4728-BD56-9C00ABEBFDF8}"
-              p:after="r[@uid='{DDAB2826-BDFB-423D-B9E6-2F818B967BF5}']"
+              p:after="r[@uid='{5D83486D-6577-4FB5-B5FF-FEE88A5E6338}']"
               s:ds="23CDF32E-11F0-4ACA-AD68-20AD06B170E2"
               s:id="{53238441-0A66-46B8-BAE6-34A771BFF798}"
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=3"
               s:ph="headless-main" />
             <r
-              uid="{8A21EA5A-666A-4086-9835-FD891471039D}"
-              p:after="r[@uid='{6F7DCBAA-608B-4728-BD56-9C00ABEBFDF8}']"
-              s:ds="c1c1b59a-28fb-4255-afc0-332ba474690e"
-              s:id="{CD6AD0C7-2D3E-4815-93B4-E6F4B88580AA}"
-              s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;CacheClearingBehavior=Clear%20on%20publish&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=6"
-              s:ph="headless-main" />
-            <r
               uid="{323964F9-3701-443B-9FEE-FBDFB9D4599A}"
-              p:after="r[@uid='{8A21EA5A-666A-4086-9835-FD891471039D}']"
+              p:after="r[@uid='{6F7DCBAA-608B-4728-BD56-9C00ABEBFDF8}']"
               s:ds="7188BA27-7401-4408-9521-33D5B93AC468"
               s:id="{66DF59E9-F066-42F2-8F67-3E3F50B6E585}"
               s:par="GridParameters=%7B7465D855-992E-4DC2-9855-A03250DFA74B%7D&amp;FieldNames&amp;Styles&amp;RenderingIdentifier&amp;CSSStyles&amp;DynamicPlaceholderId=9"
@@ -99,7 +85,7 @@ Languages:
     - ID: "1c75d8e4-860f-4a6f-86f5-e0868d0114f1"
       Hint: OGImage
       Value: |
-        <image mediaid="{0BE1CD1C-6448-4156-B8A5-548C81507908}" />
+        <image mediaid="{6DD6D8B3-0233-4D50-ABF9-115C6267F80C}" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20240105T121410Z
@@ -119,26 +105,26 @@ Languages:
       Value: website
     - ID: "7d817b40-bd80-41e3-8562-5ec5f3fb95fd"
       Hint: MetaDescription
-      Value: Join us at SUGCON ANZ 2023, the premier ANZ conference for Sitecore professionals. Learn from experts, network with peers, and explore the latest in Sitecore technology.
+      Value: Join us at SUGCON ANZ 2025, the premier ANZ conference for Sitecore professionals. Learn from experts, network with peers, and explore the latest in Sitecore technology.
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5fd24934-72c4-4f04-9294-de9c7340984e"
+      Value: "3fa318fd-b177-4e2c-90fa-63448bbeef72"
     - ID: "b03cdc17-d7b5-4c87-97a9-b57352fe54a3"
       Hint: OGTitle
-      Value: SUGCON ANZ 2023 | The ANZ Sitecore User Group Conference
+      Value: SUGCON ANZ 2025 | The ANZ Sitecore User Group Conference
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\Rob Earlam
     - ID: "cbb2a914-81e3-4fe6-8aed-deab8ed8b98e"
       Hint: OGDescription
-      Value: Join us at SUGCON ANZ 2023, the premier ANZ conference for Sitecore professionals. Learn from experts, network with peers, and explore the latest in Sitecore technology.
+      Value: Join us at SUGCON ANZ 2025, the premier ANZ conference for Sitecore professionals. Learn from experts, network with peers, and explore the latest in Sitecore technology.
     - ID: "d71d9097-062c-4781-bae9-d6658ab01ade"
       Hint: MetaKeywords
       Value: SUGCON, ANZ, Sitecore, User Group, Conference, Technology, Web Development, Digital Experience, CMS
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240424T130445Z
-    - ID: "ecefdd88-c772-4eab-9faf-24b23e769f27"
+      Value: 20250605T004154Z
+    - ID: "dac03f58-2882-4106-aada-b35f653537a6"
       Hint: Title
-      Value: Join us at SUGCON Europe 2024, the premier European conference for Sitecore professionals.
+      Value: Join us at SUGCON ANZ 2025, the premier conference in Australia and New Zealand for Sitecore professionals.

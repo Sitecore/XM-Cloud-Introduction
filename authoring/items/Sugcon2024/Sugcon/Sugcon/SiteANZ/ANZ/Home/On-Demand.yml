@@ -1,7 +1,7 @@
 ﻿---
 ID: "93e1dc30-417b-47e9-884a-96cd343eec86"
 Parent: "104aab05-98db-4152-a2fe-95e7fc9a3c87"
-Template: "f5d59b30-223d-4e5a-967d-19daf7934db6"
+Template: "a094d215-ec24-4a11-a9c3-ef44c7cb7826"
 Path: "/sitecore/content/Sugcon2024/ANZ/Home/On-Demand"
 SharedFields:
 - ID: "1fbc6a49-6281-48ee-87e9-a3970b145adb"
@@ -10,13 +10,19 @@ SharedFields:
 - ID: "508c54c0-cd02-4266-8b68-d71f88de1aa9"
   Hint: ChangeFrequency
   Value: "{1C2878D9-80A6-4760-B7EB-DBADE16AE8C8}"
+- ID: "9135200a-5626-4dd8-ab9d-d665b8c11748"
+  Hint: __Never publish
+  Value: 1
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 400
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{8139BF67-6AAF-4D22-AF59-E38904A4C6EC}" />
+    <image mediaid="{AB37C649-CBFE-4C6F-8AFB-4C3F8174662C}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "334f3e90-4e46-4992-8139-b8ac93727323"
 Languages:
 - Language: en
   Versions:
@@ -25,6 +31,9 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20240125T170413Z
+    - ID: "425fc397-e978-435c-a532-439543cdd653"
+      Hint: Title
+      Value: "On-Demand"
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: "On-Demand"
@@ -38,14 +47,11 @@ Languages:
         sitecore\anna.bruendel@gmail.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3d60557b-3e72-4b2e-b6f6-aeafd3593ef5"
-    - ID: "b0c01040-9941-4a8f-8400-b274c377885e"
-      Hint: Title
-      Value: "On-Demand"
+      Value: "00b27fc5-da7a-4f84-b91b-6defe5cd0660"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\Rob Earlam
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240424T101445Z
+      Value: 20250605T004237Z

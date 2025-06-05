@@ -1,0 +1,38 @@
+﻿---
+ID: "3b15802d-716f-4b04-a0cc-1ca8ca189976"
+Parent: "fd621d47-244c-47c0-a9a9-770d63171842"
+Template: "d2a6884c-04d5-4089-a64e-d27ca9d68d4c"
+Path: /sitecore/content/Sugcon2024/ANZ/Presentation/Placeholder Settings/Partial Design/ANZ Header
+SharedFields:
+- ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
+  Hint: Placeholder Key
+  Value: "sxa-anz-header"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "4fbcc84c-03bc-4741-a4c1-73e109b9fd30"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250605T000959Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Rob Earlam
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Rob Earlam
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a4f0b98c-5379-4482-abcc-396017778c3a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Rob Earlam
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250605T010403Z
