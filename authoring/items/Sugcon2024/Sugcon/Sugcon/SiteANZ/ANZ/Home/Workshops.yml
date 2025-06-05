@@ -1,7 +1,7 @@
 ﻿---
 ID: "e617991c-b32f-43d1-b0f7-fb511131061e"
 Parent: "104aab05-98db-4152-a2fe-95e7fc9a3c87"
-Template: "f5d59b30-223d-4e5a-967d-19daf7934db6"
+Template: "a094d215-ec24-4a11-a9c3-ef44c7cb7826"
 Path: /sitecore/content/Sugcon2024/ANZ/Home/Workshops
 SharedFields:
 - ID: "1fbc6a49-6281-48ee-87e9-a3970b145adb"
@@ -10,13 +10,19 @@ SharedFields:
 - ID: "508c54c0-cd02-4266-8b68-d71f88de1aa9"
   Hint: ChangeFrequency
   Value: "{1C2878D9-80A6-4760-B7EB-DBADE16AE8C8}"
+- ID: "9135200a-5626-4dd8-ab9d-d665b8c11748"
+  Hint: __Never publish
+  Value: 1
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 563
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{35F7853F-9182-44DD-92E4-A89F12009B63}" />
+    <image mediaid="{D5D0A941-85E7-465D-BDB0-10C52553B262}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "87db14bd-63ac-47ee-9d8f-577b67b33a19"
 Languages:
 - Language: en
   Versions:
@@ -48,10 +54,13 @@ Languages:
     - ID: "1c75d8e4-860f-4a6f-86f5-e0868d0114f1"
       Hint: OGImage
       Value: |
-        <image mediaid="{B83A6684-B680-4001-AA6C-72661A01888D}" />
+        <image mediaid="{6DD6D8B3-0233-4D50-ABF9-115C6267F80C}" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20240125T170333Z
+    - ID: "425fc397-e978-435c-a532-439543cdd653"
+      Hint: Title
+      Value: Workshops  and Certifications
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Workshops
@@ -71,17 +80,14 @@ Languages:
       Value: Sign up for a complimentary XM Cloud workshop to help you take your Sitecore skills to the next level. Get certified.
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "01568d1f-dc77-43a8-99b5-1ae1194a0041"
+      Value: "bacfcb6c-b4a4-4d8c-bb06-45087aa81f05"
     - ID: "b03cdc17-d7b5-4c87-97a9-b57352fe54a3"
       Hint: OGTitle
-      Value: SUGCON Europe 2024 Workshops  and Certifications | The European Sitecore User Group Conference
-    - ID: "b0c01040-9941-4a8f-8400-b274c377885e"
-      Hint: Title
-      Value: Workshops  and Certifications
+      Value: SUGCON ANZ 2025 Workshops  and Certifications | The European Sitecore User Group Conference
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\Rob Earlam
     - ID: "cbb2a914-81e3-4fe6-8aed-deab8ed8b98e"
       Hint: OGDescription
       Value: Sign up for a complimentary XM Cloud workshop to help you take your Sitecore skills to the next level. Get certified.
@@ -90,4 +96,4 @@ Languages:
       Value: SUGCON, Europe, Sitecore, User Group, Conference, Certification, Workshop, Best Practices, XM Cloud, Developer
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240424T101459Z
+      Value: 20250605T004312Z

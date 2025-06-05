@@ -1,16 +1,19 @@
 ﻿---
 ID: "9dcf7c44-06f6-4bbc-a016-52e16ef57811"
 Parent: "104aab05-98db-4152-a2fe-95e7fc9a3c87"
-Template: "f5d59b30-223d-4e5a-967d-19daf7934db6"
+Template: "a094d215-ec24-4a11-a9c3-ef44c7cb7826"
 Path: /sitecore/content/Sugcon2024/ANZ/Home/Organizers
 SharedFields:
+- ID: "1fbc6a49-6281-48ee-87e9-a3970b145adb"
+  Hint: NavigationFilter
+  Value: 
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 600
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{5E6BE2E8-CC1A-428F-9524-080F7EF6D794}" />
+    <image mediaid="{637332C7-5780-44E8-AB30-CBDB5FC394A6}" />
 Languages:
 - Language: en
   Versions:
@@ -42,10 +45,13 @@ Languages:
     - ID: "1c75d8e4-860f-4a6f-86f5-e0868d0114f1"
       Hint: OGImage
       Value: |
-        <image mediaid="{0BE1CD1C-6448-4156-B8A5-548C81507908}" />
+        <image mediaid="{6DD6D8B3-0233-4D50-ABF9-115C6267F80C}" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20240125T170401Z
+    - ID: "425fc397-e978-435c-a532-439543cdd653"
+      Hint: Title
+      Value: Organization Team
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Organizers
@@ -62,26 +68,23 @@ Languages:
       Value: website
     - ID: "7d817b40-bd80-41e3-8562-5ec5f3fb95fd"
       Hint: MetaDescription
-      Value: Meet the dedicated and experienced team behind SUGCON ANZ 2023. Learn about their passion for Sitecore and commitment to delivering a successful conference.
+      Value: Meet the dedicated and experienced team behind SUGCON ANZ 2025. Learn about their passion for Sitecore and commitment to delivering a successful conference.
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "f307154a-bff6-4aee-a801-814dd165e570"
+      Value: "c98418ae-f723-4304-884a-4a57449b442f"
     - ID: "b03cdc17-d7b5-4c87-97a9-b57352fe54a3"
       Hint: OGTitle
-      Value: SUGCON ANZ 2023 Organisation Team | The ANZ Sitecore User Group Conference
-    - ID: "b0c01040-9941-4a8f-8400-b274c377885e"
-      Hint: Title
-      Value: Organization Team
+      Value: SUGCON ANZ 2025 Organisation Team | The ANZ Sitecore User Group Conference
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\Rob Earlam
     - ID: "cbb2a914-81e3-4fe6-8aed-deab8ed8b98e"
       Hint: OGDescription
-      Value: Meet the dedicated and experienced team behind SUGCON ANZ 2023 Learn about their passion for Sitecore and commitment to delivering a successful conference.
+      Value: Meet the dedicated and experienced team behind SUGCON ANZ 2025 Learn about their passion for Sitecore and commitment to delivering a successful conference.
     - ID: "d71d9097-062c-4781-bae9-d6658ab01ade"
       Hint: MetaKeywords
       Value: SUGCON, ANZ, Sitecore, User Group, Conference, Organization Team, Dedicated, Experienced, Passion, Commitment, Successful
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240424T130824Z
+      Value: 20250605T004339Z

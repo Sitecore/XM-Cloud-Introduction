@@ -1,16 +1,25 @@
 ﻿---
 ID: "5413d900-9147-4580-b5e8-ca2daf38f233"
 Parent: "104aab05-98db-4152-a2fe-95e7fc9a3c87"
-Template: "f5d59b30-223d-4e5a-967d-19daf7934db6"
+Template: "a094d215-ec24-4a11-a9c3-ef44c7cb7826"
 Path: /sitecore/content/Sugcon2024/ANZ/Home/Speakers
 SharedFields:
+- ID: "1fbc6a49-6281-48ee-87e9-a3970b145adb"
+  Hint: NavigationFilter
+  Value: "{D063E9D1-C7B5-4B1E-B31E-69886C9C59F5}"
+- ID: "9135200a-5626-4dd8-ab9d-d665b8c11748"
+  Hint: __Never publish
+  Value: 1
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
   Value: 550
 - ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
   Hint: __Thumbnail
   Value: |
-    <image mediaid="{9A08E182-438E-4002-96B7-BCFAB83806D8}" />
+    <image mediaid="{461AB591-7DC2-4358-8152-EC286FC50406}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "1636f567-8285-4e0a-b2f1-ce0754253978"
 Languages:
 - Language: en
   Versions:
@@ -41,10 +50,13 @@ Languages:
     - ID: "1c75d8e4-860f-4a6f-86f5-e0868d0114f1"
       Hint: OGImage
       Value: |
-        <image mediaid="{0BE1CD1C-6448-4156-B8A5-548C81507908}" />
+        <image mediaid="{6DD6D8B3-0233-4D50-ABF9-115C6267F80C}" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20240125T170322Z
+    - ID: "425fc397-e978-435c-a532-439543cdd653"
+      Hint: Title
+      Value: Speakers
     - ID: "4e0720e9-9d50-4ddc-87cf-ecd65e8e94c8"
       Hint: NavigationTitle
       Value: Speakers
@@ -61,26 +73,23 @@ Languages:
       Value: website
     - ID: "7d817b40-bd80-41e3-8562-5ec5f3fb95fd"
       Hint: MetaDescription
-      Value: Meet the dynamic and knowledgeable speakers of SUGCON ANZ 2023. Learn from the experts and get inspired for your Sitecore journey.
+      Value: Meet the dynamic and knowledgeable speakers of SUGCON ANZ 2025. Learn from the experts and get inspired for your Sitecore journey.
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "10b3fb54-7211-41e0-8d6b-6039d20fbd6e"
+      Value: "afe773f8-6b10-4e1e-848c-06e4f51612fc"
     - ID: "b03cdc17-d7b5-4c87-97a9-b57352fe54a3"
       Hint: OGTitle
-      Value: SUGCON ANZ 2023 Speakers | The ANZ Sitecore User Group Conference
-    - ID: "b0c01040-9941-4a8f-8400-b274c377885e"
-      Hint: Title
-      Value: Speakers
+      Value: SUGCON ANZ 2025 Speakers | The ANZ Sitecore User Group Conference
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\sebastian.winter@sitecore.com
+        sitecore\Rob Earlam
     - ID: "cbb2a914-81e3-4fe6-8aed-deab8ed8b98e"
       Hint: OGDescription
-      Value: Meet the dynamic and knowledgeable speakers of SUGCON ANZ 2023. Learn from the experts and get inspired for your Sitecore journey.
+      Value: Meet the dynamic and knowledgeable speakers of SUGCON ANZ 2025. Learn from the experts and get inspired for your Sitecore journey.
     - ID: "d71d9097-062c-4781-bae9-d6658ab01ade"
       Hint: MetaKeywords
       Value: SUGCON, ANZ, Sitecore, User Group, Conference, Speakers, Experts, Inspiration, Journey
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240424T130643Z
+      Value: 20250605T004302Z

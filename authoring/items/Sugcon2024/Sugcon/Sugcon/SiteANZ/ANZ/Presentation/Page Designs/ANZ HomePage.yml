@@ -1,0 +1,42 @@
+﻿---
+ID: "0d35b12e-dfb3-4280-8964-aef329475b45"
+Parent: "3ff247e7-70c0-429a-a836-374916f7c2b1"
+Template: "1105b8f8-1e00-426b-bf1f-c840742d827b"
+Path: /sitecore/content/Sugcon2024/ANZ/Presentation/Page Designs/ANZ HomePage
+SharedFields:
+- ID: "0966b999-0d0e-4278-acc9-9da69d461fe6"
+  Hint: PartialDesigns
+  Value: "{80BD8FE8-6E7F-41B6-9D5A-11394A4229E3}|{61BD65CE-5270-4961-A1CD-9F0263DC662A}"
+- ID: "c7c26117-dbb1-42b2-ab5e-f7223845cca3"
+  Hint: __Thumbnail
+  Value: |
+    <image mediaid="{65F74876-B838-4AC1-8A9D-58C1F4DDB070}" />
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "ae3b92e7-275b-4a2b-971f-ad84e5cd4a69"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240123T184248Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\UOUBIWQRx7
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\UOUBIWQRx7
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "be62a995-e84c-416f-a946-0a31d91c965e"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Rob Earlam
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250605T004038Z
