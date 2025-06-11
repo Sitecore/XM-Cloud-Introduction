@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Rewrite;
 using MvpSite.Rendering.AppSettings;
 using MvpSite.Rendering.Extensions;
 using Sitecore.AspNetCore.SDK.ExperienceEditor.Extensions;
+using Sitecore.AspNetCore.SDK.GraphQL.Extensions;
 using Sitecore.AspNetCore.SDK.LayoutService.Client.Extensions;
 using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
 
@@ -32,14 +33,14 @@ if (sitecoreSettings.EnableLocalContainer)
 {
     // Register the GraphQL version of the Sitecore Layout Service Client for use against local container endpoint
     builder.Services.AddSitecoreLayoutService()
-        .AddGraphQlHandler("default", sitecoreSettings.DefaultSiteName!, sitecoreSettings.EdgeContextId!, sitecoreSettings.LocalContainerLayoutUri!)
+        .AddGraphQLHandler("default", sitecoreSettings.DefaultSiteName!, sitecoreSettings.EdgeContextId!, sitecoreSettings.LocalContainerLayoutUri!)
         .AsDefaultHandler();
 }
 else
 {
     // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge
     builder.Services.AddSitecoreLayoutService()
-        .AddGraphQlWithContextHandler("default", sitecoreSettings.EdgeContextId!, siteName: sitecoreSettings.DefaultSiteName!)
+        .AddGraphQLWithContextHandler("default", sitecoreSettings.EdgeContextId!, siteName: sitecoreSettings.DefaultSiteName!)
         .AsDefaultHandler();
 }
 
