@@ -21,9 +21,9 @@ ArgumentNullException.ThrowIfNull(sitecoreSettings);
 
 // This method gets called by the runtime. Use this method to add services to the container.
 // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-
 builder.Services
     .AddRouting()
+
     // You must enable ASP.NET Core localization to utilize localized Sitecore content.
     .AddLocalization()
     .AddMvc();
@@ -58,9 +58,11 @@ builder.Services.AddSitecoreRenderingEngine(options =>
             .AddFeatureSelections()
             .AddDefaultPartialView("_ComponentNotFound");
     })
+
     // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
     // Sitecore Media and other links have the correct scheme.
     .ForwardHeaders()
+
     // Enable support for the Experience Editor.
     .WithExperienceEditor(options => { options.JssEditingSecret = sitecoreSettings.EditingSecret; });
 
@@ -82,6 +84,7 @@ WebApplication app = builder.Build();
 app.UseForwardedHeaders(new ForwardedHeadersOptions()
 {
     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
+
     // ReSharper disable once CommentTypo - Actual product name
     // Allow forwarding of headers from Traefik in development & NGINX in k8s
     KnownNetworks = { },
@@ -92,6 +95,7 @@ app.UseSession();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
+
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
@@ -167,6 +171,6 @@ app.MapSitecoreLocalizedRoute("sitecore", "Index", "Default");
 
 // Fall back to language-less routing as well, and use the default culture (en).
 app.MapFallbackToController("Index", "Default");
-// ReSharper restore StringLiteralTypo - Uri segments
 
+// ReSharper restore StringLiteralTypo - Uri segments
 app.Run();
