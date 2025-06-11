@@ -8,6 +8,8 @@ using Sitecore.AspNetCore.SDK.ExperienceEditor.Extensions;
 using Sitecore.AspNetCore.SDK.GraphQL.Extensions;
 using Sitecore.AspNetCore.SDK.LayoutService.Client.Extensions;
 using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
+using Sitecore.AspNetCore.SDK.Pages.Configuration;
+using Sitecore.AspNetCore.SDK.Pages.Extensions;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +20,7 @@ const string DefaultLanguage = "en";
 // Values can originate in appsettings.json, from environment variables, and more.
 // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1
 MvpSiteSettings? sitecoreSettings = builder.Configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
+PagesOptions? pagesSettings = builder.Configuration.GetSection(PagesOptions.Key).Get<PagesOptions>() ?? new PagesOptions();
 ArgumentNullException.ThrowIfNull(sitecoreSettings);
 
 // This method gets called by the runtime. Use this method to add services to the container.
@@ -29,19 +32,27 @@ builder.Services
     .AddLocalization()
     .AddMvc();
 
+builder.Services.AddGraphQLClient(configuration =>
+                {
+                    configuration.ContextId = sitecoreSettings.EdgeContextId;
+                });
+                
 if (sitecoreSettings.EnableLocalContainer)
 {
     // Register the GraphQL version of the Sitecore Layout Service Client for use against local container endpoint
     builder.Services.AddSitecoreLayoutService()
-        .AddGraphQLHandler("default", sitecoreSettings.DefaultSiteName!, sitecoreSettings.EdgeContextId!, sitecoreSettings.LocalContainerLayoutUri!)
-        .AsDefaultHandler();
+                    .AddSitecorePagesHandler()
+                    .AddGraphQLHandler("default", sitecoreSettings.DefaultSiteName!, sitecoreSettings.EdgeContextId!, sitecoreSettings.LocalContainerLayoutUri!)
+                    .AsDefaultHandler();
+
 }
 else
 {
     // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge
     builder.Services.AddSitecoreLayoutService()
-        .AddGraphQLWithContextHandler("default", sitecoreSettings.EdgeContextId!, siteName: sitecoreSettings.DefaultSiteName!)
-        .AsDefaultHandler();
+                    .AddSitecorePagesHandler()
+                    .AddGraphQLWithContextHandler("default", sitecoreSettings.EdgeContextId!, siteName: sitecoreSettings.DefaultSiteName!)
+                    .AsDefaultHandler();
 }
 
 builder.Services.AddFeatureUser(builder.Configuration);
@@ -64,13 +75,13 @@ builder.Services.AddSitecoreRenderingEngine(options =>
     // Sitecore Media and other links have the correct scheme.
     .ForwardHeaders()
 
-    // Enable support for the Experience Editor.
-    .WithExperienceEditor(options => { options.JssEditingSecret = sitecoreSettings.EditingSecret; });
+    // Enable support for the Page Editor.
+    .WithSitecorePages(sitecoreSettings.EdgeContextId ?? string.Empty, options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
 
 // Register MVP Functionality specific services
 builder.Services.AddFeatureSocialServices()
-    .AddFeaturePeopleServices()
-    .AddFeatureSelectionsServices();
+                .AddFeaturePeopleServices()
+                .AddFeatureSelectionsServices();
 
 builder.Services.AddSession();
 
@@ -115,12 +126,11 @@ RewriteOptions rewriteOptions = new RewriteOptions()
 app.UseRewriter(rewriteOptions);
 // ReSharper restore StringLiteralTypo - Uri segments
 
-// The Experience Editor endpoint should not be enabled in production DMZ.
 // See the SDK documentation for details.
 if (sitecoreSettings.EnableEditingMode)
 {
-    // Enable the Sitecore Experience Editor POST endpoint.
-    app.UseSitecoreExperienceEditor();
+    // Enable the Sitecore Page Editor, which allows editing of the content in the browser.
+    app.UseSitecorePages(pagesSettings);
 }
 
 // Standard ASP.NET Core routing and static file support.
