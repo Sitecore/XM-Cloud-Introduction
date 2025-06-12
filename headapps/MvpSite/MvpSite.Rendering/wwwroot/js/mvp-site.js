@@ -23,6 +23,83 @@
     });
 }
 
+function directorySearchClearHandler() {
+    const searchInput = document.getElementById('directory-search');
+    if (!searchInput) return;
+    
+    const queryParam = 'q'; // DirectoryViewModel.QueryQueryStringKey
+    
+    function clearIfNeeded() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (!urlParams.has(queryParam)) {
+            searchInput.value = '';
+            searchInput.blur();
+        }
+    }
+    
+    // Run immediately when function is called
+    clearIfNeeded();
+    
+    // Handle navigation events with multiple timing approaches
+    window.addEventListener('popstate', function() {
+        clearIfNeeded();
+        setTimeout(clearIfNeeded, 1);
+        setTimeout(clearIfNeeded, 10);
+        setTimeout(clearIfNeeded, 50);
+        setTimeout(clearIfNeeded, 100);
+    });
+    
+    // Handle page restoration from cache
+    window.addEventListener('pageshow', function(event) {
+        clearIfNeeded();
+        setTimeout(clearIfNeeded, 1);
+    });
+    
+    // Handle tab visibility changes
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) {
+            clearIfNeeded();
+        }
+    });
+    
+    // Add MutationObserver to watch for DOM changes
+    if (window.MutationObserver) {
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'attributes' || mutation.type === 'childList') {
+                    clearIfNeeded();
+                }
+            });
+        });
+        
+        observer.observe(searchInput, { 
+            attributes: true, 
+            attributeFilter: ['value'] 
+        });
+    }
+    
+    // Property descriptor override as fallback
+    const originalDescriptor = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value');
+    if (originalDescriptor) {
+        Object.defineProperty(searchInput, 'value', {
+            get: function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (!urlParams.has(queryParam)) {
+                    return '';
+                }
+                return originalDescriptor.get.call(this);
+            },
+            set: function(val) {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (!urlParams.has(queryParam)) {
+                    val = '';
+                }
+                originalDescriptor.set.call(this, val);
+            }
+        });
+    }
+}
+
 $(document).ready(function () {
     const $window = $(window);
 
@@ -75,12 +152,13 @@ $(document).ready(function () {
             }, 1000);
         });
     }
-
-
     const $directory = $(".mvp-fp-directory");
     if ($directory.length > 0) {
         const $form = $directory.find("form");
         $form.on("change", "input:checkbox", () => { $form.submit(); });
+        
+        // Handle search input clearing on back navigation
+        directorySearchClearHandler();
     }
 
 
