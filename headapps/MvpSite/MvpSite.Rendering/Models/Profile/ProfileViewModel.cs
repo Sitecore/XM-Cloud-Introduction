@@ -72,12 +72,6 @@ public class ProfileViewModel
         List<TimelineEventViewModel> result = [];
         if (Mvp != null)
         {
-            result.AddRange(Mvp.Titles.Select(title => new TimelineEventViewModel
-            {
-                Date = new DateTime(title.Application.Selection.Year, 1, 31),
-                Title = $"{title.MvpType.Name} {title.Application.Selection.Year}",
-                Description = $"![{title.MvpType.Name} {title.Application.Selection.Year}]({GenerateImageUri(title)} \"{title.MvpType.Name} {title.Application.Selection.Year}\")"
-            }));
             result.AddRange(Mvp.PublicContributions.Select(contribution => new TimelineEventViewModel
             {
                 Date = contribution.Date,
