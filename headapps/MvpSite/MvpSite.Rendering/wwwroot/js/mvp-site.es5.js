@@ -23,6 +23,22 @@ function timelineEventsHeightRecalculation($timeline, reset) {
     });
 }
 
+function directorySearchClearHandler() {
+    var searchInput = document.getElementById('directory-search');
+    if (!searchInput) return;
+
+    var queryParam = 'q';
+
+    function clearIfNeeded() {
+        var urlParams = new URLSearchParams(window.location.search);
+        if (!urlParams.has(queryParam)) {
+            searchInput.value = '';
+        }
+    }
+
+    window.addEventListener('pageshow', clearIfNeeded);
+}
+
 $(document).ready(function () {
     var $window = $(window);
 
@@ -74,7 +90,6 @@ $(document).ready(function () {
             }, 1000);
         });
     }
-
     var $directory = $(".mvp-fp-directory");
     if ($directory.length > 0) {
         (function () {
@@ -82,6 +97,9 @@ $(document).ready(function () {
             $form.on("change", "input:checkbox", function () {
                 $form.submit();
             });
+
+            // Handle search input clearing on back navigation
+            directorySearchClearHandler();
         })();
     }
 
