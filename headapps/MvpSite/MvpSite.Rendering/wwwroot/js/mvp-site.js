@@ -23,6 +23,23 @@
     });
 }
 
+function directorySearchClearHandler() {
+    const searchInput = document.getElementById('directory-search');
+    if (!searchInput) return;
+    
+    const queryParam = 'q';
+    
+    function clearIfNeeded() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (!urlParams.has(queryParam)) {
+            searchInput.value = '';
+        }
+    }
+    
+    window.addEventListener('pageshow', clearIfNeeded);
+
+}
+
 $(document).ready(function () {
     const $window = $(window);
 
@@ -75,12 +92,13 @@ $(document).ready(function () {
             }, 1000);
         });
     }
-
-
     const $directory = $(".mvp-fp-directory");
     if ($directory.length > 0) {
         const $form = $directory.find("form");
         $form.on("change", "input:checkbox", () => { $form.submit(); });
+        
+        // Handle search input clearing on back navigation
+        directorySearchClearHandler();
     }
 
 
