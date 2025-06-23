@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Rewrite;
 using MvpSite.Rendering.AppSettings;
 using MvpSite.Rendering.Extensions;
-using Sitecore.AspNetCore.SDK.ExperienceEditor.Extensions;
 using Sitecore.AspNetCore.SDK.GraphQL.Extensions;
 using Sitecore.AspNetCore.SDK.LayoutService.Client.Extensions;
 using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;

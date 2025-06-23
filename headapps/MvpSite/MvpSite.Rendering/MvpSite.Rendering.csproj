@@ -26,7 +26,6 @@
 		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" />
 		<PackageReference Include="Sitecore.AspNetCore.SDK.LayoutService.Client" />
 		<PackageReference Include="Sitecore.AspNetCore.SDK.RenderingEngine" />
-		<PackageReference Include="Sitecore.AspNetCore.SDK.ExperienceEditor" />
 		<PackageReference Include="Sitecore.AspNetCore.SDK.Pages" />
 		<PackageReference Include="System.ServiceModel.Syndication" />
 		<PackageReference Include="Markdig" />
