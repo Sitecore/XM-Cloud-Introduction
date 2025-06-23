@@ -6,9 +6,9 @@ using MvpSite.Rendering.AppSettings;
 using MvpSite.Rendering.Extensions;
 using Sitecore.AspNetCore.SDK.GraphQL.Extensions;
 using Sitecore.AspNetCore.SDK.LayoutService.Client.Extensions;
-using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
 using Sitecore.AspNetCore.SDK.Pages.Configuration;
 using Sitecore.AspNetCore.SDK.Pages.Extensions;
+using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -22,8 +22,7 @@ MvpSiteSettings? sitecoreSettings = builder.Configuration.GetSection(MvpSiteSett
 PagesOptions? pagesSettings = builder.Configuration.GetSection(PagesOptions.Key).Get<PagesOptions>() ?? new PagesOptions();
 ArgumentNullException.ThrowIfNull(sitecoreSettings);
 
-// This method gets called by the runtime. Use this method to add services to the container.
-// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+// Register core ASP.NET Core services
 builder.Services
     .AddRouting()
 
@@ -32,31 +31,29 @@ builder.Services
     .AddMvc();
 
 builder.Services.AddGraphQLClient(configuration =>
-                {
-                    configuration.ContextId = sitecoreSettings.EdgeContextId;
-                });
-                
+{
+    configuration.ContextId = sitecoreSettings.EdgeContextId;
+});
 if (sitecoreSettings.EnableLocalContainer)
 {
     // Register the GraphQL version of the Sitecore Layout Service Client for use against local container endpoint
     builder.Services.AddSitecoreLayoutService()
-                    .AddSitecorePagesHandler()
-                    .AddGraphQLHandler("default", sitecoreSettings.DefaultSiteName!, sitecoreSettings.EdgeContextId!, sitecoreSettings.LocalContainerLayoutUri!)
-                    .AsDefaultHandler();
-
+        .AddSitecorePagesHandler()
+        .AddGraphQLHandler("default", sitecoreSettings.DefaultSiteName!, sitecoreSettings.EdgeContextId!, sitecoreSettings.LocalContainerLayoutUri!)
+        .AsDefaultHandler();
 }
 else
 {
     // Register the GraphQL version of the Sitecore Layout Service Client for use against experience edge
     builder.Services.AddSitecoreLayoutService()
-                    .AddSitecorePagesHandler()
-                    .AddGraphQLWithContextHandler("default", sitecoreSettings.EdgeContextId!, siteName: sitecoreSettings.DefaultSiteName!)
-                    .AsDefaultHandler();
+        .AddSitecorePagesHandler()
+        .AddGraphQLWithContextHandler("default", sitecoreSettings.EdgeContextId!, siteName: sitecoreSettings.DefaultSiteName!)
+        .AsDefaultHandler();
 }
 
 builder.Services.AddFeatureUser(builder.Configuration);
 
-// Register the Sitecore Rendering Engine services.
+// Register the Sitecore Rendering Engine services
 builder.Services.AddSitecoreRenderingEngine(options =>
     {
         // Register your components here
@@ -69,18 +66,16 @@ builder.Services.AddSitecoreRenderingEngine(options =>
             .AddFeatureSelections()
             .AddDefaultPartialView("_ComponentNotFound");
     })
-
     // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
     // Sitecore Media and other links have the correct scheme.
     .ForwardHeaders()
-
     // Enable support for the Page Editor.
     .WithSitecorePages(sitecoreSettings.EdgeContextId ?? string.Empty, options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
 
 // Register MVP Functionality specific services
 builder.Services.AddFeatureSocialServices()
-                .AddFeaturePeopleServices()
-                .AddFeatureSelectionsServices();
+    .AddFeaturePeopleServices()
+    .AddFeatureSelectionsServices();
 
 builder.Services.AddSession();
 
@@ -89,13 +84,12 @@ builder.Services.AddApplicationInsightsTelemetry();
 
 WebApplication app = builder.Build();
 
-// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 // When running behind HTTPS termination, set the request scheme according to forwarded protocol headers.
 // Also set the Request IP, so that it can be passed on to the Sitecore Layout Service for tracking and personalization.
 app.UseForwardedHeaders(new ForwardedHeadersOptions()
 {
     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
-
     // ReSharper disable once CommentTypo - Actual product name
     // Allow forwarding of headers from Traefik in development & NGINX in k8s
     KnownNetworks = { },
@@ -106,7 +100,6 @@ app.UseSession();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
@@ -123,6 +116,7 @@ RewriteOptions rewriteOptions = new RewriteOptions()
     .AddRedirect("search(.*)", "Directory$1")
     .AddRedirect("Search(.*)", "Directory$1");
 app.UseRewriter(rewriteOptions);
+
 // ReSharper restore StringLiteralTypo - Uri segments
 
 // See the SDK documentation for details.
@@ -145,7 +139,6 @@ app.UseRequestLocalization(options =>
     options.DefaultRequestCulture = new RequestCulture(DefaultLanguage, DefaultLanguage);
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
-
     // Allow culture to be resolved via standard Sitecore URL prefix and query string (sc_lang).
     options.UseSitecoreRequestLocalization();
 });
@@ -154,7 +147,7 @@ app.UseRequestLocalization(options =>
 app.UseAuthentication();
 app.UseAuthorization();
 
-// ReSharper disable StringLiteralTypo - Uri segments
+// Map error and health check routes.
 app.MapControllerRoute(
     "error",
     "error",
@@ -165,8 +158,10 @@ app.MapControllerRoute(
     "healthz",
     new { controller = "Default", action = "Healthz" });
 
+// Map Okta sign-in route.
 app.MapOktaSigninRoute();
 
+// Map profile routes with and without culture prefix.
 app.MapControllerRoute(
     "MvpProfileWithCulture",
     "{culture?}/directory/profile/{name}",
@@ -176,10 +171,10 @@ app.MapControllerRoute(
     "directory/profile/{name}",
     new { controller = "MvpProfile", action = "Index" });
 
-// Enables the default Sitecore URL pattern with a language prefix.
+// Map the default Sitecore URL pattern with a language prefix.
 app.MapSitecoreLocalizedRoute("sitecore", "Index", "Default");
 
-// Fall back to language-less routing as well, and use the default culture (en).
+// Fallback to language-less routing and use the default culture (en).
 app.MapFallbackToController("Index", "Default");
 
 // ReSharper restore StringLiteralTypo - Uri segments
