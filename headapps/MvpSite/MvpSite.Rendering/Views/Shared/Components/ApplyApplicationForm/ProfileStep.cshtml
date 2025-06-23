@@ -26,7 +26,7 @@
                 <div class="col-6">
                     @foreach (ProfileLink link in Model.CurrentUser?.Links ?? [])
                     {
-                        <text>@link.Type: <a href="@link.Uri">@link.Name</a><br/></text>
+                        <text>@link.Type: <a href="@link.Uri" target="_blank">@link.Name</a><br/></text>
                     }
                 </div>
             </div>
