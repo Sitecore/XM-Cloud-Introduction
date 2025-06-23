@@ -71,14 +71,12 @@ builder.Services.AddSitecoreRenderingEngine(options =>
             .AddFeaturePeople()
             .AddFeatureSelections()
             .AddDefaultPartialView("_ComponentNotFound");
-})
-
-// Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
-// Sitecore Media and other links have the correct scheme.
-.ForwardHeaders()
-
-// Enable support for the Page Editor.
-.WithSitecorePages(sitecoreSettings.EdgeContextId ?? string.Empty, options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
+    })
+    // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
+    // Sitecore Media and other links have the correct scheme.
+    .ForwardHeaders()
+    // Enable support for the Page Editor.
+    .WithSitecorePages(sitecoreSettings.EdgeContextId!, options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
 
 // Register MVP Functionality specific services
 builder.Services.AddFeatureSocialServices()
