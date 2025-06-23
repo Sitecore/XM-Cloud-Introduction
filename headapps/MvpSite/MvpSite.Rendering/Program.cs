@@ -22,6 +22,11 @@ MvpSiteSettings? sitecoreSettings = builder.Configuration.GetSection(MvpSiteSett
 PagesOptions? pagesSettings = builder.Configuration.GetSection(PagesOptions.Key).Get<PagesOptions>() ?? new PagesOptions();
 ArgumentNullException.ThrowIfNull(sitecoreSettings);
 
+if (string.IsNullOrWhiteSpace(sitecoreSettings.EdgeContextId))
+{
+    throw new InvalidOperationException("Sitecore EdgeContextId must be configured in settings.");
+}
+
 // Register core ASP.NET Core services
 builder.Services
     .AddRouting()
@@ -30,9 +35,11 @@ builder.Services
     .AddLocalization()
     .AddMvc();
 
-builder.Services.AddGraphQLClient(configuration => {
+builder.Services.AddGraphQLClient(configuration =>
+{
     configuration.ContextId = sitecoreSettings.EdgeContextId;
 });
+
 if (sitecoreSettings.EnableLocalContainer)
 {
     // Register the GraphQL version of the Sitecore Layout Service Client for use against local container endpoint
@@ -64,12 +71,14 @@ builder.Services.AddSitecoreRenderingEngine(options =>
             .AddFeaturePeople()
             .AddFeatureSelections()
             .AddDefaultPartialView("_ComponentNotFound");
-    })
-    // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
-    // Sitecore Media and other links have the correct scheme.
-    .ForwardHeaders()
-    // Enable support for the Page Editor.
-    .WithSitecorePages(sitecoreSettings.EdgeContextId ?? string.Empty, options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
+})
+
+// Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
+// Sitecore Media and other links have the correct scheme.
+.ForwardHeaders()
+
+// Enable support for the Page Editor.
+.WithSitecorePages(sitecoreSettings.EdgeContextId ?? string.Empty, options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
 
 // Register MVP Functionality specific services
 builder.Services.AddFeatureSocialServices()
@@ -89,6 +98,7 @@ WebApplication app = builder.Build();
 app.UseForwardedHeaders(new ForwardedHeadersOptions()
 {
     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
+
     // ReSharper disable once CommentTypo - Actual product name
     // Allow forwarding of headers from Traefik in development & NGINX in k8s
     KnownNetworks = { },
@@ -99,6 +109,7 @@ app.UseSession();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
+
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
@@ -134,10 +145,11 @@ app.UseStaticFiles();
 app.UseRequestLocalization(options =>
 {
     // If you add languages in Sitecore which this site / Rendering Host should support, add them here.
-    List<CultureInfo> supportedCultures = [new(DefaultLanguage)];
+    var supportedCultures = new List<CultureInfo> { new(DefaultLanguage) };
     options.DefaultRequestCulture = new RequestCulture(DefaultLanguage, DefaultLanguage);
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
+
     // Allow culture to be resolved via standard Sitecore URL prefix and query string (sc_lang).
     options.UseSitecoreRequestLocalization();
 });
