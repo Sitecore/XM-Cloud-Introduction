@@ -17,7 +17,7 @@ const string DefaultLanguage = "en";
 // ReSharper disable once CommentTypo - Well known name of the file
 // Example of using ASP.NET Core configuration binding for various Sitecore Rendering Engine settings.
 // Values can originate in appsettings.json, from environment variables, and more.
-// https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1
+// https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/
 MvpSiteSettings? sitecoreSettings = builder.Configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
 PagesOptions? pagesSettings = builder.Configuration.GetSection(PagesOptions.Key).Get<PagesOptions>() ?? new PagesOptions();
 ArgumentNullException.ThrowIfNull(sitecoreSettings);
@@ -30,8 +30,7 @@ builder.Services
     .AddLocalization()
     .AddMvc();
 
-builder.Services.AddGraphQLClient(configuration =>
-{
+builder.Services.AddGraphQLClient(configuration => {
     configuration.ContextId = sitecoreSettings.EdgeContextId;
 });
 if (sitecoreSettings.EnableLocalContainer)
