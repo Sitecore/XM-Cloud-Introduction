@@ -69,7 +69,7 @@ builder.Services.AddSitecoreRenderingEngine(options =>
     // Sitecore Media and other links have the correct scheme.
     .ForwardHeaders()
     // Enable support for the Page Editor.
-    .WithSitecorePages(sitecoreSettings.EdgeContextId ?? string.Empty, options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
+    .WithSitecorePages(sitecoreSettings.EdgeContextId!, options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
 
 // Register MVP Functionality specific services
 builder.Services.AddFeatureSocialServices()
