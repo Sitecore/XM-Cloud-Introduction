@@ -72,9 +72,11 @@ builder.Services.AddSitecoreRenderingEngine(options =>
             .AddFeatureSelections()
             .AddDefaultPartialView("_ComponentNotFound");
     })
+
     // Includes forwarding of Scheme as X-Forwarded-Proto to the Layout Service, so that
     // Sitecore Media and other links have the correct scheme.
     .ForwardHeaders()
+
     // Enable support for the Page Editor.
     .WithSitecorePages(sitecoreSettings.EdgeContextId!, options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
 
