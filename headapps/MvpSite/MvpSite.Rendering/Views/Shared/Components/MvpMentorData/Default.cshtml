@@ -13,18 +13,32 @@
                 <input asp-for="MentorId" type="hidden"/>
                 <div class="form-group">
                     <div class="form-check">
-                        @Html.CheckBoxFor(m => m.IsMentor, new { @class = "align-middle" })
+                        @Html.CheckBoxFor(m => m.IsMentor, new { @class = "align-middle", id = "IsMentor" })
                         <label asp-for="IsMentor" class="w-75 align-middle">
                             @(Model.IsEditing ? Html.Raw(Model.IsMentorLabel?.EditableMarkup) : Model.IsMentorLabel?.Value)
                         </label>
                     </div>
                     <div class="form-check">
-                        @Html.CheckBoxFor(m => m.IsOpenToNewMentees, new { @class = "align-middle" })
+                        @Html.CheckBoxFor(m => m.IsOpenToNewMentees, new { @class = "align-middle", id = "IsOpenToNewMentees" })
                         <label asp-for="IsOpenToNewMentees" class="w-75 align-middle">
                             @(Model.IsEditing ? Html.Raw(Model.IsOpenToNewMenteesLabel?.EditableMarkup) : Model.IsOpenToNewMenteesLabel?.Value)
                         </label>
                     </div>
                 </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const mentorCheckbox = document.getElementById("IsMentor");
+                        const menteeCheckbox = document.getElementById("IsOpenToNewMentees");
+
+                        // Initial state
+                        menteeCheckbox.disabled = !mentorCheckbox.checked;
+
+                        // Update on change
+                        mentorCheckbox.addEventListener("change", function () {
+                            menteeCheckbox.disabled = !this.checked;
+                        });
+                    });
+                </script>
                 <div class="form-group">
                     <label asp-for="MentorDescription">
                         @(Model.IsEditing ? Html.Raw(Model.MentorDescriptionLabel?.EditableMarkup) : Model.MentorDescriptionLabel?.Value)
