@@ -30,7 +30,7 @@ public class MyDataEditViewComponent(IViewModelBinder modelBinder, MvpSelections
                     Country = new Country(model.CountryId),
 
                     // Clear Twitter ImageType if selected, as Twitter API is no longer available
-                    ImageType = model.ImageType.ToString() == "Twitter" ? ImageType.Gravatar : model.ImageType
+                    ImageType = SanitizeImageType(model.ImageType)
                 };
 
                 userResponse = await Client.UpdateCurrentUserAsync(updatedUser);
@@ -48,7 +48,7 @@ public class MyDataEditViewComponent(IViewModelBinder modelBinder, MvpSelections
                 model.CountryId = user.Country?.Id ?? 0;
 
                 // Clear Twitter ImageType if selected, as Twitter API is no longer available
-                model.ImageType = user.ImageType.ToString() == "Twitter" ? ImageType.Gravatar : user.ImageType;
+                model.ImageType = SanitizeImageType(user.ImageType);
                 model.ImageUri = user.ImageUri;
                 ModelState.Clear();
             }
@@ -91,5 +91,11 @@ public class MyDataEditViewComponent(IViewModelBinder modelBinder, MvpSelections
         {
             model.Consents.AddRange(consentResponse.Result);
         }
+    }
+
+    /// Converts Twitter ImageType to Gravatar as Twitter API is no longer available
+    private static ImageType SanitizeImageType(ImageType imageType)
+    {
+        return imageType.ToString() == "Twitter" ? ImageType.Gravatar : imageType;
     }
 }
