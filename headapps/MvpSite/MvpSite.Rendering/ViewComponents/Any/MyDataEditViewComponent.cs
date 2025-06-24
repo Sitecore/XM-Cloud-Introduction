@@ -96,6 +96,6 @@ public class MyDataEditViewComponent(IViewModelBinder modelBinder, MvpSelections
     /// Converts Twitter ImageType to Gravatar as Twitter API is no longer available
     private static ImageType SanitizeImageType(ImageType imageType)
     {
-        return imageType.ToString() == "Twitter" ? ImageType.Gravatar : imageType;
+        return imageType == ImageType.Twitter ? ImageType.Gravatar : imageType;
     }
 }
