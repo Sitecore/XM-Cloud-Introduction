@@ -39,6 +39,28 @@ function directorySearchClearHandler() {
     window.addEventListener('pageshow', clearIfNeeded);
 
 }
+function setupMentorCheckboxBehavior() {
+    const mentorCheckbox = document.getElementById("IsMentor");
+    const menteeCheckbox = document.getElementById("IsOpenToNewMentees");
+
+    if (!mentorCheckbox || !menteeCheckbox) return;
+
+    // Initial state
+    menteeCheckbox.disabled = !mentorCheckbox.checked;
+
+    // Update on change
+    mentorCheckbox.addEventListener("change", function () {
+        menteeCheckbox.disabled = !this.checked;
+        if(!this.checked){
+            menteeCheckbox.checked = false; // Clear mentee checkbox if mentor is unchecked
+        }
+    });
+}
+
+$(document).ready(function () {
+    setupMentorCheckboxBehavior();
+});
+
 
 $(document).ready(function () {
     const $window = $(window);

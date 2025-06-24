@@ -25,20 +25,6 @@
                         </label>
                     </div>
                 </div>
-                <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        const mentorCheckbox = document.getElementById("IsMentor");
-                        const menteeCheckbox = document.getElementById("IsOpenToNewMentees");
-
-                        // Initial state
-                        menteeCheckbox.disabled = !mentorCheckbox.checked;
-
-                        // Update on change
-                        mentorCheckbox.addEventListener("change", function () {
-                            menteeCheckbox.disabled = !this.checked;
-                        });
-                    });
-                </script>
                 <div class="form-group">
                     <label asp-for="MentorDescription">
                         @(Model.IsEditing ? Html.Raw(Model.MentorDescriptionLabel?.EditableMarkup) : Model.MentorDescriptionLabel?.Value)
