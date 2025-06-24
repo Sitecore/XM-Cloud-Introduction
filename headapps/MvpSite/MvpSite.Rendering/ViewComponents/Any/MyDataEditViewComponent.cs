@@ -28,7 +28,9 @@ public class MyDataEditViewComponent(IViewModelBinder modelBinder, MvpSelections
                     Name = model.Name ?? string.Empty,
                     Email = model.Email ?? string.Empty,
                     Country = new Country(model.CountryId),
-                    ImageType = model.ImageType
+
+                    // Clear Twitter ImageType if selected, as Twitter API is no longer available
+                    ImageType = model.ImageType.ToString() == "Twitter" ? ImageType.Gravatar : model.ImageType
                 };
 
                 userResponse = await Client.UpdateCurrentUserAsync(updatedUser);
@@ -44,7 +46,9 @@ public class MyDataEditViewComponent(IViewModelBinder modelBinder, MvpSelections
                 model.Name = user.Name;
                 model.Email = user.Email;
                 model.CountryId = user.Country?.Id ?? 0;
-                model.ImageType = user.ImageType;
+
+                // Clear Twitter ImageType if selected, as Twitter API is no longer available
+                model.ImageType = user.ImageType.ToString() == "Twitter" ? ImageType.Gravatar : user.ImageType;
                 model.ImageUri = user.ImageUri;
                 ModelState.Clear();
             }

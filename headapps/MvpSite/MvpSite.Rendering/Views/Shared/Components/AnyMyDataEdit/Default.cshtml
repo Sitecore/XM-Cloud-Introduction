@@ -47,7 +47,11 @@
                 <select asp-for="ImageType" class="form-control" required>
                     @foreach (ImageType imageType in Enum.GetValues<ImageType>())
                     {
-                        <option value="@imageType">@imageType</option>
+                        @* Exclude Twitter option as Twitter API is no longer available *@
+                        @if (imageType.ToString() != "Twitter")
+                        {
+                            <option value="@imageType">@imageType</option>
+                        }
                     }
                 </select>
                 <span asp-validation-for="ImageType" class="text-danger"></span>
