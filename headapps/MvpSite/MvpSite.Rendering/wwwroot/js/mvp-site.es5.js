@@ -128,5 +128,30 @@ $(document).ready(function () {
             });
         });
     }
+
+    var $mvpmentordata = $(".mvp-fs-mvpmentordata");
+    if ($mvpmentordata.length > 0) {
+        var _ret3 = (function () {
+            var mentorCheckbox = document.getElementById("IsMentor");
+            var menteeCheckbox = document.getElementById("IsOpenToNewMentees");
+
+            if (!mentorCheckbox || !menteeCheckbox) return {
+                    v: undefined
+                };
+
+            // Initial state
+            menteeCheckbox.disabled = !mentorCheckbox.checked;
+
+            // Update on change
+            mentorCheckbox.addEventListener("change", function () {
+                menteeCheckbox.disabled = !this.checked;
+                if (!this.checked) {
+                    menteeCheckbox.checked = false; // Clear mentee checkbox if mentor is unchecked
+                }
+            });
+        })();
+
+        if (typeof _ret3 === "object") return _ret3.v;
+    }
 });
 
