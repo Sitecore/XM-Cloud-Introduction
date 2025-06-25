@@ -24,7 +24,7 @@
                 </div>
                 <div class="results sc-gradient-light-bg extended-background">
                 <div class="row">
-                    <div class="col-sm-12 col-md-3">
+                <div class="col-sm-12 col-md-3">
                     @foreach (FacetViewModel facet in Model.ViewFacets.OrderBy(f => f.SortOrder))
                     {
                         @if (facet.Identifier == DirectoryViewComponent.CountryFacetIdentifier)
