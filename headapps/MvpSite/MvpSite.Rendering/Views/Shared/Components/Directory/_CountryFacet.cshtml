@@ -9,19 +9,34 @@
         <a data-toggle="collapse" href="#@id" role="button" aria-expanded="true" aria-controls="@id">
             <h3 asp-for="Name"> </h3>
             <span class="icon-chevron-down "></span>
-        </a>
+        </a>        
         <div id="@id" class="collapse show">
             <div class="form-group">
-                <select name="@(DirectoryViewComponent.FacetQuerystringPrefix + Model.Identifier)" class="form-control" onchange="this.form.submit()">
-                    <option value="">All Countries</option>
-                    @foreach (FacetOption option in Model.FacetOptions.Where(o => o.Count > 0).OrderBy(o => o.Display))
-                    {
-                        <option value="@option.Identifier" selected="@(option.IsActive ? "selected" : null)">
-                            @option.Display (@option.Count)
-                        </option>
-                    }
-                </select>
-            </div>
+                <div class="searchable-select-wrapper">                    <input type="text" 
+                           id="country-search-@Model.Identifier" 
+                           class="form-control country-search" 
+                           placeholder="Search countries..." 
+                           autocomplete="off">                    <div class="searchable-dropdown" id="country-dropdown-@Model.Identifier">
+                        <div class="dropdown-option @(Model.FacetOptions.All(o => !o.IsActive) ? "selected" : "")" 
+                             data-value="" 
+                             data-display="All Countries">
+                            All Countries
+                        </div>
+                        @foreach (FacetOption option in Model.FacetOptions.Where(o => o.Count > 0).OrderBy(o => o.Display))
+                        {
+                            <div class="dropdown-option @(option.IsActive ? "selected" : "")" 
+                                 data-value="@option.Identifier" 
+                                 data-display="@option.Display (@option.Count)">
+                                @option.Display (@option.Count)
+                            </div>
+                        }
+                    </div>
+                    <input type="hidden" 
+                           name="@(DirectoryViewComponent.FacetQuerystringPrefix + Model.Identifier)" 
+                           id="country-hidden-@Model.Identifier"
+                           value="@(Model.FacetOptions.FirstOrDefault(o => o.IsActive)?.Identifier ?? "")">
+                </div>
+            </div>        
         </div>
     </div>
 }
