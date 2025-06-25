@@ -45,7 +45,8 @@
                 </label>
                 <span class="text-danger">*</span>
                 <select asp-for="ImageType" class="form-control" required>
-                    @foreach (ImageType imageType in Enum.GetValues<ImageType>())
+                    @* Exclude Twitter option as Twitter API is no longer available *@
+                    @foreach (ImageType imageType in Enum.GetValues<ImageType>().Where(x => x != ImageType.Twitter))
                     {
                         <option value="@imageType">@imageType</option>
                     }
