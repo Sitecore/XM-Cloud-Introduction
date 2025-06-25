@@ -1,4 +1,5 @@
 ﻿@using MvpSite.Rendering.Models.Directory
+@using MvpSite.Rendering.ViewComponents
 @model DirectoryViewModel
 
 <section class="mvp-fp-directory bg-white">
@@ -23,10 +24,17 @@
                 </div>
                 <div class="results sc-gradient-light-bg extended-background">
                 <div class="row">
-                <div class="col-sm-12 col-md-3">
+                    <div class="col-sm-12 col-md-3">
                     @foreach (FacetViewModel facet in Model.ViewFacets.OrderBy(f => f.SortOrder))
                     {
-                        <partial name="~/Views/Shared/Components/Directory/_Facet.cshtml" model="facet" />
+                        @if (facet.Identifier == DirectoryViewComponent.CountryFacetIdentifier)
+                        {
+                            <partial name="~/Views/Shared/Components/Directory/_CountryFacet.cshtml" model="facet" />
+                        }
+                        else
+                        {
+                            <partial name="~/Views/Shared/Components/Directory/_Facet.cshtml" model="facet" />
+                        }
                     }
                 </div>
                 <div class="col-sm-12 col-md-9 mb-3 ">

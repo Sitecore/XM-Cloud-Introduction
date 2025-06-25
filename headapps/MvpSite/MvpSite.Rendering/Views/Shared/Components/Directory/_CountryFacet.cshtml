@@ -1,0 +1,27 @@
+@using MvpSite.Rendering.Models.Directory
+@using MvpSite.Rendering.ViewComponents
+@model MvpSite.Rendering.Models.Directory.FacetViewModel
+
+@if (Model.FacetOptions.Count > 0)
+{
+    string id = "fcid_" + Model.Identifier;
+    <div class="mvp-facet mb-4">
+        <a data-toggle="collapse" href="#@id" role="button" aria-expanded="true" aria-controls="@id">
+            <h3 asp-for="Name"> </h3>
+            <span class="icon-chevron-down "></span>
+        </a>
+        <div id="@id" class="collapse show">
+            <div class="form-group">
+                <select name="@(DirectoryViewComponent.FacetQuerystringPrefix + Model.Identifier)" class="form-control" onchange="this.form.submit()">
+                    <option value="">All Countries</option>
+                    @foreach (FacetOption option in Model.FacetOptions.Where(o => o.Count > 0).OrderBy(o => o.Display))
+                    {
+                        <option value="@option.Identifier" selected="@(option.IsActive ? "selected" : null)">
+                            @option.Display (@option.Count)
+                        </option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+}
