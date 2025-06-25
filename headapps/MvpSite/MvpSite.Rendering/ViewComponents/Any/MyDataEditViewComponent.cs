@@ -75,10 +75,10 @@ public class MyDataEditViewComponent(IViewModelBinder modelBinder, MvpSelections
         return result;
     }
 
-    /// Converts Twitter ImageType to Gravatar as Twitter API is no longer available
+    /// Converts Twitter ImageType to Anonymous as Twitter API is no longer available
     private static ImageType SanitizeImageType(ImageType imageType)
     {
-        return imageType == ImageType.Twitter ? ImageType.Gravatar : imageType;
+        return imageType == ImageType.Twitter ? ImageType.Anonymous : imageType;
     }
 
     private async Task LoadCountries(MyDataEditModel model)
