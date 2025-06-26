@@ -40,6 +40,26 @@ function directorySearchClearHandler() {
 
 }
 
+
+function setupMentorCheckboxBehavior() {
+    const mentorCheckbox = document.getElementById("IsMentor");
+    const menteeCheckbox = document.getElementById("IsOpenToNewMentees");
+
+    if (!mentorCheckbox || !menteeCheckbox) {
+        return;
+    }
+
+    menteeCheckbox.disabled = !mentorCheckbox.checked;
+
+    mentorCheckbox.addEventListener("change", function () {
+        menteeCheckbox.disabled = !this.checked;
+        if (!this.checked) {
+            menteeCheckbox.checked = false;
+        }
+    });
+}
+
+
 $(document).ready(function () {
     const $window = $(window);
 
@@ -127,5 +147,10 @@ $(document).ready(function () {
                 $counter.text($textarea.val().length + " / " + maxLength);
             });
         });
+    }
+
+    const $mvpmentordata = $(".mvp-fs-mvpmentordata");
+    if ($mvpmentordata.length > 0) {
+        setupMentorCheckboxBehavior();
     }
 });
