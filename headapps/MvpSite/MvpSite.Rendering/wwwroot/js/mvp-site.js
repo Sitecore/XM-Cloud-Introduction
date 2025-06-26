@@ -40,6 +40,26 @@ function directorySearchClearHandler() {
 
 }
 
+
+function setupMentorCheckboxBehavior() {
+    const mentorCheckbox = document.getElementById("IsMentor");
+    const menteeCheckbox = document.getElementById("IsOpenToNewMentees");
+
+    if (!mentorCheckbox || !menteeCheckbox) {
+        return;
+    }
+
+    menteeCheckbox.disabled = !mentorCheckbox.checked;
+
+    mentorCheckbox.addEventListener("change", function () {
+        menteeCheckbox.disabled = !this.checked;
+        if (!this.checked) {
+            menteeCheckbox.checked = false;
+        }
+    });
+}
+
+
 $(document).ready(function () {
     const $window = $(window);
 
@@ -136,7 +156,13 @@ $(document).ready(function () {
         var identifier = input.id.replace('country-search-', '');
         new CountryFacet(identifier);
     }
+
+    const $mvpmentordata = $(".mvp-fs-mvpmentordata");
+    if ($mvpmentordata.length > 0) {
+        setupMentorCheckboxBehavior();
+    }
 });
+
 
 /**
  * Country Facet Searchable Dropdown Module
