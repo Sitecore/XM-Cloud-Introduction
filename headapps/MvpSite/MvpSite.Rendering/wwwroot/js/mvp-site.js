@@ -128,6 +128,14 @@ $(document).ready(function () {
             });
         });
     }
+
+    // Initialize country facets
+    var countryFacets = document.querySelectorAll('[id^="country-search-"]');
+    for (var i = 0; i < countryFacets.length; i++) {
+        var input = countryFacets[i];
+        var identifier = input.id.replace('country-search-', '');
+        new CountryFacet(identifier);
+    }
 });
 
 /**
@@ -353,13 +361,3 @@ CountryFacet.prototype.bindEvents = function() {
         });
     }
 };
-
-// Initialize country facets when DOM is ready
-$(document).ready(function() {
-    var countryFacets = document.querySelectorAll('[id^="country-search-"]');
-    for (var i = 0; i < countryFacets.length; i++) {
-        var input = countryFacets[i];
-        var identifier = input.id.replace('country-search-', '');
-        new CountryFacet(identifier);
-    }
-});
