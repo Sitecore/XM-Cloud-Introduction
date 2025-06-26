@@ -12,11 +12,13 @@
         </a>        
         <div id="@id" class="collapse show">
             <div class="form-group">
-                <div class="searchable-select-wrapper">                    <input type="text" 
+                <div class="searchable-select-wrapper">                    
+                    <input type="text" 
                            id="country-search-@Model.Identifier" 
                            class="form-control country-search" 
                            placeholder="Search countries..." 
-                           autocomplete="off">                    <div class="searchable-dropdown" id="country-dropdown-@Model.Identifier">
+                           autocomplete="off">                    
+                    <div class="searchable-dropdown" id="country-dropdown-@Model.Identifier">
                         <div class="dropdown-option @(Model.FacetOptions.All(o => !o.IsActive) ? "selected" : "")" 
                              data-value="" 
                              data-display="All Countries">
