@@ -280,10 +280,6 @@ CountryFacet.prototype.createAllCountriesOption = function(selectedValue) {
     div.setAttribute('data-display', 'All Countries');
     div.textContent = 'All Countries';
     
-    var self = this;
-    div.addEventListener('click', function() {
-        self.selectCountry(div);
-    });
     return div;
 };
 
@@ -298,10 +294,6 @@ CountryFacet.prototype.createDropdownOption = function(countryData, selectedValu
         div.classList.add('selected');
     }
     
-    var self = this;
-    div.addEventListener('click', function() {
-        self.selectCountry(div);
-    });
     return div;
 };
 
@@ -381,9 +373,10 @@ CountryFacet.prototype.bindEvents = function() {
         }
     });
     
-    for (var i = 0; i < this.options.length; i++) {
-        this.options[i].addEventListener('click', function() {
-            self.selectCountry(this);
-        });
-    }
+    // Use event delegation to handle all dropdown options (existing and dynamically created)
+    this.dropdown.addEventListener('click', function(e) {
+        if (e.target.classList.contains('dropdown-option')) {
+            self.selectCountry(e.target);
+        }
+    });
 };
