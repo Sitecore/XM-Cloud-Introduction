@@ -179,98 +179,13 @@ function CountryFacet(identifier) {
     }
     
     this.options = this.dropdown.querySelectorAll('.dropdown-option');
-    this.cacheLoaded = false;
-    this.CACHE_KEY = 'mvp_full_countries_list';
-    this.CACHE_PROTECTED_KEY = 'mvp_cache_protected';
-    this.MIN_FULL_LIST_SIZE = 10;
     
     this.init();
 }
 
 CountryFacet.prototype.init = function() {
-    this.setupCache();
-    this.loadCachedCountries();
     this.setInitialValue();
     this.bindEvents();
-};
-
-CountryFacet.prototype.setupCache = function() {
-    if (this.options.length > this.MIN_FULL_LIST_SIZE) {
-        this.clearCache();
-    }
-    this.updateCache();
-};
-
-CountryFacet.prototype.updateCache = function() {
-    var cacheProtected = localStorage.getItem(this.CACHE_PROTECTED_KEY);
-    
-    if (this.options.length > this.MIN_FULL_LIST_SIZE && !this.cacheLoaded && !cacheProtected) {
-        var countriesData = this.extractCountriesData();
-        
-        try {
-            localStorage.setItem(this.CACHE_KEY, JSON.stringify(countriesData));
-            localStorage.setItem(this.CACHE_PROTECTED_KEY, 'true');
-        } catch (error) {
-            console.warn('CountryFacet: Failed to cache countries data', error);
-        }
-    }
-};
-
-CountryFacet.prototype.extractCountriesData = function() {
-    var self = this;
-    return Array.from(this.options)
-        .map(function(option) {
-            var value = option.getAttribute('data-value');
-            var display = option.getAttribute('data-display') || option.textContent.trim();
-            var cleanDisplay = display.replace(/\s*\(\d+\)\s*$/, '');
-            
-            return { value: value, display: cleanDisplay, text: cleanDisplay };
-        })
-        .filter(function(country) { return country.value !== ''; })
-        .filter(function(country, index, self) {
-            return index === self.findIndex(function(c) { return c.value === country.value; });
-        })
-        .sort(function(a, b) { return a.display.localeCompare(b.display); });
-};
-
-CountryFacet.prototype.getCachedCountries = function() {
-    try {
-        var cached = localStorage.getItem(this.CACHE_KEY);
-        return cached ? JSON.parse(cached) : null;
-    } catch (error) {
-        console.warn('CountryFacet: Failed to parse cached countries', error);
-        return null;
-    }
-};
-
-CountryFacet.prototype.clearCache = function() {
-    localStorage.removeItem(this.CACHE_KEY);
-    localStorage.removeItem(this.CACHE_PROTECTED_KEY);
-};
-
-CountryFacet.prototype.loadCachedCountries = function() {
-    var cachedCountries = this.getCachedCountries();
-    
-    if (cachedCountries && this.options.length <= this.MIN_FULL_LIST_SIZE) {
-        this.cacheLoaded = true;
-        this.rebuildDropdown(cachedCountries);
-    }
-};
-
-CountryFacet.prototype.rebuildDropdown = function(countries) {
-    var selectedValue = this.hiddenInput.value;
-    this.dropdown.innerHTML = '';
-    
-    var allCountriesOption = this.createAllCountriesOption(selectedValue);
-    this.dropdown.appendChild(allCountriesOption);
-    
-    var self = this;
-    countries.forEach(function(countryData) {
-        var option = self.createDropdownOption(countryData, selectedValue);
-        self.dropdown.appendChild(option);
-    });
-    
-    this.options = this.dropdown.querySelectorAll('.dropdown-option');
 };
 
 CountryFacet.prototype.createAllCountriesOption = function(selectedValue) {
