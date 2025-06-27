@@ -168,7 +168,6 @@ $(document).ready(function () {
  * Country Facet Searchable Dropdown Module
  */
 function CountryFacet(identifier) {
-    this.identifier = identifier;
     this.searchInput = document.getElementById('country-search-' + identifier);
     this.dropdown = document.getElementById('country-dropdown-' + identifier);
     this.hiddenInput = document.getElementById('country-hidden-' + identifier);
@@ -179,9 +178,7 @@ function CountryFacet(identifier) {
         return;
     }
     
-    this.options = this.dropdown.querySelectorAll('.dropdown-option');
     this.isLocked = false;
-    
     this.init();
 }
 
@@ -190,35 +187,30 @@ CountryFacet.prototype.init = function() {
     this.bindEvents();
 };
 
-CountryFacet.prototype.selectCountry = function(option) {
-    var options = this.dropdown.querySelectorAll('.dropdown-option');
-    for (var i = 0; i < options.length; i++) {
-        options[i].classList.remove('selected');
-    }
-    option.classList.add('selected');
+CountryFacet.prototype.getDisplayValue = function(option) {
+    var value = option.getAttribute('data-value');
+    if (value === '') return '';
     
+    var displayText = option.getAttribute('data-display');
+    var countMatch = option.textContent.trim().match(/\((\d+)\)$/);
+    
+    return countMatch ? displayText + ' (' + countMatch[1] + ')' : displayText;
+};
+
+CountryFacet.prototype.selectCountry = function(option) {
+    // Clear previous selection
+    var selected = this.dropdown.querySelector('.dropdown-option.selected');
+    if (selected) selected.classList.remove('selected');
+    
+    // Set new selection
+    option.classList.add('selected');
     var value = option.getAttribute('data-value');
     this.hiddenInput.value = value;
-    
-    // Set display value with count if available
-    if (value === '') {
-        this.searchInput.value = '';
-    } else {
-        var displayText = option.getAttribute('data-display');
-        var optionText = option.textContent.trim();
-        
-        // Check if the option text contains count in parentheses
-        var countMatch = optionText.match(/\((\d+)\)$/);
-        if (countMatch) {
-            this.searchInput.value = displayText + ' (' + countMatch[1] + ')';
-        } else {
-            this.searchInput.value = displayText;
-        }
-    }
+    this.searchInput.value = this.getDisplayValue(option);
     
     this.hideDropdown();
     
-    // Lock or unlock the input based on selection
+    // Update input state
     if (value !== '') {
         this.lockInput();
     } else {
@@ -252,7 +244,6 @@ CountryFacet.prototype.unlockInput = function() {
 };
 
 CountryFacet.prototype.clearSelection = function() {
-    // Reset to "All Countries" selection
     var allCountriesOption = this.dropdown.querySelector('.dropdown-option[data-value=""]');
     if (allCountriesOption) {
         this.selectCountry(allCountriesOption);
@@ -267,37 +258,19 @@ CountryFacet.prototype.showAllOptions = function() {
 };
 
 CountryFacet.prototype.filterOptions = function(searchTerm) {
-    if (searchTerm === '') {
-        this.showAllOptions();
-        return;
-    }
-    
-    var lowerSearchTerm = searchTerm.toLowerCase();
     var options = this.dropdown.querySelectorAll('.dropdown-option');
+    var lowerSearchTerm = searchTerm.toLowerCase();
+    
     for (var i = 0; i < options.length; i++) {
-        var matches = options[i].textContent.toLowerCase().indexOf(lowerSearchTerm) !== -1;
-        if (matches) {
-            options[i].classList.remove('hidden');
-        } else {
-            options[i].classList.add('hidden');
-        }
+        var matches = searchTerm === '' || options[i].textContent.toLowerCase().indexOf(lowerSearchTerm) !== -1;
+        options[i].classList.toggle('hidden', !matches);
     }
 };
 
 CountryFacet.prototype.setInitialValue = function() {
     var selectedOption = this.dropdown.querySelector('.dropdown-option.selected');
     if (selectedOption && selectedOption.getAttribute('data-value') !== '') {
-        var displayText = selectedOption.getAttribute('data-display');
-        var optionText = selectedOption.textContent.trim();
-        
-        // Check if the option text contains count in parentheses
-        var countMatch = optionText.match(/\((\d+)\)$/);
-        if (countMatch) {
-            this.searchInput.value = displayText + ' (' + countMatch[1] + ')';
-        } else {
-            this.searchInput.value = displayText;
-        }
-        
+        this.searchInput.value = this.getDisplayValue(selectedOption);
         this.lockInput();
     } else {
         this.searchInput.value = '';
@@ -326,12 +299,14 @@ CountryFacet.prototype.bindEvents = function() {
     });
     
     document.addEventListener('click', function(e) {
-        if (!self.searchInput.contains(e.target) && !self.dropdown.contains(e.target) && !self.clearButton.contains(e.target)) {
+        var isClickInside = self.searchInput.contains(e.target) || 
+                           self.dropdown.contains(e.target) || 
+                           self.clearButton.contains(e.target);
+        if (!isClickInside) {
             self.hideDropdown();
         }
     });
     
-    // Use event delegation to handle all dropdown options (existing and dynamically created)
     this.dropdown.addEventListener('click', function(e) {
         if (e.target.classList.contains('dropdown-option')) {
             self.selectCountry(e.target);
