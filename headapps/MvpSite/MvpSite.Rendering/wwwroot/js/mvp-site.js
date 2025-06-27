@@ -306,8 +306,9 @@ CountryFacet.prototype.bindEvents = function() {
     });
     
     this.dropdown.addEventListener('click', function(e) {
-        if (e.target.classList.contains('dropdown-option')) {
-            self.selectCountry(e.target);
+        var option = e.target.closest('.dropdown-option');
+        if (option) {
+            self.selectCountry(option);
         }
     });
 };
