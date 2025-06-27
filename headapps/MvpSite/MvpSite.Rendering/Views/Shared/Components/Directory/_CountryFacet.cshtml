@@ -17,7 +17,13 @@
                            id="country-search-@Model.Identifier" 
                            class="form-control country-search" 
                            placeholder="Search countries..." 
-                           autocomplete="off">                    
+                           autocomplete="off">
+                    <button type="button" 
+                            class="country-clear-btn" 
+                            id="country-clear-@Model.Identifier"
+                            title="Clear selection">
+                        ×
+                    </button>
                     <div class="searchable-dropdown" id="country-dropdown-@Model.Identifier">
                         <div class="dropdown-option @(Model.FacetOptions.All(o => !o.IsActive) ? "selected" : "")" 
                              data-value="" 

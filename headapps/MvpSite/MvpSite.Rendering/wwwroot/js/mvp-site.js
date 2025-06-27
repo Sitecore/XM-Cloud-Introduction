@@ -172,13 +172,15 @@ function CountryFacet(identifier) {
     this.searchInput = document.getElementById('country-search-' + identifier);
     this.dropdown = document.getElementById('country-dropdown-' + identifier);
     this.hiddenInput = document.getElementById('country-hidden-' + identifier);
+    this.clearButton = document.getElementById('country-clear-' + identifier);
     
-    if (!this.searchInput || !this.dropdown || !this.hiddenInput) {
+    if (!this.searchInput || !this.dropdown || !this.hiddenInput || !this.clearButton) {
         console.warn('CountryFacet: Required elements not found for identifier: ' + identifier);
         return;
     }
     
     this.options = this.dropdown.querySelectorAll('.dropdown-option');
+    this.isLocked = false;
     
     this.init();
 }
@@ -221,9 +223,32 @@ CountryFacet.prototype.selectCountry = function(option) {
     
     var value = option.getAttribute('data-value');
     this.hiddenInput.value = value;
-    this.searchInput.value = value === '' ? '' : option.getAttribute('data-display');
+    
+    // Set display value with count if available
+    if (value === '') {
+        this.searchInput.value = '';
+    } else {
+        var displayText = option.getAttribute('data-display');
+        var optionText = option.textContent.trim();
+        
+        // Check if the option text contains count in parentheses
+        var countMatch = optionText.match(/\((\d+)\)$/);
+        if (countMatch) {
+            this.searchInput.value = displayText + ' (' + countMatch[1] + ')';
+        } else {
+            this.searchInput.value = displayText;
+        }
+    }
     
     this.hideDropdown();
+    
+    // Lock or unlock the input based on selection
+    if (value !== '') {
+        this.lockInput();
+    } else {
+        this.unlockInput();
+    }
+    
     this.hiddenInput.form.submit();
 };
 
@@ -234,6 +259,28 @@ CountryFacet.prototype.showDropdown = function() {
 
 CountryFacet.prototype.hideDropdown = function() {
     this.dropdown.style.display = 'none';
+};
+
+CountryFacet.prototype.lockInput = function() {
+    this.isLocked = true;
+    this.searchInput.classList.add('locked');
+    this.searchInput.readOnly = true;
+    this.clearButton.classList.add('visible');
+};
+
+CountryFacet.prototype.unlockInput = function() {
+    this.isLocked = false;
+    this.searchInput.classList.remove('locked');
+    this.searchInput.readOnly = false;
+    this.clearButton.classList.remove('visible');
+};
+
+CountryFacet.prototype.clearSelection = function() {
+    // Reset to "All Countries" selection
+    var allCountriesOption = this.dropdown.querySelector('.dropdown-option[data-value=""]');
+    if (allCountriesOption) {
+        this.selectCountry(allCountriesOption);
+    }
 };
 
 CountryFacet.prototype.showAllOptions = function() {
@@ -264,9 +311,21 @@ CountryFacet.prototype.filterOptions = function(searchTerm) {
 CountryFacet.prototype.setInitialValue = function() {
     var selectedOption = this.dropdown.querySelector('.dropdown-option.selected');
     if (selectedOption && selectedOption.getAttribute('data-value') !== '') {
-        this.searchInput.value = selectedOption.getAttribute('data-display') || '';
+        var displayText = selectedOption.getAttribute('data-display');
+        var optionText = selectedOption.textContent.trim();
+        
+        // Check if the option text contains count in parentheses
+        var countMatch = optionText.match(/\((\d+)\)$/);
+        if (countMatch) {
+            this.searchInput.value = displayText + ' (' + countMatch[1] + ')';
+        } else {
+            this.searchInput.value = displayText;
+        }
+        
+        this.lockInput();
     } else {
         this.searchInput.value = '';
+        this.unlockInput();
     }
 };
 
@@ -274,16 +333,24 @@ CountryFacet.prototype.bindEvents = function() {
     var self = this;
     
     this.searchInput.addEventListener('focus', function() {
-        self.showDropdown();
+        if (!self.isLocked) {
+            self.showDropdown();
+        }
     });
     
     this.searchInput.addEventListener('input', function(e) {
-        self.showDropdown();
-        self.filterOptions(e.target.value);
+        if (!self.isLocked) {
+            self.showDropdown();
+            self.filterOptions(e.target.value);
+        }
+    });
+    
+    this.clearButton.addEventListener('click', function() {
+        self.clearSelection();
     });
     
     document.addEventListener('click', function(e) {
-        if (!self.searchInput.contains(e.target) && !self.dropdown.contains(e.target)) {
+        if (!self.searchInput.contains(e.target) && !self.dropdown.contains(e.target) && !self.clearButton.contains(e.target)) {
             self.hideDropdown();
         }
     });
