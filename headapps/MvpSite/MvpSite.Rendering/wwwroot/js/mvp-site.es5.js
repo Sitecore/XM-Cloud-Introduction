@@ -187,30 +187,6 @@ CountryFacet.prototype.init = function () {
     this.bindEvents();
 };
 
-CountryFacet.prototype.createAllCountriesOption = function (selectedValue) {
-    var div = document.createElement('div');
-    div.className = 'dropdown-option' + (selectedValue === '' ? ' selected' : '');
-    div.setAttribute('data-value', '');
-    div.setAttribute('data-display', 'All Countries');
-    div.textContent = 'All Countries';
-
-    return div;
-};
-
-CountryFacet.prototype.createDropdownOption = function (countryData, selectedValue) {
-    var div = document.createElement('div');
-    div.className = 'dropdown-option';
-    div.setAttribute('data-value', countryData.value);
-    div.setAttribute('data-display', countryData.display);
-    div.textContent = countryData.text;
-
-    if (countryData.value === selectedValue) {
-        div.classList.add('selected');
-    }
-
-    return div;
-};
-
 CountryFacet.prototype.selectCountry = function (option) {
     var options = this.dropdown.querySelectorAll('.dropdown-option');
     for (var i = 0; i < options.length; i++) {

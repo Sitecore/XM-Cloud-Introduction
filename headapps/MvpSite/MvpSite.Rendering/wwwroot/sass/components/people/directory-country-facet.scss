@@ -79,11 +79,6 @@
             background-color: var(--sc-neutral-200, #f1f0f3);
         }
 
-        &.selected {
-            background-color: var(--sc-red-500, #ff1f38);
-            color: $contrast-text;
-        }
-
         &.hidden {
             display: none;
         }
