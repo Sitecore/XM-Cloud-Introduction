@@ -176,6 +176,7 @@ function CountryFacet(identifier) {
     }
 
     this.isLocked = false;
+    this.identifier = identifier;
     this.init();
 }
 
@@ -195,25 +196,20 @@ CountryFacet.prototype.getDisplayValue = function (option) {
 };
 
 CountryFacet.prototype.selectCountry = function (option) {
-    // Clear previous selection
     var selected = this.dropdown.querySelector('.dropdown-option.selected');
     if (selected) selected.classList.remove('selected');
-
-    // Set new selection
     option.classList.add('selected');
     var value = option.getAttribute('data-value');
     this.hiddenInput.value = value;
-    this.searchInput.value = this.getDisplayValue(option);
-
-    this.hideDropdown();
-
-    // Update input state
+    var label = option.querySelector('.country-label') ? option.querySelector('.country-label').textContent : option.getAttribute('data-display');
+    var count = option.querySelector('.facet-count') ? option.querySelector('.facet-count').textContent : '';
     if (value !== '') {
+        this.showSelectedDisplay(label, count);
         this.lockInput();
     } else {
+        this.hideSelectedDisplay();
         this.unlockInput();
     }
-
     this.hiddenInput.form.submit();
 };
 
@@ -267,10 +263,12 @@ CountryFacet.prototype.filterOptions = function (searchTerm) {
 CountryFacet.prototype.setInitialValue = function () {
     var selectedOption = this.dropdown.querySelector('.dropdown-option.selected');
     if (selectedOption && selectedOption.getAttribute('data-value') !== '') {
-        this.searchInput.value = this.getDisplayValue(selectedOption);
+        var label = selectedOption.querySelector('.country-label') ? selectedOption.querySelector('.country-label').textContent : selectedOption.getAttribute('data-display');
+        var count = selectedOption.querySelector('.facet-count') ? selectedOption.querySelector('.facet-count').textContent : '';
+        this.showSelectedDisplay(label, count);
         this.lockInput();
     } else {
-        this.searchInput.value = '';
+        this.hideSelectedDisplay();
         this.unlockInput();
     }
 };
@@ -307,5 +305,31 @@ CountryFacet.prototype.bindEvents = function () {
             self.selectCountry(e.target);
         }
     });
+};
+
+CountryFacet.prototype.showSelectedDisplay = function (label, count) {
+    this.searchInput.style.display = 'none';
+    this.dropdown.style.display = 'none';
+    var selectedDisplay = document.getElementById('country-selected-' + this.identifier);
+    if (selectedDisplay) {
+        selectedDisplay.style.display = 'flex';
+        selectedDisplay.querySelector('.country-selected-label').textContent = label;
+        var countSpan = selectedDisplay.querySelector('.facet-count');
+        if (count) {
+            countSpan.textContent = count;
+            countSpan.style.display = 'inline-block';
+        } else {
+            countSpan.textContent = '';
+            countSpan.style.display = 'none';
+        }
+    }
+};
+
+CountryFacet.prototype.hideSelectedDisplay = function () {
+    var selectedDisplay = document.getElementById('country-selected-' + this.identifier);
+    if (selectedDisplay) {
+        selectedDisplay.style.display = 'none';
+    }
+    this.searchInput.style.display = '';
 };
 

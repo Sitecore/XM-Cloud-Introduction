@@ -13,17 +13,21 @@
         <div id="@id" class="collapse show">
             <div class="form-group">
                 <div class="searchable-select-wrapper">                    
+                    <div class="country-selected-display" id="country-selected-@Model.Identifier" style="display:none">
+                        <span class="country-selected-label"></span>
+                        <span class="facet-count"></span>
+                        <button type="button" 
+                                class="country-clear-btn" 
+                                id="country-clear-@Model.Identifier"
+                                title="Clear selection">
+                            ×
+                        </button>
+                    </div>
                     <input type="text" 
                            id="country-search-@Model.Identifier" 
                            class="form-control country-search" 
                            placeholder="Search countries..." 
-                           autocomplete="off">
-                    <button type="button" 
-                            class="country-clear-btn" 
-                            id="country-clear-@Model.Identifier"
-                            title="Clear selection">
-                        ×
-                    </button>
+                           autocomplete="off" />
                     <div class="searchable-dropdown" id="country-dropdown-@Model.Identifier">
                         <div class="dropdown-option @(Model.FacetOptions.All(o => !o.IsActive) ? "selected" : "")" 
                              data-value="" 
@@ -35,14 +39,15 @@
                             <div class="dropdown-option @(option.IsActive ? "selected" : "")" 
                                  data-value="@option.Identifier" 
                                  data-display="@option.Display">
-                                @option.Display (@option.Count)
+                                <span class="country-label">@option.Display</span>
+                                <span class="facet-count">@option.Count</span>
                             </div>
                         }
                     </div>
                     <input type="hidden" 
                            name="@(DirectoryViewComponent.FacetQuerystringPrefix + Model.Identifier)" 
                            id="country-hidden-@Model.Identifier"
-                           value="@(Model.FacetOptions.FirstOrDefault(o => o.IsActive)?.Identifier ?? "")">
+                           value="@(Model.FacetOptions.FirstOrDefault(o => o.IsActive)?.Identifier ?? "")" />
                 </div>
             </div>        
         </div>

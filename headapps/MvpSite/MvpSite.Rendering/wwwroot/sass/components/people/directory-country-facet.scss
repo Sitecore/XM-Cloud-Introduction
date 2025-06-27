@@ -4,6 +4,37 @@
 .mvp-fp-directory {
     .searchable-select-wrapper {
         position: relative;
+        
+        .country-selected-display {
+            display: flex;
+            align-items: center;
+            min-height: 48px;
+            padding: 0.75rem 1rem;
+            background: #fff;
+            border: 1px solid var(--sc-neutral-400, #d6d3da);
+            border-radius: 4px;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            box-sizing: border-box;
+
+            .country-selected-label {
+                flex: 1 1 auto;
+                font-weight: 500;
+            }
+
+            .facet-count {
+                margin-left: auto;
+            }
+
+            .country-clear-btn {
+                margin-left: 0.5em;
+                position: static;
+                top: auto;
+                right: auto;
+                transform: none;
+                display: flex;
+            }
+        }
 
         .country-search {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
@@ -66,6 +97,9 @@
     }
 
     .dropdown-option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 8px 12px;
         cursor: pointer;
         border-bottom: 1px solid var(--sc-neutral-300, #e4e2e8);
@@ -82,5 +116,18 @@
         &.hidden {
             display: none;
         }
+    }
+
+    .facet-count {
+        display: inline-block;
+        min-width: 1.5em;
+        padding: 0 0.5em;
+        margin-left: 0.5em;
+        font-size: 0.85em;
+        background: #6c757d;
+        color: #fff;
+        border-radius: 1em;
+        text-align: center;
+        font-weight: 600;
     }
 }
