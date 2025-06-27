@@ -33,6 +33,21 @@
                 right: auto;
                 transform: none;
                 display: flex;
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: var(--sc-red-500, #ff1f38);
+                font-size: 1.25em;
+                font-weight: 700;
+                border-radius: 50%;
+                transition: background-color 0.2s, color 0.2s;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    background-color: var(--sc-red-100, #ffe5e9);
+                    color: var(--sc-red-700, #b91c1c);
+                }
             }
         }
 
@@ -61,6 +76,7 @@
             cursor: pointer;
             color: var(--sc-neutral-600, #6b7280);
             font-size: 18px;
+            font-weight: 700;
             width: 24px;
             height: 24px;
             display: none;
