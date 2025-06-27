@@ -205,7 +205,7 @@ CountryFacet.prototype.selectCountry = function(option) {
     var value = option.getAttribute('data-value');
     this.hiddenInput.value = value;
     var label = option.querySelector('.country-label') ? option.querySelector('.country-label').textContent : option.getAttribute('data-display');
-    var count = option.querySelector('.facet-count') ? option.querySelector('.facet-count').textContent : '';
+    var count = option.querySelector('.badge') ? option.querySelector('.badge').textContent : '';
     if (value !== '') {
         this.showSelectedDisplay(label, count);
         this.lockInput();
@@ -267,7 +267,7 @@ CountryFacet.prototype.setInitialValue = function() {
     var selectedOption = this.dropdown.querySelector('.dropdown-option.selected');
     if (selectedOption && selectedOption.getAttribute('data-value') !== '') {
         var label = selectedOption.querySelector('.country-label') ? selectedOption.querySelector('.country-label').textContent : selectedOption.getAttribute('data-display');
-        var count = selectedOption.querySelector('.facet-count') ? selectedOption.querySelector('.facet-count').textContent : '';
+        var count = selectedOption.querySelector('.badge') ? selectedOption.querySelector('.badge').textContent : '';
         this.showSelectedDisplay(label, count);
         this.lockInput();
     } else {
@@ -319,7 +319,7 @@ CountryFacet.prototype.showSelectedDisplay = function(label, count) {
     if (selectedDisplay) {
         selectedDisplay.style.display = 'flex';
         selectedDisplay.querySelector('.country-selected-label').textContent = label;
-        var countSpan = selectedDisplay.querySelector('.facet-count');
+        var countSpan = selectedDisplay.querySelector('.badge');
         if (count) {
             countSpan.textContent = count;
             countSpan.style.display = 'inline-block';

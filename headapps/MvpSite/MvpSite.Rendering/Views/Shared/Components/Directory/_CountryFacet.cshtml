@@ -15,7 +15,7 @@
                 <div class="searchable-select-wrapper">                    
                     <div class="country-selected-display" id="country-selected-@Model.Identifier" style="display:none">
                         <span class="country-selected-label"></span>
-                        <span class="facet-count"></span>
+                        <span class="badge badge-secondary badge-pill"></span>
                         <button type="button" 
                                 class="country-clear-btn" 
                                 id="country-clear-@Model.Identifier"
@@ -40,7 +40,7 @@
                                  data-value="@option.Identifier" 
                                  data-display="@option.Display">
                                 <span class="country-label">@option.Display</span>
-                                <span class="facet-count">@option.Count</span>
+                                <span class="badge badge-secondary badge-pill">@option.Count</span>
                             </div>
                         }
                     </div>
