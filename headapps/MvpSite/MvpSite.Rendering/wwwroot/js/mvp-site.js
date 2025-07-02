@@ -149,6 +149,8 @@ $(document).ready(function () {
         });
     }
 
+<<<<<<< HEAD
+=======
     // Initialize country facets
     var countryFacets = document.querySelectorAll('[id^="country-search-"]');
     for (var i = 0; i < countryFacets.length; i++) {
@@ -157,10 +159,14 @@ $(document).ready(function () {
         new CountryFacet(identifier);
     }
 
+>>>>>>> upstream/main
     const $mvpmentordata = $(".mvp-fs-mvpmentordata");
     if ($mvpmentordata.length > 0) {
         setupMentorCheckboxBehavior();
     }
+<<<<<<< HEAD
+});
+=======
 });
 
 
@@ -338,3 +344,4 @@ CountryFacet.prototype.hideSelectedDisplay = function() {
     }
     this.searchInput.style.display = '';
 };
+>>>>>>> upstream/main
