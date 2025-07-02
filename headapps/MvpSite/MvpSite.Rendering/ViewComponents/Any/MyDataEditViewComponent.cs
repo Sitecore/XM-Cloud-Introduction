@@ -28,7 +28,9 @@ public class MyDataEditViewComponent(IViewModelBinder modelBinder, MvpSelections
                     Name = model.Name ?? string.Empty,
                     Email = model.Email ?? string.Empty,
                     Country = new Country(model.CountryId),
-                    ImageType = model.ImageType
+
+                    // Clear Twitter ImageType if selected, as Twitter API is no longer available
+                    ImageType = SanitizeImageType(model.ImageType)
                 };
 
                 userResponse = await Client.UpdateCurrentUserAsync(updatedUser);
@@ -44,7 +46,9 @@ public class MyDataEditViewComponent(IViewModelBinder modelBinder, MvpSelections
                 model.Name = user.Name;
                 model.Email = user.Email;
                 model.CountryId = user.Country?.Id ?? 0;
-                model.ImageType = user.ImageType;
+
+                // Clear Twitter ImageType if selected, as Twitter API is no longer available
+                model.ImageType = SanitizeImageType(user.ImageType);
                 model.ImageUri = user.ImageUri;
                 ModelState.Clear();
             }
@@ -69,6 +73,12 @@ public class MyDataEditViewComponent(IViewModelBinder modelBinder, MvpSelections
         }
 
         return result;
+    }
+
+    /// Converts Twitter ImageType to Anonymous as Twitter API is no longer available
+    private static ImageType SanitizeImageType(ImageType imageType)
+    {
+        return imageType == ImageType.Twitter ? ImageType.Anonymous : imageType;
     }
 
     private async Task LoadCountries(MyDataEditModel model)

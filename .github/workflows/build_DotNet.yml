@@ -19,7 +19,7 @@ jobs:
     - name: Setup MSBuild path
       uses: microsoft/setup-msbuild@v1.1
       with:
-          dotnet-version: 8.0.0
+          dotnet-version: 8.0.x
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.6
     - name: Restore NuGet packages

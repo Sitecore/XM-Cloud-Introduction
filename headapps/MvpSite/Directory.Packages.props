@@ -5,12 +5,14 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <CentralPackageFloatingVersionsEnabled>true</CentralPackageFloatingVersionsEnabled>
     <PlatformVersion>1.*</PlatformVersion>
-    <AspNetCoreSdkVersion>0.0.11</AspNetCoreSdkVersion>
+    <AspNetCoreSdkVersion>0.0.15</AspNetCoreSdkVersion>
   </PropertyGroup>
   <ItemGroup Label="Rendering Host Package References">
+    <PackageVersion Include="Sitecore.AspNetCore.SDK.GraphQL" Version="$(AspNetCoreSdkVersion)" />
     <PackageVersion Include="Sitecore.AspNetCore.SDK.LayoutService.Client" Version="$(AspNetCoreSdkVersion)" />
+    <PackageVersion Include="Sitecore.AspNetCore.SDK.Pages" Version="$(AspNetCoreSdkVersion)" />
     <PackageVersion Include="Sitecore.AspNetCore.SDK.RenderingEngine" Version="$(AspNetCoreSdkVersion)" />
-    <PackageVersion Include="Sitecore.AspNetCore.SDK.ExperienceEditor" Version="$(AspNetCoreSdkVersion)" />
+    
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.0" />
     <PackageVersion Include="System.ServiceModel.Syndication" Version="8.0.0" />
