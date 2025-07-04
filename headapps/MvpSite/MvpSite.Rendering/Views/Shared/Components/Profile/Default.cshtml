@@ -44,11 +44,14 @@
                 <partial name="Components/Profile/_Mentor" model="Model" />
             </div>
         }
-        <div class="container timeline ">
-            <div class="row inner mb-5">
-            <h3 asp-for="TimelineLabel" class="col-12"></h3>
-            <partial name="Components/Profile/_Timeline" model="Model.GetTimelineEvents()" />
-        </div>
-        </div>
+        @if ((Model.GetTimelineEvents()?.Any() ?? false))
+        {
+            <div class="container timeline ">
+                <div class="row inner mb-5">
+                    <h3 asp-for="TimelineLabel" class="col-12"></h3>
+                    <partial name="Components/Profile/_Timeline" model="Model.GetTimelineEvents()" />
+                </div>
+            </div>
+        }
     </section>
 }
