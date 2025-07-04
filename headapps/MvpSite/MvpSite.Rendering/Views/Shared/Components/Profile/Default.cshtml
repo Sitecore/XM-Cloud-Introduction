@@ -44,7 +44,7 @@
                 <partial name="Components/Profile/_Mentor" model="Model" />
             </div>
         }
-        @if (Model.GetTimelineEvents()?.Any() == true)
+        @if ((Model.GetTimelineEvents()?.Any() ?? false))
         {
             <div class="container timeline ">
                 <div class="row inner mb-5">
