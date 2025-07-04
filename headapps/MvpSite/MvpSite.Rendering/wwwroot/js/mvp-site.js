@@ -149,8 +149,192 @@ $(document).ready(function () {
         });
     }
 
+    // Initialize country facets
+    var countryFacets = document.querySelectorAll('[id^="country-search-"]');
+    for (var i = 0; i < countryFacets.length; i++) {
+        var input = countryFacets[i];
+        var identifier = input.id.replace('country-search-', '');
+        new CountryFacet(identifier);
+    }
+
     const $mvpmentordata = $(".mvp-fs-mvpmentordata");
     if ($mvpmentordata.length > 0) {
         setupMentorCheckboxBehavior();
     }
 });
+
+
+/**
+ * Country Facet Searchable Dropdown Module
+ */
+function CountryFacet(identifier) {
+    this.searchInput = document.getElementById('country-search-' + identifier);
+    this.dropdown = document.getElementById('country-dropdown-' + identifier);
+    this.hiddenInput = document.getElementById('country-hidden-' + identifier);
+    this.clearButton = document.getElementById('country-clear-' + identifier);
+    
+    if (!this.searchInput || !this.dropdown || !this.hiddenInput || !this.clearButton) {
+        console.warn('CountryFacet: Required elements not found for identifier: ' + identifier);
+        return;
+    }
+    
+    this.isLocked = false;
+    this.identifier = identifier;
+    this.init();
+}
+
+CountryFacet.prototype.init = function() {
+    this.setInitialValue();
+    this.bindEvents();
+};
+
+CountryFacet.prototype.getDisplayValue = function(option) {
+    var value = option.getAttribute('data-value');
+    if (value === '') return '';
+    
+    var displayText = option.getAttribute('data-display');
+    var countMatch = option.textContent.trim().match(/\((\d+)\)$/);
+    
+    return countMatch ? displayText + ' (' + countMatch[1] + ')' : displayText;
+};
+
+CountryFacet.prototype.selectCountry = function(option) {
+    var selected = this.dropdown.querySelector('.dropdown-option.selected');
+    if (selected) selected.classList.remove('selected');
+    option.classList.add('selected');
+    var value = option.getAttribute('data-value');
+    this.hiddenInput.value = value;
+    var label = option.querySelector('.country-label') ? option.querySelector('.country-label').textContent : option.getAttribute('data-display');
+    var count = option.querySelector('.badge') ? option.querySelector('.badge').textContent : '';
+    if (value !== '') {
+        this.showSelectedDisplay(label, count);
+        this.lockInput();
+    } else {
+        this.hideSelectedDisplay();
+        this.unlockInput();
+    }
+    this.hiddenInput.form.submit();
+};
+
+CountryFacet.prototype.showDropdown = function() {
+    this.dropdown.style.display = 'block';
+    this.showAllOptions();
+};
+
+CountryFacet.prototype.hideDropdown = function() {
+    this.dropdown.style.display = 'none';
+};
+
+CountryFacet.prototype.lockInput = function() {
+    this.isLocked = true;
+    this.searchInput.classList.add('locked');
+    this.searchInput.readOnly = true;
+    this.clearButton.classList.add('visible');
+};
+
+CountryFacet.prototype.unlockInput = function() {
+    this.isLocked = false;
+    this.searchInput.classList.remove('locked');
+    this.searchInput.readOnly = false;
+    this.clearButton.classList.remove('visible');
+};
+
+CountryFacet.prototype.clearSelection = function() {
+    var allCountriesOption = this.dropdown.querySelector('.dropdown-option[data-value=""]');
+    if (allCountriesOption) {
+        this.selectCountry(allCountriesOption);
+    }
+};
+
+CountryFacet.prototype.showAllOptions = function() {
+    var options = this.dropdown.querySelectorAll('.dropdown-option');
+    for (var i = 0; i < options.length; i++) {
+        options[i].classList.remove('hidden');
+    }
+};
+
+CountryFacet.prototype.filterOptions = function(searchTerm) {
+    var options = this.dropdown.querySelectorAll('.dropdown-option');
+    var lowerSearchTerm = searchTerm.toLowerCase();
+    
+    for (var i = 0; i < options.length; i++) {
+        var matches = searchTerm === '' || options[i].textContent.toLowerCase().indexOf(lowerSearchTerm) !== -1;
+        options[i].classList.toggle('hidden', !matches);
+    }
+};
+
+CountryFacet.prototype.setInitialValue = function() {
+    var selectedOption = this.dropdown.querySelector('.dropdown-option.selected');
+    if (selectedOption && selectedOption.getAttribute('data-value') !== '') {
+        var label = selectedOption.querySelector('.country-label') ? selectedOption.querySelector('.country-label').textContent : selectedOption.getAttribute('data-display');
+        var count = selectedOption.querySelector('.badge') ? selectedOption.querySelector('.badge').textContent : '';
+        this.showSelectedDisplay(label, count);
+        this.lockInput();
+    } else {
+        this.hideSelectedDisplay();
+        this.unlockInput();
+    }
+};
+
+CountryFacet.prototype.bindEvents = function() {
+    var self = this;
+    
+    this.searchInput.addEventListener('focus', function() {
+        if (!self.isLocked) {
+            self.showDropdown();
+        }
+    });
+    
+    this.searchInput.addEventListener('input', function(e) {
+        if (!self.isLocked) {
+            self.showDropdown();
+            self.filterOptions(e.target.value);
+        }
+    });
+    
+    this.clearButton.addEventListener('click', function() {
+        self.clearSelection();
+    });
+    
+    document.addEventListener('click', function(e) {
+        var isClickInside = self.searchInput.contains(e.target) || 
+                           self.dropdown.contains(e.target) || 
+                           self.clearButton.contains(e.target);
+        if (!isClickInside) {
+            self.hideDropdown();
+        }
+    });
+    
+    this.dropdown.addEventListener('click', function(e) {
+        var option = e.target.closest('.dropdown-option');
+        if (option) {
+            self.selectCountry(option);
+        }
+    });
+};
+
+CountryFacet.prototype.showSelectedDisplay = function(label, count) {
+    this.searchInput.style.display = 'none';
+    this.dropdown.style.display = 'none';
+    var selectedDisplay = document.getElementById('country-selected-' + this.identifier);
+    if (selectedDisplay) {
+        selectedDisplay.style.display = 'flex';
+        selectedDisplay.querySelector('.country-selected-label').textContent = label;
+        var countSpan = selectedDisplay.querySelector('.badge');
+        if (count) {
+            countSpan.textContent = count;
+            countSpan.style.display = 'inline-block';
+        } else {
+            countSpan.textContent = '';
+            countSpan.style.display = 'none';
+        }
+    }
+};
+
+CountryFacet.prototype.hideSelectedDisplay = function() {
+    var selectedDisplay = document.getElementById('country-selected-' + this.identifier);
+    if (selectedDisplay) {
+        selectedDisplay.style.display = 'none';
+    }
+    this.searchInput.style.display = '';
+};
