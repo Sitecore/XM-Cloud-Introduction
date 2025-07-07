@@ -52,7 +52,7 @@ public class DirectoryViewModel
     public int EndPage => StartPage + 4 > TotalPages ? TotalPages : StartPage + 4;
 
     // ReSharper disable once ArrangeRedundantParentheses - SA1407
-    public int TotalPages => (TotalResults / PageSize) + 1;
+    public int TotalPages => (int)Math.Ceiling((double)TotalResults / PageSize);
 
     public Uri PageUri(int page)
     {
