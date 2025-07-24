@@ -17,6 +17,7 @@ import { Default as Footer } from 'template/Footer';
 import Scripts from 'src/Scripts';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from './Theme';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 interface LayoutProps {
   layoutData: LayoutServiceData;
@@ -76,6 +77,10 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
           <link rel={headLink.rel} key={headLink.href} href={headLink.href} />
         ))}
       </Head>
+
+      
+
+      {process.env.NEXT_PUBLIC_GTAG && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GTAG} />}
 
       <ChakraProvider theme={theme}>
         {/* root placeholder for the app, which we add components to using route data */}
