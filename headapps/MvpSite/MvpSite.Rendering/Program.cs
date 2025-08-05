@@ -1,14 +1,15 @@
-using System.Globalization;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Rewrite;
 using MvpSite.Rendering.AppSettings;
 using MvpSite.Rendering.Extensions;
+using Sitecore.AspNetCore.SDK.ExperienceEditor.Extensions;
 using Sitecore.AspNetCore.SDK.GraphQL.Extensions;
 using Sitecore.AspNetCore.SDK.LayoutService.Client.Extensions;
 using Sitecore.AspNetCore.SDK.Pages.Configuration;
 using Sitecore.AspNetCore.SDK.Pages.Extensions;
 using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
+using System.Globalization;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -78,7 +79,9 @@ builder.Services.AddSitecoreRenderingEngine(options =>
     .ForwardHeaders()
 
     // Enable support for the Page Editor.
-    .WithSitecorePages(sitecoreSettings.EdgeContextId!, options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
+    .WithSitecorePages(sitecoreSettings.EdgeContextId!, options => { options.EditingSecret = sitecoreSettings.EditingSecret; })
+
+    .WithExperienceEditor(options => { options.JssEditingSecret = sitecoreSettings.EditingSecret; });
 
 // Register MVP Functionality specific services
 builder.Services.AddFeatureSocialServices()
@@ -89,6 +92,13 @@ builder.Services.AddSession();
 
 // The following line enables Application Insights telemetry collection.
 builder.Services.AddApplicationInsightsTelemetry();
+
+// See the SDK documentation for details.
+if (sitecoreSettings.EnableEditingMode)
+{
+    // When in edit mode, we need to suppress the X-Frame header to allow pages to function correctly.
+    builder.Services.AddAntiforgery(o => o.SuppressXFrameOptionsHeader = true);
+}
 
 WebApplication app = builder.Build();
 
@@ -134,6 +144,7 @@ if (sitecoreSettings.EnableEditingMode)
 {
     // Enable the Sitecore Page Editor, which allows editing of the content in the browser.
     app.UseSitecorePages(pagesSettings);
+    app.UseSitecoreExperienceEditor();
 }
 
 // Standard ASP.NET Core routing and static file support.
