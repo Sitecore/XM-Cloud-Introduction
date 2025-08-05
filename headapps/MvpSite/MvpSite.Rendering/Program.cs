@@ -1,15 +1,14 @@
+using System.Globalization;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Rewrite;
 using MvpSite.Rendering.AppSettings;
 using MvpSite.Rendering.Extensions;
-using Sitecore.AspNetCore.SDK.ExperienceEditor.Extensions;
 using Sitecore.AspNetCore.SDK.GraphQL.Extensions;
 using Sitecore.AspNetCore.SDK.LayoutService.Client.Extensions;
 using Sitecore.AspNetCore.SDK.Pages.Configuration;
 using Sitecore.AspNetCore.SDK.Pages.Extensions;
 using Sitecore.AspNetCore.SDK.RenderingEngine.Extensions;
-using System.Globalization;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -79,9 +78,7 @@ builder.Services.AddSitecoreRenderingEngine(options =>
     .ForwardHeaders()
 
     // Enable support for the Page Editor.
-    .WithSitecorePages(sitecoreSettings.EdgeContextId!, options => { options.EditingSecret = sitecoreSettings.EditingSecret; })
-
-    .WithExperienceEditor(options => { options.JssEditingSecret = sitecoreSettings.EditingSecret; });
+    .WithSitecorePages(sitecoreSettings.EdgeContextId!, options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
 
 // Register MVP Functionality specific services
 builder.Services.AddFeatureSocialServices()
@@ -137,7 +134,6 @@ if (sitecoreSettings.EnableEditingMode)
 {
     // Enable the Sitecore Page Editor, which allows editing of the content in the browser.
     app.UseSitecorePages(pagesSettings);
-    app.UseSitecoreExperienceEditor();
 }
 
 // Standard ASP.NET Core routing and static file support.
