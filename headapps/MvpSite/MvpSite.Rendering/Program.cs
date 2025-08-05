@@ -87,6 +87,12 @@ builder.Services.AddFeatureSocialServices()
 
 builder.Services.AddSession();
 
+// If we're in edit mode we need to disable X-Frame to let pages render forms outside `sameorigin` policy.
+if (sitecoreSettings.EnableEditingMode)
+{
+    builder.Services.AddAntiforgery(o => o.SuppressXFrameOptionsHeader = true);
+}
+
 // The following line enables Application Insights telemetry collection.
 builder.Services.AddApplicationInsightsTelemetry();
 
