@@ -44,7 +44,7 @@ jobs:
       assetName: Mvp-Staging
       webAppName: Mvp-Staging-Editing
     secrets:
-      publishingProfile: ${{ secrets.STAGING_MVP_WEBAPP_PUBLISHING_PROFILE }}
+      publishingProfile: ${{ secrets.STAGING_EDITING_MVP_WEBAPP_PUBLISHING_PROFILE }}
       
   deploy-mvp-prod:
     if: github.ref == 'refs/heads/main'
