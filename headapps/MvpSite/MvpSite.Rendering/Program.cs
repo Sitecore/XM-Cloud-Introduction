@@ -93,13 +93,6 @@ builder.Services.AddSession();
 // The following line enables Application Insights telemetry collection.
 builder.Services.AddApplicationInsightsTelemetry();
 
-// See the SDK documentation for details.
-if (sitecoreSettings.EnableEditingMode)
-{
-    // When in edit mode, we need to suppress the X-Frame header to allow pages to function correctly.
-    builder.Services.AddAntiforgery(o => o.SuppressXFrameOptionsHeader = true);
-}
-
 WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline
