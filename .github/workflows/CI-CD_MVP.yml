@@ -34,6 +34,17 @@ jobs:
       webAppName: Mvp-Staging
     secrets:
       publishingProfile: ${{ secrets.STAGING_MVP_WEBAPP_PUBLISHING_PROFILE }}
+
+  deploy-mvp-staging-editing:
+    uses: ./.github/workflows/deploy_azureWebapp.yml
+    needs: build-dotnet
+    with:
+      buildConfiguration: Debug
+      projectLocation: headapps/MvpSite/MvpSite.Rendering
+      assetName: Mvp-Staging
+      webAppName: Mvp-Staging-Editing
+    secrets:
+      publishingProfile: ${{ secrets.STAGING_MVP_WEBAPP_PUBLISHING_PROFILE }}
       
   deploy-mvp-prod:
     if: github.ref == 'refs/heads/main'
