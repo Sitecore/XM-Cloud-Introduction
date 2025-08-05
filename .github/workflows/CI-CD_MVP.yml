@@ -48,7 +48,7 @@ jobs:
       
   deploy-mvp-prod:
     if: github.ref == 'refs/heads/main'
-    needs: deploy-mvp-staging 
+    needs: [deploy-mvp-staging, deploy-mvp-staging-editing] 
     uses: ./.github/workflows/deploy_azureWebapp.yml
     with:
       buildConfiguration: Release
@@ -57,3 +57,15 @@ jobs:
       webAppName: Mvp-Production
     secrets:
       publishingProfile: ${{ secrets.PROD_MVP_WEBAPP_PUBLISHING_PROFILE }}
+
+  deploy-mvp-prod-editing:
+    if: github.ref == 'refs/heads/main'
+    needs: [deploy-mvp-staging, deploy-mvp-staging-editing]
+    uses: ./.github/workflows/deploy_azureWebapp.yml
+    with:
+      buildConfiguration: Release
+      projectLocation: headapps/MvpSite/MvpSite.Rendering
+      assetName: Mvp-prod
+      webAppName: Mvp-Production-Editing
+    secrets:
+      publishingProfile: ${{ secrets.PROD_EDITING_MVP_WEBAPP_PUBLISHING_PROFILE }}
