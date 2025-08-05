@@ -78,7 +78,14 @@ builder.Services.AddSitecoreRenderingEngine(options =>
     .ForwardHeaders()
 
     // Enable support for the Page Editor.
-    .WithSitecorePages(sitecoreSettings.EdgeContextId!, options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
+    .WithSitecorePages(sitecoreSettings.EdgeContextId!, Options);
+
+void Options(PagesOptions obj)
+{
+    throw new NotImplementedException();
+}
+
+options => { options.EditingSecret = sitecoreSettings.EditingSecret; });
 
 // Register MVP Functionality specific services
 builder.Services.AddFeatureSocialServices()
