@@ -432,6 +432,14 @@ public class ApplicationFormViewComponent(
             && model.ContributionDate.Value >= model.CurrentSelection?.ApplicationsEnd.AddMonths(-_options.TimeFrameMonths)
             && model.ContributionDate.Value <= model.CurrentSelection.ApplicationsEnd)
         {
+            if (model.CurrentApplication?.Contributions.Count >= 30)
+            {
+                model.NextStep = ApplicationStep.Contributions;
+                await LoadProducts(model);
+                ModelState.AddModelError(string.Empty, "You have reached the limit of 30 contributions. Please review your list and select only top 30 contributions.");
+                return;
+            }
+
             Contribution contribution = new(model.UpdateContributionId ?? Guid.Empty)
             {
                 Date = model.ContributionDate.Value,
@@ -536,6 +544,13 @@ public class ApplicationFormViewComponent(
     {
         if (model.IsNavigation.HasValue && model.IsNavigation.Value)
         {
+            if (model.CurrentApplication?.Contributions.Count < 3)
+            {
+                ModelState.AddModelError(string.Empty, "You must add atleast 3 contributions to submit your application.");
+                model.NextStep = ApplicationStep.Contributions;
+                return;
+            }
+
             model.NextStep = ApplicationStep.Confirmation;
         }
         else if (model.IsNavigation.HasValue && !model.IsNavigation.Value && model.UnderstandsReviewConsent && model is { UnderstandsProgramAgreement: true, IsComplete: true, CurrentApplication: not null })
