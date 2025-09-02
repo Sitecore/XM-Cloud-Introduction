@@ -436,7 +436,7 @@ public class ApplicationFormViewComponent(
             {
                 model.NextStep = ApplicationStep.Contributions;
                 await LoadProducts(model);
-                ModelState.AddModelError(string.Empty, model.ContributionMinLimitMessage?.Value ?? "You have reached maximum number of contributions");
+                ModelState.AddModelError(string.Empty, model.ContributionMaxLimitMessage?.Value ?? "You have reached maximum number of contributions");
                 return;
             }
 
