@@ -146,4 +146,12 @@ public class ApplicationFormModel : BaseModel
     public TextField? StepLabelFormat { get; set; }
 
     public TextField? RevokeLabel { get; set; }
+
+    public TextField? MaxContributions { get; set; }
+
+    public TextField? ContributionMaxLimitMessage { get; set; }
+
+    public TextField? MinContributions { get; set; }
+
+    public TextField? ContributionMinLimitMessage { get; set; }
 }
