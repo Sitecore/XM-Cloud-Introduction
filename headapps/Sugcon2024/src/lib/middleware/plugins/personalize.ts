@@ -3,7 +3,7 @@ import { PersonalizeMiddleware } from '@sitecore-jss/sitecore-jss-nextjs/middlew
 import { MiddlewarePlugin } from '..';
 import config from 'temp/config';
 import { siteResolver } from 'lib/site-resolver';
-
+import { createGraphQLClientFactory } from 'lib/graphql-client-factory/create';
 /**
  * This is the personalize middleware plugin for Next.js.
  * It is used to enable Sitecore personalization of pages in Next.js.
@@ -23,18 +23,20 @@ class PersonalizePlugin implements MiddlewarePlugin {
     this.personalizeMiddleware = new PersonalizeMiddleware({
       // Configuration for your Sitecore Experience Edge endpoint
       edgeConfig: {
-        endpoint: config.graphQLEndpoint,
-        apiKey: config.sitecoreApiKey,
+        clientFactory: createGraphQLClientFactory(config),
+        scope: process.env.NEXT_PUBLIC_PERSONALIZE_SCOPE,
         timeout:
           (process.env.PERSONALIZE_MIDDLEWARE_EDGE_TIMEOUT &&
             parseInt(process.env.PERSONALIZE_MIDDLEWARE_EDGE_TIMEOUT)) ||
           400,
-        scope: process.env.NEXT_PUBLIC_PERSONALIZE_SCOPE,
       },
       // Configuration for your Sitecore CDP endpoint
       cdpConfig: {
-        endpoint: process.env.NEXT_PUBLIC_CDP_TARGET_URL || '',
-        clientKey: process.env.NEXT_PUBLIC_CDP_CLIENT_KEY || '',
+        sitecoreEdgeContextId: process.env.NEXT_PUBLIC_CDP_CONTEXT_ID || '',
+        sitecoreEdgeUrl:
+          process.env.NEXT_PUBLIC_CDP_EDGE_URL || 'https://edge-platform.sitecorecloud.io',
+        channel: process.env.NEXT_PUBLIC_CDP_CHANNEL || 'WEB',
+        currency: process.env.NEXT_PUBLIC_CDP_CURRENCY || 'USD',
         timeout:
           (process.env.PERSONALIZE_MIDDLEWARE_CDP_TIMEOUT &&
             parseInt(process.env.PERSONALIZE_MIDDLEWARE_CDP_TIMEOUT)) ||

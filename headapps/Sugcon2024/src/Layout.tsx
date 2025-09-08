@@ -78,8 +78,6 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
         ))}
       </Head>
 
-      
-
       {process.env.NEXT_PUBLIC_GTAG && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GTAG} />}
 
       <ChakraProvider theme={theme}>

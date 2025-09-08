@@ -1,12 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
-  AxiosDataFetcher,
+  NativeDataFetcher,
   GraphQLSitemapXmlService,
-  AxiosResponse,
+  NativeDataFetcherResponse,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { getPublicUrl } from '@sitecore-jss/sitecore-jss-nextjs/utils';
 import { siteResolver } from 'lib/site-resolver';
 import config from 'temp/config';
+import clientFactory from 'lib/graphql-client-factory';
 
 const ABSOLUTE_URL_REGEXP = '^(?:[a-z]+:)?//';
 
@@ -24,8 +25,7 @@ const sitemapApi = async (
 
   // create sitemap graphql service
   const sitemapXmlService = new GraphQLSitemapXmlService({
-    endpoint: config.graphQLEndpoint,
-    apiKey: config.sitecoreApiKey,
+    clientFactory,
     siteName: site.name,
   });
 
@@ -39,11 +39,9 @@ const sitemapApi = async (
     res.setHeader('Content-Type', 'text/xml;charset=utf-8');
 
     // need to prepare stream from sitemap url
-    return new AxiosDataFetcher()
-      .get(sitemapUrl, {
-        responseType: 'stream',
-      })
-      .then((response: AxiosResponse) => {
+    return new NativeDataFetcher()
+      .get(sitemapUrl)
+      .then((response: NativeDataFetcherResponse<any>) => {
         response.data.pipe(res);
       })
       .catch(() => res.redirect('/404'));

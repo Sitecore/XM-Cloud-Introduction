@@ -3,7 +3,6 @@ import {
   LayoutServicePageState,
   SiteInfo,
   useSitecoreContext,
-  PosResolver,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { useEffect } from 'react';
 import config from 'temp/config';
@@ -21,6 +20,10 @@ const CdpPageView = (): JSX.Element => {
     sitecoreContext: { pageState, route, variantId, site },
   } = useSitecoreContext();
 
+const resolvePointOfSale = (site: SiteInfo, language: string): string => {
+  return `${site.name}_${language}`;
+};
+
   /**
    * Creates a page view event using the Sitecore Engage SDK.
    */
@@ -30,7 +33,7 @@ const CdpPageView = (): JSX.Element => {
     site: SiteInfo,
     pageVariantId: string
   ) => {
-    const pointOfSale = PosResolver.resolve(site, language);
+    const pointOfSale = resolvePointOfSale(site, language);
     const engage = await init({
       clientKey: process.env.NEXT_PUBLIC_CDP_CLIENT_KEY || '',
       targetURL: process.env.NEXT_PUBLIC_CDP_TARGET_URL || '',

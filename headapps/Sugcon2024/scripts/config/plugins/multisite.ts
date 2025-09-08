@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import { ConfigPlugin, JssConfig } from '..';
 import { GraphQLSiteInfoService, SiteInfo } from '@sitecore-jss/sitecore-jss-nextjs';
-
+import { createGraphQLClientFactory } from 'lib/graphql-client-factory/create';
 /**
  * This plugin will set the "sites" config prop.
  * By default this will attempt to fetch site information directly from Sitecore (using the GraphQLSiteInfoService).
@@ -24,10 +24,11 @@ class MultisitePlugin implements ConfigPlugin {
       console.log(`Fetching site information from ${endpoint}`);
       try {
         const siteInfoService = new GraphQLSiteInfoService({
-          endpoint,
-          apiKey,
+          clientFactory: createGraphQLClientFactory(config),
         });
         sites = await siteInfoService.fetchSiteInfo();
+        // Filter out non-headless sites
+        sites = sites.filter((site) => !['not-headless', 'headful', 'mvc'].includes(site.name));
       } catch (error) {
         console.error(chalk.red('Error fetching site information'));
         console.error(error);
