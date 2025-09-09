@@ -15,14 +15,14 @@ import { siteResolver } from 'lib/site-resolver';
  * See Sitecore Engage SDK documentation for details.
  * https://www.npmjs.com/package/@sitecore/engage
  */
+const resolvePointOfSale = (site: SiteInfo, language: string): string => {
+  return `${site.name}_${language}`;
+};
+
 const CdpPageView = (): JSX.Element => {
   const {
     sitecoreContext: { pageState, route, variantId, site },
   } = useSitecoreContext();
-
-  const resolvePointOfSale = (site: SiteInfo, language: string): string => {
-    return `${site.name}_${language}`;
-  };
 
   /**
    * Creates a page view event using the Sitecore Engage SDK.

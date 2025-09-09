@@ -1,4 +1,3 @@
-import React from 'react';
 import { Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
 import useSWR from 'swr';
 import clsx from 'clsx';
