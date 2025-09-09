@@ -20,9 +20,9 @@ const CdpPageView = (): JSX.Element => {
     sitecoreContext: { pageState, route, variantId, site },
   } = useSitecoreContext();
 
-const resolvePointOfSale = (site: SiteInfo, language: string): string => {
-  return `${site.name}_${language}`;
-};
+  const resolvePointOfSale = (site: SiteInfo, language: string): string => {
+    return `${site.name}_${language}`;
+  };
 
   /**
    * Creates a page view event using the Sitecore Engage SDK.

@@ -86,7 +86,6 @@ const HeroHomepageComponent = (props: HeroProps): JSX.Element => {
         />
       </Flex>
     </Flex>
-    
   );
 };
 
@@ -95,55 +94,55 @@ export const HeroHomepage = withDatasourceCheck()<HeroProps>(HeroHomepageCompone
 const HeroEventComponent = (props: HeroProps): JSX.Element => {
   return (
     <>
-    <Flex 
-      flexDir={{ base: 'column', md: 'row' }} 
-      width="100%" 
-      paddingRight="0px" 
-      paddingLeft="0px"
-      bg="black"
-      color="white"
+      <Flex
+        flexDir={{ base: 'column', md: 'row' }}
+        width="100%"
+        paddingRight="0px"
+        paddingLeft="0px"
+        bg="black"
+        color="white"
       >
-      <Box
-        ml="auto"
-        maxW={{ base: '100%', md: `calc((${Template.MaxWidth}) / 2)` }}
-        px={{ base: PaddingX.Mobile, md: PaddingX.Desktop }}
-        py={{ base: '30px', md: '60px' }}
-      >
-        <Heading as="h1" fontSize="3xl" fontWeight="bold" mb="33px">
-          <JssText field={props.fields.Headline} />
-        </Heading>
+        <Box
+          ml="auto"
+          maxW={{ base: '100%', md: `calc((${Template.MaxWidth}) / 2)` }}
+          px={{ base: PaddingX.Mobile, md: PaddingX.Desktop }}
+          py={{ base: '30px', md: '60px' }}
+        >
+          <Heading as="h1" fontSize="3xl" fontWeight="bold" mb="33px">
+            <JssText field={props.fields.Headline} />
+          </Heading>
 
-        {isSitecoreTextFieldPopulated(props.fields.EventDate) && (
-          <Text fontSize="18px" mb={6}>
-            <JssText field={props.fields.EventDate} />
-          </Text>
-        )}
+          {isSitecoreTextFieldPopulated(props.fields.EventDate) && (
+            <Text fontSize="18px" mb={6}>
+              <JssText field={props.fields.EventDate} />
+            </Text>
+          )}
 
-        {isSitecoreTextFieldPopulated(props.fields.Text) && (
-          <Text mb={6} fontSize="18px">
-            <JssText field={props.fields.Text} />
-          </Text>
-        )}
+          {isSitecoreTextFieldPopulated(props.fields.Text) && (
+            <Text mb={6} fontSize="18px">
+              <JssText field={props.fields.Text} />
+            </Text>
+          )}
 
-        {isSitecoreLinkFieldPopulated(props.fields.CallToAction) && (
-          <Box width="auto" alignSelf="start">
-            <ButtonLink field={props.fields.CallToAction} />
-          </Box>
-        )}
-      </Box>
-      <Flex flexGrow={{ md: 'grow' }} maxW={{ base: '100%', md: '50%' }}>
-        <Image
-          alt="Event Image"
-          w="full"
-          h="auto"
-          objectFit="cover"
-          objectPosition="center"
-          aspectRatio="1440/500"
-          src={props.fields.Image?.value?.src}
-          minH="220px"
-        />
+          {isSitecoreLinkFieldPopulated(props.fields.CallToAction) && (
+            <Box width="auto" alignSelf="start">
+              <ButtonLink field={props.fields.CallToAction} />
+            </Box>
+          )}
+        </Box>
+        <Flex flexGrow={{ md: 'grow' }} maxW={{ base: '100%', md: '50%' }}>
+          <Image
+            alt="Event Image"
+            w="full"
+            h="auto"
+            objectFit="cover"
+            objectPosition="center"
+            aspectRatio="1440/500"
+            src={props.fields.Image?.value?.src}
+            minH="220px"
+          />
+        </Flex>
       </Flex>
-    </Flex>
     </>
   );
 };
