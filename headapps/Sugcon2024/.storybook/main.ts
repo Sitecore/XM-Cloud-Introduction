@@ -2,7 +2,11 @@ import type { StorybookConfig } from '@storybook/nextjs';
 import path from 'path';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  // If you DO have MDX stories, keep the MDX line; otherwise comment it out.
+  stories: [
+    // '../src/**/*.mdx',
+    '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+  ],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -16,18 +20,25 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
-  staticDirs: ['../public', '../public/images'],
-  webpackFinal: async (config) => {
-    // Ensure the existence of config.resolve and config.resolve.alias
-    config.resolve = config.resolve || {};
-    config.resolve.alias = config.resolve.alias || {};
+  // `public/images` is already inside `public`, so one entry is enough
+  staticDirs: ['../public'],
 
-    Object.assign(config.resolve.alias, {
+  webpackFinal: async (cfg) => {
+    // Storybook's webpack config defaults to production mode, which causes
+    // minification and dead code elimination. This interferes with some of
+    // our conditional code that relies on process.env.NODE_ENV checks.
+    (cfg as any).cache = false; // cache: false
+
+   
+    cfg.resolve = cfg.resolve || {};
+    cfg.resolve.alias = cfg.resolve.alias || {};
+    Object.assign(cfg.resolve.alias, {
       '@sass': path.resolve(__dirname, '../src/assets/sass'),
       '@fontawesome': path.join(__dirname, '../node_modules', 'font-awesome'),
     });
 
-    return config;
+    return cfg;
   },
 };
+
 export default config;

@@ -3,7 +3,6 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import NotFound from 'src/NotFound';
 import Layout from 'src/Layout';
 import {
-  RenderingType,
   SitecoreContext,
   ComponentPropsContext,
   StaticPath,

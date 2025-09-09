@@ -4,7 +4,7 @@ import {
   SiteInfo,
   useSitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import config from 'temp/config';
 import { init } from '@sitecore/engage';
 import { siteResolver } from 'lib/site-resolver';
@@ -27,30 +27,26 @@ const CdpPageView = (): JSX.Element => {
   /**
    * Creates a page view event using the Sitecore Engage SDK.
    */
-  const createPageView = async (
-    page: string,
-    language: string,
-    site: SiteInfo,
-    pageVariantId: string
-  ) => {
-    const pointOfSale = resolvePointOfSale(site, language);
-    const engage = await init({
-      clientKey: process.env.NEXT_PUBLIC_CDP_CLIENT_KEY || '',
-      targetURL: process.env.NEXT_PUBLIC_CDP_TARGET_URL || '',
-      // Replace with the top level cookie domain of the website that is being integrated e.g ".example.com" and not "www.example.com"
-      cookieDomain: window.location.hostname.replace(/^www\./, ''),
-      // Cookie may be created in personalize middleware (server), but if not we should create it here
-      forceServerCookieMode: false,
-    });
-    engage.pageView({
-      channel: 'WEB',
-      currency: 'USD',
-      pointOfSale,
-      page,
-      pageVariantId,
-      language,
-    });
-  };
+  const createPageView = useCallback(
+    async (page: string, language: string, site: SiteInfo, pageVariantId: string) => {
+      const pointOfSale = resolvePointOfSale(site, language);
+      const engage = await init({
+        clientKey: process.env.NEXT_PUBLIC_CDP_CLIENT_KEY || '',
+        targetURL: process.env.NEXT_PUBLIC_CDP_TARGET_URL || '',
+        cookieDomain: window.location.hostname.replace(/^www\./, ''),
+        forceServerCookieMode: false,
+      });
+      engage.pageView({
+        channel: 'WEB',
+        currency: 'USD',
+        pointOfSale,
+        page,
+        pageVariantId,
+        language,
+      });
+    },
+    [] // Empty dependency array, so it will only be created once.
+  );
 
   /**
    * Determines if the page view events should be turned off.
@@ -87,7 +83,7 @@ const CdpPageView = (): JSX.Element => {
       scope
     );
     createPageView(route.name, language, siteInfo, pageVariantId);
-  }, [pageState, route, variantId, site]);
+  }, [pageState, route, variantId, site, createPageView]);
 
   return <></>;
 };
