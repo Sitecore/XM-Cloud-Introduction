@@ -85,13 +85,9 @@ After completing the init setup above you will be able to run the SUGCON Sites d
 - Populate the newly created `.env` file with the values from the `Developer settings` tab, it should look something like:
 
   ```env
-  JSS_EDITING_SECRET=XXXX
-  SITECORE_SITE_NAME=ANZ
-  SITECORE_API_HOST=https://xmc-XXX-XXX-XXX.sitecorecloud.io/
-  GRAPH_QL_ENDPOINT=https://xmc-XXX-XXX-XXX.sitecorecloud.io/sitecore/api/graph/edge
-  SITECORE_API_KEY=B2F8A9B9-7203-4DCF-9314-8B28B043347E
-  FETCH_WITH=GraphQL
   SITECORE_EDGE_CONTEXT_ID=XXXX
+  SITECORE_SITE_NAME=ANZ
+  JSS_EDITING_SECRET=XXXX
   ```
 - Open a new terminal window and navigate to the `./headapps/Sugcon2024` folder.
 - Run the following command to install dependencies and start the site:
