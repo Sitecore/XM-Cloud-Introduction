@@ -32,11 +32,11 @@ class PersonalizePlugin implements MiddlewarePlugin {
       },
       // Configuration for your Sitecore CDP endpoint
       cdpConfig: {
-        sitecoreEdgeContextId: process.env.NEXT_PUBLIC_CDP_CONTEXT_ID 
-          ? process.env.NEXT_PUBLIC_CDP_CONTEXT_ID
+        sitecoreEdgeContextId: process.env.SITECORE_EDGE_CONTEXT_ID
+          ? process.env.SITECORE_EDGE_CONTEXT_ID
           : (() => {
               throw new Error(
-                'Environment variable NEXT_PUBLIC_CDP_CONTEXT_ID is required but not set.'
+                'Environment variable SITECORE_EDGE_CONTEXT_ID is required but not set.'
               );
             })(),
         sitecoreEdgeUrl:
