@@ -1,4 +1,5 @@
-import { ConfigPlugin, JssConfig } from '..';
+import { JssConfig } from 'lib/config';
+import { ConfigPlugin } from '..';
 
 /**
  * This plugin will set config props based on scjssconfig.json.
@@ -11,6 +12,7 @@ class ScJssConfigPlugin implements ConfigPlugin {
   async exec(config: JssConfig) {
     let scJssConfig;
     try {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
       scJssConfig = require('scjssconfig.json');
     } catch (e) {
       return config;

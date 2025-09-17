@@ -2,15 +2,31 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "components/*": ["src/components/*"],
-      "lib/*": ["src/lib/*"],
-      "temp/*": ["src/temp/*"],
-      "assets/*": ["src/assets/*"],
-      "template/*": ["src/components/Templates/*"],
-      "graphql-types": ["node_modules/@types/graphql-let/__generated__/__types__"]
+      "components/*": [
+        "src/components/*"
+      ],
+      "lib/*": [
+        "src/lib/*"
+      ],
+      "temp/*": [
+        "src/temp/*"
+      ],
+      "assets/*": [
+        "src/assets/*"
+      ],
+      "template/*": [
+        "src/components/Templates/*"
+      ],
+      "graphql-types": [
+        "node_modules/@types/graphql-let/__generated__/__types__"
+      ]
     },
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -22,7 +38,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
@@ -31,9 +47,24 @@
     "noUnusedParameters": true,
     "incremental": true,
     "forceConsistentCasingInFileNames": false,
-    "typeRoots": ["node_modules/@types", "src/types"],
-    "types": ["node", "react", "react-dom", "aria-query", "mdx"]
+    "typeRoots": [
+      "node_modules/@types",
+      "src/types"
+    ],
+    "types": [
+      "node",
+      "react",
+      "react-dom",
+      "aria-query",
+      "mdx"
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

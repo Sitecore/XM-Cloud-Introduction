@@ -1,3 +1,4 @@
+import { JSX } from 'react';
 import Head from 'next/head';
 import {
   GraphQLErrorPagesService,
@@ -37,6 +38,12 @@ const Custom500 = (props: SitecorePageProps): JSX.Element => {
     <SitecoreContext
       componentFactory={componentBuilder.getComponentFactory()}
       layoutData={props.layoutData}
+      api={{
+        edge: {
+          contextId: config.sitecoreEdgeContextId,
+          edgeUrl: config.sitecoreEdgeUrl,
+        },
+      }}
     >
       <Layout layoutData={props.layoutData} headLinks={props.headLinks} />
     </SitecoreContext>
@@ -44,7 +51,7 @@ const Custom500 = (props: SitecorePageProps): JSX.Element => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const site = siteResolver.getByName(config.jssAppName);
+  const site = siteResolver.getByName(config.sitecoreSiteName);
   const errorPagesService = new GraphQLErrorPagesService({
     clientFactory,
     siteName: site.name,
@@ -56,7 +63,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   });
   let resultErrorPages: ErrorPages | null = null;
 
-  if (!process.env.DISABLE_SSG_FETCH) {
+  if (process.env.DISABLE_SSG_FETCH?.toLowerCase() !== 'true') {
     try {
       resultErrorPages = await errorPagesService.fetchErrorPages();
     } catch (error) {
