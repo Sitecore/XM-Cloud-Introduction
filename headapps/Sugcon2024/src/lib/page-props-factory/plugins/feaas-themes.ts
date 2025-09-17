@@ -6,17 +6,12 @@ class FEeaSThemesPlugin implements Plugin {
   order = 2;
 
   async exec(props: SitecorePageProps) {
-     const contextId = process.env.SITECORE_EDGE_CONTEXT_ID;
+    const contextId = process.env.SITECORE_EDGE_CONTEXT_ID;
     if (!contextId) {
       throw new Error('Environment variable SITECORE_EDGE_CONTEXT_ID is required but not set.');
     }
     // Collect FEAAS themes
-    props.headLinks.push(
-      ...getDesignLibraryStylesheetLinks(
-        props.layoutData,
-        contextId
-      )
-    );
+    props.headLinks.push(...getDesignLibraryStylesheetLinks(props.layoutData, contextId));
 
     return props;
   }
