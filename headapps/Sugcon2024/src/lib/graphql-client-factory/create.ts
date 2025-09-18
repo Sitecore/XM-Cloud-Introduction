@@ -22,6 +22,10 @@ export const createGraphQLClientFactory = (config: JssConfig) => {
       endpoint: config.graphQLEndpoint,
       apiKey: config.sitecoreApiKey,
     };
+  } else if (config.graphQLEndpoint) {
+    clientConfig = {
+      endpoint: config.graphQLEndpoint,
+    };
   } else {
     throw new Error(
       'Please configure either your sitecoreEdgeContextId, or your graphQLEndpoint and sitecoreApiKey.'
