@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Heading, Text, Image, Link } from '@chakra-ui/react';
 import {
   Field,

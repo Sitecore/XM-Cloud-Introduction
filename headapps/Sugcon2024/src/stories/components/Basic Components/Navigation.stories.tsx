@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Default as Navigation } from 'components/Navigation';
-import { SitecoreContext } from '@sitecore-jss/sitecore-jss-react';
+import { SitecoreContext } from '@sitecore-jss/sitecore-jss-nextjs';
 
 const meta = {
   title: 'Basic Components/Navigation',

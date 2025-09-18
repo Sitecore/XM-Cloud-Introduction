@@ -1,3 +1,4 @@
+import { JSX } from 'react';
 import config from 'temp/config';
 import {
   GraphQLErrorPagesService,
@@ -10,6 +11,7 @@ import { componentBuilder } from 'temp/componentBuilder';
 import Layout from 'src/Layout';
 import { GetStaticProps } from 'next';
 import { siteResolver } from 'lib/site-resolver';
+import clientFactory from 'lib/graphql-client-factory';
 
 const Custom404 = (props: SitecorePageProps): JSX.Element => {
   if (!(props && props.layoutData)) {
@@ -20,6 +22,12 @@ const Custom404 = (props: SitecorePageProps): JSX.Element => {
     <SitecoreContext
       componentFactory={componentBuilder.getComponentFactory()}
       layoutData={props.layoutData}
+      api={{
+        edge: {
+          contextId: config.sitecoreEdgeContextId,
+          edgeUrl: config.sitecoreEdgeUrl,
+        },
+      }}
     >
       <Layout layoutData={props.layoutData} headLinks={props.headLinks} />
     </SitecoreContext>
@@ -27,10 +35,9 @@ const Custom404 = (props: SitecorePageProps): JSX.Element => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const site = siteResolver.getByName(config.jssAppName);
+  const site = siteResolver.getByName(config.sitecoreSiteName);
   const errorPagesService = new GraphQLErrorPagesService({
-    endpoint: config.graphQLEndpoint,
-    apiKey: config.sitecoreApiKey,
+    clientFactory,
     siteName: site.name,
     language: context.locale || config.defaultLanguage,
     retries:
@@ -40,7 +47,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   });
   let resultErrorPages: ErrorPages | null = null;
 
-  if (!process.env.DISABLE_SSG_FETCH) {
+  if (process.env.DISABLE_SSG_FETCH?.toLowerCase() !== 'true') {
     try {
       resultErrorPages = await errorPagesService.fetchErrorPages();
     } catch (error) {

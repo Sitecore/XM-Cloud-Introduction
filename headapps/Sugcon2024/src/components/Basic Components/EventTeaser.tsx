@@ -1,4 +1,3 @@
-import React from 'react';
 import { Heading, Grid } from '@chakra-ui/react';
 import { TextField, Text as JssText } from '@sitecore-jss/sitecore-jss-nextjs';
 import { Fields as EventFields, Default as Event } from './Event';
