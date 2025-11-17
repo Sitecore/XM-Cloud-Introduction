@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using Microsoft.AspNetCore.Mvc;
+using Mvp.Selections.Api.Model;
 using Mvp.Selections.Client;
 using Mvp.Selections.Client.Models;
 using Mvp.Selections.Domain;
@@ -32,7 +33,10 @@ public class ScoreCardDetailViewComponent(IViewModelBinder modelBinder, MvpSelec
                     LoadApplication(model),
                     LoadReviews(model),
                     LoadComments(model));
-                await LoadScoreCategories(model);
+                await Task.WhenAll(
+                    LoadScoreCategories(model),
+                    LoadMvpProfile(model),
+                    LoadPriorYearsComments(model));
             }
 
             result = model.ErrorMessages.Count > 0
@@ -248,6 +252,53 @@ public class ScoreCardDetailViewComponent(IViewModelBinder modelBinder, MvpSelec
         else
         {
             model.ErrorMessages.Add(getResponse.Message);
+        }
+    }
+
+    private async Task LoadMvpProfile(ScoreCardDetailModel model)
+    {
+        if (model.Application != null)
+        {
+            Response<MvpProfile> mvpProfileResponse = await Client.GetMvpProfileAsync(model.Application.Applicant.Id);
+            if (mvpProfileResponse is { StatusCode: HttpStatusCode.OK, Result: not null })
+            {
+                model.MvpProfile = mvpProfileResponse.Result;
+            }
+            else
+            {
+                model.ErrorMessages.Add(mvpProfileResponse.Message);
+            }
+        }
+    }
+
+    private async Task LoadPriorYearsComments(ScoreCardDetailModel model)
+    {
+        if (model.Application != null)
+        {
+            Response<IList<Application>> applicationsResponse = await Client.GetApplicationsAsync(model.Application.Applicant.Id);
+            if (applicationsResponse is { StatusCode: HttpStatusCode.OK, Result: not null })
+            {
+                foreach (Application application in applicationsResponse.Result.Where(a => a.Selection.Year < model.Application.Selection.Year))
+                {
+                    Response<IList<ApplicationComment>> commentsResponse = await Client.GetApplicationCommentsAsync(application.Id);
+                    if (commentsResponse is { StatusCode: HttpStatusCode.OK, Result.Count: > 0 })
+                    {
+                        model.PriorYearsComments.Add(application.Selection.Year, commentsResponse.Result);
+                    }
+                    else if (commentsResponse is { StatusCode: HttpStatusCode.OK })
+                    {
+                        // Skip
+                    }
+                    else
+                    {
+                        model.ErrorMessages.Add(commentsResponse.Message);
+                    }
+                }
+            }
+            else
+            {
+                model.ErrorMessages.Add(applicationsResponse.Message);
+            }
         }
     }
 }
