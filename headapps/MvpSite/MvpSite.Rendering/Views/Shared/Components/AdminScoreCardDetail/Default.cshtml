@@ -1,4 +1,5 @@
 ﻿@using Mvp.Selections.Domain
+@using MvpSite.Rendering.Extensions
 @using MvpSite.Rendering.Models.Admin
 @model MvpSite.Rendering.Models.Admin.ScoreCardDetailModel
 
@@ -6,7 +7,12 @@
     <h2 asp-for="TitleLabel"></h2>
     <p>Score detail for @Model.Application?.Applicant.Name from @Model.Application?.Country.Name for @Model.Application?.MvpType.Name MVP</p>
     <h3 asp-for="CommentsLabel"></h3>
-    <partial name="~/Views/Shared/_Comments.cshtml" model="Model.Comments.Select(c => c)"/>
+    <partial name="~/Views/Shared/_Comments.cshtml" model="Model.Comments"/>
+    @foreach (int year in Model.PriorYearsComments.Keys)
+    {
+        <h4>@year</h4>
+        <partial name="~/Views/Shared/_Comments.cshtml" model="Model.PriorYearsComments[year]" />
+    }
 
     <h3 asp-for="ReviewsLabel"></h3>
     @foreach (Review review in Model.Reviews)
@@ -52,8 +58,29 @@
         </div>
         <br/>
     }
-
+    
     <h3 asp-for="ApplicationLabel"></h3>
+    <div class="card float-right">
+        <img src="@(Model.Application?.Applicant.ImageUri?.AddGravatarSizing("250") ?? new Uri("/images/sc_power-gradient-desktop.svg", UriKind.Relative))" alt="@Model.Application?.Applicant.Name" />
+        <div class="card-body">
+            <h5 class="card-title">@Model.Application?.Applicant.Name</h5>
+            <p class="card-text">
+                <partial name="~/Views/Shared/Components/Profile/_ProfileLinks.cshtml" model="Model.Application?.Applicant.Links" />
+            </p>
+            @if (Model.MvpProfile != null)
+            {
+                <p class="card-text">
+                    <ul>
+                        @foreach (Title title in Model.MvpProfile.Titles.OrderByDescending(t => t.Application.Selection.Year))
+                        {
+                            <li>@title.Application.Selection.Year @title.MvpType.Name</li>
+                        }
+                    </ul>
+                </p>
+            }
+        </div>
+    </div>
+    <p>@Model.Application?.ModifiedOn?.ToString("dd MMMM yyyy")</p>
     <p>@Model.Application?.Eligibility</p>
     <p>@Model.Application?.Objectives</p>
     <partial name="~/Views/Shared/Components/AdminScoreCardDetail/_ContributionsList.cshtml" model="Model.Application?.Contributions" />

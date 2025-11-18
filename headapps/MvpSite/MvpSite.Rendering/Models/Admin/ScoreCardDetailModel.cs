@@ -1,4 +1,5 @@
-﻿using Mvp.Selections.Domain;
+﻿using Mvp.Selections.Api.Model;
+using Mvp.Selections.Domain;
 using Mvp.Selections.Domain.Comments;
 using Sitecore.AspNetCore.SDK.LayoutService.Client.Response.Model.Fields;
 
@@ -10,11 +11,15 @@ public class ScoreCardDetailModel : BaseModel
 
     public Application? Application { get; set; }
 
+    public MvpProfile? MvpProfile { get; set; }
+
     public List<Review> Reviews { get; set; } = [];
 
     public List<ScoreCategory> ScoreCategories { get; set; } = [];
 
     public List<Comment> Comments { get; set; } = [];
+
+    public Dictionary<int, IList<ApplicationComment>> PriorYearsComments { get; set; } = [];
 
     public TextField? TitleLabel { get; set; }
 
