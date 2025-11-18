@@ -264,7 +264,7 @@ public class ScoreCardDetailViewComponent(IViewModelBinder modelBinder, MvpSelec
             {
                 model.MvpProfile = mvpProfileResponse.Result;
             }
-            else
+            else if (mvpProfileResponse.StatusCode != HttpStatusCode.NotFound)
             {
                 model.ErrorMessages.Add(mvpProfileResponse.Message);
             }
@@ -281,13 +281,12 @@ public class ScoreCardDetailViewComponent(IViewModelBinder modelBinder, MvpSelec
                 foreach (Application application in applicationsResponse.Result.Where(a => a.Selection.Year < model.Application.Selection.Year))
                 {
                     Response<IList<ApplicationComment>> commentsResponse = await Client.GetApplicationCommentsAsync(application.Id);
-                    if (commentsResponse is { StatusCode: HttpStatusCode.OK, Result.Count: > 0 })
+                    if (commentsResponse is { StatusCode: HttpStatusCode.OK, Result: not null })
                     {
-                        model.PriorYearsComments.Add(application.Selection.Year, commentsResponse.Result);
-                    }
-                    else if (commentsResponse is { StatusCode: HttpStatusCode.OK })
-                    {
-                        // Skip
+                        if (commentsResponse.Result.Count > 0)
+                        {
+                            model.PriorYearsComments.Add(application.Selection.Year, commentsResponse.Result);
+                        }
                     }
                     else
                     {
