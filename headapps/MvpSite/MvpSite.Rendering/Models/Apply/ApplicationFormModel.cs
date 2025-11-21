@@ -93,7 +93,7 @@ public class ApplicationFormModel : BaseModel
 
     public TextField? ContributionLinkLabel { get; set; }
 
-    public Uri? ContributionLink { get; set; }
+    public string? ContributionLink { get; set; }
 
     public TextField? ContributionDateLabel { get; set; }
 
