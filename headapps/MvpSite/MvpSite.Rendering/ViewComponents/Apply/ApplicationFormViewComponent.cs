@@ -408,7 +408,7 @@ public class ApplicationFormViewComponent(
                 model.ContributionDate = editContribution.Date;
                 model.ContributionName = editContribution.Name;
                 model.ContributionDescription = editContribution.Description;
-                model.ContributionLink = editContribution.Uri;
+                model.ContributionLink = editContribution.Uri?.AbsoluteUri;
                 model.ContributionType = editContribution.Type;
                 model.ContributionIsPublic = editContribution.IsPublic;
                 foreach (Product product in editContribution.RelatedProducts)
@@ -426,8 +426,8 @@ public class ApplicationFormViewComponent(
             && model.ContributionDate.HasValue
             && !string.IsNullOrWhiteSpace(model.ContributionName)
             && (
-                string.IsNullOrWhiteSpace(model.ContributionLink?.OriginalString)
-                || Uri.IsWellFormedUriString(model.ContributionLink?.OriginalString, UriKind.Absolute))
+                string.IsNullOrWhiteSpace(model.ContributionLink)
+                || Uri.IsWellFormedUriString(model.ContributionLink, UriKind.Absolute))
             && model.ContributionDate != null
             && model.ContributionDate.Value >= model.CurrentSelection?.ApplicationsEnd.AddMonths(-_options.TimeFrameMonths)
             && model.ContributionDate.Value <= model.CurrentSelection.ApplicationsEnd)
@@ -445,7 +445,7 @@ public class ApplicationFormViewComponent(
                 Date = model.ContributionDate.Value,
                 Name = model.ContributionName,
                 Description = model.ContributionDescription ?? string.Empty,
-                Uri = model.ContributionLink,
+                Uri = string.IsNullOrWhiteSpace(model.ContributionLink) ? null : new Uri(model.ContributionLink),
                 Type = model.ContributionType,
                 IsPublic = model.ContributionIsPublic
             };
@@ -530,8 +530,8 @@ public class ApplicationFormViewComponent(
             }
 
             if (
-                !string.IsNullOrWhiteSpace(model.ContributionLink?.OriginalString)
-                && !Uri.IsWellFormedUriString(model.ContributionLink?.OriginalString, UriKind.Absolute))
+                !string.IsNullOrWhiteSpace(model.ContributionLink)
+                && !Uri.IsWellFormedUriString(model.ContributionLink, UriKind.Absolute))
             {
                 ModelState.AddModelError(string.Empty, "Your contribution link is invalid.");
             }
