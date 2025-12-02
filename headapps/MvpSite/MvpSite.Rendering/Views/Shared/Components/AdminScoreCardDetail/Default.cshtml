@@ -4,8 +4,8 @@
 @model MvpSite.Rendering.Models.Admin.ScoreCardDetailModel
 
 <div class="mvp-fs-adminscorecarddetail col-12 bg-white">
-    <h2 asp-for="TitleLabel"></h2>
-    <p>Score detail for @Model.Application?.Applicant.Name from @Model.Application?.Country.Name for @Model.Application?.MvpType.Name MVP</p>
+    <!--h2 asp-for="TitleLabel"></h2-->
+    <h2>Score detail for @Model.Application?.Applicant.Name from @Model.Application?.Country.Name for @Model.Application?.MvpType.Name MVP</h2>
     <h3 asp-for="CommentsLabel"></h3>
     <partial name="~/Views/Shared/_Comments.cshtml" model="Model.Comments"/>
     @foreach (int year in Model.PriorYearsComments.Keys)
