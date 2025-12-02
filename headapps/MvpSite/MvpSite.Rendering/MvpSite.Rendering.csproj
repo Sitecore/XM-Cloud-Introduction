@@ -18,7 +18,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="BuildWebCompiler" />
+		<PackageReference Include="BuildWebCompiler2022" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
 		<PackageReference Include="Microsoft.AspNetCore.Session" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
