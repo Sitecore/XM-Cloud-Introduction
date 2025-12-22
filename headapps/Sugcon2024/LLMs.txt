@@ -1,0 +1,236 @@
+# Claude/Windsurf Guidance for Sitecore Content SDK Next.js App Router Project
+
+## Project Context
+This is a Sitecore Content SDK application built with Next.js App Router, TypeScript, and React Server Components. The project integrates with Sitecore XM Cloud for headless content management and follows modern web development best practices with the latest Next.js App Router features.
+
+## Architecture Overview
+- **Framework**: Next.js with App Router (Server Components by default)
+- **Language**: TypeScript with strict mode enabled
+- **CMS**: Sitecore XM Cloud (headless)
+- **SDK**: @sitecore-content-sdk for API integration
+- **Styling**: CSS Modules or Tailwind CSS
+- **State Management**: React Query/SWR for server state
+- **Internationalization**: next-intl for multi-language support
+
+## Development Principles
+
+### Code Organization
+- Use modular, feature-based architecture
+- Separate concerns: components, utilities, types, hooks
+- Follow Next.js App Router conventions
+- Implement proper error boundaries and loading states
+- Organize by Server vs Client Components appropriately
+
+### TypeScript Standards
+- Enable strict mode and strict null checks
+- Use proper type definitions for Sitecore fields and components
+- Prefer type assertions over `any` type
+- Implement discriminated unions for complex state management
+- Define interfaces for all component props
+
+### React App Router Patterns
+- Server Components for data fetching and static content (default)
+- Client Components only when interactivity is required ('use client')
+- Use React.memo for expensive components
+- Implement proper dependency arrays in hooks
+- Leverage App Router file conventions (layout.tsx, loading.tsx, error.tsx)
+
+## Sitecore Integration Patterns
+
+### Content Fetching
+- Use SitecoreClient for all API calls
+- Implement proper error handling with custom error classes
+- Cache responses using React Query or SWR
+- Handle preview vs. published content scenarios
+- Fetch data in Server Components when possible
+
+### Component Development
+- Always use Sitecore field components (Text, RichText, Image)
+- Validate field existence before rendering
+- Handle missing or empty fields gracefully
+- Export components with proper TypeScript interfaces
+- Follow Server Component patterns for Sitecore content
+
+### Field Handling
+```typescript
+interface ComponentProps {
+  fields: {
+    title: Field;
+    content: Field;
+    image: Field;
+  };
+}
+
+// Always validate fields
+<Text field={fields?.title} tag="h1" />
+<RichText field={fields?.content} />
+<Image field={fields?.image} />
+```
+
+### App Router Specific Patterns
+```typescript
+// Server Component (default)
+export default async function SitecorePage({ params }: { params: { path: string[] } }) {
+  const pageData = await client.getPage(params.path.join('/'));
+  return <SitecoreLayout layoutData={pageData.layout} />;
+}
+
+// Client Component when needed
+'use client';
+export default function InteractiveComponent({ fields }: ComponentProps) {
+  // Client-side interactivity
+}
+```
+
+## Performance Best Practices
+
+### App Router Optimization Strategies
+- Use Server Components for Sitecore content rendering
+- Leverage streaming for improved perceived performance
+- Implement proper caching headers
+- Optimize bundle size with Server Components
+- Use Next.js Image component for optimized images
+- Implement proper loading states and error boundaries
+
+### Memory Management
+- Clean up subscriptions and event listeners
+- Use useCallback and useMemo appropriately in Client Components
+- Avoid memory leaks in useEffect hooks
+- Implement proper cleanup in custom hooks
+- Minimize client-side JavaScript bundle
+
+### Caching Strategies
+- Cache Sitecore API responses appropriately
+- Use Next.js caching features
+- Handle content updates and cache invalidation
+- Consider CDN caching for static content
+- Implement proper revalidation strategies
+
+## Security Guidelines
+
+### Input Validation
+- Sanitize all user inputs before processing
+- Validate data at application boundaries
+- Use type guards for runtime type checking
+- Escape content when rendering to prevent XSS
+
+### API Security
+- Use HTTPS for all Sitecore connections
+- Never expose API keys in client-side code
+- Implement proper authentication and authorization
+- Validate all data received from external sources
+- Use environment variables for sensitive configuration
+
+### App Router Security
+- Keep sensitive operations in Server Components
+- Validate route parameters properly
+- Implement proper error boundaries
+
+## Code Quality Standards
+
+### Naming Conventions
+- Variables/Functions: camelCase (getUserData, isLoading)
+- Components: PascalCase (SitecoreComponent, PageLayout)
+- Constants: UPPER_SNAKE_CASE (API_ENDPOINT, MAX_RETRIES)
+- Types/Interfaces: PascalCase (ContentItem, LayoutProps)
+- Files: Match component names (SitecoreComponent.tsx)
+
+### Error Handling
+- Create custom error classes for different error types
+- Implement proper error boundaries in React components
+- Use error.tsx files for route-level error handling
+- Log errors appropriately for debugging
+- Provide fallback content when components fail
+
+### Testing Approach
+- Write testable code with minimal dependencies
+- Mock external services and Sitecore APIs
+- Test component behavior, not implementation details
+- Include tests for error scenarios and edge cases
+- Test both Server and Client Components appropriately
+
+## Development Workflow
+
+### Environment Setup
+1. Install dependencies: `npm install`
+2. Configure environment variables (copy .env.example to .env.local)
+3. Set up Sitecore API credentials
+4. Configure next-intl for internationalization
+5. Start development server: `npm run dev`
+
+### Build Process
+- Use `npm run build` for production builds
+- Enable TypeScript strict mode
+- Run linting and type checking before commits
+- Test both Server and Client Component functionality
+
+## Common Patterns and Examples
+
+### Sitecore Component Structure
+```typescript
+interface HeroProps {
+  fields: {
+    title: Field;
+    subtitle: Field;
+    backgroundImage: Field;
+  };
+}
+
+export default function Hero({ fields }: HeroProps) {
+  return (
+    <section className="hero">
+      <Text field={fields?.title} tag="h1" />
+      <Text field={fields?.subtitle} tag="p" />
+      <Image field={fields?.backgroundImage} />
+    </section>
+  );
+}
+```
+
+### API Integration
+```typescript
+import { SitecoreClient } from '@sitecore-content-sdk/nextjs/client';
+import scConfig from 'sitecore.config';
+
+const client = new SitecoreClient({
+  ...scConfig,
+});
+
+async function fetchPageData(path: string) {
+  try {
+    const response = await client.getPage(path);
+    return response?.layout;
+  } catch (error) {
+    throw new SitecoreFetchError(`Failed to fetch page: ${path}`, error);
+  }
+}
+```
+
+### Internationalization
+```typescript
+import { getTranslations } from 'next-intl/server';
+
+export default async function LocalizedPage() {
+  const t = await getTranslations('common');
+  // Fetch Sitecore content for current locale
+  return <div>{t('welcome')}</div>;
+}
+```
+
+## Best Practices Summary
+
+1. **Always validate Sitecore fields** before rendering
+2. **Use proper TypeScript types** for all components and functions
+3. **Implement error boundaries** for robust error handling
+4. **Cache API responses** to improve performance
+5. **Follow Next.js App Router conventions** for routing and data fetching
+6. **Write testable code** with proper separation of concerns
+7. **Use Sitecore field components** instead of manual rendering
+8. **Implement proper loading states** for better UX
+9. **Follow security best practices** for input validation
+10. **Document public APIs** and complex functionality
+11. **Leverage Server Components** for better performance
+12. **Use Client Components sparingly** only when interactivity is needed
+13. **Implement proper internationalization** with next-intl
+14. **Follow App Router file conventions** (layout.tsx, loading.tsx, error.tsx)
+15. **Optimize for Core Web Vitals** and user experience

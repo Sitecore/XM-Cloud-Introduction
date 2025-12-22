@@ -1,0 +1,80 @@
+---
+description: Core coding principles for your Sitecore project
+alwaysApply: true
+globs: []
+---
+
+# General Coding Principles
+
+## Universal Standards
+
+DRY Principle:
+
+- Don't Repeat Yourself - extract common functionality
+- Create reusable utilities and helper functions
+- Use composition over inheritance
+- Share types and interfaces across modules
+
+SOLID Principles:
+
+- Single Responsibility: each function/class has one purpose
+- Open/Closed: extend functionality through composition
+- Dependency Inversion: depend on abstractions, not implementations
+
+Code Clarity:
+
+- Write self-documenting code with clear intent
+- Use meaningful names that express business concepts
+- Prefer explicit over implicit behavior
+- Make dependencies and requirements obvious
+
+## Architecture Patterns
+
+Modular Design:
+
+- Organize code into focused, cohesive modules
+- Minimize coupling between modules
+- Use clear interfaces between layers
+- Follow established patterns consistently
+
+Data Flow:
+
+- Prefer unidirectional data flow
+- Validate inputs at system boundaries
+- Transform data at appropriate layers
+- Handle errors close to their source
+
+Testing:
+
+- Write testable code with minimal dependencies
+- Use dependency injection for better testability
+- Mock external services and side effects
+- Test behavior, not implementation details
+
+## Development Standards
+
+Version Control:
+
+- Write descriptive commit messages
+- Keep commits focused and atomic
+- Use branching strategies appropriate to team size
+- Review code before merging
+
+Documentation:
+
+- Document public APIs and interfaces
+- Include usage examples for complex functionality
+- Keep documentation close to code
+- Update documentation with code changes
+
+Performance:
+
+- Optimize for readability first, performance second
+- Profile before optimizing
+- Cache expensive operations appropriately
+- Consider memory usage and cleanup
+
+Referenced:
+@src/app/
+@src/components/
+@src/lib/

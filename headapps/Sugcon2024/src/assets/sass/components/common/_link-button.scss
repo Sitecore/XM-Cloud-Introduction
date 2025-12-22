@@ -1,7 +1,7 @@
-@import "@sass/abstracts/mixins";
+@import "../../abstracts/mixins";
 
 .link-button {
-    @import "@sass/base/links/";
+    @import "../../base/links/";
 }
 // Promo button
 .promo.link-button {

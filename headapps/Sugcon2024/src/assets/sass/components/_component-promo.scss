@@ -1,5 +1,5 @@
-@import "@sass/abstracts/vars";
-@import "@sass/abstracts/mixins";
+@import "../abstracts/vars";
+@import "../abstracts/mixins";
 
 .promo {
     background: $promo-bg;
@@ -37,6 +37,6 @@
             margin-bottom: 10px;
         }
     }
-    @import "@sass/variants/promo";
-    @import "@sass/base/richtext/richtext";
+    @import "../variants/promo";
+    @import "../base/richtext/richtext";
 }

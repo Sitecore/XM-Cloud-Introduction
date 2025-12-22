@@ -3,17 +3,9 @@
 # dependencies
 /node_modules
 
-# testing
-/coverage
-
 # next.js
 /.next*/
 /out/
-
-# graphql code generation
-/.generated
-*.graphql.d.ts
-*.graphqls.d.ts
 
 # misc
 .DS_Store
@@ -21,18 +13,17 @@
 # local env files
 .env.local
 .env.*.local
+.env
 
 # Log files
 *.log*
 
-# sitecore
-scjssconfig.json
-*.deploysecret.config
-
 # vercel
 .vercel
 
-#storybook
-*.DS_Store
-node_modules
-storybook-static
+# sitecore temp files
+.sitecore/*
+# except for component-map
+!.sitecore/component-map.ts
+!.sitecore/component-map.client.ts
+!.sitecore/import-map.ts
