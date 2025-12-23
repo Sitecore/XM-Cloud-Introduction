@@ -16,7 +16,7 @@ import {
   Box,
   Heading,
 } from '@chakra-ui/react';
-import { LayoutFlex } from 'components/templates/layout-flex/LayoutFlex';
+import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
 import { ComponentProps } from 'lib/component-props';
 
 interface AccordionElement {

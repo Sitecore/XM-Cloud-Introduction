@@ -9,7 +9,7 @@ import {
   Image as JssImage,
   withDatasourceCheck,
 } from '@sitecore-content-sdk/nextjs';
-import { LayoutFlex } from 'components/templates/layout-flex/LayoutFlex';
+import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
 import { ComponentProps } from 'lib/component-props';
 
 // Define the type of props that TextImage will accept

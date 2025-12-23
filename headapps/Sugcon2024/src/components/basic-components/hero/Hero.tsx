@@ -17,7 +17,7 @@ import {
   isSitecoreTextFieldPopulated,
 } from 'lib/utils/sitecoreUtils';
 import { PaddingX, Template } from 'components/templates/LayoutConstants';
-import { LayoutFlex } from 'components/templates/layout-flex/LayoutFlex';
+import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
 import { ComponentProps } from 'lib/component-props';
 
 // Define the type of props that Hero will accept

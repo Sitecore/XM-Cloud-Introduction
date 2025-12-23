@@ -6,7 +6,7 @@ import {
   Text as JssText,
 } from '@sitecore-content-sdk/nextjs';
 import { Button, Flex, Heading, Text } from '@chakra-ui/react';
-import { LayoutFlex } from 'components/templates/layout-flex/LayoutFlex';
+import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
 
 interface Fields {
   Title: Field<string>;
