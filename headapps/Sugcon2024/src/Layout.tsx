@@ -10,8 +10,8 @@ import { usePathname } from "next/navigation";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from './Theme';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { Header } from "components/Templates/header/Header";
-import { Footer } from "components/Templates/footer/Footer";
+import { Header } from "components/templates/header/Header";
+import { Footer } from "components/templates/footer/Footer";
 
 interface LayoutProps {
   page: Page;

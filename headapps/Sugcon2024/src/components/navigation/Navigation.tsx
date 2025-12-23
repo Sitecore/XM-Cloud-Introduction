@@ -27,7 +27,7 @@ import {
   useStyleConfig,
 } from '@chakra-ui/react';
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
-import { HeaderHeights, PaddingX, PaddingY } from 'components/Templates/LayoutConstants';
+import { HeaderHeights, PaddingX, PaddingY } from 'components/templates/LayoutConstants';
 
 export interface Fields {
   Id: string;
