@@ -2,7 +2,7 @@ import React, { JSX } from 'react';
 import { Flex } from '@chakra-ui/react';
 import { AppPlaceholder, RouteData, Page, ComponentMap } from '@sitecore-content-sdk/nextjs';
 import { HeaderHeights } from '../LayoutConstants';
-import { LayoutFlex } from '../LayoutFlex/LayoutFlex';
+import { LayoutFlex } from '../layout-flex/LayoutFlex';
 
 interface HeaderDefaultProps {
   route: RouteData | null;

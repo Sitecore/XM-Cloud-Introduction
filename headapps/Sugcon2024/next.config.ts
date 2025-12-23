@@ -27,6 +27,11 @@ const nextConfig: NextConfig = {
         hostname: 'xmc-*.**',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: '**.sugcon.events',
+        port: '',
+      },
     ],
   },
   

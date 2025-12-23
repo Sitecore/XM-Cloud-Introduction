@@ -10,7 +10,8 @@ import { usePathname } from "next/navigation";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from './Theme';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { Header } from "src/components/Templates/Header/Header";
+import { Header } from "components/Templates/header/Header";
+import { Footer } from "components/Templates/footer/Footer";
 
 interface LayoutProps {
   page: Page;
@@ -103,7 +104,9 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
                   )}
                 </div>
               </main>
-              {/* <Footer route={route} /> */}
+              <Footer page={page}
+                      componentMap={componentMap}
+                      route={route} />
             </>
           )}
         </ChakraProvider>
