@@ -1,7 +1,7 @@
 import React, { JSX } from 'react';
 import { Heading, Grid } from '@chakra-ui/react';
 import { TextField, Text as ContentSdkText } from '@sitecore-content-sdk/nextjs';
-import { Fields as EventFields, Default as Event } from '../event/Event';
+import { Fields as EventFields, Default as Event } from '../../events/event/Event';
 import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
 
 // Define the type of props that Event Teaser will accept

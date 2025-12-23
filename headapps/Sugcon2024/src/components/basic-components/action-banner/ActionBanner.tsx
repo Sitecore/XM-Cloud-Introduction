@@ -1,9 +1,9 @@
 import React, { JSX}  from 'react';
 import {
   Field,
-  Link as JssLink,
+  Link as ContentSdkLink,
   LinkField,
-  Text as JssText,
+  Text as ContentSdkText,
 } from '@sitecore-content-sdk/nextjs';
 import { Button, Flex, Heading, Text } from '@chakra-ui/react';
 import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
@@ -40,14 +40,14 @@ export const Default = (props: ActionBannerProps): JSX.Element => {
           gap={{ lg: '75px' }}
         >
           <Heading as="h2" size="lg" mb="0">
-            <JssText field={props?.fields?.Title} />
+            <ContentSdkText field={props?.fields?.Title} />
           </Heading>
 
           <Text fontSize="lg" mb={{ base: '10px', lg: '0' }}>
-            <JssText field={props?.fields?.Text} />
+            <ContentSdkText field={props?.fields?.Text} />
           </Text>
 
-          <Button as={JssLink} variant="secondary" field={props?.fields?.CallToAction}>
+          <Button as={ContentSdkLink} variant="secondary" field={props?.fields?.CallToAction}>
             {props?.fields?.CallToAction?.value?.text}
           </Button>
         </LayoutFlex>

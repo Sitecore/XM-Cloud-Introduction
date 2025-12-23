@@ -13,10 +13,18 @@ import * as PartialDesignDynamicPlaceholder from 'src/components/page-structure/
 import * as LayoutFlex from 'src/components/page-structure/layout-flex/LayoutFlex';
 import * as Container from 'src/components/page-structure/container/Container';
 import * as ColumnSplitter from 'src/components/page-structure/column-splitter/ColumnSplitter';
+import * as SponsorListingLogoWithPopup from 'src/components/list-components/sponsor-listing/SponsorListing.LogoWithPopup';
+import * as SponsorListingLogoOnly from 'src/components/list-components/sponsor-listing/SponsorListing.LogoOnly';
+import * as SponsorListingFullDetails from 'src/components/list-components/sponsor-listing/SponsorListing.FullDetails';
+import * as SponsorListing from 'src/components/list-components/sponsor-listing/SponsorListing';
 import * as PeopleGrid from 'src/components/list-components/people-grid/PeopleGrid';
 import * as LinkList from 'src/components/list-components/link-list/LinkList';
 import * as IconLinkList from 'src/components/list-components/icon-link-list/IconLinkList';
 import * as Accordion from 'src/components/list-components/accordion/Accordion';
+import * as Sessions from 'src/components/events/sessions/Sessions';
+import * as EventTeaser from 'src/components/events/event-teaser/EventTeaser';
+import * as Event from 'src/components/events/event/Event';
+import * as Agenda from 'src/components/events/agenda/Agenda';
 import * as VideoText from 'src/components/basic-components/video-text/VideoText';
 import * as Title from 'src/components/basic-components/title/Title';
 import * as TextImage from 'src/components/basic-components/text-image/TextImage';
@@ -30,8 +38,6 @@ import * as LinkButton from 'src/components/basic-components/link/Link.Button';
 import * as Link from 'src/components/basic-components/link/Link';
 import * as Image from 'src/components/basic-components/image/Image';
 import * as Hero from 'src/components/basic-components/hero/Hero';
-import * as EventTeaser from 'src/components/basic-components/event-teaser/EventTeaser';
-import * as Event from 'src/components/basic-components/event/Event';
 import * as ErrorMessage from 'src/components/basic-components/error-message/ErrorMessage';
 import * as ContentBlock from 'src/components/basic-components/content-block/ContentBlock';
 import * as ActionBanner from 'src/components/basic-components/action-banner/ActionBanner';
@@ -49,10 +55,15 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LayoutFlex', { ...LayoutFlex }],
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
+  ['SponsorListing', { ...SponsorListingLogoWithPopup, ...SponsorListingLogoOnly, ...SponsorListingFullDetails, ...SponsorListing }],
   ['PeopleGrid', { ...PeopleGrid }],
   ['LinkList', { ...LinkList }],
   ['IconLinkList', { ...IconLinkList }],
   ['Accordion', { ...Accordion }],
+  ['Sessions', { ...Sessions }],
+  ['EventTeaser', { ...EventTeaser }],
+  ['Event', { ...Event }],
+  ['Agenda', { ...Agenda, componentType: 'client' }],
   ['VideoText', { ...VideoText }],
   ['Title', { ...Title }],
   ['TextImage', { ...TextImage }],
@@ -65,8 +76,6 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Link', { ...LinkButton, ...Link }],
   ['Image', { ...Image }],
   ['Hero', { ...Hero }],
-  ['EventTeaser', { ...EventTeaser }],
-  ['Event', { ...Event }],
   ['ErrorMessage', { ...ErrorMessage }],
   ['ContentBlock', { ...ContentBlock }],
   ['ActionBanner', { ...ActionBanner }],

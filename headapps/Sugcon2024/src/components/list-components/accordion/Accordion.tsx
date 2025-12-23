@@ -1,9 +1,9 @@
 import React, { JSX } from 'react';
 import {
   TextField,
-  Text as JssText,
+  Text as ContentSdkText,
   RichTextField,
-  RichText as JssRichText,
+  RichText as ContentSdkRichText,
   withDatasourceCheck,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
@@ -47,7 +47,7 @@ const AccordionComponent = (props: AccordionProps): JSX.Element => {
     <LayoutFlex direction="column">
       {(page.mode.isEditing || props.fields?.Headline?.value !== '') && (
         <Heading size="lg" mb={4}>
-          <JssText field={props.fields.Headline} />
+          <ContentSdkText field={props.fields.Headline} />
         </Heading>
       )}
       <Accordion
@@ -59,12 +59,12 @@ const AccordionComponent = (props: AccordionProps): JSX.Element => {
               <AccordionItem key={index}>
                 <AccordionButton>
                   <Box flex="1" textAlign="left" fontWeight="semibold">
-                    <JssText field={element.fields.Title} />
+                    <ContentSdkText field={element.fields.Title} />
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>
                 <AccordionPanel>
-                  <JssRichText field={element.fields.Text} />
+                  <ContentSdkRichText field={element.fields.Text} />
                 </AccordionPanel>
               </AccordionItem>
             ))

@@ -2,9 +2,9 @@ import React, { JSX } from 'react';
 import { Box, Heading, Text, Flex } from '@chakra-ui/react';
 import {
   TextField,
-  Text as JssText,
+  Text as ContentSdkText,
   RichTextField,
-  RichText as JssRichText,
+  RichText as ContentSdkRichText,
   withDatasourceCheck,
   useSitecore,
 } from '@sitecore-content-sdk/nextjs';
@@ -36,7 +36,7 @@ const VideoTextComponent = (props: VideoTextProps): JSX.Element => {
       <LayoutFlex direction="column">
         {(page.mode.isEditing || props.fields.Headline?.value !== '') && (
           <Heading as="h2" fontSize="30px" fontWeight="bold" mb="33px">
-            <JssText field={props.fields.Headline} />
+            <ContentSdkText field={props.fields.Headline} />
           </Heading>
         )}
         <Flex direction={{ base: 'column', md: 'row' }} flexGrow={1} columnGap="20" rowGap="10">
@@ -57,14 +57,14 @@ const VideoTextComponent = (props: VideoTextProps): JSX.Element => {
           <Box w={{ base: '100%', md: '50%' }}>
             {(page.mode.isEditing || props.fields.TextHeadline?.value !== '') && (
               <Heading as="h3" fontWeight="bold" mb={{ base: '10px', md: '20px' }}>
-                <JssText field={props.fields.TextHeadline} />
+                <ContentSdkText field={props.fields.TextHeadline} />
               </Heading>
             )}
-            <Text as={JssRichText} mb={6} fontSize="18px" field={props.fields.Text} />
+            <Text as={ContentSdkRichText} mb={6} fontSize="18px" field={props.fields.Text} />
             {page.mode.isEditing && (
               <Box>
                 {'Youtube Video Id: '}
-                <JssText field={props.fields.YoutubeVideoId} />
+                <ContentSdkText field={props.fields.YoutubeVideoId} />
               </Box>
             )}
           </Box>

@@ -5,8 +5,8 @@ import {
   TextField,
   ImageField,
   LinkField,
-  Text as JssText,
-  Link as JssLink,
+  Text as ContentSdkText,
+  Link as ContentSdkLink,
   withDatasourceCheck,
 } from '@sitecore-content-sdk/nextjs';
 
@@ -52,18 +52,18 @@ const HeroHomepageComponent = (props: HeroProps): JSX.Element => {
         py={{ base: '30px', md: '60px' }}
       >
         <Heading as="h1" fontSize="3xl" fontWeight="bold" mb="33px">
-          <JssText field={props.fields.Headline} />
+          <ContentSdkText field={props.fields.Headline} />
         </Heading>
 
         {isSitecoreTextFieldPopulated(props.fields.EventDate) && (
           <Text fontSize="18px" mb={6}>
-            <JssText field={props.fields.EventDate} />
+            <ContentSdkText field={props.fields.EventDate} />
           </Text>
         )}
 
         {isSitecoreTextFieldPopulated(props.fields.Text) && (
           <Text mb={6} fontSize="18px">
-            <JssText field={props.fields.Text} />
+            <ContentSdkText field={props.fields.Text} />
           </Text>
         )}
 
@@ -110,18 +110,18 @@ const HeroEventComponent = (props: HeroProps): JSX.Element => {
         py={{ base: '30px', md: '60px' }}
       >
         <Heading as="h1" fontSize="3xl" fontWeight="bold" mb="33px">
-          <JssText field={props.fields.Headline} />
+          <ContentSdkText field={props.fields.Headline} />
         </Heading>
 
         {isSitecoreTextFieldPopulated(props.fields.EventDate) && (
           <Text fontSize="18px" mb={6}>
-            <JssText field={props.fields.EventDate} />
+            <ContentSdkText field={props.fields.EventDate} />
           </Text>
         )}
 
         {isSitecoreTextFieldPopulated(props.fields.Text) && (
           <Text mb={6} fontSize="18px">
-            <JssText field={props.fields.Text} />
+            <ContentSdkText field={props.fields.Text} />
           </Text>
         )}
 
@@ -162,16 +162,16 @@ const HeroJustificationLetterComponent = (props: HeroProps): JSX.Element => {
         my={{ base: '20px', lg: '30px' }}
       >
         <Heading as="h2" fontSize="3xl" color="black" fontWeight="bold" mb="33px">
-          <JssText field={props.fields.Headline} />
+          <ContentSdkText field={props.fields.Headline} />
         </Heading>
 
         {isSitecoreTextFieldPopulated(props.fields.Text) && (
           <Text mb={6} fontSize="18px" color="black">
-            <JssText field={props.fields.Text} />
+            <ContentSdkText field={props.fields.Text} />
           </Text>
         )}
 
-        <Button as={JssLink} field={props?.fields?.CallToAction} variant="secondary" size="md">
+        <Button as={ContentSdkLink} field={props?.fields?.CallToAction} variant="secondary" size="md">
           {props?.fields?.CallToAction?.value?.text}
         </Button>
       </LayoutFlex>
