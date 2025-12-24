@@ -36,7 +36,15 @@ export const Banner = (props: LogoProps): JSX.Element => {
       ? 'hero-banner-empty'
       : '';
   const backgroundStyle = { backgroundImage: `url('${props?.fields?.Image?.value?.src}')` };
-  const id = props?.params?.RenderingIdentifier || undefined;
+  const modifyImageProps = {
+    ...props.fields.Image,
+    value: {
+      ...props.fields.Image.value,
+      width: props.fields.Image.value?.width ?? "100",
+      height: props.fields.Image.value?.height ?? "100",
+    }
+  };
+const id = props?.params?.RenderingIdentifier || undefined;
 
   return (
     <div
@@ -44,7 +52,7 @@ export const Banner = (props: LogoProps): JSX.Element => {
       id={id}
     >
       <div className="component-content sc-sxa-image-hero-banner" style={backgroundStyle}>
-        {page.mode.isEditing ? <ContentSdkImage field={props.fields.Image} /> : ''}
+        {page.mode.isEditing ? <ContentSdkImage field={modifyImageProps} /> : ''}
       </div>
     </div>
   );
@@ -54,8 +62,17 @@ export const Default = (props: LogoProps): JSX.Element => {
   const { page } = useSitecore();
 
   if (props.fields) {
-    const Image = () => <ContentSdkImage field={props.fields.Image} />;
     const id = props?.params?.RenderingIdentifier || undefined;
+    const modifyImageProps = {
+      ...props.fields.Image,
+      value: {
+        ...props.fields.Image.value,
+        width: props.fields.Image.value?.width ?? "100",
+        height: props.fields.Image.value?.height ?? "100",
+      }
+    };
+
+    console.log(modifyImageProps);
 
     return (
       <Box
@@ -66,10 +83,10 @@ export const Default = (props: LogoProps): JSX.Element => {
       >
         <Flex w={{ base: 155, lg: 190 }}>
           {page.mode.isEditing || !props?.fields?.TargetUrl?.value?.href ? (
-            <Image />
+            <ContentSdkImage field={modifyImageProps} width="100" height="100" />
           ) : (
             <ContentSdkLink field={props?.fields?.TargetUrl}>
-              <Image />
+              <ContentSdkImage field={modifyImageProps} />
             </ContentSdkLink>
           )}
         </Flex>
