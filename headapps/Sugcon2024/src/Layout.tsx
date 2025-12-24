@@ -76,40 +76,38 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
       {process.env.NEXT_PUBLIC_GTAG && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GTAG} />}
 
       <div className={mainClassPageEditing}>
-        <ChakraProvider theme={theme}>
-          {mode.isDesignLibrary ? (
-            route && (
-              <DesignLibraryApp
-                page={page}
-                rendering={route}
-                componentMap={componentMap}
-                loadServerImportMap={() => import(".sitecore/import-map.server")}
-              />
-            )
-          ) : (
-            <>
-              {/* root placeholder for the app, which we add components to using route data */}
-              <Header page={page}
-                      componentMap={componentMap}
-                      route={route} />
-              <main>
-                <div id="content">
-                  {route && (
-                    <AppPlaceholder
-                      page={page}
-                      componentMap={componentMap}
-                      name="headless-main"
-                      rendering={route}
-                    />
-                  )}
-                </div>
-              </main>
-              <Footer page={page}
-                      componentMap={componentMap}
-                      route={route} />
-            </>
-          )}
-        </ChakraProvider>
+        {mode.isDesignLibrary ? (
+          route && (
+            <DesignLibraryApp
+              page={page}
+              rendering={route}
+              componentMap={componentMap}
+              loadServerImportMap={() => import(".sitecore/import-map.server")}
+            />
+          )
+        ) : (
+          <ChakraProvider theme={theme}>
+            {/* root placeholder for the app, which we add components to using route data */}
+            <Header page={page}
+              componentMap={componentMap}
+              route={route} />
+            <main>
+              <div id="content">
+                {route && (
+                  <AppPlaceholder
+                    page={page}
+                    componentMap={componentMap}
+                    name="headless-main"
+                    rendering={route}
+                  />
+                )}
+              </div>
+            </main>
+            <Footer page={page}
+              componentMap={componentMap}
+              route={route} />
+          </ChakraProvider>
+        )}
       </div>
     </>
   );
