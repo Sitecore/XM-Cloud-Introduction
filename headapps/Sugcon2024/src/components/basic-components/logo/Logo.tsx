@@ -72,8 +72,6 @@ export const Default = (props: LogoProps): JSX.Element => {
       }
     };
 
-    console.log(modifyImageProps);
-
     return (
       <Box
         className={`component image header-image ${props?.params?.styles}`}

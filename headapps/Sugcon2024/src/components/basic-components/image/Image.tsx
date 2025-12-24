@@ -57,8 +57,6 @@ export const Banner = (props: ImageProps): JSX.Element => {
 export const Default = (props: ImageProps): JSX.Element => {
   const { page } = useSitecore();
 
-  console.log(props);
-
   if (props.fields) {
     const id = props.params.RenderingIdentifier;
 

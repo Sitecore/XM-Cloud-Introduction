@@ -12,6 +12,7 @@ import {
   Page,
   ComponentMap,
   Placeholder,
+  AppPlaceholder,
 } from '@sitecore-content-sdk/nextjs';
 import {
   Box,
@@ -99,7 +100,9 @@ export const Default = (props: NavigationProps): JSX.Element => {
       navigationMenuItems={navigationMenuItems}
       onToggle={onToggle}
       pageEditing={page.mode.isEditing}
-      rendering={props.rendering}
+      page={page}
+      componentMap={props.componentMap}
+      route={props.route}
     />
   );
 
@@ -139,17 +142,21 @@ export const Default = (props: NavigationProps): JSX.Element => {
 };
 
 interface ResponsiveNavigationProps {
+  page: Page;
+  componentMap: ComponentMap;
+  route: RouteData;
   navigationMenuItems: Fields[];
   onToggle?: () => void;
   pageEditing: boolean | undefined;
-  rendering: ComponentRendering;
 }
 
 const ResponsiveNavigation = ({
   navigationMenuItems,
   onToggle,
   pageEditing,
-  rendering,
+  page,
+  componentMap,
+  route,
 }: ResponsiveNavigationProps): JSX.Element => {
   return (
     <Box as="nav" role="navigation" aria-label="SUGCON" ml={{ base: 0, lg: 'auto' }}>
@@ -189,7 +196,12 @@ const ResponsiveNavigation = ({
             );
           })}
         <ListItem>
-          <Placeholder name="button-link" rendering={rendering} />
+          <AppPlaceholder
+                      page={page}
+                      componentMap={componentMap}
+                      name="button-link"
+                      rendering={route}
+                    />
         </ListItem>
       </UnorderedList>
     </Box>
