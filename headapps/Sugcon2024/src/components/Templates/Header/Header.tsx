@@ -28,6 +28,7 @@ export const Header = ({ route, page, componentMap }: HeaderDefaultProps): JSX.E
                       componentMap={componentMap}
                       name="headless-header"
                       rendering={route}
+                      disableSuspense={true}
                     />}
       </LayoutFlex>
     </Flex>

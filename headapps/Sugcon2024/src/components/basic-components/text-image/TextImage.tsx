@@ -2,11 +2,11 @@ import React, { JSX } from 'react';
 import { Heading, Text, Image, Flex, Container } from '@chakra-ui/react';
 import {
   TextField,
-  Text as JssText,
+  Text as ContentSdkText,
   RichTextField,
-  RichText as JssRichText,
+  RichText as ContentSdkRichText,
   ImageField,
-  Image as JssImage,
+  Image as ContentSdkImage,
   withDatasourceCheck,
 } from '@sitecore-content-sdk/nextjs';
 import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
@@ -33,14 +33,14 @@ const TextImageComponent = (props: TextImageProps): JSX.Element => {
     <LayoutFlex flexWrap="wrap">
       <Container minW={{ base: '100%', lg: '50%' }} flex="1" pr={{ base: '0', lg: '120' }} pl="0">
         <Heading as="h2" fontSize="3xl" fontWeight="bold" mb="33px">
-          <JssText field={props.fields.Headline} />
+          <ContentSdkText field={props.fields.Headline} />
         </Heading>
-        <Text as={JssRichText} mb={6} fontSize="18px" field={props.fields.Text} />
+        <Text as={ContentSdkRichText} mb={6} fontSize="18px" field={props.fields.Text} />
       </Container>
 
       <Flex minW={{ base: '100%', lg: '50%' }} flex="1">
         <Image
-          as={JssImage}
+          as={ContentSdkImage}
           src={props.fields.Image?.value?.src}
           alt={props.fields.Image?.value?.alt as string}
           width="400px"

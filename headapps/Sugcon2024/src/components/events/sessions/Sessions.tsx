@@ -1,3 +1,5 @@
+'use client';
+
 import React, { JSX } from 'react';
 import { Field, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
 import useSWR from 'swr';

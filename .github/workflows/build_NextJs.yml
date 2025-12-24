@@ -6,17 +6,18 @@ on:
       workingDirectory:
         required: true
         type: string
-    
+    secrets:
+      SITECORE_EDGE_CONTEXT_ID:
+        required: true
+
 jobs:
 
   build:
     name: Build the NextJs Application
     runs-on: ubuntu-latest
     env:
-      FETCH_WITH: GraphQL
-      GRAPH_QL_ENDPOINT: https://www.google.com
-      DISABLE_SSG_FETCH: true
-      SITECORE_API_HOST: https://www.google.com
+      GENERATE_STATIC_PATHS: false
+      SITECORE_EDGE_CONTEXT_ID: ${{ secrets.SITECORE_EDGE_CONTEXT_ID }}
     defaults:
       run:
         working-directory: ${{ inputs.workingDirectory }}

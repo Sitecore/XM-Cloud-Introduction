@@ -38,6 +38,7 @@
     "next-intl": "^4.3.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-slick": "^0.31.0",
     "rsc-env": "0.0.2",
     "swr": "^2.3.8",
     "tailwind-bootstrap-grid": "^6.0.0"
@@ -49,6 +50,7 @@
     "@types/node": "^22.15.14",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
+    "@types/react-slick": "^0.23.13",
     "cross-env": "^10.0.0",
     "eslint": "^9.33.0",
     "eslint-config-next": "^15.5.9",
@@ -58,15 +60,16 @@
     "typescript": "~5.8.3"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm-run-all --serial sitecore-tools:generate-map sitecore-tools:build next:build",
+    "build": "cross-env NODE_ENV=production npm-run-all --serial sitecore-tools:generate-map sitecore-tools:build sitecore-tools:fix-ts next:build",
     "lint": "eslint ./src/**/*.tsx ./src/**/*.ts",
     "next:build": "next build",
     "next:dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "next:start": "next start",
     "sitecore-tools:generate-map": "sitecore-tools project component generate-map",
     "sitecore-tools:generate-map:watch": "sitecore-tools project component generate-map --watch",
+    "sitecore-tools:fix-ts": "node scripts/fix-sitecore-ts.js",
     "sitecore-tools:build": "sitecore-tools project build",
-    "dev": "cross-env NODE_ENV=development npm-run-all --serial sitecore-tools:generate-map sitecore-tools:build --parallel next:dev sitecore-tools:generate-map:watch",
+    "dev": "cross-env NODE_ENV=development npm-run-all --serial sitecore-tools:generate-map sitecore-tools:build sitecore-tools:fix-ts --parallel next:dev sitecore-tools:generate-map:watch",
     "start": "cross-env-shell NODE_ENV=production npm-run-all --serial build next:start"
   }
 }

@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Below are built-in components that are available in the app, it's recommended to keep them as is
 
 import { BYOCServerWrapper, NextjsContentSdkComponent, FEaaSServerWrapper } from '@sitecore-content-sdk/nextjs';
@@ -13,6 +14,7 @@ import * as PartialDesignDynamicPlaceholder from 'src/components/page-structure/
 import * as LayoutFlex from 'src/components/page-structure/layout-flex/LayoutFlex';
 import * as Container from 'src/components/page-structure/container/Container';
 import * as ColumnSplitter from 'src/components/page-structure/column-splitter/ColumnSplitter';
+import * as TestimonialList from 'src/components/list-components/testimonial-list/TestimonialList';
 import * as SponsorListingLogoWithPopup from 'src/components/list-components/sponsor-listing/SponsorListing.LogoWithPopup';
 import * as SponsorListingLogoOnly from 'src/components/list-components/sponsor-listing/SponsorListing.LogoOnly';
 import * as SponsorListingFullDetails from 'src/components/list-components/sponsor-listing/SponsorListing.FullDetails';
@@ -21,6 +23,7 @@ import * as PeopleGrid from 'src/components/list-components/people-grid/PeopleGr
 import * as LinkList from 'src/components/list-components/link-list/LinkList';
 import * as IconLinkList from 'src/components/list-components/icon-link-list/IconLinkList';
 import * as Accordion from 'src/components/list-components/accordion/Accordion';
+import * as Venue from 'src/components/events/venue/Venue';
 import * as Sessions from 'src/components/events/sessions/Sessions';
 import * as EventTeaser from 'src/components/events/event-teaser/EventTeaser';
 import * as Event from 'src/components/events/event/Event';
@@ -55,12 +58,14 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['LayoutFlex', { ...LayoutFlex }],
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
+  ['TestimonialList', { ...TestimonialList }],
   ['SponsorListing', { ...SponsorListingLogoWithPopup, ...SponsorListingLogoOnly, ...SponsorListingFullDetails, ...SponsorListing }],
   ['PeopleGrid', { ...PeopleGrid }],
   ['LinkList', { ...LinkList }],
   ['IconLinkList', { ...IconLinkList }],
   ['Accordion', { ...Accordion }],
-  ['Sessions', { ...Sessions }],
+  ['Venue', { ...Venue, componentType: 'client' }],
+  ['Sessions', { ...Sessions, componentType: 'client' }],
   ['EventTeaser', { ...EventTeaser }],
   ['Event', { ...Event }],
   ['Agenda', { ...Agenda, componentType: 'client' }],

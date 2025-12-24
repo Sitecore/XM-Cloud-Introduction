@@ -1,18 +1,18 @@
-export const enum HeaderHeights {
+export enum HeaderHeights {
   Mobile = '75px',
   Desktop = '111px',
 }
 
-export const enum Template {
+export enum Template {
   MaxWidth = '1440px',
 }
 
-export const enum PaddingX {
+export enum PaddingX {
   Mobile = '25px',
   Desktop = '35px',
 }
 
-export const enum PaddingY {
+export enum PaddingY {
   Mobile = '15px',
   Desktop = '25px',
 }

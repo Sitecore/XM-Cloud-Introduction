@@ -1,7 +1,7 @@
 import { isDesignLibraryPreviewData } from "@sitecore-content-sdk/nextjs/editing";
 import { notFound } from "next/navigation";
 import { draftMode } from "next/headers";
-import { SiteInfo, HTMLLink } from "@sitecore-content-sdk/nextjs";
+import { SiteInfo } from "@sitecore-content-sdk/nextjs";
 import sites from ".sitecore/sites.json";
 import { routing } from "src/i18n/routing";
 import scConfig from "sitecore.config";

@@ -1,7 +1,6 @@
 import React, { JSX } from 'react';
-import { Box, Link } from '@chakra-ui/react';
-import { ButtonLink } from 'src/basics/ButtonLink';
-import { LinkField, Link as ContentSdkLink, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
+import { Box, Link as ChakraLink } from '@chakra-ui/react';
+import { LinkField, Link as ContentSdkLink } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 // Define the type of props that Link will accept
@@ -14,10 +13,10 @@ export type LinkProps = ComponentProps & {
   fields: Fields;
 };
 
-const LinkComponent = (props: LinkProps): JSX.Element => {
+export const Link = (props: LinkProps): JSX.Element => {
   return (
     <Box>
-      <Link
+      <ChakraLink
         as={ContentSdkLink}
         field={props.fields.Link}
         isExternal={props.fields?.Link?.value?.target == '_blank'}
@@ -26,10 +25,4 @@ const LinkComponent = (props: LinkProps): JSX.Element => {
   );
 };
 
-export const Default = withDatasourceCheck()<LinkProps>(LinkComponent);
-
-const LinkButton = (props: LinkProps): JSX.Element => {
-  return <ButtonLink field={props.fields.Link} />;
-};
-
-export const Button = withDatasourceCheck()<LinkProps>(LinkButton);
+export default Link;

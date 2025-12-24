@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import { Link as ContentSDKLink, Text, LinkField, TextField } from '@sitecore-content-sdk/nextjs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -6,8 +6,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { Flex, UnorderedList } from '@chakra-ui/react';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { library } = require('@fortawesome/fontawesome-svg-core');
+import { library } from '@fortawesome/fontawesome-svg-core';
 
 library.add(fas, far, fab);
 
