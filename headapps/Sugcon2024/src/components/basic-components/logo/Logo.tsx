@@ -66,9 +66,9 @@ export const Default = (props: LogoProps): JSX.Element => {
     const modifyImageProps = {
       ...props.fields.Image,
       value: {
-        ...props.fields.Image.value,
-        width: props.fields.Image.value?.width ?? "100",
-        height: props.fields.Image.value?.height ?? "100",
+        ...props.fields.Image?.value,
+        width: props.fields.Image?.value?.width ?? "100",
+        height: props.fields.Image?.value?.height ?? "100",
       }
     };
 

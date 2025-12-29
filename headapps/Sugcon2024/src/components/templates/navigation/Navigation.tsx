@@ -11,7 +11,6 @@ import {
   RouteData,
   Page,
   ComponentMap,
-  Placeholder,
   AppPlaceholder,
 } from '@sitecore-content-sdk/nextjs';
 import {
@@ -71,14 +70,13 @@ const homeFields: Fields = {
 
 export const Default = (props: NavigationProps): JSX.Element => {
   const { page } = useSitecore();
-
   const { isOpen, onToggle } = useDisclosure();
 
   if (!Object.values(props.fields).length) {
     return (
       <Box
         className={`component navigation ${props?.params?.GridParameters} ${props?.params?.Styles}`}
-        id={props.rendering.uid}
+        id={props.rendering.componentName}
       >
         <Box className="component-content">[Navigation]</Box>
       </Box>
@@ -103,6 +101,7 @@ export const Default = (props: NavigationProps): JSX.Element => {
       page={page}
       componentMap={props.componentMap}
       route={props.route}
+      rendering={props.rendering}
     />
   );
 
@@ -146,6 +145,7 @@ interface ResponsiveNavigationProps {
   componentMap: ComponentMap;
   route: RouteData;
   navigationMenuItems: Fields[];
+  rendering: ComponentRendering;
   onToggle?: () => void;
   pageEditing: boolean | undefined;
 }
@@ -156,7 +156,7 @@ const ResponsiveNavigation = ({
   pageEditing,
   page,
   componentMap,
-  route,
+  rendering,
 }: ResponsiveNavigationProps): JSX.Element => {
   return (
     <Box as="nav" role="navigation" aria-label="SUGCON" ml={{ base: 0, lg: 'auto' }}>
@@ -197,11 +197,11 @@ const ResponsiveNavigation = ({
           })}
         <ListItem>
           <AppPlaceholder
-                      page={page}
-                      componentMap={componentMap}
-                      name="button-link"
-                      rendering={route}
-                    />
+            page={page}
+            componentMap={componentMap}
+            name="button-link"
+            rendering={rendering}
+          />
         </ListItem>
       </UnorderedList>
     </Box>
