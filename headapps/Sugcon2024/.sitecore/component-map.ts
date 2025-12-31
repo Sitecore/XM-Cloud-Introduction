@@ -82,7 +82,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['PageTitle', { ...PageTitle }],
   ['PageContent', { ...PageContent }],
   ['Logo', { ...Logo }],
-  ['Link', { ...LinkButton, ...Link }],
+  ['Link', { ...LinkButton, ...Link, componentType: 'client' }],
   ['Image', { ...Image }],
   ['Hero', { ...Hero }],
   ['ErrorMessage', { ...ErrorMessage }],

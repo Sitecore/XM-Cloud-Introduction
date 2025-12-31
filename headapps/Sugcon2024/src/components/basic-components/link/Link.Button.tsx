@@ -1,3 +1,4 @@
+'use client';
 import React, { JSX } from 'react';
 import { ButtonLink } from 'src/basics/ButtonLink';
 import { LinkProps } from './Link';

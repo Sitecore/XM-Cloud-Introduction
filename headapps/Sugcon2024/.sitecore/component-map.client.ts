@@ -13,6 +13,8 @@ import * as Sessions from 'src/components/events/sessions/Sessions';
 import * as Event from 'src/components/events/event/Event';
 import * as Agenda from 'src/components/events/agenda/Agenda';
 import * as Person from 'src/components/basic-components/person/Person';
+import * as LinkButton from 'src/components/basic-components/link/Link.Button';
+import * as Link from 'src/components/basic-components/link/Link';
 
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCClientWrapper],
@@ -27,6 +29,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Event', { ...Event }],
   ['Agenda', { ...Agenda }],
   ['Person', { ...Person }],
+  ['Link', { ...LinkButton, ...Link }],
 ]);
 
 export default componentMap;

@@ -1,3 +1,4 @@
+'use client';
 import React, { JSX } from 'react';
 import { Box, Link as ChakraLink } from '@chakra-ui/react';
 import { LinkField, Link as ContentSdkLink, Page } from '@sitecore-content-sdk/nextjs';
