@@ -20,6 +20,7 @@ import * as SponsorListingLogoWithPopup from 'src/components/list-components/spo
 import * as SponsorListingLogoOnly from 'src/components/list-components/sponsor-listing/SponsorListing.LogoOnly';
 import * as SponsorListingFullDetails from 'src/components/list-components/sponsor-listing/SponsorListing.FullDetails';
 import * as SponsorListing from 'src/components/list-components/sponsor-listing/SponsorListing';
+import * as SpeakersGrid from 'src/components/list-components/speakers-grid/SpeakersGrid';
 import * as PeopleGrid from 'src/components/list-components/people-grid/PeopleGrid';
 import * as LinkList from 'src/components/list-components/link-list/LinkList';
 import * as IconLinkList from 'src/components/list-components/icon-link-list/IconLinkList';
@@ -62,6 +63,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['ColumnSplitter', { ...ColumnSplitter }],
   ['TestimonialList', { ...TestimonialList }],
   ['SponsorListing', { ...SponsorListingLogoWithPopup, ...SponsorListingLogoOnly, ...SponsorListingFullDetails, ...SponsorListing }],
+  ['SpeakersGrid', { ...SpeakersGrid, componentType: 'client' }],
   ['PeopleGrid', { ...PeopleGrid }],
   ['LinkList', { ...LinkList }],
   ['IconLinkList', { ...IconLinkList }],
@@ -69,14 +71,14 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Venue', { ...Venue, componentType: 'client' }],
   ['Sessions', { ...Sessions, componentType: 'client' }],
   ['EventTeaser', { ...EventTeaser }],
-  ['Event', { ...Event }],
+  ['Event', { ...Event, componentType: 'client' }],
   ['Agenda', { ...Agenda, componentType: 'client' }],
   ['VideoText', { ...VideoText }],
   ['Title', { ...Title }],
   ['TextImage', { ...TextImage }],
   ['RichText', { ...RichText }],
   ['Promo', { ...Promo }],
-  ['Person', { ...Person }],
+  ['Person', { ...Person, componentType: 'client' }],
   ['PageTitle', { ...PageTitle }],
   ['PageContent', { ...PageContent }],
   ['Logo', { ...Logo }],

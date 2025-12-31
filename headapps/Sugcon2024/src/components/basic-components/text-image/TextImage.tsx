@@ -1,13 +1,12 @@
 import React, { JSX } from 'react';
-import { Heading, Text, Image, Flex, Container } from '@chakra-ui/react';
+import { Heading, Box, Flex, Container } from '@chakra-ui/react';
 import {
   TextField,
   Text as ContentSdkText,
   RichTextField,
   RichText as ContentSdkRichText,
   ImageField,
-  Image as ContentSdkImage,
-  withDatasourceCheck,
+  Image as ContentSdkImage
 } from '@sitecore-content-sdk/nextjs';
 import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
 import { ComponentProps } from 'lib/component-props';
@@ -35,25 +34,21 @@ const TextImageComponent = (props: TextImageProps): JSX.Element => {
         <Heading as="h2" fontSize="3xl" fontWeight="bold" mb="33px">
           <ContentSdkText field={props.fields.Headline} />
         </Heading>
-        <Text as={ContentSdkRichText} mb={6} fontSize="18px" field={props.fields.Text} />
+        <Box mb={6} fontSize="18px" className="rich-text-content">
+          <ContentSdkRichText field={props.fields.Text} />
+        </Box>
       </Container>
 
       <Flex minW={{ base: '100%', lg: '50%' }} flex="1">
-        <Image
-          as={ContentSdkImage}
-          src={props.fields.Image?.value?.src}
-          alt={props.fields.Image?.value?.alt as string}
-          width="400px"
-          height="100%"
-          w="100%"
-          h="auto"
-          borderRadius={15}
-          margin="0 auto"
-          field={props.fields.Image}
-        />
+        <Box w="100%" borderRadius={15} overflow="hidden" margin="0 auto">
+          <ContentSdkImage
+            field={props.fields.Image}
+            style={{ width: '100%', height: 'auto' }}
+          />
+        </Box>
       </Flex>
     </LayoutFlex>
   );
 };
 
-export const Default = withDatasourceCheck()<TextImageProps>(TextImageComponent);
+export const Default = TextImageComponent;

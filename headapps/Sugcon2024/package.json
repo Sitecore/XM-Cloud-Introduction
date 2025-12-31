@@ -33,6 +33,7 @@
     "@sitecore-cloudsdk/events": "^0.5.4",
     "@sitecore-content-sdk/nextjs": "^1.0.0",
     "bootstrap": "^5.3.8",
+    "cheerio": "^1.1.2",
     "font-awesome": "^4.7.0",
     "next": "^15.5.9",
     "next-intl": "^4.3.5",

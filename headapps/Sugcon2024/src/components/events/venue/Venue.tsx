@@ -8,6 +8,7 @@ import {
   Text as ContentSdkText,
   Item,
   withDatasourceCheck,
+  Page,
 } from '@sitecore-content-sdk/nextjs';
 import { Box, Flex, Heading, Icon, Image, Stack } from '@chakra-ui/react';
 import { ButtonLink } from 'src/basics/ButtonLink';
@@ -30,6 +31,7 @@ interface Fields {
 
 export type VenueProps = ComponentProps & {
   fields: Fields;
+  page: Page;
 };
 
 /**
@@ -90,7 +92,7 @@ const VenueComponent = (props: VenueProps): JSX.Element => {
           FieldText={props?.fields?.AdditionalInfoText}
         />
 
-        <ButtonLink field={props?.fields?.ButtonLink} />
+        <ButtonLink field={props?.fields?.ButtonLink} page={props.page} />
       </Flex>
 
       <Flex minW={{ base: '100%', lg: '50%' }}>

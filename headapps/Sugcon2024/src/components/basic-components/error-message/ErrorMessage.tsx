@@ -5,7 +5,6 @@ import {
   Text as ContentSdkText,
   RichTextField,
   RichText as ContentSdkRichText,
-  withDatasourceCheck,
 } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 
@@ -58,4 +57,4 @@ const ErrorMessageComponent = (props: ErrorMessageProps): JSX.Element => {
   );
 };
 
-export const Default = withDatasourceCheck()<ErrorMessageProps>(ErrorMessageComponent);
+export const Default = ErrorMessageComponent;

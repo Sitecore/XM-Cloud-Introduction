@@ -6,7 +6,7 @@ import {
   Field,
   LinkField,
   Text,
-  useSitecore,
+  Page,
 } from '@sitecore-content-sdk/nextjs';
 
 interface ImageFields {
@@ -18,6 +18,7 @@ interface ImageFields {
 type ImageProps = {
   params: { [key: string]: string };
   fields: ImageFields;
+  page: Page;
 };
 
 const ImageDefault = (props: ImageProps): JSX.Element => (
@@ -29,7 +30,7 @@ const ImageDefault = (props: ImageProps): JSX.Element => (
 );
 
 export const Banner = (props: ImageProps): JSX.Element => {
-  const { page } = useSitecore();
+  const { page } = props;
   const classHeroBannerEmpty =
     page.mode.isEditing && props.fields?.Image?.value?.class === 'scEmptyImage'
       ? 'hero-banner-empty'
@@ -55,7 +56,7 @@ export const Banner = (props: ImageProps): JSX.Element => {
 };
 
 export const Default = (props: ImageProps): JSX.Element => {
-  const { page } = useSitecore();
+  const { page } = props;
 
   if (props.fields) {
     const id = props.params.RenderingIdentifier;
