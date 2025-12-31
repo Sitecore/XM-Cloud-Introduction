@@ -26,6 +26,7 @@ import {
   Text as ContentSdkText,
   RichText as ContentSdkRichText,
   useSitecore,
+  Page,
 } from '@sitecore-content-sdk/nextjs';
 
 // Define the type of props that Hero will accept
@@ -56,6 +57,7 @@ export type PersonProps = {
   params: { [key: string]: string };
   fields: PersonFields;
   isPeopleGrid?: boolean;
+  page: Page;
 };
 
 export const Default = (props: PersonProps): JSX.Element => {

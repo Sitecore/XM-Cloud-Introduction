@@ -6,6 +6,7 @@ import {
   TextField,
   Text as ContentSdkText,
   withDatasourceCheck,
+  Page,
 } from '@sitecore-content-sdk/nextjs';
 import { PersonFields, PersonProps, Default as Person } from 'src/components/basic-components/person/Person';
 import * as cheerio from 'cheerio';
@@ -43,6 +44,7 @@ interface PersonItem {
 
 export type PeopleGridProps = ComponentProps & {
   fields: Fields;
+  page: Page;
 };
 
 function getPeople(sessionTitle: string, body: string) {
@@ -146,6 +148,7 @@ const PeopleGridComponent = (props: PeopleGridProps): JSX.Element => {
           const pp: PersonProps = {
             params: props.params,
             fields: person.fields,
+            page: props.page,
           };
           return <Person key={idx} {...pp}></Person>;
         })}
