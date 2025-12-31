@@ -1,6 +1,6 @@
 import React, { JSX } from 'react';
 import { Box, Heading } from '@chakra-ui/react';
-import { LinkField, Text, TextField, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { LinkField, Page, Text, TextField } from '@sitecore-content-sdk/nextjs';
 import bg from 'src/assets/images/SUGCON-hero-artwork.jpg';
 import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
 
@@ -36,12 +36,13 @@ interface Fields {
 type PageTitleProps = {
   params: { [key: string]: string };
   fields: Fields;
+  page: Page;
 };
 
 export const Default = (props: PageTitleProps): JSX.Element => {
   //const id = props.params.RenderingIdentifier;
   const datasource = props.fields?.data?.datasource || props.fields?.data?.contextItem;
-  const { page } = useSitecore();
+  const { page } = props;
 
   const text: TextField = {
     value: datasource?.field?.jsonValue?.value,

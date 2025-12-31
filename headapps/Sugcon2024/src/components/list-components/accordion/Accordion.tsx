@@ -4,8 +4,7 @@ import {
   Text as ContentSdkText,
   RichTextField,
   RichText as ContentSdkRichText,
-  withDatasourceCheck,
-  useSitecore,
+  Page
 } from '@sitecore-content-sdk/nextjs';
 import {
   Accordion,
@@ -39,10 +38,11 @@ interface Fields {
 
 type AccordionProps = ComponentProps & {
   fields: Fields;
+  page: Page;
 };
 
 const AccordionComponent = (props: AccordionProps): JSX.Element => {
-  const { page } = useSitecore();
+  const { page } = props;
   return (
     <LayoutFlex direction="column">
       {(page.mode.isEditing || props.fields?.Headline?.value !== '') && (
@@ -74,4 +74,4 @@ const AccordionComponent = (props: AccordionProps): JSX.Element => {
   );
 };
 
-export const Default = withDatasourceCheck()<AccordionProps>(AccordionComponent);
+export const Default = AccordionComponent;

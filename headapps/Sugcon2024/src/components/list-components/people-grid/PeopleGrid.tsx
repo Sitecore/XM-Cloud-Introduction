@@ -1,6 +1,6 @@
 import React, { JSX } from 'react';
 import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
-import { TextField, Text as ContentSdkText, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
+import { TextField, Text as ContentSdkText, Page } from '@sitecore-content-sdk/nextjs';
 import { PersonFields, PersonProps, Default as Person } from 'src/components/basic-components/person/Person';
 import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
 import { ComponentProps } from 'lib/component-props';
@@ -34,6 +34,7 @@ export interface Person {
 
 export type PeopleGridProps = ComponentProps & {
   fields: Fields;
+  page: Page;
 };
 
 const PeopleGridComponent = (props: PeopleGridProps): JSX.Element => {
@@ -62,6 +63,7 @@ const PeopleGridComponent = (props: PeopleGridProps): JSX.Element => {
               params: props.params,
               fields: person.fields,
               isPeopleGrid: true,
+              page: props.page,
             };
             return <Person key={idx} {...pp}></Person>;
           })}
@@ -71,4 +73,4 @@ const PeopleGridComponent = (props: PeopleGridProps): JSX.Element => {
   );
 };
 
-export const Default = withDatasourceCheck()<PeopleGridProps>(PeopleGridComponent);
+export const Default = PeopleGridComponent;

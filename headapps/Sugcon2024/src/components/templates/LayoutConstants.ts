@@ -17,6 +17,15 @@ export enum PaddingY {
   Desktop = '25px',
 }
 
+export const layoutFlexStyles = {
+  width: 'full',
+  maxW: Template.MaxWidth,
+  px: { base: PaddingX.Mobile, lg: PaddingX.Desktop },
+  py: { base: PaddingY.Mobile, lg: PaddingY.Desktop },
+  my: { base: '10px', lg: '20px' },
+  mx: 'auto',
+} as const;
+
 type SizeConfig = {
   [key: string]: string;
 };

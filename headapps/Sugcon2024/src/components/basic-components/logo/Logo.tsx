@@ -6,7 +6,7 @@ import {
   Field,
   LinkField,
   Text,
-  useSitecore,
+  Page
 } from '@sitecore-content-sdk/nextjs';
 import { Box, Flex } from '@chakra-ui/react';
 
@@ -19,6 +19,7 @@ interface Fields {
 type LogoProps = {
   params: { [key: string]: string };
   fields: Fields;
+  page: Page;
 };
 
 const LogoDefault = (props: LogoProps): JSX.Element => (
@@ -30,7 +31,7 @@ const LogoDefault = (props: LogoProps): JSX.Element => (
 );
 
 export const Banner = (props: LogoProps): JSX.Element => {
-  const { page } = useSitecore();
+  const { page } = props;
   const classHeroBannerEmpty =
   page.mode.isEditing && props.fields?.Image?.value?.class === 'scEmptyImage'
       ? 'hero-banner-empty'
@@ -59,7 +60,7 @@ const id = props?.params?.RenderingIdentifier || undefined;
 };
 
 export const Default = (props: LogoProps): JSX.Element => {
-  const { page } = useSitecore();
+  const { page } = props;
 
   if (props.fields) {
     const id = props?.params?.RenderingIdentifier || undefined;

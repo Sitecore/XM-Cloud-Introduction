@@ -1,16 +1,12 @@
-'use client';
-
 import { JSX } from "react";
 import { Field, Page, ImageField, AppPlaceholder, DesignLibraryApp } from "@sitecore-content-sdk/nextjs";
 import Scripts from "src/Scripts";
 import SitecoreStyles from "components/content-sdk/SitecoreStyles";
 import componentMap from ".sitecore/component-map";
 import Head from "next/head";
-import { usePathname } from "next/navigation";
-import { ChakraProvider } from "@chakra-ui/react";
-import theme from './Theme';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Header } from "components/templates/header/Header";
+import { HeaderMeta } from "components/templates/header/HeaderMeta";
 import { Footer } from "components/templates/footer/Footer";
 
 interface LayoutProps {
@@ -32,13 +28,6 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
   const { layout, mode } = page;
   const { route } = layout.sitecore;
   const fields = route?.fields as RouteFields;
-
-  const origin = typeof window !== 'undefined' && window.location.origin ? window.location.origin : '';
-
-  const pathname = usePathname();
-  const canonicalUrl = (origin + (pathname === '/' ? '' : pathname)).split('?')[0];
-
-
   const mainClassPageEditing = mode.isEditing ? "editing-mode" : "prod-mode";
 
   return (
@@ -48,27 +37,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
       <Head>
         <title>{fields?.Title?.value?.toString() || 'Page'}</title>
 
-        <meta
-          key="metadesc"
-          name="description"
-          content={fields?.MetaDescription?.value?.toString()}
-        />
-        <meta
-          key="metakeywords"
-          name="keywords"
-          content={fields?.MetaKeywords?.value?.toString()}
-        />
-        <meta
-          key="metaviewport"
-          name="viewport"
-          content="width=device-width, height=device-height"
-        />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content={fields?.OGTitle?.value?.toString()} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content={fields?.OGImage?.value?.src?.toString()} />
-        <meta property="og:type" content={fields?.OGType?.value?.toString()} />
-        <meta property="og:description" content={fields?.OGDescription?.value?.toString()} />
+        <HeaderMeta fields={fields} />
 
         <link rel="icon" href={`/favicon.ico`} />
       </Head>
@@ -86,7 +55,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
             />
           )
         ) : (
-          <ChakraProvider theme={theme}>
+          <>
             {/* root placeholder for the app, which we add components to using route data */}
             <Header page={page}
               componentMap={componentMap}
@@ -106,7 +75,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
             <Footer page={page}
               componentMap={componentMap}
               route={route} />
-          </ChakraProvider>
+          </>
         )}
       </div>
     </>

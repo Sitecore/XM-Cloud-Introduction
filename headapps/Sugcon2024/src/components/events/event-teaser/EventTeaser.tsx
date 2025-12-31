@@ -1,6 +1,6 @@
 import React, { JSX } from 'react';
 import { Heading, Grid } from '@chakra-ui/react';
-import { TextField, Text as ContentSdkText } from '@sitecore-content-sdk/nextjs';
+import { TextField, Text as ContentSdkText, Page } from '@sitecore-content-sdk/nextjs';
 import { Fields as EventFields, Default as Event } from '../../events/event/Event';
 import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
 
@@ -34,6 +34,7 @@ interface Event {
 export type EventTeaserProps = {
   params: { [key: string]: string };
   fields: Fields;
+  page: Page;
 };
 
 export const Default = (props: EventTeaserProps): JSX.Element => {
@@ -49,7 +50,7 @@ export const Default = (props: EventTeaserProps): JSX.Element => {
         gap="30px"
       >
         {props?.fields?.Events.map((event, idx) => {
-          return <Event key={idx} {...event?.fields}></Event>;
+          return <Event key={idx} {...event?.fields} page={props.page}></Event>;
         })}
       </Grid>
     </LayoutFlex>

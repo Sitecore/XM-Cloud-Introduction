@@ -7,6 +7,7 @@ import { Form } from '@sitecore-content-sdk/nextjs';
 // end of built-in components
 import * as LayoutConstants from 'src/components/templates/LayoutConstants';
 import * as Navigation from 'src/components/templates/navigation/Navigation';
+import * as HeaderMeta from 'src/components/templates/header/HeaderMeta';
 import * as Header from 'src/components/templates/header/Header';
 import * as Footer from 'src/components/templates/footer/Footer';
 import * as RowSplitter from 'src/components/page-structure/row-splitter/RowSplitter';
@@ -51,6 +52,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Form', Form],
   ['LayoutConstants', { ...LayoutConstants }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
+  ['HeaderMeta', { ...HeaderMeta, componentType: 'client' }],
   ['Header', { ...Header }],
   ['Footer', { ...Footer }],
   ['RowSplitter', { ...RowSplitter }],

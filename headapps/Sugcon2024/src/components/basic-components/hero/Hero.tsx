@@ -7,7 +7,7 @@ import {
   LinkField,
   Text as ContentSdkText,
   Link as ContentSdkLink,
-  withDatasourceCheck,
+  Page,
 } from '@sitecore-content-sdk/nextjs';
 
 import { ButtonLink } from '../../../basics/ButtonLink';
@@ -40,6 +40,7 @@ interface Fields {
 
 export type HeroProps = ComponentProps & {
   fields: Fields;
+  page: Page;
 };
 
 const HeroHomepageComponent = (props: HeroProps): JSX.Element => {
@@ -69,7 +70,7 @@ const HeroHomepageComponent = (props: HeroProps): JSX.Element => {
 
         {isSitecoreLinkFieldPopulated(props.fields.CallToAction) && (
           <Box width="auto" alignSelf="start">
-            <ButtonLink field={props.fields.CallToAction} />
+            <ButtonLink field={props.fields.CallToAction} page={props.page} />
           </Box>
         )}
       </Box>
@@ -90,7 +91,7 @@ const HeroHomepageComponent = (props: HeroProps): JSX.Element => {
   );
 };
 
-export const HeroHomepage = withDatasourceCheck()<HeroProps>(HeroHomepageComponent);
+export const HeroHomepage = HeroHomepageComponent;
 
 const HeroEventComponent = (props: HeroProps): JSX.Element => {
   return (
@@ -127,7 +128,7 @@ const HeroEventComponent = (props: HeroProps): JSX.Element => {
 
         {isSitecoreLinkFieldPopulated(props.fields.CallToAction) && (
           <Box width="auto" alignSelf="start">
-            <ButtonLink field={props.fields.CallToAction} />
+            <ButtonLink field={props.fields.CallToAction} page={props.page} />
           </Box>
         )}
       </Box>
@@ -148,7 +149,7 @@ const HeroEventComponent = (props: HeroProps): JSX.Element => {
   );
 };
 
-export const HeroEvent = withDatasourceCheck()<HeroProps>(HeroEventComponent);
+export const HeroEvent = HeroEventComponent;
 
 const HeroJustificationLetterComponent = (props: HeroProps): JSX.Element => {
   return (
@@ -206,6 +207,4 @@ const HeroJustificationLetterComponent = (props: HeroProps): JSX.Element => {
   );
 };
 
-export const HeroJustificationLetter = withDatasourceCheck()<HeroProps>(
-  HeroJustificationLetterComponent
-);
+export const HeroJustificationLetter = HeroJustificationLetterComponent;

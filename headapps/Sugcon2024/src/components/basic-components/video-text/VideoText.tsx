@@ -5,8 +5,7 @@ import {
   Text as ContentSdkText,
   RichTextField,
   RichText as ContentSdkRichText,
-  withDatasourceCheck,
-  useSitecore,
+  Page
 } from '@sitecore-content-sdk/nextjs';
 import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
 import { ComponentProps } from 'lib/component-props';
@@ -28,9 +27,10 @@ interface Fields {
 
 export type VideoTextProps = ComponentProps & {
   fields: Fields;
+  page: Page;
 };
 const VideoTextComponent = (props: VideoTextProps): JSX.Element => {
-  const { page } = useSitecore();
+  const { page } = props;
   return (
     <Box w="100%">
       <LayoutFlex direction="column">
@@ -74,4 +74,4 @@ const VideoTextComponent = (props: VideoTextProps): JSX.Element => {
   );
 };
 
-export const Default = withDatasourceCheck()<VideoTextProps>(VideoTextComponent);
+export const Default = VideoTextComponent;

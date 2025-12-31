@@ -8,6 +8,8 @@ import {
 } from "@sitecore-content-sdk/nextjs";
 import scConfig from "sitecore.config";
 import components from ".sitecore/component-map.client";
+import { ChakraProvider } from "@chakra-ui/react";
+import theme from "./Theme";
 
 export default function Providers({
   children,
@@ -19,15 +21,17 @@ export default function Providers({
   componentProps?: ComponentPropsCollection;
 }) {
   return (
-    <SitecoreProvider
-      api={scConfig.api}
-      componentMap={components}
-      page={page}
-      loadImportMap={() => import(".sitecore/import-map.client")}
-    >
-      <ComponentPropsContext value={componentProps}>
-        {children}
-      </ComponentPropsContext>
-    </SitecoreProvider>
+    <ChakraProvider theme={theme}>
+      <SitecoreProvider
+        api={scConfig.api}
+        componentMap={components}
+        page={page}
+        loadImportMap={() => import(".sitecore/import-map.client")}
+      >
+        <ComponentPropsContext value={componentProps}>
+          {children}
+        </ComponentPropsContext>
+      </SitecoreProvider>
+    </ChakraProvider>
   );
 }

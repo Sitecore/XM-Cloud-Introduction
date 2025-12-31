@@ -5,6 +5,7 @@ import { BYOCClientWrapper, NextjsContentSdkComponent, FEaaSClientWrapper } from
 import { Form } from '@sitecore-content-sdk/nextjs';
 
 import * as Navigation from 'src/components/templates/navigation/Navigation';
+import * as HeaderMeta from 'src/components/templates/header/HeaderMeta';
 import * as Venue from 'src/components/events/venue/Venue';
 import * as Sessions from 'src/components/events/sessions/Sessions';
 import * as Agenda from 'src/components/events/agenda/Agenda';
@@ -14,6 +15,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['FEaaSWrapper', FEaaSClientWrapper],
   ['Form', Form],
   ['Navigation', { ...Navigation }],
+  ['HeaderMeta', { ...HeaderMeta }],
   ['Venue', { ...Venue }],
   ['Sessions', { ...Sessions }],
   ['Agenda', { ...Agenda }],
