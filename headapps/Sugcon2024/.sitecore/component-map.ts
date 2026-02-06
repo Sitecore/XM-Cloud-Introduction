@@ -7,7 +7,6 @@ import { Form } from '@sitecore-content-sdk/nextjs';
 // end of built-in components
 import * as LayoutConstants from 'src/components/templates/LayoutConstants';
 import * as Navigation from 'src/components/templates/navigation/Navigation';
-import * as HeaderMeta from 'src/components/templates/header/HeaderMeta';
 import * as Header from 'src/components/templates/header/Header';
 import * as Footer from 'src/components/templates/footer/Footer';
 import * as RowSplitter from 'src/components/page-structure/row-splitter/RowSplitter';
@@ -16,8 +15,6 @@ import * as LayoutFlex from 'src/components/page-structure/layout-flex/LayoutFle
 import * as Container from 'src/components/page-structure/container/Container';
 import * as ColumnSplitter from 'src/components/page-structure/column-splitter/ColumnSplitter';
 import * as TestimonialList from 'src/components/list-components/testimonial-list/TestimonialList';
-import * as SponsorListingLogoWithPopup from 'src/components/list-components/sponsor-listing/SponsorListing.LogoWithPopup';
-import * as SponsorListingLogoOnly from 'src/components/list-components/sponsor-listing/SponsorListing.LogoOnly';
 import * as SponsorListingFullDetails from 'src/components/list-components/sponsor-listing/SponsorListing.FullDetails';
 import * as SponsorListing from 'src/components/list-components/sponsor-listing/SponsorListing';
 import * as SpeakersGrid from 'src/components/list-components/speakers-grid/SpeakersGrid';
@@ -53,7 +50,6 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Form', Form],
   ['LayoutConstants', { ...LayoutConstants }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
-  ['HeaderMeta', { ...HeaderMeta, componentType: 'client' }],
   ['Header', { ...Header }],
   ['Footer', { ...Footer }],
   ['RowSplitter', { ...RowSplitter }],
@@ -62,7 +58,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
   ['TestimonialList', { ...TestimonialList }],
-  ['SponsorListing', { ...SponsorListingLogoWithPopup, ...SponsorListingLogoOnly, ...SponsorListingFullDetails, ...SponsorListing }],
+  ['SponsorListing', { ...SponsorListingFullDetails, ...SponsorListing }],
   ['SpeakersGrid', { ...SpeakersGrid, componentType: 'client' }],
   ['PeopleGrid', { ...PeopleGrid }],
   ['LinkList', { ...LinkList }],

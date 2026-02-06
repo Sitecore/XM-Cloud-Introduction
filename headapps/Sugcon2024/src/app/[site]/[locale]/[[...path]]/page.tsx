@@ -1,6 +1,7 @@
 import { isDesignLibraryPreviewData } from "@sitecore-content-sdk/nextjs/editing";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { draftMode } from "next/headers";
+import { draftMode, headers } from "next/headers";
 import { SiteInfo } from "@sitecore-content-sdk/nextjs";
 import sites from ".sitecore/sites.json";
 import { routing } from "src/i18n/routing";
@@ -90,10 +91,35 @@ export const generateMetadata = async ({ params }: PageProps) => {
 
   // The same call as for rendering the page. Should be cached by default react behavior
   const page = await client.getPage(path ?? [], { site, locale });
+  const fields = page?.layout.sitecore.route?.fields as RouteFields | undefined;
+  const title = fields?.Title?.value?.toString() || "Page";
+  const description = fields?.MetaDescription?.value?.toString();
+  const keywords = fields?.MetaKeywords?.value?.toString();
+  const ogTitle = fields?.OGTitle?.value?.toString() || title;
+  const ogDescription = fields?.OGDescription?.value?.toString() || description;
+  const ogImage = fields?.OGImage?.value?.src?.toString();
+  const canonicalPath = `/${[site, locale, ...(path ?? [])].filter(Boolean).join("/")}`;
+  const requestHeaders = await headers();
+  const forwardedHost = requestHeaders.get("x-forwarded-host");
+  const host = forwardedHost || requestHeaders.get("host");
+  const protocol = requestHeaders.get("x-forwarded-proto") || "https";
+  const metadataBase = host ? new URL(`${protocol}://${host}`) : undefined;
+  const openGraph: Metadata["openGraph"] | undefined =
+    ogTitle || ogDescription || ogImage
+      ? {
+          title: ogTitle,
+          description: ogDescription,
+          url: canonicalPath,
+          ...(ogImage ? { images: [ogImage] } : {}),
+        }
+      : undefined;
+
   return {
-    title:
-      (
-        page?.layout.sitecore.route?.fields as RouteFields
-      )?.Title?.value?.toString() || "Page",
+    title,
+    ...(description ? { description } : {}),
+    ...(keywords ? { keywords } : {}),
+    alternates: { canonical: canonicalPath },
+    ...(metadataBase ? { metadataBase } : {}),
+    ...(openGraph ? { openGraph } : {}),
   };
 };
