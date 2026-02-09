@@ -1,0 +1,9 @@
+﻿@model MvpSite.Rendering.Models.Mvp.LicenseDownloadModel
+
+@if (Model.IsCurrentMvp)
+{
+    <div class="mvp-fs-mvplicensedownload col-sm-12 col-md-6 bg-white">
+        <h2 asp-for="TitleLabel"></h2>
+        <a asp-for="DownloadMyLicenseLink" class="btn btn-primary" href="@Url.Action("DownloadLicense", "MvpProfile")" role="button"></a>
+    </div>
+}
