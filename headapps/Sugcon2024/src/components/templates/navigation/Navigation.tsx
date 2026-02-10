@@ -1,0 +1,367 @@
+'use client';
+import React, { JSX } from 'react';
+import {
+  ComponentParams,
+  ComponentRendering,
+  LinkField,
+  Link as SitecoreLink,
+  Text,
+  TextField,
+  useSitecore,
+  RouteData,
+  Page,
+  ComponentMap,
+  AppPlaceholder,
+} from '@sitecore-content-sdk/nextjs';
+import {
+  Box,
+  Flex,
+  UnorderedList,
+  ListItem,
+  Button,
+  IconButton,
+  VisuallyHidden,
+  useDisclosure,
+  Collapse,
+  Show,
+  useStyleConfig,
+} from '@chakra-ui/react';
+import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
+import { HeaderHeights, PaddingX, PaddingY } from 'components/templates/LayoutConstants';
+
+export interface Fields {
+  Id: string;
+  DisplayName?: string;
+  Title?: TextField;
+  NavigationTitle: TextField;
+  Href: string;
+  Querystring: string;
+  Children?: Fields[];
+  Styles: string[];
+}
+
+export type NavigationProps = {
+  params?: ComponentParams;
+  fields: Fields;
+  rendering: ComponentRendering;
+  className?: string;
+  route: RouteData;
+  page: Page;
+  componentMap: ComponentMap
+};
+
+interface NavigationItemProps {
+  element: Fields;
+  key?: number;
+  onToggle?: () => void;
+  pageEditing: boolean | undefined;
+}
+
+const homeFields: Fields = {
+  Id: 'home',
+  DisplayName: 'Home',
+  Title: { value: 'Home' },
+  NavigationTitle: { value: 'Home' },
+  Href: '/',
+  Querystring: '',
+  Children: [],
+  Styles: ['level1'], // Add any specific styles if needed
+};
+
+export const Default = (props: NavigationProps): JSX.Element => {
+  const { page } = useSitecore();
+  const { isOpen, onToggle } = useDisclosure();
+
+  if (!Object.values(props.fields).length) {
+    return (
+      <Box
+        className={`component navigation ${props?.params?.GridParameters} ${props?.params?.Styles}`}
+        id={props.rendering.componentName}
+      >
+        <Box className="component-content">[Navigation]</Box>
+      </Box>
+    );
+  }
+
+  const navigationMenuItems = [homeFields, ...Object.values(props.fields)];
+
+  interface RenderNavigationProps {
+    onToggle?: () => void;
+  }
+
+  const renderNavigation = ({
+    onToggle = () => {
+      /* intentionally left blank */
+    },
+  }: RenderNavigationProps = {}): JSX.Element => (
+    <ResponsiveNavigation
+      navigationMenuItems={navigationMenuItems}
+      onToggle={onToggle}
+      pageEditing={page.mode.isEditing}
+      page={page}
+      componentMap={props.componentMap}
+      route={props.route}
+      rendering={props.rendering}
+    />
+  );
+
+  return (
+    <>
+      {/* Desktop Nav Items */}
+      <Show above="lg">{renderNavigation()}</Show>
+
+      {/* Mobile Content */}
+      <Show below="lg">
+        {/* Hamburgler */}
+        <MobileHamburgerIconButton isOpen={isOpen} onToggle={onToggle} />
+
+        {/* Mobile Nav Items */}
+        <Collapse in={isOpen} animateOpacity>
+          <Box
+            id="mobile-menu"
+            p={4}
+            bg="white"
+            pos="absolute"
+            top={HeaderHeights.Mobile}
+            left={0}
+            right={0}
+            w="full"
+            maxH={`calc(100vh - ${HeaderHeights.Mobile})`}
+            overflowY="scroll"
+            shadow="lg"
+            borderBlockEnd="1px"
+            borderBlockEndColor="sugcon.gray.300"
+          >
+            {renderNavigation({ onToggle })}
+          </Box>
+        </Collapse>
+      </Show>
+    </>
+  );
+};
+
+interface ResponsiveNavigationProps {
+  page: Page;
+  componentMap: ComponentMap;
+  route: RouteData;
+  navigationMenuItems: Fields[];
+  rendering: ComponentRendering;
+  onToggle?: () => void;
+  pageEditing: boolean | undefined;
+}
+
+const ResponsiveNavigation = ({
+  navigationMenuItems,
+  onToggle,
+  pageEditing,
+  page,
+  componentMap,
+  rendering,
+}: ResponsiveNavigationProps): JSX.Element => {
+  return (
+    <Box as="nav" role="navigation" aria-label="SUGCON" ml={{ base: 0, lg: 'auto' }}>
+      <UnorderedList
+        display={{ base: 'block', lg: 'flex' }}
+        flexWrap="wrap"
+        mb="0"
+        pl="0"
+        ml="0"
+        textAlign={{ base: 'center', lg: 'unset' }}
+        className="navigationContainer"
+      >
+        {navigationMenuItems
+          .filter((element) => element)
+          .map((element, key) => {
+            const hasChildren = !!element?.Children?.length;
+            return (
+              <ListItem
+                key={key}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                position="relative"
+                mr={{ base: '0', lg: PaddingX.Desktop }}
+                mb={{ base: PaddingY.Desktop, lg: '0' }}
+              >
+                {hasChildren ? (
+                  <NavigationItemWithChildren
+                    element={element}
+                    onToggle={onToggle}
+                    pageEditing={pageEditing}
+                  />
+                ) : (
+                  <NavigationItem element={element} onToggle={onToggle} pageEditing={pageEditing} />
+                )}
+              </ListItem>
+            );
+          })}
+        <ListItem>
+          <AppPlaceholder
+            page={page}
+            componentMap={componentMap}
+            name="button-link"
+            rendering={rendering}
+          />
+        </ListItem>
+      </UnorderedList>
+    </Box>
+  );
+};
+
+const NavigationItemWithChildren = ({
+  element,
+  onToggle,
+  pageEditing,
+}: NavigationItemProps): JSX.Element => {
+  const { isOpen, getDisclosureProps, getButtonProps } = useDisclosure();
+
+  const buttonProps = getButtonProps();
+  const disclosureProps = getDisclosureProps();
+  return (
+    <Flex flexDirection="column">
+      <Button
+        {...buttonProps}
+        variant="navButtonLink"
+        size={{ base: 'navButtonLinkSm', lg: 'navButtonLinkLg' }}
+        mr={{ base: '-23px', lg: '0' }}
+        rightIcon={isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
+        className={`${element?.Styles}`}
+      >
+        {getNavigationText(element)}
+      </Button>
+      <Box position={{ base: 'relative', lg: 'absolute' }} top="100%" width="3xs" minWidth="3xs">
+        <Collapse id={disclosureProps.id} in={isOpen} animateOpacity>
+          <UnorderedList
+            py="5px"
+            px="0"
+            mx="0"
+            mt={{ base: '10px', lg: '0' }}
+            rounded="md"
+            border={{ base: '0', lg: '1px' }}
+            backgroundColor={{ base: 'gray.100', lg: 'white' }}
+            borderColor={{ base: 'unset', lg: 'sugcon.gray.300' }}
+          >
+            {!!element?.Children?.length &&
+              element.Children.map((child, key) =>
+                renderChildNavigationItem({ element: child, key, onToggle, pageEditing })
+              )}
+          </UnorderedList>
+        </Collapse>
+      </Box>
+    </Flex>
+  );
+};
+
+const NavigationItem = ({ element, onToggle, pageEditing }: NavigationItemProps): JSX.Element => {
+  const styles = useStyleConfig('Link', { variant: 'navLink' });
+
+  return (
+    <Box __css={styles}>
+      <SitecoreLink
+        className={`${element?.Styles}`}
+        field={getLinkField(element)}
+        editable={pageEditing}
+        onClick={onToggle}
+      >
+        {getNavigationText(element)}
+      </SitecoreLink>
+    </Box>
+  );
+};
+
+// Render-function for rendering a single Sub-Menu child element as a ListItem with a Link.
+const renderChildNavigationItem = ({
+  element,
+  key,
+  onToggle,
+  pageEditing,
+}: NavigationItemProps): JSX.Element => (
+  <ListItem key={key} width="100%">
+    <Box
+      display="block"
+      px="12px"
+      py="6px"
+      width="100%"
+      fontWeight="bold"
+      color="sugcon.800"
+      _hover={{
+        base: { backgroundColor: 'unset' },
+        lg: { backgroundColor: 'sugcon.gray.100' },
+      }}
+      sx={{
+        '& a': {
+          textDecoration: 'none',
+          color: 'inherit',
+        },
+      }}
+    >
+      <SitecoreLink
+        className={`${element?.Styles}`}
+        field={getLinkField(element)}
+        editable={pageEditing}
+        onClick={onToggle}
+      >
+        {getNavigationText(element)}
+      </SitecoreLink>
+    </Box>
+  </ListItem>
+);
+
+interface MobileHamburgerIconButtonProps {
+  isOpen?: boolean;
+  onToggle?: () => void;
+}
+
+const MobileHamburgerIconButton = ({
+  isOpen,
+  onToggle,
+}: MobileHamburgerIconButtonProps): JSX.Element => {
+  const ariaText = `${isOpen ? 'Close' : 'Open'} Mobile Menu`;
+
+  return (
+    <IconButton
+      display={{ base: 'flex', lg: 'none' }}
+      h="30px"
+      width="35px"
+      ml="auto"
+      variant="link"
+      onClick={onToggle}
+      aria-label={ariaText}
+      aria-controls="mobile-menu"
+      aria-expanded={isOpen}
+      aria-haspopup="true"
+      icon={
+        <>
+          <VisuallyHidden>{ariaText}</VisuallyHidden>
+          <div id="mobile-hamburger-icon" className={`${isOpen ? 'open' : ''}`}>
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+        </>
+      }
+    />
+  );
+};
+
+// Constructs a LinkField object with href, title, and querystring properties from an element.
+const getLinkField = (element: Fields): LinkField => ({
+  value: {
+    href: element?.Href,
+    title: getLinkTitle(element),
+    querystring: element?.Querystring,
+  },
+});
+
+// Returns the most appropriate title string from an element, based on available fields.
+const getLinkTitle = (element: Fields): string | undefined =>
+  element?.NavigationTitle?.value?.toString() ||
+  element?.Title?.value?.toString() ||
+  element?.DisplayName;
+
+// Renders a Text component with the first available title field or returns the display name.
+const getNavigationText = (element: Fields): JSX.Element | string => {
+  const field = element?.NavigationTitle || element?.Title;
+  return field ? <Text field={field} /> : element?.DisplayName || '';
+};

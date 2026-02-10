@@ -1,0 +1,112 @@
+---
+description: JavaScript/TypeScript rules for your Sitecore App Router project
+alwaysApply: false
+globs:
+  - '**/*.js'
+  - '**/*.ts'
+  - '**/*.tsx'
+  - '**/*.mjs'
+---
+
+# JavaScript/TypeScript Rules
+
+## Naming Conventions
+
+Variables and Functions:
+
+- Use camelCase: `getUserData()`, `isLoading`, `currentUser`
+- Boolean variables: prefix with `is`, `has`, `can`, `should`
+- Event handlers: prefix with `handle` or `on`: `handleClick`, `onSubmit`
+
+Components (React):
+
+- Use PascalCase: `SitecoreComponent`, `PageLayout`, `ContentBlock`
+- File names match component names: `SitecoreComponent.tsx`
+
+Constants:
+
+- Use UPPER_SNAKE_CASE: `API_ENDPOINT`, `DEFAULT_TIMEOUT`, `MAX_RETRIES`
+- Export at module level when shared
+
+Directories:
+
+- Use kebab-case: `src/components`, `src/api-clients`, `src/sitecore-utils`
+- Organize by feature when appropriate: `src/content-management/`
+
+Types and Interfaces:
+
+- Use PascalCase with descriptive names: `ContentItem`, `LayoutProps`, `SitecoreConfig`
+- Prefix interfaces with `I` only when needed for disambiguation
+
+## Code Layout and Organization
+
+Directory Structure:
+
+```
+src/
+  app/                 # App Router pages and layouts
+  components/          # UI components (React)
+  lib/                 # Configuration and utilities
+  i18n/                # Internationalization setup
+  types/               # TypeScript type definitions
+```
+
+File Organization:
+
+- Server Components for data fetching and static content
+- Client Components for interactivity (use 'use client')
+- Group related functionality in feature directories
+- Keep components co-located with their styles and tests
+
+## Error Handling
+
+API Calls:
+
+- Always wrap in try/catch blocks
+- Throw custom errors with context: `SitecoreFetchError`, `ConfigurationError`
+- Handle edge cases with guard clauses
+
+```typescript
+async function fetchContent(id: string): Promise<ContentItem> {
+  if (!id) {
+    throw new Error('Content ID is required');
+  }
+
+  try {
+    const response = await sitecoreClient.getItem(id);
+    return response.data;
+  } catch (error) {
+    throw new SitecoreFetchError(`Failed to fetch content ${id}`, error);
+  }
+}
+```
+
+## Security
+
+Input Validation:
+
+- Sanitize user inputs before processing
+- Validate data at application boundaries
+- Use type guards for runtime type checking
+- Escape content when rendering to prevent XSS
+
+## Performance
+
+Optimization Patterns:
+
+- Cache API responses using React Query or SWR
+- Use Server Components for better performance
+- Lazy-load non-critical modules: `const Component = lazy(() => import('./Component'))`
+- Use useCallback and useMemo for expensive operations in Client Components
+
+TypeScript:
+
+- Enable strict mode in tsconfig.json
+- Prefer type assertions over any: `value as ContentItem`
+- Use discriminated unions for complex state management
+
+Referenced:
+@src/app/
+@src/components/
+@src/lib/
+

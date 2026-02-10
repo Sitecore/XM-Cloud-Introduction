@@ -1,0 +1,171 @@
+---
+description: Sitecore development patterns for your App Router project
+alwaysApply: false
+globs:
+  - 'src/app/**'
+  - 'src/components/**'
+  - 'src/lib/**'
+  - 'sitecore.config.ts'
+  - '**/*sitecore*'
+  - '**/*content*'
+---
+
+# Sitecore App Router Development
+
+## Server Component Patterns
+
+Sitecore Data Fetching:
+
+- Use Server Components for Sitecore content
+- Fetch data directly in components when possible
+- Handle loading and error states appropriately
+- Cache responses for better performance
+
+```typescript
+// Server Component example
+import { getLayoutData } from '@/lib/sitecore';
+
+export default async function SitecorePage({ params }: { params: { path: string[] } }) {
+  try {
+    const layoutData = await getLayoutData(params.path.join('/'));
+    return <SitecoreLayout layoutData={layoutData} />;
+  } catch (error) {
+    return <div>Content not found</div>;
+  }
+}
+```
+
+## Client Component Integration
+
+Interactive Sitecore Components:
+
+- Use 'use client' directive when needed
+- Keep client components focused on interactivity
+- Pass server-fetched data as props
+- Handle hydration mismatches carefully
+
+```typescript
+'use client';
+
+interface InteractiveSitecoreComponentProps {
+  fields: {
+    title: Field;
+    content: Field;
+  };
+}
+
+export default function InteractiveSitecoreComponent({
+  fields,
+}: InteractiveSitecoreComponentProps) {
+  // Client-side interactivity here
+  return (
+    <div>
+      <Text field={fields?.title} tag="h2" />
+      <RichText field={fields?.content} />
+    </div>
+  );
+}
+```
+
+## Component Development
+
+Sitecore Component Naming:
+
+- Use descriptive, feature-based names: `HeroWithContent`, `ProductListing`, `ContentBlockGrid`
+- Follow PascalCase convention
+- Include component type in name when helpful: `LayoutContainer`, `ContentRenderer`
+
+Field Handling:
+
+- Always validate field existence before rendering
+- Use helper functions for common field operations
+- Handle empty/null fields gracefully
+- Prefer Sitecore field components over manual rendering
+
+## Routing and Data
+
+Dynamic Routes:
+
+- Use [...path] for Sitecore catch-all routes
+- Handle route parameters appropriately
+- Implement proper 404 handling
+- Support preview mode when needed
+
+Layout and Loading:
+
+- Create layout.tsx for shared page structure
+- Implement loading.tsx for better UX
+- Use error.tsx for error boundaries
+- Handle metadata and SEO properly
+
+## Internationalization
+
+Multi-language Support:
+
+- Configure next-intl for language routing
+- Handle Sitecore language contexts
+- Implement language switching
+- Use proper locale-based data fetching
+
+```typescript
+// Language-aware data fetching
+import { getTranslations } from 'next-intl/server';
+
+export default async function LocalizedPage() {
+  const t = await getTranslations('common');
+  // Fetch Sitecore content for current locale
+}
+```
+
+## Configuration
+
+Environment Setup:
+
+- Use `.env.local` for local development
+- Never commit API keys to version control
+- Use `.env.example` to document required variables
+- Configure Sitecore endpoints in `sitecore.config.ts`
+
+```typescript
+// sitecore.config.ts
+import { defineConfig } from '@sitecore-content-sdk/nextjs/config';
+
+export default defineConfig({
+  api: {
+    edge: {
+      contextId: process.env.SITECORE_EDGE_CONTEXT_ID || '',
+      clientContextId: process.env.NEXT_PUBLIC_SITECORE_EDGE_CONTEXT_ID,
+      edgeUrl: process.env.SITECORE_EDGE_URL || 'https://edge-platform.sitecorecloud.io',
+    },
+    local: {
+      apiKey: process.env.SITECORE_API_KEY || '',
+      apiHost: process.env.SITECORE_API_HOST || '',
+    },
+  },
+  defaultSite: process.env.NEXT_PUBLIC_DEFAULT_SITE_NAME || 'default',
+  defaultLanguage: process.env.NEXT_PUBLIC_DEFAULT_LANGUAGE || 'en',
+  editingSecret: process.env.SITECORE_EDITING_SECRET,
+});
+```
+
+## Performance Optimization
+
+Server-Side Rendering:
+
+- Leverage SSR for Sitecore content
+- Use streaming for improved perceived performance
+- Implement proper caching headers
+- Optimize bundle size with Server Components
+
+Caching Strategies:
+
+- Cache Sitecore API responses appropriately
+- Use Next.js caching features
+- Handle content updates and cache invalidation
+- Consider CDN caching for static content
+
+Referenced:
+@src/app/
+@src/components/
+@src/i18n/
+@sitecore.config.ts

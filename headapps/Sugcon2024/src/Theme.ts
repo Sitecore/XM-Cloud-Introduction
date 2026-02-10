@@ -1,7 +1,7 @@
 import { extendTheme, ThemeConfig } from '@chakra-ui/react';
 import { defineStyleConfig } from '@chakra-ui/react';
 import { createMultiStyleConfigHelpers } from '@chakra-ui/styled-system';
-import { PaddingX, PaddingY, Template } from 'components/Templates/LayoutConstants';
+import { PaddingX, PaddingY, Template } from 'components/templates/LayoutConstants';
 
 const Button = defineStyleConfig({
   baseStyle: {

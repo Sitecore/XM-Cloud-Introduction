@@ -1,5 +1,5 @@
-import React from 'react';
-import { LinkField, Link as JssLink, useSitecoreContext } from '@sitecore-jss/sitecore-jss-nextjs';
+import React, { JSX } from 'react';
+import { LinkField, Link as ContentSdkLink, Page } from '@sitecore-content-sdk/nextjs';
 import { Button, Link } from '@chakra-ui/react';
 
 type ButtonLinkProps = {
@@ -8,18 +8,19 @@ type ButtonLinkProps = {
 
   // button variation
   variant?: string;
+
+  page: Page;
 };
 
 export const ButtonLink = (props: ButtonLinkProps): JSX.Element => {
-  const { sitecoreContext } = useSitecoreContext();
   const { href, target = '', text } = props.field.value;
-  const { variant = 'primary' } = props;
+  const { variant = 'primary', page } = props;
 
-  // If in Sitecore Experience Editor, return a JSS Link
-  if (sitecoreContext.pageEditing) {
+  // If in Sitecore Experience Editor, return a ContentSdkLink
+  if (page.mode.isEditing) {
     return (
       <Button variant={variant}>
-        <JssLink field={props.field} />
+        <ContentSdkLink field={props.field} />
       </Button>
     );
   }

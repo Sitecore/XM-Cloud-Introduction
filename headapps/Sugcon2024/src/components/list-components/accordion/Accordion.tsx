@@ -1,0 +1,77 @@
+import React, { JSX } from 'react';
+import {
+  TextField,
+  Text as ContentSdkText,
+  RichTextField,
+  RichText as ContentSdkRichText,
+  Page
+} from '@sitecore-content-sdk/nextjs';
+import {
+  Accordion,
+  AccordionIcon,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  Box,
+  Heading,
+} from '@chakra-ui/react';
+import { LayoutFlex } from 'components/page-structure/layout-flex/LayoutFlex';
+import { ComponentProps } from 'lib/component-props';
+
+interface AccordionElement {
+  fields: {
+    /** Title of an accordion item */
+    Title: TextField;
+
+    /** Text of an accordion item */
+    Text: RichTextField;
+  };
+}
+// Define the type of props that Accordion will accept
+interface Fields {
+  /** Headline of the accordion */
+  Headline: TextField;
+
+  /** Multilist containing accordion elements */
+  Elements: Array<AccordionElement>;
+}
+
+type AccordionProps = ComponentProps & {
+  fields: Fields;
+  page: Page;
+};
+
+const AccordionComponent = (props: AccordionProps): JSX.Element => {
+  const { page } = props;
+  return (
+    <LayoutFlex direction="column">
+      {(page.mode.isEditing || props.fields?.Headline?.value !== '') && (
+        <Heading size="lg" mb={4}>
+          <ContentSdkText field={props.fields.Headline} />
+        </Heading>
+      )}
+      <Accordion
+        allowMultiple
+        defaultIndex={page.mode.isEditing ? Array.from(props.fields.Elements.keys()) : []}
+      >
+        {props.fields.Elements?.length
+          ? props.fields.Elements.map((element, index) => (
+              <AccordionItem key={index}>
+                <AccordionButton>
+                  <Box flex="1" textAlign="left" fontWeight="semibold">
+                    <ContentSdkText field={element.fields.Title} />
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+                <AccordionPanel>
+                  <ContentSdkRichText field={element.fields.Text} />
+                </AccordionPanel>
+              </AccordionItem>
+            ))
+          : null}
+      </Accordion>
+    </LayoutFlex>
+  );
+};
+
+export const Default = AccordionComponent;

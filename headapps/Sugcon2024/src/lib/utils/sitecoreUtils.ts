@@ -1,4 +1,4 @@
-import { TextField } from '@sitecore-jss/sitecore-jss-nextjs';
+import { TextField } from '@sitecore-content-sdk/nextjs';
 
 interface SitecoreLinkField {
   value?: {
