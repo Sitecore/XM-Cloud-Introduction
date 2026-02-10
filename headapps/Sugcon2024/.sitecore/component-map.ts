@@ -15,6 +15,8 @@ import * as LayoutFlex from 'src/components/page-structure/layout-flex/LayoutFle
 import * as Container from 'src/components/page-structure/container/Container';
 import * as ColumnSplitter from 'src/components/page-structure/column-splitter/ColumnSplitter';
 import * as TestimonialList from 'src/components/list-components/testimonial-list/TestimonialList';
+import * as SponsorListingLogoWithPopup from 'src/components/list-components/sponsor-listing/SponsorListing.LogoWithPopup';
+import * as SponsorListingLogoOnly from 'src/components/list-components/sponsor-listing/SponsorListing.LogoOnly';
 import * as SponsorListingFullDetails from 'src/components/list-components/sponsor-listing/SponsorListing.FullDetails';
 import * as SponsorListing from 'src/components/list-components/sponsor-listing/SponsorListing';
 import * as SpeakersGrid from 'src/components/list-components/speakers-grid/SpeakersGrid';
@@ -58,7 +60,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Container', { ...Container }],
   ['ColumnSplitter', { ...ColumnSplitter }],
   ['TestimonialList', { ...TestimonialList }],
-  ['SponsorListing', { ...SponsorListingFullDetails, ...SponsorListing }],
+  ['SponsorListing', { ...SponsorListingLogoWithPopup, ...SponsorListingLogoOnly, ...SponsorListingFullDetails, ...SponsorListing, componentType: 'client' }],
   ['SpeakersGrid', { ...SpeakersGrid, componentType: 'client' }],
   ['PeopleGrid', { ...PeopleGrid }],
   ['LinkList', { ...LinkList }],

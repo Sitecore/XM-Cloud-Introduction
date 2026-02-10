@@ -15,8 +15,9 @@
 .env.*.local
 .env
 
-# Log files
-*.log*
+# Log files (use *.log and *.log.* to avoid matching names like .LogoOnly)
+*.log
+*.log.*
 
 # vercel
 .vercel

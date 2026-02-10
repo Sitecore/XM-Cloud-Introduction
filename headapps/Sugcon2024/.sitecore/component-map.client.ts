@@ -5,6 +5,10 @@ import { BYOCClientWrapper, NextjsContentSdkComponent, FEaaSClientWrapper } from
 import { Form } from '@sitecore-content-sdk/nextjs';
 
 import * as Navigation from 'src/components/templates/navigation/Navigation';
+import * as SponsorListingLogoWithPopup from 'src/components/list-components/sponsor-listing/SponsorListing.LogoWithPopup';
+import * as SponsorListingLogoOnly from 'src/components/list-components/sponsor-listing/SponsorListing.LogoOnly';
+import * as SponsorListingFullDetails from 'src/components/list-components/sponsor-listing/SponsorListing.FullDetails';
+import * as SponsorListing from 'src/components/list-components/sponsor-listing/SponsorListing';
 import * as SpeakersGrid from 'src/components/list-components/speakers-grid/SpeakersGrid';
 import * as Venue from 'src/components/events/venue/Venue';
 import * as Sessions from 'src/components/events/sessions/Sessions';
@@ -19,6 +23,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['FEaaSWrapper', FEaaSClientWrapper],
   ['Form', Form],
   ['Navigation', { ...Navigation }],
+  ['SponsorListing', { ...SponsorListingLogoWithPopup, ...SponsorListingLogoOnly, ...SponsorListingFullDetails, ...SponsorListing }],
   ['SpeakersGrid', { ...SpeakersGrid }],
   ['Venue', { ...Venue }],
   ['Sessions', { ...Sessions }],
