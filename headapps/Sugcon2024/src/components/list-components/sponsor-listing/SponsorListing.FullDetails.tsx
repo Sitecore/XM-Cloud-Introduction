@@ -1,3 +1,4 @@
+'use client';
 import React, { JSX } from 'react';
 import {
   Image as ContentSdkImage,
@@ -38,8 +39,7 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
           )}
           <SimpleGrid columns={{ base: 1, md: 2, lg: 2, xl: 2, '2xl': 2 }} spacing={20} w="full">
             {props.fields.Sponsors.map((sponsor) => (
-              <>
-                <Box>
+                <Box key={sponsor.fields.SponsorName.value}>
                   <Box
                     justifyContent="center"
                     alignItems="center"
@@ -57,7 +57,6 @@ export const FullDetails = (props: SponsorListingProps): JSX.Element => {
                   {/* Render sponsor URL as a link */}
                   <ChakraLink as={ContentSdkLink} field={sponsor.fields.SponsorURL} />
                 </Box>
-              </>
             ))}
           </SimpleGrid>
         </LayoutFlex>
