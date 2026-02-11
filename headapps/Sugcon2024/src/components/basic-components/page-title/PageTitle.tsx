@@ -41,7 +41,7 @@ type PageTitleProps = {
 
 export const Default = (props: PageTitleProps): JSX.Element => {
   //const id = props.params.RenderingIdentifier;
-  const datasource = props.fields?.data?.datasource || props.fields?.data?.contextItem;
+  const datasource = props.fields?.data?.datasource?.field ? props.fields?.data?.datasource : props.fields?.data?.contextItem;
   const { page } = props;
 
   const text: TextField = {
