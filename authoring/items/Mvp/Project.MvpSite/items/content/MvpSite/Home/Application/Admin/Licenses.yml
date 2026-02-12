@@ -1,0 +1,69 @@
+﻿---
+ID: "9b8ded11-438e-403f-b632-b059c6d787a4"
+Parent: "b7b943c4-555d-40e1-9677-c68726686119"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/Application/Admin/Licenses
+BranchID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
+SharedFields:
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "076dbde8-54e3-4b33-9d8c-536e1f320af9"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{54106B86-6182-40C4-A1AC-9DFF266513B9}"
+          p:before="*"
+          s:ds="{4D06FE15-E7C3-43AC-BCAE-1C9943866739}"
+          s:id="{C7FC9C77-EDF6-4232-A34B-3A0B4E5D54C9}"
+          s:par="CSSStyles"
+          s:ph="/main/column-container-{CA5F887A-413E-410E-B8E4-DDD4FEFBBBA8}-0" />
+        <r
+          uid="{CA5F887A-413E-410E-B8E4-DDD4FEFBBBA8}"
+          p:after="r[@uid='{54106B86-6182-40C4-A1AC-9DFF266513B9}']"
+          s:id="{57805937-D345-4A28-8DDF-C62EE43D8EBA}"
+          s:ph="main" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9AC6DDA3-8785-4C63-A2AB-457D8CC56D19}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260211T143117Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "cf55d17e-33bf-4129-9d36-96e0f43d218e"
+    - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
+      Hint: MenuTitle
+      Value: Licenses
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "c58ed264-1f55-4aa3-a30e-da12ce43cb38"
+      Hint: RequiresAuthentication
+      Value: 1
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260212T162512Z
+    - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
+      Hint: IncludeInMenu
+      Value: 

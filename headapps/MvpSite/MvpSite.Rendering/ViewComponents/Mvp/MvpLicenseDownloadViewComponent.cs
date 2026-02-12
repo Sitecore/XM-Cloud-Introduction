@@ -35,10 +35,10 @@ public class MvpLicenseDownloadViewComponent(IViewModelBinder modelBinder, MvpSe
     private async Task<bool> IsCurrentUserAnMvp()
     {
         bool result = false;
-        Response<User> currentUserResponse = await client.GetCurrentUserAsync();
+        Response<User> currentUserResponse = await Client.GetCurrentUserAsync();
         if (currentUserResponse is { StatusCode: HttpStatusCode.OK, Result: not null })
         {
-            Response<MvpProfile> mvpProfileResponse = await client.GetMvpProfileAsync(currentUserResponse.Result.Id);
+            Response<MvpProfile> mvpProfileResponse = await Client.GetMvpProfileAsync(currentUserResponse.Result.Id);
             if (mvpProfileResponse is { StatusCode: HttpStatusCode.OK, Result: not null })
             {
                 if (mvpProfileResponse.Result.Titles.Any(t => t.Application.Selection.Year == DateTime.UtcNow.Year))
