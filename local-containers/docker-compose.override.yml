@@ -51,6 +51,7 @@ services:
       - "traefik.http.routers.sugonna-secure.entrypoints=websecure"
       - "traefik.http.routers.sugonna-secure.tls=true"  
       - "traefik.http.routers.sugonna-secure.rule=Host(`${SUGCON_NA_HOST}`)"
+      - "traefik.http.services.sugcon2024.loadbalancer.server.port=3000"
       
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/api/healthz"]
@@ -96,7 +97,8 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.mvp-secure.entrypoints=websecure"
       - "traefik.http.routers.mvp-secure.rule=Host(`${MVP_RENDERING_HOST}`)"
-      - "traefik.http.routers.mvp-secure.tls=true"   
+      - "traefik.http.routers.mvp-secure.tls=true"
+      - "traefik.http.services.mvp-rendering.loadbalancer.server.port=80"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost/healthz"]
       interval: 60s
@@ -153,5 +155,7 @@ services:
       ## Development Environment Optimizations
       SITECORE_DEVELOPMENT_PATCHES: DevEnvOn,CustomErrorsOff,DebugOn,DiagnosticsOff,InitMessagesOff
       Sitecore_AppSettings_exmEnabled:define: "no" # remove to turn on EXM
-      MVP_RENDERING_EDITING_HOST_URI: "${RENDERING_HOST_INTERNAL_URI}/"
+      MVP_RENDERING_EDITING_HOST_URI: "https://${MVP_RENDERING_HOST}/"
     entrypoint: powershell -Command "& C:/tools/entrypoints/iis/XmCloudDevelopment.ps1"
+    labels:
+      - "traefik.http.services.cm.loadbalancer.server.port=80"

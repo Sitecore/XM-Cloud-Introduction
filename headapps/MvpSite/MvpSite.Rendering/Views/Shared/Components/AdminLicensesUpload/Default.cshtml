@@ -1,0 +1,20 @@
+﻿@model MvpSite.Rendering.Models.Admin.LicensesUploadModel
+
+<div class="mvp-fs-adminlicensesupload col-sm-12 col-md-6 bg-white">
+    <h2 asp-for="TitleLabel"></h2>
+    @if (Model.Success)
+    {
+        <div asp-for="SuccessText" class="alert alert-success" role="alert">
+        </div>
+    }
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="col">
+                <input asp-for="LicensesFile" type="file" class="form-control" />
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-secondary">@Model.UploadLabel?.Value</button>
+            </div>
+        </div>
+    </form>
+</div>

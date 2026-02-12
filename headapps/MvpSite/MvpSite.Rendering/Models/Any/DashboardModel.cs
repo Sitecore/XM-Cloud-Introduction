@@ -19,6 +19,8 @@ public class DashboardModel : BaseModel
 
     public HyperLinkField? AdminCountriesOverviewLink { get; set; }
 
+    public HyperLinkField? AdminLicensesUploadLink { get; set; }
+
     public HyperLinkField? ReviewApplicationsOverviewLink { get; set; }
 
     public HyperLinkField? MyUserOverviewLink { get; set; }

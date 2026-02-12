@@ -1,0 +1,7 @@
+@import "../_form.scss";
+
+.mvp-fs-mvplicensedownload {
+    padding: 2em;
+
+    @include form;
+}

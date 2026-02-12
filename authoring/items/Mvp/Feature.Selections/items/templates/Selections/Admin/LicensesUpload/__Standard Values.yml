@@ -1,0 +1,40 @@
+﻿---
+ID: "186bc23b-1eb4-403a-9a43-78af3e092845"
+Parent: "0a2d340b-59d8-48ad-84db-fee6efe8744d"
+Template: "0a2d340b-59d8-48ad-84db-fee6efe8744d"
+Path: /sitecore/templates/Feature/Selections/Admin/LicensesUpload/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260210T171315Z
+    - ID: "3817e70a-96f2-4c13-9cc9-6f2ae050aacf"
+      Hint: TitleLabel
+      Value: Licenses Upload
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "7b1e84bb-9bc4-44ac-95a6-8d5e7892a8fe"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "ce733bc4-b5aa-46a0-842b-5aa141638acb"
+      Hint: UploadLabel
+      Value: Upload
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260210T171345Z
+    - ID: "fd549b5a-854b-4e4e-bba5-1bb5dfede238"
+      Hint: SuccessText
+      Value: "Licenses were successfully uploaded!"

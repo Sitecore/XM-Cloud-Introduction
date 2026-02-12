@@ -78,6 +78,8 @@ public static class RenderingEngineOptionsExtensions
         options.AddViewComponent(SelectionOverviewViewComponent.ViewComponentName);
         options.AddViewComponent(MergeUsersViewComponent.ViewComponentName);
         options.AddViewComponent(MvpMentorDataViewComponent.ViewComponentName);
+        options.AddViewComponent(MvpLicenseDownloadViewComponent.ViewComponentName);
+        options.AddViewComponent(LicensesUploadViewComponent.ViewComponentName);
         return options;
     }
 }
