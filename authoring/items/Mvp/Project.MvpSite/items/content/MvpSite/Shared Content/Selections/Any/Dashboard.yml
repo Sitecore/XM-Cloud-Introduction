@@ -41,7 +41,7 @@ Languages:
         <link class="" id="{D296373D-623E-461B-8D7A-C274E23CBEDB}" querystring="" anchor="" target="" title="" linktype="internal" text="Manage Applications" url="/MvpSite/Home/Application/Admin/Applications" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b13eef3f-0b2b-42fc-b03c-74c0e6cf5baf"
+      Value: "c0bce944-9572-4bbb-9a83-8fd054eca682"
     - ID: "936da302-d3cd-4d65-88f9-b19ad9347885"
       Hint: AdminUsersOverviewLink
       Value: |
@@ -49,7 +49,7 @@ Languages:
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\ed7gR4aY22
+        sitecore\ivan.lieckens@sitecore.com
     - ID: "c5e13ef1-9849-4441-adbb-8e3f7f49fcc4"
       Hint: AdminMvpTypesOverviewLink
       Value: |
@@ -58,9 +58,13 @@ Languages:
       Hint: MyCurrentApplicationLink
       Value: |
         <link class="" id="{B3D36988-B4AE-4915-A6CF-F5133BE4E100}" querystring="" anchor="" target="" title="" linktype="internal" text="My current application" url="/MvpSite/Home/Application/Apply" />
+    - ID: "d6168583-fbbc-4318-a2eb-dd27f568650a"
+      Hint: AdminLicensesUploadLink
+      Value: |
+        <link text="Upload Licenses" anchor="" linktype="internal" class="" title="" target="_blank" querystring="" id="{9B8DED11-438E-403F-B632-B059C6D787A4}" />
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20231127T151753Z
+      Value: 20260212T164507Z
     - ID: "e638de5c-90a5-4764-a574-dfde0a612346"
       Hint: AdminSelectionsOverviewLink
       Value: |

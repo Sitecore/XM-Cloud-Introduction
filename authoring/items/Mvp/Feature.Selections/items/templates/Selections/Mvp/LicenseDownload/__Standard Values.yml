@@ -1,0 +1,38 @@
+﻿---
+ID: "baf0438e-8f9b-446e-8ddd-c1a3701b9ce1"
+Parent: "e1a5211d-faed-4777-8a9c-a87afcab1f82"
+Template: "e1a5211d-faed-4777-8a9c-a87afcab1f82"
+Path: /sitecore/templates/Feature/Selections/Mvp/LicenseDownload/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260209T093613Z
+    - ID: "4f4678ec-2bb0-42a6-b316-8daa438861e4"
+      Hint: DownloadMyLicenseLink
+      Value: |
+        <link text="Download My License" linktype="external" url="/MvpProfile/DownloadLicense" anchor="" target="" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "345054b1-36e0-45e3-a1ec-05eefc28c4cb"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "c71a5cd5-139a-4b71-b549-c7b667f83e72"
+      Hint: TitleLabel
+      Value: My MVP License
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260209T155956Z

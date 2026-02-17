@@ -151,7 +151,7 @@ app.UseStaticFiles();
 app.UseRequestLocalization(options =>
 {
     // If you add languages in Sitecore which this site / Rendering Host should support, add them here.
-    var supportedCultures = new List<CultureInfo> { new(DefaultLanguage) };
+    List<CultureInfo> supportedCultures = [new(DefaultLanguage)];
     options.DefaultRequestCulture = new RequestCulture(DefaultLanguage, DefaultLanguage);
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
@@ -187,6 +187,12 @@ app.MapControllerRoute(
     "MvpProfileCulturelessFallback",
     "directory/profile/{name}",
     new { controller = "MvpProfile", action = "Index" });
+
+// Map license download route.
+app.MapControllerRoute(
+    "MvpLicenseDownload",
+    "license/download",
+    new { controller = "MvpProfile", action = "DownloadLicense" });
 
 // Map the default Sitecore URL pattern with a language prefix.
 app.MapSitecoreLocalizedRoute("sitecore", "Index", "Default");

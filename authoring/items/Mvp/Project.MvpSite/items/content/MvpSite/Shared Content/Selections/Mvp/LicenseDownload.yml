@@ -1,0 +1,23 @@
+﻿---
+ID: "e0c64cd4-6d71-418b-a50c-1ff5e3b5952e"
+Parent: "90fa25c4-c97f-4f0d-a59b-3e36a898cb97"
+Template: "e1a5211d-faed-4777-8a9c-a87afcab1f82"
+Path: /sitecore/content/MvpSite/Shared Content/Selections/Mvp/LicenseDownload
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20260209T110926Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "fb492cd7-3cfc-48a4-bfc8-c3dffbeb4ff0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20260209T110926Z
