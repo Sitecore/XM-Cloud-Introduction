@@ -129,6 +129,8 @@ else
 RewriteOptions rewriteOptions = new RewriteOptions()
     .AddRedirect("mvps/(.*)", "Directory?fc_year=$1")
     .AddRedirect("mvps$", "Directory")
+    .AddRedirect("MVPs/(.*)", "Directory?fc_year=$1")
+    .AddRedirect("MVPs$", "Directory")
     .AddRedirect("search(.*)", "Directory$1")
     .AddRedirect("Search(.*)", "Directory$1");
 app.UseRewriter(rewriteOptions);
