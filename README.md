@@ -65,7 +65,19 @@ When completed it will look something like:
     "ClientSecret": "YOUR_OKTA_CLIENT_ID",
     "AuthorizationServerId": "YOUR_OKTA_CLIENT_ID"
   },
+  
 ```
+
+If you work on areas that relate to MVP Selections you will also need to populate the MvpSelectionsApiClient section of the configuration which looks something like this:
+
+```json
+  "MvpSelectionsApiClient": {
+    "BaseAddress": "http://localhost:7071"
+  }
+```
+
+The above requires that you also have the [MVP Selections API](https://github.com/Sitecore/Mvp.Selections.Api) running locally. Consult the README of that repository for more details, but in summary you will need to clone that repository, open the solution in Visual Studio, set `Mvp.Selections.Api` as your startup project and hit F5 to start it.
+
 You will be able to run the MVP Site either directly from within Visual Studio, or by using the DotNet CLI.
 
 - To run from within Visual Studio, open the `./headapps/MvpSite/XMC-Introduction-MVP.sln`, ensure that the `Mvp.Project.MvpSite.Rendering` project is set as your StartUp Project, then hit F5.
