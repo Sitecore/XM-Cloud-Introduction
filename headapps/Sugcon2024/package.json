@@ -55,7 +55,7 @@
     "@types/react-slick": "^0.23.13",
     "cross-env": "^10.0.0",
     "eslint": "^9.33.0",
-    "eslint-config-next": "15.5.3",
+    "eslint-config-next": "^16.1.1",
     "npm-run-all2": "^8.0.4",
     "sass": "^1.97.1",
     "tailwindcss": "^4",
