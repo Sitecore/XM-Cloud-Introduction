@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@next/eslint-plugin-next": "^16.2.2",
     "@sitecore-content-sdk/cli": "^2.0.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^24.10.4",
@@ -56,10 +57,14 @@
     "cross-env": "^10.0.0",
     "eslint": "^9.33.0",
     "eslint-config-next": "^16.1.1",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "npm-run-all2": "^8.0.4",
     "sass": "^1.97.1",
     "tailwindcss": "^4",
-    "typescript": "~5.8.3"
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.58.0"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production npm-run-all --serial sitecore-tools:generate-map sitecore-tools:build sitecore-tools:fix-ts next:build",
