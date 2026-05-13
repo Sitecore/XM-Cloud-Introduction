@@ -49,7 +49,7 @@ import * as ActionBanner from 'src/components/basic-components/action-banner/Act
 export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCServerWrapper],
   ['FEaaSWrapper', FEaaSServerWrapper],
-  ['Form', Form],
+  ['Form', { ...Form, componentType: 'client' }],
   ['LayoutConstants', { ...LayoutConstants }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
   ['Header', { ...Header }],

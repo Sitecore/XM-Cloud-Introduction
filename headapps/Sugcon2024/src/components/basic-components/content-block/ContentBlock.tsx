@@ -1,5 +1,5 @@
 import { JSX } from 'react';
-import { Text, RichText, Field, withDatasourceCheck } from '@sitecore-content-sdk/nextjs';
+import { Text, RichText, Field } from '@sitecore-content-sdk/nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 type ContentBlockProps = ComponentProps & {
@@ -22,4 +22,4 @@ const ContentBlock = ({ fields }: ContentBlockProps): JSX.Element => (
   </div>
 );
 
-export default withDatasourceCheck()<ContentBlockProps>(ContentBlock);
+export default ContentBlock;
