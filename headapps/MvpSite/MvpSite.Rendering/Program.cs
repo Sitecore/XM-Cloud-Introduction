@@ -19,7 +19,7 @@ const string DefaultLanguage = "en";
 // Values can originate in appsettings.json, from environment variables, and more.
 // https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/
 MvpSiteSettings? sitecoreSettings = builder.Configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
-PagesOptions? pagesSettings = builder.Configuration.GetSection(PagesOptions.Key).Get<PagesOptions>() ?? new PagesOptions();
+PagesOptions pagesSettings = builder.Configuration.GetSection(PagesOptions.Key).Get<PagesOptions>() ?? new PagesOptions();
 ArgumentNullException.ThrowIfNull(sitecoreSettings);
 
 if (string.IsNullOrWhiteSpace(sitecoreSettings.EdgeContextId))
@@ -101,64 +101,22 @@ WebApplication app = builder.Build();
 // Configure the HTTP request pipeline
 // When running behind HTTPS termination, set the request scheme according to forwarded protocol headers.
 // Also set the Request IP, so that it can be passed on to the Sitecore Layout Service for tracking and personalization.
-app.UseForwardedHeaders(new ForwardedHeadersOptions()
+app.UseForwardedHeaders(new ForwardedHeadersOptions
 {
     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
 
+    // ReSharper disable RedundantEmptyObjectOrCollectionInitializer - KnownNetworks and KnownProxies isn't empty by default
     // ReSharper disable once CommentTypo - Actual product name
     // Allow forwarding of headers from Traefik in development & NGINX in k8s
     KnownNetworks = { },
     KnownProxies = { }
+
+    // ReSharper restore RedundantEmptyObjectOrCollectionInitializer - KnownNetworks and KnownProxies isn't empty by default
 });
 app.UseSession();
 
-// Content Security Policy header
-app.Use(async (context, next) =>
-{
-    context.Response.Headers.Append("Content-Security-Policy",
-        "default-src 'self'; " +
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' " +
-            "https://www.googletagmanager.com " +
-            "https://www.google-analytics.com " +
-            "https://cdn.stat-track.com " +
-            "https://code.jquery.com " +
-            "https://cdn.jsdelivr.net " +
-            "https://stackpath.bootstrapcdn.com " +
-            "https://cdnjs.cloudflare.com " +
-            "https://www.w3.org " +
-            "https://edge.sitecorecloud.io; " +
-        "style-src 'self' 'unsafe-inline' " +
-            "https://stackpath.bootstrapcdn.com " +
-            "https://cdnjs.cloudflare.com " +
-            "https://fonts.googleapis.com; " +
-        "img-src 'self' data: " +
-            "https://www.googletagmanager.com " +
-            "https://www.google-analytics.com " +
-            "https://edge.sitecorecloud.io " +
-            "https://*.sitecorecloud.io " +
-            "https://delivery-sitecore.sitecorecontenthub.cloud; " +
-        "font-src 'self' " +
-            "https://fonts.gstatic.com " +
-            "https://cdnjs.cloudflare.com; " +
-        "connect-src 'self' " +
-            "https://www.google-analytics.com " +
-            "https://www.googletagmanager.com " +
-            "https://cdn.stat-track.com " +
-            "https://edge.sitecorecloud.io " +
-            "https://*.sitecorecloud.io; " +
-        "frame-src 'self'; " +
-        "frame-ancestors 'self' https://*.sitecorecloud.io https://pages.sitecorecloud.io; " +
-        "base-uri 'self'; " +
-        "form-action 'self'; " +
-        "object-src 'none'");
-
-    context.Response.Headers.Append("X-Content-Type-Options", "nosniff");
-    context.Response.Headers.Append("X-Frame-Options", "SAMEORIGIN");
-    context.Response.Headers.Append("Referrer-Policy", "strict-origin-when-cross-origin");
-    context.Response.Headers.Append("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
-
-    await next();
-});
+// Security headers
+app.UseSecurityHeaders();
 
 if (!app.Environment.IsDevelopment())
 {
@@ -220,10 +178,13 @@ app.MapControllerRoute(
     "error",
     new { controller = "Default", action = "Error" });
 
+// ReSharper disable StringLiteralTypo - is a well-known name for a health check endpoint
 app.MapControllerRoute(
     "healthz",
     "healthz",
     new { controller = "Default", action = "Healthz" });
+
+// ReSharper restore StringLiteralTypo - is a well-known name for a health check endpoint
 
 // Map Okta sign-in route.
 app.MapOktaSigninRoute();
