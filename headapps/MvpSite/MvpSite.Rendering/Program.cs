@@ -19,7 +19,7 @@ const string DefaultLanguage = "en";
 // Values can originate in appsettings.json, from environment variables, and more.
 // https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/
 MvpSiteSettings? sitecoreSettings = builder.Configuration.GetSection(MvpSiteSettings.Key).Get<MvpSiteSettings>();
-PagesOptions? pagesSettings = builder.Configuration.GetSection(PagesOptions.Key).Get<PagesOptions>() ?? new PagesOptions();
+PagesOptions pagesSettings = builder.Configuration.GetSection(PagesOptions.Key).Get<PagesOptions>() ?? new PagesOptions();
 ArgumentNullException.ThrowIfNull(sitecoreSettings);
 
 if (string.IsNullOrWhiteSpace(sitecoreSettings.EdgeContextId))
@@ -101,16 +101,22 @@ WebApplication app = builder.Build();
 // Configure the HTTP request pipeline
 // When running behind HTTPS termination, set the request scheme according to forwarded protocol headers.
 // Also set the Request IP, so that it can be passed on to the Sitecore Layout Service for tracking and personalization.
-app.UseForwardedHeaders(new ForwardedHeadersOptions()
+app.UseForwardedHeaders(new ForwardedHeadersOptions
 {
     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
 
+    // ReSharper disable RedundantEmptyObjectOrCollectionInitializer - KnownNetworks and KnownProxies isn't empty by default
     // ReSharper disable once CommentTypo - Actual product name
     // Allow forwarding of headers from Traefik in development & NGINX in k8s
     KnownNetworks = { },
     KnownProxies = { }
+
+    // ReSharper restore RedundantEmptyObjectOrCollectionInitializer - KnownNetworks and KnownProxies isn't empty by default
 });
 app.UseSession();
+
+// Security headers
+app.UseSecurityHeaders();
 
 if (!app.Environment.IsDevelopment())
 {
@@ -172,10 +178,13 @@ app.MapControllerRoute(
     "error",
     new { controller = "Default", action = "Error" });
 
+// ReSharper disable StringLiteralTypo - is a well-known name for a health check endpoint
 app.MapControllerRoute(
     "healthz",
     "healthz",
     new { controller = "Default", action = "Healthz" });
+
+// ReSharper restore StringLiteralTypo - is a well-known name for a health check endpoint
 
 // Map Okta sign-in route.
 app.MapOktaSigninRoute();

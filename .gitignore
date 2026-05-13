@@ -53,3 +53,6 @@ xmcloud.plugin.pre-release.json
 
 # developer configs
 appsettings.Development.json
+
+# Mac Files
+*DS_Store
