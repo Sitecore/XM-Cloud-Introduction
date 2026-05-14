@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com",
               "img-src 'self' data: blob: https://edge.sitecorecloud.io https://*.sitecorecloud.io https://*.sugcon.events https://www.googletagmanager.com https://www.google-analytics.com",
               "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com",
-              "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://edge.sitecorecloud.io https://edge-platform.sitecorecloud.io https://*.sitecorecloud.io",
+              "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://edge.sitecorecloud.io https://edge-platform.sitecorecloud.io https://*.sitecorecloud.io https://sessionize.com",
               "frame-src 'self' https://www.youtube.com",
               "frame-ancestors 'self' https://*.sitecorecloud.io https://pages.sitecorecloud.io",
               "base-uri 'self'",
