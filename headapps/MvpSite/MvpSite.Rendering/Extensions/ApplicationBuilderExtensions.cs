@@ -51,7 +51,8 @@ public static class ApplicationBuilderExtensions
             cspBuilder.Append("https://www.googletagmanager.com ");
             cspBuilder.Append("https://www.google-analytics.com ");
             cspBuilder.Append("https://*.sitecorecloud.io ");   
-            cspBuilder.Append("https://www.gravatar.com ");
+            cspBuilder.Append("https://www.gravatar.com ");            
+            cspBuilder.Append("https://community.sitecore.com ");
             cspBuilder.Append("https://delivery-sitecore.sitecorecontenthub.cloud; ");
 
             cspBuilder.Append("font-src 'self' ");
