@@ -7,9 +7,16 @@ SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
   Value: "column-container"
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "68917398-d8a9-4d09-98df-8d04c09a4e9f"
 - ID: "e391b526-d0c5-439d-803e-17512eae6222"
   Hint: Allowed Controls
-  Value: 
+  Value: |
+    {0CF1F5DB-1889-4A4B-A8FE-5F859E6118A4}
+    {3F1CA0F6-D7A0-4D47-BF72-C6EC139823D2}
+    {858E6FEB-1DBB-4AB5-8630-D11A0CB13BE9}
+    {0EBD4EFF-E2A6-4B32-B845-D1C1EBEE4976}
 Languages:
 - Language: en
   Versions:
@@ -20,11 +27,11 @@ Languages:
       Value: 20200629T090829Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0661242b-290c-4546-84d7-30522ecfd59a"
+      Value: "ec784f52-1c0c-40ad-b217-8aa1e133352e"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\sobiya.sivakumar@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200629T215600Z
+      Value: 20250826T044305Z

@@ -72,7 +72,7 @@ Languages:
         sitecore\iva@sitecore.net
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0947bcd1-f3c4-40b7-ab06-790204551c1c"
+      Value: "523ee29d-ee06-47ce-8fac-3130dd9c186e"
     - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
       Hint: MenuTitle
       Value: Application
@@ -85,7 +85,7 @@ Languages:
       Value: 1
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250324T210848Z
+      Value: 20250306T082844Z
     - ID: "efc0a3c7-6993-47d2-ba85-10b44961916e"
       Hint: IncludeInMenu
-      Value: 1
+      Value: 

@@ -7,6 +7,9 @@ SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key
   Value: main
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "2cc6191c-1a32-4eec-9d5f-4911e76760a7"
 - ID: "e391b526-d0c5-439d-803e-17512eae6222"
   Hint: Allowed Controls
   Value: |
@@ -19,6 +22,11 @@ SharedFields:
     {DF26CA0D-A60B-4349-8908-E7A62F7E7272}
     {2E2630AE-5DB0-4FDF-81B6-47DBC3365C36}
     {8ECDA376-8717-4626-A30A-83A93EC24CC3}
+    {0CF1F5DB-1889-4A4B-A8FE-5F859E6118A4}
+    {3F1CA0F6-D7A0-4D47-BF72-C6EC139823D2}
+    {0EBD4EFF-E2A6-4B32-B845-D1C1EBEE4976}
+    {858E6FEB-1DBB-4AB5-8630-D11A0CB13BE9}
+    {57805937-D345-4A28-8DDF-C62EE43D8EBA}
 Languages:
 - Language: en
   Versions:
@@ -29,11 +37,11 @@ Languages:
       Value: 20200513T063543Z
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "87d99633-8a9e-46f5-be7d-54ebedc5d008"
+      Value: "eedebc8f-61b9-4ba6-9fc1-1419eef5a2eb"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\sobiya.sivakumar@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220929T122304Z
+      Value: 20250826T041314Z

@@ -1,0 +1,86 @@
+﻿---
+ID: "ff3334ac-6589-42ad-bacc-a43b6b734001"
+Parent: "119e9ba1-5768-4ca9-a593-480d7a0dbea6"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/Application/Admin/Licenses/Edit
+BranchID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9AC6DDA3-8785-4C63-A2AB-457D8CC56D19}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <p
+              uid="{7B3BDA12-6C1B-4C18-8008-A8FCAB038F61}"
+              p:before="*"
+              s:key="Column Container"
+              s:md="{7781E9E2-31AD-4854-906F-162102BCAF5B}" />
+            <r
+              uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}">
+              <p:da
+                name="ccb" />
+              <p:da
+                name="ds" />
+            </r>
+            <r
+              uid="{D842E8EB-450E-4348-A54A-E60CF16E9E52}">
+              <p:da
+                name="ccb" />
+            </r>
+            <r
+              uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}">
+              <p:da
+                name="ccb" />
+            </r>
+            <r
+              uid="{569E2242-E4FC-4E14-907E-14C2BFA31C74}"
+              p:after="r[@uid='{64CD74AD-6939-48FB-ABB9-33F2403ED031}']"
+              s:id="{57805937-D345-4A28-8DDF-C62EE43D8EBA}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{89DA63B1-BB39-43F4-A584-A1431E2F2563}"
+              p:after="*[1=2]"
+              s:ds="61242f4f-2786-4640-b140-45b8a61fee91"
+              s:id="{0EBD4EFF-E2A6-4B32-B845-D1C1EBEE4976}"
+              s:par=""
+              s:ph="/main/column-container-{569E2242-E4FC-4E14-907E-14C2BFA31C74}-0" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250812T044444Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "9f1935de-af64-4f78-ad0e-ddf3a2becb1c"
+    - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
+      Hint: MenuTitle
+      Value: Edit
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250826T044353Z
