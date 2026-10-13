@@ -29,6 +29,8 @@ public class ScoreCardDetailModel : BaseModel
 
     public TextField? CommentsLabel { get; set; }
 
+    public Guid? RemoveReviewId { get; set; }
+
     public static decimal CalculateValue(ScoreCategory category, Review review)
     {
         decimal categoryScoreValue = 0;

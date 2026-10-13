@@ -27,6 +27,11 @@ public class ScoreCardDetailViewComponent(IViewModelBinder modelBinder, MvpSelec
         }
         else
         {
+            if (model.RemoveReviewId != null)
+            {
+                await RemoveReview(model);
+            }
+
             if (model.ApplicationId != Guid.Empty)
             {
                 await Task.WhenAll(
@@ -45,6 +50,11 @@ public class ScoreCardDetailViewComponent(IViewModelBinder modelBinder, MvpSelec
         }
 
         return result;
+    }
+
+    private async Task RemoveReview(ScoreCardDetailModel model)
+    {
+        await Client.RemoveReviewAsync(model.RemoveReviewId!.Value);
     }
 
     // ReSharper disable StringLiteralTypo
