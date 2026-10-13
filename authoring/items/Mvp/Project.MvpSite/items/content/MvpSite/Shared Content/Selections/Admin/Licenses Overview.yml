@@ -1,0 +1,51 @@
+﻿---
+ID: "85ce359a-80af-4913-bdb5-0e37a57e0700"
+Parent: "c34e4ad8-acd9-4a7f-904e-c52533153603"
+Template: "cf735444-cc6c-4587-9fdb-8868b66f1ae6"
+Path: /sitecore/content/MvpSite/Shared Content/Selections/Admin/Licenses Overview
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250810T143225Z
+    - ID: "498bc90c-c440-4daa-9b46-d72a891b490d"
+      Hint: UploadLicensesLink
+      Value: |
+        <link text="Upload Licenses" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{C4495D7A-6CAD-4AB7-AC61-4932963E07E1}" />
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "5c562eba-570f-42c3-915a-119bfb6140e8"
+      Hint: AssignedUserNameHeader
+      Value: Assigned User
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "5d5068fc-2a1d-40e6-82ef-04fca5613da2"
+    - ID: "9f3c3af9-bd01-464c-9234-007320ca125b"
+      Hint: TitleLabel
+      Value: Licenses
+    - ID: "a64dfa60-76d2-4408-abb0-4fe44f2db8db"
+      Hint: UnAssignedUserLabel
+      Value: Unassigned
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250826T162849Z
+    - ID: "dde77253-9d93-4da0-beeb-faf961447ad8"
+      Hint: ExpirationDateHeader
+      Value: Expiration Date
+    - ID: "fd4c420b-f2a6-439b-bca4-7e42751e914a"
+      Hint: EditLink
+      Value: |
+        <link text="Assign User" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{FF3334AC-6589-42AD-BACC-A43B6B734001}" />

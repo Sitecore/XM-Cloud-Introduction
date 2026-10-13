@@ -36,15 +36,14 @@ Languages:
             <li>Eagerness to share their success stories with the whole community</li>
         </ul>
         <h2>How to apply</h2>
-        <p>To apply to the Sitecore MVP mentorship program as a mentor or mentee please send the Sitecore team an email at <a href="mailto:mvp-program@sitecore.com?subject=Mentor%20Program">mvp-program@sitecore.com</a></p>
-        <p><em>Please note that if you are applying as a mentor you must be a Sitecore 2022 MVP.</em></p>
+        <p><span style="color: #212121; line-height: 16px;">We will open the Sitecore Community Mentor Program to support community involvement by the end of February</span><span style="color: #212121; line-height: 16px;">. The new functionality also helps to match Mentors and Mentees to find each-other. Please check the MVP Directory where after logging in you will find a &ldquo;Request Mentorship&rdquo; button on the current MVPs profile.</span></p>
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "67224aff-0fdf-4cb7-8e3e-293c92611639"
+      Value: "6a851820-3b00-449f-b187-59509e8c1874"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\tamas
+        sitecore\tamas.varga@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220203T090508Z
+      Value: 20250130T125950Z

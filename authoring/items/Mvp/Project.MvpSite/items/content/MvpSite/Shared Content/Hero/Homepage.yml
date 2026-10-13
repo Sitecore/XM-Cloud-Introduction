@@ -8,20 +8,23 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "00f0228c-aff3-4ab7-ac98-e4175a53bf32"
       Hint: HeroTitle
       Value: Sitecore MVP Program
     - ID: "066f7e92-30ad-4198-b138-b40ccaec6d20"
       Hint: HeroLink
       Value: |
-        <link text="Sitecore MVPs 2020 Announced" linktype="external" url="http://www.sitecore.com" anchor="" target="_blank" />
+        <link text="The 2025 Sitecore MVPs now announced" linktype="external" url="https://mvp.sitecore.com/mvps/2025" anchor="" title="Sitecore MVP 2025" target="" />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20200624T085353Z
     - ID: "3489c7a2-efe1-49e0-a3d7-271183c4f255"
       Hint: HeroImage
       Value: |
-        <image mediaid="{75E92DFC-F50D-40C7-824F-EEEB8D58B5D6}" />
+        <image mediaid="{F3EFD7F1-540B-45B6-B8C2-EC6987852811}" alt="Sitecore MVP Program" height="" width="" hspace="" vspace="" />
     - ID: "53ee3e16-ba10-4013-959e-9a652a533845"
       Hint: HeroSubtitle
       Value: Recognition
@@ -30,11 +33,11 @@ Languages:
       Value: Celebrate the most active Sitecore Community members from around the world who provide valuable expertise to the Sitecore ecosystem.
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b6db6ade-6a25-4fab-8268-fafd7b47603b"
+      Value: "77904f1e-4402-4c0d-a031-0ffc31701fa6"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\krishantha.kumara@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200624T103602Z
+      Value: 20250701T060444Z
