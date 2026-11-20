@@ -7,6 +7,11 @@
 		<RootNamespace>MvpSite.Rendering</RootNamespace>
 	</PropertyGroup>
 
+	<!-- BuildWebCompiler2022 shells out to cmd.exe, so only run the SCSS compilation on Windows -->
+	<PropertyGroup Condition="'$(RunWebCompiler)' == '' And !$([MSBuild]::IsOSPlatform('Windows'))">
+		<RunWebCompiler>False</RunWebCompiler>
+	</PropertyGroup>
+
 	<ItemGroup>
 	  <Content Remove="compilerconfig.json" />
 	  <Content Remove="wwwroot\sass\**\*.scss" />
@@ -20,9 +25,6 @@
 	<ItemGroup>
 		<PackageReference Include="BuildWebCompiler2022" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
-		<PackageReference Include="Microsoft.AspNetCore.Session" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
-		<PackageReference Include="Microsoft.Extensions.Http" />
 		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" />
 		<PackageReference Include="Sitecore.AspNetCore.SDK.LayoutService.Client" />
 		<PackageReference Include="Sitecore.AspNetCore.SDK.RenderingEngine" />
