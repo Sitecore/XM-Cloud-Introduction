@@ -4,12 +4,12 @@
     "authoring/items/**/*.module.json"
   ],
   "plugins": [
-    "Sitecore.DevEx.Extensibility.XMCloud@1.1.30",
-    "Sitecore.DevEx.Extensibility.Serialization@6.0.23",
-    "Sitecore.DevEx.Extensibility.Publishing@6.0.23",
-    "Sitecore.DevEx.Extensibility.Indexing@6.0.23",
-    "Sitecore.DevEx.Extensibility.ResourcePackage@6.0.23",
-    "Sitecore.DevEx.Extensibility.Database@6.0.23"
+    "Sitecore.DevEx.Extensibility.XMCloud@2.0.17",
+    "Sitecore.DevEx.Extensibility.Serialization@7.0.24",
+    "Sitecore.DevEx.Extensibility.Publishing@7.0.24",
+    "Sitecore.DevEx.Extensibility.Indexing@7.0.24",
+    "Sitecore.DevEx.Extensibility.ResourcePackage@7.0.24",
+    "Sitecore.DevEx.Extensibility.Database@7.0.24"
   ],
   "serialization": {
     "defaultMaxRelativeItemPathLength": 100,
