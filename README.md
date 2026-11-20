@@ -16,7 +16,7 @@ This repository contains the codebase for a series of sites managed by Sitecore.
 [![SUGCON 2024 Status](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_24.yml/badge.svg?branch=main)](https://github.com/Sitecore/XM-Cloud-Introduction/actions/workflows/CI-CD_SUGCON_24.yml)
 
 # ✋ Prerequisites
-- [DotNet 8.0](https://dotnet.microsoft.com/en-us/download)
+- [DotNet 10.0](https://dotnet.microsoft.com/en-us/download)
 - [NodeJS 16 LTS](https://nodejs.org/en/download/) (or greater)
 
 ## Okta Account
