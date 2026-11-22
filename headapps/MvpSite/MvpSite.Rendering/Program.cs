@@ -105,13 +105,13 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 {
     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
 
-    // ReSharper disable RedundantEmptyObjectOrCollectionInitializer - KnownNetworks and KnownProxies isn't empty by default
+    // ReSharper disable RedundantEmptyObjectOrCollectionInitializer - KnownIPNetworks and KnownProxies isn't empty by default
     // ReSharper disable once CommentTypo - Actual product name
     // Allow forwarding of headers from Traefik in development & NGINX in k8s
-    KnownNetworks = { },
+    KnownIPNetworks = { },
     KnownProxies = { }
 
-    // ReSharper restore RedundantEmptyObjectOrCollectionInitializer - KnownNetworks and KnownProxies isn't empty by default
+    // ReSharper restore RedundantEmptyObjectOrCollectionInitializer - KnownIPNetworks and KnownProxies isn't empty by default
 });
 app.UseSession();
 
