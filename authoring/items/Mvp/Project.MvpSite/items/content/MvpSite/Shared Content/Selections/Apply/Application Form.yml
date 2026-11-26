@@ -8,23 +8,78 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "095894c5-c355-40f8-b47e-045c65af22f2"
+      Hint: ContributionsHelpText
+      Value: |
+        <p><strong>Please add your contributions from December 1st, 2024.</strong></p>
+        <p>We are looking for contributions in the following areas:</p>
+        <ul>
+            <li><strong>Content</strong> includes: Blogs, Videos, Podcasts, White papers, Case studies, Open source modules, but even long format Questions and Answers on StackExchange</li>
+            <li><strong>Engagement</strong> includes: Social media, Community forum, LinkedIn, Slack, Discord, Telegram, StackExchange, Reddit, etc.</li>
+            <li><strong>Public Speaking</strong> includes: Sitecore User Groups, SUGCON, Symposium, corporate events (DX, Experience Day, etc.), industry conferences, webinars</li>
+            <li><strong>Feedback/References</strong> includes: Support tickets, Product feedback through MVP channels or to PMs directly, beta testing products and trainings, customer references, Customer Success Manager recommendations, Partner Advisory Council, Customer Leadership Board or Customer Advisory Board participation</li>
+        </ul>
+        <p><strong>A balanced application has contributions in all of these areas.</strong></p>
+        <p>Tips for a successful application:</p>
+        <ul>
+            <li>Please select your TOP 30 contributions, but no less than 5!</li>
+            <li>DO NOT list all your social media posts one by one! Add your social media profiles in the personal section and we will review them.</li>
+            <li>For each entry, please make sure we can validate your contribution (e.g. provide a link).</li>
+            <li>Where applicable, please select one or more Sitecore products related to your contribution.</li>
+            <li>Only include a bug report if it is a confirmed BUG or a Feature request or a Missing Documentation</li>
+            <li><strong>Please remember that we are looking for quality and not quantity.</strong></li>
+        </ul>
+    - ID: "1ebe61d8-cdf1-4781-81fc-c3a9d3c6a993"
+      Hint: ErrorMessageLabel
+      Value: There is a problem with your User or Application. Please try to sign in again or contact the MVP Program to proceed.
+    - ID: "20f00986-b72d-4994-ae80-9393223f66b2"
+      Hint: ConsentLabel
+      Value: "I confirm that I did contribute to the Sitecore Community in the last 12 months. I consent to receive communications about Sitecore's business in accordance with Sitecore's Privacy Policy, I understand that I can opt-out at any time"
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220913T142034Z
+    - ID: "3aca3174-6ca3-4000-8872-14b0c16d6c3d"
+      Hint: MinContributions
+      Value: 3
     - ID: "41b45694-9ce9-4b46-89ec-9a473595931d"
       Hint: MyUserLink
       Value: |
         <link text="Edit my details" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{CA03E6DC-BBF0-45B9-B5F1-758A174BD328}" />
+    - ID: "6988876a-5b0c-4e3c-ae73-3baa95e11cd2"
+      Hint: MvpTypeHelpText
+      Value: |
+        <p>Categories represent the way in which an individual is contributing to the community. </p>
+        <p>If you are on the business side, potentially an executive at a Sitecore partner or customer, and supporting the Sitecore ecosystem through evangelism and raising awareness, please select the <strong>Ambassador</strong> category.</p>
+        <p>If you are using Sitecore as part of the marketing or strategy team and you are supporting your customers by showing how to achieve more with Sitecore products, please select the <strong>Strategy</strong> category.</p>
+        <p>If you are part of an implementation team (including development, architecture, DevOps, etc.) and your contributions help other technical teams with building on Sitecore products, please select the <strong>Technology</strong> category.</p>
+        <p>Select the MVP Category you desire to apply for. If you are in doubt, you can review the <a href="~/link.aspx?_id=0D97B45DC5894495A4959AAFF4FBD2C3&amp;_z=z">available categories</a>.</p>
+    - ID: "7204d387-6a3a-4074-ac91-0832e636fd6c"
+      Hint: MaxContributions
+      Value: 30
+    - ID: "88be72ef-cea9-488a-9dc7-8c92773df6a5"
+      Hint: ContributionMinLimitMessage
+      Value: You must add atleast 3 contributions to submit your application.
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "fdcaf350-9aa6-4dfb-be8f-10e56b848cdf"
+      Value: "87106144-ff43-4bd9-b7b7-6fffdd04ff7f"
+    - ID: "adb926d8-d854-4312-9d8a-17d0d8609af2"
+      Hint: ContributionMaxLimitMessage
+      Value: You have reached the limit of 30 contributions. Please review your list and select only top 30 contributions.
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\Rob Earlam
+    - ID: "c3ec3369-32b4-4f98-b316-12082335a348"
+      Hint: ConsentInformation
+      Value: |
+        <p>By submitting my Sitecore MVP Application, I confirm that&nbsp;I have read the Sitecore MVP website and know what the MVP Program is about. I confirm that I did contribute to the Sitecore Community in the last 12 months. If I apply without any evidence of my contributions, I acknowledge that I may be excluded from future MVP applications.</p>
+        <p>By submitting my contact information, I confirm that I have read and agree to the Sitecore Privacy Policy which explains how Sitecore collects, processes and shares my personal data. I consent to my data being processed in accordance with Sitecore's Privacy Policy so that Sitecore can optimize my experience with the Sitecore brand.</p>
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220929T080934Z
+      Value: 20250902T054201Z
+    - ID: "e9a35591-dcb1-40fe-9459-9062baac1419"
+      Hint: MentorsLabel
+      Value: "Did you participate in the Sitecore Community Mentor Program? Who was your mentor?"
     - ID: "fdf9f690-0cb1-4f61-bd55-5e98c70660cd"
       Hint: ContributionProductsLabel
       Value: Related Products

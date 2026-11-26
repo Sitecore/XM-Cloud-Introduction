@@ -1,0 +1,159 @@
+@using System.Globalization
+@using Mvp.Selections.Domain
+@using MvpSite.Rendering.Models.Admin
+@model MvpSite.Rendering.Models.Admin.ScoreCategoryManagementModel
+
+<div class="mvp-fs-adminscorecategorymanagement col-12 bg-white">
+    <h2>Score categories</h2>
+
+    @if (!string.IsNullOrWhiteSpace(Model.SuccessMessage))
+    {
+        <div class="alert alert-success" role="status">@Model.SuccessMessage</div>
+    }
+
+    @if (Model.ErrorMessages.Count > 0)
+    {
+        <div class="alert alert-danger" role="alert">
+            <ul>
+                @foreach (string error in Model.ErrorMessages)
+                {
+                    <li>@error</li>
+                }
+            </ul>
+        </div>
+    }
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <form method="get" class="mvp-fs-adminscorecategorymanagement__scope">
+        <div class="form-group">
+            <label asp-for="SelectedSelectionId">Selection</label>
+            <select asp-for="SelectedSelectionId" class="form-control" required>
+                <option value="">Select a selection</option>
+                @foreach (Selection selection in Model.Selections.OrderByDescending(selection => selection.Year))
+                {
+                    <option value="@selection.Id">@selection.Year</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="SelectedMvpTypeId">MVP type</label>
+            <select asp-for="SelectedMvpTypeId" class="form-control" required>
+                <option value="">Select an MVP type</option>
+                @foreach (MvpType mvpType in Model.MvpTypes.OrderBy(mvpType => mvpType.Name))
+                {
+                    <option value="@mvpType.Id">@mvpType.Name</option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Load categories</button>
+    </form>
+
+    @if (Model.HasSelectedScope)
+    {
+        <h3>Categories for @Model.Selections.FirstOrDefault(selection => selection.Id == Model.SelectedSelectionId)?.Year — @Model.MvpTypes.FirstOrDefault(mvpType => mvpType.Id == Model.SelectedMvpTypeId)?.Name</h3>
+
+        <section class="mvp-fs-adminscorecategorymanagement__create">
+            <h4>Add category</h4>
+            <form method="post">
+                <input type="hidden" name="SelectedSelectionId" value="@Model.SelectedSelectionId" />
+                <input type="hidden" name="SelectedMvpTypeId" value="@Model.SelectedMvpTypeId" />
+                <input type="hidden" name="Command" value="Create" />
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                        <label asp-for="NewCategoryName">Name</label>
+                        <input asp-for="NewCategoryName" class="form-control" required />
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label asp-for="NewCategoryWeight">Weight</label>
+                        <input asp-for="NewCategoryWeight" type="number" step="any" class="form-control" required />
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label asp-for="NewCategorySortRank">Sort order</label>
+                        <input asp-for="NewCategorySortRank" type="number" step="1" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label asp-for="NewParentCategoryId">Parent category</label>
+                        <select asp-for="NewParentCategoryId" class="form-control">
+                            <option value="">Top-level category</option>
+                            @foreach (ScoreCategoryManagementModel.CategoryEntry parentOption in Model.ParentOptionsFor())
+                            {
+                                <option value="@parentOption.Category.Id">@($"{new string('—', parentOption.Depth)} {parentOption.Category.Name}")</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Add category</button>
+            </form>
+        </section>
+
+        <section class="mvp-fs-adminscorecategorymanagement__list">
+            <h4>Existing categories</h4>
+            @if (Model.CategoryEntries.Count == 0)
+            {
+                <p>No score categories exist for this selection and MVP type yet.</p>
+            }
+            else
+            {
+                @foreach (ScoreCategoryManagementModel.CategoryEntry entry in Model.CategoryEntries)
+                {
+                    ScoreCategory category = entry.Category;
+                    bool isSubmittedCategory = Model.Command == "Update" && Model.CategoryId == category.Id;
+                    string categoryName = isSubmittedCategory ? Model.CategoryName : category.Name;
+                    string categoryWeight = isSubmittedCategory
+                        ? Model.CategoryWeight.ToString(CultureInfo.InvariantCulture)
+                        : category.Weight.ToString(CultureInfo.InvariantCulture);
+                    string categorySortRank = isSubmittedCategory
+                        ? Model.CategorySortRank.ToString(CultureInfo.InvariantCulture)
+                        : category.SortRank.ToString(CultureInfo.InvariantCulture);
+                    Guid? selectedParentId = isSubmittedCategory ? Model.ParentCategoryId : entry.ParentCategoryId;
+                    string updateFormId = $"updateCategory-{category.Id}";
+                    string deleteFormId = $"deleteCategory-{category.Id}";
+
+                    <div class="mvp-fs-adminscorecategorymanagement__category" style="margin-left: @(entry.Depth * 1.25)rem">
+                        <form id="@updateFormId" method="post" hidden>
+                            <input type="hidden" name="SelectedSelectionId" value="@Model.SelectedSelectionId" />
+                            <input type="hidden" name="SelectedMvpTypeId" value="@Model.SelectedMvpTypeId" />
+                            <input type="hidden" name="Command" value="Update" />
+                            <input type="hidden" name="CategoryId" value="@category.Id" />
+                        </form>
+                        <form id="@deleteFormId" method="post" hidden onsubmit="return confirm('Delete this score category?');">
+                            <input type="hidden" name="SelectedSelectionId" value="@Model.SelectedSelectionId" />
+                            <input type="hidden" name="SelectedMvpTypeId" value="@Model.SelectedMvpTypeId" />
+                            <input type="hidden" name="Command" value="Delete" />
+                            <input type="hidden" name="CategoryId" value="@category.Id" />
+                        </form>
+                        <div class="form-row align-items-end">
+                            <div class="form-group col-md-3">
+                                <label for="CategoryName-@category.Id">Name</label>
+                                <input id="CategoryName-@category.Id" form="@updateFormId" name="CategoryName" value="@categoryName" class="form-control" required />
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="CategoryWeight-@category.Id">Weight</label>
+                                <input id="CategoryWeight-@category.Id" form="@updateFormId" name="CategoryWeight" value="@categoryWeight" type="number" step="any" class="form-control" required />
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="CategorySortRank-@category.Id">Sort order</label>
+                                <input id="CategorySortRank-@category.Id" form="@updateFormId" name="CategorySortRank" value="@categorySortRank" type="number" step="1" class="form-control" />
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="ParentCategoryId-@category.Id">Parent category</label>
+                                <select id="ParentCategoryId-@category.Id" form="@updateFormId" name="ParentCategoryId" class="form-control">
+                                    <option value="" selected="@(selectedParentId is null)">Top-level category</option>
+                                    @foreach (ScoreCategoryManagementModel.CategoryEntry parentOption in Model.ParentOptionsFor(category))
+                                    {
+                                        <option value="@parentOption.Category.Id" selected="@(selectedParentId == parentOption.Category.Id)">@($"{new string('—', parentOption.Depth)} {parentOption.Category.Name}")</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2 d-flex align-items-end">
+                                <button type="submit" form="@updateFormId" class="btn btn-primary mr-2">Save</button>
+                                <button type="submit" form="@deleteFormId" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </section>
+    }
+</div>

@@ -71,6 +71,7 @@ public static class RenderingEngineOptionsExtensions
         options.AddViewComponent(MyProfilesFormViewComponent.ViewComponentName);
         options.AddViewComponent(ScoreCardsViewComponent.ViewComponentName);
         options.AddViewComponent(ScoreCardDetailViewComponent.ViewComponentName);
+        options.AddViewComponent(ScoreCategoryManagementViewComponent.ViewComponentName);
         options.AddViewComponent(AwardViewComponent.ViewComponentName);
         options.AddViewComponent(ApplicationCommentViewComponent.ViewComponentName);
         options.AddViewComponent(ApplicationReviewSettingsViewComponent.ViewComponentName);

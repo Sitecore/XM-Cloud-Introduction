@@ -1,0 +1,56 @@
+﻿---
+ID: "6e9d1b3c-7110-41a9-99c2-96d075ebc595"
+Parent: "b7b943c4-555d-40e1-9677-c68726686119"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/Application/Admin/Score Categories
+BranchID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
+SharedFields:
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "6cf7972f-bcd2-4166-9978-592dfb3ee09e"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{75579976-0382-417D-AB51-F81B878AC8F3}"
+          p:after="*[1=2]"
+          s:id="{5109AA2D-59F6-4BB9-8F2B-1FA3164C0BD6}"
+          s:ph="main" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9AC6DDA3-8785-4C63-A2AB-457D8CC56D19}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20261012T191247Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "4dccddd6-f161-4b99-8036-22d105a6dd23"
+    - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
+      Hint: MenuTitle
+      Value: Score Categories
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\ivan.lieckens@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20261012T192433Z

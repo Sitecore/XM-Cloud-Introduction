@@ -8,24 +8,27 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20200629T083003Z
     - ID: "3ed40dd5-482c-4ef4-893d-417c5fb3e08b"
       Hint: CtaLink
       Value: |
-        <link text="Learn more" anchor="" linktype="internal" class="" title="Learn more about the Sitecore MVP benefits"  querystring="" id="{F96C13C3-E71B-4DA2-881F-17F4DCAFE56F}" />
+        <link text="Learn more" anchor="" linktype="internal" class="" title="Learn more about the Sitecore MVP Program" target="" querystring="" id="{0D97B45D-C589-4495-A495-9AAFF4FBD2C3}" />
     - ID: "40121670-6b02-4e60-a247-38f810c5364a"
       Hint: CtaImage
       Value: |
-        <image mediaid="{1023987B-1EAD-49A0-BF57-9A1C90A0F88A}" alt="Sitecore MVP" height="" width="" hspace="" vspace="" />
+        <image mediaid="{86CA78B1-B4AF-440A-AFB1-DEE4D5B88067}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8b3bbc78-5173-40cf-a787-c95d5dccf6a8"
+      Value: "e0e7b61e-1ac9-490f-97cc-56bdfc1a4fac"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\krishantha.kumara@sitecore.com
     - ID: "c7cc5931-bef0-4afa-babc-c15dbd071efd"
       Hint: CtaText
       Value: |
@@ -33,7 +36,7 @@ Languages:
         <p>Each year, the Sitecore Most Valuable Professional (MVP) Awards recognize individuals with a passion for sharing their knowledge and expertise through active participation in online and offline Sitecore communities.</p>
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20200629T084018Z
+      Value: 20250623T050750Z
     - ID: "eb26ca15-e792-4098-9401-0af2fbe9bd31"
       Hint: CtaTitle
       Value: Sitecore Most Valuable Professional

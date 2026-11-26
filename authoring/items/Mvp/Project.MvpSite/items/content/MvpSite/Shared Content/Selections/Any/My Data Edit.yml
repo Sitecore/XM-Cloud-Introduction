@@ -11,17 +11,20 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20220928T162844Z
+    - ID: "453ba886-7a2a-4edb-804d-9d5e48a077d8"
+      Hint: ImageTypeLabel
+      Value: Profile Photo Source
     - ID: "757f7184-643b-449f-a041-886f9edb81f0"
       Hint: SuccessLink
       Value: |
-        <link text="Ok" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{CA03E6DC-BBF0-45B9-B5F1-758A174BD328}" />
+        <link text="Return to Dashboard" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{0068B880-2204-4759-9519-0ED217BBC156}" />
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0671d463-9af3-4026-b223-e1b9ab507787"
+      Value: "b71eff0e-b27f-4f5a-9ba1-40be58eb532a"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\iva@sitecore.net
+        sitecore\tamas.varga@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221008T121453Z
+      Value: 20221027T135015Z

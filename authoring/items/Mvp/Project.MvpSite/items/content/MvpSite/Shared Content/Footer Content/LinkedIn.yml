@@ -20,15 +20,15 @@ Languages:
       Value: linkedin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "aa8c43c0-4cbb-4808-9614-161120b89a29"
+      Value: "fb9f33bd-6bcd-4cdd-8848-315a515d0021"
     - ID: "aff6fd57-80bd-4b53-adb9-164b922d5763"
       Hint: Link
       Value: |
-        <link text="Go to Sitecore on LinkedIn" linktype="external" url="https://www.linkedin.com/company/sitecore/" anchor="" title="Go to Sitecore on LinkedIn" target="_blank" />
+        <link text="Go to Sitecore on LinkedIn" linktype="external" url="https://www.linkedin.com/groups/71381/" anchor="" title="Go to Sitecore on LinkedIn" target="_blank" />
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\Admin
+        sitecore\tamas.varga@sitecore.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20220303T133828Z
+      Value: 20241217T120214Z

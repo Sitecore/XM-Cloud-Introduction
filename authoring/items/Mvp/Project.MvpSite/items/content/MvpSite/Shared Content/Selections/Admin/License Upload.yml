@@ -1,0 +1,27 @@
+﻿---
+ID: "45814000-a7c6-410e-b942-c7cd02b16f59"
+Parent: "c34e4ad8-acd9-4a7f-904e-c52533153603"
+Template: "171b58ef-1cac-4c85-9b8d-931236523415"
+Path: /sitecore/content/MvpSite/Shared Content/Selections/Admin/License Upload
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250813T104439Z
+    - ID: "4e47d46c-6d30-43b8-8234-64e779401a00"
+      Hint: OverviewLink
+      Value: |
+        <link text="Return to License overview" anchor="" linktype="internal" class="" title="" target="" querystring="" id="{119E9BA1-5768-4CA9-A593-480D7A0DBEA6}" />
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "a49b3da0-9660-4889-b237-54b069a9aa74"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250826T160810Z

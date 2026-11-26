@@ -1,0 +1,120 @@
+﻿---
+ID: "c4495d7a-6cad-4ab7-ac61-4932963e07e1"
+Parent: "119e9ba1-5768-4ca9-a593-480d7a0dbea6"
+Template: "a054184c-3b20-4c2b-ab04-c8a03acd5522"
+Path: /sitecore/content/MvpSite/Home/Application/Admin/Licenses/Upload
+BranchID: "ef8dd6f4-1bb8-4831-a1a6-defa3594051a"
+SharedFields:
+- ID: "dbbbeca1-21c7-4906-9dd2-493c1efa59a2"
+  Hint: __Shared revision
+  Value: "260288d4-c30c-436b-bc7c-57a55865e38c"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Value: |
+    <r xmlns:p="p" xmlns:s="s"
+      p:p="1">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+        <r
+          uid="{617F090B-F437-40FC-A803-5913F0D0FE29}"
+          p:after="r[@uid='{64CD74AD-6939-48FB-ABB9-33F2403ED031}']"
+          s:ds="{45814000-A7C6-410E-B942-C7CD02B16F59}"
+          s:id="{858E6FEB-1DBB-4AB5-8630-D11A0CB13BE9}"
+          s:par="CSSStyles"
+          s:ph="" />
+        <r
+          uid="{11FE2340-984C-42D1-944E-5040418CCD96}"
+          p:after="*[1=2]"
+          s:id="{57805937-D345-4A28-8DDF-C62EE43D8EBA}"
+          s:ph="" />
+      </d>
+    </r>
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: "{9AC6DDA3-8785-4C63-A2AB-457D8CC56D19}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "001dd393-96c5-490b-924a-b0f25cd9efd8"
+      Hint: __Lock
+      Value: <r />
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{18395B95-5177-474A-99E4-D76A9EDE44D0}">
+              <p:da
+                name="ccb" />
+              <p:da
+                name="ds" />
+            </r>
+            <r
+              uid="{D842E8EB-450E-4348-A54A-E60CF16E9E52}">
+              <p:da
+                name="ccb" />
+            </r>
+            <r
+              uid="{64CD74AD-6939-48FB-ABB9-33F2403ED031}">
+              <p:da
+                name="ccb" />
+            </r>
+            <r
+              uid="{617F090B-F437-40FC-A803-5913F0D0FE29}">
+              <p:d />
+            </r>
+            <r
+              uid="{11FE2340-984C-42D1-944E-5040418CCD96}">
+              <p:d />
+            </r>
+            <r
+              uid="{AAB772BD-D746-4D1D-98D5-E19461ACCAA2}"
+              p:after="r[@uid='{64CD74AD-6939-48FB-ABB9-33F2403ED031}']"
+              s:id="{57805937-D345-4A28-8DDF-C62EE43D8EBA}"
+              s:par=""
+              s:ph="main" />
+            <r
+              uid="{9ABA9E9A-2C67-43AF-85A2-5B80DA737FB9}"
+              p:after="r[@uid='{AAB772BD-D746-4D1D-98D5-E19461ACCAA2}']"
+              s:ds="{45814000-A7C6-410E-B942-C7CD02B16F59}"
+              s:id="{858E6FEB-1DBB-4AB5-8630-D11A0CB13BE9}"
+              s:par="CSSStyles"
+              s:ph="/main/column-container-{61F4DE13-A3CD-4B73-97FE-4A47A53150D2}-0" />
+            <r
+              uid="{040CBA2C-7D3D-4635-A3E3-E564463BD04E}"
+              p:after="*[1=2]"
+              s:ds="45814000-a7c6-410e-b942-c7cd02b16f59"
+              s:id="{858E6FEB-1DBB-4AB5-8630-D11A0CB13BE9}"
+              s:par=""
+              s:ph="/main/column-container-{AAB772BD-D746-4D1D-98D5-E19461ACCAA2}-0" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250813T103000Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f6bb1d4b-37fe-4faa-ad47-eeff766a025a"
+    - ID: "b1ece12f-b2c9-44e6-92a3-c5dfd6514b59"
+      Hint: MenuTitle
+      Value: Upload
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250826T044419Z

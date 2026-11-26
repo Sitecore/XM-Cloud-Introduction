@@ -1,0 +1,23 @@
+.mvp-fs-adminscorecategorymanagement {
+  &__scope,
+  &__create {
+    margin-bottom: 1.5rem;
+  }
+
+  &__category {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    background-color: #fff;
+  }
+
+  &__edit .form-row {
+    align-items: flex-end;
+    margin-bottom: 0;
+  }
+
+  &__delete {
+    margin-top: 0.5rem;
+  }
+}

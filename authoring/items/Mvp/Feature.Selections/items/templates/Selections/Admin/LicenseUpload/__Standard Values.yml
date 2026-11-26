@@ -1,0 +1,46 @@
+﻿---
+ID: "5e4896a2-2d9d-47d1-9310-d690d03d23f7"
+Parent: "171b58ef-1cac-4c85-9b8d-931236523415"
+Template: "171b58ef-1cac-4c85-9b8d-931236523415"
+Path: /sitecore/templates/Feature/Selections/Admin/LicenseUpload/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250813T104157Z
+    - ID: "313cae03-ad10-4257-b9d8-20b9dec8029f"
+      Hint: SubmitLabel
+      Value: Upload
+    - ID: "3a970e7d-272c-439b-ac4c-4df9f0348ae1"
+      Hint: ChooseFileLabel
+      Value: Choose File
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "49827155-05bb-4689-b8a3-c3ac4d56c061"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "d992398d-535e-4176-955f-e20b898afbca"
+      Hint: TitleLabel
+      Value: License Upload
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250813T104250Z
+    - ID: "e33101a3-33ab-46d8-a2fa-43ef63986d84"
+      Hint: DescriptionLabel
+      Value: Upload License File (.zip)
+    - ID: "ff3367ef-c874-40db-84ba-50745f178520"
+      Hint: SuccessLabel
+      Value: Successfully Uploaded

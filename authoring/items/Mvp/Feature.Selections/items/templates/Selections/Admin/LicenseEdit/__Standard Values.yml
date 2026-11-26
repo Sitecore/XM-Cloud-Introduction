@@ -1,0 +1,43 @@
+﻿---
+ID: "c5ad937b-9980-4502-8ba2-7b72801633b8"
+Parent: "08cfd8a9-6f39-4e21-b02c-8330e7540070"
+Template: "08cfd8a9-6f39-4e21-b02c-8330e7540070"
+Path: /sitecore/templates/Feature/Selections/Admin/LicenseEdit/__Standard Values
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20250812T034841Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "57c727f6-c56e-4125-a45c-2dfae22dbe88"
+      Hint: SuccessLabel
+      Value: "License edited successfully!"
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "6f37962e-0c40-451a-bb28-ab5711d52be5"
+      Hint: EmailLabel
+      Value: Assigned User Email
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "aa28f9ef-82f0-4545-a214-4f9727e886b4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\sobiya.sivakumar@sitecore.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250812T034947Z
+    - ID: "f506b7f1-5c02-44f6-bb24-b08fb9a0e72a"
+      Hint: SubmitLabel
+      Value: Submit
+    - ID: "f5b10ddd-5e81-4f8f-9862-9729265b1d63"
+      Hint: ExpirationDateLabel
+      Value: License Expiration Date
